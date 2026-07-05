@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CIL_ROWS, getCilDiscipline, CIL_RECRUITMENT_URL } from "@/data/cil";
 import { CilMockPlan } from "@/components/cil-mock-plan";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { ShareOnWhatsApp } from "@/components/share-on-whatsapp";
 import { auth } from "@/lib/auth";
 import { hasEntitlement } from "@/lib/entitlements";
 
@@ -40,10 +42,14 @@ export default async function CilDisciplinePage(props: { params: Promise<{ disci
     <>
       <section className="bg-gradient-to-r from-blue-950 to-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-5 py-14 lg:py-16">
-          <div className="flex items-center gap-2 text-sm text-white/60">
-            <Link href="/psu/cil" className="hover:text-white">PSU · CIL</Link>
-            <span aria-hidden>/</span>
-            <span className="text-white/90">{row.discipline}</span>
+          <div className="flex items-start justify-between">
+            <Breadcrumb crumbs={[
+              { label: "Home", href: "/" },
+              { label: "PSU", href: "/psu" },
+              { label: "CIL", href: "/psu/cil" },
+              { label: row.discipline },
+            ]} />
+            <ShareOnWhatsApp />
           </div>
           <span className="badge mt-4 border border-cyan-300/30 bg-cyan-300/10 text-cyan-300">
             Post Code {row.code}

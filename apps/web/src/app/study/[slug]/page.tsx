@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStudyNote, STUDY_NOTES, type StudyNoteTier } from "@/data/study-notes";
 import { StudyNoteView } from "@/components/study-note-view";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { ShareOnWhatsApp } from "@/components/share-on-whatsapp";
 
 export const dynamic = "force-dynamic";
 
@@ -32,7 +34,15 @@ export default async function StudyNotePage(props: { params: Promise<{ slug: str
   return (
     <div className="max-w-3xl mx-auto px-5 py-10">
       <div className="mb-6">
-        <Link href="/study" className="text-sm text-muted hover:text-ink">← All notes</Link>
+        <Breadcrumb crumbs={[
+          { label: "Home", href: "/" },
+          { label: "Study", href: "/study" },
+          { label: note.title },
+        ]} />
+        <div className="flex items-center justify-between">
+          <Link href="/study" className="text-sm text-muted hover:text-ink">← All notes</Link>
+          <ShareOnWhatsApp />
+        </div>
         <div className="flex items-center gap-2 mt-3">
           <span className="text-xs text-muted">{note.subject}</span>
           <span className={`badge ${badge.cls}`}>{badge.label}</span>

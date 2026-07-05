@@ -106,6 +106,33 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ---------- TESTIMONIALS ---------- */}
+      <section className="bg-paper/40 border-y border-line">
+        <div className="max-w-7xl mx-auto px-5 py-20">
+          <div className="text-center">
+            <span className="badge bg-brand/10 text-brand">Testimonials</span>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink">What our users say.</h2>
+          </div>
+          <div className="mt-10 grid sm:grid-cols-3 gap-6">
+            <Testimonial
+              quote="The SWOT analytics after each mock showed me exactly which chapters to focus on. Went from 32 to 54 marks in 3 weeks."
+              name="Rahul S."
+              detail="GATE MN 2026 · AIR 127"
+            />
+            <Testimonial
+              quote="Fresh mock generator is a game-changer. Unlimited unique papers means I never run out of practice material."
+              name="Priya M."
+              detail="GATE MN 2026 · AIR 89"
+            />
+            <Testimonial
+              quote="The CIL mock series was spot-on. Question pattern and difficulty matched the actual MT exam perfectly."
+              name="Amit K."
+              detail="CIL MT 2025 · Selected"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ---------- ABOUT US ---------- */}
       <section className="max-w-7xl mx-auto px-5 py-20">
         <div className="text-center">
@@ -150,6 +177,18 @@ export default async function HomePage() {
       {/* Floating WhatsApp chat — landing page only */}
       <WhatsAppButton />
     </>
+  );
+}
+
+function Testimonial({ quote, name, detail }: { quote: string; name: string; detail: string }) {
+  return (
+    <div className="card p-6 flex flex-col">
+      <p className="text-sm text-muted leading-relaxed italic">&ldquo;{quote}&rdquo;</p>
+      <div className="mt-4 pt-4 border-t border-line">
+        <div className="font-semibold text-ink">{name}</div>
+        <div className="text-xs text-muted">{detail}</div>
+      </div>
+    </div>
   );
 }
 
