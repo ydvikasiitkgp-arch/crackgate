@@ -4,6 +4,7 @@ import { getLearnTopic, LEARN_TOPICS } from "@/data/learn";
 import { LearnEngine } from "@/components/learn-engine";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ShareOnWhatsApp } from "@/components/share-on-whatsapp";
+import { NewsletterForm } from "@/components/newsletter-form";
 
 export const dynamic = "force-dynamic";
 
@@ -42,6 +43,14 @@ export default async function LearnTopicPage(props: { params: Promise<{ slug: st
       </div>
 
       <LearnEngine topic={topic} />
+
+      <div className="mt-12 border-t border-line pt-10">
+        <h3 className="text-lg font-bold text-ink">Get exam tips & updates</h3>
+        <p className="mt-1 text-sm text-muted">New mock releases and prep strategies — once a week, no spam.</p>
+        <div className="mt-3">
+          <NewsletterForm source="learn" />
+        </div>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { auth } from "@/lib/auth";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { CilAdBanner } from "@/components/cil-ad-banner";
+import { NewsletterForm } from "@/components/newsletter-form";
 
 export default async function HomePage() {
   const session = await auth();
@@ -160,6 +161,20 @@ export default async function HomePage() {
           <Link href="/about" className="text-sm font-semibold text-brand hover:underline">
             Read our story →
           </Link>
+        </div>
+      </section>
+
+      {/* ---------- NEWSLETTER ---------- */}
+      <section className="max-w-7xl mx-auto px-5 py-16">
+        <div className="text-center">
+          <span className="badge bg-brand/10 text-brand">Stay updated</span>
+          <h2 className="mt-3 text-2xl font-extrabold text-ink">Get exam tips & updates</h2>
+          <p className="mt-2 text-muted max-w-xl mx-auto text-sm">
+            New mock releases, GATE notification reminders, and prep strategies — once a week, no spam.
+          </p>
+        </div>
+        <div className="mt-6 flex justify-center">
+          <NewsletterForm source="landing" />
         </div>
       </section>
 

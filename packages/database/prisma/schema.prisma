@@ -213,6 +213,17 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
+model NewsletterSubscriber {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  subscribedAt DateTime @default(now())
+  source       String   @default("landing") // landing | learn | pricing | checkout
+  ip           String?
+  unsubscribed Boolean  @default(false)
+
+  @@index([subscribedAt(sort: Desc)])
+}
+
 /// WhatsApp / SMS OTP codes. We store a bcrypt hash, never the raw code.
 model OtpCode {
   id         String   @id @default(cuid())
