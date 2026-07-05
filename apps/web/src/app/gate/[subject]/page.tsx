@@ -57,19 +57,19 @@ export default async function GateSubjectHome(props: { params: Promise<{ subject
       {/* HERO */}
       {subject === "civil" ? (
         <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="relative min-h-[560px] lg:min-h-[600px]">
+          <div className="relative min-h-[640px] lg:min-h-[680px]">
             <CivilWindow civil={{ practiceQs, mocksCount, learnCount, subjectsCount }} />
           </div>
         </section>
       ) : subject === "geology" ? (
         <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="relative min-h-[560px] lg:min-h-[600px]">
+          <div className="relative min-h-[640px] lg:min-h-[680px]">
             <GeologyWindow stats={{ practiceQs, mocksCount, learnCount, subjectsCount }} />
           </div>
         </section>
       ) : subject === "environment" ? (
         <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="relative min-h-[560px] lg:min-h-[600px]">
+          <div className="relative min-h-[640px] lg:min-h-[680px]">
             <EnvironmentWindow stats={{ practiceQs, mocksCount, learnCount, subjectsCount }} />
           </div>
         </section>
