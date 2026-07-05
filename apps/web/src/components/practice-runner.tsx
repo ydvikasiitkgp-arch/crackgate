@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { cn, secondsToHMS } from "@/lib/utils";
 import { CalculatorLauncher } from "@/components/gate-calculator";
 import { QuestionTypeTag, CommunitySuccessRate } from "@/components/question-extras";
+import { OfflineToast } from "@/components/offline-toast";
 import { QuestionFigure, type QuestionFigure as Figure } from "@/components/question-figure";
 import { MathText } from "@/components/math-text";
 
@@ -377,7 +378,7 @@ function PracticePortal({
     <div className="min-h-screen bg-canvas -mt-px pb-20 lg:pb-0">
       {/* ---------- Top bar ---------- */}
       <header className="bg-gradient-to-r from-brand-2 to-brand text-white px-4 sm:px-5 py-3 flex flex-wrap items-center gap-3 sm:gap-4">
-        <div className="w-9 h-9 bg-white/15 grid place-items-center rounded-lg font-bold shrink-0">CG</div>
+        <div className="hidden min-[400px]:inline-flex w-9 h-9 bg-white/15 grid place-items-center rounded-lg font-bold shrink-0">CG</div>
         <div className="min-w-0">
           <div className="text-xs sm:text-sm opacity-80">GATE Practice · Untimed</div>
           <div className="font-semibold text-sm sm:text-base truncate">{subjectName}</div>
@@ -425,8 +426,8 @@ function PracticePortal({
             {totals.attempted} answered
           </div>
           {/* Elapsed timer */}
-          <div className="bg-amber-400 text-ink rounded-md px-3 py-1.5 text-sm font-bold tabular-nums">
-            ⏱ {secondsToHMS(elapsed)}
+          <div className="bg-amber-400 text-ink rounded-md px-3 py-1.5 text-sm font-bold tabular-nums whitespace-nowrap">
+            <span className="hidden sm:inline">⏱ </span>{secondsToHMS(elapsed)}
           </div>
           {/* Scientific calculator — top bar, like the real TCS iON CBT */}
           <CalculatorLauncher floating={false} />
@@ -525,22 +526,22 @@ function PracticePortal({
 
           {/* Action row */}
           <div className="mt-7 flex flex-wrap gap-2">
-            <button
-              onClick={saveAndNext}
-              className="btn btn-primary text-sm"
-            >Save &amp; Next</button>
-            <button
-              onClick={markAndNext}
-              className="btn bg-amber-500 text-white hover:bg-amber-600 text-sm"
-            >Mark for Review &amp; Next</button>
-            <button
-              onClick={clear}
-              disabled={!isAnswered(a)}
-              className="btn btn-ghost text-sm"
-            >Clear</button>
-            <span className="flex-1" />
-            <button onClick={() => go(state.idx - 1)} disabled={state.idx === 0} className="btn btn-ghost text-sm">‹ Prev</button>
-            <button onClick={() => go(state.idx + 1)} disabled={state.idx === questions.length - 1} className="btn btn-ghost text-sm">Next ›</button>
+        <button
+          onClick={saveAndNext}
+          className="btn btn-primary text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform"
+        >Save &amp; Next</button>
+        <button
+          onClick={markAndNext}
+          className="btn bg-amber-500 text-white hover:bg-amber-600 text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform"
+        >Mark for Review &amp; Next</button>
+        <button
+          onClick={clear}
+          disabled={!isAnswered(a)}
+          className="btn btn-ghost text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform"
+        >Clear</button>
+        <span className="flex-1" />
+        <button onClick={() => go(state.idx - 1)} disabled={state.idx === 0} className="btn btn-ghost text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">‹ Prev</button>
+        <button onClick={() => go(state.idx + 1)} disabled={state.idx === questions.length - 1} className="btn btn-ghost text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">Next ›</button>
           </div>
         </section>
 
@@ -556,7 +557,7 @@ function PracticePortal({
                   key={i}
                   onClick={() => go(i)}
                   className={cn(
-                    "h-10 sm:h-9 text-xs font-semibold rounded transition",
+                    "min-h-[44px] sm:min-h-[36px] min-w-[44px] sm:min-w-0 text-xs font-semibold rounded transition active:scale-90",
                     s === "nv"    && "bg-slate-200 text-slate-700",
                     s === "not"   && "bg-rose-200 text-rose-900",
                     s === "ans"   && "bg-emerald-500 text-white",
@@ -581,7 +582,7 @@ function PracticePortal({
       </div>
 
       {/* ---------- Mobile bottom action bar ---------- */}
-      <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-surface border-t border-line px-3 py-2 grid grid-cols-2 gap-2 shadow-[0_-4px_12px_rgba(0,0,0,0.04)]">
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-surface border-t border-line px-3 py-2 grid grid-cols-2 gap-2 shadow-[0_-4px_12px_rgba(0,0,0,0.04)] pb-[max(0.5rem,env(safe-area-inset-bottom))]">
         <button
           onClick={() => setPaletteOpen(true)}
           className="btn btn-ghost border border-line h-12 justify-center font-semibold"
@@ -596,6 +597,7 @@ function PracticePortal({
         </button>
       </div>
 
+      <OfflineToast />
       {/* ---------- Mobile palette drawer ---------- */}
       <div
         className={cn(
@@ -638,7 +640,7 @@ function PracticePortal({
                     key={i}
                     onClick={() => { go(i); setPaletteOpen(false); }}
                     className={cn(
-                      "h-10 text-xs font-semibold rounded transition",
+                      "min-h-[44px] min-w-[44px] text-xs font-semibold rounded transition active:scale-90",
                       s === "nv"    && "bg-slate-200 text-slate-700",
                       s === "not"   && "bg-rose-200 text-rose-900",
                       s === "ans"   && "bg-emerald-500 text-white",
@@ -707,8 +709,8 @@ function Options({
           <label
             key={i}
             className={cn(
-              "flex items-start gap-3 rounded-lg border p-3 transition",
-              disabled ? "cursor-default" : "cursor-pointer hover:bg-canvas",
+              "flex items-start gap-3 rounded-lg border p-3 min-h-[48px] transition active:scale-[0.99]",
+              disabled ? "cursor-default" : "cursor-pointer hover:bg-canvas active:bg-brand/[0.06]",
               !correct && isSel && "border-brand bg-brand/5",
               correct && isRight && "border-ok bg-emerald-50 dark:bg-emerald-500/15",
               correct && isWrongPick && "border-bad bg-rose-50 dark:bg-rose-500/15",
@@ -726,7 +728,7 @@ function Options({
                 if (ix >= 0) cur.splice(ix, 1); else cur.push(i);
                 onChange(cur);
               }}
-              className="mt-0.5"
+              className="mt-0.5 min-w-5 min-h-5"
             />
             <span className="font-bold w-5">{String.fromCharCode(65 + i)}.</span>
             <MathText className="flex-1 text-sm">{opt}</MathText>

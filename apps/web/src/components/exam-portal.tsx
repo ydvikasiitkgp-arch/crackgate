@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { secondsToHMS, cn } from "@/lib/utils";
 import { CalculatorLauncher } from "@/components/gate-calculator";
 import { QuestionTypeTag } from "@/components/question-extras";
+import { OfflineToast } from "@/components/offline-toast";
 import { QuestionFigure, type QuestionFigure as Figure } from "@/components/question-figure";
 import { MathText } from "@/components/math-text";
 
@@ -322,7 +323,7 @@ export function ExamPortal({
     <div className={cn("min-h-screen bg-canvas -mt-px pb-20 lg:pb-0", locked && "select-none")}>
       {/* ---------- Top bar ---------- */}
       <header className="bg-gradient-to-r from-brand-2 to-brand text-white px-4 sm:px-5 py-3 flex flex-wrap items-center gap-3 sm:gap-4">
-        <div className="w-9 h-9 bg-white/15 grid place-items-center rounded-lg font-bold shrink-0">CG</div>
+        <div className="hidden min-[400px]:inline-flex w-9 h-9 bg-white/15 grid place-items-center rounded-lg font-bold shrink-0">CG</div>
         <div className="min-w-0 flex-1">
           <div className="text-xs sm:text-sm opacity-80">{examCaption}</div>
           <div className="font-semibold text-sm sm:text-base truncate">{title}</div>
@@ -338,8 +339,8 @@ export function ExamPortal({
           >
             ⏸ Pause
           </button>
-          <div className="bg-amber-400 text-ink rounded-md px-3 py-1.5 text-sm font-bold tabular-nums">
-            ⏱ {secondsToHMS(secondsLeft)}
+          <div className="bg-amber-400 text-ink rounded-md px-3 py-1.5 text-sm font-bold tabular-nums whitespace-nowrap">
+            <span className="hidden sm:inline">⏱ </span>{secondsToHMS(secondsLeft)}
           </div>
         </div>
       </header>
@@ -448,13 +449,13 @@ export function ExamPortal({
 
           {/* actions */}
           <div className="mt-7 grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
-            <button onClick={saveAndNext}  className="btn btn-primary text-sm col-span-2 sm:col-span-1">Save &amp; Next</button>
-            <button onClick={markAndNext} className="btn bg-amber-500 text-white hover:bg-amber-600 text-sm">Mark &amp; Next</button>
-            <button onClick={clear}       className="btn btn-ghost text-sm">Clear</button>
-            <button onClick={enterDrill} disabled={flaggedIdxs.length === 0} className="btn btn-ghost text-sm">🚩 Marked ({flaggedIdxs.length})</button>
+            <button onClick={saveAndNext}  className="btn btn-primary text-sm col-span-2 sm:col-span-1 min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">Save &amp; Next</button>
+            <button onClick={markAndNext} className="btn bg-amber-500 text-white hover:bg-amber-600 text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">Mark &amp; Next</button>
+            <button onClick={clear}       className="btn btn-ghost text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">Clear</button>
+            <button onClick={enterDrill} disabled={flaggedIdxs.length === 0} className="btn btn-ghost text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">🚩 Marked ({flaggedIdxs.length})</button>
             <span className="hidden sm:block sm:flex-1" />
-            <button onClick={() => go(state.idx - 1)} className="btn btn-ghost text-sm">‹ Prev</button>
-            <button onClick={() => go(state.idx + 1)} className="btn btn-ghost text-sm">Next ›</button>
+            <button onClick={() => go(state.idx - 1)} className="btn btn-ghost text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">‹ Prev</button>
+            <button onClick={() => go(state.idx + 1)} className="btn btn-ghost text-sm min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">Next ›</button>
           </div>
         </section>
 
@@ -475,7 +476,7 @@ export function ExamPortal({
       </div>
 
       {/* ---------- Mobile bottom action bar ---------- */}
-      <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-surface border-t border-line px-3 py-2 grid grid-cols-2 gap-2 shadow-[0_-4px_12px_rgba(0,0,0,0.04)]">
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-surface border-t border-line px-3 py-2 grid grid-cols-2 gap-2 shadow-[0_-4px_12px_rgba(0,0,0,0.04)] pb-[max(0.5rem,env(safe-area-inset-bottom))]">
         <button
           onClick={() => setPaletteOpen(true)}
           className="btn btn-ghost border border-line h-12 justify-center font-semibold"
@@ -554,6 +555,7 @@ export function ExamPortal({
       )}
 
       {/* ---------- Pause overlay (timer & progress frozen) ---------- */}
+      <OfflineToast />
       {paused && (
         <div className="fixed inset-0 z-[80] bg-ink/80 backdrop-blur-sm grid place-items-center p-4 text-center">
           <div className="bg-surface rounded-xl max-w-sm w-full p-6">
@@ -738,7 +740,7 @@ function PaletteBody({
                     key={i}
                     onClick={() => go(i)}
                     className={cn(
-                      "h-10 sm:h-9 text-xs font-semibold rounded",
+                      "min-h-[44px] sm:min-h-[36px] min-w-[44px] sm:min-w-0 text-xs font-semibold rounded transition active:scale-90",
                       s === "nv"    && "bg-slate-200 text-slate-700",
                       s === "not"   && "bg-rose-200 text-rose-900",
                       s === "ans"   && "bg-emerald-500 text-white",
@@ -806,7 +808,7 @@ function Options({
           <label
             key={i}
             className={cn(
-              "flex items-start gap-3 rounded-lg border p-3 cursor-pointer transition",
+              "flex items-start gap-3 rounded-lg border p-3 min-h-[48px] cursor-pointer transition active:bg-brand/[0.06] active:scale-[0.99]",
               isSel ? "border-brand bg-brand/5" : "border-line hover:bg-canvas"
             )}
           >
@@ -822,7 +824,7 @@ function Options({
                   onChange(cur);
                 }
               }}
-              className="mt-0.5"
+              className="mt-0.5 min-w-5 min-h-5"
             />
             <span className="font-bold w-5">{String.fromCharCode(65 + i)}.</span>
             <MathText className="flex-1 text-sm">{opt}</MathText>
