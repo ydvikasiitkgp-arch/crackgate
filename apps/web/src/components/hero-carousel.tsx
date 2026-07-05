@@ -79,7 +79,7 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <div className="relative min-h-[640px] pb-14 sm:min-h-[680px] sm:pb-16 lg:min-h-[720px] lg:pb-20">
+      <div className="relative min-h-[680px] pb-14 sm:min-h-[700px] sm:pb-16 lg:min-h-[720px] lg:pb-20">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={active}
@@ -270,10 +270,9 @@ export function GeologyWindow({ stats }: { stats: SubjectStats }) {
               Read the Earth, Decimal by Decimal.
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
-            The complete GG track — mineralogy &amp; petrology, structural geology, stratigraphy, geophysics
-            and remote sensing. Concept modules, an exam-grade question bank and full-length mocks, tuned a
-            notch tougher than the real paper.
+           <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
+            Mineralogy, structural geology, geophysics &amp; remote sensing. Exam-grade question bank and
+            full-length mocks, tuned tougher than the real paper.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
             <Link href="/gate/geology/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:brightness-105">
@@ -420,10 +419,9 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
               Air, Water &amp; Earth, Quantified.
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
-            The complete ES track — air quality, water &amp; wastewater treatment, solid &amp; hazardous waste,
-            ecology and environmental management. Concept modules, an exam-grade question bank and full-length
-            mocks, tuned a notch tougher than the real paper.
+           <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
+            Air quality, water treatment, waste management &amp; ecology. Exam-grade question bank and
+            full-length mocks, tuned tougher than the real paper.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
             <Link href="/gate/environment/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/20 transition hover:brightness-105">
@@ -587,7 +585,7 @@ export function PsuWindow() {
             </Link>
           </div>
         </div>
-        <div className="lg:pl-4">
+        <div className="hidden lg:block lg:pl-4">
           <CilEligibilityCard />
         </div>
       </div>
