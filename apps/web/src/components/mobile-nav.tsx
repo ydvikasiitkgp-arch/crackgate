@@ -16,6 +16,7 @@ const SECTION_PILLS: Leaf[] = [
   { href: "/about", label: "About" },
 ];
 
+
 /**
  * Always-visible, horizontally-scrollable strip of section pills.
  * Shown only on mobile (md:hidden) directly under the header row so the
