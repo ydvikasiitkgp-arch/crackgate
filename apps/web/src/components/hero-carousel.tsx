@@ -79,7 +79,7 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <div className="relative min-h-[580px] pb-14 sm:min-h-[680px] sm:pb-16 lg:min-h-[720px] lg:pb-20">
+      <div className="relative min-h-[640px] pb-14 sm:min-h-[680px] sm:pb-16 lg:min-h-[720px] lg:pb-20">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={active}
@@ -164,7 +164,7 @@ export function GateWindow({
     <div className="relative h-full w-full">
       <IitBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-slate-950" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-amber-300/30 bg-amber-300/10 text-amber-300">
             GATE 2027 · Mining Engineering (MN)
@@ -175,16 +175,16 @@ export function GateWindow({
               Secure Your Seat at the Premier IITs.
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/80">
+          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
             Engineered by elite IITians. Master Geomechanics, Advanced Ventilation, and Math through
             high-fidelity, TCS iON-standard exam simulations.
           </p>
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <Link href="/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-400 to-yellow-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:brightness-105">
               Launch Free Exam Portal <span aria-hidden>→</span>
             </Link>
           </div>
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-white/70">
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-6 text-sm text-white/70">
             <Stat n={`${practiceQs}+`} label="Practice Questions" />
             <Stat n="200+" label="Mock Questions" />
             <Stat n={`${mocksCount}`} label="Full-length Mocks" />
@@ -206,7 +206,7 @@ export function CivilWindow({ civil }: { civil: CivilStats }) {
     <div className="relative h-full w-full">
       <CivilBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-emerald-950/70" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-300">
             GATE 2027 · Civil Engineering (CE) · NEW
@@ -217,12 +217,12 @@ export function CivilWindow({ civil }: { civil: CivilStats }) {
               Engineered to the Last Decimal.
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/80">
+          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
             The complete Civil track — Structural, Geotech, Water Resources, Environmental, Transportation,
             Geomatics &amp; Maths. Concept modules, an exam-grade question bank and full-length mocks, tuned a
             notch tougher than the real paper.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
             <Link href="/gate/civil/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/20 transition hover:brightness-105">
               Launch Free Exam Portal <span aria-hidden>→</span>
             </Link>
@@ -230,7 +230,7 @@ export function CivilWindow({ civil }: { civil: CivilStats }) {
               Learn &amp; Solve
             </Link>
           </div>
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-white/70">
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-6 text-sm text-white/70">
             <Stat n={`${civil.practiceQs}+`} label="Practice Questions" />
             <Stat n={`${civil.learnCount}`} label="Learn Modules" />
             <Stat n={`${civil.mocksCount}`} label="Full-length Mocks" />
@@ -259,7 +259,7 @@ export function GeologyWindow({ stats }: { stats: SubjectStats }) {
     <div className="relative h-full w-full">
       <GeologyBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-amber-950/70" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-amber-300/30 bg-amber-300/10 text-amber-200">
             GATE 2027 · Geology &amp; Geophysics (GG)
@@ -270,20 +270,20 @@ export function GeologyWindow({ stats }: { stats: SubjectStats }) {
               Read the Earth, Decimal by Decimal.
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/80">
+          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
             The complete GG track — mineralogy &amp; petrology, structural geology, stratigraphy, geophysics
             and remote sensing. Concept modules, an exam-grade question bank and full-length mocks, tuned a
             notch tougher than the real paper.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
             <Link href="/gate/geology/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:brightness-105">
               Start free mock <span aria-hidden>→</span>
             </Link>
-            <Link href="/gate/geology/learn" className="inline-flex items-center gap-2 rounded-lg border border-amber-300/40 bg-amber-300/5 px-6 py-3.5 text-base font-semibold text-amber-200 transition hover:bg-amber-300/15">
+            <Link href="/gate/geology/learn" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15">
               Learn &amp; Solve
             </Link>
           </div>
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-white/70">
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-6 text-sm text-white/70">
             <Stat n={`${stats.practiceQs}+`} label="Practice Questions" />
             <Stat n={`${stats.learnCount}`} label="Learn Modules" />
             <Stat n={`${stats.mocksCount}`} label="Full-length Mocks" />
@@ -409,7 +409,7 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
     <div className="relative h-full w-full">
       <EnvironmentBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-teal-950/70" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-200">
             GATE 2027 · Environmental Science (ES)
@@ -420,12 +420,12 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
               Air, Water &amp; Earth, Quantified.
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/80">
+          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
             The complete ES track — air quality, water &amp; wastewater treatment, solid &amp; hazardous waste,
             ecology and environmental management. Concept modules, an exam-grade question bank and full-length
             mocks, tuned a notch tougher than the real paper.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
             <Link href="/gate/environment/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/20 transition hover:brightness-105">
               Start free mock <span aria-hidden>→</span>
             </Link>
@@ -433,7 +433,7 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
               Learn &amp; Solve
             </Link>
           </div>
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-white/70">
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-6 text-sm text-white/70">
             <Stat n={`${stats.practiceQs}+`} label="Practice Questions" />
             <Stat n={`${stats.learnCount}`} label="Learn Modules" />
             <Stat n={`${stats.mocksCount}`} label="Full-length Mocks" />
@@ -566,7 +566,7 @@ export function PsuWindow() {
     <div className="relative h-full w-full">
       <OpencastBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-950/80 to-slate-900" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-cyan-300/30 bg-cyan-300/10 text-cyan-300">
             PSU Recruitment · Coal India Limited
@@ -577,11 +577,11 @@ export function PsuWindow() {
               Direct Route to Coal India Limited (CIL).
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/80">
+          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
             Maximize your rank for Management Trainee (MT) positions. Tailored question banks targeting
             mining legislation, DGMS safety guidelines, and historical PSU weightage matrices.
           </p>
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <Link href="/psu/cil" className="cg-neon inline-flex items-center gap-2 rounded-lg border border-cyan-400/70 bg-cyan-400/10 px-6 py-3.5 text-base font-semibold text-cyan-200 transition hover:bg-cyan-400/20">
               Explore PSU Prep Modules <span aria-hidden>→</span>
             </Link>
