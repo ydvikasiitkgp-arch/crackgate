@@ -8,6 +8,7 @@ export const metadata = {
   title: "PSU · Coal India Limited (CIL) · CrackGate",
   description:
     "Crack Coal India Limited Management Trainee exam. Tailored question banks for mining, civil, electrical, mechanical disciplines with mock tests based on CIL exam pattern.",
+  alternates: { canonical: "/psu/cil" },
 };
 
 export default function PsuCilPage() {

@@ -7,6 +7,12 @@ import { hasEntitlement } from "@/lib/entitlements";
 
 export const dynamic = "force-dynamic";
 
+
+export async function generateMetadata(props: { params: Promise<{ subject: string; slug: string }> }) {
+  const { subject, slug } = await props.params;
+  return { alternates: { canonical: `/gate/${subject}/practice/${slug}` } };
+}
+
 export default async function SubjectPracticeRunnerPage(
   props: { params: Promise<{ subject: string; slug: string }> },
 ) {

@@ -6,6 +6,7 @@ export const metadata = {
   title: "Fresh Mock — Premium GATE-pattern Generator",
   description:
     "Generate a fresh GATE Mining mock test on demand. AI-curated questions from a 2000+ bank — unlimited unique mocks for premium users of CrackGate.",
+  alternates: { canonical: "/mocks/fresh" },
 };
 export const dynamic = "force-dynamic";
 

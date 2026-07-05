@@ -4,6 +4,11 @@ import { PRACTICE } from "@/data/practice";
 import { PracticeRunner } from "@/components/practice-runner";
 import { auth } from "@/lib/auth";
 
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const { slug } = await props.params;
+  return { alternates: { canonical: `/practice/${slug}` } };
+}
+
 export const dynamic = "force-dynamic";
 
 export default async function PracticeSubjectPage(props: { params: Promise<{ slug: string }> }) {

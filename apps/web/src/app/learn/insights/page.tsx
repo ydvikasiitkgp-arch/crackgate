@@ -6,6 +6,7 @@ export const metadata = {
   title: "GATE MN Exam Insights — Topic & Trend Analysis of Previous Papers",
   description:
     "Interactive analysis of GATE Mining (MN) previous-year papers: topic-wise distribution, year-by-year trends, question-type and marks split, conceptual gaps, trend prediction and a personalised prep plan — all from factual exam metadata.",
+  alternates: { canonical: "/learn/insights" },
 };
 
 export default function LearnInsights() {

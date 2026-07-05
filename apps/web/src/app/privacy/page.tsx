@@ -2,6 +2,7 @@ export const metadata = {
   title: "Privacy Policy",
   description:
     "Privacy Policy for CrackGate.in — how we collect, use, and protect your personal data when you use our GATE and PSU exam preparation platform.",
+  alternates: { canonical: "/privacy" },
 };
 export default function Privacy() {
   return (

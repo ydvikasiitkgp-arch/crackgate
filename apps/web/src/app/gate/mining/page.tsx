@@ -8,6 +8,7 @@ export const metadata = {
   title: "GATE Mining (MN) · CrackGate",
   description:
     "Complete GATE Mining Engineering preparation — 20 full-length mocks, 2000+ practice questions, IIT-authored learn modules, SWOT analytics, and NTA-style exam portal.",
+  alternates: { canonical: "/gate/mining" },
 };
 export const dynamic = "force-dynamic";
 

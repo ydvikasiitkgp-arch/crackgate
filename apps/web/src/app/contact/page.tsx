@@ -2,6 +2,7 @@ export const metadata = {
   title: "Contact",
   description:
     "Get in touch with the CrackGate team. Email us at support@crackgate.in or reach out via WhatsApp for help with GATE preparation, PSU exams, or your account.",
+  alternates: { canonical: "/contact" },
 };
 export default function Contact() {
   return (

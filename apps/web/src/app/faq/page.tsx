@@ -2,6 +2,7 @@ export const metadata = {
   title: "FAQ",
   description:
     "Frequently asked questions about CrackGate — free mocks, scoring rules, exam subjects, pricing plans, and how our GATE & PSU test-prep platform works.",
+  alternates: { canonical: "/faq" },
 };
 const QAs = [
   { q: "Is CrackGate only for GATE Mining?",       a: "Yes — we don't dilute focus. Every mock is for the GATE MN paper." },

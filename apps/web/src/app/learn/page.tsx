@@ -7,6 +7,7 @@ export const metadata = {
   title: "Learn & Solve — GATE MN Syllabus, Section by Section",
   description:
     "Master the GATE Mining (MN) syllabus the way it is officially structured — six sections, each broken into sub-topics with an IIT-style breakdown, formula matrix, traps, and a progressive 3-tier question suite with worked solutions.",
+  alternates: { canonical: "/learn" },
 };
 
 type Plan = "free" | "pro" | "premium";

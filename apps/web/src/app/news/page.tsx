@@ -6,6 +6,7 @@ export const metadata = {
   title: "News & Notifications · CrackGate",
   description:
     "Latest GATE, PSU and mining engineering exam notifications. Coal India Limited recruitment, DGMS updates, and important exam dates for mining professionals.",
+  alternates: { canonical: "/news" },
 };
 
 type NewsItem = {

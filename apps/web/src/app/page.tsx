@@ -7,6 +7,9 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { CilAdBanner } from "@/components/cil-ad-banner";
 import { NewsletterForm } from "@/components/newsletter-form";
+export const metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default async function HomePage() {
   const session = await auth();

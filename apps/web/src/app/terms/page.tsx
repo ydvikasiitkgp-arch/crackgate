@@ -2,6 +2,7 @@ export const metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service for CrackGate.in — guidelines for using our GATE and PSU exam preparation platform, including user obligations, content usage, and disclaimers.",
+  alternates: { canonical: "/terms" },
 };
 export default function Terms() {
   return (

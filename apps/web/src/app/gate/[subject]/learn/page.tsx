@@ -10,6 +10,7 @@ export async function generateMetadata(props: { params: Promise<{ subject: strin
   const meta = getGateSubject(subject);
   if (!meta) return { title: "Learn & Solve", description: "Master GATE syllabus section by section with IIT-style breakdowns, formula matrices, and progressive question suites." };
   return {
+    alternates: { canonical: "/gate/" + subject + "/learn" },
     title: `Learn & Solve — GATE ${meta.code} Syllabus, Section by Section`,
     description: `Master the GATE ${meta.code} syllabus for ${meta.label} — IIT-style topic breakdowns, formula matrices, exam traps, and progressive 3-tier question suites with worked solutions.`,
   };

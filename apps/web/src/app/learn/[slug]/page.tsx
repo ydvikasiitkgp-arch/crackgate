@@ -15,6 +15,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   return {
     title: `${t.title} — Learn & Solve`,
     description: t.blurb,
+    alternates: { canonical: "/learn/" + slug },
   };
 }
 

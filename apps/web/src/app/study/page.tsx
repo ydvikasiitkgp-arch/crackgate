@@ -6,6 +6,7 @@ export const metadata = {
   title: "Study Notes — Elite GATE MN Revision, Section by Section",
   description:
     "Premium IIT-style GATE Mining revision notes: a decade of trend analysis (2017–2026), a complete SI formula matrix, the exact paper-setter traps, and worked 2-mark core examples for every core subject area.",
+  alternates: { canonical: "/study" },
 };
 
 // Study Notes are free for everyone — no plan gating.

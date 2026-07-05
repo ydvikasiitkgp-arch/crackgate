@@ -9,6 +9,7 @@ export const metadata = {
   title: "AITS — All India Test Series | CrackGate",
   description:
     "All India Test Series for GATE Mining Engineering — 10 scheduled mock tests with national ranking, SWOT analysis, and performance benchmarking against peers.",
+  alternates: { canonical: "/aits" },
 };
 
 function fmt(iso: string) {

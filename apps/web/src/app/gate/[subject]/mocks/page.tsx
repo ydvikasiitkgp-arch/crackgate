@@ -20,6 +20,7 @@ export async function generateMetadata(props: { params: Promise<{ subject: strin
   const meta = getGateSubject(subject);
   if (!meta) return { title: "Mock Tests", description: "Full-length GATE mock tests with TCS iON-standard simulation. Server-side grading and SWOT analytics." };
   return {
+    alternates: { canonical: "/gate/" + subject + "/mocks" },
     title: `GATE ${meta.code} Test Series 2027`,
     description: `Full-length GATE ${meta.code} mock tests with exam-pattern simulation, server-side grading, sectional analysis, and All India Rank comparison for ${meta.label}.`,
   };

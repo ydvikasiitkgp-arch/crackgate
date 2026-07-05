@@ -4,6 +4,11 @@ import { auth } from "@/lib/auth";
 import { resolveMock } from "@/lib/mock-registry";
 import { hasEntitlement } from "@/lib/entitlements";
 
+export async function generateMetadata(props: { params: Promise<{ id: string }> }) {
+  const { id } = await props.params;
+  return { alternates: { canonical: `/mocks/${id}` } };
+}
+
 type Plan = "free" | "pro" | "premium";
 type Tier = "free" | "subject" | "premium";
 

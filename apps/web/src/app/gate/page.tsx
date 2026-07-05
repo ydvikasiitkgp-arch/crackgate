@@ -4,6 +4,7 @@ export const metadata = {
   title: "GATE Tracks · CrackGate",
   description:
     "Choose your GATE exam track — Mining Engineering (MN), Civil Engineering (CE), Geology & Geophysics (GG), or Environmental Science (ES). Full-length mocks, topic-wise practice, and IIT-authored content.",
+  alternates: { canonical: "/gate" },
 };
 
 type Branch = {

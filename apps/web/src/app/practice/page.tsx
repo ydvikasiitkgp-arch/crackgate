@@ -6,6 +6,7 @@ export const metadata = {
   title: "Practice — Subject-wise Question Bank",
   description:
     "Topic-wise practice questions for GATE Mining Engineering. Geomechanics, mine ventilation, mineral processing, maths, and more with instant grading and worked solutions.",
+  alternates: { canonical: "/practice" },
 };
 
 export default async function PracticeIndex() {

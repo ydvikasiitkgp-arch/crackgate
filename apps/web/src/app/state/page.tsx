@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "State Level Exams · CrackGate",
   description:
     "Prepare for state-level mining engineering exams — RPSC Assistant Mining Engineer, Gujarat Mineral Development Corporation, and other state PSU recruitment tests.",
+  alternates: { canonical: "/state" },
 };
 
 export default function StateExamsPage() {

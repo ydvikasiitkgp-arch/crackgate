@@ -2,6 +2,7 @@ export const metadata = {
   title: "Resources",
   description:
     "Free GATE Mining and Civil Engineering resources — formula sheets, study notes, question banks, and reference materials for GATE 2027 preparation.",
+  alternates: { canonical: "/resources" },
 };
 export default function Resources() {
   return (

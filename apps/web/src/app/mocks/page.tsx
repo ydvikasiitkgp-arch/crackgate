@@ -7,6 +7,7 @@ export const metadata = {
   title: "Mock Test Series",
   description:
     "Full-length GATE Mining Engineering mock tests with TCS iON-standard exam simulation. Server-side grading, sectional analysis, SWOT insights, and All India Rank comparison.",
+  alternates: { canonical: "/mocks" },
 };
 export const dynamic = "force-dynamic";
 

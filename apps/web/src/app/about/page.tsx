@@ -2,6 +2,7 @@ export const metadata = {
   title: "About",
   description:
     "CrackGate is a test-prep platform built for serious GATE aspirants by IIT Kharagpur alumni. Combining academic depth with real exam insights for GATE Mining, Civil, Geology & PSU exams.",
+  alternates: { canonical: "/about" },
 };
 export default function About() {
   return (

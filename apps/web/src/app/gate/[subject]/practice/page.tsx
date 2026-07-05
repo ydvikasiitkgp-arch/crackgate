@@ -11,6 +11,7 @@ export async function generateMetadata(props: { params: Promise<{ subject: strin
   const meta = getGateSubject(subject);
   if (!meta) return { title: "Practice", description: "Topic-wise practice questions for GATE exams with instant grading and worked solutions." };
   return {
+    alternates: { canonical: "/gate/" + subject + "/practice" },
     title: `Practice — GATE ${meta.code}`,
     description: `Topic-wise practice questions for GATE ${meta.code} — ${meta.label}. Instant grading, worked solutions, and performance tracking across all subjects.`,
   };
