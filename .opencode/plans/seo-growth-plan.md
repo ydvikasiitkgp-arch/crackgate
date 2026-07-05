@@ -11,11 +11,11 @@
 
 ## 🟡 High impact / low effort (1-2 days)
 
-- [ ] **#7: Auto-generate sitemap from data** — include learn topics, study notes, practice subjects, discipline pages
-- [ ] **#8: Add email/newsletter capture** — "Get GATE exam alerts" or "Weekly practice question" form
-- [ ] **#9: Add "Share on WhatsApp" buttons** to learn pages, mock results, study notes
-- [ ] **#10: Add 3-5 student testimonials** on landing page
-- [ ] **#11: Add breadcrumb component** to all content pages (partially done — component created, added to gate/[subject])
+- [x] **#7: Auto-generate sitemap from data** — include learn topics (~159), study notes, CIL disciplines, subject sub-pages
+- [x] **#8: Add email/newsletter capture** — Prisma model, API route, NewsletterForm component on landing + learn pages
+- [x] **#9: Add "Share on WhatsApp" buttons** to learn, study, and CIL discipline pages
+- [x] **#10: Add 3-5 student testimonials** on landing page (3 shown)
+- [x] **#11: Add breadcrumb component** to all content pages (learn, study, CIL, gate/[subject])
 
 ## 🟢 Growth levers (1-2 weeks)
 
