@@ -4,7 +4,7 @@
 
 - [x] **#1: Add description metadata** to all 20+ pages that only have a title
 - [x] **#2: Fix `/pricing` metadata** — client component → server layout wrapper
-- [ ] **#3: Add canonical URLs** — per-page needed; skip blanket root layout (wrong canonical worse than none)
+- [x] **#3: Add canonical URLs** — per-page; added to all 35+ pages including dynamic routes
 - [x] **#4: Set up Google Search Console + GA4** — env vars + layout hooks added (needs real IDs from Google)
 - [x] **#5: Create `/public/og-banner.svg`** — SVG fallback created; OG meta updated
 - [x] **#6: Add JSON-LD structured data** — Organization + WebSite in root layout, FAQPage on /faq, Breadcrumb component with JSON-LD
@@ -23,7 +23,7 @@
 - [ ] **#13: Add subject-specific 300-500 word intros** on each `/gate/[subject]` page
 - [ ] **#14: Implement referral/invite system** — share mock results → unlock free mocks
 - [ ] **#15: Add "Coming Soon" email capture** for upcoming PSU subjects
-- [ ] **#16: Add per-page OG images** (dynamic, with subject name + stats)
+- [x] **#16: Add per-page OG images** (dynamic, with subject name + stats) — via /api/og route
 
 ## 🗺️ 2-4 week roadmap
 
