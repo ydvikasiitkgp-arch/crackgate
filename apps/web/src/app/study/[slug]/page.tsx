@@ -19,6 +19,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   return {
     title: `${note.title} — GATE MN Study Notes`,
     description: note.blurb,
+    openGraph: { images: ["/api/og?subject=" + encodeURIComponent(note.subject) + "&title=" + encodeURIComponent(note.title)] },
     alternates: { canonical: "/study/" + slug },
   };
 }

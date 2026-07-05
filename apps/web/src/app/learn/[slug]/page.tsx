@@ -15,6 +15,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   return {
     title: `${t.title} — Learn & Solve`,
     description: t.blurb,
+    openGraph: { images: ["/api/og?subject=" + encodeURIComponent(t.subject) + "&title=" + encodeURIComponent(t.title)] },
     alternates: { canonical: "/learn/" + slug },
   };
 }

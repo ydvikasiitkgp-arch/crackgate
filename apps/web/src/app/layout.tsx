@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://crackgate.in",
     title: "CrackGate.in — GATE Mining, Civil, Geology & PSU Exam Prep",
     description: "10+ full-length mocks · 1000+ practice questions · SWOT analytics · ₹0 first mock. Covers GATE MN, CE, GG, ES & PSU Coal India.",
-    images: ["/og-banner.svg"],
+    images: ["/api/og"],
   },
   twitter: { card: "summary_large_image" },
   icons: {

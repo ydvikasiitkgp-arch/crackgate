@@ -22,6 +22,7 @@ export async function generateMetadata(props: { params: Promise<{ discipline: st
   }
   return {
     title: `CIL ${row.discipline} · Mock Series · CrackGate`,
+    openGraph: { images: ["/api/og?subject=" + encodeURIComponent("CIL " + row.discipline) + "&title=Management+Trainee+Exam+Prep"] },
     description: `Crack Coal India Management Trainee ${row.discipline} exam. ${row.qualification}. Practice with mock tests tailored to the CIL exam pattern.`,
     alternates: { canonical: "/psu/cil/" + discipline },
   };
