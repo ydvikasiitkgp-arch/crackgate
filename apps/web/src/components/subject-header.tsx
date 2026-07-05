@@ -3,7 +3,7 @@ import { auth } from "@/lib/auth";
 import { UserMenu } from "@/components/user-menu";
 import { BrandLockup } from "@/components/brand";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { MobileNav } from "@/components/mobile-nav";
+
 import { getGateSubject } from "@/data/gate/registry";
 
 /**
@@ -58,12 +58,8 @@ export async function SubjectHeader({ subject }: { subject: string }) {
               role={u.role}
             />
           ) : (
-            <>
-              <Link href="/login" className="btn btn-ghost text-sm hidden md:inline-flex">Login</Link>
-              <Link href="/login" className="btn btn-primary text-sm hidden sm:inline-flex">Get Started</Link>
-            </>
+            <Link href="/login" className="btn btn-primary text-sm">Get Started</Link>
           )}
-          <MobileNav authed={!!u} />
         </div>
       </nav>
 

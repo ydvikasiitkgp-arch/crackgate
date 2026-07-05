@@ -3,7 +3,7 @@ import { auth } from "@/lib/auth";
 import { UserMenu } from "@/components/user-menu";
 import { BrandLockup } from "@/components/brand";
 import { MegaNav } from "@/components/mega-nav";
-import { MobileNav, MobileSectionBar } from "@/components/mobile-nav";
+import { MobileSectionBar } from "@/components/mobile-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export async function SiteHeader() {
@@ -31,7 +31,6 @@ export async function SiteHeader() {
           ) : (
             <Link href="/login" className="btn btn-primary text-sm">Get Started</Link>
           )}
-          <MobileNav authed={!!u} />
         </div>
       </nav>
 
@@ -91,7 +90,6 @@ export async function MiningHeader() {
           ) : (
             <Link href="/login" className="btn btn-primary text-sm">Get Started</Link>
           )}
-          <MobileNav authed={!!u} />
         </div>
       </nav>
 
