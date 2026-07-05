@@ -12,7 +12,7 @@ import { auth } from "@/lib/auth";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 // Staging (staging.crackgate.in) must never be indexed by search engines.
-const isStaging = process.env.NEXT_PUBLIC_SITE_ENV === "staging";
+// const isStaging = process.env.NEXT_PUBLIC_SITE_ENV === "staging";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://crackgate.in"),
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "India's #1 platform for GATE Mining (MN), Civil (CE), Geology (GG), Environmental Science (ES), PSU Coal India & state mining engineering exams. Full-length mocks, topic-wise practice, SWOT analytics & study material.",
   keywords: ["GATE Mining", "GATE MN", "GATE Civil Engineering", "GATE CE", "GATE Geology", "GATE GG", "GATE Environmental Science", "Coal India PSU", "CIL Management Trainee", "Mining Engineering PSU", "RPSC Mining Engineer", "Mining Sirdar Exam"],
-  ...(isStaging ? { robots: { index: false, follow: false } } : {}),
+  // ...(isStaging ? { robots: { index: false, follow: false } } : {}),
   openGraph: {
     type: "website",
     url: "https://crackgate.in",
