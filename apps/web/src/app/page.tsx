@@ -112,9 +112,7 @@ export default async function HomePage() {
           <span className="badge bg-brand/10 text-brand">About us</span>
           <h2 className="mt-3 text-3xl font-extrabold text-ink">Built by toppers, for every serious aspirant.</h2>
           <p className="mt-3 text-muted max-w-2xl mx-auto">
-            CrackGate is created by IIT Kharagpur alumni who&apos;ve cracked GATE themselves — and now help thousands
-            of aspirants reach the same goal. Every question, solution and analytic is crafted by experts who
-            know exactly what it takes to succeed.
+            Built by IIT Kharagpur alumni who&apos;ve cracked GATE themselves. Every question and solution is crafted by experts who know what it takes to succeed.
           </p>
         </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 max-w-3xl mx-auto">

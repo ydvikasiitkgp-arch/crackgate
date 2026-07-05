@@ -4,7 +4,7 @@ export default function About() {
     <article className="max-w-3xl mx-auto px-5 py-16 text-ink">
       <h1 className="text-4xl font-extrabold tracking-tight">About CrackGate</h1>
       <p className="mt-4 text-lg text-ink/80 leading-relaxed">
-        CrackGate is a comprehensive test-prep platform built for serious GATE aspirants. We provide rigorous, expert-crafted preparation that combines academic depth with real exam insights to help you succeed.
+        A test-prep platform built for serious GATE aspirants, combining academic depth with real exam insights.
       </p>
 
       <h2 className="mt-10 text-2xl font-bold">Team</h2>
@@ -13,13 +13,13 @@ export default function About() {
           name="Vikas Yadav"
           role="Founder"
           credentials="M.Tech, IIT Kharagpur"
-          blurb="Built CrackGate to help serious GATE aspirants achieve their goals with expert-crafted content and rigorous preparation that goes beyond generic coaching."
+          blurb="Built CrackGate to help serious aspirants prepare beyond generic coaching."
         />
         <Founder
           name="Vishal Kumar"
           role="Co-founder"
           credentials="B.Tech, BIT Sindri · M.Tech, IIT Kharagpur"
-          blurb="Industry professional with deep technical expertise. Curates question banks and validates solutions to ensure accuracy and real-world relevance across all topics."
+          blurb="Curates question banks and validates solutions for accuracy and real-world relevance."
         />
       </div>
     </article>
