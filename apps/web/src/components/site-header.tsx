@@ -29,10 +29,7 @@ export async function SiteHeader() {
               role={u.role}
             />
           ) : (
-            <>
-              <Link href="/login" className="btn btn-ghost text-sm hidden md:inline-flex">Login</Link>
-              <Link href="/login" className="btn btn-primary text-sm hidden sm:inline-flex">Get Started</Link>
-            </>
+            <Link href="/login" className="btn btn-primary text-sm">Get Started</Link>
           )}
           <MobileNav authed={!!u} />
         </div>
@@ -92,10 +89,7 @@ export async function MiningHeader() {
               role={u.role}
             />
           ) : (
-            <>
-              <Link href="/login" className="btn btn-ghost text-sm hidden md:inline-flex">Login</Link>
-              <Link href="/login" className="btn btn-primary text-sm hidden sm:inline-flex">Get Started</Link>
-            </>
+            <Link href="/login" className="btn btn-primary text-sm">Get Started</Link>
           )}
           <MobileNav authed={!!u} />
         </div>

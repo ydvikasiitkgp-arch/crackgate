@@ -90,7 +90,7 @@ export function MobileNav({ authed }: { authed: boolean }) {
         />
         <nav
           className={cn(
-            "absolute top-0 right-0 h-full w-[82%] max-w-sm bg-surface shadow-2xl",
+            "absolute inset-0 bg-surface",
             "flex flex-col transition-transform duration-200",
             open ? "translate-x-0" : "translate-x-full",
           )}
@@ -163,12 +163,6 @@ export function MobileNav({ authed }: { authed: boolean }) {
               );
             })}
           </ul>
-          {!authed && (
-            <div className="border-t border-line p-4 grid grid-cols-2 gap-2">
-              <Link href="/login" className="btn btn-ghost justify-center">Login</Link>
-              <Link href="/login" className="btn btn-primary justify-center">Get Started</Link>
-            </div>
-          )}
         </nav>
       </div>
     </>
