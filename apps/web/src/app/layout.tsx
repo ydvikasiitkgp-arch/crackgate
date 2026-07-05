@@ -16,16 +16,16 @@ const isStaging = process.env.NEXT_PUBLIC_SITE_ENV === "staging";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://crackgate.in"),
-  title: { default: "CrackGate.in — #1 GATE Mining Engineering Prep", template: "%s · CrackGate.in" },
+  title: { default: "CrackGate.in — GATE Mining, Civil, Geology & PSU Exam Prep", template: "%s · CrackGate.in" },
   description:
-    "India's dedicated platform for GATE Mining Engineering (MN). 10 full-length mocks, topic-wise practice, SWOT analytics, and study material. First mock free.",
-  keywords: ["GATE Mining", "GATE MN 2027", "Mining Engineering PSU", "Coal India", "ONGC"],
+    "India's #1 platform for GATE Mining (MN), Civil (CE), Geology (GG), Environmental Science (ES), PSU Coal India & state mining engineering exams. Full-length mocks, topic-wise practice, SWOT analytics & study material.",
+  keywords: ["GATE Mining", "GATE MN", "GATE Civil Engineering", "GATE CE", "GATE Geology", "GATE GG", "GATE Environmental Science", "Coal India PSU", "CIL Management Trainee", "Mining Engineering PSU", "RPSC Mining Engineer", "Mining Sirdar Exam"],
   ...(isStaging ? { robots: { index: false, follow: false } } : {}),
   openGraph: {
     type: "website",
     url: "https://crackgate.in",
-    title: "CrackGate.in — #1 GATE Mining Engineering Prep",
-    description: "10 mocks · 906-question practice bank · SWOT analytics · ₹0 first mock.",
+    title: "CrackGate.in — GATE Mining, Civil, Geology & PSU Exam Prep",
+    description: "10+ full-length mocks · 1000+ practice questions · SWOT analytics · ₹0 first mock. Covers GATE MN, CE, GG, ES & PSU Coal India.",
     images: ["/og-banner.png"],
   },
   twitter: { card: "summary_large_image" },
