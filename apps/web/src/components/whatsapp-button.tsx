@@ -6,7 +6,7 @@ export function WhatsAppButton() {
   const num = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
   if (!num) return null;
 
-  const msg = encodeURIComponent("Hi CrackGate team — I have a question about GATE MN prep.");
+  const msg = encodeURIComponent("Hi CrackGate team — I have a question about your prep platform.");
   const href = `https://wa.me/${num}?text=${msg}`;
 
   return (
