@@ -79,7 +79,7 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <div className="relative min-h-[680px] pb-16 lg:min-h-[720px] lg:pb-20">
+      <div className="relative min-h-[580px] pb-14 sm:min-h-[680px] sm:pb-16 lg:min-h-[720px] lg:pb-20">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={active}
@@ -164,12 +164,12 @@ export function GateWindow({
     <div className="relative h-full w-full">
       <IitBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-slate-950" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-amber-300/30 bg-amber-300/10 text-amber-300">
             GATE 2027 · Mining Engineering (MN)
           </span>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight lg:text-6xl">
+          <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             Conquer GATE MN 2027.{" "}
             <span className="bg-gradient-to-r from-amber-300 to-yellow-500 bg-clip-text text-transparent">
               Secure Your Seat at the Premier IITs.
@@ -206,12 +206,12 @@ export function CivilWindow({ civil }: { civil: CivilStats }) {
     <div className="relative h-full w-full">
       <CivilBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-emerald-950/70" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-300">
             GATE 2027 · Civil Engineering (CE) · NEW
           </span>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight lg:text-6xl">
+          <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             Build Your GATE CE Rank.{" "}
             <span className="bg-gradient-to-r from-emerald-300 to-teal-400 bg-clip-text text-transparent">
               Engineered to the Last Decimal.
@@ -259,12 +259,12 @@ export function GeologyWindow({ stats }: { stats: SubjectStats }) {
     <div className="relative h-full w-full">
       <GeologyBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-amber-950/70" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-amber-300/30 bg-amber-300/10 text-amber-200">
             GATE 2027 · Geology &amp; Geophysics (GG)
           </span>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight lg:text-6xl">
+          <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             Master GATE Geology &amp; Geophysics.{" "}
             <span className="bg-gradient-to-r from-amber-300 to-orange-400 bg-clip-text text-transparent">
               Read the Earth, Decimal by Decimal.
@@ -409,12 +409,12 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
     <div className="relative h-full w-full">
       <EnvironmentBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-teal-950/70" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-200">
             GATE 2027 · Environmental Science (ES)
           </span>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight lg:text-6xl">
+          <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             Crack GATE Environmental Science.{" "}
             <span className="bg-gradient-to-r from-emerald-300 to-cyan-400 bg-clip-text text-transparent">
               Air, Water &amp; Earth, Quantified.
@@ -566,12 +566,12 @@ export function PsuWindow() {
     <div className="relative h-full w-full">
       <OpencastBackdrop />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-950/80 to-slate-900" />
-      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:py-20">
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-cyan-300/30 bg-cyan-300/10 text-cyan-300">
             PSU Recruitment · Coal India Limited
           </span>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight lg:text-6xl">
+          <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             Crack the PSU Exams.{" "}
             <span className="bg-gradient-to-r from-cyan-300 to-teal-400 bg-clip-text text-transparent">
               Direct Route to Coal India Limited (CIL).
