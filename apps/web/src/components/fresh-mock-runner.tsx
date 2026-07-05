@@ -5,6 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MathText } from "@/components/math-text";
 import { QuestionFigure, type QuestionFigure as Figure } from "@/components/question-figure";
+import { OfflineToast } from "@/components/offline-toast";
 
 type Q = {
   id: string; subject: string; topic: string;
@@ -37,6 +38,7 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
   const [answers, setAnswers] = useState<Record<string, number | number[] | string>>({});
   const [seenIds, setSeenIds] = useState<Set<string>>(new Set());
   const [secondsLeft, setSecondsLeft] = useState(0);
+  const [paletteOpen, setPaletteOpen] = useState(false);
 
   // Load
   useEffect(() => {
@@ -231,18 +233,19 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
     <div className="max-w-5xl mx-auto px-5 py-6">
       {/* Top bar */}
       <div className="sticky top-16 bg-bg/95 backdrop-blur z-10 -mx-5 px-5 py-3 border-b border-line flex justify-between items-center text-sm">
-        <div><b>{mock.title}</b> · {q.section}</div>
-        <div className="flex gap-4 items-center">
-          <span><b>{answered}</b>/{mock.totalQuestions} answered · {seenIds.size - answered} skipped</span>
+        <div className="min-w-0 truncate mr-2"><b>{mock.title}</b> · {q.section}</div>
+        <div className="flex gap-2 sm:gap-4 items-center shrink-0">
+          <span className="hidden sm:inline"><b>{answered}</b>/{mock.totalQuestions} answered · {seenIds.size - answered} skipped</span>
+          <span className="sm:hidden text-xs"><b>{answered}</b>/{mock.totalQuestions}</span>
           <span className={cn("font-mono font-bold", secondsLeft < 300 && "text-bad")}>
-            ⏱ {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}
+            {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}
           </span>
-          <button onClick={() => setPhase("submitted")} className="btn btn-accent text-xs">Submit</button>
+          <button onClick={() => setPhase("submitted")} className="btn btn-accent text-[11px] sm:text-xs px-2.5 sm:px-3 py-1.5">Submit</button>
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-[1fr,260px] gap-6 mt-4">
-        <div className="card p-6">
+      <div className="grid lg:grid-cols-[1fr,260px] gap-6 mt-4 pb-20 lg:pb-0">
+        <div className="card p-4 sm:p-6">
           <div className="text-xs text-muted">Question {idx + 1} of {mock.totalQuestions} · {q.marks} mark{q.marks > 1 ? "s" : ""} · {q.type}</div>
           <p className="text-base mt-3">{q.stem}</p>
 
@@ -253,7 +256,7 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
                 step="any"
                 value={(answers[q.id] as string | number | undefined) ?? ""}
                 onChange={(e) => setAnswers((a) => ({ ...a, [q.id]: e.target.value === "" ? "" : parseFloat(e.target.value) }))}
-                className="input font-mono max-w-xs"
+                className="input font-mono max-w-full sm:max-w-xs"
                 placeholder="Numerical answer"
               />
             ) : q.type === "MSQ" ? (
@@ -270,14 +273,14 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
           </div>
 
           <div className="mt-6 flex gap-3 flex-wrap">
-            <button onClick={() => setIdx(Math.max(0, idx - 1))} disabled={idx === 0} className="btn btn-ghost">← Previous</button>
-            <button onClick={() => setAnswers((a) => { const c = { ...a }; delete c[q.id]; return c; })} className="btn btn-ghost">Clear</button>
-            <button onClick={() => setIdx(Math.min(mock.totalQuestions - 1, idx + 1))} disabled={idx === mock.totalQuestions - 1} className="btn btn-primary">Next →</button>
+            <button onClick={() => setIdx(Math.max(0, idx - 1))} disabled={idx === 0} className="btn btn-ghost min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">← Previous</button>
+            <button onClick={() => setAnswers((a) => { const c = { ...a }; delete c[q.id]; return c; })} className="btn btn-ghost min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">Clear</button>
+            <button onClick={() => setIdx(Math.min(mock.totalQuestions - 1, idx + 1))} disabled={idx === mock.totalQuestions - 1} className="btn btn-primary min-h-[48px] sm:min-h-0 active:scale-[0.97] transition-transform">Next →</button>
           </div>
         </div>
 
-        {/* Palette */}
-        <aside className="card p-4 h-fit sticky top-32">
+        {/* Palette — desktop */}
+        <aside className="hidden lg:block card p-4 h-fit sticky top-32">
           <div className="text-sm font-bold mb-2">Question palette</div>
           <div className="grid grid-cols-6 gap-1">
             {mock.questions.map((qq, i) => {
@@ -289,7 +292,7 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
                   key={qq.id}
                   onClick={() => setIdx(i)}
                   className={cn(
-                    "h-8 text-xs rounded font-semibold border",
+                    "min-h-[36px] min-w-[36px] text-xs rounded font-semibold border transition active:scale-90",
                     i === idx && "ring-2 ring-brand",
                     isAnswered ? "bg-emerald-100 border-emerald-300 text-emerald-900" :
                       isSeen ? "bg-amber-50 border-amber-200 text-amber-900" :
@@ -306,6 +309,86 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
           </div>
         </aside>
       </div>
+
+      {/* ---------- Mobile bottom action bar ---------- */}
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-surface border-t border-line px-3 py-2 grid grid-cols-2 gap-2 shadow-[0_-4px_12px_rgba(0,0,0,0.04)] pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+        <button
+          onClick={() => setPaletteOpen(true)}
+          className="btn btn-ghost border border-line h-12 justify-center font-semibold"
+        >
+          🗂 Palette ({idx + 1}/{mock.totalQuestions})
+        </button>
+        <button
+          onClick={() => setPhase("submitted")}
+          className="btn btn-accent h-12 justify-center font-semibold"
+        >
+          Submit
+        </button>
+      </div>
+
+      {/* ---------- Mobile palette drawer ---------- */}
+      <div
+        className={cn(
+          "lg:hidden fixed inset-0 z-40 transition",
+          paletteOpen ? "visible" : "invisible pointer-events-none",
+        )}
+        aria-hidden={!paletteOpen}
+      >
+        <div
+          onClick={() => setPaletteOpen(false)}
+          className={cn("absolute inset-0 bg-ink/40 transition-opacity", paletteOpen ? "opacity-100" : "opacity-0")}
+        />
+        <div
+          className={cn(
+            "absolute top-0 right-0 h-full w-[88%] max-w-sm bg-surface shadow-2xl flex flex-col transition-transform duration-200",
+            paletteOpen ? "translate-x-0" : "translate-x-full",
+          )}
+        >
+          <div className="h-14 flex items-center justify-between px-5 border-b border-line">
+            <span className="font-bold">Question palette</span>
+            <button
+              type="button"
+              aria-label="Close palette"
+              onClick={() => setPaletteOpen(false)}
+              className="w-10 h-10 inline-flex items-center justify-center rounded-lg hover:bg-canvas"
+            >
+              <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M6 6l12 12" /><path d="M18 6L6 18" />
+              </svg>
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto p-5">
+            <div className="text-sm font-bold mb-2">Question palette</div>
+            <div className="grid grid-cols-5 gap-1.5">
+              {mock.questions.map((qq, i) => {
+                const a = answers[qq.id];
+                const isAnswered = !(a === undefined || a === "" || (Array.isArray(a) && a.length === 0));
+                const isSeen = seenIds.has(qq.id);
+                return (
+                  <button
+                    key={qq.id}
+                    onClick={() => { setIdx(i); setPaletteOpen(false); }}
+                    className={cn(
+                      "min-h-[44px] min-w-[44px] text-xs font-semibold rounded border transition active:scale-90",
+                      i === idx && "ring-2 ring-brand",
+                      isAnswered ? "bg-emerald-100 border-emerald-300 text-emerald-900" :
+                        isSeen ? "bg-amber-50 border-amber-200 text-amber-900" :
+                        "bg-surface border-line text-muted",
+                    )}
+                  >{i + 1}</button>
+                );
+              })}
+            </div>
+            <div className="mt-3 text-xs space-y-1">
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-emerald-100 border border-emerald-300 rounded-sm" /> answered</div>
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-amber-50 border border-amber-200 rounded-sm" /> seen, skipped</div>
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-surface border border-line rounded-sm" /> not visited</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <OfflineToast />
     </div>
   );
 }
@@ -321,8 +404,8 @@ function ChoiceList({ options, multi, value, onChange }: {
         const sel = multi ? (Array.isArray(value) && value.includes(i)) : value === i;
         return (
           <label key={i} className={cn(
-            "flex items-start gap-3 rounded-lg border p-3 cursor-pointer hover:bg-canvas",
-            sel ? "border-brand bg-brand/5" : "border-line",
+            "flex items-start gap-3 rounded-lg border p-3 min-h-[48px] cursor-pointer transition active:bg-brand/[0.06] active:scale-[0.99]",
+            sel ? "border-brand bg-brand/5" : "border-line hover:bg-canvas",
           )}>
             <input type={multi ? "checkbox" : "radio"} checked={!!sel}
               onChange={() => {
@@ -332,9 +415,9 @@ function ChoiceList({ options, multi, value, onChange }: {
                 if (ix >= 0) cur.splice(ix, 1); else cur.push(i);
                 onChange(cur);
               }}
-              className="mt-0.5"
+              className="mt-0.5 min-w-5 min-h-5"
             />
-            <span className="font-bold w-5">{String.fromCharCode(65 + i)}.</span>
+            <span className="font-bold w-5 shrink-0">{String.fromCharCode(65 + i)}.</span>
             <span className="text-sm flex-1">{opt}</span>
           </label>
         );

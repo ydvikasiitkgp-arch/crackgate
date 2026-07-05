@@ -41,9 +41,9 @@
   --bg:      rgb(var(--bg-rgb));
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
-html, body { height: 100%; }
+html, body { height: 100%; touch-action: manipulation; }
 
 /* Matured solution blocks: tidy spacing for KaTeX display math + schema lines */
 .cg-solution { line-height: 1.7; }
