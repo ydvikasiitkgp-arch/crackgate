@@ -79,7 +79,7 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <div className="relative min-h-[600px] lg:min-h-[620px]">
+      <div className="relative min-h-[680px] pb-16 lg:min-h-[720px] lg:pb-20">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={active}
