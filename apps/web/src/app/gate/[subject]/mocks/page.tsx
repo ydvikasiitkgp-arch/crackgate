@@ -18,8 +18,11 @@ function tierBadge(tier: Tier) {
 export async function generateMetadata(props: { params: Promise<{ subject: string }> }) {
   const { subject } = await props.params;
   const meta = getGateSubject(subject);
-  if (!meta) return { title: "Mock Tests" };
-  return { title: `GATE ${meta.code} Test Series 2027` };
+  if (!meta) return { title: "Mock Tests", description: "Full-length GATE mock tests with TCS iON-standard simulation. Server-side grading and SWOT analytics." };
+  return {
+    title: `GATE ${meta.code} Test Series 2027`,
+    description: `Full-length GATE ${meta.code} mock tests with exam-pattern simulation, server-side grading, sectional analysis, and All India Rank comparison for ${meta.label}.`,
+  };
 }
 
 export default async function SubjectMocksIndex(props: { params: Promise<{ subject: string }> }) {

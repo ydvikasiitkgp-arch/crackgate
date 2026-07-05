@@ -4,6 +4,7 @@ import { auth } from "@/lib/auth";
 import { getGateSubject, KNOWN_COMING_SOON } from "@/data/gate/registry";
 import { TrackHub, GATE_MODULES } from "@/components/track-hub";
 import { CivilWindow, GeologyWindow, EnvironmentWindow } from "@/components/hero-carousel";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const dynamic = "force-dynamic";
 
@@ -13,9 +14,17 @@ const COMING_SOON_CODES: Record<string, string> = { geology: "GG", environment: 
 export async function generateMetadata(props: { params: Promise<{ subject: string }> }) {
   const { subject } = await props.params;
   const meta = getGateSubject(subject);
-  if (meta) return { title: `GATE ${meta.label} (${meta.code}) · CrackGate` };
+  if (meta) {
+    return {
+      title: `GATE ${meta.label} (${meta.code}) · CrackGate`,
+      description: `Complete GATE ${meta.code} preparation — full-length mocks, topic-wise practice, IIT-authored learn modules, SWOT analytics, and exam simulations for ${meta.label}.`,
+    };
+  }
   const label = subject.charAt(0).toUpperCase() + subject.slice(1);
-  return { title: `GATE ${label} · CrackGate` };
+  return {
+    title: `GATE ${label} · CrackGate`,
+    description: `Prepare for GATE ${label} with CrackGate — mock tests, practice questions, learn modules and performance analytics.`,
+  };
 }
 
 export default async function GateSubjectHome(props: { params: Promise<{ subject: string }> }) {
@@ -103,6 +112,7 @@ export default async function GateSubjectHome(props: { params: Promise<{ subject
 
       {/* MODULES */}
       <section className="max-w-7xl mx-auto px-5 py-16 lg:py-20">
+        <Breadcrumb crumbs={[{ label: "GATE", href: "/gate" }, { label: `${meta.label} (${meta.code})` }]} />
         <h2 className="text-3xl font-extrabold text-center">Your complete GATE {meta.code} track.</h2>
         <p className="mt-3 text-muted text-center max-w-2xl mx-auto">
           Everything is built specifically for {meta.label} — no generic padding. Every question is

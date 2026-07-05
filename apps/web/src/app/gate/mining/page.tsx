@@ -4,7 +4,11 @@ import { MOCKS } from "@/data/mocks";
 import { PRACTICE } from "@/data/practice";
 import { GateWindow } from "@/components/hero-carousel";
 
-export const metadata = { title: "GATE Mining (MN) · CrackGate" };
+export const metadata = {
+  title: "GATE Mining (MN) · CrackGate",
+  description:
+    "Complete GATE Mining Engineering preparation — 20 full-length mocks, 2000+ practice questions, IIT-authored learn modules, SWOT analytics, and NTA-style exam portal.",
+};
 export const dynamic = "force-dynamic";
 
 export default async function GateMiningPage() {

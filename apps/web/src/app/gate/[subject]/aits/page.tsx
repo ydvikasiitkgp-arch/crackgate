@@ -18,8 +18,11 @@ function fmt(iso: string) {
 export async function generateMetadata(props: { params: Promise<{ subject: string }> }) {
   const { subject } = await props.params;
   const meta = getGateSubject(subject);
-  if (!meta) return { title: "AITS" };
-  return { title: `AITS — GATE ${meta.code} 2027 | CrackGate` };
+  if (!meta) return { title: "AITS", description: "All India Test Series with national ranking and SWOT analysis for GATE preparation." };
+  return {
+    title: `AITS — GATE ${meta.code} 2027 | CrackGate`,
+    description: `All India Test Series for GATE ${meta.code} — ${meta.label}. Scheduled mock tests with national ranking, SWOT analysis, and benchmarking against peers.`,
+  };
 }
 
 export default async function SubjectAitsPage(props: { params: Promise<{ subject: string }> }) {

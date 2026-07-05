@@ -1,4 +1,8 @@
-export const metadata = { title: "Refund Policy" };
+export const metadata = {
+  title: "Refund Policy",
+  description:
+    "Refund and cancellation policy for CrackGate.in — terms for premium plan subscriptions, mock test purchases, and access to GATE & PSU exam preparation content.",
+};
 export default function Refund() {
   return (
     <article className="prose prose-slate max-w-3xl mx-auto px-5 py-16">

@@ -1,4 +1,8 @@
-export const metadata = { title: "Privacy Policy" };
+export const metadata = {
+  title: "Privacy Policy",
+  description:
+    "Privacy Policy for CrackGate.in — how we collect, use, and protect your personal data when you use our GATE and PSU exam preparation platform.",
+};
 export default function Privacy() {
   return (
     <article className="prose prose-slate max-w-3xl mx-auto px-5 py-16">

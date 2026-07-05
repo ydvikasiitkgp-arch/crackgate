@@ -15,7 +15,13 @@ export function generateStaticParams() {
 export async function generateMetadata(props: { params: Promise<{ discipline: string }> }) {
   const { discipline } = await props.params;
   const row = getCilDiscipline(discipline);
-  return { title: row ? `CIL ${row.discipline} · Mock Series · CrackGate` : "CIL · CrackGate" };
+  if (!row) {
+    return { title: "CIL · CrackGate", description: "Coal India Limited Management Trainee exam preparation with discipline-specific mock tests." };
+  }
+  return {
+    title: `CIL ${row.discipline} · Mock Series · CrackGate`,
+    description: `Crack Coal India Management Trainee ${row.discipline} exam. ${row.qualification}. Practice with mock tests tailored to the CIL exam pattern.`,
+  };
 }
 
 export default async function CilDisciplinePage(props: { params: Promise<{ discipline: string }> }) {

@@ -2,7 +2,11 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { STATE_MOCKS } from "@/data/state/mocks";
 
-export const metadata: Metadata = { title: "State Level Exams · CrackGate" };
+export const metadata: Metadata = {
+  title: "State Level Exams · CrackGate",
+  description:
+    "Prepare for state-level mining engineering exams — RPSC Assistant Mining Engineer, Gujarat Mineral Development Corporation, and other state PSU recruitment tests.",
+};
 
 export default function StateExamsPage() {
   return (

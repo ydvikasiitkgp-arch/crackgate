@@ -9,8 +9,11 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata(props: { params: Promise<{ subject: string }> }) {
   const { subject } = await props.params;
   const meta = getGateSubject(subject);
-  if (!meta) return { title: "Practice" };
-  return { title: `Practice — GATE ${meta.code}` };
+  if (!meta) return { title: "Practice", description: "Topic-wise practice questions for GATE exams with instant grading and worked solutions." };
+  return {
+    title: `Practice — GATE ${meta.code}`,
+    description: `Topic-wise practice questions for GATE ${meta.code} — ${meta.label}. Instant grading, worked solutions, and performance tracking across all subjects.`,
+  };
 }
 
 export default async function SubjectPracticeIndex(props: { params: Promise<{ subject: string }> }) {

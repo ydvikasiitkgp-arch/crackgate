@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://crackgate.in",
     title: "CrackGate.in — GATE Mining, Civil, Geology & PSU Exam Prep",
     description: "10+ full-length mocks · 1000+ practice questions · SWOT analytics · ₹0 first mock. Covers GATE MN, CE, GG, ES & PSU Coal India.",
-    images: ["/og-banner.png"],
+    images: ["/og-banner.svg"],
   },
   twitter: { card: "summary_large_image" },
   icons: {
@@ -46,10 +46,52 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const session = await auth();
   const plan    = (session?.user as { plan?: "free" | "pro" | "premium" } | undefined)?.plan;
 
+  const gscContent = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <ThemeScript />
+        {gscContent && <meta name="google-site-verification" content={gscContent} />}
+        {gaId && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');`,
+              }}
+            />
+          </>
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://crackgate.in/#organization",
+                  name: "CrackGate",
+                  url: "https://crackgate.in",
+                  logo: "https://crackgate.in/favicon-192.png",
+                  sameAs: [],
+                  description: "GATE Mining, Civil, Geology & PSU exam preparation platform with mock tests, practice questions, learn modules and SWOT analytics.",
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://crackgate.in/#website",
+                  url: "https://crackgate.in",
+                  name: "CrackGate.in",
+                  description: "India's #1 platform for GATE Mining (MN), Civil (CE), Geology (GG), Environmental Science (ES), PSU Coal India & state mining engineering exams.",
+                  publisher: { "@id": "https://crackgate.in/#organization" },
+                  inLanguage: "en",
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body>
         <a href="#main" className="skip-link">Skip to main content</a>

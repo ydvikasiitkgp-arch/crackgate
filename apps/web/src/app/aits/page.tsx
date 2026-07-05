@@ -5,7 +5,11 @@ import { MOCKS } from "@/data/mocks";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "AITS — All India Test Series | CrackGate" };
+export const metadata = {
+  title: "AITS — All India Test Series | CrackGate",
+  description:
+    "All India Test Series for GATE Mining Engineering — 10 scheduled mock tests with national ranking, SWOT analysis, and performance benchmarking against peers.",
+};
 
 function fmt(iso: string) {
   return new Date(iso).toLocaleString("en-IN", {

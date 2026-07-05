@@ -8,8 +8,11 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata(props: { params: Promise<{ subject: string }> }) {
   const { subject } = await props.params;
   const meta = getGateSubject(subject);
-  if (!meta) return { title: "Learn & Solve" };
-  return { title: `Learn & Solve — GATE ${meta.code} Syllabus, Section by Section` };
+  if (!meta) return { title: "Learn & Solve", description: "Master GATE syllabus section by section with IIT-style breakdowns, formula matrices, and progressive question suites." };
+  return {
+    title: `Learn & Solve — GATE ${meta.code} Syllabus, Section by Section`,
+    description: `Master the GATE ${meta.code} syllabus for ${meta.label} — IIT-style topic breakdowns, formula matrices, exam traps, and progressive 3-tier question suites with worked solutions.`,
+  };
 }
 
 export default async function SubjectLearnIndex(props: { params: Promise<{ subject: string }> }) {

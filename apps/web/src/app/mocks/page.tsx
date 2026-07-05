@@ -3,7 +3,11 @@ import { MOCKS } from "@/data/mocks";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 
-export const metadata = { title: "Mock Test Series" };
+export const metadata = {
+  title: "Mock Test Series",
+  description:
+    "Full-length GATE Mining Engineering mock tests with TCS iON-standard exam simulation. Server-side grading, sectional analysis, SWOT insights, and All India Rank comparison.",
+};
 export const dynamic = "force-dynamic";
 
 type Plan = "free" | "pro" | "premium";

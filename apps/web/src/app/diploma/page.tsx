@@ -2,7 +2,11 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { DIPLOMA_MOCKS } from "@/data/diploma/mocks";
 
-export const metadata: Metadata = { title: "Diploma Level Exams · CrackGate" };
+export const metadata: Metadata = {
+  title: "Diploma Level Exams · CrackGate",
+  description:
+    "Prepare for mining diploma-level exams — Coal Sirdar, Overman, and other DGMS-certified competency tests. Practice with exam-pattern mocks and question banks.",
+};
 
 export default function DiplomaExamsPage() {
   return (

@@ -2,7 +2,11 @@ import Link from "next/link";
 import { auth } from "@/lib/auth";
 import { FreshMockRunner } from "@/components/fresh-mock-runner";
 
-export const metadata = { title: "Fresh Mock — Premium GATE-pattern Generator" };
+export const metadata = {
+  title: "Fresh Mock — Premium GATE-pattern Generator",
+  description:
+    "Generate a fresh GATE Mining mock test on demand. AI-curated questions from a 2000+ bank — unlimited unique mocks for premium users of CrackGate.",
+};
 export const dynamic = "force-dynamic";
 
 export default async function FreshMockPage(props: { searchParams: Promise<{ seed?: string }> }) {

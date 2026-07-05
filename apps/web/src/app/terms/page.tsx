@@ -1,4 +1,8 @@
-export const metadata = { title: "Terms of Service" };
+export const metadata = {
+  title: "Terms of Service",
+  description:
+    "Terms of Service for CrackGate.in — guidelines for using our GATE and PSU exam preparation platform, including user obligations, content usage, and disclaimers.",
+};
 export default function Terms() {
   return (
     <article className="prose prose-slate max-w-3xl mx-auto px-5 py-16">

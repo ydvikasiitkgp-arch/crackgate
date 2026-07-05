@@ -2,7 +2,11 @@ import Link from "next/link";
 import { CilAdBanner } from "@/components/cil-ad-banner";
 import { CIL_RECRUITMENT_URL } from "@/data/cil";
 
-export const metadata = { title: "News & Notifications · CrackGate" };
+export const metadata = {
+  title: "News & Notifications · CrackGate",
+  description:
+    "Latest GATE, PSU and mining engineering exam notifications. Coal India Limited recruitment, DGMS updates, and important exam dates for mining professionals.",
+};
 
 type NewsItem = {
   tag: string;
