@@ -204,7 +204,7 @@ jobs:
           EOF
 
       - name: Notify on failure
-        if: failure()
+        if: false # TODO: set SLACK_WEBHOOK_URL secret
         run: |
           curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
             -H 'Content-Type: application/json' \
@@ -230,7 +230,7 @@ jobs:
         run: npm run --workspace apps/web test:e2e
 
       - name: Notify on failure
-        if: failure()
+        if: false # TODO: set SLACK_WEBHOOK_URL secret
         run: |
           curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
             -H 'Content-Type: application/json' \
