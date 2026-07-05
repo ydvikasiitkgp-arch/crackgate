@@ -16,7 +16,7 @@ export default async function GateMiningPage() {
   return (
     <>
       {/* ---------- HERO (GATE MN 2027 banner) ---------- */}
-      <section className="relative overflow-hidden bg-slate-950 text-white">
+      <section className="relative bg-slate-950 text-white">
         <div className="relative min-h-[680px] lg:min-h-[720px]">
           <GateWindow practiceQs={practiceQs} mocksCount={mocksCount} subjectsCount={subjectsCount} />
         </div>
