@@ -2,11 +2,13 @@ import Link from "next/link";
 import { MOCKS } from "@/data/mocks";
 import { PRACTICE } from "@/data/practice";
 import { getGateSubject } from "@/data/gate/registry";
+import { auth } from "@/lib/auth";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { CilAdBanner } from "@/components/cil-ad-banner";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const session = await auth();
   const practiceQs = PRACTICE.reduce((s, sub) => s + sub.questions.length, 0);
   const subjectsCount = PRACTICE.length;
   const mocksCount = MOCKS.length;
@@ -137,13 +139,15 @@ export default function HomePage() {
       </section>
 
       {/* ---------- CTA ---------- */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-white">
-        <div className="max-w-3xl mx-auto px-5 py-16 text-center">
-          <h2 className="text-3xl font-extrabold">Start your free mock now.</h2>
-          <p className="mt-3 text-slate-300">No credit card. Takes 5 seconds with Google.</p>
-          <Link href="/login" className="btn btn-accent btn-lg mt-6 inline-flex">Continue with Google →</Link>
-        </div>
-      </section>
+      {!session?.user && (
+        <section className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-white">
+          <div className="max-w-3xl mx-auto px-5 py-16 text-center">
+            <h2 className="text-3xl font-extrabold">Start your free mock now.</h2>
+            <p className="mt-3 text-slate-300">No credit card. Takes 5 seconds with Google.</p>
+            <Link href="/login" className="btn btn-accent btn-lg mt-6 inline-flex">Continue with Google →</Link>
+          </div>
+        </section>
+      )}
 
       {/* Floating WhatsApp chat — landing page only */}
       <WhatsAppButton />
