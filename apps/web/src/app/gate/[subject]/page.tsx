@@ -56,25 +56,25 @@ export default async function GateSubjectHome(props: { params: Promise<{ subject
     <>
       {/* HERO */}
       {subject === "civil" ? (
-        <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="relative min-h-[560px] lg:min-h-[600px]">
+        <section className="relative bg-slate-950 text-white">
+          <div className="relative min-h-[680px] lg:min-h-[720px]">
             <CivilWindow civil={{ practiceQs, mocksCount, learnCount, subjectsCount }} />
           </div>
         </section>
       ) : subject === "geology" ? (
-        <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="relative min-h-[560px] lg:min-h-[600px]">
+        <section className="relative bg-slate-950 text-white">
+          <div className="relative min-h-[680px] lg:min-h-[720px]">
             <GeologyWindow stats={{ practiceQs, mocksCount, learnCount, subjectsCount }} />
           </div>
         </section>
       ) : subject === "environment" ? (
-        <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="relative min-h-[560px] lg:min-h-[600px]">
+        <section className="relative bg-slate-950 text-white">
+          <div className="relative min-h-[680px] lg:min-h-[720px]">
             <EnvironmentWindow stats={{ practiceQs, mocksCount, learnCount, subjectsCount }} />
           </div>
         </section>
       ) : (
-        <section className="relative overflow-hidden bg-gradient-to-br from-brand to-brand-2 text-white">
+        <section className="relative bg-gradient-to-br from-brand to-brand-2 text-white">
           <div aria-hidden className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
           <div aria-hidden className="pointer-events-none absolute -bottom-24 left-1/4 h-72 w-72 rounded-full bg-amber-300/10 blur-3xl" />
           <div className="relative max-w-7xl mx-auto px-5 py-16 lg:py-24">
