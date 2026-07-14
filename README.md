@@ -1,8 +1,8 @@
 # CrackGate.in 🛠️⛏️
 
-India's #1 dedicated **GATE** preparation platform — built exclusively for **Mining Engineering (MN)** aspirants targeting **M.Tech admissions** and **PSU jobs** (Coal India, NMDC, NTPC, ONGC, GAIL, HZL), with additional GATE tracks (Civil, Geology, Environment) on the way.
+India's #1 dedicated **GATE** preparation platform — covering **Mining Engineering (MN)**, **Civil Engineering (CY)**, **Geology (GL)**, and **Environmental Science & Engineering (ES)**, plus **PSU recruitment** (Coal India, ONGC, NMDC, NTPC, GAIL, HZL), **STATE** and **DIPLOMA** exam tracks.
 
-> A full-stack **Next.js 15** application running on **AWS** (EC2 + RDS Postgres), provisioned with **Terraform** and shipped through **GitHub Actions** CI/CD with separate **production** and **staging** environments.
+> A full-stack **Next.js 16** application running on **AWS** (EC2 + RDS Postgres), provisioned with **Terraform** and shipped through **GitHub Actions** CI/CD with separate **production** and **staging** environments.
 
 > 📐 New here or briefing a stakeholder? Start with the **[Architecture overview](ARCHITECTURE.md)** — a plain-language tour of the whole system.
 
@@ -15,6 +15,8 @@ India's #1 dedicated **GATE** preparation platform — built exclusively for **M
 - 🛡️ **Server-side grading** — scores computed on the server (tamper-proof) with a detailed report after every attempt.
 - 📊 **SWOT Analytics** — subject-wise strength/weakness graphs, time-per-question, accuracy trend, percentile.
 - 📅 **AITS** (All-India Test Series) scheduled around the exam cycle.
+- 🏢 **PSU recruitment mocks** — CIL, ONGC, NMDC, NTPC, GAIL, HZL exam patterns.
+- 🗺️ **STATE & DIPLOMA** exam tracks with tailored practice sets.
 - 🔐 **Auth** via Google sign-in and WhatsApp/phone OTP (env-gated).
 - 💳 **Payments** via Razorpay + UPI.
 - 📱 Mobile-first, accessible, fast; progress syncs across devices.
@@ -23,11 +25,11 @@ India's #1 dedicated **GATE** preparation platform — built exclusively for **M
 
 | Layer         | Tech                                                              |
 | ------------- | ---------------------------------------------------------------- |
-| Frontend      | Next.js 15 (App Router), React 19, Tailwind CSS, Recharts, KaTeX |
+| Frontend      | Next.js 16 (App Router), React 19, Tailwind CSS, Recharts, KaTeX |
 | Backend       | Next.js Route Handlers / Server Actions, NextAuth v5             |
 | Database      | PostgreSQL 16 (AWS RDS) via Prisma                               |
 | Infra         | AWS (EC2 t4g arm64, RDS, S3, ECR, Secrets Manager) via Terraform |
-| Runtime       | Docker Compose on EC2, Caddy (TLS), pgbouncer                    |
+| Runtime       | Docker Compose on EC2, Caddy (TLS), Redis                         |
 | CI/CD         | GitHub Actions → ECR → SSH deploy, Playwright smoke tests        |
 | Observability | Sentry, CloudWatch, Route 53 health checks                       |
 | Tests         | Vitest (unit), Playwright (e2e/smoke)                            |
@@ -37,7 +39,7 @@ India's #1 dedicated **GATE** preparation platform — built exclusively for **M
 ```
 crackgate/
 ├── apps/
-│   └── web/                    # Next.js 15 app (App Router)
+│   └── web/                    # Next.js 16 app (App Router)
 │       ├── src/app/            # routes (home, gate/*, practice, mocks, aits, pricing, dashboard…)
 │       ├── src/components/     # UI (mega-nav, exam-portal, practice-runner, charts…)
 │       ├── src/data/           # mocks, practice, pyq, aits, psu catalogs
