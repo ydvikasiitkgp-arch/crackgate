@@ -3,6 +3,7 @@
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
+import { getPostHogClient } from "@/lib/posthog";
 
 export type UpdateProfileState = { ok?: boolean; error?: string };
 
@@ -47,6 +48,28 @@ export async function updateProfile(
   } catch {
     return { error: "Could not save changes. Try again." };
   }
+
+  getPostHogClient()?.capture({
+    distinctId: session.user.id,
+    event: "profile_updated",
+    properties: {
+      has_name: !!name,
+      has_target_year: !!targetYear,
+      has_target_rank: targetRank !== null,
+      has_current_status: !!currentStatus,
+    },
+  });
+  getPostHogClient()?.identify({
+    distinctId: session.user.id,
+    properties: {
+      $set: {
+        name: name || null,
+        target_year: targetYear,
+        target_rank: targetRank,
+        current_status: currentStatus || null,
+      },
+    },
+  });
 
   revalidatePath("/settings");
   revalidatePath("/dashboard");
