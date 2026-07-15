@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 import { sendPaymentReceipt } from "@/lib/whatsapp";
 import { DEFAULT_EXAM, DEFAULT_SUBJECT } from "@/data/catalog";
+import { getPostHogClient } from "@/lib/posthog";
 
 export const runtime = "nodejs";
 
@@ -112,6 +113,22 @@ export async function POST(
       },
     }),
   ]);
+
+  getPostHogClient()?.capture({
+    distinctId: claim.userId,
+    event: "upi_payment_approved",
+    properties: {
+      plan: claim.plan,
+      exam,
+      subject,
+      amount_paise: claim.amountPaise,
+      amount_rupees: Math.round(claim.amountPaise / 100),
+      period_months: claim.periodMonths,
+      upi_app: claim.upiApp ?? null,
+      syncs_global_plan: syncsGlobalPlan,
+    },
+  });
+  getPostHogClient()?.flush();
 
   // Fire-and-forget WhatsApp receipt.
   try {

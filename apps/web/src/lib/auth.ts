@@ -122,6 +122,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             where: { id: user.id },
             data: { phoneVerified: new Date(), lastLoginAt: new Date() },
           });
+          getPostHogClient()?.capture({
+            distinctId: user.id,
+            event: "user_logged_in",
+            properties: { method: "whatsapp_otp" },
+          });
+          getPostHogClient()?.identify({
+            distinctId: user.id,
+            properties: {
+              $set: { name: user.name, phone },
+            },
+          });
         }
         await db.otpCode.update({ where: { id: otp.id }, data: { consumedAt: new Date() } });
 
@@ -197,6 +208,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             getPostHogClient()?.capture({
               distinctId: dbUser.id,
               event: "user_signed_up",
+              properties: { method: "google" },
+            });
+          } else {
+            getPostHogClient()?.capture({
+              distinctId: dbUser.id,
+              event: "user_logged_in",
               properties: { method: "google" },
             });
           }
