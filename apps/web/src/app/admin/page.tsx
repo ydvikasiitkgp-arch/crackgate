@@ -16,7 +16,6 @@ import { AdminFunnelChart } from "@/components/admin-funnel-chart";
 
 const RealtimeBadge = dynamicImport(() =>
   import("@/components/realtime-badge").then((m) => m.RealtimeBadge),
-  { ssr: false },
 );
 
 const AdminCharts = dynamicImport(() =>
