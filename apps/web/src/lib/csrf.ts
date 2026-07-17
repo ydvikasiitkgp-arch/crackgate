@@ -5,6 +5,7 @@ const CSRF_EXEMPT_PATHS = [
   "/api/whatsapp/webhook",
   "/api/cron/weekly-digest",
   "/api/cron/cleanup-otp",
+  "/api/track",
 ];
 
 export function isMutation(req: NextRequest): boolean {
