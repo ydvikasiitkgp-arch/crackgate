@@ -370,10 +370,11 @@ export default async function DashboardPage({
         prediction={prediction}
         daysToGate={gateDays}
         targetAir={latest?.targetRank ?? 100}
+        data-track-section="dashboard:rank"
       />
 
       {/* Tier 2 — What do I do now?  &  How am I doing? */}
-      <section className="grid lg:grid-cols-[1.55fr_1fr] gap-5">
+      <section className="grid lg:grid-cols-[1.55fr_1fr] gap-5" data-track-section="dashboard:focus">
         <TodayFocusCard focus={focus} followUps={followUps} />
         <WeekStatus
           week={week}

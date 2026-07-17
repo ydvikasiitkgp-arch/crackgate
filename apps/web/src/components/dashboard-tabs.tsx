@@ -63,6 +63,7 @@ export function DashboardTabs({ tabs }: { tabs: DashboardTab[] }) {
               aria-controls={`tabpanel-${t.key}`}
               id={`tab-${t.key}`}
               onClick={() => onSelect(t.key)}
+              data-track={`tab:${t.key}`}
               className={`relative shrink-0 px-3 sm:px-4 py-2.5 text-sm font-semibold transition-colors
                 ${isActive ? "text-ink" : "text-muted hover:text-ink"}`}
             >

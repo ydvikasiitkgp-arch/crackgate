@@ -296,6 +296,7 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
         <button
           onClick={() => router.push("/login")}
           className="btn btn-ghost mt-8"
+          data-track="pricing:current-plan"
         >
           Current plan
         </button>
@@ -305,6 +306,7 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
             onClick={buy}
             disabled={loading}
             className={`btn w-full ${plan.id === "premium" ? "btn-accent" : "btn-primary"}`}
+            data-track={`pricing:buy:${plan.id}`}
           >
             {loading ? "…" : devMode ? `⚙ ${plan.name}` : `${plan.cta} — ₹${plan.price}`}
           </button>

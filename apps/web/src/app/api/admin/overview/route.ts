@@ -58,6 +58,7 @@ export async function GET() {
     recentUsers,
     recentActivity,
     reports30,
+    pageViews30,
   ] = await Promise.all([
     db.user.count(),
     db.user.groupBy({ by: ["plan"], _count: { _all: true } }),
@@ -103,6 +104,12 @@ export async function GET() {
       select: { createdAt: true, status: true },
       take: 10_000,
     }),
+    // ponytail: raw SQL with date_trunc — avoids fetching 50K rows for timeseries
+    db.$queryRaw<{ date: string; count: bigint }[]>`
+      SELECT DATE("createdAt") as date, COUNT(DISTINCT COALESCE("userId", "ip", 'anon')) as count
+      FROM "PageView" WHERE "createdAt" >= ${since30}
+      GROUP BY DATE("createdAt") ORDER BY date
+    `,
   ]);
 
   // Build daily signup + attempt + activity + reports series for the last 30 days.
@@ -145,6 +152,13 @@ export async function GET() {
     count: dauSet.get(d)?.size ?? 0,
   }));
 
+  // ponytail: SQL already returned per-day counts — just convert bigint → number
+  const visitorMap = new Map(pageViews30.map((r) => [String(r.date).slice(0, 10), Number(r.count)]));
+  const visitorSeries = Array.from(signupSeries.keys()).map((d) => ({
+    date: d,
+    count: visitorMap.get(d) ?? 0,
+  }));
+
   const planMap: Record<string, number> = { free: 0, pro: 0, premium: 0 };
   for (const row of usersByPlan) planMap[row.plan] = row._count._all;
 
@@ -179,6 +193,7 @@ export async function GET() {
       activity: Array.from(activitySeries, ([date, count]) => ({ date, count })),
       reports: Array.from(reportSeries, ([date, count]) => ({ date, count })),
       dau: dauSeries,
+      visitors: visitorSeries,
     },
     recent: {
       users: recentUsers,

@@ -49,11 +49,11 @@ export default async function PracticeIndex() {
                 <span className="badge bg-rose-50 text-rose-700">{h} hard</span>
               </div>
               {hasAccess ? (
-                <Link href={`/practice/${s.slug}`} className="btn btn-primary w-full mt-5">
+                <Link href={`/practice/${s.slug}`} className="btn btn-primary w-full mt-5" data-track="practice:start">
                   Practice →
                 </Link>
               ) : (
-                <Link href="/pricing" className="btn btn-ghost border border-line w-full mt-5">
+                <Link href="/pricing" className="btn btn-ghost border border-line w-full mt-5" data-track="practice:unlock">
                   🔒 Unlock with Pro
                 </Link>
               )}
