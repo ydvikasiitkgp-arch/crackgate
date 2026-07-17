@@ -99,7 +99,7 @@ const SUBJECTS: Record<string, GateSubject> = {
   },
   geology: {
     slug: "geology",
-    label: "Geology & Geophysics",
+    label: "Geology and Geophysics",
     code: "GG",
     blurb:
       "Full GATE Geology & Geophysics (GG) preparation — topic-wise learning, an exam-grade practice bank, full-length mocks and a scheduled All India Test Series.",
@@ -114,7 +114,7 @@ const SUBJECTS: Record<string, GateSubject> = {
   },
   environment: {
     slug: "environment",
-    label: "Environmental Science",
+    label: "Environmental Science and Engineering",
     code: "ES",
     blurb:
       "Full GATE Environmental Science & Engineering (ES) preparation — topic-wise learning, an exam-grade practice bank, full-length mocks and a scheduled All India Test Series.",
@@ -140,4 +140,23 @@ export function getGateSubject(slug: string): GateSubject | undefined {
 }
 
 /** Subjects known to the catalogue but not yet built (render "coming soon"). */
-export const KNOWN_COMING_SOON = new Set<string>([]);
+export const KNOWN_COMING_SOON = new Set<string>([
+  "aerospace",           // AE  - Aerospace Engineering
+  "agricultural",        // AG  - Agricultural Engineering
+  "architecture",        // AR  - Architecture and Planning
+  "biomedical",          // BM  - Biomedical Engineering
+  "biotechnology",       // BT  - Biotechnology
+  "chemistry",           // CY  - Chemistry
+  "ecology",             // EY  - Ecology and Evolution
+  "geomatics",           // GE  - Geomatics Engineering
+  "mathematics",         // MA  - Mathematics
+  "metallurgical",       // MT  - Metallurgical Engineering
+  "naval",               // NM  - Naval Architecture and Marine Engineering
+  "petroleum",           // PE  - Petroleum Engineering
+  "physics",             // PH  - Physics
+  "statistics",          // ST  - Statistics
+  "textile",             // TF  - Textile Engineering and Fibre Science
+  "engineering-sciences",// XE  - Engineering Sciences
+  "humanities",          // XH  - Humanities and Social Sciences
+  "life-sciences",       // XL  - Life Sciences
+]);

@@ -51,7 +51,7 @@ export function TrackHub({
             </div>
           ) : (
             <div className="mt-7 inline-flex items-center gap-2 rounded-lg border border-amber-300/30 bg-amber-300/10 px-4 py-2.5 text-sm font-semibold text-amber-200">
-              🚧 {discipline} content is on the way — GATE Mining (MN) is fully live today.
+              🚧 {discipline} content is on the way — check back soon.
             </div>
           )}
         </div>
@@ -117,9 +117,9 @@ export function TrackHub({
           ) : (
             <>
               <h3 className="text-2xl font-extrabold">{discipline} is launching soon.</h3>
-              <p className="mt-2 text-white/80">In the meantime, explore our fully-live GATE Mining track.</p>
+              <p className="mt-2 text-white/80">In the meantime, explore our fully-live GATE tracks.</p>
               <div className="mt-6">
-                <Link href="/gate/mining" className="btn btn-accent btn-lg">Explore GATE Mining →</Link>
+                <Link href="/gate" className="btn btn-accent btn-lg">Explore GATE tracks →</Link>
               </div>
             </>
           )}

@@ -69,7 +69,7 @@ export async function GET(req: Request, props: { params: Promise<{ slug: string 
         { status: 403 },
       );
     }
-  } else if (plan !== "pro" && plan !== "premium") {
+  } else if (!isAdmin && plan !== "pro" && plan !== "premium") {
     // Practice is a paid feature: only Pro and Premium may load the question bank.
     return NextResponse.json(
       { error: "upgrade_required", message: "Practice is available on the Pro and Premium plans." },
@@ -78,7 +78,7 @@ export async function GET(req: Request, props: { params: Promise<{ slug: string 
   }
 
   // Entitled CE users (and admins) get a generous cap regardless of plan tier.
-  const cap = isCe ? (CAPS.premium ?? 1000) : (CAPS[plan] ?? FREE_PREVIEW);
+  const cap = isCe || isAdmin ? (CAPS.premium ?? 1000) : (CAPS[plan] ?? FREE_PREVIEW);
 
   // Per-difficulty availability (full bank, pre-cap) so the client can label
   // its difficulty tabs and "All N" session-size chip accurately.

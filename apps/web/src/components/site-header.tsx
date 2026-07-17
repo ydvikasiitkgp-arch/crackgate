@@ -98,7 +98,7 @@ export async function MiningHeader() {
       <div className="md:hidden border-t border-line">
         <nav className="flex items-center gap-2 overflow-x-auto no-scrollbar px-3 py-2">
           <span className="shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold whitespace-nowrap bg-brand/10 text-brand">
-            Mining (MN)
+            Mining Engineering (MN)
           </span>
           {MINING_MODULES.map((m) => (
             <Link

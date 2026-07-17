@@ -33,10 +33,15 @@ const EXAM_LABELS: Record<string, string> = {
 };
 
 const SUBJECT_LABELS: Record<string, string> = {
-  mining: "Mining",
-  civil: "Civil",
-  environment: "Environment",
-  geology: "Geology",
+  mining: "Mining Engineering (MN)",
+  civil: "Civil Engineering (CE)",
+  environment: "Environmental Science and Engineering (ES)",
+  geology: "Geology and Geophysics (GG)",
+  geomatics: "Geomatics Engineering (GE)",
+  textile: "Textile Engineering and Fibre Science (TF)",
+  "life-sciences": "Life Sciences (XL)",
+  ecology: "Ecology and Evolution (EY)",
+  agricultural: "Agricultural Engineering (AG)",
   electrical: "Electrical",
   mechanical: "Mechanical",
   system: "System",

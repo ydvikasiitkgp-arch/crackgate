@@ -12,7 +12,8 @@ export const metadata = {
 export default async function PracticeIndex() {
   const session = await auth();
   const plan    = (session?.user as { plan?: string } | undefined)?.plan ?? "free";
-  const hasAccess = plan === "pro" || plan === "premium";
+  const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
+  const hasAccess = isAdmin || plan === "pro" || plan === "premium";
   const total   = PRACTICE.reduce((n, s) => n + s.questions.length, 0);
   const totalLabel = total.toLocaleString("en-IN");
 

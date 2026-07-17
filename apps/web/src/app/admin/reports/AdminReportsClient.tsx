@@ -28,10 +28,15 @@ const STATUSES = ["pending", "reviewed", "resolved", "dismissed"] as const;
 const ISSUE_TYPES = ["factual_error", "typo", "unclear_explanation", "wrong_answer", "other"] as const;
 
 const SUBJECT_LABELS: Record<string, string> = {
-  mining: "Mining (MN)",
-  civil: "Civil (CE)",
-  environment: "Environment (ES)",
-  geology: "Geology (GG)",
+  mining: "Mining Engineering (MN)",
+  civil: "Civil Engineering (CE)",
+  environment: "Environmental Science and Engineering (ES)",
+  geology: "Geology and Geophysics (GG)",
+  geomatics: "Geomatics Engineering (GE)",
+  textile: "Textile Engineering and Fibre Science (TF)",
+  "life-sciences": "Life Sciences (XL)",
+  ecology: "Ecology and Evolution (EY)",
+  agricultural: "Agricultural Engineering (AG)",
   electrical: "Electrical",
   mechanical: "Mechanical",
   system: "System",

@@ -4,6 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { CIL_ROWS, CIL_TOTAL_SEATS } from "@/data/cil";
+import { ONGC_ROWS } from "@/data/ongc";
+import { ongcLiveSetNos } from "@/data/ongc-mock-bank";
 
 type CivilStats = {
   practiceQs: number;
@@ -21,7 +23,7 @@ type Props = {
   environment: CivilStats;
 };
 
-const SLIDES = 5;
+const SLIDES = 6;
 const AUTOPLAY_MS = 3000;
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -60,14 +62,16 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
 
   const slideLabel =
     active === 0
-      ? "GATE MN 2027 — Mining Engineering"
+      ? "PSU recruitment — Oil & Natural Gas Corporation"
       : active === 1
-        ? "GATE CE 2027 — Civil Engineering"
+        ? "GATE MN 2027 — Mining Engineering"
         : active === 2
-          ? "GATE GG 2027 — Geology & Geophysics"
+          ? "GATE CE 2027 — Civil Engineering"
           : active === 3
-            ? "GATE ES 2027 — Environmental Science"
-            : "PSU recruitment — Coal India Limited";
+            ? "GATE GG 2027 — Geology and Geophysics"
+            : active === 4
+              ? "GATE ES 2027 — Environmental Science and Engineering"
+              : "PSU recruitment — Coal India Limited";
 
   return (
     <section
@@ -94,12 +98,14 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
             aria-label={slideLabel}
           >
             {active === 0 ? (
-              <GateWindow practiceQs={practiceQs} mocksCount={mocksCount} subjectsCount={subjectsCount} />
+              <OngcWindow />
             ) : active === 1 ? (
-              <CivilWindow civil={civil} />
+              <GateWindow practiceQs={practiceQs} mocksCount={mocksCount} subjectsCount={subjectsCount} />
             ) : active === 2 ? (
-              <GeologyWindow stats={geology} />
+              <CivilWindow civil={civil} />
             ) : active === 3 ? (
+              <GeologyWindow stats={geology} />
+            ) : active === 4 ? (
               <EnvironmentWindow stats={environment} />
             ) : (
               <PsuWindow />
@@ -262,10 +268,10 @@ export function GeologyWindow({ stats }: { stats: SubjectStats }) {
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-amber-300/30 bg-amber-300/10 text-amber-200">
-            GATE 2027 · Geology &amp; Geophysics (GG)
+            GATE 2027 · Geology and Geophysics (GG)
           </span>
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
-            Master GATE Geology &amp; Geophysics.{" "}
+            Master GATE Geology and Geophysics.{" "}
             <span className="bg-gradient-to-r from-amber-300 to-orange-400 bg-clip-text text-transparent">
               Read the Earth, Decimal by Decimal.
             </span>
@@ -411,7 +417,7 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-200">
-            GATE 2027 · Environmental Science (ES)
+            GATE 2027 · Environmental Science and Engineering (ES)
           </span>
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             Crack GATE Environmental Science.{" "}
@@ -553,6 +559,161 @@ function EnvironmentScene() {
           </motion.svg>
         </Holo>
       </motion.div>
+    </div>
+  );
+}
+
+/* ───────────────────────── WINDOW 0 — ONGC CBT ───────────────────────── */
+
+export function OngcWindow() {
+  return (
+    <div className="relative h-full w-full">
+      <OilRigBackdrop />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#003580]/90 via-[#003580]/70 to-[#003580]/40" />
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-6 px-4 py-8 sm:px-5 sm:py-10 lg:grid-cols-2 lg:gap-10 lg:py-16">
+        <div>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <img
+              src="/images/ongc/ongc-logo.png"
+              alt="ONGC logo"
+              width={40}
+              height={40}
+              className="rounded-lg sm:h-12 sm:w-12"
+            />
+            <span className="badge border border-blue-300/30 bg-blue-300/10 text-blue-300 text-xs sm:text-sm">
+              PSU · ONGC · NEW
+            </span>
+          </div>
+          <h1 className="mt-3 text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
+            Oil &amp; Natural Gas Corporation.{" "}
+            <span className="bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent">
+              CBT 2026 — Discipline-Specific Mock Series.
+            </span>
+          </h1>
+          <p className="mt-4 max-w-xl text-sm sm:text-base lg:text-lg text-white/80">
+            85 MCQ · 2 hrs · No negative marking. 7 disciplines, 105 full-length mocks
+            tuned to the official ONGC recruitment pattern.
+          </p>
+          <div className="mt-5 sm:mt-6 lg:mt-8 flex flex-wrap gap-3">
+            <Link href="/psu/ongc" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-300 to-cyan-400 px-5 py-3 text-sm sm:text-base font-semibold text-[#003580] shadow-lg shadow-blue-500/20 transition hover:brightness-105 sm:px-6 sm:py-3.5">
+              Explore ONGC Prep <span aria-hidden>→</span>
+            </Link>
+          </div>
+          <div className="mt-5 grid grid-cols-3 gap-3 sm:mt-6 sm:grid-cols-6 sm:gap-6 lg:mt-8 text-xs sm:text-sm text-white/70">
+            <Stat n="85" label="MCQs / paper" />
+            <Stat n="2 hrs" label="Duration" />
+            <Stat n="0" label="Neg. marking" />
+            <Stat n="7" label="Disciplines" />
+            <Stat n="45" label="Live Mocks" />
+            <Stat n="105" label="Total Planned" />
+          </div>
+        </div>
+        <div className="hidden sm:block lg:pl-4">
+          <OngcDisciplineCard />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function OngcDisciplineCard() {
+  const liveCount = (slug: string) => ongcLiveSetNos(slug).size;
+  return (
+    <div className="rounded-xl border border-blue-300/20 bg-slate-900/60 p-3 shadow-pop backdrop-blur sm:rounded-2xl sm:p-4">
+      <div className="mb-2 flex items-center justify-between">
+        <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-blue-300">
+          ONGC CBT · 7 Disciplines
+        </div>
+        <span className="badge bg-blue-400/10 text-blue-200 text-[10px] sm:text-xs">15 mocks each</span>
+      </div>
+      <div className="max-h-[220px] sm:max-h-[300px] lg:max-h-[340px] overflow-y-auto rounded-lg border border-white/10">
+        <table className="w-full text-left text-[10px] sm:text-xs">
+          <thead className="sticky top-0 bg-slate-800/90 text-blue-200 backdrop-blur">
+            <tr>
+              <th className="px-1.5 py-1.5 sm:px-2 sm:py-2 font-semibold">Discipline</th>
+              <th className="hidden sm:table-cell px-2 py-2 font-semibold">Minimum Qualification</th>
+              <th className="px-1.5 py-1.5 sm:px-2 sm:py-2 text-right font-semibold">Status</th>
+            </tr>
+          </thead>
+          <tbody className="text-white/80">
+            {ONGC_ROWS.map((r) => {
+              const live = liveCount(r.slug);
+              return (
+                <tr key={r.slug} className="border-t border-white/5 align-top">
+                  <td className="px-1.5 py-1.5 sm:px-2 sm:py-2 font-medium text-white">{r.discipline}</td>
+                  <td className="hidden sm:table-cell px-2 py-2 leading-snug">{r.qualification}</td>
+                  <td className="px-1.5 py-1.5 sm:px-2 sm:py-2 text-right">
+                    {live > 0 ? (
+                      <span className="inline-flex items-center gap-0.5 sm:gap-1 rounded-full bg-emerald-400/15 px-1.5 py-0.5 sm:px-2 text-[8px] sm:text-[10px] font-semibold text-emerald-300">
+                        <span className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-emerald-400" />
+                        {live}/15 LIVE
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-0.5 sm:gap-1 rounded-full bg-white/10 px-1.5 py-0.5 sm:px-2 text-[8px] sm:text-[10px] font-semibold text-white/50">
+                        Coming soon
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+/* Oil derrick / drilling rig line art for the ONGC window */
+function OilRigBackdrop() {
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <svg className="absolute inset-0 h-full w-full opacity-[0.12]" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#93c5fd" strokeWidth="2" aria-hidden>
+        {/* oil derrick tower */}
+        <g transform="translate(580 80)">
+          <line x1="0" y1="480" x2="60" y2="0" />
+          <line x1="120" y1="480" x2="60" y2="0" />
+          {/* cross braces */}
+          {Array.from({ length: 8 }).map((_, i) => {
+            const y = 60 + i * 52;
+            const lx = (60 - (60 * (480 - y)) / 480);
+            const rx = 60 + (60 * (480 - y)) / 480;
+            return (
+              <g key={i}>
+                <line x1={lx} y1={y} x2={rx} y2={y} />
+                {i < 7 && (
+                  <>
+                    <line x1={lx} y1={y} x2={rx - 8} y2={y + 52} />
+                    <line x1={rx} y1={y} x2={lx + 8} y2={y + 52} />
+                  </>
+                )}
+              </g>
+            );
+          })}
+          {/* crown block */}
+          <rect x="45" y="0" width="30" height="20" rx="2" />
+          {/* platform */}
+          <line x1="-20" y1="480" x2="140" y2="480" />
+          <line x1="-20" y1="490" x2="140" y2="490" />
+        </g>
+        {/* pump jack (nodding donkey) */}
+        <g transform="translate(100 420)">
+          <circle cx="40" cy="40" r="30" />
+          <line x1="40" y1="10" x2="100" y2="-20" />
+          <line x1="100" y1="-20" x2="100" y2="50" />
+          <rect x="85" y="50" width="30" height="10" rx="2" />
+          <line x1="10" y1="70" x2="70" y2="70" />
+          <line x1="40" y1="70" x2="40" y2="100" />
+        </g>
+        {/* pipeline */}
+        <line x1="0" y1="520" x2="400" y2="520" strokeWidth="4" />
+        <line x1="400" y1="520" x2="500" y2="500" strokeWidth="4" />
+        {/* storage tanks */}
+        <rect x="200" y="460" width="80" height="50" rx="4" />
+        <ellipse cx="240" cy="460" rx="40" ry="8" />
+        <rect x="300" y="470" width="60" height="40" rx="3" />
+        <ellipse cx="330" cy="470" rx="30" ry="6" />
+      </svg>
     </div>
   );
 }

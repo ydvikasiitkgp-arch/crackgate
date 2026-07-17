@@ -2,6 +2,7 @@ import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { getPostHogClient } from "@/lib/posthog";
 
 const profileSchema = z.object({
   name: z.string().trim().max(80).optional(),
@@ -23,6 +24,9 @@ export async function GET() {
     return NextResponse.json({ user: u });
   } catch (error) {
     console.error("GET /api/me:", error);
+    if (error instanceof Error) {
+      getPostHogClient()?.captureException(error);
+    }
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

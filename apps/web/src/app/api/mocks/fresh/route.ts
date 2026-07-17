@@ -10,6 +10,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { PRACTICE, type PracticeQuestion } from "@/data/practice";
+import { getPostHogClient } from "@/lib/posthog";
 
 export const runtime = "nodejs";
 
@@ -75,6 +76,22 @@ export async function GET(req: Request) {
 
   const totalMarks = questions.reduce((s, q) => s + q.marks, 0);
 
+  const userId = (session?.user as { id?: string } | undefined)?.id;
+  if (userId) {
+    getPostHogClient()?.capture({
+      distinctId: userId,
+      event: "fresh_mock_generated",
+      properties: {
+        seed,
+        total_questions: questions.length,
+        total_marks: totalMarks,
+        ga_count: gaQs.length,
+        one_mark_count: oneMark.length,
+        two_mark_count: twoMark.length,
+      },
+    });
+  }
+
   return NextResponse.json({
     id: `fresh-${seed}`,
     seed,
@@ -93,6 +110,9 @@ export async function GET(req: Request) {
   });
   } catch (error) {
     console.error("GET /api/mocks/fresh:", error);
+    if (error instanceof Error) {
+      getPostHogClient()?.captureException(error);
+    }
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

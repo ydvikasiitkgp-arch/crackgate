@@ -38,9 +38,9 @@ export function CilAdBanner({ className = "" }: { className?: string }) {
             </a>
             <Link
               href="/psu/cil"
-              className="text-sm font-semibold text-white/70 underline-offset-4 hover:text-white hover:underline"
+              className="cg-pulse inline-flex items-center gap-2 rounded-lg border border-cyan-300 bg-gradient-to-r from-cyan-600 to-cyan-500 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-cyan-500 hover:to-cyan-400"
             >
-              See eligibility &amp; prep modules →
+              Explore CIL Prep <span aria-hidden>→</span>
             </Link>
           </div>
         </div>

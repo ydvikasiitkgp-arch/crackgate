@@ -12,7 +12,47 @@ import { Breadcrumb } from "@/components/breadcrumb";
 export const dynamic = "force-dynamic";
 
 /** GATE discipline codes for any subject staged as coming-soon (KNOWN_COMING_SOON). */
-const COMING_SOON_CODES: Record<string, string> = { geology: "GG", environment: "ES" };
+const COMING_SOON_CODES: Record<string, string> = {
+  aerospace: "AE",
+  agricultural: "AG",
+  architecture: "AR",
+  biomedical: "BM",
+  biotechnology: "BT",
+  chemistry: "CY",
+  ecology: "EY",
+  geomatics: "GE",
+  mathematics: "MA",
+  metallurgical: "MT",
+  naval: "NM",
+  petroleum: "PE",
+  physics: "PH",
+  statistics: "ST",
+  textile: "TF",
+  "engineering-sciences": "XE",
+  humanities: "XH",
+  "life-sciences": "XL",
+};
+
+const COMING_SOON_LABELS: Record<string, string> = {
+  aerospace: "Aerospace Engineering",
+  agricultural: "Agricultural Engineering",
+  architecture: "Architecture and Planning",
+  biomedical: "Biomedical Engineering",
+  biotechnology: "Biotechnology",
+  chemistry: "Chemistry",
+  ecology: "Ecology and Evolution",
+  geomatics: "Geomatics Engineering",
+  mathematics: "Mathematics",
+  metallurgical: "Metallurgical Engineering",
+  naval: "Naval Architecture and Marine Engineering",
+  petroleum: "Petroleum Engineering",
+  physics: "Physics",
+  statistics: "Statistics",
+  textile: "Textile Engineering and Fibre Science",
+  "engineering-sciences": "Engineering Sciences",
+  humanities: "Humanities and Social Sciences",
+  "life-sciences": "Life Sciences",
+};
 
 export async function generateMetadata(props: { params: Promise<{ subject: string }> }) {
   const { subject } = await props.params;
@@ -40,7 +80,7 @@ export default async function GateSubjectHome(props: { params: Promise<{ subject
   // Coming-soon subjects render the dimmed discipline hub.
   if (!meta) {
     if (!KNOWN_COMING_SOON.has(subject)) notFound();
-    const label = subject.charAt(0).toUpperCase() + subject.slice(1);
+    const label = COMING_SOON_LABELS[subject] ?? subject.charAt(0).toUpperCase() + subject.slice(1);
     const code = COMING_SOON_CODES[subject] ?? subject.slice(0, 3).toUpperCase();
     return (
       <TrackHub

@@ -55,7 +55,7 @@ export function CivilDashboard({
 
   const nextMock = mocks.find((m) => !attemptedIds.has(m.id)) ?? mocks[0];
   const code = meta?.code ?? "CE";
-  const label = meta?.label ?? "Civil";
+  const label = meta?.label ?? "Civil Engineering";
 
   return (
     <div className="space-y-6">

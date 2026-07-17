@@ -18,7 +18,8 @@ export default async function PracticeSubjectPage(props: { params: Promise<{ slu
 
   const session = await auth();
   const plan = (session?.user as { plan?: string } | undefined)?.plan ?? "free";
-  const hasAccess = plan === "pro" || plan === "premium";
+  const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
+  const hasAccess = isAdmin || plan === "pro" || plan === "premium";
   if (!hasAccess) {
     return <PracticeLocked name={s.name} loggedIn={!!session?.user} />;
   }
