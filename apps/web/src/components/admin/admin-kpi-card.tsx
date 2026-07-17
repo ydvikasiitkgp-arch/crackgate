@@ -12,6 +12,7 @@ import {
   Minus,
   Clock,
   Zap,
+  Eye,
 } from "lucide-react";
 
 type TrendDirection = "up" | "down" | "flat";
@@ -24,6 +25,7 @@ const ICON_MAP = {
   Flag,
   Clock,
   Zap,
+  Eye,
 } as const;
 
 type IconName = keyof typeof ICON_MAP;

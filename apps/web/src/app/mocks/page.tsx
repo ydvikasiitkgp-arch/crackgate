@@ -176,11 +176,11 @@ function MockCard({
 
       <div className="mt-4">
         {!unlocked ? (
-          <Link href="/pricing" className="btn btn-ghost w-full">Upgrade to unlock</Link>
+          <Link href="/pricing" className="btn btn-ghost w-full" data-track="mock:upgrade">Upgrade to unlock</Link>
         ) : attempted ? (
-          <Link href={`/mocks/${id}`} className="btn btn-ghost w-full">Retake</Link>
+          <Link href={`/mocks/${id}`} className="btn btn-ghost w-full" data-track="mock:retake">Retake</Link>
         ) : (
-          <Link href={`/mocks/${id}`} className="btn btn-primary w-full">Start →</Link>
+          <Link href={`/mocks/${id}`} className="btn btn-primary w-full" data-track="mock:start">Start →</Link>
         )}
       </div>
     </div>

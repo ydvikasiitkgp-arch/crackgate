@@ -12,6 +12,12 @@ import {
   AdminEmptyState,
   AdminDataTableEmpty,
 } from "@/components/admin/admin-empty-state";
+import { AdminFunnelChart } from "@/components/admin-funnel-chart";
+
+const RealtimeBadge = dynamicImport(() =>
+  import("@/components/realtime-badge").then((m) => m.RealtimeBadge),
+  { ssr: false },
+);
 
 const AdminCharts = dynamicImport(() =>
   import("@/components/admin-charts").then((m) => m.AdminCharts)
@@ -113,6 +119,9 @@ export default async function AdminPage() {
     entitlementsBySubject,
     usersWithEntitlements,
     allEntitlements,
+    visitors7,
+    visitorsPrev7,
+    visitors30,
   ] = await Promise.all([
     db.user.count(),
     db.user.groupBy({ by: ["plan"], _count: { _all: true } }),
@@ -185,6 +194,22 @@ export default async function AdminPage() {
       orderBy: { createdAt: "desc" },
       include: { user: { select: { email: true, name: true } } },
     }),
+    // ponytail: raw SQL COUNT DISTINCT — avoids fetching 50K rows per query into JS
+    db.$queryRaw<[{ count: bigint }]>`
+      SELECT COUNT(DISTINCT COALESCE("userId", "ip", 'anon')) as count
+      FROM "PageView" WHERE "createdAt" >= ${since7}
+      AND ("userId" IS NULL OR "userId" NOT IN (SELECT id FROM "User" WHERE role = 'admin'))
+    `,
+    db.$queryRaw<[{ count: bigint }]>`
+      SELECT COUNT(DISTINCT COALESCE("userId", "ip", 'anon')) as count
+      FROM "PageView" WHERE "createdAt" >= ${prev7} AND "createdAt" < ${since7}
+      AND ("userId" IS NULL OR "userId" NOT IN (SELECT id FROM "User" WHERE role = 'admin'))
+    `,
+    db.$queryRaw<[{ count: bigint }]>`
+      SELECT COUNT(DISTINCT COALESCE("userId", "ip", 'anon')) as count
+      FROM "PageView" WHERE "createdAt" >= ${since30}
+      AND ("userId" IS NULL OR "userId" NOT IN (SELECT id FROM "User" WHERE role = 'admin'))
+    `,
   ]);
 
   const planMap: Record<string, number> = { free: 0, pro: 0, premium: 0 };
@@ -206,6 +231,11 @@ export default async function AdminPage() {
   const rev30 = revenue30._sum.amount ?? 0;
   const revPrev = revenuePrev30._sum.amount ?? 0;
 
+  const visitors7Count = Number(visitors7[0]?.count ?? 0);
+  const visitorsPrev7Count = Number(visitorsPrev7[0]?.count ?? 0);
+  const visitors30Count = Number(visitors30[0]?.count ?? 0);
+  const visitorsTrend = pctChange(visitors7Count, visitorsPrev7Count);
+
   function reportStatusBadge(status: string) {
     if (status === "pending")
       return "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400";
@@ -225,6 +255,9 @@ export default async function AdminPage() {
           <p className="text-muted mt-1 text-sm">
             Command center for CrackGate operations
           </p>
+          <div className="mt-2">
+            <RealtimeBadge />
+          </div>
         </div>
         <AdminCommandBar
           pendingReports={pendingReports}
@@ -233,7 +266,7 @@ export default async function AdminPage() {
       </div>
 
       {/* KPI Row */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
         <AdminKpiCard
           label="Total Users"
           value={totalUsers}
@@ -261,6 +294,16 @@ export default async function AdminPage() {
           sparkData={[activeUsersPrev7, activeUsers7]}
         />
         <AdminKpiCard
+          label="Visitors (7d)"
+          value={visitors7Count}
+          subtitle={`${visitors30Count} this month · excl. admins`}
+          icon="Eye"
+          trend={visitorsTrend.dir}
+          trendValue={visitorsTrend.label}
+          sparkData={[visitorsPrev7Count, visitors7Count]}
+          tone="accent"
+        />
+        <AdminKpiCard
           label="Revenue (30d)"
           value={inr(rev30)}
           subtitle={`${revenue30._count._all} payments · lifetime ${inr(revenueLifetime._sum.amount ?? 0)}`}
@@ -280,12 +323,17 @@ export default async function AdminPage() {
       </div>
 
       {/* Charts */}
-      <div className="mt-8">
+      <div className="mt-8" data-track-section="admin:charts">
         <AdminCharts />
       </div>
 
+      {/* Conversion Funnel */}
+      <div data-track-section="admin:funnel">
+        <AdminFunnelChart />
+      </div>
+
       {/* Entitlements + Engagement */}
-      <section className="mt-8 grid lg:grid-cols-3 gap-6">
+      <section className="mt-8 grid lg:grid-cols-3 gap-6" data-track-section="admin:entitlements">
         <div className="card p-6 lg:col-span-2">
           <AdminSectionHeader
             title="Entitlements"
@@ -377,7 +425,7 @@ export default async function AdminPage() {
       </section>
 
       {/* Recent Signups */}
-      <section className="mt-8 card overflow-hidden">
+      <section className="mt-8 card overflow-hidden" data-track-section="admin:recent-signups">
         <div className="p-6 pb-0">
           <AdminSectionHeader
             title="Recent Signups"
@@ -511,7 +559,7 @@ export default async function AdminPage() {
       )}
 
       {/* Recent Payments */}
-      <section className="mt-8 card overflow-hidden">
+      <section className="mt-8 card overflow-hidden" data-track-section="admin:recent-payments">
         <div className="p-6 pb-0">
           <AdminSectionHeader
             title="Recent Payments"
@@ -589,7 +637,7 @@ export default async function AdminPage() {
       </section>
 
       {/* Recent Activity */}
-      <section className="mt-8 card overflow-hidden">
+      <section className="mt-8 card overflow-hidden" data-track-section="admin:recent-activity">
         <div className="p-6 pb-0">
           <AdminSectionHeader
             title="Recent Activity"
@@ -641,7 +689,7 @@ export default async function AdminPage() {
       </section>
 
       {/* Reports Overview */}
-      <section className="mt-8 grid lg:grid-cols-3 gap-6">
+      <section className="mt-8 grid lg:grid-cols-3 gap-6" data-track-section="admin:reports">
         <div className="card p-6">
           <AdminSectionHeader
             title="Reports by Exam"

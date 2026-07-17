@@ -9,6 +9,9 @@ import { DevPlanSwitcher } from "@/components/dev-plan-switcher";
 import { HideOnMiningSite, ShowOnMiningSite } from "@/components/mobile-nav";
 import { ThemeScript } from "@/components/theme-script";
 import { PostHogProvider } from "@/components/posthog-dynamic";
+import { PageViewTracker } from "@/components/page-view-tracker";
+import { GlobalClickTracker } from "@/components/global-click-tracker";
+import { GlobalSectionTracker } from "@/components/global-section-tracker";
 import { auth } from "@/lib/auth";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -112,6 +115,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <a href="#main" className="skip-link">Skip to main content</a>
         <PostHogProvider user={session?.user ? { id: session.user.id, email: session.user.email ?? undefined, name: session.user.name ?? undefined } : null}>
+          <PageViewTracker userId={(session?.user as { id?: string })?.id ?? null} />
+          <GlobalClickTracker userId={(session?.user as { id?: string })?.id ?? null} />
+          <GlobalSectionTracker userId={(session?.user as { id?: string })?.id ?? null} />
           <HideOnMiningSite><SiteHeader /></HideOnMiningSite>
           <ShowOnMiningSite><MiningHeader /></ShowOnMiningSite>
           <main id="main">{children}</main>

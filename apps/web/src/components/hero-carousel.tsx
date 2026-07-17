@@ -186,7 +186,7 @@ export function GateWindow({
             high-fidelity, TCS iON-standard exam simulations.
           </p>
           <div className="mt-6 sm:mt-8">
-            <Link href="/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-400 to-yellow-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:brightness-105">
+            <Link href="/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-400 to-yellow-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:brightness-105" data-track="hero:cta:mocks-mn">
               Launch Free Exam Portal <span aria-hidden>→</span>
             </Link>
           </div>
@@ -229,10 +229,10 @@ export function CivilWindow({ civil }: { civil: CivilStats }) {
             notch tougher than the real paper.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
-            <Link href="/gate/civil/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/20 transition hover:brightness-105">
+            <Link href="/gate/civil/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/20 transition hover:brightness-105" data-track="hero:cta:mocks-ce">
               Launch Free Exam Portal <span aria-hidden>→</span>
             </Link>
-            <Link href="/gate/civil/learn" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15">
+            <Link href="/gate/civil/learn" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15" data-track="hero:cta:learn-ce">
               Learn &amp; Solve
             </Link>
           </div>
@@ -281,10 +281,10 @@ export function GeologyWindow({ stats }: { stats: SubjectStats }) {
             full-length mocks, tuned tougher than the real paper.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
-            <Link href="/gate/geology/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:brightness-105">
+            <Link href="/gate/geology/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:brightness-105" data-track="hero:cta:mocks-gg">
               Start free mock <span aria-hidden>→</span>
             </Link>
-            <Link href="/gate/geology/learn" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15">
+            <Link href="/gate/geology/learn" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15" data-track="hero:cta:learn-gg">
               Learn &amp; Solve
             </Link>
           </div>
@@ -430,10 +430,10 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
             full-length mocks, tuned tougher than the real paper.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
-            <Link href="/gate/environment/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/20 transition hover:brightness-105">
+            <Link href="/gate/environment/mocks" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/20 transition hover:brightness-105" data-track="hero:cta:mocks-es">
               Start free mock <span aria-hidden>→</span>
             </Link>
-            <Link href="/gate/environment/learn" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15">
+            <Link href="/gate/environment/learn" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15" data-track="hero:cta:learn-es">
               Learn &amp; Solve
             </Link>
           </div>
@@ -741,7 +741,7 @@ export function PsuWindow() {
             mining legislation, DGMS safety guidelines, and historical PSU weightage matrices.
           </p>
           <div className="mt-6 sm:mt-8">
-            <Link href="/psu/cil" className="cg-neon inline-flex items-center gap-2 rounded-lg border border-cyan-400/70 bg-cyan-400/10 px-6 py-3.5 text-base font-semibold text-cyan-200 transition hover:bg-cyan-400/20">
+            <Link href="/psu/cil" className="cg-neon inline-flex items-center gap-2 rounded-lg border border-cyan-400/70 bg-cyan-400/10 px-6 py-3.5 text-base font-semibold text-cyan-200 transition hover:bg-cyan-400/20" data-track="hero:cta:psu-cil">
               Explore PSU Prep Modules <span aria-hidden>→</span>
             </Link>
           </div>

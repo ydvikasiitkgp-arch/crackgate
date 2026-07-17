@@ -23,6 +23,7 @@ type Overview = {
     activity: Point[];
     reports: Point[];
     dau: Point[];
+    visitors: Point[];
   };
 };
 
@@ -90,6 +91,10 @@ export function AdminCharts() {
     ...p,
     label: shortDate(p.date),
   }));
+  const visitors = (data.series.visitors ?? []).map((p) => ({
+    ...p,
+    label: shortDate(p.date),
+  }));
 
   const tickStyle = { fontSize: 11, fill: "rgb(var(--muted-rgb))" };
   const gridStyle = { strokeDasharray: "3 3", stroke: "rgb(var(--line-rgb) / 0.5)" };
@@ -153,6 +158,35 @@ export function AdminCharts() {
             </ResponsiveContainer>
           </div>
         </div>
+
+        {/* Visitors */}
+        {visitors.length > 0 && (
+          <div className="card overflow-hidden">
+            <div className="p-6 pb-2">
+              <h3 className="text-sm font-semibold text-ink">Website Visitors</h3>
+              <p className="text-xs text-muted mt-0.5">Unique visitors per day (excl. admins)</p>
+            </div>
+            <div className="w-full h-56 px-2 pb-2">
+              <ResponsiveContainer>
+                <LineChart data={visitors} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+                  <CartesianGrid {...gridStyle} vertical={false} />
+                  <XAxis dataKey="label" tick={tickStyle} interval={4} axisLine={false} tickLine={false} />
+                  <YAxis tick={tickStyle} allowDecimals={false} axisLine={false} tickLine={false} />
+                  <Tooltip content={<ChartTooltip />} />
+                  <Line
+                    type="monotone"
+                    dataKey="count"
+                    name="Visitors"
+                    stroke="var(--accent, #f59e0b)"
+                    strokeWidth={2}
+                    dot={false}
+                    activeDot={{ r: 4, strokeWidth: 2, stroke: "var(--accent, #f59e0b)", fill: "white" }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        )}
 
         {/* Attempts */}
         <div className="card overflow-hidden lg:col-span-2">

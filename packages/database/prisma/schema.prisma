@@ -61,6 +61,7 @@ model User {
   upiPayments    UpiPayment[]
   entitlements   Entitlement[]
   questionReports QuestionReport[]
+  pageViews      PageView[]
   accounts       Account[]
   sessions       Session[]
 
@@ -214,6 +215,23 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model PageView {
+  id        String   @id @default(cuid())
+  type      String   @default("pageview") // pageview | click | section_view
+  userId    String?                     // null for anonymous visitors
+  path      String   @default("/")
+  element   String?                     // clicked element or section name
+  meta      Json?                       // extra context (tab, label, etc.)
+  ip        String?
+  createdAt DateTime @default(now())
+
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+  @@index([userId, createdAt])
+  @@index([type, createdAt])
 }
 
 model NewsletterSubscriber {
