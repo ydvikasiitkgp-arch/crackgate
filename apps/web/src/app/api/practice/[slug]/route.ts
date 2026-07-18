@@ -15,6 +15,8 @@ import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { PRACTICE } from "@/data/practice";
 import { CE_PRACTICE } from "@/data/gate/civil/practice";
+import { GG_PRACTICE } from "@/data/gate/geology/practice";
+import { ES_PRACTICE } from "@/data/gate/environment/practice";
 import { hasEntitlement } from "@/lib/entitlements";
 import { FREE_PREVIEW, CAPS } from "@/lib/practice-config";
 
@@ -49,23 +51,29 @@ async function loadTopicMastery(userId: string, subjectSlug: string): Promise<Ma
 export async function GET(req: Request, props: { params: Promise<{ slug: string }> }) {
   try {
   const { slug } = await props.params;
-  // CE (Civil) subjects use the per-subject entitlement gate; all other slugs
-  // use the legacy mining plan gate.
+  // Route slugs to the correct practice bank + entitlement gate.
   const isCe = slug.startsWith("ce-");
-  const subject = (isCe ? CE_PRACTICE : PRACTICE).find((s) => s.slug === slug);
+  const isGg = slug.startsWith("gg-");
+  const isEs = slug.startsWith("es-");
+  const subject = (
+    isCe ? CE_PRACTICE : isGg ? GG_PRACTICE : isEs ? ES_PRACTICE : PRACTICE
+  ).find((s) => s.slug === slug);
   if (!subject) return NextResponse.json({ error: "unknown_subject" }, { status: 404 });
 
   const session = await auth();
   const plan = (session?.user as { plan?: string } | undefined)?.plan ?? "free";
   const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
 
-  if (isCe) {
-    // Civil access is granted by an Entitlement(exam="GATE", subject="civil").
-    const uid = (session?.user as { id?: string } | undefined)?.id;
-    const ok = isAdmin || (uid ? await hasEntitlement(uid, "GATE", "civil") : false);
+  const uid = (session?.user as { id?: string } | undefined)?.id;
+
+  if (isCe || isGg || isEs) {
+    // Per-subject entitlement gate for Civil, Geology, and Environmental Science.
+    const subjectKey = isCe ? "civil" : isGg ? "geology" : "environment";
+    const ok = isAdmin || (uid ? await hasEntitlement(uid, "GATE", subjectKey) : false);
     if (!ok) {
+      const label = isCe ? "Civil" : isGg ? "Geology & Geophysics" : "Environmental Science";
       return NextResponse.json(
-        { error: "upgrade_required", message: "GATE Civil practice requires the Civil subject pass." },
+        { error: "upgrade_required", message: `GATE ${label} practice requires the ${label} subject pass.` },
         { status: 403 },
       );
     }
@@ -77,8 +85,8 @@ export async function GET(req: Request, props: { params: Promise<{ slug: string 
     );
   }
 
-  // Entitled CE users (and admins) get a generous cap regardless of plan tier.
-  const cap = isCe || isAdmin ? (CAPS.premium ?? 1000) : (CAPS[plan] ?? FREE_PREVIEW);
+  // Entitled CE/GG/ES users (and admins) get a generous cap regardless of plan tier.
+  const cap = (isCe || isGg || isEs || isAdmin) ? (CAPS.premium ?? 1000) : (CAPS[plan] ?? FREE_PREVIEW);
 
   // Per-difficulty availability (full bank, pre-cap) so the client can label
   // its difficulty tabs and "All N" session-size chip accurately.
