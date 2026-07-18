@@ -36,8 +36,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     ...providers,
     // Dev-only impersonation: sign in as any seeded user by email.
-    // Disabled automatically in production.
-    ...(process.env.NODE_ENV !== "production"
+    // Disabled automatically in production. Gated behind DEV_DEMO_ENABLED for safety.
+    ...(process.env.NODE_ENV !== "production" && process.env.DEV_DEMO_ENABLED === "1"
       ? [
           Credentials({
             id: "dev-demo",
@@ -157,6 +157,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           token.email = full.email;
           if (full.picture) token.picture = full.picture;
         }
+      }
+      // ponytail: revalidate plan/role from DB every 5 minutes to catch
+      // admin grants and plan changes without requiring re-login.
+      const lastCheck = (token as Record<string, unknown>).lastRoleCheck as number | undefined;
+      const now = Date.now();
+      if (!lastCheck || now - lastCheck > 5 * 60_000) {
+        const full = await db.user.findUnique({
+          where: { id: token.uid as string },
+          select: { plan: true, role: true },
+        });
+        if (full) {
+          token.plan = full.plan;
+          token.role = full.role;
+        }
+        (token as Record<string, unknown>).lastRoleCheck = now;
       }
       // Elevate role to "admin" for emails in ADMIN_EMAILS env (founder access).
       const adminEmails = (process.env.ADMIN_EMAILS ?? "")
