@@ -54,10 +54,8 @@ const SUBJECT_LABELS: Record<string, string> = {
   "ongc-mechanical": "ONGC Mech",
   "ongc-petroleum": "ONGC Petrol",
   "ongc-chemical": "ONGC Chem",
-  "ongc-electrical": "ONGC Elec",
+  "ongc-instrumentation": "ONGC Instr",
   "ongc-geology": "ONGC Geo",
-  "ongc-geophysics": "ONGC GeoPhys",
-  "ongc-physics": "ONGC Phys",
 };
 
 function inr(paise: number): string {

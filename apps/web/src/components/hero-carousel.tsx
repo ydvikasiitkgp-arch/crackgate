@@ -563,6 +563,7 @@ function EnvironmentScene() {
   );
 }
 
+
 /* ───────────────────────── WINDOW 0 — ONGC CBT ───────────────────────── */
 
 export function OngcWindow() {
@@ -591,7 +592,7 @@ export function OngcWindow() {
             </span>
           </h1>
           <p className="mt-4 max-w-xl text-sm sm:text-base lg:text-lg text-white/80">
-            85 MCQ · 2 hrs · No negative marking. 7 disciplines, 105 full-length mocks
+            85 MCQ · 2 hrs · No negative marking. 5 disciplines, 75 full-length mocks
             tuned to the official ONGC recruitment pattern.
           </p>
           <div className="mt-5 sm:mt-6 lg:mt-8 flex flex-wrap gap-3">
@@ -603,9 +604,9 @@ export function OngcWindow() {
             <Stat n="85" label="MCQs / paper" />
             <Stat n="2 hrs" label="Duration" />
             <Stat n="0" label="Neg. marking" />
-            <Stat n="7" label="Disciplines" />
+            <Stat n="5" label="Disciplines" />
             <Stat n="45" label="Live Mocks" />
-            <Stat n="105" label="Total Planned" />
+            <Stat n="75" label="Total Planned" />
           </div>
         </div>
         <div className="hidden sm:block lg:pl-4">
@@ -622,7 +623,7 @@ function OngcDisciplineCard() {
     <div className="rounded-xl border border-blue-300/20 bg-slate-900/60 p-3 shadow-pop backdrop-blur sm:rounded-2xl sm:p-4">
       <div className="mb-2 flex items-center justify-between">
         <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-blue-300">
-          ONGC CBT · 7 Disciplines
+          ONGC CBT · 5 Disciplines
         </div>
         <span className="badge bg-blue-400/10 text-blue-200 text-[10px] sm:text-xs">15 mocks each</span>
       </div>

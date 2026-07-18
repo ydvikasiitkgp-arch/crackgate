@@ -53,7 +53,7 @@ export function PsuOngcHero() {
               <Stat value={`${ONGC_PATTERN.durationMin / 60} hrs`} label="Duration" />
               <Stat value={`${ONGC_PATTERN.sections[0].count}`} label="Domain Knowledge" />
               <Stat value={`${ONGC_PATTERN.sections[1].count}`} label="Aptitude" />
-              <Stat value="7" label="Disciplines" />
+              <Stat value="5" label="Disciplines" />
               <Stat value="15" label="Mocks / discipline" />
             </div>
 
@@ -85,8 +85,8 @@ export function PsuOngcHero() {
               />
               <div className="mt-4 space-y-1 text-sm text-white/70">
                 <p className="font-semibold text-white">Advt. No. 1/2025 (R&P)</p>
-                <p>Geologist · AEE (Drilling/Production)</p>
-                <p>AEE (Mech/Elec/Pet/Chem) · Geophysicist</p>
+                <p>Petroleum · Mechanical · Chemical</p>
+                <p>Instrumentation · Geology</p>
               </div>
             </div>
           </div>
