@@ -9,7 +9,7 @@ const PsuOngcHero = dynamic(() => import("@/components/psu-ongc-hero").then((m) 
 export const metadata = {
   title: "PSU · ONGC CBT · CrackGate",
   description:
-    "Crack ONGC CBT recruitment exam. Tailored mock tests for Mechanical, Petroleum, Chemical, Electrical, Geology, Geophysics, and Physics with official exam pattern.",
+    "Crack ONGC CBT recruitment exam. Tailored mock tests for Mechanical, Petroleum, Chemical, Instrumentation and Geology with official exam pattern.",
   alternates: { canonical: "/psu/ongc" },
 };
 

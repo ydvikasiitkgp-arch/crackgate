@@ -18,7 +18,7 @@ export function OngcAdBanner({ className = "" }: { className?: string }) {
               Oil &amp; Natural Gas Corporation — CBT 2026
             </h3>
             <p className="mt-2 max-w-2xl text-sm text-white/70">
-              Graduate-level recruitment across Mechanical, Petroleum, Chemical, Electrical, Geology, Geophysics &amp; Physics.
+              Graduate-level recruitment across Mechanical, Petroleum, Chemical, Instrumentation &amp; Geology.
               Computer-based test with domain knowledge, aptitude, general awareness &amp; English sections.
             </p>
           </div>

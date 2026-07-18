@@ -6,16 +6,15 @@ export type OngcRow = {
   slug: string;
   discipline: string;
   qualification: string;
+  vacancies: { ur: number; obc: number; sc: number; st: number; ews: number; total: number };
 };
 
 export const ONGC_ROWS: OngcRow[] = [
-  { slug: "ongc-mechanical", discipline: "Mechanical Engineering", qualification: "Degree in Mechanical Engineering with minimum 60% marks" },
-  { slug: "ongc-petroleum", discipline: "Petroleum Engineering", qualification: "Degree in Petroleum Engineering with minimum 60% marks" },
-  { slug: "ongc-chemical", discipline: "Chemical Engineering", qualification: "Degree in Chemical Engineering with minimum 60% marks" },
-  { slug: "ongc-electrical", discipline: "Electrical Engineering", qualification: "Degree in Electrical Engineering with minimum 60% marks" },
-  { slug: "ongc-geology", discipline: "Geology", qualification: "M.Sc. in Geology / Applied Geology with minimum 60% marks" },
-  { slug: "ongc-geophysics", discipline: "Geophysics", qualification: "M.Sc. in Geophysics / Applied Geophysics with minimum 60% marks" },
-  { slug: "ongc-physics", discipline: "Physics", qualification: "M.Sc. in Physics with minimum 60% marks" },
+  { slug: "ongc-petroleum", discipline: "Petroleum Engineering", qualification: "Graduate Degree in Petroleum Engineering with minimum 60% marks", vacancies: { ur: 4, obc: 2, sc: 2, st: 0, ews: 1, total: 9 } },
+  { slug: "ongc-mechanical", discipline: "Mechanical Engineering", qualification: "Graduate Degree in Mechanical Engineering with minimum 60% marks", vacancies: { ur: 12, obc: 6, sc: 5, st: 1, ews: 3, total: 27 } },
+  { slug: "ongc-chemical", discipline: "Chemical Engineering", qualification: "Graduate Degree in Chemical Engineering with minimum 60% marks", vacancies: { ur: 4, obc: 4, sc: 1, st: 0, ews: 1, total: 10 } },
+  { slug: "ongc-instrumentation", discipline: "Instrumentation Engineering", qualification: "Graduate Degree in Instrumentation Engineering with minimum 60% marks", vacancies: { ur: 2, obc: 0, sc: 0, st: 0, ews: 0, total: 2 } },
+  { slug: "ongc-geology", discipline: "Geology", qualification: "Post Graduate Degree in Geology with minimum 60% marks", vacancies: { ur: 2, obc: 0, sc: 1, st: 0, ews: 1, total: 4 } },
 ];
 
 /** Price to unlock a single ONGC discipline's 15-mock series, in paise (₹499). */
