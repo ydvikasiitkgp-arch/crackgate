@@ -12,7 +12,7 @@ export default async function AdminNewsletterPage() {
     redirect("/login?next=/admin/newsletter");
   }
 
-  const [subRows, userRows] = await Promise.all([
+  const [subRows, userRows, userCount] = await Promise.all([
     db.newsletterSubscriber.findMany({
       where: { unsubscribed: false },
       orderBy: { subscribedAt: "desc" },
@@ -20,6 +20,7 @@ export default async function AdminNewsletterPage() {
     }),
     db.user.findMany({
       orderBy: { createdAt: "desc" },
+      take: 5000,
       select: {
         email: true,
         name: true,
@@ -29,6 +30,7 @@ export default async function AdminNewsletterPage() {
         entitlements: { select: { tier: true }, where: { expiry: { gt: new Date() } } },
       },
     }),
+    db.user.count(),
   ]);
 
   const userEmailToPlan = new Map(userRows.map((u) => [u.email, u.plan]));
@@ -55,6 +57,10 @@ export default async function AdminNewsletterPage() {
     joinedAt: r.createdAt.toISOString(),
   }));
 
+  const shareholderEmails = process.env.ADMIN_SHAREHOLDER_EMAILS
+    ? process.env.ADMIN_SHAREHOLDER_EMAILS.split(",").map((e) => e.trim()).filter(Boolean)
+    : [];
+
   return (
     <div className="max-w-6xl mx-auto px-5 py-10">
       <div className="flex items-baseline justify-between">
@@ -72,7 +78,8 @@ export default async function AdminNewsletterPage() {
         subscribers={subscribers}
         subscriberCount={subscribers.length}
         users={users}
-        userCount={users.length}
+        userCount={userCount}
+        shareholderEmails={shareholderEmails}
       />
     </div>
   );

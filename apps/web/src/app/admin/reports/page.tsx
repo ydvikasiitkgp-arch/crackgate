@@ -45,7 +45,7 @@ export default async function AdminReportsPage(props: {
     "coal-sirdar", "coal-overman",
   ];
 
-  const [reports, total, countRows, uniqueUserRows, examRows, subjectRows, globalPending, globalMultiReportRows] = await Promise.all([
+  const [reports, total, countRows, uniqueUserRows, examRows, subjectRows, globalPending, globalReviewed, globalResolved, globalMultiReportRows] = await Promise.all([
     db.questionReport.findMany({
       where,
       orderBy: { createdAt: "desc" },
@@ -59,6 +59,8 @@ export default async function AdminReportsPage(props: {
     db.questionReport.findMany({ distinct: ["exam"], select: { exam: true }, orderBy: { exam: "asc" } }),
     db.questionReport.findMany({ distinct: ["subject"], select: { subject: true }, orderBy: { subject: "asc" } }),
     db.questionReport.count({ where: { status: "pending" } }),
+    db.questionReport.count({ where: { status: "reviewed" } }),
+    db.questionReport.count({ where: { status: "resolved" } }),
     db.questionReport.groupBy({ by: ["questionKey", "userId"], where: { status: "pending" } }),
   ]);
 
@@ -136,7 +138,7 @@ export default async function AdminReportsPage(props: {
           exams: [...new Set([...ALL_EXAMS, ...examRows.map((r) => r.exam)])].sort(),
           subjects: [...new Set([...ALL_SUBJECTS, ...subjectRows.map((r) => r.subject)])].sort(),
         }}
-        globalCounts={{ pending: globalPending, multiReport: multiReportKeys.size }}
+        globalCounts={{ pending: globalPending, reviewed: globalReviewed, resolved: globalResolved, multiReport: multiReportKeys.size }}
       />
     </div>
   );

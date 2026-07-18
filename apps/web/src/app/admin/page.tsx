@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { getAdminSession } from "@/lib/admin";
 import { db } from "@/lib/db";
-import { cn, fmtDate } from "@/lib/utils";
+import { cn, fmtDate, inr } from "@/lib/utils";
 import dynamicImport from "next/dynamic";
 import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import { AdminCommandBar } from "@/components/admin/admin-command-bar";
@@ -56,10 +56,6 @@ const SUBJECT_LABELS: Record<string, string> = {
   "ongc-instrumentation": "ONGC Instr",
   "ongc-geology": "ONGC Geo",
 };
-
-function inr(paise: number): string {
-  return "₹" + Math.round(paise / 100).toLocaleString("en-IN");
-}
 
 function pctChange(
   a: number,
@@ -835,23 +831,9 @@ export default async function AdminPage() {
 
       {/* Footer */}
       <p className="text-xs text-muted mt-10 text-center">
-        Founder-only view · grant access by setting{" "}
-        <code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px]">
-          ADMIN_EMAILS=&quot;you@example.com&quot;
-        </code>{" "}
-        in{" "}
-        <code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px]">
-          .env.local
-        </code>{" "}
-        or updating{" "}
-        <code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px]">
-          User.role = &quot;admin&quot;
-        </code>{" "}
-        in the database.
-        <br />
         <Link
           href="/dashboard"
-          className="inline-flex items-center gap-1 text-brand hover:text-brand-2 transition-colors mt-1"
+          className="inline-flex items-center gap-1 text-brand hover:text-brand-2 transition-colors"
         >
           <ArrowRight className="w-3 h-3 rotate-180" />
           Back to user dashboard
