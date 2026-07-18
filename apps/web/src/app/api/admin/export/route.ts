@@ -43,7 +43,7 @@ async function buildDataset(dataset: string): Promise<{ headers: string[]; rows:
     case "users": {
       const users = await db.user.findMany({
         orderBy: { createdAt: "desc" },
-        take: 50000,
+        take: 100_000, // ponytail: safety cap to prevent OOM
         select: {
           id: true, email: true, name: true, phone: true, plan: true, planExpiry: true,
           role: true, targetYear: true, currentStatus: true,
@@ -113,7 +113,7 @@ async function buildDataset(dataset: string): Promise<{ headers: string[]; rows:
     case "payments": {
       const payments = await db.payment.findMany({
         orderBy: { createdAt: "desc" },
-        take: 50000,
+        take: 100_000,
         include: { user: { select: { email: true, name: true } } },
       });
       return {
@@ -137,7 +137,7 @@ async function buildDataset(dataset: string): Promise<{ headers: string[]; rows:
     case "entitlements": {
       const entitlements = await db.entitlement.findMany({
         orderBy: { createdAt: "desc" },
-        take: 50000,
+        take: 100_000,
         include: { user: { select: { email: true, name: true } } },
       });
       return {
