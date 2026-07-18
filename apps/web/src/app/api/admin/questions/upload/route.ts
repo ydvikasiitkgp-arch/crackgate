@@ -94,8 +94,6 @@ export async function POST(req: Request) {
   } catch (err) {
     return NextResponse.json({
       error: "subject_file_not_found",
-      path: subjectFile,
-      message: err instanceof Error ? err.message : String(err),
     }, { status: 500 });
   }
 
@@ -133,29 +131,23 @@ export async function POST(req: Request) {
   await fs.writeFile(subjectFile, JSON.stringify(payload, null, 2) + "\n", "utf8");
 
   let rebuiltMocks = false;
-  let rebuildOutput = "";
   if (parsed.rebuildMocks) {
     try {
-      const { stdout } = await execFileP("npx", ["tsx", "scripts/build_mocks.ts"], {
+      await execFileP("npx", ["tsx", "scripts/build_mocks.ts"], {
         cwd: repoRoot,
         timeout: 120_000,
         maxBuffer: 10 * 1024 * 1024,
       });
-      rebuildOutput = stdout;
       rebuiltMocks = true;
-    } catch (err) {
-      rebuildOutput = err instanceof Error ? err.message : String(err);
-    }
+    } catch {}
   }
 
   return NextResponse.json({
     ok: true,
     appended: newRows.length,
     subjectSlug: parsed.subjectSlug,
-    subjectFile: subjectFile.replace(repoRoot + "/", ""),
     newIds: newRows.map((r) => r.id),
     rebuiltMocks,
-    rebuildOutput: rebuildOutput.slice(0, 2000),
     nextSteps: process.env.NODE_ENV === "production"
       ? ["Restart the app for new questions to load."]
       : [
