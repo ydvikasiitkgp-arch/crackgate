@@ -94,6 +94,8 @@ export async function POST(req: Request) {
   } catch (err) {
     return NextResponse.json({
       error: "subject_file_not_found",
+      path: subjectFile,
+      message: err instanceof Error ? err.message : String(err),
     }, { status: 500 });
   }
 
@@ -150,8 +152,10 @@ export async function POST(req: Request) {
     ok: true,
     appended: newRows.length,
     subjectSlug: parsed.subjectSlug,
+    subjectFile: subjectFile.replace(repoRoot + "/", ""),
     newIds: newRows.map((r) => r.id),
     rebuiltMocks,
+    rebuildOutput: rebuildOutput.slice(0, 2000),
     nextSteps: process.env.NODE_ENV === "production"
       ? ["Restart the app for new questions to load."]
       : [

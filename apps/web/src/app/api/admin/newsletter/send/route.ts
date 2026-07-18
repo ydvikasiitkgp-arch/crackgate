@@ -50,6 +50,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ...result, recipients: recipients.length });
   } catch (err) {
     console.error("[newsletter/send]", err);
-    return NextResponse.json({ error: "send_failed", sent: 0, failed: recipients.length }, { status: 500 });
+    const message = err instanceof Error ? err.message : "Send failed";
+    return NextResponse.json({ error: message, sent: 0, failed: recipients.length }, { status: 500 });
   }
 }

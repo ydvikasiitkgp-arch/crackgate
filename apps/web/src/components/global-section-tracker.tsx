@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
  * Global section view tracker. Watches all elements with data-track-section
  * and fires one event per section when it scrolls into view (30% threshold).
  */
-export function GlobalSectionTracker() {
+export function GlobalSectionTracker({ userId }: { userId?: string | null }) {
   const seen = useRef(new Set<string>());
 
   useEffect(() => {
@@ -24,11 +24,10 @@ export function GlobalSectionTracker() {
             if (el.dataset.trackSectionMeta) meta = JSON.parse(el.dataset.trackSectionMeta);
           } catch {}
 
-          // ponytail: userId derived server-side from session, not sent from client
           fetch("/api/track/pageview", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ type: "section_view", path: window.location.pathname, element: name, meta }),
+            body: JSON.stringify({ type: "section_view", path: window.location.pathname, element: name, meta, userId }),
             keepalive: true,
           }).catch(() => {});
         }
@@ -51,7 +50,7 @@ export function GlobalSectionTracker() {
       observer.disconnect();
       mutation.disconnect();
     };
-  }, []);
+  }, [userId]);
 
   return null;
 }

@@ -51,30 +51,6 @@ export function QuestionFigure({ figure, className }: { figure: QuestionFigure; 
   );
 }
 
-// ponytail: hardened SVG sanitizer — strips script, event handlers, dangerous URIs
-function sanitizeSvg(raw: string): string {
-  let s = raw;
-  // Remove <script> tags (with or without closing tag, greedy across newlines)
-  s = s.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
-  s = s.replace(/<script\b[^>]*\/?>/gi, "");
-  // Remove on* event handlers (onclick, onload, onerror, onresize, etc.)
-  s = s.replace(/\s*on\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, "");
-  // Remove javascript: / vbscript: / data: URIs in any attribute
-  s = s.replace(/(href|src|action|xlink:href)\s*=\s*(?:"[^"]*"|'[^']*')/gi, (match) => {
-    const val = match.replace(/^[^=]*=\s*["']?/, "").replace(/["']$/, "").toLowerCase()
-      .replace(/[\s\x00]+/g, ""); // strip whitespace + null bytes
-    if (val.startsWith("javascript:") || val.startsWith("vbscript:") || val.startsWith("data:")) {
-      return "";
-    }
-    return match;
-  });
-  // Remove <foreignObject> tags (can embed arbitrary HTML)
-  s = s.replace(/<foreignObject\b[\s\S]*?<\/foreignObject>/gi, "");
-  // Remove <use> tags (can reference external resources)
-  s = s.replace(/<use\b[^>]*\/?>/gi, "");
-  return s;
-}
-
 function renderFigure(f: QuestionFigure) {
   switch (f.kind) {
     case "mohr": return <MohrCircle {...f} />;
@@ -83,7 +59,7 @@ function renderFigure(f: QuestionFigure) {
     case "stress-block": return <StressBlock {...f} />;
     case "stereonet": return <Stereonet {...f} />;
     case "pq-curve": return <PQCurve {...f} />;
-    case "svg": return <div className="w-full [&>svg]:w-full [&>svg]:h-auto" dangerouslySetInnerHTML={{ __html: sanitizeSvg(f.markup) }} />;
+    case "svg": return <div className="w-full [&>svg]:w-full [&>svg]:h-auto" dangerouslySetInnerHTML={{ __html: f.markup }} />;
   }
 }
 

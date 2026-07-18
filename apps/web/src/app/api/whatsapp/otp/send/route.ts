@@ -58,7 +58,7 @@ export async function POST(req: Request) {
     await sendOtp(phone, code);
   } catch (e) {
     console.error("[otp/send] WhatsApp send failed:", e);
-    return NextResponse.json({ error: "send_failed" }, { status: 502 });
+    return NextResponse.json({ error: "send_failed", message: (e as Error).message }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true, expiresAt });

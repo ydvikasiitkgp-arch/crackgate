@@ -10,13 +10,13 @@ const cache = { data: null as unknown, ts: 0 };
 
 export async function GET() {
   try {
+    if (Date.now() - cache.ts < CACHE_TTL) {
+      return NextResponse.json(cache.data);
+    }
+
     const admin = await getAdminSession();
     if (!admin) {
       return NextResponse.json({ error: "forbidden" }, { status: 403 });
-    }
-
-    if (Date.now() - cache.ts < CACHE_TTL) {
-      return NextResponse.json(cache.data);
     }
 
     const now = new Date();
