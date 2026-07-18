@@ -8,7 +8,7 @@ export function PageViewTracker() {
 
   useEffect(() => {
     if (!pathname) return;
-    // ponytail: fire-and-forget beacon, errors are silent
+    // ponytail: fire-and-forget beacon, errors are silent. userId derived server-side from session.. userId derived server-side from session.
     fetch("/api/track/pageview", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
