@@ -24,6 +24,7 @@ export function GlobalSectionTracker() {
             if (el.dataset.trackSectionMeta) meta = JSON.parse(el.dataset.trackSectionMeta);
           } catch {}
 
+          // ponytail: userId derived server-side from session, not sent from client
           fetch("/api/track/pageview", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
