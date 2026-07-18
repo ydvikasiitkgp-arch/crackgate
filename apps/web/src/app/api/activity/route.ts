@@ -11,7 +11,9 @@ export async function GET() {
       orderBy: { ts: "desc" },
       take: 50,
     });
-    return NextResponse.json({ activity: items });
+    return NextResponse.json({ activity: items }, {
+      headers: { "Cache-Control": "private, no-store" },
+    });
   } catch (error) {
     console.error("GET /api/activity:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
