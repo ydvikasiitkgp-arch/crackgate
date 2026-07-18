@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-export function PageViewTracker({ userId }: { userId?: string | null }) {
+export function PageViewTracker() {
   const pathname = usePathname();
 
   useEffect(() => {
@@ -12,10 +12,10 @@ export function PageViewTracker({ userId }: { userId?: string | null }) {
     fetch("/api/track/pageview", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ path: pathname, userId: userId ?? null }),
+      body: JSON.stringify({ path: pathname }),
       keepalive: true,
     }).catch(() => {});
-  }, [pathname, userId]);
+  }, [pathname]);
 
   return null;
 }
