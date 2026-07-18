@@ -31,7 +31,7 @@ const PLANS = [
 ] as const;
 
 const PSU_PLANS = [
-  { id: "ongc", name: "ONGC CBT", price: 499, period: "per discipline", cta: "Unlock ONGC", highlight: false, badge: "7 disciplines",
+  { id: "ongc", name: "ONGC CBT", price: 499, period: "per discipline", cta: "Unlock ONGC", highlight: false, badge: "5 disciplines",
     payParams: "plan=pro&exam=PSU&subject=",
     perks: [
       "15 full-length mocks per discipline",
@@ -41,7 +41,7 @@ const PSU_PLANS = [
       "Official ONGC CBT pattern (Advt. 1/2025)",
       "One payment · valid through recruitment cycle",
     ],
-    disciplines: ["Mechanical", "Petroleum", "Chemical", "Electrical", "Geology", "Geophysics", "Physics"],
+    disciplines: ["Mechanical", "Petroleum", "Chemical", "Instrumentation", "Geology"],
   },
   { id: "cil", name: "CIL Management Trainee", price: 499, period: "per discipline", cta: "Unlock CIL", highlight: false, badge: "9 disciplines",
     payParams: "plan=pro&exam=PSU&subject=",

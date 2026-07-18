@@ -89,12 +89,10 @@ export default function NewsPage() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     { name: "Mechanical", color: "bg-blue-50 text-blue-700 border-blue-200/60 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800/40" },
-                    { name: "Chemical", color: "bg-emerald-50 text-emerald-700 border-emerald-200/60 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800/40" },
                     { name: "Petroleum", color: "bg-amber-50 text-amber-700 border-amber-200/60 dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-800/40" },
-                    { name: "Electrical", color: "bg-yellow-50 text-yellow-700 border-yellow-200/60 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-800/40" },
+                    { name: "Chemical", color: "bg-emerald-50 text-emerald-700 border-emerald-200/60 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800/40" },
+                    { name: "Instrumentation", color: "bg-violet-50 text-violet-700 border-violet-200/60 dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-800/40" },
                     { name: "Geology", color: "bg-orange-50 text-orange-700 border-orange-200/60 dark:bg-orange-900/30 dark:text-orange-300 dark:border-orange-800/40" },
-                    { name: "Geophysics", color: "bg-rose-50 text-rose-700 border-rose-200/60 dark:bg-rose-900/30 dark:text-rose-300 dark:border-rose-800/40" },
-                    { name: "Physics", color: "bg-violet-50 text-violet-700 border-violet-200/60 dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-800/40" },
                   ].map((d) => (
                     <span key={d.name} className={`text-xs font-semibold px-3.5 py-1.5 rounded-lg border ${d.color}`}>
                       {d.name}
