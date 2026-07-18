@@ -115,9 +115,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <a href="#main" className="skip-link">Skip to main content</a>
         <PostHogProvider user={session?.user ? { id: session.user.id, email: session.user.email ?? undefined, name: session.user.name ?? undefined } : null}>
-          <PageViewTracker userId={(session?.user as { id?: string })?.id ?? null} />
-          <GlobalClickTracker userId={(session?.user as { id?: string })?.id ?? null} />
-          <GlobalSectionTracker userId={(session?.user as { id?: string })?.id ?? null} />
+          <PageViewTracker />
+          <GlobalClickTracker />
+          <GlobalSectionTracker />
           <HideOnMiningSite><SiteHeader /></HideOnMiningSite>
           <ShowOnMiningSite><MiningHeader /></ShowOnMiningSite>
           <main id="main">{children}</main>

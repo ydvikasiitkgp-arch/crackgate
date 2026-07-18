@@ -148,7 +148,7 @@ export function AdminCommandBar({
               <a
                 key={opt.dataset}
                 href={`/api/admin/export?dataset=${opt.dataset}`}
-                className="flex items-center gap-3 px-3 py-2 text-sm text-ink hover:bg-paper transition-colors"
+                className="group flex items-center gap-3 px-3 py-2 text-sm text-ink hover:bg-paper transition-colors"
                 onClick={() => setExportOpen(false)}
               >
                 <span className="text-base">{opt.icon}</span>

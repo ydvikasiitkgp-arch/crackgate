@@ -63,8 +63,9 @@ export function AdminSidebar({
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed left-0 z-50 bg-surface border-r border-line transition-all duration-300 flex flex-col",
-          "top-16 h-[calc(100vh-4rem)]",
+          "bg-surface border-r border-line transition-all duration-300 flex flex-col shrink-0",
+          "fixed lg:sticky left-0 z-50 lg:z-auto top-0 lg:top-16",
+          "h-dvh lg:h-[calc(100vh-4rem)]",
           collapsed ? "w-[68px]" : "w-64",
           mobileOpen
             ? "translate-x-0"

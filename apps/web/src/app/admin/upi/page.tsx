@@ -1,15 +1,13 @@
 import { getAdminSession } from "@/lib/admin";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
+import { inr } from "@/lib/utils";
+import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import UpiReviewActions from "./actions";
 import GrantAccessForm from "./grant";
 import { CATALOG, subjectLabel, getExam } from "@/data/catalog";
 
 export const dynamic = "force-dynamic";
-
-function inr(paise: number): string {
-  return "₹" + Math.round(paise / 100).toLocaleString("en-IN");
-}
 
 /** Derive a human payment source from the synthetic order-id prefix. */
 function paymentSource(orderId: string): "grant" | "upi" | "razorpay" {
@@ -113,28 +111,32 @@ export default async function AdminUpiPage({
 
       {/* Totals */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-        <Kpi
+        <AdminKpiCard
           label="Collected (lifetime)"
           value={inr(approvedAgg._sum.amountPaise ?? 0)}
-          sub={`${approvedAgg._count._all} approved payments`}
+          subtitle={`${approvedAgg._count._all} approved payments`}
+          icon="IndianRupee"
           tone="ok"
         />
-        <Kpi
+        <AdminKpiCard
           label="Collected this month"
           value={inr(monthAgg._sum.amountPaise ?? 0)}
-          sub={`${monthAgg._count._all} approved`}
+          subtitle={`${monthAgg._count._all} approved`}
+          icon="IndianRupee"
           tone="ok"
         />
-        <Kpi
+        <AdminKpiCard
           label="Pending review"
           value={counts.pending}
-          sub="awaiting verification"
-          tone={counts.pending > 0 ? "accent" : undefined}
+          subtitle="awaiting verification"
+          icon="Clock"
+          tone={counts.pending > 0 ? "accent" : "default"}
         />
-        <Kpi
+        <AdminKpiCard
           label="Rejected"
           value={counts.rejected}
-          sub={`${counts.approved} approved total`}
+          subtitle={`${counts.approved} approved total`}
+          icon="Flag"
         />
       </div>
 
@@ -396,28 +398,6 @@ export default async function AdminUpiPage({
           </div>
         )}
       </section>
-    </div>
-  );
-}
-
-function Kpi({
-  label,
-  value,
-  sub,
-  tone,
-}: {
-  label: string;
-  value: string | number;
-  sub?: string;
-  tone?: "ok" | "accent";
-}) {
-  const toneClass =
-    tone === "ok" ? "text-ok" : tone === "accent" ? "text-accent" : "";
-  return (
-    <div className="card p-5">
-      <div className={`text-2xl font-extrabold ${toneClass}`}>{value}</div>
-      <div className="text-sm text-muted mt-0.5">{label}</div>
-      {sub && <div className="text-xs text-muted mt-1">{sub}</div>}
     </div>
   );
 }

@@ -28,19 +28,15 @@ interface Props {
   subscriberCount: number;
   users: RegisteredUser[];
   userCount: number;
+  shareholderEmails: string[];
 }
-
-const SHAREHOLDER_EMAILS = [
-  "backupsk7@gmail.com",
-  "vikaskashi896@gmail.com",
-  "kumarvishalsharma1999@gmail.com",
-];
 
 export default function NewsletterPageClient({
   subscribers,
   subscriberCount,
   users,
   userCount,
+  shareholderEmails: SHAREHOLDER_EMAILS,
 }: Props) {
   const [subscriberSelected, setSubscriberSelected] = useState<Set<string>>(new Set());
   const [userSelected, setUserSelected] = useState<Set<string>>(new Set());
@@ -54,7 +50,7 @@ export default function NewsletterPageClient({
       ...additionalEmails,
       ...(includeShareholders ? SHAREHOLDER_EMAILS : []),
     ]),
-    [subscriberSelected, userSelected, additionalEmails, includeShareholders],
+    [subscriberSelected, userSelected, additionalEmails, includeShareholders, SHAREHOLDER_EMAILS],
   );
 
   const paidUsers = users.filter((u) => u.isPaid).length;

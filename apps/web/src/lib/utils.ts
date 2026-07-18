@@ -14,3 +14,7 @@ export function secondsToHMS(s: number) {
   const sec = String(s % 60).padStart(2, "0");
   return `${h}:${m}:${sec}`;
 }
+
+export function inr(paise: number): string {
+  return "₹" + Math.round(paise / 100).toLocaleString("en-IN");
+}

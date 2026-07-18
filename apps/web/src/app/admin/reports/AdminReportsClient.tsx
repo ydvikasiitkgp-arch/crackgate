@@ -104,7 +104,7 @@ export function AdminReportsClient({
   pagination: { page: number; limit: number; total: number; totalPages: number };
   filters: { status?: string; issueType?: string; exam?: string; subject?: string; search?: string };
   filterOptions: { exams: string[]; subjects: string[] };
-  globalCounts: { pending: number; multiReport: number };
+  globalCounts: { pending: number; reviewed: number; resolved: number; multiReport: number };
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -344,7 +344,7 @@ export function AdminReportsClient({
           )}
         >
           <div className="w-2 h-2 rounded-full bg-blue-500" />
-          <span>{pagination.total}</span>
+          <span>{globalCounts.reviewed}</span>
           <span className="font-normal text-muted">reviewed</span>
         </button>
         <button
@@ -358,7 +358,7 @@ export function AdminReportsClient({
           )}
         >
           <div className="w-2 h-2 rounded-full bg-emerald-500" />
-          <span>{pagination.total}</span>
+          <span>{globalCounts.resolved}</span>
           <span className="font-normal text-muted">resolved</span>
         </button>
         <button
