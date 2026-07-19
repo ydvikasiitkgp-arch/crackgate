@@ -157,7 +157,7 @@ export default function NewsPage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://westerncoal.in"
+                  href="https://westerncoal.in/en/career/recruitment"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-emerald-600 to-green-600 text-white font-bold px-7 py-3 rounded-xl hover:from-emerald-700 hover:to-green-700 hover:shadow-lg hover:shadow-emerald-200/50 transition-all duration-200 text-sm"
@@ -166,12 +166,12 @@ export default function NewsPage() {
                   <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </a>
                 <a
-                  href="https://westerncoal.in"
+                  href="https://westerncoal.in/en/career/recruitment"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2.5 text-emerald-700 font-bold px-7 py-3 rounded-xl border-2 border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-200 text-sm dark:text-emerald-400 dark:border-emerald-700 dark:hover:bg-emerald-900/20 dark:hover:border-emerald-600"
                 >
-                  View Notification
+                  View Recruitment
                   <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </a>
               </div>
