@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { WCL_EXAMS } from "@/data/wcl";
 
 const PLANS = [
   { id: "free",    name: "Free",     price: 0,    period: "forever",    cta: "Current plan", highlight: false, badge: "",
@@ -91,6 +92,22 @@ export default function PricingPage() {
         </div>
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           {PSU_PLANS.map((p) => <PsuPlanCard key={p.id} plan={p} />)}
+        </div>
+      </div>
+
+      {/* WCL Diploma Plans */}
+      <div className="mt-20">
+        <div className="text-center">
+          <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400">WCL Diploma Exams</span>
+          <h2 className="mt-4 text-3xl font-extrabold">₹399 per exam · 20 mocks each</h2>
+          <p className="text-muted mt-3 max-w-xl mx-auto">
+            Western Coalfields Limited recruitment. Pay once per exam — unlock all 20 mocks.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 mt-8">
+          {WCL_EXAMS.filter((e) => e.live).map((e) => (
+            <WclPlanCard key={e.slug} exam={e} />
+          ))}
         </div>
       </div>
 
@@ -193,6 +210,68 @@ function PsuPlanCard({ plan }: { plan: typeof PSU_PLANS[number] }) {
           className="btn btn-primary w-full"
         >
           {loading ? "Loading…" : devMode ? `⚙ Dev: Unlock ${plan.name}` : `Get Pro — ₹${plan.price}`}
+        </button>
+      </div>
+      <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
+    </div>
+  );
+}
+
+function WclPlanCard({ exam }: { exam: typeof WCL_EXAMS[number] }) {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
+
+  async function buy() {
+    if (devMode) {
+      setLoading(true);
+      try {
+        const r = await fetch("/api/dev/set-plan", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ plan: "pro" }),
+        });
+        if (r.status === 401) return router.push(`/login?next=/pricing`);
+        const t = await r.text();
+        const data = t ? safeJson(t) : null;
+        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed (HTTP ${r.status})`);
+        return router.push(`/diploma/wcl/${exam.slug}?upgrade=success&dev=1`);
+      } catch (e) {
+        alert((e as Error).message);
+      } finally {
+        setLoading(false);
+      }
+      return;
+    }
+    router.push(`/pay/upi?plan=pro&exam=DIPLOMA&subject=wcl-${exam.slug === "mining-sirdar" ? "sirdar" : "af-electrical"}`);
+  }
+
+  const subjectSlug = exam.slug === "mining-sirdar" ? "wcl-sirdar" : "wcl-af-electrical";
+
+  return (
+    <div className="card p-8 flex flex-col">
+      <div className="text-xs font-bold uppercase tracking-wide mb-2 text-emerald-600 dark:text-emerald-400">
+        {exam.mockCount} mocks
+      </div>
+      <h3 className="text-xl font-bold">{exam.name}</h3>
+      <div className="mt-3">
+        <span className="text-4xl font-extrabold">₹{exam.price}</span>
+        <span className="text-sm text-muted ml-1">one-time</span>
+      </div>
+      <ul className="mt-6 space-y-2 text-sm">
+        <li className="flex gap-2"><span className="text-ok">✓</span> {exam.mockCount} full-length mocks</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> 100 MCQs · 120 min · no negative marking</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> General Awareness + Technical section</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> WCL-specific facts &amp; CMR 2017 syllabus</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> One payment · valid through recruitment cycle</li>
+      </ul>
+      <div className="mt-6">
+        <button
+          onClick={buy}
+          disabled={loading}
+          className="btn btn-primary w-full"
+        >
+          {loading ? "Loading…" : devMode ? `⚙ Dev: Unlock ${exam.short}` : `Unlock — ₹${exam.price}`}
         </button>
       </div>
       <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>

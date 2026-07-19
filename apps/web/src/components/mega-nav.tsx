@@ -245,6 +245,8 @@ export function MegaNav() {
       >
         <button
           type="button"
+          aria-haspopup="menu"
+          aria-expanded={open === "diploma"}
           onClick={() => setOpen(open === "diploma" ? null : "diploma")}
           className={triggerCls("diploma", ["/diploma"])}
         >
@@ -252,13 +254,22 @@ export function MegaNav() {
         </button>
 
         {open === "diploma" && (
-          <Panel>
-            <Link href="/diploma" className="block rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-canvas">
-              All Diploma Exams
-            </Link>
-            <Link href="/diploma/wcl/mining-sirdar" className="block rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-canvas">
-              WCL Mining Sirdar
-              <span className="ml-2 badge bg-green-500/10 text-green-600 text-[10px]">20 Mocks</span>
+          <Panel className="w-72">
+            <p className="px-3 pb-1 text-[11px] font-bold uppercase tracking-wide text-muted">
+              Recruitment by company
+            </p>
+            {/* WCL — simple link to landing page */}
+            <Link
+              href="/diploma/wcl"
+              className={cn(
+                "flex items-center justify-between gap-3 rounded-md px-3 py-2",
+                isActive("/diploma/wcl") ? "bg-brand/5" : "hover:bg-canvas",
+              )}
+            >
+              <span className="min-w-0">
+                <span className="block text-sm font-bold text-ink">WCL</span>
+                <span className="block truncate text-xs text-muted">Western Coalfields Limited</span>
+              </span>
             </Link>
           </Panel>
         )}

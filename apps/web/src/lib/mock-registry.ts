@@ -17,7 +17,8 @@ import type { Question } from "@/lib/grading";
 export type MockGate =
   | { type: "plan"; tier: "free" | "subject" | "premium" }
   | { type: "entitlement"; exam: "PSU"; subject: string }
-  | { type: "entitlement"; exam: "GATE"; subject: string; freeTrial?: boolean };
+  | { type: "entitlement"; exam: "GATE"; subject: string; freeTrial?: boolean }
+  | { type: "entitlement"; exam: "DIPLOMA"; subject: string };
 
 export type ResolvedMock = {
   id: string;
@@ -101,21 +102,54 @@ export function resolveMock(id: string): ResolvedMock | null {
     };
   }
 
-  // STATE (RPSC AME — −1/3 negative) and DIPLOMA (coalfield CBT — no negative).
-  if (id.startsWith("state-") || id.startsWith("diploma-")) {
-    const isState = id.startsWith("state-");
-    const pool = isState ? STATE_MOCKS : DIPLOMA_MOCKS;
-    const m = pool.find((x) => (x as { id: string }).id === id) as
-      | { id: string; title: string; tier: "free" | "subject" | "premium"; duration?: number; questions: unknown[] }
+  // WCL mocks — entitlement-gated per exam (₹399 unlocks all 19 pro mocks).
+  if (id.startsWith("diploma-wcl-sirdar-")) {
+    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+      | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
     return {
       id: m.id,
       title: m.title,
       questions: m.questions as unknown as Question[],
+      durationSec: (m.duration ?? 120) * 60,
+      negativeMarking: false,
+      gate: { type: "entitlement", exam: "DIPLOMA", subject: "wcl-sirdar" },
+    };
+  }
+
+  if (id.startsWith("diploma-wcl-foreman-")) {
+    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+      | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
+      | undefined;
+    if (!m) return null;
+    return {
+      id: m.id,
+      title: m.title,
+      questions: m.questions as unknown as Question[],
+      durationSec: (m.duration ?? 120) * 60,
+      negativeMarking: false,
+      gate: { type: "entitlement", exam: "DIPLOMA", subject: "wcl-af-electrical" },
+    };
+  }
+
+  // Legacy STATE / DIPLOMA (coal-sirdar, overman — plan-tier gated).
+  if (id.startsWith("state-") || id.startsWith("diploma-")) {
+    const isState = id.startsWith("state-");
+    const pool = isState ? STATE_MOCKS : DIPLOMA_MOCKS;
+    const m = pool.find((x) => (x as { id: string }).id === id) as
+      | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
+      | undefined;
+    if (!m) return null;
+    // Map tier: "pro" → "subject" (WCL mocks use "pro" for paid tier)
+    const tier = m.tier === "free" ? "free" : m.tier === "premium" ? "premium" : "subject";
+    return {
+      id: m.id,
+      title: m.title,
+      questions: m.questions as unknown as Question[],
       durationSec: (m.duration ?? (isState ? 150 : 120)) * 60,
       negativeMarking: isState,
-      gate: { type: "plan", tier: m.tier },
+      gate: { type: "plan", tier },
     };
   }
 

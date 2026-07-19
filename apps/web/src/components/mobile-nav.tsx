@@ -254,16 +254,13 @@ function DiplomaSheet({ onClose }: { onClose: () => void }) {
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  const links = [
-    { href: "/diploma", label: "All Diploma Exams", desc: "Coal Sirdar, Overman, and more" },
-    { href: "/diploma/wcl/mining-sirdar", label: "WCL Mining Sirdar", desc: "20 mock tests · CMR 2017 syllabus" },
-  ];
+  const isWclActive = pathname === "/diploma/wcl" || pathname?.startsWith("/diploma/wcl/");
 
   return (
     <>
       <div className="fixed inset-0 z-40 bg-black/40 cg-overlay" onClick={onClose} aria-hidden="true" />
       <div
-        className="fixed bottom-0 left-0 right-0 z-50 max-h-[60dvh] overflow-y-auto rounded-t-2xl border-t border-line bg-surface cg-sheet"
+        className="fixed bottom-0 left-0 right-0 z-50 max-h-[80dvh] overflow-y-auto rounded-t-2xl border-t border-line bg-surface cg-sheet"
         role="dialog"
         aria-label="Diploma exams"
       >
@@ -286,30 +283,29 @@ function DiplomaSheet({ onClose }: { onClose: () => void }) {
           <p className="mt-0.5 text-xs text-muted">DGMS competency certificates</p>
         </div>
         <div className="px-3 pb-6 pt-1 space-y-1.5">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              onClick={onClose}
-              className={cn(
-                "flex items-center justify-between px-4 py-3 rounded-xl border transition-colors",
-                pathname === l.href || pathname.startsWith(l.href + "/")
-                  ? "border-brand/20 bg-brand/5"
-                  : "border-line/60 active:bg-canvas",
-              )}
-            >
-              <div className="flex items-center gap-3 min-w-0">
-                <div className="h-1.5 w-1.5 rounded-full bg-brand shrink-0" />
-                <div className="min-w-0">
-                  <div className="text-sm font-semibold text-ink">{l.label}</div>
-                  <div className="text-xs text-muted truncate">{l.desc}</div>
-                </div>
+          <Link
+            href="/diploma/wcl"
+            onClick={onClose}
+            className={cn(
+              "flex items-center justify-between px-4 py-3 rounded-xl border transition-colors",
+              isWclActive
+                ? "border-brand/20 bg-brand/5"
+                : "border-line/60 active:bg-canvas",
+            )}
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-line/40 bg-canvas">
+                <img src="/images/wcl/wcl-logo.webp" alt="WCL" className="h-full w-full object-contain" />
               </div>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-muted/50 shrink-0">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </Link>
-          ))}
+              <div className="min-w-0">
+                <div className="text-sm font-semibold text-ink">WCL</div>
+                <div className="text-xs text-muted truncate">Western Coalfields Limited · 2 exams</div>
+              </div>
+            </div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-muted/50 shrink-0">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </>

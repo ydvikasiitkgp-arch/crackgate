@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { WCL_SIRDAR_MOCKS, WCL_SIRDAR_PRICING } from "@/data/diploma/wcl-mocks";
+import { WCL_AF_MOCKS, WCL_AF_PRICING } from "@/data/diploma/wcl-af-mocks";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ShareOnWhatsApp } from "@/components/share-on-whatsapp";
 import { NewsletterForm } from "@/components/newsletter-form";
@@ -10,27 +10,26 @@ import { hasEntitlement } from "@/lib/entitlements";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "WCL Mining Sirdar Mock Tests · CrackGate",
+  title: "WCL Assistant Foreman Electrical Mock Tests · CrackGate",
   description:
-    "20 full-length mock tests for WCL Mining Sirdar (T&S Grade-C) CBT exam — 100 MCQs each, no negative marking, based on CMR 2017 syllabus.",
-  alternates: { canonical: "/diploma/wcl/mining-sirdar" },
+    "20 full-length mock tests for WCL Assistant Foreman (Trainee) Electrical / Electrical Supervisor CBT — 100 MCQs each, no negative marking.",
+  alternates: { canonical: "/diploma/wcl/assistant-foreman-electrical" },
 };
 
 const SYLLABUS = [
-  "Explosives & Blasting",
-  "Bord & Pillar / Depillaring",
-  "Strata Control / SCAMP / Roof Bolting",
-  "Stowing",
-  "Opencast Working",
-  "Drifting",
-  "Mine Ventilation & Gases",
-  "Mine Fires & Inundation",
-  "Face Machineries (SDL/LHD/CM)",
-  "Electrical & Haulage",
-  "Duties of Sirdar / Statutory (CMR 2017)",
-  "Mine Surveying",
-  "Coal Dust / Rescue / Accidents",
-  "Geology",
+  "Basics of EE (Ohm's/KCL/KVL, Power Factor)",
+  "Power Generation Economics (Load/Diversity, APFC, AVR)",
+  "Electrical Machines (Motors, Generators, Transformers)",
+  "Renewable Energy & Battery Vehicles",
+  "Electric Drives & Control (VFD, PLC, SCADA, DCS)",
+  "Switchgear & Protection (CBs, Relays, Coordination)",
+  "Earthing System (IS-3043, Chemical Earthing)",
+  "Neutral Systems (Solid/Restricted/Isolated)",
+  "Substation Design & Layout",
+  "Overhead Lines & Underground Cables",
+  "Mining Type Cables & Jointing",
+  "Safety & Legislation (IS:5216, CEA 2023, Electricity Act)",
+  "NBC 2016 & Lightning Protection",
   "General Awareness & Aptitude",
 ];
 
@@ -45,14 +44,14 @@ const WCL_FACTS = [
   ["States", "Maharashtra & Madhya Pradesh"],
 ];
 
-export default async function WCLMiningSirdarPage() {
+export default async function WCLAFElectricalPage() {
   const session = await auth();
   const userId = (session?.user as { id?: string } | undefined)?.id;
   const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
-  const unlocked = isAdmin || (await hasEntitlement(userId ?? "", "DIPLOMA", "wcl-sirdar"));
+  const unlocked = isAdmin || (await hasEntitlement(userId ?? "", "DIPLOMA", "wcl-af-electrical"));
 
-  const liveCount = WCL_SIRDAR_MOCKS.length;
-  const payHref = "/pay/upi?plan=pro&exam=DIPLOMA&subject=wcl-sirdar";
+  const liveCount = WCL_AF_MOCKS.length;
+  const payHref = "/pay/upi?plan=pro&exam=DIPLOMA&subject=wcl-af-electrical";
 
   return (
     <>
@@ -76,7 +75,7 @@ export default async function WCLMiningSirdarPage() {
               { label: "Home", href: "/" },
               { label: "Diploma", href: "/diploma" },
               { label: "WCL", href: "/diploma/wcl" },
-              { label: "Mining Sirdar" },
+              { label: "AF Electrical" },
             ]} />
             <ShareOnWhatsApp />
           </div>
@@ -86,12 +85,11 @@ export default async function WCLMiningSirdarPage() {
             </span>
           </div>
           <h1 className="mt-3 text-4xl lg:text-5xl font-extrabold leading-tight">
-            WCL Mining Sirdar
+            Assistant Foreman (Electrical)
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
-            20 full-length mock tests matching the WCL CBT pattern — 100 MCQs, 100 marks,
-            120 minutes, no negative marking. Syllabus mapped to DGMS Mining Sirdar
-            Certificate of Competency under Coal Mines Regulations, 2017.
+            20 full-length mock tests for WCL Assistant Foreman (Trainee) Electrical /
+            Electrical Supervisor, T&S Grade-C — 100 MCQs, 120 min, no negative marking.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#mocks" className="cg-neon inline-flex items-center gap-2 rounded-lg border border-emerald-400/70 bg-emerald-400/10 px-5 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-400/20">
@@ -116,11 +114,11 @@ export default async function WCLMiningSirdarPage() {
       <section id="mocks" className="max-w-7xl mx-auto px-5 py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-extrabold text-ink">Mining Sirdar — {liveCount} Full-length Mock Tests</h2>
+            <h2 className="text-2xl font-extrabold text-ink">AF Electrical — {liveCount} Full-length Mock Tests</h2>
             <p className="mt-2 max-w-2xl text-sm text-muted">
-              A complete WCL Mining Sirdar series in the official pattern:{" "}
+              A complete WCL Assistant Foreman (Electrical) series:{" "}
               <b>100 MCQs · 120 minutes · no negative marking</b> ·
-              Section A (General Awareness &amp; Aptitude) + Section B (Technical Mining).
+              Section A (General Awareness &amp; Aptitude) + Section B (Technical Electrical).
             </p>
           </div>
           <span className="badge badge-pro shrink-0">
@@ -132,7 +130,7 @@ export default async function WCLMiningSirdarPage() {
         {unlocked ? (
           <div className="mt-6 flex items-center gap-3 rounded-xl border border-ok/30 bg-ok/10 px-4 py-3 text-sm">
             <span aria-hidden className="text-ok">✓</span>
-            <span className="font-semibold text-ink">Mining Sirdar series unlocked.</span>
+            <span className="font-semibold text-ink">AF Electrical series unlocked.</span>
             <span className="text-muted">All {liveCount} mocks are open — start any set below.</span>
           </div>
         ) : (
@@ -141,16 +139,16 @@ export default async function WCLMiningSirdarPage() {
               <div className="flex items-start gap-3">
                 <span aria-hidden className="mt-0.5 text-2xl">🔒</span>
                 <div>
-                  <h3 className="text-lg font-extrabold">Unlock all {liveCount} Mining Sirdar mocks</h3>
+                  <h3 className="text-lg font-extrabold">Unlock all {liveCount} AF Electrical mocks</h3>
                   <p className="mt-1 max-w-xl text-sm text-white/70">
                     Full official WCL CBT pattern — {liveCount} complete 100-question papers
-                    covering General Awareness + Technical Mining. One payment, valid through the recruitment cycle.
+                    covering General Awareness + Technical Electrical. One payment, valid through the recruitment cycle.
                   </p>
                 </div>
               </div>
               <div className="flex shrink-0 flex-col items-stretch gap-1 sm:items-end">
                 <div className="text-right">
-                  <span className="text-3xl font-extrabold">₹{WCL_SIRDAR_PRICING.pro}</span>
+                  <span className="text-3xl font-extrabold">₹{WCL_AF_PRICING.pro}</span>
                 </div>
                 <Link
                   href={payHref}
@@ -166,7 +164,7 @@ export default async function WCLMiningSirdarPage() {
 
         {/* Mock card grid */}
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {WCL_SIRDAR_MOCKS.map((m) => {
+          {WCL_AF_MOCKS.map((m) => {
             const canStart = unlocked;
             return (
               <div key={m.id} className="card relative flex flex-col p-5">
@@ -223,12 +221,12 @@ export default async function WCLMiningSirdarPage() {
       {/* NEWSLETTER */}
       <section className="border-t border-line bg-paper/40">
         <div className="max-w-3xl mx-auto px-5 py-12 text-center">
-          <h3 className="text-lg font-bold text-ink">Get WCL Mining Sirdar exam updates</h3>
+          <h3 className="text-lg font-bold text-ink">Get WCL AF Electrical exam updates</h3>
           <p className="mt-1 text-sm text-muted">
             New mock releases, WCL notification alerts, and prep tips — once a week.
           </p>
           <div className="mt-4 flex justify-center">
-            <NewsletterForm source="diploma-wcl-sirdar" />
+            <NewsletterForm source="diploma-wcl-af-electrical" />
           </div>
         </div>
       </section>
