@@ -19,16 +19,20 @@ import air from "@/data/questions/practice/es-air-noise-pollution.json";
 import water from "@/data/questions/practice/es-water-wastewater.json";
 import waste from "@/data/questions/practice/es-solid-hazardous-waste.json";
 import global from "@/data/questions/practice/es-global-regional-issues.json";
+import engineeringMath from "@/data/questions/practice/es-engineering-mathematics.json";
+import waterResources from "@/data/questions/practice/es-water-resources-hydraulics.json";
 
 /** Environmental Science practice subjects in syllabus display order. */
 export const ES_PRACTICE: PracticeSubject[] = [
   generalAptitude,
+  engineeringMath,
   management,
   chemistry,
   microbiology,
   ecology,
   air,
   water,
+  waterResources,
   waste,
   global,
 ] as PracticeSubject[];
