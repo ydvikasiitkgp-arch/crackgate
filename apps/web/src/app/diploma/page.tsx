@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { DIPLOMA_MOCKS } from "@/data/diploma/mocks";
+import { WCL_SIRDAR_MOCKS, WCL_SIRDAR_PRICING } from "@/data/diploma/wcl-mocks";
 
 export const metadata: Metadata = {
   title: "Diploma Level Exams · CrackGate",
@@ -21,8 +22,38 @@ export default function DiplomaExamsPage() {
         </p>
       </div>
 
+      {/* WCL Mining Sirdar — Featured */}
+      <div className="mt-12 rounded-2xl border-2 border-brand/30 bg-brand/5 p-6">
+        <div className="flex items-center gap-3">
+          <span className="badge bg-brand text-white">New</span>
+          <h2 className="text-lg font-bold text-ink">WCL Mining Sirdar (T&S Grade-C)</h2>
+        </div>
+        <p className="mt-2 text-sm text-muted">
+          20 full-length mocks — 100 MCQs each, 120 min, no negative marking.
+          Covers CMR 2017 syllabus: Ventilation, Blasting, Depillaring, Strata Control, and more.
+        </p>
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <Link
+            href="/diploma/wcl/mining-sirdar"
+            className="rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand/90"
+          >
+            View All 20 Mocks →
+          </Link>
+          <Link
+            href={`/mocks/${WCL_SIRDAR_MOCKS[0].id}`}
+            className="rounded-lg border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-brand/40"
+          >
+            Try Free Mock →
+          </Link>
+        </div>
+        <p className="mt-3 text-xs text-muted">
+          Mock 1 is free · Mocks 2–20 require Pro plan (₹399)
+        </p>
+      </div>
+
+      {/* Other Diploma Mocks */}
       <div className="mt-12">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">Available mock tests</h2>
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">Other diploma mocks</h2>
         <ul className="mt-4 space-y-3">
           {DIPLOMA_MOCKS.map((m) => (
             <li key={m.id}>
