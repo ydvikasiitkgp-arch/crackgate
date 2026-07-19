@@ -16,10 +16,14 @@ import sirdarMock01 from "@/data/questions/mocks/diploma-coal-sirdar-mock-01.jso
 import overmanMock01 from "@/data/questions/mocks/diploma-coal-overman-mock-01.json";
 import { WCL_SIRDAR_MOCKS } from "@/data/diploma/wcl-mocks";
 import { WCL_AF_MOCKS } from "@/data/diploma/wcl-af-mocks";
+import { NCL_SIRDAR_MOCKS } from "@/data/diploma/ncl-sirdar-mocks";
+import { NCL_SURVEYOR_MOCKS } from "@/data/diploma/ncl-surveyor-mocks";
 
 export const DIPLOMA_MOCKS = [
   sirdarMock01,
   overmanMock01,
   ...WCL_SIRDAR_MOCKS,
   ...WCL_AF_MOCKS,
+  ...NCL_SIRDAR_MOCKS,
+  ...NCL_SURVEYOR_MOCKS,
 ] as const;

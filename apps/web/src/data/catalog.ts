@@ -45,6 +45,7 @@ const GATE_PRICE: SubjectPrice = { proPaise: 49900, premiumPaise: 89900 };
 const STATE_PRICE: SubjectPrice = { proPaise: 29900, premiumPaise: 49900 };
 const DIPLOMA_PRICE: SubjectPrice = { proPaise: 19900, premiumPaise: 34900 };
 const WCL_PRICE: SubjectPrice = { proPaise: 39900, premiumPaise: 39900 };
+const NCL_PRICE: SubjectPrice = { proPaise: 39900, premiumPaise: 39900 };
 
 export const CATALOG: CatalogExam[] = [
   {
@@ -117,6 +118,18 @@ export const CATALOG: CatalogExam[] = [
         label: "WCL Asst. Foreman (Electrical)",
         live: true,
         price: WCL_PRICE,
+      },
+      {
+        slug: "ncl-mining-sirdar",
+        label: "NCL Mining Sirdar T&S Gr. C",
+        live: true,
+        price: NCL_PRICE,
+      },
+      {
+        slug: "ncl-surveyor",
+        label: "NCL Surveyor (Mining) T&S Gr. B",
+        live: true,
+        price: NCL_PRICE,
       },
       { slug: "general", label: "General", live: false },
     ],

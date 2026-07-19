@@ -306,6 +306,29 @@ function DiplomaSheet({ onClose }: { onClose: () => void }) {
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </Link>
+          <Link
+            href="/diploma/ncl"
+            onClick={onClose}
+            className={cn(
+              "flex items-center justify-between px-4 py-3 rounded-xl border transition-colors",
+              pathname === "/diploma/ncl" || pathname?.startsWith("/diploma/ncl/")
+                ? "border-brand/20 bg-brand/5"
+                : "border-line/60 active:bg-canvas",
+            )}
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-line/40 bg-canvas">
+                <img src="/images/ncl/ncl-logo.png" alt="NCL" className="h-full w-full object-contain" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-sm font-semibold text-ink">NCL</div>
+                <div className="text-xs text-muted truncate">Northern Coalfields Limited · 2 exams</div>
+              </div>
+            </div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-muted/50 shrink-0">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </>

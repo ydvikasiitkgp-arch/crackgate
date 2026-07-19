@@ -133,6 +133,37 @@ export function resolveMock(id: string): ResolvedMock | null {
     };
   }
 
+  // NCL mocks — entitlement-gated per exam (₹399 unlocks all 19 pro mocks).
+  if (id.startsWith("diploma-ncl-sirdar-")) {
+    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+      | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
+      | undefined;
+    if (!m) return null;
+    return {
+      id: m.id,
+      title: m.title,
+      questions: m.questions as unknown as Question[],
+      durationSec: (m.duration ?? 120) * 60,
+      negativeMarking: false,
+      gate: { type: "entitlement", exam: "DIPLOMA", subject: "ncl-mining-sirdar" },
+    };
+  }
+
+  if (id.startsWith("diploma-ncl-surveyor-")) {
+    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+      | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
+      | undefined;
+    if (!m) return null;
+    return {
+      id: m.id,
+      title: m.title,
+      questions: m.questions as unknown as Question[],
+      durationSec: (m.duration ?? 120) * 60,
+      negativeMarking: false,
+      gate: { type: "entitlement", exam: "DIPLOMA", subject: "ncl-surveyor" },
+    };
+  }
+
   // Legacy STATE / DIPLOMA (coal-sirdar, overman — plan-tier gated).
   if (id.startsWith("state-") || id.startsWith("diploma-")) {
     const isState = id.startsWith("state-");

@@ -271,6 +271,19 @@ export function MegaNav() {
                 <span className="block truncate text-xs text-muted">Western Coalfields Limited</span>
               </span>
             </Link>
+            {/* NCL — simple link to landing page */}
+            <Link
+              href="/diploma/ncl"
+              className={cn(
+                "flex items-center justify-between gap-3 rounded-md px-3 py-2",
+                isActive("/diploma/ncl") ? "bg-brand/5" : "hover:bg-canvas",
+              )}
+            >
+              <span className="min-w-0">
+                <span className="block text-sm font-bold text-ink">NCL</span>
+                <span className="block truncate text-xs text-muted">Northern Coalfields Limited</span>
+              </span>
+            </Link>
           </Panel>
         )}
       </div>

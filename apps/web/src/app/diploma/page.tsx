@@ -24,7 +24,7 @@ export default function DiplomaExamsPage() {
       {/* WCL — Featured */}
       <div className="mt-12 rounded-2xl border-2 border-emerald-500/30 bg-emerald-500/5 p-6">
         <div className="flex items-center gap-3">
-          <span className="badge bg-emerald-600 text-white">New</span>
+          <span className="badge bg-emerald-600 text-white">Live</span>
           <h2 className="text-lg font-bold text-ink">WCL Diploma Exams</h2>
         </div>
         <p className="mt-2 text-sm text-muted">
@@ -38,6 +38,34 @@ export default function DiplomaExamsPage() {
           >
             View All WCL Exams →
           </Link>
+        </div>
+      </div>
+
+      {/* NCL — Featured */}
+      <div className="mt-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5 p-6">
+        <div className="flex items-center gap-3">
+          <span className="badge bg-blue-600 text-white">New</span>
+          <h2 className="text-lg font-bold text-ink">NCL Diploma Exams</h2>
+        </div>
+        <p className="mt-2 text-sm text-muted">
+          20 full-length mocks each for Mining Sirdar (254 posts) and Surveyor (5 posts) —
+          100 MCQs, 120 min, no negative marking. ₹399 per exam. Advt. 2026/246.
+        </p>
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <Link
+            href="/diploma/ncl"
+            className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
+            View All NCL Exams →
+          </Link>
+          <a
+            href="https://www.nclcil.in/data-listing/pages/recruitment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border border-blue-300 px-5 py-2.5 text-sm font-semibold text-blue-700 transition hover:bg-blue-50 dark:text-blue-400 dark:border-blue-700"
+          >
+            Apply on NCL →
+          </a>
         </div>
       </div>
 
