@@ -238,9 +238,31 @@ export function MegaNav() {
       </Link>
 
       {/* Diploma */}
-      <Link href="/diploma" className={triggerCls("diploma", ["/diploma"])}>
-        Diploma
-      </Link>
+      <div
+        className="relative"
+        onMouseEnter={() => openMenu("diploma")}
+        onMouseLeave={scheduleClose}
+      >
+        <button
+          type="button"
+          onClick={() => setOpen(open === "diploma" ? null : "diploma")}
+          className={triggerCls("diploma", ["/diploma"])}
+        >
+          Diploma <Chevron open={open === "diploma"} />
+        </button>
+
+        {open === "diploma" && (
+          <Panel>
+            <Link href="/diploma" className="block rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-canvas">
+              All Diploma Exams
+            </Link>
+            <Link href="/diploma/wcl/mining-sirdar" className="block rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-canvas">
+              WCL Mining Sirdar
+              <span className="ml-2 badge bg-green-500/10 text-green-600 text-[10px]">20 Mocks</span>
+            </Link>
+          </Panel>
+        )}
+      </div>
 
       {/* Blog */}
       <Link href="/blog" className={triggerCls("blog", ["/blog"])}>
