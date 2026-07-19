@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { WCL_EXAMS } from "@/data/wcl";
+import { NCL_EXAMS } from "@/data/ncl";
 
 const PLANS = [
   { id: "free",    name: "Free",     price: 0,    period: "forever",    cta: "Current plan", highlight: false, badge: "",
@@ -107,6 +108,22 @@ export default function PricingPage() {
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           {WCL_EXAMS.filter((e) => e.live).map((e) => (
             <WclPlanCard key={e.slug} exam={e} />
+          ))}
+        </div>
+      </div>
+
+      {/* NCL Diploma Plans */}
+      <div className="mt-20">
+        <div className="text-center">
+          <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400">NCL Diploma Exams</span>
+          <h2 className="mt-4 text-3xl font-extrabold">₹399 per exam · 20 mocks each</h2>
+          <p className="text-muted mt-3 max-w-xl mx-auto">
+            Northern Coalfields Limited recruitment. Pay once per exam — unlock all 20 mocks.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 mt-8">
+          {NCL_EXAMS.filter((e) => e.live).map((e) => (
+            <NclPlanCard key={e.slug} exam={e} />
           ))}
         </div>
       </div>
@@ -263,6 +280,66 @@ function WclPlanCard({ exam }: { exam: typeof WCL_EXAMS[number] }) {
         <li className="flex gap-2"><span className="text-ok">✓</span> 100 MCQs · 120 min · no negative marking</li>
         <li className="flex gap-2"><span className="text-ok">✓</span> General Awareness + Technical section</li>
         <li className="flex gap-2"><span className="text-ok">✓</span> WCL-specific facts &amp; CMR 2017 syllabus</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> One payment · valid through recruitment cycle</li>
+      </ul>
+      <div className="mt-6">
+        <button
+          onClick={buy}
+          disabled={loading}
+          className="btn btn-primary w-full"
+        >
+          {loading ? "Loading…" : devMode ? `⚙ Dev: Unlock ${exam.short}` : `Unlock — ₹${exam.price}`}
+        </button>
+      </div>
+      <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
+    </div>
+  );
+}
+
+function NclPlanCard({ exam }: { exam: typeof NCL_EXAMS[number] }) {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
+
+  async function buy() {
+    if (devMode) {
+      setLoading(true);
+      try {
+        const r = await fetch("/api/dev/set-plan", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ plan: "pro" }),
+        });
+        if (r.status === 401) return router.push(`/login?next=/pricing`);
+        const t = await r.text();
+        const data = t ? safeJson(t) : null;
+        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed (HTTP ${r.status})`);
+        return router.push(`/diploma/ncl/${exam.slug}?upgrade=success&dev=1`);
+      } catch (e) {
+        alert((e as Error).message);
+      } finally {
+        setLoading(false);
+      }
+      return;
+    }
+    router.push(`/pay/upi?plan=pro&exam=DIPLOMA&subject=ncl-${exam.slug}`);
+  }
+
+  return (
+    <div className="card p-8 flex flex-col">
+      <div className="text-xs font-bold uppercase tracking-wide mb-2 text-blue-600 dark:text-blue-400">
+        {exam.mockCount} mocks
+      </div>
+      <h3 className="text-xl font-bold">{exam.name}</h3>
+      <div className="mt-3">
+        <span className="text-4xl font-extrabold">₹{exam.price}</span>
+        <span className="text-sm text-muted ml-1">one-time</span>
+      </div>
+      <ul className="mt-6 space-y-2 text-sm">
+        <li className="flex gap-2"><span className="text-ok">✓</span> {exam.mockCount} full-length mocks</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> 100 MCQs · 120 min · no negative marking</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> Section A (Technical 70Q) + Section B (General 30Q)</li>
+        <li className="flex gap-2"><span className="text-ok">✓</span> NCL-specific syllabus &amp; CMR 2017</li>
         <li className="flex gap-2"><span className="text-ok">✓</span> One payment · valid through recruitment cycle</li>
       </ul>
       <div className="mt-6">
