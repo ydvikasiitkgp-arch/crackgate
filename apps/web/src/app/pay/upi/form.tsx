@@ -18,7 +18,7 @@ type Props = {
 };
 
 const APPS = ["PhonePe", "GPay", "Paytm", "BHIM", "Other"] as const;
-const EXAMS = ["GATE", "PSU", "State Level"] as const;
+const EXAMS = ["GATE", "PSU", "State Level", "Diploma"] as const;
 
 function coerceExam(value: string | undefined): (typeof EXAMS)[number] {
   return (EXAMS as readonly string[]).includes(value ?? "")
