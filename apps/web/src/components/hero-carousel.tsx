@@ -23,7 +23,7 @@ type Props = {
   environment: CivilStats;
 };
 
-const SLIDES = 6;
+const SLIDES = 8;
 const AUTOPLAY_MS = 3000;
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -62,16 +62,20 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
 
   const slideLabel =
     active === 0
-      ? "PSU recruitment — Oil & Natural Gas Corporation"
+      ? "Diploma recruitment — Northern Coalfields Limited"
       : active === 1
-        ? "GATE MN 2027 — Mining Engineering"
+        ? "Diploma recruitment — Western Coalfields Limited"
         : active === 2
-          ? "GATE CE 2027 — Civil Engineering"
+          ? "PSU recruitment — Oil & Natural Gas Corporation"
           : active === 3
-            ? "GATE GG 2027 — Geology and Geophysics"
+            ? "GATE MN 2027 — Mining Engineering"
             : active === 4
-              ? "GATE ES 2027 — Environmental Science and Engineering"
-              : "PSU recruitment — Coal India Limited";
+              ? "GATE CE 2027 — Civil Engineering"
+              : active === 5
+                ? "GATE GG 2027 — Geology and Geophysics"
+                : active === 6
+                  ? "GATE ES 2027 — Environmental Science and Engineering"
+                  : "PSU recruitment — Coal India Limited";
 
   return (
     <section
@@ -98,14 +102,18 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
             aria-label={slideLabel}
           >
             {active === 0 ? (
-              <OngcWindow />
+              <NclWindow />
             ) : active === 1 ? (
-              <GateWindow practiceQs={practiceQs} mocksCount={mocksCount} subjectsCount={subjectsCount} />
+              <WclWindow />
             ) : active === 2 ? (
-              <CivilWindow civil={civil} />
+              <OngcWindow />
             ) : active === 3 ? (
-              <GeologyWindow stats={geology} />
+              <GateWindow practiceQs={practiceQs} mocksCount={mocksCount} subjectsCount={subjectsCount} />
             ) : active === 4 ? (
+              <CivilWindow civil={civil} />
+            ) : active === 5 ? (
+              <GeologyWindow stats={geology} />
+            ) : active === 6 ? (
               <EnvironmentWindow stats={environment} />
             ) : (
               <PsuWindow />
@@ -786,6 +794,310 @@ function CilEligibilityCard() {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+/* ───────────────────────── WINDOW 6 — NCL Diploma ───────────────────────── */
+
+export function NclWindow() {
+  return (
+    <div className="relative h-full w-full">
+      <CoalMineBackdrop />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0d2d4d]/90 via-[#1a3a5c]/70 to-slate-900/80" />
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
+        <div>
+          <div className="flex items-center gap-3">
+            <img src="/images/ncl/ncl-logo.png" alt="NCL" className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg object-contain" />
+            <span className="badge border border-blue-300/30 bg-blue-300/10 text-blue-300">
+              Diploma · NCL · Live
+            </span>
+          </div>
+          <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
+            NCL Recruitment 2026.{" "}
+            <span className="bg-gradient-to-r from-blue-300 to-indigo-400 bg-clip-text text-transparent">
+              259 Seats · Mining Sirdar &amp; Surveyor.
+            </span>
+          </h1>
+          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
+            CBT only — no interview. 100 MCQs · 100 marks · 90 min · No negative marking.
+            20 full-length mocks built from the official NCL syllabus.
+          </p>
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
+            <Link href="/diploma/ncl" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-400 to-indigo-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:brightness-105" data-track="hero:cta:ncl">
+              Start Mock Test <span aria-hidden>→</span>
+            </Link>
+            <a href="https://www.nclcil.in/data-listing/pages/recruitment" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-blue-300/40 bg-blue-300/5 px-6 py-3.5 text-base font-semibold text-blue-200 transition hover:bg-blue-300/15">
+              View Notification ↗
+            </a>
+          </div>
+          <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6 text-sm text-white/70">
+            <Stat n="259" label="Vacancies" />
+            <Stat n="20" label="Mock Tests" />
+            <Stat n="90 min" label="CBT Duration" />
+            <Stat n="0" label="Neg. Marking" />
+          </div>
+        </div>
+        <div className="hidden lg:flex lg:justify-center">
+          <NclScene />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CoalMineBackdrop() {
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <svg className="absolute inset-0 h-full w-full opacity-[0.12]" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#93c5fd" strokeWidth="2" aria-hidden>
+        {/* opencast benches */}
+        <path d="M0 500 H250 V420 H450 V340 H650 V260 H800" />
+        <path d="M0 540 H300 V460 H500 V380 H700 V300 H800" />
+        {/* dumper */}
+        <g transform="translate(100 450)">
+          <rect x="0" y="-30" width="80" height="30" rx="3" />
+          <circle cx="20" cy="8" r="12" />
+          <circle cx="60" cy="8" r="12" />
+        </g>
+        {/* dragline */}
+        <g transform="translate(500 280)">
+          <line x1="0" y1="60" x2="40" y2="0" />
+          <line x1="80" y1="60" x2="40" y2="0" />
+          <line x1="40" y1="0" x2="140" y2="20" />
+          <line x1="140" y1="20" x2="140" y2="80" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function NclScene() {
+  const float = (delay: number) => ({
+    animate: { y: [0, -10, 0] },
+    transition: { duration: 3.2, repeat: Infinity, ease: "easeInOut" as const, delay },
+  });
+  return (
+    <div className="relative h-[360px] w-[360px]">
+      <div className="absolute inset-0 rounded-full bg-blue-400/10 blur-3xl" />
+
+      {/* central mining helmet */}
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -6, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <svg width="200" height="180" viewBox="0 0 200 180" fill="none" aria-hidden>
+          <path d="M30 110 a70 70 0 0 1 140 0 Z" fill="#3b82f6" fillOpacity="0.3" stroke="#60a5fa" strokeWidth="3" />
+          <rect x="24" y="108" width="152" height="12" rx="6" fill="#2563eb" />
+          <rect x="88" y="40" width="24" height="30" rx="4" fill="#fbbf24" />
+          <circle cx="100" cy="36" r="8" fill="#fde68a" />
+          {/* headlamp rays */}
+          <line x1="100" y1="28" x2="100" y2="10" stroke="#fde68a" strokeWidth="2" strokeLinecap="round" />
+          <line x1="88" y1="32" x2="78" y2="18" stroke="#fde68a" strokeWidth="2" strokeLinecap="round" />
+          <line x1="112" y1="32" x2="122" y2="18" stroke="#fde68a" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      </motion.div>
+
+      {/* floating survey instrument */}
+      <motion.div {...float(0)} className="absolute left-2 top-6">
+        <Holo>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden fill="none" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round">
+            <line x1="8" y1="36" x2="20" y2="18" />
+            <line x1="32" y1="36" x2="20" y2="18" />
+            <rect x="12" y="8" width="16" height="12" rx="2" />
+            <circle cx="20" cy="6" r="3" fill="#93c5fd" />
+          </svg>
+        </Holo>
+      </motion.div>
+
+      {/* floating safety sign */}
+      <motion.div {...float(0.9)} className="absolute right-2 top-10">
+        <Holo>
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden fill="none" stroke="#fbbf24" strokeWidth="2">
+            <path d="M21 6 L36 34 H6 Z" fill="#f59e0b" fillOpacity="0.15" />
+            <text x="21" y="30" textAnchor="middle" fill="#fbbf24" fontSize="14" fontWeight="bold">!</text>
+          </svg>
+        </Holo>
+      </motion.div>
+
+      {/* floating coal cart */}
+      <motion.div {...float(1.5)} className="absolute bottom-3 left-8">
+        <Holo>
+          <svg width="48" height="36" viewBox="0 0 48 36" aria-hidden fill="none" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round">
+            <rect x="8" y="4" width="32" height="20" rx="2" />
+            <circle cx="14" cy="30" r="4" />
+            <circle cx="34" cy="30" r="4" />
+            <line x1="8" y1="24" x2="14" y2="30" />
+            <line x1="40" y1="24" x2="34" y2="30" />
+          </svg>
+        </Holo>
+      </motion.div>
+
+      {/* floating certificate */}
+      <motion.div {...float(1.2)} className="absolute bottom-6 right-6">
+        <Holo>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden fill="none" stroke="#93c5fd" strokeWidth="2">
+            <rect x="6" y="4" width="28" height="32" rx="3" />
+            <line x1="12" y1="12" x2="28" y2="12" />
+            <line x1="12" y1="18" x2="28" y2="18" />
+            <line x1="12" y1="24" x2="22" y2="24" />
+            <circle cx="28" cy="30" r="6" fill="#3b82f6" fillOpacity="0.3" stroke="#60a5fa" />
+            <text x="28" y="33" textAnchor="middle" fill="#93c5fd" fontSize="8" fontWeight="bold">✓</text>
+          </svg>
+        </Holo>
+      </motion.div>
+    </div>
+  );
+}
+
+/* ───────────────────────── WINDOW 7 — WCL Diploma ───────────────────────── */
+
+export function WclWindow() {
+  return (
+    <div className="relative h-full w-full">
+      <WclBackdrop />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0f4820]/90 via-[#145a2e]/70 to-slate-900/80" />
+      <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
+        <div>
+          <div className="flex items-center gap-3">
+            <img src="/images/wcl/wcl-logo.webp" alt="WCL" className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg object-contain" />
+            <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-300">
+              Diploma · WCL · Live
+            </span>
+          </div>
+          <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
+            WCL Recruitment 2026.{" "}
+            <span className="bg-gradient-to-r from-emerald-300 to-green-400 bg-clip-text text-transparent">
+              444 Seats · Mining Sirdar &amp; AF Electrical.
+            </span>
+          </h1>
+          <p className="mt-5 max-w-xl text-sm sm:text-lg text-white/80">
+            CBT only — no interview. 100 MCQs · 100 marks · 120 min · No negative marking.
+            20 full-length mocks built from the official WCL syllabus.
+          </p>
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
+            <Link href="/diploma/wcl" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-green-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-emerald-500/20 transition hover:brightness-105" data-track="hero:cta:wcl">
+              Start Mock Test <span aria-hidden>→</span>
+            </Link>
+            <a href="https://westerncoal.in/en/career/recruitment" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15">
+              View Notification ↗
+            </a>
+          </div>
+          <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6 text-sm text-white/70">
+            <Stat n="444" label="Vacancies" />
+            <Stat n="20" label="Mock Tests" />
+            <Stat n="120 min" label="CBT Duration" />
+            <Stat n="0" label="Neg. Marking" />
+          </div>
+        </div>
+        <div className="hidden lg:flex lg:justify-center">
+          <WclScene />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function WclBackdrop() {
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <svg className="absolute inset-0 h-full w-full opacity-[0.12]" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#6ee7b7" strokeWidth="2" aria-hidden>
+        {/* underground mine shaft */}
+        <rect x="300" y="100" width="200" height="400" rx="4" />
+        <line x1="300" y1="200" x2="500" y2="200" />
+        <line x1="300" y1="300" x2="500" y2="300" />
+        <line x1="300" y1="400" x2="500" y2="400" />
+        {/* elevator cage */}
+        <rect x="340" y="140" width="120" height="50" rx="3" />
+        <line x1="400" y1="100" x2="400" y2="140" strokeWidth="4" />
+        {/* ventilation fan */}
+        <circle cx="400" cy="80" r="18" />
+        <line x1="400" y1="62" x2="400" y2="98" />
+        <line x1="382" y1="80" x2="418" y2="80" />
+        {/* conveyor belt */}
+        <line x1="100" y1="500" x2="700" y2="500" strokeWidth="4" />
+        <circle cx="150" cy="500" r="10" />
+        <circle cx="650" cy="500" r="10" />
+      </svg>
+    </div>
+  );
+}
+
+function WclScene() {
+  const float = (delay: number) => ({
+    animate: { y: [0, -10, 0] },
+    transition: { duration: 3.2, repeat: Infinity, ease: "easeInOut" as const, delay },
+  });
+  return (
+    <div className="relative h-[360px] w-[360px]">
+      <div className="absolute inset-0 rounded-full bg-emerald-400/10 blur-3xl" />
+
+      {/* central electrical panel */}
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -6, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <svg width="200" height="180" viewBox="0 0 200 180" fill="none" aria-hidden>
+          <rect x="30" y="20" width="140" height="140" rx="8" stroke="#34d399" strokeWidth="3" fill="#065f46" fillOpacity="0.2" />
+          {/* circuit breakers */}
+          <rect x="50" y="40" width="40" height="20" rx="3" fill="#10b981" fillOpacity="0.3" stroke="#34d399" strokeWidth="2" />
+          <rect x="110" y="40" width="40" height="20" rx="3" fill="#10b981" fillOpacity="0.3" stroke="#34d399" strokeWidth="2" />
+          <rect x="50" y="70" width="40" height="20" rx="3" fill="#f59e0b" fillOpacity="0.3" stroke="#fbbf24" strokeWidth="2" />
+          <rect x="110" y="70" width="40" height="20" rx="3" fill="#f59e0b" fillOpacity="0.3" stroke="#fbbf24" strokeWidth="2" />
+          {/* meters */}
+          <circle cx="70" cy="120" r="18" stroke="#6ee7b7" strokeWidth="2" />
+          <line x1="70" y1="120" x2="80" y2="110" stroke="#34d399" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="130" cy="120" r="18" stroke="#6ee7b7" strokeWidth="2" />
+          <line x1="130" y1="120" x2="120" y2="108" stroke="#34d399" strokeWidth="2" strokeLinecap="round" />
+          {/* lightning bolt */}
+          <path d="M100 4 L92 16 H104 L96 28" stroke="#fde68a" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </motion.div>
+
+      {/* floating wrench */}
+      <motion.div {...float(0)} className="absolute left-2 top-6">
+        <Holo>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden fill="none" stroke="#34d399" strokeWidth="2" strokeLinecap="round">
+            <path d="M10 30 L24 16" />
+            <circle cx="28" cy="12" r="8" />
+            <path d="M24 8 L28 12 L32 8" />
+          </svg>
+        </Holo>
+      </motion.div>
+
+      {/* floating voltage symbol */}
+      <motion.div {...float(0.9)} className="absolute right-2 top-10">
+        <Holo>
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden fill="none" stroke="#fbbf24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M24 6 L16 20 H24 L18 36" />
+          </svg>
+        </Holo>
+      </motion.div>
+
+      {/* floating cable drum */}
+      <motion.div {...float(1.5)} className="absolute bottom-3 left-8">
+        <Holo>
+          <svg width="48" height="36" viewBox="0 0 48 36" aria-hidden fill="none" stroke="#6ee7b7" strokeWidth="2" strokeLinecap="round">
+            <circle cx="24" cy="18" r="14" />
+            <circle cx="24" cy="18" r="6" />
+            <line x1="10" y1="18" x2="18" y2="18" />
+            <line x1="30" y1="18" x2="38" y2="18" />
+          </svg>
+        </Holo>
+      </motion.div>
+
+      {/* floating safety helmet */}
+      <motion.div {...float(1.2)} className="absolute bottom-6 right-6">
+        <Holo>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden>
+            <path d="M6 26 a14 14 0 0 1 28 0 Z" fill="#f59e0b" fillOpacity="0.3" stroke="#fbbf24" strokeWidth="2" />
+            <rect x="4" y="26" width="32" height="5" rx="2.5" fill="#fcd34d" />
+          </svg>
+        </Holo>
+      </motion.div>
     </div>
   );
 }

@@ -4,7 +4,6 @@ import { PRACTICE } from "@/data/practice";
 import { getGateSubject } from "@/data/gate/registry";
 import dynamic from "next/dynamic";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { CilAdBanner } from "@/components/cil-ad-banner";
 
 
 const HeroCarousel = dynamic(() => import("@/components/hero-carousel").then((m) => m.HeroCarousel));
@@ -54,21 +53,16 @@ export default async function HomePage() {
         environment={environmentStats}
       />
 
-      {/* ---------- CIL recruitment ad ---------- */}
-      <div className="pt-10">
-        <CilAdBanner />
-      </div>
-
       {/* ---------- FEATURES ---------- */}
       <section className="max-w-7xl mx-auto px-5 py-20">
         <div className="text-center">
           <span className="badge bg-brand/10 text-brand">Why CrackGate</span>
           <h2 className="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-ink">
-            Everything you need to crack GATE.
+            Everything you need to crack GATE, PSU &amp; Diploma exams.
           </h2>
           <p className="mt-3 text-muted max-w-2xl mx-auto">
-            Hyper-focused on mining. No generic content, no padding — every question is graded
-            automatically with detailed solutions.
+            Hyper-focused on mining, civil, geology and environmental engineering. No generic content,
+            no padding — every question is graded automatically with detailed solutions.
           </p>
         </div>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
