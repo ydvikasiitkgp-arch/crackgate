@@ -17,28 +17,15 @@ export function SiteFooter() {
             India's dedicated GATE &amp; PSU test prep. Full-length mocks, topic-wise practice, SWOT analytics.
           </p>
         </div>
-        <FooterCol title="Practice">
-          <FooterLink href="/mocks">Test Series</FooterLink>
-          <FooterLink href="/study">Study Material</FooterLink>
-          <FooterLink href="/resources">Resources</FooterLink>
+        <FooterCol title="Resources">
+          <FooterLink href="/blog">Blog</FooterLink>
+          <FooterLink href="/news">News</FooterLink>
+          <FooterLink href="/about">About Us</FooterLink>
         </FooterCol>
         <FooterCol title="Company">
-          <FooterLink href="/about">About</FooterLink>
           <FooterLink href="/contact">Contact</FooterLink>
           <FooterLink href="/faq">FAQ</FooterLink>
           <FooterLink href="/pricing">Pricing</FooterLink>
-          {process.env.NEXT_PUBLIC_WHATSAPP_COMMUNITY_URL && (
-            <li>
-              <a
-                href={process.env.NEXT_PUBLIC_WHATSAPP_COMMUNITY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#25D366] hover:text-white font-semibold"
-              >
-                💬 Join WhatsApp Community
-              </a>
-            </li>
-          )}
         </FooterCol>
         <FooterCol title="Legal">
           <FooterLink href="/privacy">Privacy Policy</FooterLink>

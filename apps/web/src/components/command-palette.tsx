@@ -307,7 +307,6 @@ export function CommandPalette({ className = "" }: { className?: string }) {
         )}
       >
         <Search size={15} aria-hidden />
-        <span className="hidden sm:inline text-xs text-muted/70">⌘K</span>
       </button>
 
       {/* Overlay */}
