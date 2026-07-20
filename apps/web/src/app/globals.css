@@ -129,11 +129,20 @@ body {
 /* Drawer + sheet animations */
 @keyframes cg-slide-in-right { from { transform: translateX(100%); } to { transform: translateX(0); } }
 @keyframes cg-slide-in-up    { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes cg-slide-in-left  { from { transform: translateX(-100%); } to { transform: translateX(0); } }
 @keyframes cg-fade-in        { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cg-zoom-in        { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
 .cg-overlay  { animation: cg-fade-in 150ms ease-out; }
 .cg-drawer   { animation: cg-slide-in-right 220ms cubic-bezier(.4,.0,.2,1); }
 .cg-sheet    { animation: cg-slide-in-up    240ms cubic-bezier(.4,.0,.2,1); }
+.cg-drawer-l { animation: cg-slide-in-left  220ms cubic-bezier(.4,.0,.2,1); }
+
+.animate-in  { animation-duration: 200ms; animation-fill-mode: both; }
+.slide-in-from-left { animation-name: cg-slide-in-left; }
+.slide-in-from-bottom { animation-name: cg-slide-in-up; }
+.fade-in { animation-name: cg-fade-in; }
+.zoom-in-95 { animation-name: cg-zoom-in; }
 
 /* Hero CTA: hover ripple (amber) */
 .cg-ripple { position: relative; overflow: hidden; isolation: isolate; }

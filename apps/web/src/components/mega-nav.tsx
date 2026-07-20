@@ -20,6 +20,12 @@ const GATE_BRANCHES: Branch[] = [
   { label: "Agricultural Engineering (AG)", href: "/gate/agricultural" },
 ];
 
+const RESOURCE_LINKS: Branch[] = [
+  { label: "Blog", href: "/blog" },
+  { label: "News", href: "/news" },
+  { label: "About Us", href: "/about" },
+];
+
 export function MegaNav() {
   const [open, setOpen] = useState<string | null>(null);
   const [openSub, setOpenSub] = useState<string | null>(null);
@@ -70,6 +76,10 @@ export function MegaNav() {
   };
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
+
+  // PSU mocks live under /mocks/cil-* and should highlight the PSU nav, not GATE.
+  const isPsuMock = /^\/mocks\/(cil-)/.test(pathname);
+
   const triggerCls = (id: string, activeHrefs: string[]) =>
     cn(
       "inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors",
@@ -77,6 +87,8 @@ export function MegaNav() {
         ? "text-brand bg-brand/5"
         : "text-ink/70 hover:text-brand hover:bg-canvas",
     );
+
+  const isResourceActive = RESOURCE_LINKS.some((l) => isActive(l.href));
 
   return (
     <div ref={ref} className="hidden md:flex items-center gap-1 ml-4">
@@ -87,7 +99,7 @@ export function MegaNav() {
           aria-haspopup="menu"
           aria-expanded={open === "gate"}
           onClick={() => setOpen(open === "gate" ? null : "gate")}
-          className={triggerCls("gate", ["/gate", "/learn", "/practice", "/mocks", "/aits", "/study", "/pricing"])}
+          className={triggerCls("gate", ["/gate", "/learn", "/practice", ...(!isPsuMock ? ["/mocks"] : []), "/aits", "/study", "/pricing"])}
         >
           GATE <Chevron open={open === "gate"} />
         </button>
@@ -116,7 +128,7 @@ export function MegaNav() {
           aria-haspopup="menu"
           aria-expanded={open === "psu"}
           onClick={() => setOpen(open === "psu" ? null : "psu")}
-          className={triggerCls("psu", ["/psu"])}
+          className={triggerCls("psu", isPsuMock ? ["/psu", "/mocks"] : ["/psu"])}
         >
           PSU <Chevron open={open === "psu"} />
         </button>
@@ -232,9 +244,9 @@ export function MegaNav() {
         )}
       </div>
 
-      {/* State Level */}
+      {/* State Exams */}
       <Link href="/state" className={triggerCls("state", ["/state"])}>
-        State Level Exam
+        State Exams
       </Link>
 
       {/* Diploma */}
@@ -288,20 +300,34 @@ export function MegaNav() {
         )}
       </div>
 
-      {/* Blog */}
-      <Link href="/blog" className={triggerCls("blog", ["/blog"])}>
-        Blog
-      </Link>
-
-      {/* News */}
-      <Link href="/news" className={triggerCls("news", ["/news"])}>
-        News
-      </Link>
-
-      {/* About */}
-      <Link href="/about" className={triggerCls("about", ["/about"])}>
-        About Us
-      </Link>
+      {/* Resources — Blog + News + About */}
+      <div className="relative" onMouseEnter={() => openMenu("resources")} onMouseLeave={scheduleClose}>
+        <button
+          type="button"
+          aria-haspopup="menu"
+          aria-expanded={open === "resources"}
+          onClick={() => setOpen(open === "resources" ? null : "resources")}
+          className={triggerCls("resources", RESOURCE_LINKS.map((l) => l.href))}
+        >
+          Resources <Chevron open={open === "resources"} />
+        </button>
+        {open === "resources" && (
+          <Panel className="w-48">
+            {RESOURCE_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={cn(
+                  "block rounded-md px-3 py-2 text-sm font-medium",
+                  isActive(l.href) ? "text-brand bg-brand/5" : "text-ink hover:bg-canvas",
+                )}
+              >
+                {l.label}
+              </Link>
+            ))}
+          </Panel>
+        )}
+      </div>
     </div>
   );
 }

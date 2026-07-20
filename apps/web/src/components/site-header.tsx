@@ -5,6 +5,7 @@ import { BrandLockup } from "@/components/brand";
 import { MegaNav } from "@/components/mega-nav";
 import { MobileSectionBar } from "@/components/mobile-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { GlobalSearch } from "@/components/global-search";
 
 export async function SiteHeader() {
   const session = await auth();
@@ -19,6 +20,7 @@ export async function SiteHeader() {
         <MegaNav />
 
         <div className="ml-auto flex items-center gap-2">
+          <GlobalSearch />
           <ThemeToggle />
           {u ? (
             <UserMenu
@@ -79,6 +81,7 @@ export async function MiningHeader() {
         </div>
 
         <div className="ml-auto flex items-center gap-2">
+          <GlobalSearch />
           <ThemeToggle />
           {u ? (
             <UserMenu
