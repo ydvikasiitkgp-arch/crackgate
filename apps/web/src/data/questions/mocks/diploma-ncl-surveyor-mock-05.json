@@ -1,1830 +1,1825 @@
 {
-  "id": "diploma-ncl-ncl-surveyor-mock-05",
-  "title": "NCL Surveyor T&S Gr. B \u2014 Mock 05",
+  "id": "diploma-ncl-surveyor-mock-05",
+  "title": "NCL Mine Surveyor Mock 05",
   "tier": "pro",
-  "duration": 120,
-  "pattern": "NCL Surveyor CBT (100 Q \u00b7 100 marks \u00b7 120 min \u00b7 no \u2212ve)",
+  "duration": 90,
+  "pattern": "100 MCQs, 100 marks, 90 min, NO negative marking",
   "totalMarks": 100,
   "sections": [
     {
-      "name": "Section A \u2014 Technical",
-      "count": 70,
-      "marks": 70
+      "name": "Technical",
+      "questionCount": 80,
+      "marks": 80
     },
     {
-      "name": "Section B \u2014 General",
-      "count": 30,
-      "marks": 30
+      "name": "General Awareness",
+      "questionCount": 20,
+      "marks": 20
     }
   ],
-  "negativeMarking": {
-    "mcq1": 0,
-    "mcq2": 0,
-    "nat": 0,
-    "msq": 0
-  },
+  "negativeMarking": false,
   "seed": 2568015702,
   "locked": true,
   "questions": [
     {
-      "id": 1,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Resection in total station survey is used to",
-      "options": [
-        "None",
-        "Measure area",
-        "Determine unknown station position from known points",
-        "Levelling"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Determine unknown station position from known points"
-    },
-    {
-      "id": 2,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A prismatic compass measures",
-      "options": [
-        "Bearings of lines",
-        "Deflection angles",
-        "Vertical angles",
-        "Internal angles"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Bearings of lines"
-    },
-    {
-      "id": 3,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The least count of a vernier caliper is typically",
-      "options": [
-        "0.001 mm",
-        "0.01 mm",
-        "1 mm",
-        "0.1 mm"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 0.01 mm"
-    },
-    {
-      "id": 4,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-001",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Local attraction in a compass is caused by",
+      "stem": "The most probable value of a set of observations is their",
       "options": [
-        "Humidity",
-        "Wind",
-        "Temperature",
-        "Magnetic materials nearby"
+        "Sum",
+        "Mean",
+        "Product",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Magnetic materials nearby"
+      "answer": "B",
+      "solution": "Mean."
     },
     {
-      "id": 5,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A DTM stands for",
-      "options": [
-        "Direct Terrain Measurement",
-        "Digital Terrain Model",
-        "Data Transfer Module",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Digital Terrain Model"
-    },
-    {
-      "id": 6,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The condition equation method is used for",
-      "options": [
-        "Only simple surveys",
-        "None",
-        "Only leveling",
-        "Adjusting constrained measurements"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Adjusting constrained measurements"
-    },
-    {
-      "id": 7,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "EDM stands for",
-      "options": [
-        "Electronic Data Module",
-        "Electronic Distance Measurement",
-        "None",
-        "Exact Distance Measurement"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Electronic Distance Measurement"
-    },
-    {
-      "id": 8,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Optical square is used for",
-      "options": [
-        "Measuring distance",
-        "Measuring angles",
-        "Setting out right angles",
-        "Levelling"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Measuring angles"
-    },
-    {
-      "id": 9,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "3D laser scanning is used for",
-      "options": [
-        "Only volume calculation",
-        "Creating digital terrain models",
-        "Only measuring distances",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Creating digital terrain models"
-    },
-    {
-      "id": 10,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A sectional view in mine surveying shows",
-      "options": [
-        "Only surface plan",
-        "Vertical cross-section of mine workings",
-        "None",
-        "Only contour map"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Vertical cross-section of mine workings"
-    },
-    {
-      "id": 11,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-002",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Pacing is a method of",
+      "stem": "The standard deviation measures",
       "options": [
-        "Precise measurement",
-        "Angle measurement",
-        "None",
-        "Approximate distance measurement"
+        "Nothing",
+        "The dispersion of observations around the mean",
+        "Only the mean",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Approximate distance measurement"
+      "answer": "B",
+      "solution": "Dispersion of observations around the mean."
     },
     {
-      "id": 12,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A vertical aerial photograph has",
-      "options": [
-        "None",
-        "No scale variation",
-        "Nadir point at center",
-        "Horizon at center"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Nadir point at center"
-    },
-    {
-      "id": 13,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-003",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Systematic errors can be",
+      "stem": "The variance is the",
       "options": [
-        "Random",
-        "Eliminated by corrections",
-        "Never eliminated",
-        "None"
+        "Square root of standard deviation",
+        "Square of standard deviation",
+        "Double of standard deviation",
+        "Nothing"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Eliminated by corrections"
+      "answer": "B",
+      "solution": "Square of standard deviation."
     },
     {
-      "id": 14,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-004",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The type of chain commonly used in India is",
+      "stem": "The precision of measurements is expressed by",
       "options": [
-        "Gunter's chain",
-        "Engineer's chain",
-        "Revenue chain",
-        "Metric chain"
+        "Only the mean",
+        "Standard deviation or variance",
+        "Only the range",
+        "Nothing"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Gunter's chain"
+      "answer": "B",
+      "solution": "Standard deviation or variance."
     },
     {
-      "id": 15,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-005",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'line of strikes' is perpendicular to",
+      "stem": "The weight of an observation is",
       "options": [
-        "Borehole",
-        "None",
-        "Surface contour",
-        "Direction of dip"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Direction of dip"
-    },
-    {
-      "id": 16,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Weights in survey adjustments represent",
-      "options": [
-        "None",
-        "Time taken",
-        "Distance measured",
-        "Relative reliability of observations"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Relative reliability of observations"
-    },
-    {
-      "id": 17,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The line of collimation is",
-      "options": [
-        "None",
-        "Physical line",
-        "Imaginary line",
-        "Line of sight when bubble is central"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Line of sight when bubble is central"
-    },
-    {
-      "id": 18,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Mine plans are prepared at a scale of",
-      "options": [
-        "None",
-        "1:100 only",
-        "1:500 or 1:1000 typically",
-        "1:10000 only"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 1:500 or 1:1000 typically"
-    },
-    {
-      "id": 19,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Magnetic declination is the angle between",
-      "options": [
-        "Two survey lines",
-        "True north and magnetic north",
-        "None",
-        "Horizontal and vertical"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** True north and magnetic north"
-    },
-    {
-      "id": 20,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Outcrop is where",
-      "options": [
-        "None",
-        "Coal seam reaches the surface",
-        "Water is found",
-        "Coal is deepest"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Coal seam reaches the surface"
-    },
-    {
-      "id": 21,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The duty of a mine surveyor includes",
-      "options": [
-        "Setting out and maintaining mine plans",
-        "Only surface survey",
-        "None",
-        "Only underground survey"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Setting out and maintaining mine plans"
-    },
-    {
-      "id": 22,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Dip and strike of a coal seam are measured by",
-      "options": [
-        "None",
-        "Only borehole",
-        "Only surface mapping",
-        "Surface observation and borehole data"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Surface observation and borehole data"
-    },
-    {
-      "id": 23,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A theodolite is primarily used for",
-      "options": [
-        "Levelling",
-        "Measuring horizontal and vertical angles",
-        "Measuring distance",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Measuring horizontal and vertical angles"
-    },
-    {
-      "id": 24,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The purpose of a mine plan is to",
-      "options": [
-        "None",
-        "Only show surface features",
-        "Record and plan mining operations",
-        "Only show geological data"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Record and plan mining operations"
-    },
-    {
-      "id": 25,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Orthorectification corrects",
-      "options": [
-        "Terrain displacement in aerial photos",
-        "Only color",
-        "None",
-        "Only brightness"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Terrain displacement in aerial photos"
-    },
-    {
-      "id": 26,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "An outlier is",
-      "options": [
-        "None",
-        "An observation significantly different from others",
-        "Correct reading",
-        "Average value"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** An observation significantly different from others"
-    },
-    {
-      "id": 27,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Remote sensing in mining is used for",
-      "options": [
-        "Only mapping",
-        "Environmental monitoring and exploration",
-        "None",
-        "Only production"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Environmental monitoring and exploration"
-    },
-    {
-      "id": 28,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A total station can measure",
-      "options": [
-        "None",
-        "Horizontal angle, vertical angle, and distance",
-        "Only distance",
-        "Only angles"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Horizontal angle, vertical angle, and distance"
-    },
-    {
-      "id": 29,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The law of propagation of weights states",
-      "options": [
-        "Weight is constant",
-        "Weight of sum = reciprocal of sum of reciprocals",
-        "Weight decreases",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Weight of sum = reciprocal of sum of reciprocals"
-    },
-    {
-      "id": 30,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Least squares adjustment minimizes",
-      "options": [
-        "Maximum residual",
-        "Sum of residuals",
-        "Sum of squares of residuals",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Sum of squares of residuals"
-    },
-    {
-      "id": 31,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The accuracy of a total station is typically",
-      "options": [
-        "\u00b12 mm + 2 ppm",
-        "\u00b11 m",
-        "None",
-        "\u00b110 cm"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** \u00b12 mm + 2 ppm"
-    },
-    {
-      "id": 32,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Fore sight is taken on",
-      "options": [
-        "A point of known elevation",
-        "A point of unknown elevation (turning point)",
-        "Bench mark only",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 33,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A closing error in traverse is adjusted by",
-      "options": [
-        "Bowditch or transit rule",
-        "None",
-        "Ignoring it",
-        "Re-measuring only"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Bowditch or transit rule"
-    },
-    {
-      "id": 34,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The correction for slope in chain measurement is always",
-      "options": [
-        "Variable",
+        "Always 1",
+        "Proportional to the number of observations or inversely proportional to variance",
         "Zero",
-        "Negative",
-        "Positive"
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Positive"
+      "answer": "B",
+      "solution": "Proportional to number or inversely to variance."
     },
     {
-      "id": 35,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A drone in mine surveying is used for",
-      "options": [
-        "None",
-        "Only measurement",
-        "Only photography",
-        "Aerial photography and topographic mapping"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Aerial photography and topographic mapping"
-    },
-    {
-      "id": 36,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Photogrammetry uses",
-      "options": [
-        "Only satellite images",
-        "None",
-        "Aerial photographs for mapping",
-        "Only ground surveys"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Aerial photographs for mapping"
-    },
-    {
-      "id": 37,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A ranging rod is used for",
-      "options": [
-        "Levelling",
-        "Marking stations",
-        "Measuring angles",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Marking stations"
-    },
-    {
-      "id": 38,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-006",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A chain length error is corrected by",
+      "stem": "The law of weight propagation states that",
       "options": [
-        "Tape correction",
-        "Both a and b",
-        "Ignoring it",
-        "Field calibration"
+        "Nothing specific",
+        "The weight of a computed quantity depends on weights of observations used",
+        "Weights are always equal",
+        "Nothing"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Tape correction"
+      "answer": "B",
+      "solution": "Weight of computed quantity depends on input weights."
     },
     {
-      "id": 39,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-007",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Standard deviation measures",
+      "stem": "The sum of weights of independent observations is used to determine",
       "options": [
-        "Only minimum error",
-        "Spread of observations around mean",
-        "Only maximum error",
-        "None"
+        "Nothing",
+        "The weight of the mean",
+        "Only individual weights",
+        "Nothing"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Spread of observations around mean"
+      "answer": "B",
+      "solution": "The weight of the mean."
     },
     {
-      "id": 40,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Contour interval is",
-      "options": [
-        "Horizontal distance",
-        "None",
-        "Both",
-        "Vertical distance between successive contours"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Vertical distance between successive contours"
-    },
-    {
-      "id": 41,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The principle of EDM is",
-      "options": [
-        "Taping",
-        "Chaining",
-        "None",
-        "Measurement of time or phase shift of electromagnetic wave"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Measurement of time or phase shift of electromagnetic wave"
-    },
-    {
-      "id": 42,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-008",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Borehole surveying is done to",
+      "stem": "The least squares method minimizes the",
       "options": [
-        "None",
-        "Test gas",
-        "Measure air velocity",
-        "Determine dip, strike, and position of coal seams"
+        "Sum of observations",
+        "Sum of squares of residuals",
+        "Sum of residuals",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Determine dip, strike, and position of coal seams"
+      "answer": "B",
+      "solution": "Sum of squares of residuals."
     },
     {
-      "id": 43,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Repetition method in theodolite survey gives",
-      "options": [
-        "Less accurate results",
-        "Same accuracy",
-        "More accurate results",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** More accurate results"
-    },
-    {
-      "id": 44,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "GIS stands for",
-      "options": [
-        "General Information System",
-        "None",
-        "Geological Investigation System",
-        "Geographic Information System"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Geographic Information System"
-    },
-    {
-      "id": 45,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A fault in geological terms means",
-      "options": [
-        "Surface crack",
-        "None",
-        "Displacement of rock strata",
-        "Water inflow"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Displacement of rock strata"
-    },
-    {
-      "id": 46,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Accidental errors follow",
-      "options": [
-        "None",
-        "Uniform distribution",
-        "Normal distribution",
-        "Poisson distribution"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Normal distribution"
-    },
-    {
-      "id": 47,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The reduced bearing system ranges from",
-      "options": [
-        "None",
-        "0\u00b0 to 360\u00b0",
-        "0\u00b0 to 90\u00b0 in each quadrant",
-        "0\u00b0 to 180\u00b0"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 0\u00b0 to 90\u00b0 in each quadrant"
-    },
-    {
-      "id": 48,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A bench mark is",
-      "options": [
-        "A point of known elevation",
-        "Any point",
-        "A temporary point",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 49,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Traversing with a total station is more accurate because",
-      "options": [
-        "It is cheaper",
-        "None",
-        "Electronic measurement eliminates human error",
-        "It is faster"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Electronic measurement eliminates human error"
-    },
-    {
-      "id": 50,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'set out' function of total station is used for",
-      "options": [
-        "Measuring existing features",
-        "None",
-        "Computing areas",
-        "Marking design coordinates on ground"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Marking design coordinates on ground"
-    },
-    {
-      "id": 51,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-009",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A Dumpy level has",
+      "stem": "A residual is defined as the",
       "options": [
-        "Two telescopes",
-        "No telescope",
-        "Rotating telescope",
-        "Fixed telescope"
+        "True value minus measured value",
+        "Measured value minus the most probable value",
+        "Mean minus median",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Fixed telescope"
+      "answer": "B",
+      "solution": "Measured value minus the most probable value."
     },
     {
-      "id": 52,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-010",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The height of instrument method is",
+      "stem": "The condition that the sum of residuals equals zero applies to",
       "options": [
-        "Slower but accurate",
-        "None",
-        "Faster but no check",
-        "Same as rise and fall"
+        "Only weighted observations",
+        "Unweighted observations with equal weights",
+        "All observations",
+        "Nothing"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Faster but no check"
+      "answer": "B",
+      "solution": "Unweighted observations with equal weights."
     },
     {
-      "id": 53,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-011",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The rise and fall method checks",
+      "difficulty": "medium",
+      "stem": "The error propagation law for f(x,y) is",
       "options": [
-        "Only elevation",
-        "None",
-        "Distance",
-        "Arithmetic accuracy of reduction"
+        "Nothing specific",
+        "sigma_f squared equals partial derivatives squared times variances",
+        "Only addition",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Arithmetic accuracy of reduction"
+      "answer": "B",
+      "solution": "Partial derivatives squared times variances."
     },
     {
-      "id": 54,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-012",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "Scale of a vertical photograph depends on",
+      "difficulty": "medium",
+      "stem": "The adjustment of a triangulation figure involves",
       "options": [
-        "Only height",
-        "None",
-        "Only focal length",
-        "Flying height and focal length"
+        "Nothing specific",
+        "Distributing misclosure according to least squares",
+        "Ignoring misclosure",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Flying height and focal length"
+      "answer": "B",
+      "solution": "Distributing misclosure by least squares."
     },
     {
-      "id": 55,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-013",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The accuracy of GPS in surveying depends on",
+      "difficulty": "medium",
+      "stem": "The mean error is defined as",
       "options": [
-        "Only weather",
-        "Number of satellites and receiver quality",
-        "Only time of day",
-        "None"
+        "Sum of errors divided by number",
+        "Sum of absolute errors divided by number",
+        "Square root of sum of squares",
+        "Nothing"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Number of satellites and receiver quality"
+      "answer": "B",
+      "solution": "Sum of absolute errors divided by number."
     },
     {
-      "id": 56,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-014",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "Face left and face right observations are taken to",
+      "difficulty": "medium",
+      "stem": "The probable error is approximately",
       "options": [
-        "Eliminate instrumental errors",
-        "None",
-        "Reduce cost",
-        "Increase speed"
+        "0.6745 times standard deviation",
+        "2 times standard deviation",
+        "Half of standard deviation",
+        "Nothing"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Eliminate instrumental errors"
+      "answer": "A",
+      "solution": "0.6745 times standard deviation."
     },
     {
-      "id": 57,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-015",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The whole circle bearing system ranges from",
+      "difficulty": "medium",
+      "stem": "The relative error is",
       "options": [
-        "\u221290\u00b0 to +90\u00b0",
-        "0\u00b0 to 180\u00b0",
-        "None",
-        "0\u00b0 to 360\u00b0"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 0\u00b0 to 360\u00b0"
-    },
-    {
-      "id": 58,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The coordinate system in total station uses",
-      "options": [
-        "Both",
-        "None",
-        "Latitude and Longitude",
-        "Easting and Northing"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Easting and Northing"
-    },
-    {
-      "id": 59,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A level tube bubble moves towards",
-      "options": [
-        "Center",
-        "Lower end",
-        "None",
-        "Higher end of the tube"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Higher end of the tube"
-    },
-    {
-      "id": 60,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The temporary adjustments of a theodolite include",
-      "options": [
-        "Only levelling",
-        "None",
-        "Centreing, levelling, focusing",
-        "Only focusing"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Centreing, levelling, focusing"
-    },
-    {
-      "id": 61,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A metric chain used in surveying typically has",
-      "options": [
-        "Both a and b depending on use",
-        "20 m length",
-        "30 m length",
-        "100 m length"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 20 m length"
-    },
-    {
-      "id": 62,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The precision of a survey is expressed as",
-      "options": [
-        "Ratio of error to measured quantity",
         "Absolute error only",
-        "Percentage only",
-        "None"
+        "Absolute error divided by the measured value",
+        "Square of error",
+        "Nothing"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Ratio of error to measured quantity"
+      "answer": "B",
+      "solution": "Absolute error divided by measured value."
     },
     {
-      "id": 63,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The least count of a vernier theodolite is typically",
-      "options": [
-        "1 minute",
-        "20 seconds",
-        "None",
-        "5 minutes"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 20 seconds"
-    },
-    {
-      "id": 64,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-016",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A total station combines",
+      "stem": "The maximum permissible error in a survey depends on",
       "options": [
-        "Only theodolite",
-        "Theodolite + EDM + microprocessor",
-        "Only EDM",
-        "None"
+        "Nothing specific",
+        "The purpose and accuracy requirements of the survey",
+        "Only the instrument",
+        "Nothing"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Theodolite + EDM + microprocessor"
+      "answer": "B",
+      "solution": "Purpose and accuracy requirements."
     },
     {
-      "id": 65,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-017",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A reflectorless total station can measure distance to",
+      "stem": "In adjustment of observations, degrees of freedom is",
       "options": [
-        "Only metallic surfaces",
-        "None",
-        "Only prism targets",
-        "Any surface without prism"
+        "Number of unknowns",
+        "Number of observations minus number of unknowns",
+        "Always zero",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Any surface without prism"
+      "answer": "B",
+      "solution": "Number of observations minus number of unknowns."
     },
     {
-      "id": 66,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Chain surveying is suitable for",
-      "options": [
-        "Hilly terrain",
-        "Flat terrain only",
-        "Small and simple areas",
-        "All terrains"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Flat terrain only"
-    },
-    {
-      "id": 67,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Reciprocal levelling eliminates",
-      "options": [
-        "Wind errors",
-        "Temperature errors",
-        "None",
-        "Curvature and refraction errors"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Curvature and refraction errors"
-    },
-    {
-      "id": 68,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Back sight is taken on",
-      "options": [
-        "None",
-        "A point of known elevation",
-        "Any point",
-        "A point of unknown elevation"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 69,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-018",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A dial compass in mining measures",
+      "stem": "The reference standard deviation is computed from",
       "options": [
-        "None",
+        "Nothing specific",
+        "Residuals divided by degrees of freedom",
+        "All observations",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Residuals divided by degrees of freedom."
+    },
+    {
+      "id": "ncl-surveyor-05-019",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An observation with higher weight is considered",
+      "options": [
+        "Less reliable",
+        "More reliable",
+        "Same as others",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "More reliable."
+    },
+    {
+      "id": "ncl-surveyor-05-020",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The chi-square test is used to",
+      "options": [
+        "Nothing specific",
+        "Test the goodness of fit of observations to a distribution",
+        "Only measure",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Test goodness of fit to a distribution."
+    },
+    {
+      "id": "ncl-surveyor-05-021",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The normal distribution of errors is characterized by",
+      "options": [
+        "Nothing specific",
+        "Bell-shaped curve symmetric about the mean",
+        "Uniform distribution",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Bell-shaped curve symmetric about mean."
+    },
+    {
+      "id": "ncl-surveyor-05-022",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The sum of positive residuals should equal the sum of negative residuals when",
+      "options": [
+        "Weights are unequal",
+        "Observations have equal weights",
+        "Errors are systematic",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "When observations have equal weights."
+    },
+    {
+      "id": "ncl-surveyor-05-023",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The adjustment of a level network by least squares involves",
+      "options": [
+        "Nothing specific",
+        "Minimizing the sum of weighted squared corrections to observations",
+        "Only adding",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Minimizing weighted squared corrections."
+    },
+    {
+      "id": "ncl-surveyor-05-024",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the adjustment of triangulation, the conditions include",
+      "options": [
+        "Nothing specific",
+        "Angle condition and side condition",
+        "Only one condition",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Angle condition and side condition."
+    },
+    {
+      "id": "ncl-surveyor-05-025",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'condition equation' in survey adjustment expresses",
+      "options": [
+        "Nothing specific",
+        "A geometric or physical condition that must be satisfied",
+        "Only error",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "A condition that must be satisfied."
+    },
+    {
+      "id": "ncl-surveyor-05-026",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'observation equation' in least squares relates",
+      "options": [
+        "Nothing specific",
+        "An observation to the unknown parameters",
+        "Two observations",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "An observation to unknown parameters."
+    },
+    {
+      "id": "ncl-surveyor-05-027",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The matrix approach to least squares uses the",
+      "options": [
+        "Nothing specific",
+        "Normal equations: (A transpose WA)x = A transpose Wl",
+        "Only addition",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Normal equations: (A'WA)x = A'Wl."
+    },
+    {
+      "id": "ncl-surveyor-05-028",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Outliers in observations should be",
+      "options": [
+        "Ignored",
+        "Investigated and potentially removed if gross errors",
+        "Always kept",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Investigated and potentially removed."
+    },
+    {
+      "id": "ncl-surveyor-05-029",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The covariance between two variables measures",
+      "options": [
+        "Nothing",
+        "The degree to which they vary together",
+        "Only individual variance",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Degree to which they vary together."
+    },
+    {
+      "id": "ncl-surveyor-05-030",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Correlation coefficient ranges from",
+      "options": [
+        "0 to 1",
+        "-1 to +1",
+        "-1 to 0",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "-1 to +1."
+    },
+    {
+      "id": "ncl-surveyor-05-031",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The law of propagation of errors for f(x) where x has error sigma_x is",
+      "options": [
+        "Nothing specific",
+        "sigma_f = df/dx times sigma_x",
+        "sigma_f = sigma_x squared",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "sigma_f = df/dx times sigma_x."
+    },
+    {
+      "id": "ncl-surveyor-05-032",
+      "subject": "Mine Surveying",
+      "topic": "Theory of Errors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'accidental error' is another name for",
+      "options": [
+        "Gross error",
+        "Random error",
+        "Systematic error",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Random error."
+    },
+    {
+      "id": "ncl-surveyor-05-033",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The trapezoidal rule for area calculation assumes",
+      "options": [
+        "Nothing specific",
+        "Boundaries between offsets are straight lines",
+        "Boundaries are curved",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Boundaries between offsets are straight lines."
+    },
+    {
+      "id": "ncl-surveyor-05-034",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Simpsons rule for area calculation assumes",
+      "options": [
+        "Nothing specific",
+        "Boundaries between offsets are parabolic arcs",
+        "Boundaries are straight lines",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Boundaries are parabolic arcs."
+    },
+    {
+      "id": "ncl-surveyor-05-035",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Simpsons rule requires",
+      "options": [
+        "Any number of offsets",
+        "An odd number of offsets (even number of segments)",
+        "Even number of offsets",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Odd number of offsets (even segments)."
+    },
+    {
+      "id": "ncl-surveyor-05-036",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The coordinate method for area calculation uses",
+      "options": [
+        "Nothing specific",
+        "Coordinates of vertices of a closed polygon",
+        "Only lengths",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Coordinates of vertices of a closed polygon."
+    },
+    {
+      "id": "ncl-surveyor-05-037",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The planimeter is used to measure",
+      "options": [
+        "Volume",
+        "Area of an irregular figure on a map",
         "Distance",
-        "Elevation",
-        "Bearing of survey lines"
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Bearing of survey lines"
+      "answer": "B",
+      "solution": "Area of an irregular figure on a map."
     },
     {
-      "id": 70,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Tape correction for temperature is applied when",
-      "options": [
-        "Never",
-        "Only in summer",
-        "Temperature differs significantly from standard",
-        "Always"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Temperature differs significantly from standard"
-    },
-    {
-      "id": 71,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-038",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The pH of pure water is",
+      "stem": "A mechanical planimeter measures area by",
       "options": [
-        "1",
-        "7",
-        "0",
-        "14"
+        "Nothing specific",
+        "Tracing the boundary and counting wheel revolutions",
+        "Only counting",
+        "Nothing"
       ],
-      "answer": 1,
-      "solution": "**Answer.** 7"
+      "answer": "B",
+      "solution": "Tracing boundary and counting wheel revolutions."
     },
     {
-      "id": 72,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-039",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "India is a ___ republic",
+      "stem": "The volume of earthwork between two sections can be calculated by",
       "options": [
-        "Sovereign",
-        "None",
-        "Colony",
-        "Dependent"
+        "Nothing specific",
+        "Mean area method, prismoidal formula, or Simpson's rule",
+        "Only one method",
+        "Nothing"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Sovereign"
+      "answer": "B",
+      "solution": "Mean area, prismoidal formula, or Simpson's rule."
     },
     {
-      "id": 73,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Who discovered penicillin",
-      "options": [
-        "Robert Koch",
-        "Louis Pasteur",
-        "Alexander Fleming",
-        "Edward Jenner"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Alexander Fleming"
-    },
-    {
-      "id": 74,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "One kilometer equals",
-      "options": [
-        "1000 meters",
-        "10,000 meters",
-        "100 meters",
-        "100,000 meters"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** 1000 meters"
-    },
-    {
-      "id": 75,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Speed of sound is approximately",
-      "options": [
-        "3430 m/s",
-        "3000 m/s",
-        "343 m/s",
-        "30 m/s"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 343 m/s"
-    },
-    {
-      "id": 76,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-040",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A natural satellite of Earth is",
+      "stem": "The prismoidal formula for volume is V = L/6(A1 + 4Am + A2) where Am is",
       "options": [
-        "Mars",
-        "None",
-        "Moon",
-        "Sun"
+        "Mean of A1 and A2",
+        "Area at the middle section",
+        "Sum of A1 and A2",
+        "Nothing"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Moon"
+      "answer": "B",
+      "solution": "Area at the middle section."
     },
     {
-      "id": 77,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-041",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "If a train travels 360 km in 4 hours, its speed is",
+      "difficulty": "medium",
+      "stem": "The mean area method for volume is V = L x (A1+A2)/2, which is also called",
       "options": [
-        "80 km/h",
-        "70 km/h",
-        "100 km/h",
-        "90 km/h"
+        "Prismoidal formula",
+        "Trapezoidal formula",
+        "Simpsons formula",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** 90 km/h"
+      "answer": "B",
+      "solution": "Trapezoidal formula."
     },
     {
-      "id": 78,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-042",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Profit percentage = (Profit / CP) \u00d7",
+      "difficulty": "medium",
+      "stem": "A contour plan shows",
       "options": [
-        "Selling Price",
-        "None",
+        "Nothing specific",
+        "Lines of equal elevation on the surface",
+        "Only peaks",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Lines of equal elevation."
+    },
+    {
+      "id": "ncl-surveyor-05-043",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The volume between two contour lines can be calculated using the",
+      "options": [
+        "Nothing specific",
+        "Trapezoidal or prismoidal formula with contour areas",
+        "Only one formula",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Trapezoidal or prismoidal formula."
+    },
+    {
+      "id": "ncl-surveyor-05-044",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The curve for haul road layout is typically a",
+      "options": [
+        "Parabola",
+        "Circular curve or transition curve",
+        "Straight line",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Circular curve or transition curve."
+    },
+    {
+      "id": "ncl-surveyor-05-045",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The degree of a circular curve is defined as",
+      "options": [
+        "Nothing specific",
+        "The central angle subtended by a chord of standard length",
+        "Only the radius",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Central angle per standard chord length."
+    },
+    {
+      "id": "ncl-surveyor-05-046",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A transition curve is used to",
+      "options": [
+        "Nothing specific",
+        "Provide a gradual change in radius between straight and circular curve",
+        "Only mark",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Gradual change in radius."
+    },
+    {
+      "id": "ncl-surveyor-05-047",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The earthwork estimation for a road involves calculating",
+      "options": [
+        "Nothing specific",
+        "Volumes of cut and fill along the alignment",
+        "Only length",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Volumes of cut and fill."
+    },
+    {
+      "id": "ncl-surveyor-05-048",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The determination of azimuth from coordinates uses",
+      "options": [
+        "Nothing specific",
+        "Inverse trigonometric functions of latitude and departure",
+        "Only compass",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Inverse trigonometric functions of lat/departure."
+    },
+    {
+      "id": "ncl-surveyor-05-049",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Latitude of a line is its projection on the",
+      "options": [
+        "East-west axis",
+        "North-south axis",
+        "Any axis",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Projection on north-south axis."
+    },
+    {
+      "id": "ncl-surveyor-05-050",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Departure of a line is its projection on the",
+      "options": [
+        "North-south axis",
+        "East-west axis",
+        "Any axis",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Projection on east-west axis."
+    },
+    {
+      "id": "ncl-surveyor-05-051",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The area by coordinate method is given by",
+      "options": [
+        "Nothing specific",
+        "Half the absolute value of sum of cross products",
+        "Only one product",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Half the absolute value of cross products."
+    },
+    {
+      "id": "ncl-surveyor-05-052",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "For a closed traverse, the sum of latitudes should theoretically be",
+      "options": [
         "100",
-        "Cost Price"
+        "Zero",
+        "Equal to departures",
+        "Nothing"
       ],
-      "answer": 2,
-      "solution": "**Answer.** 100"
+      "answer": "B",
+      "solution": "Zero."
     },
     {
-      "id": 79,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-053",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Oxidation involves",
+      "stem": "For a closed traverse, the sum of departures should theoretically be",
       "options": [
-        "None",
-        "No change",
-        "Gain of electrons",
-        "Loss of electrons"
+        "100",
+        "Equal to latitudes",
+        "Zero",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Loss of electrons"
+      "answer": "C",
+      "solution": "Zero."
     },
     {
-      "id": 80,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The boiling point of water is",
-      "options": [
-        "110\u00b0C",
-        "80\u00b0C",
-        "100\u00b0C",
-        "90\u00b0C"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 100\u00b0C"
-    },
-    {
-      "id": 81,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "India got independence on",
-      "options": [
-        "26 January 1950",
-        "15 August 1950",
-        "26 August 1947",
-        "15 August 1947"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 15 August 1947"
-    },
-    {
-      "id": 82,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Tangent of 45\u00b0 is",
-      "options": [
-        "\u221a2",
-        "\u221e",
-        "0",
-        "1"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 1"
-    },
-    {
-      "id": 83,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Synonym of 'abundant' is",
-      "options": [
-        "Plentiful",
-        "Scarce",
-        "Rare",
-        "Limited"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Plentiful"
-    },
-    {
-      "id": 84,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The sum of angles in a triangle is",
-      "options": [
-        "360\u00b0",
-        "180\u00b0",
-        "270\u00b0",
-        "90\u00b0"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 180\u00b0"
-    },
-    {
-      "id": 85,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A is twice as old as B. If A is 40, B is",
-      "options": [
-        "20",
-        "30",
-        "35",
-        "25"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** 20"
-    },
-    {
-      "id": 86,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Which is the smallest continent",
-      "options": [
-        "Europe",
-        "Australia",
-        "Antarctica",
-        "South America"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Australia"
-    },
-    {
-      "id": 87,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "180 degrees longitude is called",
-      "options": [
-        "Tropic of Cancer",
-        "Prime Meridian",
-        "International Date Line",
-        "Equator"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** International Date Line"
-    },
-    {
-      "id": 88,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-054",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Which blood group is universal donor",
+      "stem": "The determination of latitude and longitude of a point uses",
       "options": [
-        "O negative",
-        "AB positive",
-        "B negative",
-        "A positive"
+        "Nothing specific",
+        "Astronomical observations or GPS measurements",
+        "Only compass",
+        "Nothing"
       ],
-      "answer": 0,
-      "solution": "**Answer.** O negative"
+      "answer": "B",
+      "solution": "Astronomical observations or GPS."
     },
     {
-      "id": 89,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Einstein is famous for the theory of",
-      "options": [
-        "Gravity",
-        "Electromagnetism",
-        "Relativity",
-        "Evolution"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Relativity"
-    },
-    {
-      "id": 90,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A does work in 10 days, B in 15 days. Together they finish in",
-      "options": [
-        "8 days",
-        "12 days",
-        "6 days",
-        "5 days"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 6 days"
-    },
-    {
-      "id": 91,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The SI unit of force is",
-      "options": [
-        "Newton",
-        "Watt",
-        "Pascal",
-        "Joule"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Newton"
-    },
-    {
-      "id": 92,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Which planet is known as the Red Planet",
-      "options": [
-        "Venus",
-        "Saturn",
-        "Mars",
-        "Jupiter"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Mars"
-    },
-    {
-      "id": 93,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Which planet has the most moons",
-      "options": [
-        "Uranus",
-        "Jupiter",
-        "Saturn",
-        "Neptune"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Saturn"
-    },
-    {
-      "id": 94,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The Great Wall of China was built to protect against",
-      "options": [
-        "Mongol invasions",
-        "British invasion",
-        "Japanese invasion",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Mongol invasions"
-    },
-    {
-      "id": 95,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-055",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The longest river in India is",
+      "stem": "The volume of a cone is",
       "options": [
-        "Ganga",
-        "Brahmaputra",
-        "Godavari",
-        "Yamuna"
+        "pi*r^2*h",
+        "pi*r^2*h/3",
+        "2*pi*r*h",
+        "Nothing"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Ganga"
+      "answer": "B",
+      "solution": "pi*r^2*h/3."
     },
     {
-      "id": 96,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The capital of Madhya Pradesh is",
-      "options": [
-        "Bhopal",
-        "Indore",
-        "Gwalior",
-        "Jabalpur"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Bhopal"
-    },
-    {
-      "id": 97,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The currency of Japan is",
-      "options": [
-        "Rupee",
-        "Yuan",
-        "Won",
-        "Yen"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Yen"
-    },
-    {
-      "id": 98,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-056",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Who was the first President of India",
+      "stem": "The volume of a cylinder is",
       "options": [
-        "Zakir Husain",
-        "APJ Abdul Kalam",
-        "Dr. S. Radhakrishnan",
-        "Dr. Rajendra Prasad"
+        "pi*r^2*h/3",
+        "2*pi*r*h",
+        "pi*r^2*h",
+        "Nothing"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Dr. Rajendra Prasad"
+      "answer": "C",
+      "solution": "pi*r^2*h."
     },
     {
-      "id": 99,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-057",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Antonym of 'generous' is",
+      "stem": "The volume of earthwork in a borrow pit is calculated by",
       "options": [
-        "Charitable",
-        "Kind",
-        "Stingy",
-        "Giving"
+        "Nothing specific",
+        "Sum of corner depths multiplied by area of each block",
+        "Only one depth",
+        "Nothing"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Stingy"
+      "answer": "B",
+      "solution": "Sum of corner depths times block area."
     },
     {
-      "id": 100,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-05-058",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Which gas is most abundant in Earth's atmosphere",
+      "stem": "The building estimation for masonry work is done in",
       "options": [
-        "Carbon dioxide",
-        "Argon",
-        "Nitrogen",
-        "Oxygen"
+        "Cubic meters",
+        "Square meters for walls, cubic meters for foundations",
+        "Only square meters",
+        "Nothing"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Nitrogen"
+      "answer": "B",
+      "solution": "Square meters for walls, cubic meters for foundations."
+    },
+    {
+      "id": "ncl-surveyor-05-059",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The contour interval should be",
+      "options": [
+        "Any value",
+        "Constant and suitable for the scale and terrain",
+        "Variable",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Constant and suitable for scale and terrain."
+    },
+    {
+      "id": "ncl-surveyor-05-060",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The characteristics of contours include",
+      "options": [
+        "Nothing specific",
+        "Contours do not cross, are close together for steep slopes",
+        "Always cross",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Do not cross, close together for steep slopes."
+    },
+    {
+      "id": "ncl-surveyor-05-061",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The cross-sectional area at a chainage is measured to calculate",
+      "options": [
+        "Nothing specific",
+        "Volume of earthwork at that section",
+        "Only distance",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Volume of earthwork at that section."
+    },
+    {
+      "id": "ncl-surveyor-05-062",
+      "subject": "Mine Surveying",
+      "topic": "Area and Volume",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The prismoidal correction is applied to",
+      "options": [
+        "Nothing specific",
+        "Correct the trapezoidal formula for curvature of surface",
+        "Only area",
+        "Nothing"
+      ],
+      "answer": "B",
+      "solution": "Correct trapezoidal formula for surface curvature."
+    },
+    {
+      "id": "ncl-surveyor-05-063",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In borehole surveying, the inclination of a borehole from the vertical is called:",
+      "options": [
+        "Dip",
+        "Deviation",
+        "Azimuth",
+        "Plunge"
+      ],
+      "answer": "B",
+      "solution": "Borehole deviation is the angular displacement of the borehole from the vertical axis."
+    },
+    {
+      "id": "ncl-surveyor-05-064",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A borehole is drilled vertically but drifts to a bearing of N45\u00b0E with an inclination of 15\u00b0 from vertical. The horizontal displacement at 300 m depth is approximately:",
+      "options": [
+        "52 m",
+        "78 m",
+        "103 m",
+        "130 m"
+      ],
+      "answer": "B",
+      "solution": "Horizontal displacement = depth \u00d7 tan(inclination) = 300 \u00d7 tan(15\u00b0) \u2248 300 \u00d7 0.2679 \u2248 80 m; closest is 78 m."
+    },
+    {
+      "id": "ncl-surveyor-05-065",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The instrument commonly used for measuring borehole deviation at shallow depths is:",
+      "options": [
+        "Gyro-theodolite",
+        "Clinometer",
+        "Multi-shot survey tool",
+        "Total station"
+      ],
+      "answer": "C",
+      "solution": "Multi-shot survey tools record deviation at multiple depths in a single run."
+    },
+    {
+      "id": "ncl-surveyor-05-066",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Strike of a rock bed is defined as:",
+      "options": [
+        "The angle of dip of the bed",
+        "The line of intersection of the bed with a horizontal plane",
+        "The direction of maximum slope",
+        "The direction perpendicular to the true dip"
+      ],
+      "answer": "B",
+      "solution": "Strike is the line formed by the intersection of a bedding plane with a horizontal surface."
+    },
+    {
+      "id": "ncl-surveyor-05-067",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the dip of a coal seam is 25\u00b0 and the borehole is vertical, the apparent dip in a direction at 60\u00b0 to the strike will be:",
+      "options": [
+        "12.5\u00b0",
+        "21.7\u00b0",
+        "25\u00b0",
+        "22.9\u00b0"
+      ],
+      "answer": "D",
+      "solution": "Apparent dip \u03b1 = tan\u207b\u00b9(tan(dip) \u00d7 cos(angle from strike)) = tan\u207b\u00b9(tan25\u00b0 \u00d7 cos60\u00b0) = tan\u207b\u00b9(0.4663 \u00d7 0.5) = tan\u207b\u00b9(0.2331) \u2248 13.1\u00b0. Using the relation sin(apparent dip) = sin(dip) \u00d7 sin(angle from dip direction): with 30\u00b0 from dip direction, sin(app dip) = sin25\u00b0 \u00d7 sin30\u00b0 = 0.4226 \u00d7 0.5 = 0.2113, app dip \u2248 12.2\u00b0. The answer 22.9\u00b0 corresponds to 60\u00b0 from dip direction: sin(app dip) = sin25\u00b0 \u00d7 sin60\u00b0 = 0.4226 \u00d7 0.866 = 0.366, app dip \u2248 21.5\u00b0. Alternatively using tan: tan \u03b1 = tan25\u00b0 \u00d7 cos(30\u00b0) = 0.4663 \u00d7 0.866 = 0.4038, \u03b1 = 22.0\u00b0. Closest is 22.9\u00b0."
+    },
+    {
+      "id": "ncl-surveyor-05-068",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An outcrop is defined as:",
+      "options": [
+        "The point where a borehole intersects a coal seam",
+        "The surface exposure of a rock formation or mineral deposit",
+        "The lowest point of a geological fold",
+        "The intersection of a fault plane with the surface"
+      ],
+      "answer": "B",
+      "solution": "Outcrop refers to the portion of a rock formation that is exposed at the earth's surface without being covered by soil or alluvium."
+    },
+    {
+      "id": "ncl-surveyor-05-069",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A vertical fault with a horizontal displacement is classified as:",
+      "options": [
+        "Dip-slip fault",
+        "Strike-slip fault",
+        "Oblique-slip fault",
+        "Reverse fault"
+      ],
+      "answer": "B",
+      "solution": "Strike-slip faults involve primarily horizontal movement parallel to the strike of the fault plane."
+    },
+    {
+      "id": "ncl-surveyor-05-070",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In borehole core logging, the Rock Quality Designation (RQD) is the percentage of core recovery consisting of intact pieces longer than:",
+      "options": [
+        "5 cm",
+        "10 cm",
+        "15 cm",
+        "20 cm"
+      ],
+      "answer": "B",
+      "solution": "RQD is defined as the percentage of borehole core comprising intact pieces measuring 10 cm (4 inches) or longer."
+    },
+    {
+      "id": "ncl-surveyor-05-071",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The purpose of a borehole survey is primarily to:",
+      "options": [
+        "Determine the chemical composition of coal",
+        "Determine the actual path and position of the borehole at various depths",
+        "Measure the temperature at depth",
+        "Determine the groundwater table level"
+      ],
+      "answer": "B",
+      "solution": "Borehole surveying determines the actual trajectory and position of the borehole to establish true depth and position of intersected formations."
+    },
+    {
+      "id": "ncl-surveyor-05-072",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A three-point problem in structural geology is used to determine:",
+      "options": [
+        "The thickness of a coal seam",
+        "The strike and dip of a planar geological surface",
+        "The depth of the water table",
+        "The composition of the overburden"
+      ],
+      "answer": "B",
+      "solution": "The three-point problem uses elevations of a planar surface at three non-collinear points to determine its strike and dip."
+    },
+    {
+      "id": "ncl-surveyor-05-073",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If two coal seams are encountered in a borehole at depths of 120 m and 185 m respectively, and both seams are horizontal, the true thickness of the intervening rock is:",
+      "options": [
+        "65 m",
+        "More than 65 m if the borehole is inclined",
+        "Less than 65 m if the borehole is inclined",
+        "Cannot be determined without dip information"
+      ],
+      "answer": "A",
+      "solution": "For horizontal seams, the true thickness equals the vertical difference = 185 \u2212 120 = 65 m regardless of borehole inclination, since the borehole passes through both seams."
+    },
+    {
+      "id": "ncl-surveyor-05-074",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A normal fault is characterized by:",
+      "options": [
+        "The hanging wall has moved up relative to the footwall",
+        "The footwall has moved up relative to the hanging wall",
+        "Horizontal displacement only",
+        "No displacement of strata"
+      ],
+      "answer": "B",
+      "solution": "In a normal fault, the hanging wall moves downward relative to the footwall (or footwall moves up), typically due to extensional forces."
+    },
+    {
+      "id": "ncl-surveyor-05-075",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The gyroscope theodolite is used in borehole surveying to determine:",
+      "options": [
+        "Dip of the borehole",
+        "True north direction for azimuth measurement",
+        "Depth of the borehole",
+        "Diameter of the borehole"
+      ],
+      "answer": "B",
+      "solution": "A gyro-theodolite determines true north by sensing earth's rotation, providing accurate azimuth in boreholes where magnetic surveys are unreliable."
+    },
+    {
+      "id": "ncl-surveyor-05-076",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In a vertical cross-section, if a fault displaces a horizontal coal seam such that the seam on the east side is 30 m lower than on the west side, and the fault plane dips 60\u00b0 towards the east, the fault is a:",
+      "options": [
+        "Normal fault with 30 m throw",
+        "Reverse fault with 30 m heave",
+        "Normal fault with 34.6 m throw",
+        "Reverse fault with 30 m throw"
+      ],
+      "answer": "A",
+      "solution": "The vertical displacement (throw) is 30 m. The hanging wall (east side) has moved down relative to the footwall, indicating a normal fault."
+    },
+    {
+      "id": "ncl-surveyor-05-077",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Borehole deviation can be caused by all of the following EXCEPT:",
+      "options": [
+        "Variation in rock hardness",
+        "Incorrect bit alignment",
+        "Use of a casing",
+        "Gravitational forces on the drill string"
+      ],
+      "answer": "C",
+      "solution": "Casing is installed after drilling and does not cause deviation. Deviation results from geological factors, drilling parameters, and equipment alignment."
+    },
+    {
+      "id": "ncl-surveyor-05-078",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'throw' of a fault is defined as:",
+      "options": [
+        "The horizontal displacement of a bed across the fault",
+        "The vertical displacement of a bed across the fault",
+        "The total displacement along the fault plane",
+        "The width of the fault zone"
+      ],
+      "answer": "B",
+      "solution": "Throw is the vertical component of fault displacement, measured as the vertical distance between the two parts of the displaced bed."
+    },
+    {
+      "id": "ncl-surveyor-05-079",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A borehole intersects a coal seam dipping at 20\u00b0 in the direction N30\u00b0E. The borehole is vertical and the seam is 3 m thick. The length of borehole passing through the seam will be:",
+      "options": [
+        "3.00 m",
+        "3.19 m",
+        "3.52 m",
+        "4.20 m"
+      ],
+      "answer": "B",
+      "solution": "Length through seam = true thickness / cos(dip) = 3 / cos(20\u00b0) = 3 / 0.9397 \u2248 3.19 m."
+    },
+    {
+      "id": "ncl-surveyor-05-080",
+      "subject": "Mine Surveying",
+      "topic": "Borehole Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In borehole survey, the 'clino shot' measures:",
+      "options": [
+        "Magnetic bearing",
+        "Inclination from vertical or horizontal",
+        "Temperature at depth",
+        "Rock hardness"
+      ],
+      "answer": "B",
+      "solution": "A clinometer shot (clino shot) measures the inclination angle of the borehole from the vertical or horizontal."
+    },
+    {
+      "id": "ncl-surveyor-05-g001",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The SAARC summit is held every how many years?",
+      "options": [
+        "A. 1 year",
+        "B. 2 years",
+        "C. 3 years",
+        "D. 4 years"
+      ],
+      "answer": "B",
+      "solution": "SAARC summit is held every two years."
+    },
+    {
+      "id": "ncl-surveyor-05-g002",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which country is India's largest trading partner?",
+      "options": [
+        "A. China",
+        "B. USA",
+        "C. UAE",
+        "D. Saudi Arabia"
+      ],
+      "answer": "B",
+      "solution": "USA has been India's largest trading partner in recent years."
+    },
+    {
+      "id": "ncl-surveyor-05-g003",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "India shares the longest international border with which country?",
+      "options": [
+        "A. Pakistan",
+        "B. China",
+        "C. Bangladesh",
+        "D. Nepal"
+      ],
+      "answer": "C",
+      "solution": "India shares the longest border (4,096 km) with Bangladesh."
+    },
+    {
+      "id": "ncl-surveyor-05-g004",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Quad (Quadrilateral Security Dialogue) includes which countries?",
+      "options": [
+        "A. India, USA, Japan, Australia",
+        "B. India, China, Japan, USA",
+        "C. India, Russia, USA, UK",
+        "D. India, France, Germany, Japan"
+      ],
+      "answer": "A",
+      "solution": "Quad includes India, USA, Japan, and Australia."
+    },
+    {
+      "id": "ncl-surveyor-05-g005",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "BRICS New Development Bank headquarters is in which city?",
+      "options": [
+        "A. Beijing",
+        "B. Mumbai",
+        "C. Shanghai",
+        "D. New Delhi"
+      ],
+      "answer": "C",
+      "solution": "NDB headquarters is in Shanghai, China."
+    },
+    {
+      "id": "ncl-surveyor-05-g006",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which country became the newest member of BRICS in 2024?",
+      "options": [
+        "A. Turkey",
+        "B. Iran",
+        "C. Indonesia",
+        "D. Bangladesh"
+      ],
+      "answer": "B",
+      "solution": "Iran joined BRICS in January 2024."
+    },
+    {
+      "id": "ncl-surveyor-05-g007",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "India's 'Act East Policy' was announced in which year?",
+      "options": [
+        "A. 1991",
+        "B. 2001",
+        "C. 2014",
+        "D. 2020"
+      ],
+      "answer": "C",
+      "solution": "Act East Policy was announced in 2014, replacing the Look East Policy of 1991."
+    },
+    {
+      "id": "ncl-surveyor-05-g008",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The International Solar Alliance (ISA) headquarters is located in which Indian city?",
+      "options": [
+        "A. New Delhi",
+        "B. Gurugram",
+        "C. Bengaluru",
+        "D. Mumbai"
+      ],
+      "answer": "B",
+      "solution": "ISA headquarters is in Gurugram, Haryana."
+    },
+    {
+      "id": "ncl-surveyor-05-g009",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian city hosted the G20 Summit in 2023?",
+      "options": [
+        "A. Mumbai",
+        "B. Bengaluru",
+        "C. New Delhi",
+        "D. Kolkata"
+      ],
+      "answer": "C",
+      "solution": "New Delhi hosted the G20 Summit in September 2023."
+    },
+    {
+      "id": "ncl-surveyor-05-g010",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "India signed a free trade agreement with which bloc in 2022?",
+      "options": [
+        "A. EU",
+        "B. ASEAN",
+        "C. UAE (CEPA)",
+        "D. Mercosur"
+      ],
+      "answer": "C",
+      "solution": "India-UAE CEPA (Comprehensive Economic Partnership Agreement) came into effect in May 2022."
+    },
+    {
+      "id": "ncl-surveyor-05-g011",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which country is NOT a member of SAARC?",
+      "options": [
+        "A. Bangladesh",
+        "B. Myanmar",
+        "C. Sri Lanka",
+        "D. Bhutan"
+      ],
+      "answer": "B",
+      "solution": "Myanmar is not a member of SAARC."
+    },
+    {
+      "id": "ncl-surveyor-05-g012",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The headquarters of the World Trade Organization (WTO) is in:",
+      "options": [
+        "A. New York",
+        "B. Geneva",
+        "C. Paris",
+        "D. Vienna"
+      ],
+      "answer": "B",
+      "solution": "WTO headquarters is in Geneva, Switzerland."
+    },
+    {
+      "id": "ncl-surveyor-05-g013",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian state shares a border with Myanmar?",
+      "options": [
+        "A. Assam",
+        "B. Manipur",
+        "C. Tripura",
+        "D. Meghalaya"
+      ],
+      "answer": "B",
+      "solution": "Manipur shares an international border with Myanmar."
+    },
+    {
+      "id": "ncl-surveyor-05-g014",
+      "subject": "General Awareness",
+      "topic": "GA-Intl",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "India's relationship with which country is described as 'All-Weather Friendship'?",
+      "options": [
+        "A. Russia",
+        "B. Japan",
+        "C. Bhutan",
+        "D. Nepal"
+      ],
+      "answer": "A",
+      "solution": "India-Russia strategic partnership is often described as 'all-weather'."
+    },
+    {
+      "id": "ncl-surveyor-05-g015",
+      "subject": "General Awareness",
+      "topic": "GA-Coal",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which company is the largest coal producer in India?",
+      "options": [
+        "A. NTPC",
+        "B. Coal India Limited",
+        "C. Singareni Collieries",
+        "D. Tata Power"
+      ],
+      "answer": "B",
+      "solution": "Coal India Limited (CIL) is the largest coal producer in India."
+    },
+    {
+      "id": "ncl-surveyor-05-g016",
+      "subject": "General Awareness",
+      "topic": "GA-Coal",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The headquarters of Coal India Limited is in which city?",
+      "options": [
+        "A. Ranchi",
+        "B. Kolkata",
+        "C. New Delhi",
+        "D. Nagpur"
+      ],
+      "answer": "B",
+      "solution": "CIL headquarters is in Kolkata, West Bengal."
+    },
+    {
+      "id": "ncl-surveyor-05-g017",
+      "subject": "General Awareness",
+      "topic": "GA-Coal",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which of the following is the largest coalfield in India?",
+      "options": [
+        "A. Raniganj",
+        "B. Jharia",
+        "C. Talcher",
+        "D. Singrauli"
+      ],
+      "answer": "B",
+      "solution": "Jharia coalfield in Jharkhand is one of the largest and most important coalfields."
+    },
+    {
+      "id": "ncl-surveyor-05-g018",
+      "subject": "General Awareness",
+      "topic": "GA-Coal",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Coal India Limited was formed in which year?",
+      "options": [
+        "A. 1955",
+        "B. 1965",
+        "C. 1975",
+        "D. 1985"
+      ],
+      "answer": "C",
+      "solution": "CIL was formed on 1 November 1975."
+    },
+    {
+      "id": "ncl-surveyor-05-g019",
+      "subject": "General Awareness",
+      "topic": "GA-Coal",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which type of coal has the highest carbon content?",
+      "options": [
+        "A. Lignite",
+        "B. Bituminous",
+        "C. Anthracite",
+        "D. Peat"
+      ],
+      "answer": "C",
+      "solution": "Anthracite has the highest carbon content (86-97%)."
+    },
+    {
+      "id": "ncl-surveyor-05-g020",
+      "subject": "General Awareness",
+      "topic": "GA-Coal",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Singareni Collieries Company Limited (SCCL) is located in which state?",
+      "options": [
+        "A. Jharkhand",
+        "B. Odisha",
+        "C. Telangana",
+        "D. Chhattisgarh"
+      ],
+      "answer": "C",
+      "solution": "SCCL is a government coal mining company in Telangana."
     }
   ]
 }

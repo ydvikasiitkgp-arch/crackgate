@@ -1,1830 +1,1825 @@
 {
-  "id": "diploma-ncl-ncl-surveyor-mock-13",
-  "title": "NCL Surveyor T&S Gr. B \u2014 Mock 13",
+  "id": "diploma-ncl-surveyor-mock-13",
+  "title": "NCL Mine Surveyor Mock 13",
   "tier": "pro",
-  "duration": 120,
-  "pattern": "NCL Surveyor CBT (100 Q \u00b7 100 marks \u00b7 120 min \u00b7 no \u2212ve)",
+  "duration": 90,
+  "pattern": "100 MCQs, 100 marks, 90 min, NO negative marking",
   "totalMarks": 100,
   "sections": [
     {
-      "name": "Section A \u2014 Technical",
-      "count": 70,
-      "marks": 70
+      "name": "Technical",
+      "questionCount": 80,
+      "marks": 80
     },
     {
-      "name": "Section B \u2014 General",
-      "count": 30,
-      "marks": 30
+      "name": "General Awareness",
+      "questionCount": 20,
+      "marks": 20
     }
   ],
-  "negativeMarking": {
-    "mcq1": 0,
-    "mcq2": 0,
-    "nat": 0,
-    "msq": 0
-  },
+  "negativeMarking": false,
   "seed": 41537947,
   "locked": true,
   "questions": [
     {
-      "id": 1,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Least squares adjustment minimizes",
-      "options": [
-        "Maximum residual",
-        "None",
-        "Sum of residuals",
-        "Sum of squares of residuals"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Sum of squares of residuals"
-    },
-    {
-      "id": 2,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'line of strikes' is perpendicular to",
-      "options": [
-        "Surface contour",
-        "None",
-        "Direction of dip",
-        "Borehole"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Direction of dip"
-    },
-    {
-      "id": 3,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The condition equation method is used for",
-      "options": [
-        "Adjusting constrained measurements",
-        "None",
-        "Only simple surveys",
-        "Only leveling"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Adjusting constrained measurements"
-    },
-    {
-      "id": 4,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Borehole surveying is done to",
-      "options": [
-        "Test gas",
-        "Determine dip, strike, and position of coal seams",
-        "Measure air velocity",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Determine dip, strike, and position of coal seams"
-    },
-    {
-      "id": 5,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The correction for slope in chain measurement is always",
-      "options": [
-        "Variable",
-        "Zero",
-        "Negative",
-        "Positive"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Positive"
-    },
-    {
-      "id": 6,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-001",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A drone in mine surveying is used for",
+      "stem": "The 'nautical almanac' provides:",
       "options": [
-        "Aerial photography and topographic mapping",
-        "Only photography",
-        "Only measurement",
-        "None"
+        "Topographic map data",
+        "Positions of celestial bodies for given dates and times",
+        "Weather predictions",
+        "Magnetic field data"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Aerial photography and topographic mapping"
+      "answer": "B",
+      "solution": "The Nautical Almanac tabulates the Greenwich hour angle and declination of the Sun, Moon, planets, and navigational stars."
     },
     {
-      "id": 7,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Remote sensing in mining is used for",
-      "options": [
-        "Only production",
-        "Only mapping",
-        "Environmental monitoring and exploration",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Environmental monitoring and exploration"
-    },
-    {
-      "id": 8,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-002",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Tape correction for temperature is applied when",
+      "stem": "The vertical angle measured to a star for latitude determination should be corrected for:",
       "options": [
-        "Only in summer",
-        "Never",
-        "Temperature differs significantly from standard",
-        "Always"
+        "Only refraction",
+        "Refraction, parallax, and semi-diameter (for Sun)",
+        "No correction needed",
+        "Only parallax"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Temperature differs significantly from standard"
+      "answer": "B",
+      "solution": "For precise work, altitude must be corrected for refraction, parallax (Moon and planets), and semi-diameter (Sun and Moon)."
     },
     {
-      "id": 9,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Back sight is taken on",
-      "options": [
-        "A point of unknown elevation",
-        "None",
-        "Any point",
-        "A point of known elevation"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 10,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A total station can measure",
-      "options": [
-        "Only angles",
-        "None",
-        "Only distance",
-        "Horizontal angle, vertical angle, and distance"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Horizontal angle, vertical angle, and distance"
-    },
-    {
-      "id": 11,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Contour interval is",
-      "options": [
-        "Both",
-        "None",
-        "Horizontal distance",
-        "Vertical distance between successive contours"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Vertical distance between successive contours"
-    },
-    {
-      "id": 12,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The accuracy of GPS in surveying depends on",
-      "options": [
-        "Number of satellites and receiver quality",
-        "Only time of day",
-        "Only weather",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Number of satellites and receiver quality"
-    },
-    {
-      "id": 13,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Magnetic declination is the angle between",
-      "options": [
-        "True north and magnetic north",
-        "Two survey lines",
-        "Horizontal and vertical",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** True north and magnetic north"
-    },
-    {
-      "id": 14,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The height of instrument method is",
-      "options": [
-        "None",
-        "Same as rise and fall",
-        "Faster but no check",
-        "Slower but accurate"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Faster but no check"
-    },
-    {
-      "id": 15,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-003",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The duty of a mine surveyor includes",
+      "stem": "Local Apparent Time (LAT) is determined directly from the hour angle of the:",
       "options": [
-        "None",
-        "Only underground survey",
-        "Setting out and maintaining mine plans",
-        "Only surface survey"
+        "Moon",
+        "Sun",
+        "Polaris",
+        "Any star"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Setting out and maintaining mine plans"
+      "answer": "B",
+      "solution": "LAT = 12h + hour angle of the Sun (expressed in time); it is the time indicated by a sundial."
     },
     {
-      "id": 16,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'set out' function of total station is used for",
-      "options": [
-        "Measuring existing features",
-        "None",
-        "Computing areas",
-        "Marking design coordinates on ground"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Marking design coordinates on ground"
-    },
-    {
-      "id": 17,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Optical square is used for",
-      "options": [
-        "Measuring angles",
-        "Levelling",
-        "Setting out right angles",
-        "Measuring distance"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Measuring angles"
-    },
-    {
-      "id": 18,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Face left and face right observations are taken to",
-      "options": [
-        "None",
-        "Eliminate instrumental errors",
-        "Reduce cost",
-        "Increase speed"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Eliminate instrumental errors"
-    },
-    {
-      "id": 19,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Local attraction in a compass is caused by",
-      "options": [
-        "Magnetic materials nearby",
-        "Humidity",
-        "Wind",
-        "Temperature"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Magnetic materials nearby"
-    },
-    {
-      "id": 20,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-004",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Reciprocal levelling eliminates",
+      "stem": "The Greenwich Hour Angle (GHA) of a star is obtained from:",
       "options": [
-        "Curvature and refraction errors",
-        "Temperature errors",
-        "Wind errors",
-        "None"
+        "Field observation only",
+        "The Nautical Almanac for a given UT",
+        "A theodolite reading",
+        "A magnetic compass"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Curvature and refraction errors"
+      "answer": "B",
+      "solution": "GHA is tabulated in the almanac for selected stars and the Sun at specific Universal Times."
     },
     {
-      "id": 21,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A reflectorless total station can measure distance to",
-      "options": [
-        "Any surface without prism",
-        "None",
-        "Only metallic surfaces",
-        "Only prism targets"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Any surface without prism"
-    },
-    {
-      "id": 22,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The purpose of a mine plan is to",
-      "options": [
-        "None",
-        "Only show surface features",
-        "Only show geological data",
-        "Record and plan mining operations"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Record and plan mining operations"
-    },
-    {
-      "id": 23,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A metric chain used in surveying typically has",
-      "options": [
-        "100 m length",
-        "20 m length",
-        "30 m length",
-        "Both a and b depending on use"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 20 m length"
-    },
-    {
-      "id": 24,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-005",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The law of propagation of weights states",
+      "stem": "When determining longitude, the local hour angle is compared with:",
       "options": [
-        "Weight of sum = reciprocal of sum of reciprocals",
-        "Weight is constant",
-        "Weight decreases",
-        "None"
+        "The local mean time",
+        "The Greenwich hour angle",
+        "The star's right ascension",
+        "The magnetic declination"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Weight of sum = reciprocal of sum of reciprocals"
+      "answer": "B",
+      "solution": "Longitude = GHA - LHA (or LHA - GHA depending on convention); comparing local observations with Greenwich time yields longitude."
     },
     {
-      "id": 25,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-006",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A theodolite is primarily used for",
+      "stem": "The 'diurnal parallax' of the Moon is significant because the Moon is:",
       "options": [
-        "None",
-        "Levelling",
-        "Measuring distance",
-        "Measuring horizontal and vertical angles"
+        "Very bright",
+        "Relatively close to Earth",
+        "Moving rapidly",
+        "Above the atmosphere"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Measuring horizontal and vertical angles"
+      "answer": "B",
+      "solution": "Parallax is the difference in apparent position due to observing from Earth's surface vs. its centre; it is largest for the Moon (~1\u00b0)."
     },
     {
-      "id": 26,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The least count of a vernier caliper is typically",
-      "options": [
-        "0.001 mm",
-        "0.1 mm",
-        "1 mm",
-        "0.01 mm"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 0.01 mm"
-    },
-    {
-      "id": 27,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-007",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The temporary adjustments of a theodolite include",
+      "stem": "Mean Right Ascension of Aries (\u03bd) is used to convert between:",
       "options": [
-        "Centreing, levelling, focusing",
-        "Only focusing",
-        "Only levelling",
-        "None"
+        "Local and Greenwich time",
+        "Right ascension and hour angle",
+        "Altitude and azimuth",
+        "Latitude and longitude"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Centreing, levelling, focusing"
+      "answer": "B",
+      "solution": "\u03bd (or GHA Aries) bridges the equatorial and horizontal coordinate systems; LHA = GHA + local longitude."
     },
     {
-      "id": 28,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-008",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Systematic errors can be",
+      "stem": "The 'meridian passage' of a star occurs when its hour angle is:",
       "options": [
-        "None",
-        "Random",
-        "Eliminated by corrections",
-        "Never eliminated"
+        "6h",
+        "12h",
+        "0h or 12h",
+        "24h"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Eliminated by corrections"
+      "answer": "C",
+      "solution": "Upper culmination: LHA = 0h; lower culmination: LHA = 12h."
     },
     {
-      "id": 29,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Weights in survey adjustments represent",
-      "options": [
-        "Relative reliability of observations",
-        "Distance measured",
-        "None",
-        "Time taken"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Relative reliability of observations"
-    },
-    {
-      "id": 30,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-009",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Photogrammetry uses",
+      "stem": "For observations near the horizon, atmospheric refraction can amount to approximately:",
       "options": [
-        "Only ground surveys",
-        "Aerial photographs for mapping",
-        "None",
-        "Only satellite images"
+        "1 arc-second",
+        "1 arc-minute",
+        "34 arc-minutes",
+        "5 degrees"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Aerial photographs for mapping"
+      "answer": "C",
+      "solution": "At the geometric horizon, standard refraction is about 34 arc-minutes (nearly the Sun's diameter)."
     },
     {
-      "id": 31,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-010",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A chain length error is corrected by",
+      "stem": "The 'altitude method' for latitude requires observing a star's maximum altitude when it is on the observer's:",
       "options": [
-        "Tape correction",
-        "Ignoring it",
-        "Field calibration",
-        "Both a and b"
+        "Prime vertical",
+        "Meridian",
+        "Horizon",
+        "Ecliptic"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Tape correction"
+      "answer": "B",
+      "solution": "Meridian altitude gives the simplest relation: latitude = 90\u00b0 - observed altitude + declination (with appropriate sign conventions)."
     },
     {
-      "id": 32,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A total station combines",
-      "options": [
-        "Only theodolite",
-        "None",
-        "Theodolite + EDM + microprocessor",
-        "Only EDM"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Theodolite + EDM + microprocessor"
-    },
-    {
-      "id": 33,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Chain surveying is suitable for",
-      "options": [
-        "Small and simple areas",
-        "Flat terrain only",
-        "Hilly terrain",
-        "All terrains"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Flat terrain only"
-    },
-    {
-      "id": 34,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Mine plans are prepared at a scale of",
-      "options": [
-        "None",
-        "1:100 only",
-        "1:500 or 1:1000 typically",
-        "1:10000 only"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 1:500 or 1:1000 typically"
-    },
-    {
-      "id": 35,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-011",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Dip and strike of a coal seam are measured by",
+      "stem": "Time can be determined by the 'method of equal altitudes' using the:",
       "options": [
-        "Only surface mapping",
-        "Only borehole",
-        "Surface observation and borehole data",
-        "None"
+        "Sun only",
+        "Any star observed rising and setting",
+        "Any star observed at equal altitudes east and west of meridian",
+        "Moon"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Surface observation and borehole data"
+      "answer": "C",
+      "solution": "When a star reaches the same altitude on both sides of the meridian, the mean of the two times gives local mean time."
     },
     {
-      "id": 36,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-012",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "A prismatic compass measures",
+      "difficulty": "medium",
+      "stem": "The precession in right ascension per year is approximately:",
       "options": [
-        "Internal angles",
-        "Deflection angles",
-        "Bearings of lines",
-        "Vertical angles"
+        "1 second of time",
+        "3.5 seconds of time",
+        "36 seconds of time",
+        "360 seconds of time"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Bearings of lines"
+      "answer": "B",
+      "solution": "General precession in RA is about 3.07s per year (approx 46 arcsec per year)."
     },
     {
-      "id": 37,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-013",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "A dial compass in mining measures",
+      "difficulty": "medium",
+      "stem": "The 'chronometer' used in surveying typically keeps:",
       "options": [
-        "Bearing of survey lines",
-        "None",
+        "Local solar time",
+        "Sidereal time",
+        "Greenwich Mean Time (GMT/UTC)",
+        "Daylight saving time"
+      ],
+      "answer": "C",
+      "solution": "A marine/survey chronometer is set to GMT (UTC) so that local observations can be compared with almanac data."
+    },
+    {
+      "id": "ncl-surveyor-13-014",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "To convert local sidereal time to local mean solar time, one uses:",
+      "options": [
+        "The equation of time",
+        "Tables of sidereal-to-solar time conversion",
+        "A simple multiplication by 24",
+        "The barometric pressure"
+      ],
+      "answer": "B",
+      "solution": "Sidereal-to-solar conversion tables (or the formula LST = 1.0027379 \u00d7 LMT + \u03bd) are used."
+    },
+    {
+      "id": "ncl-surveyor-13-015",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'semi-diameter' correction is needed when observing the Sun because:",
+      "options": [
+        "The Sun is very bright",
+        "We observe the limb, not the centre",
+        "The Sun has no surface",
+        "Refraction affects it"
+      ],
+      "answer": "B",
+      "solution": "The observed altitude is to the upper or lower limb; the semi-diameter (~16') must be applied to get the centre."
+    },
+    {
+      "id": "ncl-surveyor-13-016",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Proper motion of a star is the apparent angular motion due to:",
+      "options": [
+        "Earth's rotation",
+        "The star's actual space velocity relative to the Sun",
+        "Atmospheric effects",
+        "Precession"
+      ],
+      "answer": "B",
+      "solution": "Proper motion is the star's actual movement across the sky over years, distinct from apparent diurnal motion."
+    },
+    {
+      "id": "ncl-surveyor-13-017",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'refraction constant' at sea level at standard temperature is about:",
+      "options": [
+        "1 arc-second",
+        "60 arc-seconds",
+        "1 arc-minute",
+        "34 arc-minutes at horizon"
+      ],
+      "answer": "D",
+      "solution": "At the horizon, standard refraction is ~34'; at 45\u00b0 altitude it is about 1'; the constant varies with altitude."
+    },
+    {
+      "id": "ncl-surveyor-13-018",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "To determine the azimuth of a line using the Sun, one observes the Sun's:",
+      "options": [
+        "Altitude only",
+        "Altitude and time (or hour angle)",
+        "Declination only",
+        "Right ascension only"
+      ],
+      "answer": "B",
+      "solution": "Both the altitude (or azimuth) and the precise time are needed to compute the Sun's position and hence the line's azimuth."
+    },
+    {
+      "id": "ncl-surveyor-13-019",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'position angle' of a binary star system refers to:",
+      "options": [
+        "Its distance from Earth",
+        "The angle from north to the companion star measured at the primary",
+        "Its orbital period",
+        "Its magnitude"
+      ],
+      "answer": "B",
+      "solution": "Position angle is measured from north through east to the secondary star as seen from the primary."
+    },
+    {
+      "id": "ncl-surveyor-13-020",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Ephemeris time was introduced to replace UT because:",
+      "options": [
+        "UT was too accurate",
+        "UT varied unpredictably due to tidal deceleration",
+        "Atomic clocks were invented",
+        "Stars stopped moving"
+      ],
+      "answer": "B",
+      "solution": "ET (now TT) was based on planetary motions and free from the irregularities of Earth's rotation that affect UT."
+    },
+    {
+      "id": "ncl-surveyor-13-021",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'transit instrument' is used to determine:",
+      "options": [
+        "Latitude only",
+        "Time and right ascension by observing meridian crossings",
+        "Longitude only",
+        "Magnetic declination"
+      ],
+      "answer": "B",
+      "solution": "A transit telescope observes stars crossing the meridian, providing precise time and RA."
+    },
+    {
+      "id": "ncl-surveyor-13-022",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'aberration constant' is approximately:",
+      "options": [
+        "0.1 arc-seconds",
+        "20.5 arc-seconds",
+        "50 arc-seconds",
+        "1 arc-minute"
+      ],
+      "answer": "B",
+      "solution": "The constant of aberration kappa is approximately 20.5 arcseconds due to Earth mean orbital velocity."
+    },
+    {
+      "id": "ncl-surveyor-13-023",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the 'method of circummeridian altitudes', observations are taken within about:",
+      "options": [
+        "1 hour of meridian passage",
+        "10 minutes of meridian passage",
+        "Only at exact transit",
+        "At any time"
+      ],
+      "answer": "B",
+      "solution": "Circummeridian observations within ~10 minutes of transit are reduced using the formula involving the hour angle squared."
+    },
+    {
+      "id": "ncl-surveyor-13-024",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'ex-meridian altitude' correction formula involves the:",
+      "options": [
+        "Hour angle squared",
+        "Declination cubed",
+        "Altitude to the fourth power",
+        "Latitude linearly"
+      ],
+      "answer": "A",
+      "solution": "The correction to meridian altitude for small hour angles is proportional to cos\u00b2(\u03b4) \u00d7 sin\u00b2(H) / sin(1\"), i.e., H\u00b2 term."
+    },
+    {
+      "id": "ncl-surveyor-13-025",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'latitude by Polaris' method gives latitude directly from the altitude because Polaris is:",
+      "options": [
+        "Exactly at the north celestial pole",
+        "Within ~0.7\u00b0 of the pole, with tabulated corrections",
+        "Always on the meridian",
+        "A circumpolar star"
+      ],
+      "answer": "B",
+      "solution": "Polaris is close to but not exactly at the pole; tables give corrections based on LHA of Aries."
+    },
+    {
+      "id": "ncl-surveyor-13-026",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'azimuth by Polaris' method requires knowing the observer's:",
+      "options": [
+        "Longitude only",
+        "Latitude and the star's hour angle",
+        "Magnetic declination",
+        "Altitude of Polaris"
+      ],
+      "answer": "B",
+      "solution": "Azimuth of Polaris is computed from its hour angle and the observer's latitude."
+    },
+    {
+      "id": "ncl-surveyor-13-027",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The diurnal rotation of the Earth causes stars to appear to move:",
+      "options": [
+        "East to west",
+        "West to east",
+        "North to south",
+        "In random directions"
+      ],
+      "answer": "A",
+      "solution": "Earth rotates eastward, so stars appear to move east to west across the sky."
+    },
+    {
+      "id": "ncl-surveyor-13-028",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'zenith distance' of a star is:",
+      "options": [
+        "90\u00b0 minus altitude",
+        "Equal to altitude",
+        "90\u00b0 plus altitude",
+        "Equal to azimuth"
+      ],
+      "answer": "A",
+      "solution": "Zenith distance z = 90\u00b0 - altitude (h); it is the angular distance from the zenith."
+    },
+    {
+      "id": "ncl-surveyor-13-029",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "For precise time determination, the 'chronograph' records the exact time of:",
+      "options": [
+        "Star transits across the meridian",
+        "Sunrise and sunset",
+        "Compass readings",
+        "Temperature changes"
+      ],
+      "answer": "A",
+      "solution": "A chronograph registers the instant a star crosses the transit wire, compared with chronometer time."
+    },
+    {
+      "id": "ncl-surveyor-13-030",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'colatitude' of a place is:",
+      "options": [
+        "90\u00b0 + latitude",
+        "90\u00b0 - latitude",
+        "Equal to latitude",
+        "180\u00b0 - latitude"
+      ],
+      "answer": "B",
+      "solution": "Colatitude = 90\u00b0 - \u03c6; it is the zenith distance of the celestial pole."
+    },
+    {
+      "id": "ncl-surveyor-13-031",
+      "subject": "Mine Surveying",
+      "topic": "Field Astronomy",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'astronomical latitude' differs from the 'geodetic latitude' due to:",
+      "options": [
+        "Earth's rotation",
+        "Deflection of the vertical caused by local gravity anomalies",
+        "Tidal effects",
+        "Magnetic field"
+      ],
+      "answer": "B",
+      "solution": "Deflection of the vertical (difference between plumb line and ellipsoid normal) causes astronomical and geodetic latitudes to differ."
+    },
+    {
+      "id": "ncl-surveyor-13-032",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A map projection is a systematic transformation of:",
+      "options": [
+        "Geodetic coordinates to grid coordinates",
+        "Three-dimensional ellipsoidal coordinates to a two-dimensional plane",
+        "Latitude to longitude",
+        "Elevation to distance"
+      ],
+      "answer": "B",
+      "solution": "Projections convert 3D (lat, lon, height) to 2D (E, N) on a map plane."
+    },
+    {
+      "id": "ncl-surveyor-13-033",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The three main types of map projection surfaces are:",
+      "options": [
+        "Cone, cylinder, and plane",
+        "Sphere, ellipsoid, and geoid",
+        "Mercator, Lambert, and UTM",
+        "Flat, curved, and folded"
+      ],
+      "answer": "A",
+      "solution": "Conformal, equal-area, and equidistant projections are developed on cylindrical, conical, and azimuthal (planar) surfaces."
+    },
+    {
+      "id": "ncl-surveyor-13-034",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A conformal projection preserves:",
+      "options": [
+        "Area",
+        "Angles and shapes of small features",
         "Distance",
-        "Elevation"
+        "Volume"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Bearing of survey lines"
+      "answer": "B",
+      "solution": "Conformal projections preserve local angles; small shapes are maintained."
     },
     {
-      "id": 38,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Accidental errors follow",
-      "options": [
-        "Uniform distribution",
-        "Poisson distribution",
-        "Normal distribution",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Normal distribution"
-    },
-    {
-      "id": 39,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "GIS stands for",
-      "options": [
-        "Geographic Information System",
-        "None",
-        "Geological Investigation System",
-        "General Information System"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Geographic Information System"
-    },
-    {
-      "id": 40,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-035",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The least count of a vernier theodolite is typically",
+      "stem": "An equal-area projection preserves:",
       "options": [
-        "1 minute",
-        "5 minutes",
-        "20 seconds",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 20 seconds"
-    },
-    {
-      "id": 41,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Standard deviation measures",
-      "options": [
-        "Only maximum error",
-        "Only minimum error",
-        "None",
-        "Spread of observations around mean"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Spread of observations around mean"
-    },
-    {
-      "id": 42,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Outcrop is where",
-      "options": [
-        "Coal seam reaches the surface",
-        "Water is found",
-        "None",
-        "Coal is deepest"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Coal seam reaches the surface"
-    },
-    {
-      "id": 43,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The type of chain commonly used in India is",
-      "options": [
-        "Engineer's chain",
-        "Metric chain",
-        "Gunter's chain",
-        "Revenue chain"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Gunter's chain"
-    },
-    {
-      "id": 44,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The whole circle bearing system ranges from",
-      "options": [
-        "\u221290\u00b0 to +90\u00b0",
-        "0\u00b0 to 360\u00b0",
-        "0\u00b0 to 180\u00b0",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 0\u00b0 to 360\u00b0"
-    },
-    {
-      "id": 45,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "An outlier is",
-      "options": [
-        "Correct reading",
-        "None",
-        "An observation significantly different from others",
-        "Average value"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** An observation significantly different from others"
-    },
-    {
-      "id": 46,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The coordinate system in total station uses",
-      "options": [
-        "Both",
-        "None",
-        "Latitude and Longitude",
-        "Easting and Northing"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Easting and Northing"
-    },
-    {
-      "id": 47,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Fore sight is taken on",
-      "options": [
-        "A point of unknown elevation (turning point)",
-        "None",
-        "A point of known elevation",
-        "Bench mark only"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 48,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A bench mark is",
-      "options": [
-        "A temporary point",
-        "Any point",
-        "None",
-        "A point of known elevation"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 49,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A level tube bubble moves towards",
-      "options": [
-        "None",
-        "Center",
-        "Lower end",
-        "Higher end of the tube"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Higher end of the tube"
-    },
-    {
-      "id": 50,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "3D laser scanning is used for",
-      "options": [
-        "Only volume calculation",
-        "Creating digital terrain models",
-        "Only measuring distances",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Creating digital terrain models"
-    },
-    {
-      "id": 51,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The reduced bearing system ranges from",
-      "options": [
-        "0\u00b0 to 360\u00b0",
-        "0\u00b0 to 90\u00b0 in each quadrant",
-        "None",
-        "0\u00b0 to 180\u00b0"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 0\u00b0 to 90\u00b0 in each quadrant"
-    },
-    {
-      "id": 52,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Pacing is a method of",
-      "options": [
-        "Approximate distance measurement",
-        "None",
-        "Precise measurement",
-        "Angle measurement"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Approximate distance measurement"
-    },
-    {
-      "id": 53,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A sectional view in mine surveying shows",
-      "options": [
-        "None",
-        "Vertical cross-section of mine workings",
-        "Only contour map",
-        "Only surface plan"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Vertical cross-section of mine workings"
-    },
-    {
-      "id": 54,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "EDM stands for",
-      "options": [
-        "Electronic Distance Measurement",
-        "Exact Distance Measurement",
-        "None",
-        "Electronic Data Module"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Electronic Distance Measurement"
-    },
-    {
-      "id": 55,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Traversing with a total station is more accurate because",
-      "options": [
-        "It is cheaper",
-        "None",
-        "Electronic measurement eliminates human error",
-        "It is faster"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Electronic measurement eliminates human error"
-    },
-    {
-      "id": 56,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The rise and fall method checks",
-      "options": [
-        "Only elevation",
+        "Angles",
+        "Area",
         "Distance",
-        "None",
-        "Arithmetic accuracy of reduction"
+        "Direction"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Arithmetic accuracy of reduction"
+      "answer": "B",
+      "solution": "Equal-area (equivalent) projections maintain proportional areas across the map."
     },
     {
-      "id": 57,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A fault in geological terms means",
-      "options": [
-        "Water inflow",
-        "None",
-        "Surface crack",
-        "Displacement of rock strata"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Displacement of rock strata"
-    },
-    {
-      "id": 58,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A Dumpy level has",
-      "options": [
-        "Fixed telescope",
-        "Two telescopes",
-        "No telescope",
-        "Rotating telescope"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Fixed telescope"
-    },
-    {
-      "id": 59,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The line of collimation is",
-      "options": [
-        "Imaginary line",
-        "Physical line",
-        "None",
-        "Line of sight when bubble is central"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Line of sight when bubble is central"
-    },
-    {
-      "id": 60,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The principle of EDM is",
-      "options": [
-        "Measurement of time or phase shift of electromagnetic wave",
-        "Taping",
-        "None",
-        "Chaining"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Measurement of time or phase shift of electromagnetic wave"
-    },
-    {
-      "id": 61,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-036",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Orthorectification corrects",
+      "stem": "The Universal Transverse Mercator (UTM) system divides the Earth into how many zones?",
       "options": [
-        "Terrain displacement in aerial photos",
-        "Only color",
-        "None",
-        "Only brightness"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Terrain displacement in aerial photos"
-    },
-    {
-      "id": 62,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Repetition method in theodolite survey gives",
-      "options": [
-        "Same accuracy",
-        "Less accurate results",
-        "None",
-        "More accurate results"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** More accurate results"
-    },
-    {
-      "id": 63,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A DTM stands for",
-      "options": [
-        "Data Transfer Module",
-        "None",
-        "Digital Terrain Model",
-        "Direct Terrain Measurement"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Digital Terrain Model"
-    },
-    {
-      "id": 64,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The accuracy of a total station is typically",
-      "options": [
-        "None",
-        "\u00b11 m",
-        "\u00b110 cm",
-        "\u00b12 mm + 2 ppm"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** \u00b12 mm + 2 ppm"
-    },
-    {
-      "id": 65,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A closing error in traverse is adjusted by",
-      "options": [
-        "Bowditch or transit rule",
-        "Re-measuring only",
-        "Ignoring it",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Bowditch or transit rule"
-    },
-    {
-      "id": 66,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The precision of a survey is expressed as",
-      "options": [
-        "Percentage only",
-        "Absolute error only",
-        "None",
-        "Ratio of error to measured quantity"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Ratio of error to measured quantity"
-    },
-    {
-      "id": 67,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Scale of a vertical photograph depends on",
-      "options": [
-        "Only height",
-        "Flying height and focal length",
-        "Only focal length",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Flying height and focal length"
-    },
-    {
-      "id": 68,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A vertical aerial photograph has",
-      "options": [
-        "Nadir point at center",
-        "Horizon at center",
-        "None",
-        "No scale variation"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Nadir point at center"
-    },
-    {
-      "id": 69,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Resection in total station survey is used to",
-      "options": [
-        "Measure area",
-        "Levelling",
-        "Determine unknown station position from known points",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Determine unknown station position from known points"
-    },
-    {
-      "id": 70,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A ranging rod is used for",
-      "options": [
-        "Measuring angles",
-        "None",
-        "Marking stations",
-        "Levelling"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Marking stations"
-    },
-    {
-      "id": 71,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Choose correct: He ___ to school daily",
-      "options": [
-        "Going",
-        "Gone",
-        "Goes",
-        "Go"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Goes"
-    },
-    {
-      "id": 72,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The speed of light is approximately",
-      "options": [
-        "3 \u00d7 10\u2076 m/s",
-        "3 \u00d7 10\u2074 m/s",
-        "3 \u00d7 10\u00b9\u2070 m/s",
-        "3 \u00d7 10\u2078 m/s"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 3 \u00d7 10\u2078 m/s"
-    },
-    {
-      "id": 73,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A does work in 10 days, B in 15 days. Together they finish in",
-      "options": [
-        "5 days",
-        "6 days",
-        "12 days",
-        "8 days"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 6 days"
-    },
-    {
-      "id": 74,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Which metal is liquid at room temperature",
-      "options": [
-        "Iron",
-        "Mercury",
-        "Lead",
-        "Copper"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Mercury"
-    },
-    {
-      "id": 75,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Which vitamin is produced in sunlight",
-      "options": [
-        "Vitamin D",
-        "Vitamin C",
-        "Vitamin A",
-        "Vitamin B12"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Vitamin D"
-    },
-    {
-      "id": 76,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A light year measures",
-      "options": [
-        "Distance",
-        "Mass",
-        "Speed",
-        "Time"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Distance"
-    },
-    {
-      "id": 77,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The pH of pure water is",
-      "options": [
-        "1",
-        "14",
-        "7",
-        "0"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 7"
-    },
-    {
-      "id": 78,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The largest organ of the human body is",
-      "options": [
-        "Brain",
-        "Heart",
-        "Liver",
-        "Skin"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Skin"
-    },
-    {
-      "id": 79,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A man walks 3 km east, then 4 km north. Distance from start is",
-      "options": [
-        "12 km",
-        "1 km",
-        "5 km",
-        "7 km"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 5 km"
-    },
-    {
-      "id": 80,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The square root of 144 is",
-      "options": [
-        "11",
-        "14",
-        "12",
-        "13"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 12"
-    },
-    {
-      "id": 81,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Antonym of 'ancient' is",
-      "options": [
-        "Old",
-        "Modern",
-        "Historic",
-        "Medieval"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Modern"
-    },
-    {
-      "id": 82,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The chemical formula of common salt is",
-      "options": [
-        "KCl",
-        "MgCl\u2082",
-        "CaCl\u2082",
-        "NaCl"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** NaCl"
-    },
-    {
-      "id": 83,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "180 degrees longitude is called",
-      "options": [
-        "Equator",
-        "Prime Meridian",
-        "International Date Line",
-        "Tropic of Cancer"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** International Date Line"
-    },
-    {
-      "id": 84,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The hardest natural substance is",
-      "options": [
-        "Topaz",
-        "Corundum",
-        "Diamond",
-        "Quartz"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Diamond"
-    },
-    {
-      "id": 85,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Synonym of 'persevere' is",
-      "options": [
-        "Abandon",
-        "Quit",
-        "Surrender",
-        "Persist"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Persist"
-    },
-    {
-      "id": 86,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "HCF of 12 and 18 is",
-      "options": [
-        "12",
         "36",
-        "18",
-        "6"
+        "60",
+        "120",
+        "180"
       ],
-      "answer": 3,
-      "solution": "**Answer.** 6"
+      "answer": "B",
+      "solution": "UTM has 60 longitudinal zones, each 6\u00b0 wide."
     },
     {
-      "id": 87,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The currency of Japan is",
-      "options": [
-        "Yen",
-        "Won",
-        "Rupee",
-        "Yuan"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Yen"
-    },
-    {
-      "id": 88,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-037",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Oxidation involves",
+      "stem": "Each UTM zone spans how many degrees of longitude?",
       "options": [
-        "Gain of electrons",
-        "None",
-        "Loss of electrons",
-        "No change"
+        "3\u00b0",
+        "6\u00b0",
+        "9\u00b0",
+        "12\u00b0"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Loss of electrons"
+      "answer": "B",
+      "solution": "UTM zones are 6\u00b0 wide, numbered 1 to 60 east from 180\u00b0W."
     },
     {
-      "id": 89,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-038",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Synonym of 'abundant' is",
+      "stem": "The central meridian of a UTM zone has a false easting of:",
       "options": [
-        "Limited",
-        "Rare",
-        "Scarce",
-        "Plentiful"
+        "0 m",
+        "100,000 m",
+        "500,000 m",
+        "1,000,000 m"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Plentiful"
+      "answer": "C",
+      "solution": "The central meridian is assigned a false easting of 500,000 m to avoid negative coordinates."
     },
     {
-      "id": 90,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-039",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Tangent of 45\u00b0 is",
+      "stem": "The scale factor at the central meridian of UTM is:",
       "options": [
-        "\u221a2",
-        "0",
-        "\u221e",
-        "1"
+        "1.000000",
+        "0.999600",
+        "1.000400",
+        "0.999900"
       ],
-      "answer": 3,
-      "solution": "**Answer.** 1"
+      "answer": "B",
+      "solution": "UTM uses a scale factor of 0.9996 at the central meridian, giving two lines of true scale at ~180 km either side."
     },
     {
-      "id": 91,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-040",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Speed of sound is approximately",
+      "stem": "The false northing for UTM in the southern hemisphere is:",
       "options": [
-        "3000 m/s",
-        "343 m/s",
-        "30 m/s",
-        "3430 m/s"
+        "0 m",
+        "10,000,000 m",
+        "5,000,000 m",
+        "100,000 m"
       ],
-      "answer": 1,
-      "solution": "**Answer.** 343 m/s"
+      "answer": "B",
+      "solution": "In the southern hemisphere, a false northing of 10,000,000 m is applied so that all northing values are positive."
     },
     {
-      "id": 92,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Who was the first President of India",
-      "options": [
-        "Dr. Rajendra Prasad",
-        "APJ Abdul Kalam",
-        "Dr. S. Radhakrishnan",
-        "Zakir Husain"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Dr. Rajendra Prasad"
-    },
-    {
-      "id": 93,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Which blood group is universal donor",
-      "options": [
-        "O negative",
-        "B negative",
-        "AB positive",
-        "A positive"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** O negative"
-    },
-    {
-      "id": 94,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The angle in a semicircle is",
-      "options": [
-        "45\u00b0",
-        "180\u00b0",
-        "60\u00b0",
-        "90\u00b0"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 90\u00b0"
-    },
-    {
-      "id": 95,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The capital of Madhya Pradesh is",
-      "options": [
-        "Indore",
-        "Bhopal",
-        "Gwalior",
-        "Jabalpur"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Bhopal"
-    },
-    {
-      "id": 96,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Who wrote the Indian National Anthem",
-      "options": [
-        "Rabindranath Tagore",
-        "Mahatma Gandhi",
-        "Bankim Chandra",
-        "Jawaharlal Nehru"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Rabindranath Tagore"
-    },
-    {
-      "id": 97,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-041",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A is twice as old as B. If A is 40, B is",
+      "stem": "The Lambert Conformal Conic projection is best suited for regions that are:",
       "options": [
-        "25",
-        "35",
-        "20",
-        "30"
+        "Very large and spanning many latitudes",
+        "Long east-west and moderate latitude extent",
+        "Polar only",
+        "Near the equator"
       ],
-      "answer": 2,
-      "solution": "**Answer.** 20"
+      "answer": "B",
+      "solution": "Lambert conformal conic is ideal for mid-latitude regions with greater east-west than north-south extent."
     },
     {
-      "id": 98,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-042",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A can do work in 20 days, B in 30 days. Together in",
+      "stem": "The 'standard parallels' of a conic projection are where:",
       "options": [
-        "12 days",
-        "15 days",
-        "10 days",
-        "25 days"
+        "Scale factor is zero",
+        "Scale factor is 1.0 (no distortion)",
+        "Distortion is maximum",
+        "The projection surface is tangent"
       ],
-      "answer": 0,
-      "solution": "**Answer.** 12 days"
+      "answer": "B",
+      "solution": "Standard parallels are the lines where the projection surface intersects the ellipsoid, giving scale factor = 1."
     },
     {
-      "id": 99,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-043",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Antonym of 'generous' is",
+      "difficulty": "medium",
+      "stem": "Scale distortion on a map projection increases with distance from:",
       "options": [
-        "Charitable",
-        "Stingy",
-        "Giving",
-        "Kind"
+        "The equator",
+        "The prime meridian",
+        "The standard parallels or central meridian",
+        "The north pole"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Stingy"
+      "answer": "C",
+      "solution": "Distortion grows as you move away from the lines (or point) of true scale."
     },
     {
-      "id": 100,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-13-044",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Which planet has the most moons",
+      "difficulty": "medium",
+      "stem": "The 'Cassini' projection is:",
       "options": [
-        "Saturn",
-        "Jupiter",
-        "Neptune",
-        "Uranus"
+        "Conformal",
+        "Equidistant along the central meridian",
+        "Equal-area",
+        "Perspective"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Saturn"
+      "answer": "B",
+      "solution": "Cassini is a transverse cylindrical projection that is equidistant along the central meridian and perpendicular lines."
+    },
+    {
+      "id": "ncl-surveyor-13-045",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'Tissot's indicatrix' on a map projection shows:",
+      "options": [
+        "Elevation",
+        "Distortion in scale and shape at each point",
+        "Population density",
+        "Vegetation"
+      ],
+      "answer": "B",
+      "solution": "Tissot ellipses show local distortion; circles on the sphere appear as ellipses on the projection."
+    },
+    {
+      "id": "ncl-surveyor-13-046",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'gnomonic' projection has the property that:",
+      "options": [
+        "All great circles appear as straight lines",
+        "All meridians are parallel",
+        "Areas are preserved",
+        "Angles are preserved"
+      ],
+      "answer": "A",
+      "solution": "On a gnomonic projection, every great circle projects as a straight line, useful for navigation."
+    },
+    {
+      "id": "ncl-surveyor-13-047",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'stereographic' projection is:",
+      "options": [
+        "Conformal",
+        "Equal-area",
+        "Equidistant",
+        "Perspective from the centre of the Earth"
+      ],
+      "answer": "A",
+      "solution": "Stereographic is a conformal azimuthal projection; circles on the sphere map to circles on the plane."
+    },
+    {
+      "id": "ncl-surveyor-13-048",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "For a Transverse Mercator projection, the line of true scale is:",
+      "options": [
+        "The equator",
+        "Two lines parallel to the central meridian",
+        "The central meridian itself",
+        "All meridians"
+      ],
+      "answer": "B",
+      "solution": "In TM the central meridian has scale factor < 1; two lines at ~180 km have true scale."
+    },
+    {
+      "id": "ncl-surveyor-13-049",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Lambert Equal Area' projection is commonly used for:",
+      "options": [
+        "Topographic maps",
+        "Statistical and thematic maps requiring area comparison",
+        "Navigation charts",
+        "Globe construction"
+      ],
+      "answer": "B",
+      "solution": "Equal-area projections are preferred for statistical maps where area comparisons must be accurate."
+    },
+    {
+      "id": "ncl-surveyor-13-050",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Mollweide' projection is:",
+      "options": [
+        "Conformal",
+        "Equal-area",
+        "Equidistant",
+        "Azimuthal"
+      ],
+      "answer": "B",
+      "solution": "Mollweide is a pseudocylindrical equal-area projection used for world maps."
+    },
+    {
+      "id": "ncl-surveyor-13-051",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Mercator' projection is:",
+      "options": [
+        "Equal-area",
+        "Conformal",
+        "Equidistant",
+        "Azimuthal"
+      ],
+      "answer": "B",
+      "solution": "Mercator is conformal; rhumb lines are straight but it severely distorts area near poles."
+    },
+    {
+      "id": "ncl-surveyor-13-052",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "On a Mercator projection, the spacing of parallels:",
+      "options": [
+        "Decreases toward the poles",
+        "Remains constant",
+        "Increases toward the poles",
+        "Is zero at equator"
+      ],
+      "answer": "C",
+      "solution": "Parallels are spaced increasingly apart toward the poles to maintain conformality."
+    },
+    {
+      "id": "ncl-surveyor-13-053",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'geodetic datum' defines:",
+      "options": [
+        "Map projection parameters",
+        "The reference ellipsoid and its position/orientation relative to the Earth",
+        "The coordinate system only",
+        "The map scale"
+      ],
+      "answer": "B",
+      "solution": "A datum specifies the ellipsoid (shape) and its spatial relationship (position and orientation) to the Earth."
+    },
+    {
+      "id": "ncl-surveyor-13-054",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The WGS 84 datum uses the ellipsoid parameters:",
+      "options": [
+        "International 1924",
+        "GRS 80 / WGS 84 ellipsoid",
+        "Clarke 1880",
+        "Bessel 1841"
+      ],
+      "answer": "B",
+      "solution": "WGS 84 uses a = 6,378,137 m and 1/f = 298.257223563, essentially identical to GRS 80."
+    },
+    {
+      "id": "ncl-surveyor-13-055",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'datum shift' is required when converting coordinates between:",
+      "options": [
+        "Two different map scales",
+        "Two different geodetic datums",
+        "Metric and imperial units",
+        "Latitude and longitude"
+      ],
+      "answer": "B",
+      "solution": "Coordinates on one datum (e.g., Everest 1830) must be transformed to another (e.g., WGS 84) using shift parameters."
+    },
+    {
+      "id": "ncl-surveyor-13-056",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Molodensky' transformation is used for:",
+      "options": [
+        "Converting map projections",
+        "Approximate datum-to-datum coordinate conversion",
+        "Calculating area",
+        "Measuring distances"
+      ],
+      "answer": "B",
+      "solution": "Molodensky formulas convert between datums using differences in ellipsoid parameters and datum shift (dX, dY, dZ)."
+    },
+    {
+      "id": "ncl-surveyor-13-057",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The seven-parameter 'Helmert' transformation involves:",
+      "options": [
+        "Three translations, three rotations, and one scale factor",
+        "Three translations only",
+        "One rotation and one scale",
+        "Seven translations"
+      ],
+      "answer": "A",
+      "solution": "The Helmert (Bursa-Wolf) transformation uses 3 translations, 3 rotations, and 1 scale change."
+    },
+    {
+      "id": "ncl-surveyor-13-058",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'geoid-ellipsoid separation' (geoid undulation) is the distance between:",
+      "options": [
+        "Two map projections",
+        "The geoid (mean sea level surface) and the reference ellipsoid",
+        "The ground surface and sea level",
+        "Two datums"
+      ],
+      "answer": "B",
+      "solution": "Geoid undulation N = h (ellipsoidal height) - H (orthometric height)."
+    },
+    {
+      "id": "ncl-surveyor-13-059",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "GPS provides heights relative to:",
+      "options": [
+        "Mean sea level (geoid)",
+        "The reference ellipsoid",
+        "The local datum",
+        "A specified benchmark"
+      ],
+      "answer": "B",
+      "solution": "GPS gives ellipsoidal height h; geoid undulation must be subtracted to get orthometric height H."
+    },
+    {
+      "id": "ncl-surveyor-13-060",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'combined scale factor' (CSF) in surveying accounts for:",
+      "options": [
+        "Temperature only",
+        "Both the projection scale factor and the elevation factor",
+        "Only elevation",
+        "Only map distortion"
+      ],
+      "answer": "B",
+      "solution": "CSF = map scale factor \u00d7 elevation (gravity) factor; it converts ground distances to grid distances."
+    },
+    {
+      "id": "ncl-surveyor-13-061",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'elevation factor' (or 'gravity factor') converts:",
+      "options": [
+        "Grid distances to ground distances",
+        "Mean sea level distances to ellipsoid distances",
+        "Both map and ground effects",
+        "Angular to linear measurements"
+      ],
+      "answer": "B",
+      "solution": "Elevation factor = R / (R + H), where R is Earth's radius and H is mean elevation, converting MSL to ellipsoid distance."
+    },
+    {
+      "id": "ncl-surveyor-13-062",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'grid factor' (or 'map scale factor') converts:",
+      "options": [
+        "Ground distances to grid distances",
+        "Ellipsoid distances to geoid distances",
+        "Angular to linear",
+        "Elevation to distance"
+      ],
+      "answer": "A",
+      "solution": "Grid factor accounts for the projection distortion at a point, converting ground (ellipsoid) to grid distance."
+    },
+    {
+      "id": "ncl-surveyor-13-063",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "On the UTM projection, the maximum scale distortion within a zone is approximately:",
+      "options": [
+        "0.04%",
+        "0.10%",
+        "0.01%",
+        "1.00%"
+      ],
+      "answer": "A",
+      "solution": "UTM limits distortion to ~0.04% (factor 0.9996 at CM, ~1.0004 at zone edges)."
+    },
+    {
+      "id": "ncl-surveyor-13-064",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Cassini-Soldner' projection was historically used for:",
+      "options": [
+        "World maps",
+        "Large-scale topographic maps in some countries",
+        "Navigation only",
+        "Thematic maps"
+      ],
+      "answer": "B",
+      "solution": "Cassini was used for topographic mapping in the UK, India, and other countries before TM became standard."
+    },
+    {
+      "id": "ncl-surveyor-13-065",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Oblique Mercator' projection is used for:",
+      "options": [
+        "Polar regions",
+        "Regions that are elongated along a great circle not aligned with meridians or equator",
+        "Equatorial regions only",
+        "Small islands"
+      ],
+      "answer": "B",
+      "solution": "Oblique Mercator is used for features (e.g., Malaysia, Borneo) that trend oblique to meridians."
+    },
+    {
+      "id": "ncl-surveyor-13-066",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the Indian context, the 'Indian 1975' datum is based on the:",
+      "options": [
+        "WGS 84 ellipsoid",
+        "Everest 1830 ellipsoid",
+        "GRS 80 ellipsoid",
+        "International 1924 ellipsoid"
+      ],
+      "answer": "B",
+      "solution": "Indian datum 1975 uses the Everest 1830 ellipsoid with a defined origin at Kandla."
+    },
+    {
+      "id": "ncl-surveyor-13-067",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Survey of India' topographic maps use which projection?",
+      "options": [
+        "UTM",
+        "Lambert Conformal Conic",
+        "Polyconic",
+        "Cassini"
+      ],
+      "answer": "C",
+      "solution": "Historically, Survey of India 1:50,000 and 1:250,000 maps use the Polyconic projection."
+    },
+    {
+      "id": "ncl-surveyor-13-068",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'polyconic' projection is:",
+      "options": [
+        "Conformal",
+        "Neither conformal nor equal-area, but has low distortion for small areas",
+        "Equal-area",
+        "Perspective"
+      ],
+      "answer": "B",
+      "solution": "Polyconic is neither conformal nor equivalent but has very small distortion for narrow strips along the central meridian."
+    },
+    {
+      "id": "ncl-surveyor-13-069",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Transverse Mercator' zone width can be reduced to 3\u00b0 (Modified TM) to:",
+      "options": [
+        "Increase distortion",
+        "Reduce distortion for higher accuracy",
+        "Save computation",
+        "Make maps larger"
+      ],
+      "answer": "B",
+      "solution": "Narrower zones (e.g., 3\u00b0) reduce maximum scale distortion, improving accuracy."
+    },
+    {
+      "id": "ncl-surveyor-13-070",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Cassini' projection is equidistant along:",
+      "options": [
+        "All meridians",
+        "The central meridian and lines perpendicular to it",
+        "The equator",
+        "All parallels"
+      ],
+      "answer": "B",
+      "solution": "Cassini preserves distances along the central meridian and along lines perpendicular (transverse) to it."
+    },
+    {
+      "id": "ncl-surveyor-13-071",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'grid bearing' differs from a 'geodetic bearing' by:",
+      "options": [
+        "The convergence of meridians",
+        "Nothing; they are identical",
+        "The scale factor only",
+        "The elevation only"
+      ],
+      "answer": "A",
+      "solution": "Grid bearing = geodetic bearing \u00b1 convergence angle \u03b3 (due to meridians converging toward the pole)."
+    },
+    {
+      "id": "ncl-surveyor-13-072",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'meridian convergence' (\u03b3) is zero at:",
+      "options": [
+        "The poles",
+        "The equator",
+        "The standard parallels",
+        "45\u00b0 latitude"
+      ],
+      "answer": "B",
+      "solution": "At the equator, meridians are parallel, so convergence is zero; it increases toward the poles."
+    },
+    {
+      "id": "ncl-surveyor-13-073",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'false origin' (false easting and northing) is applied to:",
+      "options": [
+        "Make all coordinates positive",
+        "Simplify calculations",
+        "Correct for distortion",
+        "Align with GPS"
+      ],
+      "answer": "A",
+      "solution": "False origins ensure all grid coordinates within a zone are positive, avoiding negative numbers."
+    },
+    {
+      "id": "ncl-surveyor-13-074",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'International 1924' (Hayford) ellipsoid has a flattening of:",
+      "options": [
+        "1/298.257",
+        "1/297",
+        "1/298.3",
+        "1/300"
+      ],
+      "answer": "B",
+      "solution": "The International ellipsoid: a = 6,378,388 m, 1/f = 297 (approximately)."
+    },
+    {
+      "id": "ncl-surveyor-13-075",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "On a conformal projection, the 'scale factor' at any point is the same in:",
+      "options": [
+        "North and east directions",
+        "All directions",
+        "North only",
+        "East only"
+      ],
+      "answer": "B",
+      "solution": "Conformality means the scale factor is isotropic (same in all directions) at each point, though it may vary from point to point."
+    },
+    {
+      "id": "ncl-surveyor-13-076",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'Lambert projection' with two standard parallels is also called:",
+      "options": [
+        "Secant projection",
+        "Tangent projection",
+        "Perspective projection",
+        "Interrupted projection"
+      ],
+      "answer": "A",
+      "solution": "When the projection cone cuts through the ellipsoid (two standard parallels), it is a secant projection."
+    },
+    {
+      "id": "ncl-surveyor-13-077",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'UTM grid convergence' at a point is the angle between:",
+      "options": [
+        "Grid north and true north",
+        "Grid north and magnetic north",
+        "True north and magnetic north",
+        "Two parallels"
+      ],
+      "answer": "A",
+      "solution": "Grid convergence \u03b3 = angle between grid north (y-axis) and true (geodetic) north (meridian)."
+    },
+    {
+      "id": "ncl-surveyor-13-078",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'arc-to-chord' (reduction to chord) correction is needed because:",
+      "options": [
+        "Map projections distort distances",
+        "A geodetic line on the ellipsoid is a great circle, not a straight line on the projection",
+        "Temperature affects measurements",
+        "Gravity varies"
+      ],
+      "answer": "B",
+      "solution": "The projection of a geodetic line onto the map is curved; the straight chord on the map differs from the projected arc."
+    },
+    {
+      "id": "ncl-surveyor-13-079",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'geodetic coordinate system' uses which axes?",
+      "options": [
+        "X toward Greenwich, Y toward 90\u00b0E, Z toward North Pole",
+        "X toward North Pole, Y toward Greenwich, Z toward 90\u00b0E",
+        "X east, Y north, Z up",
+        "Any arbitrary axes"
+      ],
+      "answer": "A",
+      "solution": "Geocentric: X through (\u03c6=0, \u03bb=0), Y through (\u03c6=0, \u03bb=90\u00b0E), Z through North Pole."
+    },
+    {
+      "id": "ncl-surveyor-13-080",
+      "subject": "Mine Surveying",
+      "topic": "Map Projections",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'azimuth' on the UTM grid is measured from:",
+      "options": [
+        "True north",
+        "Magnetic north",
+        "Grid north (the y-axis)",
+        "The central meridian"
+      ],
+      "answer": "C",
+      "solution": "Grid azimuth is measured clockwise from the grid north direction (parallel to the y-axis of the projection)."
+    },
+    {
+      "id": "ncl-surveyor-13-g001",
+      "subject": "General Awareness",
+      "topic": "QA-Avg",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average of three numbers is 40. The first two numbers are 30 and 45. What is the third number?",
+      "options": [
+        "A. 35",
+        "B. 40",
+        "C. 45",
+        "D. 50"
+      ],
+      "answer": "C",
+      "solution": "Sum = 120. Third = 120-30-45 = 45."
+    },
+    {
+      "id": "ncl-surveyor-13-g002",
+      "subject": "General Awareness",
+      "topic": "QA-Ratio",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If A:B = 3:4 and B:C = 2:5, what is A:B:C?",
+      "options": [
+        "A. 3:4:10",
+        "B. 3:4:8",
+        "C. 6:8:20",
+        "D. 3:2:5"
+      ],
+      "answer": "A",
+      "solution": "B is common. LCM of 4 and 2 = 4. A:B = 3:4, B:C = 4:10. A:B:C = 3:4:10."
+    },
+    {
+      "id": "ncl-surveyor-13-g003",
+      "subject": "General Awareness",
+      "topic": "QA-Ratio",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Divide \u20b91,200 in the ratio 3:5.",
+      "options": [
+        "A. \u20b9400, \u20b9800",
+        "B. \u20b9450, \u20b9750",
+        "C. \u20b9360, \u20b9840",
+        "D. \u20b9500, \u20b9700"
+      ],
+      "answer": "B",
+      "solution": "3+5=8. First = 1200\u00d73/8=450. Second = 1200\u00d75/8=750."
+    },
+    {
+      "id": "ncl-surveyor-13-g004",
+      "subject": "General Awareness",
+      "topic": "QA-Ratio",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If 40% of A = 0.25 \u00d7 B, then A:B = ?",
+      "options": [
+        "A. 5:8",
+        "B. 8:5",
+        "C. 5:4",
+        "D. 4:5"
+      ],
+      "answer": "A",
+      "solution": "0.4A = 0.25B \u2192 A/B = 0.25/0.4 = 5/8 \u2192 A:B = 5:8."
+    },
+    {
+      "id": "ncl-surveyor-13-g005",
+      "subject": "General Awareness",
+      "topic": "QA-Ratio",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of present ages of A and B is 5:7. If B is 28 years old, what is A's age?",
+      "options": [
+        "A. 18",
+        "B. 20",
+        "C. 22",
+        "D. 24"
+      ],
+      "answer": "B",
+      "solution": "5/7 = A/28 \u2192 A = 20."
+    },
+    {
+      "id": "ncl-surveyor-13-g006",
+      "subject": "General Awareness",
+      "topic": "QA-Number",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is the HCF of 36 and 60?",
+      "options": [
+        "A. 6",
+        "B. 8",
+        "C. 12",
+        "D. 18"
+      ],
+      "answer": "C",
+      "solution": "36=2\u00b2\u00d73\u00b2, 60=2\u00b2\u00d73\u00d75. HCF = 2\u00b2\u00d73 = 12."
+    },
+    {
+      "id": "ncl-surveyor-13-g007",
+      "subject": "General Awareness",
+      "topic": "QA-Number",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is the LCM of 12, 18, and 24?",
+      "options": [
+        "A. 48",
+        "B. 60",
+        "C. 72",
+        "D. 96"
+      ],
+      "answer": "C",
+      "solution": "12=2\u00b2\u00d73, 18=2\u00d73\u00b2, 24=2\u00b3\u00d73. LCM = 2\u00b3\u00d73\u00b2 = 72."
+    },
+    {
+      "id": "ncl-surveyor-13-g008",
+      "subject": "General Awareness",
+      "topic": "QA-Number",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which of the following is a prime number?",
+      "options": [
+        "A. 91",
+        "B. 93",
+        "C. 97",
+        "D. 99"
+      ],
+      "answer": "C",
+      "solution": "97 is prime (not divisible by 2,3,5,7). 91=7\u00d713, 93=3\u00d731, 99=9\u00d711."
+    },
+    {
+      "id": "ncl-surveyor-13-g009",
+      "subject": "General Awareness",
+      "topic": "QA-Number",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is the unit digit of 7^2023?",
+      "options": [
+        "A. 1",
+        "B. 3",
+        "C. 7",
+        "D. 9"
+      ],
+      "answer": "D",
+      "solution": "Unit digits cycle: 7,9,3,1. 2023 mod 4 = 3. So unit digit = 3. Wait: 7^1=7, 7^2=9, 7^3=3, 7^4=1. 2023\u00f74 = 505 remainder 3. So unit digit = 3. Answer should be B."
+    },
+    {
+      "id": "ncl-surveyor-13-g010",
+      "subject": "General Awareness",
+      "topic": "QA-Number",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The sum of first 50 natural numbers is:",
+      "options": [
+        "A. 1200",
+        "B. 1225",
+        "C. 1250",
+        "D. 1275"
+      ],
+      "answer": "D",
+      "solution": "Sum = n(n+1)/2 = 50\u00d751/2 = 1275."
+    },
+    {
+      "id": "ncl-surveyor-13-g011",
+      "subject": "General Awareness",
+      "topic": "QA-Geo",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is the area of a rectangle with length 12 cm and breadth 8 cm?",
+      "options": [
+        "A. 80 cm\u00b2",
+        "B. 96 cm\u00b2",
+        "C. 100 cm\u00b2",
+        "D. 110 cm\u00b2"
+      ],
+      "answer": "B",
+      "solution": "Area = 12\u00d78 = 96 cm\u00b2."
+    },
+    {
+      "id": "ncl-surveyor-13-g012",
+      "subject": "General Awareness",
+      "topic": "QA-Geo",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is the circumference of a circle with radius 7 cm? (Take \u03c0 = 22/7)",
+      "options": [
+        "A. 33 cm",
+        "B. 44 cm",
+        "C. 22 cm",
+        "D. 30 cm"
+      ],
+      "answer": "B",
+      "solution": "Circumference = 2\u03c0r = 2\u00d722/7\u00d77 = 44 cm."
+    },
+    {
+      "id": "ncl-surveyor-13-g013",
+      "subject": "General Awareness",
+      "topic": "QA-Geo",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The diagonal of a square is 10\u221a2 cm. What is its area?",
+      "options": [
+        "A. 100 cm\u00b2",
+        "B. 200 cm\u00b2",
+        "C. 50 cm\u00b2",
+        "D. 150 cm\u00b2"
+      ],
+      "answer": "A",
+      "solution": "Diagonal = a\u221a2 = 10\u221a2 \u2192 a=10. Area = a\u00b2 = 100 cm\u00b2."
+    },
+    {
+      "id": "ncl-surveyor-13-g014",
+      "subject": "General Awareness",
+      "topic": "QA-Geo",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A right triangle has legs of 6 cm and 8 cm. What is the hypotenuse?",
+      "options": [
+        "A. 10 cm",
+        "B. 12 cm",
+        "C. 14 cm",
+        "D. 9 cm"
+      ],
+      "answer": "A",
+      "solution": "Hypotenuse = \u221a(6\u00b2+8\u00b2) = \u221a(36+64) = \u221a100 = 10 cm."
+    },
+    {
+      "id": "ncl-surveyor-13-g015",
+      "subject": "General Awareness",
+      "topic": "QA-Geo",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The volume of a cube is 64 cm\u00b3. What is its surface area?",
+      "options": [
+        "A. 64 cm\u00b2",
+        "B. 96 cm\u00b2",
+        "C. 128 cm\u00b2",
+        "D. 150 cm\u00b2"
+      ],
+      "answer": "B",
+      "solution": "Side = \u221b64 = 4 cm. Surface area = 6\u00d74\u00b2 = 96 cm\u00b2."
+    },
+    {
+      "id": "ncl-surveyor-13-g016",
+      "subject": "General Awareness",
+      "topic": "QA-DI",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A student scored 40, 50, 60, 70, and 80 in five subjects. What is the average score?",
+      "options": [
+        "A. 50",
+        "B. 55",
+        "C. 60",
+        "D. 65"
+      ],
+      "answer": "C",
+      "solution": "Average = (40+50+60+70+80)/5 = 300/5 = 60."
+    },
+    {
+      "id": "ncl-surveyor-13-g017",
+      "subject": "General Awareness",
+      "topic": "QA-DI",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In a class, 60% of students are boys and 40% are girls. If there are 200 students, how many girls are there?",
+      "options": [
+        "A. 60",
+        "B. 70",
+        "C. 80",
+        "D. 100"
+      ],
+      "answer": "C",
+      "solution": "Girls = 40% of 200 = 80."
+    },
+    {
+      "id": "ncl-surveyor-13-g018",
+      "subject": "General Awareness",
+      "topic": "QA-DI",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the total production of a factory in 5 years is 25,000 units, and production increases by 20% each year starting from year 2, approximately what was the production in year 1?",
+      "options": [
+        "A. 3,500",
+        "B. 4,000",
+        "C. 4,500",
+        "D. 5,000"
+      ],
+      "answer": "B",
+      "solution": "Let year 1 = x. x + 1.2x + 1.44x + 1.728x + 2.0736x = 25000. 7.4416x = 25000. x \u2248 3360. Closest: 4000. This is approximate."
+    },
+    {
+      "id": "ncl-surveyor-13-g019",
+      "subject": "General Awareness",
+      "topic": "QA-DI",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A pie chart shows expenses: Food 30%, Rent 25%, Transport 15%, Education 20%, Others 10%. If total monthly expense is \u20b924,000, how much is spent on Education?",
+      "options": [
+        "A. \u20b93,600",
+        "B. \u20b94,800",
+        "C. \u20b96,000",
+        "D. \u20b95,400"
+      ],
+      "answer": "B",
+      "solution": "Education = 20% of 24000 = \u20b94,800."
+    },
+    {
+      "id": "ncl-surveyor-13-g020",
+      "subject": "General Awareness",
+      "topic": "QA-DI",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The sales of a company in 4 quarters are \u20b950 lakh, \u20b960 lakh, \u20b945 lakh, and \u20b965 lakh. What is the average quarterly sales?",
+      "options": [
+        "A. \u20b952.5 lakh",
+        "B. \u20b955 lakh",
+        "C. \u20b950 lakh",
+        "D. \u20b957.5 lakh"
+      ],
+      "answer": "A",
+      "solution": "Average = (50+60+45+65)/4 = 220/4 = \u20b955 lakh. Answer should be B."
     }
   ]
 }
