@@ -1,15 +1,17 @@
 export const metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about CrackGate — free mocks, scoring rules, exam subjects, pricing plans, and how our GATE & PSU test-prep platform works.",
+    "Frequently asked questions about CrackGate — mock tests, practice questions, scoring, exam coverage (GATE, PSU, Diploma, State), pricing plans, and how our test-prep platform works.",
   alternates: { canonical: "/faq" },
 };
 const QAs = [
-  { q: "Is CrackGate only for GATE Mining?",       a: "Yes — we don't dilute focus. Every mock is for the GATE MN paper." },
-  { q: "Is the first mock really free?",            a: "Yes. Sign in with Google and Mock 01 is unlocked." },
+  { q: "Which exams does CrackGate cover?",       a: "GATE (Mining, Civil, Geology, Environment, and more), PSU recruitment (CIL, ONGC), diploma-level exams (NCL, WCL), and state mining exams — all in one platform." },
+  { q: "Is the first mock really free?",            a: "Yes. Sign in with Google and your first mock for any exam track is unlocked." },
   { q: "How is scoring done?",                      a: "Server-side. MCQ: +marks / −marks/3. NAT: ±tolerance, no negative. MSQ: all-or-nothing, no negative." },
   { q: "Will my progress sync across devices?",     a: "Yes. Once you sign in, all your attempts and analytics live in our database." },
   { q: "Can I get a refund?",                       a: "Yes — within 7 days if you've attempted ≤ 1 paid paper. See refund policy." },
+  { q: "What is the difference between Free, Pro, and Premium?", a: "Free gives you limited mocks and practice. Pro unlocks full mock tests and subject-wise practice for one exam track. Premium gives you everything across all tracks." },
+  { q: "Do you have diploma-level exam mocks?",     a: "Yes. We cover NCL Mining Sirdar, NCL Surveyor, WCL Mining Sirdar, and WCL Assistant Foreman — with 20 mocks each, built from official syllabus." },
 ];
 export default function FAQ() {
   const faqSchema = {
