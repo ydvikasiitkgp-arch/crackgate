@@ -757,30 +757,30 @@ export function PsuWindow() {
 
 function CilEligibilityCard() {
   return (
-    <div className="rounded-2xl border border-cyan-300/20 bg-slate-900/60 p-4 shadow-pop backdrop-blur">
-      <div className="mb-2 flex items-center justify-between">
+    <div className="rounded-2xl border border-cyan-300/20 bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 shadow-pop backdrop-blur-md ring-1 ring-white/5">
+      <div className="mb-3 flex items-center justify-between">
         <div className="text-xs font-semibold uppercase tracking-wide text-cyan-300">
           CIL Management Trainee · Eligibility &amp; Seats
         </div>
-        <span className="badge bg-cyan-400/10 text-cyan-200">{CIL_TOTAL_SEATS} seats</span>
+        <span className="badge bg-cyan-400/10 text-cyan-200 ring-1 ring-cyan-300/20">{CIL_TOTAL_SEATS} seats</span>
       </div>
-      <div className="max-h-[300px] overflow-y-auto rounded-lg border border-white/10">
+      <div className="max-h-[300px] overflow-y-auto rounded-lg border border-white/10 scrollbar-thin">
         <table className="w-full text-left text-xs">
-          <thead className="sticky top-0 bg-slate-800/90 text-cyan-200 backdrop-blur">
+          <thead className="sticky top-0 bg-slate-800/95 text-cyan-200 backdrop-blur">
             <tr>
-              <th className="px-2 py-2 font-semibold">Code</th>
-              <th className="px-2 py-2 font-semibold">Discipline</th>
-              <th className="px-2 py-2 text-right font-semibold">Seats</th>
-              <th className="px-2 py-2 font-semibold">Minimum Qualification</th>
+              <th className="px-2.5 py-2.5 font-semibold">Code</th>
+              <th className="px-2.5 py-2.5 font-semibold">Discipline</th>
+              <th className="px-2.5 py-2.5 text-right font-semibold">Seats</th>
+              <th className="px-2.5 py-2.5 font-semibold">Minimum Qualification</th>
             </tr>
           </thead>
           <tbody className="text-white/80">
             {CIL_ROWS.map((r) => (
-              <tr key={r.code} className="border-t border-white/5 align-top">
-                <td className="px-2 py-2 font-mono text-cyan-300">{r.code}</td>
-                <td className="px-2 py-2 font-medium text-white">{r.discipline}</td>
-                <td className="px-2 py-2 text-right font-mono font-semibold text-cyan-200">{r.seats}</td>
-                <td className="px-2 py-2 leading-snug">{r.qualification}</td>
+              <tr key={r.code} className="border-t border-white/5 align-top hover:bg-white/5 transition-colors duration-150">
+                <td className="px-2.5 py-2.5 font-mono text-cyan-300">{r.code}</td>
+                <td className="px-2.5 py-2.5 font-medium text-white">{r.discipline}</td>
+                <td className="px-2.5 py-2.5 text-right font-mono font-semibold text-cyan-200">{r.seats}</td>
+                <td className="px-2.5 py-2.5 leading-snug">{r.qualification}</td>
               </tr>
             ))}
           </tbody>

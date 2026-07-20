@@ -46,7 +46,7 @@ export function UserMenu({
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
-        className="flex items-center gap-2 rounded-full pl-1 pr-2 py-1 hover:bg-canvas transition border border-transparent hover:border-line"
+        className="flex items-center gap-1.5 rounded-full p-1 hover:bg-canvas transition border border-transparent hover:border-line"
       >
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -54,10 +54,6 @@ export function UserMenu({
         ) : (
           <span className="w-8 h-8 rounded-full bg-brand text-white grid place-items-center text-xs font-bold">{initials}</span>
         )}
-        <div className="hidden lg:flex flex-col leading-tight text-left">
-          <span className="text-xs font-semibold">{firstName}</span>
-          <span className={`badge ${planClass} mt-0.5 w-fit text-[10px]`}>{planLabel}</span>
-        </div>
         <svg className={`w-4 h-4 text-muted transition-transform ${open ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor" aria-hidden>
           <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.24 4.38a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clipRule="evenodd" />
         </svg>
@@ -77,7 +73,7 @@ export function UserMenu({
               <div className="min-w-0 flex-1">
                 <div className="font-semibold truncate">{name}</div>
                 <div className="text-xs text-muted truncate">{email}</div>
-                <div className="mt-1 flex gap-1.5 items-center">
+                <div className="mt-1.5 flex gap-1.5 items-center">
                   <span className={`badge ${planClass} text-[10px]`}>{planLabel}</span>
                   {role === "admin" && <span className="badge bg-purple-50 text-purple-700 text-[10px]">ADMIN</span>}
                 </div>
