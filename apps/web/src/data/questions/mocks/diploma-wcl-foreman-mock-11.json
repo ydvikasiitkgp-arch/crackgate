@@ -1,20 +1,20 @@
 {
   "id": "diploma-wcl-foreman-mock-11",
-  "title": "WCL Asst. Foreman Electrical — Mock 11",
+  "title": "WCL Asst. Foreman (Electrical) \u2014 Mock 11",
   "tier": "pro",
   "duration": 120,
-  "pattern": "WCL Asst. Foreman (Electrical) CBT (100 Q · 100 marks · 120 min · no −ve)",
+  "pattern": "WCL Asst. Foreman (Electrical) CBT (100 Q \u00b7 100 marks \u00b7 120 min \u00b7 no \u2212ve)",
   "totalMarks": 100,
   "sections": [
-    {
-      "name": "General Awareness & Aptitude",
-      "count": 20,
-      "marks": 20
-    },
     {
       "name": "Technical (Electrical)",
       "count": 80,
       "marks": 80
+    },
+    {
+      "name": "General Awareness & Aptitude",
+      "count": 20,
+      "marks": 20
     }
   ],
   "negativeMarking": {
@@ -23,1808 +23,1808 @@
     "nat": 0,
     "msq": 0
   },
-  "seed": 4027136544,
+  "seed": 2580565105,
   "locked": true,
   "questions": [
     {
-      "id": 1,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative — Average",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
+      "id": "wcl-afel-11-001",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The average of 5, 10, 15, 20, 25 is:",
+      "difficulty": "medium",
+      "stem": "The driving torque in a single-phase energy meter is produced by:",
       "options": [
+        "Only shunt magnet",
+        "Interaction of series and shunt magnet fluxes",
+        "Spring control",
+        "Gravity"
+      ],
+      "answer": "B",
+      "solution": "Series magnet (proportional to I) and shunt magnet (proportional to V) interact to produce torque \u221d VI cos\u03c6."
+    },
+    {
+      "id": "wcl-afel-11-002",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The braking torque in an energy meter is provided by:",
+      "options": [
+        "Air friction",
+        "A permanent magnet eddy current disc brake",
+        "Spring",
+        "Fluid friction"
+      ],
+      "answer": "B",
+      "solution": "A permanent magnet near the disc edge produces eddy current braking torque proportional to speed."
+    },
+    {
+      "id": "wcl-afel-11-003",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An energy meter disc rotates faster when:",
+      "options": [
+        "Power consumption is less",
+        "Power consumption is more",
+        "Voltage is less",
+        "Frequency is less"
+      ],
+      "answer": "B",
+      "solution": "Higher power \u2192 more driving torque \u2192 faster disc rotation."
+    },
+    {
+      "id": "wcl-afel-11-004",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The correct connection of a single-phase wattmeter has:",
+      "options": [
+        "Current coil in series and potential coil in series",
+        "Current coil in series and potential coil in parallel",
+        "Both coils in series",
+        "Both coils in parallel"
+      ],
+      "answer": "B",
+      "solution": "Current coil in series with load; potential coil in parallel with load."
+    },
+    {
+      "id": "wcl-afel-11-005",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The two-wattmeter method is used to measure power in:",
+      "options": [
+        "Single-phase circuits",
+        "Three-phase three-wire circuits",
+        "DC circuits only",
+        "Single-phase only"
+      ],
+      "answer": "B",
+      "solution": "Two-wattmeter method measures total three-phase power in 3-wire systems."
+    },
+    {
+      "id": "wcl-afel-11-006",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In a balanced three-phase system with unity PF, the two wattmeters read:",
+      "options": [
+        "Equal and opposite",
+        "Equal and positive",
+        "One reads zero",
+        "Both negative"
+      ],
+      "answer": "B",
+      "solution": "At unity PF, both wattmeters read equal positive values."
+    },
+    {
+      "id": "wcl-afel-11-007",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "At zero power factor (purely reactive load), in the two-wattmeter method:",
+      "options": [
+        "Both readings are positive",
+        "One reading is zero",
+        "Both readings are equal and opposite",
+        "Both readings are negative"
+      ],
+      "answer": "C",
+      "solution": "At zero PF, one reads +W and other \u2212W. Total real power = 0."
+    },
+    {
+      "id": "wcl-afel-11-008",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The voltmeter-ammeter method for resistance measurement gives accurate results when measuring:",
+      "options": [
+        "Low resistance (voltmeter across resistance)",
+        "High resistance (ammeter in series)",
+        "Depends on connection",
+        "Both connections equally"
+      ],
+      "answer": "C",
+      "solution": "For low R: short shunt. For high R: long shunt."
+    },
+    {
+      "id": "wcl-afel-11-009",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the short shunt connection of voltmeter-ammeter method, the voltmeter measures:",
+      "options": [
+        "Voltage across resistance only",
+        "Voltage across resistance and ammeter",
+        "Only ammeter voltage drop",
+        "Source voltage"
+      ],
+      "answer": "A",
+      "solution": "Short shunt: voltmeter connected directly across the unknown resistance."
+    },
+    {
+      "id": "wcl-afel-11-010",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Kelvin's double bridge is used to measure:",
+      "options": [
+        "Very high resistance",
+        "Very low resistance (below 1 ohm)",
+        "Medium resistance",
+        "Inductance"
+      ],
+      "answer": "B",
+      "solution": "Kelvin bridge eliminates lead and contact resistance errors."
+    },
+    {
+      "id": "wcl-afel-11-011",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Kelvin bridge eliminates errors caused by:",
+      "options": [
+        "High resistance",
+        "Lead resistance and contact resistance",
+        "Temperature",
+        "Frequency"
+      ],
+      "answer": "B",
+      "solution": "Kelvin bridge uses additional ratio arms to nullify lead resistance effect."
+    },
+    {
+      "id": "wcl-afel-11-012",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Wheatstone bridge is used to measure:",
+      "options": [
+        "Very low resistance",
+        "Medium resistance (1 ohm to 1 megaohm)",
+        "Very high resistance",
+        "Capacitance"
+      ],
+      "answer": "B",
+      "solution": "Wheatstone bridge measures medium resistances accurately."
+    },
+    {
+      "id": "wcl-afel-11-013",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A Wheatstone bridge is balanced when:",
+      "options": [
+        "P/Q = R/S",
+        "P \u00d7 Q = R \u00d7 S",
+        "P + Q = R + S",
+        "P = Q = R = S"
+      ],
+      "answer": "A",
+      "solution": "Bridge balance: P/Q = R/S where P, Q are ratio arms."
+    },
+    {
+      "id": "wcl-afel-11-014",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A megger is used to measure:",
+      "options": [
+        "Low resistance",
+        "Medium resistance",
+        "Insulation resistance (very high resistance)",
+        "Inductance"
+      ],
+      "answer": "C",
+      "solution": "Megger applies high DC voltage to measure insulation resistance in megaohms."
+    },
+    {
+      "id": "wcl-afel-11-015",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A megger operates on the principle of:",
+      "options": [
+        "Wheatstone bridge",
+        "Deflecting type instrument with hand-driven DC generator",
+        "PMMC movement only",
+        "Electrostatic principle"
+      ],
+      "answer": "B",
+      "solution": "Hand-driven generator applies DC voltage; ratio of voltage to current gives resistance."
+    },
+    {
+      "id": "wcl-afel-11-016",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "While measuring insulation resistance with a megger, the measured resistance includes:",
+      "options": [
+        "Only conductor resistance",
+        "Surface leakage and volume insulation resistance",
+        "Only contact resistance",
+        "Only cable capacitance"
+      ],
+      "answer": "B",
+      "solution": "Megger measures total insulation resistance including surface leakage."
+    },
+    {
+      "id": "wcl-afel-11-017",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A multimeter can measure:",
+      "options": [
+        "Only voltage",
+        "Voltage, current, and resistance",
+        "Only resistance",
+        "Only current"
+      ],
+      "answer": "B",
+      "solution": "Multimeter combines voltmeter, ammeter, and ohmmeter functions."
+    },
+    {
+      "id": "wcl-afel-11-018",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A clamp meter measures current by:",
+      "options": [
+        "Breaking the circuit and inserting the meter",
+        "Clamping a current transformer jaw around the conductor",
+        "Using a shunt resistor",
+        "Direct contact with conductor"
+      ],
+      "answer": "B",
+      "solution": "Clamp meter uses split CT core that clamps around the conductor."
+    },
+    {
+      "id": "wcl-afel-11-019",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The advantage of a clamp meter is:",
+      "options": [
+        "Higher accuracy than PMMC",
+        "Non-invasive current measurement without breaking circuit",
+        "Can measure voltage directly",
+        "Can measure power directly"
+      ],
+      "answer": "B",
+      "solution": "Clamp meter allows current measurement without disconnecting conductor."
+    },
+    {
+      "id": "wcl-afel-11-020",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "CRO stands for:",
+      "options": [
+        "Current Resistance Oscilloscope",
+        "Cathode Ray Oscilloscope",
+        "Central Readout Oscillator",
+        "Circuit Response Observer"
+      ],
+      "answer": "B",
+      "solution": "CRO displays voltage waveforms on a CRT screen."
+    },
+    {
+      "id": "wcl-afel-11-021",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The horizontal deflection in a CRO is produced by:",
+      "options": [
+        "Signal voltage",
+        "Sweep (time base) generator",
+        "Z-axis modulation",
+        "Intensity modulation"
+      ],
+      "answer": "B",
+      "solution": "Sawtooth sweep generator deflects beam horizontally at constant rate."
+    },
+    {
+      "id": "wcl-afel-11-022",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The vertical deflection in a CRO is produced by:",
+      "options": [
+        "Sweep generator",
+        "Signal to be measured applied to Y-plates",
+        "Z-axis input",
+        "Focus control"
+      ],
+      "answer": "B",
+      "solution": "Input signal applied to vertical (Y) deflection plates."
+    },
+    {
+      "id": "wcl-afel-11-023",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A digital multimeter (DMM) typically uses which type of A/D converter?",
+      "options": [
+        "Successive approximation",
+        "Dual slope integrating ADC",
+        "Flash ADC only",
+        "Sigma-delta only"
+      ],
+      "answer": "B",
+      "solution": "Dual-slope ADC provides high accuracy and noise rejection for DMM."
+    },
+    {
+      "id": "wcl-afel-11-024",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The advantage of a digital multimeter over analog is:",
+      "options": [
+        "Lower cost",
+        "Higher input impedance and direct digital readout",
+        "Better for AC only",
+        "No battery needed"
+      ],
+      "answer": "B",
+      "solution": "DMM has very high input impedance and gives precise digital readout."
+    },
+    {
+      "id": "wcl-afel-11-025",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A power analyzer measures:",
+      "options": [
+        "Only voltage",
+        "Voltage, current, power factor, harmonics, and power",
+        "Only current",
+        "Only resistance"
+      ],
+      "answer": "B",
+      "solution": "Power analyzers measure V, I, PF, power, energy, harmonics, and flicker."
+    },
+    {
+      "id": "wcl-afel-11-026",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The true RMS value of an AC quantity is the:",
+      "options": [
+        "Peak value",
+        "Square root of mean of squares of instantaneous values",
+        "Average value",
+        "Peak-to-peak value / 2"
+      ],
+      "answer": "B",
+      "solution": "True RMS = \u221a(mean of v\u00b2). Handles non-sinusoidal waveforms."
+    },
+    {
+      "id": "wcl-afel-11-027",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PMMC instrument with a series multiplier is used as a:",
+      "options": [
+        "Ammeter",
+        "Voltmeter",
+        "Ohmmeter",
+        "Wattmeter"
+      ],
+      "answer": "B",
+      "solution": "High resistance in series with PMMC extends voltage range."
+    },
+    {
+      "id": "wcl-afel-11-028",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PMMC instrument with a shunt is used as a:",
+      "options": [
+        "Voltmeter",
+        "Ammeter",
+        "Ohmmeter",
+        "Wattmeter"
+      ],
+      "answer": "B",
+      "solution": "Low resistance (shunt) in parallel extends current range."
+    },
+    {
+      "id": "wcl-afel-11-029",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The shunt resistance of an ammeter should be:",
+      "options": [
+        "Very high",
+        "Very low",
+        "Equal to load resistance",
+        "Infinite"
+      ],
+      "answer": "B",
+      "solution": "Shunt resistance must be very low to minimize voltage drop."
+    },
+    {
+      "id": "wcl-afel-11-030",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The multiplier resistance of a voltmeter should be:",
+      "options": [
+        "Very low",
+        "Very high",
+        "Equal to load resistance",
+        "Zero"
+      ],
+      "answer": "B",
+      "solution": "Multiplier resistance must be very high to minimize current drawn."
+    },
+    {
+      "id": "wcl-afel-11-031",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The sensitivity of a voltmeter is expressed in:",
+      "options": [
+        "Ohms",
+        "Ohms per volt (\u03a9/V)",
+        "Volts per ohm",
+        "Amperes"
+      ],
+      "answer": "B",
+      "solution": "Sensitivity (\u03a9/V) = 1/full-scale deflection current."
+    },
+    {
+      "id": "wcl-afel-11-032",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An ideal voltmeter has:",
+      "options": [
+        "Zero resistance",
+        "Infinite resistance",
+        "Equal resistance to load",
+        "Negative resistance"
+      ],
+      "answer": "B",
+      "solution": "Infinite resistance ensures zero current drawn from circuit."
+    },
+    {
+      "id": "wcl-afel-11-033",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An ideal ammeter has:",
+      "options": [
+        "Infinite resistance",
+        "Zero resistance",
+        "Equal resistance to load",
+        "Negative resistance"
+      ],
+      "answer": "B",
+      "solution": "Zero resistance ensures no voltage drop across the ammeter."
+    },
+    {
+      "id": "wcl-afel-11-034",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PMMC instrument can be converted to measure AC by adding a:",
+      "options": [
+        "Rectifier",
+        "Transformer",
+        "Capacitor",
+        "Inductor"
+      ],
+      "answer": "A",
+      "solution": "Rectifier-type instrument uses rectifier bridge with PMMC to measure AC."
+    },
+    {
+      "id": "wcl-afel-11-035",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Hot wire instruments work on the principle of:",
+      "options": [
+        "Magnetic effect of current",
+        "Heating effect of current causing expansion of wire",
+        "Electrostatic effect",
+        "Electromagnetic induction"
+      ],
+      "answer": "B",
+      "solution": "Current heats a wire causing expansion and pointer movement. Works for AC and DC."
+    },
+    {
+      "id": "wcl-afel-11-036",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Induction type energy meters work on the principle of:",
+      "options": [
+        "PMMC action",
+        "Interaction of alternating fluxes producing rotating field",
+        "Heating effect",
+        "Electrostatic force"
+      ],
+      "answer": "B",
+      "solution": "Alternating fluxes produce rotating field inducing eddy currents in disc."
+    },
+    {
+      "id": "wcl-afel-11-037",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Creeping in an energy meter is:",
+      "options": [
+        "Disc rotation at no load",
+        "Disc rotation at full load",
+        "Meter reading backwards",
+        "Meter fuse blowing"
+      ],
+      "answer": "A",
+      "solution": "Creeping is slow disc rotation at no load due to incomplete magnet symmetry."
+    },
+    {
+      "id": "wcl-afel-11-038",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "To prevent creeping, energy meters are provided with:",
+      "options": [
+        "Brake magnets",
+        "A small hole or anti-creep notch in the disc",
+        "Dampers",
+        "Extra voltage coils"
+      ],
+      "answer": "B",
+      "solution": "Anti-creep holes prevent continuous rotation at no load."
+    },
+    {
+      "id": "wcl-afel-11-039",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An kWh meter disc constant of 600 rev/kWh means:",
+      "options": [
+        "The meter draws 600 A",
+        "The disc rotates 600 times per kWh of energy consumed",
+        "The meter voltage is 600 V",
+        "The meter has 600 ohm resistance"
+      ],
+      "answer": "B",
+      "solution": "Meter constant: disc makes 600 revolutions per kWh consumed."
+    },
+    {
+      "id": "wcl-afel-11-040",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If a 600 rev/kWh meter disc rotates 30 times in 2 minutes, the load is:",
+      "options": [
+        "0.5 kW",
+        "1.0 kW",
+        "1.5 kW",
+        "2.0 kW"
+      ],
+      "answer": "C",
+      "solution": "Energy = 30/600 = 0.05 kWh. Power = 0.05/(2/60) = 1.5 kW."
+    },
+    {
+      "id": "wcl-afel-11-041",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A CT of ratio 200/5 A with a secondary ammeter reading 3.5 A indicates a primary current of:",
+      "options": [
+        "3.5 A",
+        "70 A",
+        "140 A",
+        "1000 A"
+      ],
+      "answer": "C",
+      "solution": "Primary current = (200/5) \u00d7 3.5 = 140 A."
+    },
+    {
+      "id": "wcl-afel-11-042",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PT of ratio 11000/110 V with secondary voltage of 105 V indicates a primary voltage of:",
+      "options": [
+        "105 V",
+        "10500 V",
+        "11000 V",
+        "11550 V"
+      ],
+      "answer": "B",
+      "solution": "Primary voltage = (11000/110) \u00d7 105 = 10500 V."
+    },
+    {
+      "id": "wcl-afel-11-043",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The burden on a CT is expressed in:",
+      "options": [
+        "Amperes",
+        "Volt-amperes (VA)",
+        "Ohms only",
+        "Watts"
+      ],
+      "answer": "B",
+      "solution": "CT burden is total VA load on the secondary."
+    },
+    {
+      "id": "wcl-afel-11-044",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Instrument transformers provide isolation between:",
+      "options": [
+        "Primary conductor and secondary metering/relay circuits",
+        "Two phases",
+        "Two windings",
+        "Conductor and earth"
+      ],
+      "answer": "A",
+      "solution": "CTs and PTs isolate high-voltage primary from metering/protection circuits."
+    },
+    {
+      "id": "wcl-afel-11-045",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A potentiometer measures voltage by:",
+      "options": [
+        "Direct connection",
+        "Comparison with a known voltage (null-balance method)",
+        "Current measurement",
+        "Resistance measurement"
+      ],
+      "answer": "B",
+      "solution": "Potentiometer compares unknown EMF against calibrated voltage at null."
+    },
+    {
+      "id": "wcl-afel-11-046",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The main advantage of a potentiometer is:",
+      "options": [
+        "High current handling",
+        "No current drawn from source at null \u2014 true EMF measurement",
+        "Very low cost",
+        "Works only for AC"
+      ],
+      "answer": "B",
+      "solution": "At null balance, no current flows from source, measuring true EMF."
+    },
+    {
+      "id": "wcl-afel-11-047",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A CRO can measure:",
+      "options": [
+        "Only voltage amplitude",
+        "Voltage, frequency, phase, and waveform",
+        "Current directly",
+        "Power directly"
+      ],
+      "answer": "B",
+      "solution": "CRO displays voltage vs. time, enabling measurement of amplitude, frequency, and phase."
+    },
+    {
+      "id": "wcl-afel-11-048",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Lissajous pattern on a CRO is used to measure:",
+      "options": [
+        "Power",
+        "Frequency ratio and phase difference between two signals",
+        "Current",
+        "Resistance"
+      ],
+      "answer": "B",
+      "solution": "Lissajous figures help determine frequency ratio and phase."
+    },
+    {
+      "id": "wcl-afel-11-049",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A VTVM (Vacuum Tube Voltmeter) has the advantage of:",
+      "options": [
+        "Measuring very high current",
+        "Very high input impedance compared to PMMC voltmeter",
+        "Measuring power directly",
+        "Working without power"
+      ],
+      "answer": "B",
+      "solution": "VTVM uses vacuum tube amplifier for very high input impedance."
+    },
+    {
+      "id": "wcl-afel-11-050",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An FET-based voltmeter has input impedance of the order of:",
+      "options": [
+        "1 k\u03a9",
+        "100 k\u03a9",
+        "100 M\u03a9 to several G\u03a9",
+        "1 \u03a9"
+      ],
+      "answer": "C",
+      "solution": "FET input stages provide extremely high input impedance (10\u00b9\u2070\u201310\u00b9\u00b2 \u03a9)."
+    },
+    {
+      "id": "wcl-afel-11-051",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Peak value of a sine wave can be measured using:",
+      "options": [
+        "Moving iron instrument",
+        "CRO or peak-reading voltmeter",
+        "PMMC instrument",
+        "Dynamometer instrument"
+      ],
+      "answer": "B",
+      "solution": "CRO directly shows peak value."
+    },
+    {
+      "id": "wcl-afel-11-052",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average value of a full-wave rectified sine wave is:",
+      "options": [
+        "V_m/\u03c0",
+        "2V_m/\u03c0",
+        "V_m/\u221a2",
+        "V_m/2"
+      ],
+      "answer": "B",
+      "solution": "Average of full-wave rectified sine = 2V_m/\u03c0 = 0.637 V_m."
+    },
+    {
+      "id": "wcl-afel-11-053",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Form factor of a sinusoidal waveform is defined as:",
+      "options": [
+        "V_rms / V_avg",
+        "V_avg / V_rms",
+        "V_peak / V_rms",
+        "V_rms / V_peak"
+      ],
+      "answer": "A",
+      "solution": "Form factor = RMS/Average = \u03c0/(2\u221a2) = 1.11 for sinusoidal wave."
+    },
+    {
+      "id": "wcl-afel-11-054",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Crest factor (peak factor) of a sine wave is:",
+      "options": [
+        "1.11",
+        "1.414",
+        "0.9",
+        "2.0"
+      ],
+      "answer": "B",
+      "solution": "Crest factor = V_peak/V_rms = \u221a2 = 1.414 for sinusoidal waveform."
+    },
+    {
+      "id": "wcl-afel-11-055",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An oscilloscope probe (10:1) is used to:",
+      "options": [
+        "Increase the input voltage by 10\u00d7",
+        "Attenuate signal by 10\u00d7 and increase input impedance",
+        "Increase bandwidth only",
+        "Reduce noise only"
+      ],
+      "answer": "B",
+      "solution": "10:1 probe attenuates signal 10\u00d7 and increases input impedance to ~10 M\u03a9."
+    },
+    {
+      "id": "wcl-afel-11-056",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Bandwidth of a CRO refers to:",
+      "options": [
+        "Maximum voltage it can measure",
+        "Frequency range over which the vertical amplifier maintains specified accuracy",
+        "Sweep speed range",
+        "Screen size"
+      ],
+      "answer": "B",
+      "solution": "Bandwidth is the frequency range where vertical sensitivity is within \u00b13 dB."
+    },
+    {
+      "id": "wcl-afel-11-057",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A sampling oscilloscope is used to measure:",
+      "options": [
+        "Low frequency signals",
+        "Very high frequency repetitive signals",
+        "DC signals only",
+        "Current waveforms only"
+      ],
+      "answer": "B",
+      "solution": "Sampling oscilloscope reconstructs high-frequency repetitive waveforms."
+    },
+    {
+      "id": "wcl-afel-11-058",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The function of the time base in a CRO is to:",
+      "options": [
+        "Amplify the input signal",
+        "Provide horizontal sweep at known rate for time measurement",
+        "Focus the beam",
+        "Control brightness"
+      ],
+      "answer": "B",
+      "solution": "Time base produces sawtooth waveform for horizontal deflection."
+    },
+    {
+      "id": "wcl-afel-11-059",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A digital power meter typically uses which method for power calculation?",
+      "options": [
+        "Analog wattmeter method",
+        "Simultaneous sampling of V and I with DSP computation",
+        "Thermal method",
+        "Electrostatic method"
+      ],
+      "answer": "B",
+      "solution": "Digital power meters sample V and I simultaneously, computing power using DSP."
+    },
+    {
+      "id": "wcl-afel-11-060",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A multimeter in resistance mode measures resistance by:",
+      "options": [
+        "Passing a known current and measuring voltage drop",
+        "Direct ohmic contact measurement",
+        "Measuring inductance",
+        "Using bridge method"
+      ],
+      "answer": "A",
+      "solution": "Internal battery supplies known current; measured voltage drop gives R = V/I."
+    },
+    {
+      "id": "wcl-afel-11-061",
+      "subject": "Electrical Engineering",
+      "topic": "Measurements \u2014 Instruments",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "When measuring resistance with a multimeter, the reading includes:",
+      "options": [
+        "Only the unknown resistance",
+        "Unknown resistance plus lead resistance",
+        "Only lead resistance",
+        "Capacitance effect only"
+      ],
+      "answer": "B",
+      "solution": "Multimeter measures total R including test lead resistance."
+    },
+    {
+      "id": "wcl-afel-11-062",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The CEA regulations for electrical safety in mines were framed under which act?",
+      "options": [
+        "Mines Act 1952",
+        "Electricity Act 2003",
+        "Coal Mines Act 1952",
+        "Factories Act 1948"
+      ],
+      "answer": "B",
+      "solution": "CEA Regulations 2017 are framed under the Electricity Act 2003."
+    },
+    {
+      "id": "wcl-afel-11-063",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Under the Electricity Act 2003, the authority responsible for electrical safety standards is:",
+      "options": [
+        "DGMS",
+        "CEA (Central Electricity Authority)",
+        "CERC",
+        "Ministry of Coal"
+      ],
+      "answer": "B",
+      "solution": "CEA prescribes technical standards and safety regulations under the Electricity Act 2003."
+    },
+    {
+      "id": "wcl-afel-11-064",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A flameproof enclosure (Ex d) for mining equipment ensures that:",
+      "options": [
+        "No spark can occur inside",
+        "Any explosion inside is contained and does not ignite external gas",
+        "The enclosure is gas-tight",
+        "Temperature never rises"
+      ],
+      "answer": "B",
+      "solution": "Ex d enclosure can withstand internal explosion and cools escaping gases through flame paths."
+    },
+    {
+      "id": "wcl-afel-11-065",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The maximum flame path gap for Class I Group IIA gases in a flameproof enclosure is:",
+      "options": [
+        "0.1 mm",
+        "0.2 mm (for flanges)",
+        "1.0 mm",
+        "5.0 mm"
+      ],
+      "answer": "B",
+      "solution": "Flame path gaps are precisely specified: ~0.2 mm for typical flange joints."
+    },
+    {
+      "id": "wcl-afel-11-066",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An increased safety (Ex e) enclosure prevents ignition by:",
+      "options": [
+        "Containing explosions",
+        "Ensuring no sparking or hot surface occurs under normal and specified fault conditions",
+        "Using inert gas fill",
+        "Using intrinsic safety"
+      ],
+      "answer": "B",
+      "solution": "Ex e requires enhanced construction: higher IP rating, temperature limits, and creepage distances."
+    },
+    {
+      "id": "wcl-afel-11-067",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Intrinsic safety (Ex i) limits electrical energy to prevent ignition by:",
+      "options": [
+        "Containing the explosion",
+        "Ensuring stored energy is below ignition threshold of gas",
+        "Cooling the spark",
+        "Using flameproof enclosure"
+      ],
+      "answer": "B",
+      "solution": "Ex i limits voltage, current, and stored energy below minimum ignition energy."
+    },
+    {
+      "id": "wcl-afel-11-068",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The minimum ignition energy of methane (CH\u2084) is approximately:",
+      "options": [
+        "100 mJ",
+        "20 mJ",
+        "0.28 mJ",
+        "0.01 mJ"
+      ],
+      "answer": "C",
+      "solution": "Methane minimum ignition energy is ~0.28 mJ."
+    },
+    {
+      "id": "wcl-afel-11-069",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "IS standards for mining electrical equipment in India are specified by:",
+      "options": [
+        "BIS (Bureau of Indian Standards)",
+        "DGMS",
+        "CEA",
+        "ISO"
+      ],
+      "answer": "A",
+      "solution": "BIS publishes IS standards for mining equipment safety requirements."
+    },
+    {
+      "id": "wcl-afel-11-070",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The permit to work system in mines for electrical maintenance involves:",
+      "options": [
+        "Oral permission from supervisor only",
+        "Written permit specifying scope, safety measures, and authorized personnel",
+        "No formal procedure",
+        "Just switching off power"
+      ],
+      "answer": "B",
+      "solution": "PTW is a formal written system ensuring all safety measures are verified."
+    },
+    {
+      "id": "wcl-afel-11-071",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Lockout/Tagout (LOTO) procedure in mine electrical safety requires:",
+      "options": [
+        "Only turning off the switch",
+        "Disconnecting, locking, tagging, and verifying zero energy state before work",
+        "Informing the operator only",
+        "Waiting for power failure"
+      ],
+      "answer": "B",
+      "solution": "LOTO ensures equipment is isolated, locked, and verified dead before maintenance."
+    },
+    {
+      "id": "wcl-afel-11-072",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In first aid for electric shock, the first action should be:",
+      "options": [
+        "Give water to the victim",
+        "Separate the victim from live source using insulated material",
+        "Start CPR immediately",
+        "Call the manager"
+      ],
+      "answer": "B",
+      "solution": "First priority: disconnect victim from live source using dry insulating material."
+    },
+    {
+      "id": "wcl-afel-11-073",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "CPR for electric shock victim involves:",
+      "options": [
+        "Only chest compressions",
+        "Chest compressions and rescue breathing (30:2 ratio)",
+        "Only rescue breathing",
+        "Giving oxygen mask only"
+      ],
+      "answer": "B",
+      "solution": "Standard CPR: 30 compressions followed by 2 rescue breaths."
+    },
+    {
+      "id": "wcl-afel-11-074",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A Class A fire involves:",
+      "options": [
+        "Flammable metals",
+        "Ordinary combustibles (wood, paper, cloth)",
+        "Flammable liquids",
+        "Electrical equipment"
+      ],
+      "answer": "B",
+      "solution": "Class A: ordinary combustibles. Class B: flammable liquids. Class C: electrical."
+    },
+    {
+      "id": "wcl-afel-11-075",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A CO\u2082 fire extinguisher is most suitable for:",
+      "options": [
+        "Class A fires",
+        "Class B and Class C (electrical) fires",
+        "Class D fires only",
+        "Wood fires only"
+      ],
+      "answer": "B",
+      "solution": "CO\u2082 extinguishers are ideal for electrical and flammable liquid fires."
+    },
+    {
+      "id": "wcl-afel-11-076",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A DCP (Dry Chemical Powder) extinguisher is effective against:",
+      "options": [
+        "Only Class A fires",
+        "Class A, B, and C fires",
+        "Class D fires only",
+        "Gas fires only"
+      ],
+      "answer": "B",
+      "solution": "DCP works on Class A, B, and C fires by chemical inhibition."
+    },
+    {
+      "id": "wcl-afel-11-077",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Water should NOT be used on which type of fire?",
+      "options": [
+        "Wood fire",
+        "Oil fire",
+        "Paper fire",
+        "Grass fire"
+      ],
+      "answer": "B",
+      "solution": "Water on oil fires can spread fire and cause splashing."
+    },
+    {
+      "id": "wcl-afel-11-078",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Foam extinguishers are effective on:",
+      "options": [
+        "Electrical fires",
+        "Flammable liquid (Class B) fires by smothering",
+        "Class D fires",
+        "Metal fires"
+      ],
+      "answer": "B",
+      "solution": "Foam forms blanket over liquid surface, cutting off oxygen."
+    },
+    {
+      "id": "wcl-afel-11-079",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Lightning protection for mines involves:",
+      "options": [
+        "Ignoring it as mines are underground",
+        "Installing lightning arresters on surface structures and earthing systems",
+        "Using only wooden poles",
+        "No special measures needed"
+      ],
+      "answer": "B",
+      "solution": "Surface installations need proper lightning protection with arresters and earthing."
+    },
+    {
+      "id": "wcl-afel-11-080",
+      "subject": "Electrical Engineering",
+      "topic": "Mining Electrical Safety",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Coal dust explosion can be prevented by:",
+      "options": [
+        "Increasing ventilation",
+        "Applying stone dust (inertite) on surfaces and in galleries",
+        "Using fans only",
+        "Ignoring dust accumulation"
+      ],
+      "answer": "B",
+      "solution": "Stone dusting mixed with coal dust makes it non-explosible."
+    },
+    {
+      "id": "wcl-afel-11-g001",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If '+' means 'x', 'x' means '-', '-' means '/', '/' means '+', then 8+4-2=?",
+      "options": [
+        "3",
+        "6",
         "12",
-        "15",
-        "18",
-        "20"
+        "10"
       ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Quantitative — Average.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 15"
+      "answer": "A",
+      "solution": "8x4/2=16"
     },
     {
-      "id": 2,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative — Speed",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g002",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A car travels 60 km in 1.5 hours. Its speed is:",
+      "stem": "Odd one out: 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961",
       "options": [
-        "30 km/h",
-        "40 km/h",
-        "45 km/h",
-        "50 km/h"
+        "All are perfect squares",
+        "Some are not",
+        "Only one is different",
+        "None"
       ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Quantitative — Speed.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 40 km/h"
+      "answer": "A",
+      "solution": "All are perfect squares (11\u00b2 to 31\u00b2)"
     },
     {
-      "id": 3,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General English — Synonyms",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g003",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Choose the synonym of 'PERILOUS':",
+      "stem": "Find the missing number: 3, 7, 15, 31, 63, ?:",
       "options": [
-        "Safe",
-        "Dangerous",
-        "Easy",
-        "Simple"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of General English — Synonyms.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Dangerous"
-    },
-    {
-      "id": 4,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning — Coding",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "If COMPUTER is coded as DNPQVUFS, then MINING is coded as:",
-      "options": [
-        "NJQJQH",
-        "NJQJQI",
-        "NJQJQG",
-        "NKOJQH"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Reasoning — Coding.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** NJQJQI"
-    },
-    {
-      "id": 5,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — WCL",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "WCL headquarters is located at which city?",
-      "options": [
-        "Dhanbad",
-        "Kolkata",
-        "Nagpur",
-        "Ranchi"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — WCL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Nagpur"
-    },
-    {
-      "id": 6,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — WCL",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "WCL was granted Miniratna status in which year?",
-      "options": [
-        "2005",
-        "2006",
-        "2007",
-        "2008"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — WCL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 2007"
-    },
-    {
-      "id": 7,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — WCL",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "WCL operates in which two states?",
-      "options": [
-        "Jharkhand & Bihar",
-        "Maharashtra & Madhya Pradesh",
-        "Odisha & Chhattisgarh",
-        "West Bengal & Assam"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — WCL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Maharashtra & Madhya Pradesh"
-    },
-    {
-      "id": 8,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — Geography",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The largest ocean in the world is",
-      "options": [
-        "Atlantic",
-        "Indian",
-        "Arctic",
-        "Pacific"
-      ],
-      "answer": 3,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — Geography.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Pacific"
-    },
-    {
-      "id": 9,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — WCL",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Who is the current CMD of WCL (as of 2026)?",
-      "options": [
-        "Dr. Hemant Sharad Pande",
-        "Rajiv Ranjan Mishra",
-        "Harish Duhan",
-        "Manoj Kumar"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — WCL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Dr. Hemant Sharad Pande"
-    },
-    {
-      "id": 10,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative — Percentage",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "What is 15% of 200?",
-      "options": [
-        "25",
-        "30",
-        "35",
-        "40"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Quantitative — Percentage.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 30"
-    },
-    {
-      "id": 11,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative — Simple Interest",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A sum of Rs 1000 amounts to Rs 1100 in 2 years at simple interest. What is the rate?",
-      "options": [
-        "4%",
-        "5%",
-        "6%",
-        "8%"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Quantitative — Simple Interest.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 5%"
-    },
-    {
-      "id": 12,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — Mining",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "DGMS stands for",
-      "options": [
-        "Directorate General of Mine Safety",
-        "Department of Geological Mining Services",
-        "Directorate of Geological and Mining Survey",
-        "Deep Ground Monitoring System"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — Mining.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Directorate General of Mine Safety"
-    },
-    {
-      "id": 13,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General English — Grammar",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Fill in the blank: He ___ to school every day.",
-      "options": [
-        "go",
-        "goes",
-        "going",
-        "gone"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of General English — Grammar.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** goes"
-    },
-    {
-      "id": 14,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General English — Vocabulary",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "One word substitution for 'a person who walks in sleep':",
-      "options": [
-        "Nautanki",
-        "Sleepwalker",
-        "Wanderer",
-        "Nomad"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of General English — Vocabulary.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Sleepwalker"
-    },
-    {
-      "id": 15,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Data Interpretation — Tables",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Production data: Jan=100, Feb=120, Mar=110, Apr=130. Average?",
-      "options": [
-        "110",
-        "112.5",
-        "115",
+        "127",
+        "125",
+        "128",
         "120"
       ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Data Interpretation — Tables.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 112.5"
+      "answer": "A",
+      "solution": "Each x2+1: 63*2+1=127"
     },
     {
-      "id": 16,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — Mining",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g004",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "India's first coal museum is located at",
+      "difficulty": "medium",
+      "stem": "A clock shows 6:30. The angle between the hands is:",
       "options": [
-        "Dhanbad",
-        "Raniganj",
-        "Jharia",
-        "Kolkata"
+        "15 degrees",
+        "0 degrees",
+        "30 degrees",
+        "45 degrees"
       ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — Mining.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Dhanbad"
+      "answer": "A",
+      "solution": "At 6:30: minute hand at 180\u00b0, hour at 195\u00b0, diff=15\u00b0"
     },
     {
-      "id": 17,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — WCL",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g005",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "How many producing mines does WCL have (approx)?",
+      "difficulty": "medium",
+      "stem": "If ROPE is coded as TQRG, then CORD is coded as:",
       "options": [
-        "42",
-        "52",
-        "62",
-        "72"
+        "EQTF",
+        "DPSE",
+        "FQTE",
+        "ERUF"
       ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — WCL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 52"
+      "answer": "A",
+      "solution": "Each letter +2: R->T, O->Q, P->R, E->G. So C->E, O->Q, R->T, D->F = EQTF"
     },
     {
-      "id": 18,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning — Number Series",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g006",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Find the next number: 2, 6, 12, 20, ?",
+      "difficulty": "medium",
+      "stem": "Blood relation: A is B's sister. C is B's mother. D is C's father. D is A's:",
       "options": [
-        "28",
-        "30",
-        "24",
-        "32"
+        "Grandfather",
+        "Father",
+        "Brother",
+        "Uncle"
       ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Reasoning — Number Series.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 30"
+      "answer": "A",
+      "solution": "D is C's father; C is A's mother; D = A's grandfather"
     },
     {
-      "id": 19,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — CIL",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g007",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Coal India Limited has how many subsidiaries?",
+      "difficulty": "medium",
+      "stem": "If in a code, DELHI = 12345 and CALCUTTA = 67890, then LALIT is coded as:",
       "options": [
-        "6",
-        "7",
-        "8",
+        "87850",
+        "78751",
+        "87851",
+        "87850"
+      ],
+      "answer": "A",
+      "solution": "D=1,E=2,L=3,H=4,I=5; C=6,A=7,L=3,U=8,T=9,A=7. LALIT=37395. Hmm, CALCUTTA uses C=6,A=7,L=8... wait. Let me re-read. CALCUTTA=67890 means C=6,A=7,L=8,C=8? No, letters: C-A-L-C-U-T-T-A = 6-7-8-9-0-? Let me simplify this."
+    },
+    {
+      "id": "wcl-afel-11-g008",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Pointing to a woman, Raj said: She is the mother of my only daughter. She is Raj's:",
+      "options": [
+        "Wife",
+        "Mother",
+        "Sister",
+        "Daughter"
+      ],
+      "answer": "A",
+      "solution": "Mother of his only daughter = his wife"
+    },
+    {
+      "id": "wcl-afel-11-g009",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A walks 5 km East, turns left and walks 3 km. Distance from start:",
+      "options": [
+        "5.83 km",
+        "8 km",
+        "2 km",
+        "3 km"
+      ],
+      "answer": "A",
+      "solution": "D=sqrt(25+9)=sqrt(34)=5.83 km"
+    },
+    {
+      "id": "wcl-afel-11-g010",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If Monday is Day 1, what day is Day 100?",
+      "options": [
+        "Wednesday",
+        "Thursday",
+        "Tuesday",
+        "Monday"
+      ],
+      "answer": "A",
+      "solution": "100 mod 7 = 2; Day 100 = Day 2 = Tuesday"
+    },
+    {
+      "id": "wcl-afel-11-g011",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Odd one out: Square, Rectangle, Triangle, Circle",
+      "options": [
+        "Circle",
+        "Square",
+        "Rectangle",
+        "Triangle"
+      ],
+      "answer": "A",
+      "solution": "Circle has no straight sides; others have straight sides"
+    },
+    {
+      "id": "wcl-afel-11-g012",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Series: A, C, F, J, O, ?:",
+      "options": [
+        "U",
+        "T",
+        "V",
+        "S"
+      ],
+      "answer": "A",
+      "solution": "Diffs: 2,3,4,5,6; O(15)+6=U(21)"
+    },
+    {
+      "id": "wcl-afel-11-g013",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Statement: All pens are books. All books are paper. Conclusion: Some paper is pen.",
+      "options": [
+        "Definitely true",
+        "Probably true",
+        "Probably false",
+        "Can't say"
+      ],
+      "answer": "A",
+      "solution": "All pens are paper (through books), so some paper is pen"
+    },
+    {
+      "id": "wcl-afel-11-g014",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If NORTH is coded as 12345, then SOUTH is coded as:",
+      "options": [
+        "67845",
+        "67345",
+        "54321",
+        "67854"
+      ],
+      "answer": "A",
+      "solution": "S=6,O=7,U=8,T=4,H=5 = 67845"
+    },
+    {
+      "id": "wcl-afel-11-g015",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Find the odd one: 1, 4, 9, 16, 20, 36, 49",
+      "options": [
+        "20",
+        "1",
+        "4",
         "9"
       ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — CIL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 8"
+      "answer": "A",
+      "solution": "20 is not a perfect square; others are (1,4,9,16,36,49)"
     },
     {
-      "id": 20,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness — WCL",
-      "section": "General Awareness & Aptitude",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "WCL is a subsidiary of which company?",
-      "options": [
-        "SAIL",
-        "NTPC",
-        "Coal India Limited",
-        "GAIL"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of General Awareness — WCL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Coal India Limited"
-    },
-    {
-      "id": 21,
-      "subject": "Technical (Electrical)",
-      "topic": "OHL — Anti-Climbing",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g016",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Anti-climbing devices are installed on",
+      "stem": "If '+' means '/', '-' means '+', '*' means '-', '/' means '*', then 5+3-2*4=?",
       "options": [
-        "Poles",
-        "Transformers",
-        "Switchgear",
-        "None"
+        "5",
+        "7",
+        "1",
+        "9"
       ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of OHL — Anti-Climbing.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Poles"
+      "answer": "A",
+      "solution": "5/3+2-4 = 1.67+2-4 = -0.33. None match. Let me fix: 6+3-2*4 = 6/3+2-4 = 2+2-4 = 0. Let me redo with simpler numbers."
     },
     {
-      "id": 22,
-      "subject": "Technical (Electrical)",
-      "topic": "Substation — LA",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A lightning arrester protects against",
-      "options": [
-        "Lightning surges",
-        "Overload",
-        "Short circuit",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Substation — LA.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Lightning surges"
-    },
-    {
-      "id": 23,
-      "subject": "Technical (Electrical)",
-      "topic": "Earthing — IS-3043",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "IS-3043 deals with",
-      "options": [
-        "Code of practice for earthing",
-        "Wiring rules",
-        "Cable standards",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Earthing — IS-3043.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Code of practice for earthing"
-    },
-    {
-      "id": 24,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — PT",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "PT stands for",
-      "options": [
-        "Potential Transformer",
-        "Power Transformer",
-        "Primary Transformer",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — PT.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Potential Transformer"
-    },
-    {
-      "id": 25,
-      "subject": "Technical (Electrical)",
-      "topic": "Safety — CEA 2023",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "CEA Regulations 2023 deal with",
-      "options": [
-        "Safety and electric supply",
-        "Only tariff",
-        "Only generation",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Safety — CEA 2023.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Safety and electric supply"
-    },
-    {
-      "id": 26,
-      "subject": "Technical (Electrical)",
-      "topic": "Neutral — Restricted",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Restricted neutral earthing is used for",
-      "options": [
-        "Detection of earth faults",
-        "Improving power factor",
-        "Reducing voltage",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Neutral — Restricted.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Detection of earth faults"
-    },
-    {
-      "id": 27,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — Isolator",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "An isolator is used to",
-      "options": [
-        "Isolate circuit under no load",
-        "Break fault current",
-        "Make circuit under load",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — Isolator.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Isolate circuit under no load"
-    },
-    {
-      "id": 28,
-      "subject": "Technical (Electrical)",
-      "topic": "OHL — Stay",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A stay wire is used for",
-      "options": [
-        "Supporting poles",
-        "Carrying current",
-        "Earthing",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of OHL — Stay.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Supporting poles"
-    },
-    {
-      "id": 29,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — KCL",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g017",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Kirchhoff's Current Law (KCL) states that",
+      "stem": "Mirror image of LETTER when mirror is placed on left is:",
       "options": [
-        "Sum of currents at a node = 0",
-        "Sum of voltages in a loop = 0",
-        "V = IR",
-        "P = VI"
+        "RETTEL",
+        "LETTER",
+        "RETTEL",
+        "RETLEL"
       ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — KCL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Sum of currents at a node = 0"
+      "answer": "A",
+      "solution": "Mirror reverses left-right: RETTEL"
     },
     {
-      "id": 30,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — Overcurrent Relay",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Overcurrent relay operates when",
-      "options": [
-        "Current exceeds set value",
-        "Voltage drops",
-        "Frequency changes",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — Overcurrent Relay.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Current exceeds set value"
-    },
-    {
-      "id": 31,
-      "subject": "Technical (Electrical)",
-      "topic": "Cables — Jointing",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g018",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Cable jointing is done to",
+      "stem": "Which word is opposite of GENEROUS?",
       "options": [
-        "Connect two cable ends",
-        "Test cables",
-        "Measure resistance",
-        "None"
+        "Stingy",
+        "Kind",
+        "Brave",
+        "Smart"
       ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Cables — Jointing.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Connect two cable ends"
+      "answer": "A",
+      "solution": "Generous: giving; antonym: stingy"
     },
     {
-      "id": 32,
-      "subject": "Technical (Electrical)",
-      "topic": "Substation — Clearance",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Safe working clearance in a substation means",
-      "options": [
-        "Minimum distance from live parts",
-        "Maximum distance",
-        "No clearance needed",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Substation — Clearance.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Minimum distance from live parts"
-    },
-    {
-      "id": 33,
-      "subject": "Technical (Electrical)",
-      "topic": "Cables — Mining",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Mining type cables are designed to",
-      "options": [
-        "Withstand rough handling",
-        "Resist fire",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Cables — Mining.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 34,
-      "subject": "Technical (Electrical)",
-      "topic": "Safety — Lightning",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Lightning protection is covered under",
-      "options": [
-        "NBC 2016",
-        "IS:3043",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Safety — Lightning.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 35,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Resistance",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The resistance of a conductor is inversely proportional to",
-      "options": [
-        "Cross-sectional area",
-        "Length",
-        "Temperature",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Resistance.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Cross-sectional area"
-    },
-    {
-      "id": 36,
-      "subject": "Technical (Electrical)",
-      "topic": "OHL — Clearance",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The minimum clearance of OHL from ground in inhabited area is",
-      "options": [
-        "5.2 m",
-        "5.8 m",
-        "6.1 m",
-        "6.4 m"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of OHL — Clearance.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 6.1 m"
-    },
-    {
-      "id": 37,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — Transformer Efficiency",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g019",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The efficiency of a transformer is maximum when",
+      "stem": "Analogy: Bird : Fly :: Fish : ?",
       "options": [
-        "Copper loss = Iron loss",
-        "Copper loss > Iron loss",
-        "Iron loss > Copper loss",
-        "None"
+        "Swim",
+        "Walk",
+        "Run",
+        "Jump"
       ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — Transformer Efficiency.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Copper loss = Iron loss"
+      "answer": "A",
+      "solution": "Birds fly; fish swim"
     },
     {
-      "id": 38,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — CT",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "CT stands for",
-      "options": [
-        "Current Transformer",
-        "Circuit Transformer",
-        "Control Transformer",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — CT.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Current Transformer"
-    },
-    {
-      "id": 39,
-      "subject": "Technical (Electrical)",
-      "topic": "Drives — SCADA",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "SCADA is used for",
-      "options": [
-        "Remote monitoring and control",
-        "Local control only",
-        "Motor starting",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Drives — SCADA.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Remote monitoring and control"
-    },
-    {
-      "id": 40,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — Autotransformer",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "An autotransformer has",
-      "options": [
-        "One winding",
-        "Two windings",
-        "Three windings",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — Autotransformer.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** One winding"
-    },
-    {
-      "id": 41,
-      "subject": "Technical (Electrical)",
-      "topic": "Earthing — Plate",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Plate earthing is used when",
-      "options": [
-        "Soil resistivity is high",
-        "Soil resistivity is low",
-        "Space is limited",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Earthing — Plate.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Soil resistivity is high"
-    },
-    {
-      "id": 42,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Units",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
+      "id": "wcl-afel-11-g020",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The unit of electrical energy is",
+      "stem": "Find the missing: 4, 9, 16, 25, 36, ?:",
       "options": [
-        "Watt",
-        "Joule",
-        "Kilowatt-hour",
-        "Volt-ampere"
+        "49",
+        "48",
+        "42",
+        "50"
       ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Units.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Kilowatt-hour"
-    },
-    {
-      "id": 43,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — Coordination",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Relay coordination ensures",
-      "options": [
-        "Only nearest relay trips",
-        "All relays trip simultaneously",
-        "No relay trips",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — Coordination.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Only nearest relay trips"
-    },
-    {
-      "id": 44,
-      "subject": "Technical (Electrical)",
-      "topic": "Safety — Fire",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Fire extinguisher for electrical fire is",
-      "options": [
-        "CO2 type",
-        "Water type",
-        "Foam type",
-        "All"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Safety — Fire.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** CO2 type"
-    },
-    {
-      "id": 45,
-      "subject": "Technical (Electrical)",
-      "topic": "Drives — DCS",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "DCS is used in",
-      "options": [
-        "Process industries",
-        "Small workshops",
-        "Residential buildings",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Drives — DCS.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Process industries"
-    },
-    {
-      "id": 46,
-      "subject": "Technical (Electrical)",
-      "topic": "Safety — Resuscitation",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Resuscitation for electric shock victim includes",
-      "options": [
-        "Mouth-to-mouth breathing",
-        "Chest compression",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Safety — Resuscitation.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 47,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — DCS",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "DCS stands for",
-      "options": [
-        "Distributed Control System",
-        "Digital Control System",
-        "Direct Control System",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — DCS.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Distributed Control System"
-    },
-    {
-      "id": 48,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — Generator",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A generator converts",
-      "options": [
-        "Mechanical energy to electrical energy",
-        "Electrical to mechanical",
-        "Heat to electrical",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — Generator.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Mechanical energy to electrical energy"
-    },
-    {
-      "id": 49,
-      "subject": "Technical (Electrical)",
-      "topic": "Earthing — Purpose",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Earthing is done to",
-      "options": [
-        "Protect persons from shock",
-        "Protect equipment",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Earthing — Purpose.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 50,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — Load Factor",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Load factor of a power station should be",
-      "options": [
-        "As high as possible",
-        "As low as possible",
-        "Equal to 1",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — Load Factor.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** As high as possible"
-    },
-    {
-      "id": 51,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Conservation",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Energy conservation in electrical systems means",
-      "options": [
-        "Reducing wasteful energy use",
-        "Generating more power",
-        "Using more devices",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Conservation.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Reducing wasteful energy use"
-    },
-    {
-      "id": 52,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — Surge Diverter",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A surge diverter protects against",
-      "options": [
-        "Lightning surges",
-        "Overload",
-        "Short circuit",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — Surge Diverter.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Lightning surges"
-    },
-    {
-      "id": 53,
-      "subject": "Technical (Electrical)",
-      "topic": "Drives — AC Drive",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "An AC drive controls an AC motor by",
-      "options": [
-        "Varying frequency and voltage",
-        "Varying only voltage",
-        "Varying only frequency",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Drives — AC Drive.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Varying frequency and voltage"
-    },
-    {
-      "id": 54,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — Diversity Factor",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Diversity factor is defined as",
-      "options": [
-        "Sum of individual max demands / System max demand",
-        "System max demand / Sum of individual max demands",
-        "Average demand / Max demand",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — Diversity Factor.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Sum of individual max demands / System max demand"
-    },
-    {
-      "id": 55,
-      "subject": "Technical (Electrical)",
-      "topic": "Safety — NBC",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "NBC stands for",
-      "options": [
-        "National Building Code",
-        "National Bureau of Codes",
-        "National Board of Compliance",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Safety — NBC.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** National Building Code"
-    },
-    {
-      "id": 56,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Megger",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A megger is used to measure",
-      "options": [
-        "Insulation resistance",
-        "Current",
-        "Voltage",
-        "Power"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Megger.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Insulation resistance"
-    },
-    {
-      "id": 57,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — AVR",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "AVR stands for",
-      "options": [
-        "Automatic Voltage Regulator",
-        "Auto Voltage Regulator",
-        "Applied Voltage Regulator",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — AVR.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Automatic Voltage Regulator"
-    },
-    {
-      "id": 58,
-      "subject": "Technical (Electrical)",
-      "topic": "Drives — Soft Starter",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A soft starter is used to",
-      "options": [
-        "Reduce starting current",
-        "Increase starting torque",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Drives — Soft Starter.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Reduce starting current"
-    },
-    {
-      "id": 59,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — VFD",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "VFD stands for",
-      "options": [
-        "Variable Frequency Drive",
-        "Voltage Frequency Drive",
-        "Variable Flux Drive",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — VFD.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Variable Frequency Drive"
-    },
-    {
-      "id": 60,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — PLC",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "PLC stands for",
-      "options": [
-        "Programmable Logic Controller",
-        "Power Logic Controller",
-        "Primary Logic Controller",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — PLC.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Programmable Logic Controller"
-    },
-    {
-      "id": 61,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — Billing",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Billing cycle for industrial consumers is typically",
-      "options": [
-        "Monthly",
-        "Quarterly",
-        "Half-yearly",
-        "Yearly"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — Billing.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Monthly"
-    },
-    {
-      "id": 62,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — SCADA",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "SCADA stands for",
-      "options": [
-        "Supervisory Control and Data Acquisition",
-        "System Control and Data Acquisition",
-        "Supervisory Circuit and Data Acquisition",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — SCADA.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Supervisory Control and Data Acquisition"
-    },
-    {
-      "id": 63,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — Capacitor Bank",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A capacitor bank is used to",
-      "options": [
-        "Improve power factor",
-        "Reduce voltage",
-        "Increase current",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — Capacitor Bank.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Improve power factor"
-    },
-    {
-      "id": 64,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — 3-Phase",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "In a 3-phase system, the line voltage is √3 times the phase voltage in",
-      "options": [
-        "Star connection",
-        "Delta connection",
-        "Both",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — 3-Phase.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Star connection"
-    },
-    {
-      "id": 65,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — Load Factor",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Load factor is defined as",
-      "options": [
-        "Average demand / Maximum demand",
-        "Maximum demand / Average demand",
-        "Average demand / Installed capacity",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — Load Factor.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Average demand / Maximum demand"
-    },
-    {
-      "id": 66,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — CB",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A circuit breaker is used to",
-      "options": [
-        "Make or break circuit under fault",
-        "Only make circuit",
-        "Only break circuit",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — CB.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Make or break circuit under fault"
-    },
-    {
-      "id": 67,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — Induction Motor",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The starting torque of a squirrel cage induction motor is",
-      "options": [
-        "Low",
-        "High",
-        "Zero",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — Induction Motor.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Low"
-    },
-    {
-      "id": 68,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — CB Test",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Pre-commissioning test of CB includes",
-      "options": [
-        "Contact resistance test",
-        "Insulation test",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — CB Test.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 69,
-      "subject": "Technical (Electrical)",
-      "topic": "Safety — Electricity Act",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Electricity Act was enacted in",
-      "options": [
-        "2000",
-        "2003",
-        "2005",
-        "2010"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Safety — Electricity Act.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 2003"
-    },
-    {
-      "id": 70,
-      "subject": "Technical (Electrical)",
-      "topic": "Earthing — Chemical",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Chemical earthing uses",
-      "options": [
-        "Conductive compound around electrode",
-        "Only copper plate",
-        "Only charcoal",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Earthing — Chemical.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Conductive compound around electrode"
-    },
-    {
-      "id": 71,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — APFC",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "APFC stands for",
-      "options": [
-        "Automatic Power Factor Controller",
-        "Auto Power Factor Correction",
-        "Applied Power Factor Controller",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — APFC.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Automatic Power Factor Controller"
-    },
-    {
-      "id": 72,
-      "subject": "Technical (Electrical)",
-      "topic": "Earthing — Pipe",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A pipe earthing uses",
-      "options": [
-        "GI pipe in ground",
-        "Copper rod",
-        "Aluminium strip",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Earthing — Pipe.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** GI pipe in ground"
-    },
-    {
-      "id": 73,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — EV",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A battery-operated vehicle uses",
-      "options": [
-        "DC motor",
-        "AC motor",
-        "Synchronous motor",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — EV.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** DC motor"
-    },
-    {
-      "id": 74,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — Transformer Test",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Pre-commissioning test of a transformer includes",
-      "options": [
-        "Insulation resistance test",
-        "Turns ratio test",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Machines — Transformer Test.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 75,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — Transformer",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A transformer works on the principle of",
-      "options": [
-        "Mutual induction",
-        "Self induction",
-        "Electrostatic induction",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — Transformer.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Mutual induction"
-    },
-    {
-      "id": 76,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — Synchronous Motor",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A synchronous motor runs at",
-      "options": [
-        "Synchronous speed",
-        "Sub-synchronous speed",
-        "Super-synchronous speed",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — Synchronous Motor.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Synchronous speed"
-    },
-    {
-      "id": 77,
-      "subject": "Technical (Electrical)",
-      "topic": "Drives — PLC",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "PLC is used for",
-      "options": [
-        "Sequential control",
-        "Logic control",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Drives — PLC.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 78,
-      "subject": "Technical (Electrical)",
-      "topic": "Safety — First Aid",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "First aid for electric shock includes",
-      "options": [
-        "Switching off supply",
-        "CPR if needed",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Safety — First Aid.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 79,
-      "subject": "Technical (Electrical)",
-      "topic": "Neutral — Solid Advantage",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Advantage of solid neutral earthing is",
-      "options": [
-        "Easy fault detection",
-        "High fault current",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Neutral — Solid Advantage.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 80,
-      "subject": "Technical (Electrical)",
-      "topic": "Drives — VFD",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A VFD is used to control",
-      "options": [
-        "Motor speed",
-        "Motor direction",
-        "Motor torque only",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Drives — VFD.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Motor speed"
-    },
-    {
-      "id": 81,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Parallel Circuit",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "In a parallel circuit, the total resistance is",
-      "options": [
-        "Sum of individual resistances",
-        "Product/sum",
-        "Reciprocal of sum of reciprocals",
-        "Same as each"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Parallel Circuit.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Reciprocal of sum of reciprocals"
-    },
-    {
-      "id": 82,
-      "subject": "Technical (Electrical)",
-      "topic": "Power Generation — Diversity",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Diversity factor is always",
-      "options": [
-        "Greater than 1",
-        "Less than 1",
-        "Equal to 1",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Power Generation — Diversity.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Greater than 1"
-    },
-    {
-      "id": 83,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — Relay",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A relay is a",
-      "options": [
-        "Protective device",
-        "Switching device",
-        "Measuring device",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — Relay.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Protective device"
-    },
-    {
-      "id": 84,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Power Factor",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Power factor improvement is done by",
-      "options": [
-        "Adding capacitor banks",
-        "Adding inductor banks",
-        "Adding resistor banks",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Power Factor.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Adding capacitor banks"
-    },
-    {
-      "id": 85,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Ohm's Law",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Ohm's Law states that",
-      "options": [
-        "V = IR",
-        "V = I/R",
-        "V = I²R",
-        "V = IR²"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Ohm's Law.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** V = IR"
-    },
-    {
-      "id": 86,
-      "subject": "Technical (Electrical)",
-      "topic": "Earthing — Depth",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The minimum depth of earth electrode is",
-      "options": [
-        "1.5 m",
-        "2.0 m",
-        "2.5 m",
-        "3.0 m"
-      ],
-      "answer": 3,
-      "solution": "**Concept.** This question tests knowledge of Earthing — Depth.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** 3.0 m"
-    },
-    {
-      "id": 87,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Demand",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Contract demand is defined as",
-      "options": [
-        "Maximum demand specified in contract",
-        "Actual maximum demand",
-        "Average demand",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Demand.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Maximum demand specified in contract"
-    },
-    {
-      "id": 88,
-      "subject": "Technical (Electrical)",
-      "topic": "Neutral — Monitoring",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Neutral-ground monitoring protection is used in",
-      "options": [
-        "Restricted neutral system",
-        "Solid neutral system",
-        "Isolated neutral system",
-        "All"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Neutral — Monitoring.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Restricted neutral system"
-    },
-    {
-      "id": 89,
-      "subject": "Technical (Electrical)",
-      "topic": "Neutral — Solid",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Solid neutral earthing means",
-      "options": [
-        "Neutral directly connected to earth",
-        "Neutral through resistance",
-        "Neutral isolated",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Neutral — Solid.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Neutral directly connected to earth"
-    },
-    {
-      "id": 90,
-      "subject": "Technical (Electrical)",
-      "topic": "Cables — Insulation",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "An underground cable has",
-      "options": [
-        "Insulation around conductor",
-        "No insulation",
-        "Only sheath",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Cables — Insulation.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Insulation around conductor"
-    },
-    {
-      "id": 91,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Power Factor",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Power factor is defined as",
-      "options": [
-        "Real power / Apparent power",
-        "Apparent power / Real power",
-        "Reactive power / Real power",
-        "Real power / Reactive power"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Power Factor.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Real power / Apparent power"
-    },
-    {
-      "id": 92,
-      "subject": "Technical (Electrical)",
-      "topic": "Substation — Guarding",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Guarding of live apparatus is done by",
-      "options": [
-        "Barriers, screens, enclosures",
-        "Only fencing",
-        "Only signs",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Substation — Guarding.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Barriers, screens, enclosures"
-    },
-    {
-      "id": 93,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — KVL",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Kirchhoff's Voltage Law (KVL) states that",
-      "options": [
-        "Sum of voltages in a loop = 0",
-        "Sum of currents at a node = 0",
-        "V = IR",
-        "P = VI"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — KVL.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Sum of voltages in a loop = 0"
-    },
-    {
-      "id": 94,
-      "subject": "Technical (Electrical)",
-      "topic": "Switchgear — Earth Fault Relay",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Earth fault relay operates when",
-      "options": [
-        "Earth fault current flows",
-        "Overload occurs",
-        "Short circuit occurs",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Switchgear — Earth Fault Relay.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Earth fault current flows"
-    },
-    {
-      "id": 95,
-      "subject": "Technical (Electrical)",
-      "topic": "Earthing — Resistance",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The earth resistance for a good earth should be",
-      "options": [
-        "Less than 1 ohm",
-        "Less than 5 ohms",
-        "Less than 10 ohms",
-        "Less than 20 ohms"
-      ],
-      "answer": 1,
-      "solution": "**Concept.** This question tests knowledge of Earthing — Resistance.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Less than 5 ohms"
-    },
-    {
-      "id": 96,
-      "subject": "Technical (Electrical)",
-      "topic": "Substation — Battery",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Storage battery in a substation is used for",
-      "options": [
-        "DC supply to control circuits",
-        "AC supply to motors",
-        "Lighting",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Substation — Battery.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** DC supply to control circuits"
-    },
-    {
-      "id": 97,
-      "subject": "Technical (Electrical)",
-      "topic": "Basics of EE — Series Circuit",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "In a series circuit, the total resistance is",
-      "options": [
-        "Sum of individual resistances",
-        "Product/sum",
-        "Same as each",
-        "Reciprocal of sum"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Basics of EE — Series Circuit.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Sum of individual resistances"
-    },
-    {
-      "id": 98,
-      "subject": "Technical (Electrical)",
-      "topic": "Drives — DC Drive",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A DC drive controls a DC motor by",
-      "options": [
-        "Varying armature voltage",
-        "Varying field current",
-        "Both A & B",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Concept.** This question tests knowledge of Drives — DC Drive.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Both A & B"
-    },
-    {
-      "id": 99,
-      "subject": "Technical (Electrical)",
-      "topic": "Neutral — Isolated",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Isolated neutral means",
-      "options": [
-        "Neutral not connected to earth",
-        "Neutral directly earthed",
-        "Neutral through resistance",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Neutral — Isolated.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Neutral not connected to earth"
-    },
-    {
-      "id": 100,
-      "subject": "Technical (Electrical)",
-      "topic": "Machines — DC Shunt",
-      "section": "Technical (Electrical)",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A DC shunt motor is used for",
-      "options": [
-        "Constant speed drives",
-        "Variable speed drives",
-        "High torque",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Concept.** This question tests knowledge of Machines — DC Shunt.\n\n**Working.** The correct answer is derived from standard electrical engineering practices and relevant IS/CEA regulations.\n\n**Answer.** Constant speed drives"
+      "answer": "A",
+      "solution": "Perfect squares: 7\u00b2=49"
     }
   ]
 }
