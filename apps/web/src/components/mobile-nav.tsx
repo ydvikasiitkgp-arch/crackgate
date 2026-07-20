@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
 import { PSU_COMPANIES, type PsuCompany } from "@/data/psu";
+import { openCommandPalette } from "@/components/command-palette";
 
 type Leaf = { href: string; label: string; soon?: boolean };
 
@@ -44,15 +45,6 @@ const DRAWER_SECTIONS = [
       { href: "/about", label: "About Us" },
     ],
   },
-];
-
-const QUICK_SEARCH_SUGGESTIONS = [
-  "Geomechanics",
-  "DGMS safety guidelines",
-  "Hydrology",
-  "Transportation Engineering",
-  "CIL Management Trainee",
-  "Mining legislation",
 ];
 
 /* ------------------------------------------------------------------ */
@@ -250,8 +242,6 @@ export function MobileSectionBar() {
   const [psuOpen, setPsuOpen] = useState(false);
   const [diplomaOpen, setDiplomaOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const searchRef = useRef<HTMLInputElement>(null);
 
   const isPsuActive = pathname?.startsWith("/psu");
   const isDiplomaActive = pathname?.startsWith("/diploma");
@@ -261,7 +251,6 @@ export function MobileSectionBar() {
   useEffect(() => {
     if (drawerOpen) {
       document.body.style.overflow = "hidden";
-      requestAnimationFrame(() => searchRef.current?.focus());
     } else {
       document.body.style.overflow = "";
     }
@@ -276,9 +265,11 @@ export function MobileSectionBar() {
     return () => document.removeEventListener("keydown", onKey);
   }, [drawerOpen]);
 
-  const filteredSearch = searchQuery.trim()
-    ? QUICK_SEARCH_SUGGESTIONS.filter((s) => s.toLowerCase().includes(searchQuery.toLowerCase()))
-    : QUICK_SEARCH_SUGGESTIONS;
+  const handleSearchTap = useCallback(() => {
+    setDrawerOpen(false);
+    // Small delay so the drawer closes first, then command palette opens
+    requestAnimationFrame(() => openCommandPalette());
+  }, []);
 
   return (
     <>
@@ -345,57 +336,39 @@ export function MobileSectionBar() {
                 <span className="font-bold text-ink">Menu</span>
               </div>
               <div className="px-4 pb-3">
-                <div className="flex items-center gap-2 rounded-xl border border-line bg-canvas px-3 py-2.5">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="text-muted shrink-0"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
-                  <input ref={searchRef} type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search topics, exams..." className="flex-1 bg-transparent text-sm text-ink placeholder:text-muted outline-none" />
-                  {searchQuery && (
-                    <button type="button" onClick={() => setSearchQuery("")} className="text-muted hover:text-ink">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
-                    </button>
-                  )}
-                </div>
+                <button
+                  type="button"
+                  onClick={handleSearchTap}
+                  className="flex items-center gap-2 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm text-muted hover:border-brand/30 hover:bg-brand/5 transition-colors"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="shrink-0"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                  <span>Search exams, topics...</span>
+                  <span className="ml-auto text-[10px] font-medium text-muted/60 bg-surface border border-line rounded px-1.5 py-0.5">⌘K</span>
+                </button>
               </div>
             </div>
 
-            {searchQuery.trim() ? (
-              <div className="px-4 py-3">
-                <p className="text-[11px] font-bold uppercase tracking-wide text-muted mb-2">Suggestions</p>
-                {filteredSearch.length > 0 ? (
-                  <div className="space-y-1">
-                    {filteredSearch.map((s) => (
-                      <a key={s} href={`/search?q=${encodeURIComponent(s)}`} onClick={() => setDrawerOpen(false)} className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:bg-canvas transition">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-muted shrink-0"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
-                        {s}
-                      </a>
-                    ))}
+            <div className="px-4 py-4 space-y-6">
+              {DRAWER_SECTIONS.map((section) => (
+                <div key={section.title}>
+                  <p className="px-3 mb-2 text-[11px] font-bold uppercase tracking-wide text-muted">{section.title}</p>
+                  <div className="space-y-0.5">
+                    {section.items.map((item) => {
+                      const active = pathname === item.href || pathname.startsWith(item.href + "/");
+                      return (
+                        <Link key={item.href} href={item.href} onClick={() => setDrawerOpen(false)} className={cn("flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition", active ? "bg-brand/10 text-brand" : "text-ink hover:bg-canvas")}>
+                          {active && <span className="w-1.5 h-1.5 rounded-full bg-brand shrink-0" />}
+                          <span className={active ? "" : "ml-[10px]"}>{item.label}</span>
+                        </Link>
+                      );
+                    })}
                   </div>
-                ) : (
-                  <p className="text-sm text-muted py-4 text-center">No matching topics</p>
-                )}
-              </div>
-            ) : (
-              <div className="px-4 py-4 space-y-6">
-                {DRAWER_SECTIONS.map((section) => (
-                  <div key={section.title}>
-                    <p className="px-3 mb-2 text-[11px] font-bold uppercase tracking-wide text-muted">{section.title}</p>
-                    <div className="space-y-0.5">
-                      {section.items.map((item) => {
-                        const active = pathname === item.href || pathname.startsWith(item.href + "/");
-                        return (
-                          <Link key={item.href} href={item.href} onClick={() => setDrawerOpen(false)} className={cn("flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition", active ? "bg-brand/10 text-brand" : "text-ink hover:bg-canvas")}>
-                            {active && <span className="w-1.5 h-1.5 rounded-full bg-brand shrink-0" />}
-                            <span className={active ? "" : "ml-[10px]"}>{item.label}</span>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
-                <div className="pt-2 pb-8">
-                  <Link href="/pricing" onClick={() => setDrawerOpen(false)} className="btn btn-accent w-full justify-center text-sm">⭐ View Plans &amp; Pricing</Link>
                 </div>
+              ))}
+              <div className="pt-2 pb-8">
+                <Link href="/pricing" onClick={() => setDrawerOpen(false)} className="btn btn-accent w-full justify-center text-sm">⭐ View Plans &amp; Pricing</Link>
               </div>
-            )}
+            </div>
           </div>
         </div>
       )}
