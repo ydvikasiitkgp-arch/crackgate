@@ -1,1830 +1,1825 @@
 {
-  "id": "diploma-ncl-ncl-surveyor-mock-07",
-  "title": "NCL Surveyor T&S Gr. B \u2014 Mock 07",
+  "id": "diploma-ncl-surveyor-mock-07",
+  "title": "NCL Mine Surveyor Mock 07",
   "tier": "pro",
-  "duration": 120,
-  "pattern": "NCL Surveyor CBT (100 Q \u00b7 100 marks \u00b7 120 min \u00b7 no \u2212ve)",
+  "duration": 90,
+  "pattern": "100 MCQs, 100 marks, 90 min, NO negative marking",
   "totalMarks": 100,
   "sections": [
     {
-      "name": "Section A \u2014 Technical",
-      "count": 70,
-      "marks": 70
+      "name": "Technical",
+      "questionCount": 80,
+      "marks": 80
     },
     {
-      "name": "Section B \u2014 General",
-      "count": 30,
-      "marks": 30
+      "name": "General Awareness",
+      "questionCount": 20,
+      "marks": 20
     }
   ],
-  "negativeMarking": {
-    "mcq1": 0,
-    "mcq2": 0,
-    "nat": 0,
-    "msq": 0
-  },
+  "negativeMarking": false,
   "seed": 47528358,
   "locked": true,
   "questions": [
     {
-      "id": 1,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A DTM stands for",
-      "options": [
-        "Direct Terrain Measurement",
-        "Data Transfer Module",
-        "None",
-        "Digital Terrain Model"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Digital Terrain Model"
-    },
-    {
-      "id": 2,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Contour interval is",
-      "options": [
-        "None",
-        "Horizontal distance",
-        "Both",
-        "Vertical distance between successive contours"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Vertical distance between successive contours"
-    },
-    {
-      "id": 3,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The reduced bearing system ranges from",
-      "options": [
-        "None",
-        "0\u00b0 to 180\u00b0",
-        "0\u00b0 to 360\u00b0",
-        "0\u00b0 to 90\u00b0 in each quadrant"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 0\u00b0 to 90\u00b0 in each quadrant"
-    },
-    {
-      "id": 4,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Systematic errors can be",
-      "options": [
-        "Never eliminated",
-        "Eliminated by corrections",
-        "Random",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Eliminated by corrections"
-    },
-    {
-      "id": 5,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-001",
+      "subject": "Mine Surveying",
+      "topic": "Geological Map Reading",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A fault in geological terms means",
+      "stem": "The 'apparent dip' of a bed in any direction other than the true dip direction is always:",
       "options": [
-        "Displacement of rock strata",
-        "Surface crack",
-        "None",
-        "Water inflow"
+        "Greater than the true dip",
+        "Less than the true dip",
+        "Equal to the true dip",
+        "May be greater or lesser"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Displacement of rock strata"
+      "answer": "B",
+      "solution": "The apparent dip in any direction other than the true dip direction is always less than the true dip."
     },
     {
-      "id": 6,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The line of collimation is",
-      "options": [
-        "Imaginary line",
-        "Line of sight when bubble is central",
-        "None",
-        "Physical line"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Line of sight when bubble is central"
-    },
-    {
-      "id": 7,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A total station combines",
-      "options": [
-        "None",
-        "Only EDM",
-        "Only theodolite",
-        "Theodolite + EDM + microprocessor"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Theodolite + EDM + microprocessor"
-    },
-    {
-      "id": 8,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-002",
+      "subject": "Mine Surveying",
+      "topic": "Geological Map Reading",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A chain length error is corrected by",
+      "stem": "A geological map showing 'strike and dip' symbols with the dip angle increasing in one direction indicates:",
       "options": [
-        "Ignoring it",
-        "Field calibration",
-        "Tape correction",
-        "Both a and b"
+        "A horizontal bed",
+        "A uniformly dipping bed or the limb of a fold",
+        "A fault",
+        "An unconformity"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Tape correction"
+      "answer": "B",
+      "solution": "Consistently increasing dip angles in one direction indicate a uniformly dipping bed or one limb of a fold."
     },
     {
-      "id": 9,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Tape correction for temperature is applied when",
-      "options": [
-        "Never",
-        "Only in summer",
-        "Always",
-        "Temperature differs significantly from standard"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Temperature differs significantly from standard"
-    },
-    {
-      "id": 10,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A dial compass in mining measures",
-      "options": [
-        "Distance",
-        "Bearing of survey lines",
-        "Elevation",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Bearing of survey lines"
-    },
-    {
-      "id": 11,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-003",
+      "subject": "Mine Surveying",
+      "topic": "Geological Map Reading",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Back sight is taken on",
+      "stem": "In mineral deposit studies, a 'contact' on a geological map refers to:",
       "options": [
-        "A point of known elevation",
-        "None",
-        "A point of unknown elevation",
-        "Any point"
+        "The meeting point of two survey stations",
+        "The surface where two different rock types meet",
+        "The entrance to the mine",
+        "The boundary of the mining lease"
       ],
-      "answer": 0,
-      "solution": "**Answer.** A point of known elevation"
+      "answer": "B",
+      "solution": "A contact is the surface or boundary where two different rock types or formations meet."
     },
     {
-      "id": 12,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "GIS stands for",
-      "options": [
-        "Geographic Information System",
-        "General Information System",
-        "Geological Investigation System",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Geographic Information System"
-    },
-    {
-      "id": 13,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Borehole surveying is done to",
-      "options": [
-        "Measure air velocity",
-        "Determine dip, strike, and position of coal seams",
-        "Test gas",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Determine dip, strike, and position of coal seams"
-    },
-    {
-      "id": 14,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'line of strikes' is perpendicular to",
-      "options": [
-        "Surface contour",
-        "Borehole",
-        "Direction of dip",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Direction of dip"
-    },
-    {
-      "id": 15,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-004",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Optical square is used for",
+      "stem": "When traversing steep topography, the main challenge is:",
       "options": [
-        "Levelling",
-        "Measuring angles",
-        "Setting out right angles",
-        "Measuring distance"
+        "Excessive sunlight",
+        "Large differences in elevation between stations making direct sighting difficult",
+        "Too many flat areas",
+        "Excessive vegetation only"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Measuring angles"
+      "answer": "B",
+      "solution": "Steep topography creates large elevation differences between stations, making direct sighting and measurement challenging."
     },
     {
-      "id": 16,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Scale of a vertical photograph depends on",
-      "options": [
-        "None",
-        "Flying height and focal length",
-        "Only height",
-        "Only focal length"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Flying height and focal length"
-    },
-    {
-      "id": 17,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-005",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Repetition method in theodolite survey gives",
+      "stem": "An 'auxiliary telescope' in traversing is used to:",
       "options": [
-        "None",
-        "More accurate results",
-        "Same accuracy",
-        "Less accurate results"
+        "Replace the main telescope permanently",
+        "Overcome obstacles by providing an intermediate sighting point",
+        "Measure only horizontal angles",
+        "Take temperature readings"
       ],
-      "answer": 1,
-      "solution": "**Answer.** More accurate results"
+      "answer": "B",
+      "solution": "An auxiliary telescope (subtense bar or auxiliary instrument) provides intermediate sighting points to overcome obstacles in steep terrain."
     },
     {
-      "id": 18,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-006",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Standard deviation measures",
+      "stem": "The curvature and refraction correction for a vertical distance is given by the formula (approximately):",
       "options": [
-        "Only minimum error",
-        "Spread of observations around mean",
-        "None",
-        "Only maximum error"
+        "C = 0.0673 \u00d7 D\u00b2 metres",
+        "C = 0.0673 \u00d7 D kilometres",
+        "C = 6.73 \u00d7 D\u00b2 kilometres",
+        "C = 0.673 \u00d7 D\u00b2 metres"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Spread of observations around mean"
+      "answer": "A",
+      "solution": "The curvature and refraction correction in metres is approximately 0.0673D\u00b2 where D is the distance in kilometres."
     },
     {
-      "id": 19,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-007",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The condition equation method is used for",
+      "stem": "In reciprocal levelling between two points A and B, the true difference in height is obtained by:",
       "options": [
-        "Only leveling",
-        "Only simple surveys",
-        "Adjusting constrained measurements",
-        "None"
+        "Taking readings from one instrument position only",
+        "Taking readings from both positions (near A and near B) and averaging the differences",
+        "Taking only one reading",
+        "Using a single backsight"
       ],
-      "answer": 2,
-      "solution": "**Answer.** Adjusting constrained measurements"
+      "answer": "B",
+      "solution": "Reciprocal levelling eliminates errors due to curvature, refraction, and collimation error by averaging readings from two instrument positions."
     },
     {
-      "id": 20,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The correction for slope in chain measurement is always",
-      "options": [
-        "Zero",
-        "Negative",
-        "Variable",
-        "Positive"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Positive"
-    },
-    {
-      "id": 21,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A drone in mine surveying is used for",
-      "options": [
-        "Only photography",
-        "None",
-        "Aerial photography and topographic mapping",
-        "Only measurement"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Aerial photography and topographic mapping"
-    },
-    {
-      "id": 22,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-008",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The principle of EDM is",
+      "stem": "When traversing in steep terrain, the 'reduced observation' method involves:",
       "options": [
-        "Measurement of time or phase shift of electromagnetic wave",
-        "Taping",
-        "Chaining",
-        "None"
+        "Ignoring all slope corrections",
+        "Reducing slope measurements to horizontal and vertical components",
+        "Using only horizontal distances",
+        "Taking fewer observations to save time"
       ],
-      "answer": 0,
-      "solution": "**Answer.** Measurement of time or phase shift of electromagnetic wave"
+      "answer": "B",
+      "solution": "Reduced observations involve converting slope measurements to horizontal and vertical components using trigonometric reductions."
     },
     {
-      "id": 23,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Least squares adjustment minimizes",
-      "options": [
-        "Sum of squares of residuals",
-        "None",
-        "Maximum residual",
-        "Sum of residuals"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Sum of squares of residuals"
-    },
-    {
-      "id": 24,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A metric chain used in surveying typically has",
-      "options": [
-        "20 m length",
-        "Both a and b depending on use",
-        "100 m length",
-        "30 m length"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** 20 m length"
-    },
-    {
-      "id": 25,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "An outlier is",
-      "options": [
-        "Correct reading",
-        "None",
-        "Average value",
-        "An observation significantly different from others"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** An observation significantly different from others"
-    },
-    {
-      "id": 26,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A reflectorless total station can measure distance to",
-      "options": [
-        "Only metallic surfaces",
-        "Only prism targets",
-        "None",
-        "Any surface without prism"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Any surface without prism"
-    },
-    {
-      "id": 27,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The type of chain commonly used in India is",
-      "options": [
-        "Engineer's chain",
-        "Revenue chain",
-        "Metric chain",
-        "Gunter's chain"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Gunter's chain"
-    },
-    {
-      "id": 28,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-009",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Chain surveying is suitable for",
+      "stem": "The effect of curvature of the earth on levelling readings makes distant objects appear:",
       "options": [
-        "Hilly terrain",
-        "All terrains",
-        "Small and simple areas",
-        "Flat terrain only"
+        "Higher than they actually are",
+        "Lower than they actually are",
+        "At their true position",
+        "To the left of their true position"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Flat terrain only"
+      "answer": "B",
+      "solution": "Earth's curvature causes distant objects to appear lower than their actual position when viewed from a level line."
     },
     {
-      "id": 29,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A closing error in traverse is adjusted by",
-      "options": [
-        "None",
-        "Ignoring it",
-        "Re-measuring only",
-        "Bowditch or transit rule"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Bowditch or transit rule"
-    },
-    {
-      "id": 30,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-010",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The rise and fall method checks",
+      "stem": "In steep topography, the 'staadia method' of tachymetric survey is preferred because:",
       "options": [
-        "Distance",
-        "None",
-        "Only elevation",
-        "Arithmetic accuracy of reduction"
+        "It gives very high accuracy",
+        "It allows rapid determination of horizontal distance and elevation difference from a single observation",
+        "It requires no instrument",
+        "It is cheaper than chaining"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Arithmetic accuracy of reduction"
+      "answer": "B",
+      "solution": "Stadia tachymetry allows simultaneous measurement of horizontal distance and elevation difference from a single instrument setup, useful in difficult terrain."
     },
     {
-      "id": 31,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-011",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The precision of a survey is expressed as",
+      "stem": "A 'three-wire levelling' method improves accuracy by:",
       "options": [
-        "None",
-        "Ratio of error to measured quantity",
-        "Absolute error only",
-        "Percentage only"
+        "Using three different instruments",
+        "Taking upper, middle, and lower stadia wire readings and averaging",
+        "Using three staff holders",
+        "Taking readings at three different times"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Ratio of error to measured quantity"
+      "answer": "B",
+      "solution": "Three-wire levelling uses upper, middle, and lower stadia wire readings; averaging the upper and lower readings provides a check on the middle wire reading."
     },
     {
-      "id": 32,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A level tube bubble moves towards",
-      "options": [
-        "Higher end of the tube",
-        "Center",
-        "None",
-        "Lower end"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Higher end of the tube"
-    },
-    {
-      "id": 33,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The temporary adjustments of a theodolite include",
-      "options": [
-        "Centreing, levelling, focusing",
-        "None",
-        "Only focusing",
-        "Only levelling"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Centreing, levelling, focusing"
-    },
-    {
-      "id": 34,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-012",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Pacing is a method of",
+      "stem": "When the line of sight is inclined upwards in tachymetry, the horizontal distance is:",
       "options": [
-        "None",
-        "Angle measurement",
-        "Precise measurement",
-        "Approximate distance measurement"
+        "Stadia interval \u00d7 stadia constant \u00d7 cos\u00b2(vertical angle)",
+        "Stadia interval \u00d7 stadia constant \u00d7 sin(vertical angle)",
+        "Stadia interval \u00d7 stadia constant \u00d7 tan(vertical angle)",
+        "Same as on level ground"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Approximate distance measurement"
+      "answer": "A",
+      "solution": "For an inclined line of sight, horizontal distance = KS cos\u00b2\u03b1 where K is the stadia constant, S is the stadia interval, and \u03b1 is the vertical angle."
     },
     {
-      "id": 35,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Mine plans are prepared at a scale of",
-      "options": [
-        "1:100 only",
-        "None",
-        "1:500 or 1:1000 typically",
-        "1:10000 only"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 1:500 or 1:1000 typically"
-    },
-    {
-      "id": 36,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The coordinate system in total station uses",
-      "options": [
-        "Latitude and Longitude",
-        "Both",
-        "None",
-        "Easting and Northing"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Easting and Northing"
-    },
-    {
-      "id": 37,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The least count of a vernier caliper is typically",
-      "options": [
-        "0.001 mm",
-        "1 mm",
-        "0.1 mm",
-        "0.01 mm"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 0.01 mm"
-    },
-    {
-      "id": 38,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-013",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A total station can measure",
+      "stem": "The 'stadia constant' (multiplying constant) for a standard tachymeter is:",
       "options": [
-        "Horizontal angle, vertical angle, and distance",
-        "Only angles",
-        "Only distance",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Horizontal angle, vertical angle, and distance"
-    },
-    {
-      "id": 39,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Orthorectification corrects",
-      "options": [
-        "Only color",
-        "Only brightness",
-        "Terrain displacement in aerial photos",
-        "None"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Terrain displacement in aerial photos"
-    },
-    {
-      "id": 40,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A theodolite is primarily used for",
-      "options": [
-        "Levelling",
-        "None",
-        "Measuring distance",
-        "Measuring horizontal and vertical angles"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Measuring horizontal and vertical angles"
-    },
-    {
-      "id": 41,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "3D laser scanning is used for",
-      "options": [
-        "Only volume calculation",
-        "Only measuring distances",
-        "None",
-        "Creating digital terrain models"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Creating digital terrain models"
-    },
-    {
-      "id": 42,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A sectional view in mine surveying shows",
-      "options": [
-        "Vertical cross-section of mine workings",
-        "Only surface plan",
-        "None",
-        "Only contour map"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Vertical cross-section of mine workings"
-    },
-    {
-      "id": 43,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Face left and face right observations are taken to",
-      "options": [
-        "Reduce cost",
-        "Eliminate instrumental errors",
-        "None",
-        "Increase speed"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Eliminate instrumental errors"
-    },
-    {
-      "id": 44,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Remote sensing in mining is used for",
-      "options": [
-        "Only production",
-        "Environmental monitoring and exploration",
-        "Only mapping",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Environmental monitoring and exploration"
-    },
-    {
-      "id": 45,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A Dumpy level has",
-      "options": [
-        "Fixed telescope",
-        "No telescope",
-        "Rotating telescope",
-        "Two telescopes"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Fixed telescope"
-    },
-    {
-      "id": 46,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Accidental errors follow",
-      "options": [
-        "Poisson distribution",
-        "Normal distribution",
-        "None",
-        "Uniform distribution"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Normal distribution"
-    },
-    {
-      "id": 47,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The least count of a vernier theodolite is typically",
-      "options": [
-        "1 minute",
-        "20 seconds",
-        "5 minutes",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 20 seconds"
-    },
-    {
-      "id": 48,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A bench mark is",
-      "options": [
-        "None",
-        "A temporary point",
-        "A point of known elevation",
-        "Any point"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 49,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Dip and strike of a coal seam are measured by",
-      "options": [
-        "None",
-        "Surface observation and borehole data",
-        "Only borehole",
-        "Only surface mapping"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Surface observation and borehole data"
-    },
-    {
-      "id": 50,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A ranging rod is used for",
-      "options": [
-        "Marking stations",
-        "None",
-        "Levelling",
-        "Measuring angles"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Marking stations"
-    },
-    {
-      "id": 51,
-      "subject": "Technical",
-      "topic": "Levelling",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The whole circle bearing system ranges from",
-      "options": [
-        "\u221290\u00b0 to +90\u00b0",
-        "0\u00b0 to 360\u00b0",
-        "0\u00b0 to 180\u00b0",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 0\u00b0 to 360\u00b0"
-    },
-    {
-      "id": 52,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Fore sight is taken on",
-      "options": [
-        "None",
-        "A point of known elevation",
-        "A point of unknown elevation (turning point)",
-        "Bench mark only"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** A point of known elevation"
-    },
-    {
-      "id": 53,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "EDM stands for",
-      "options": [
-        "Electronic Distance Measurement",
-        "None",
-        "Electronic Data Module",
-        "Exact Distance Measurement"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Electronic Distance Measurement"
-    },
-    {
-      "id": 54,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Resection in total station survey is used to",
-      "options": [
-        "Levelling",
-        "Determine unknown station position from known points",
-        "None",
-        "Measure area"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Determine unknown station position from known points"
-    },
-    {
-      "id": 55,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Magnetic declination is the angle between",
-      "options": [
-        "None",
-        "Horizontal and vertical",
-        "True north and magnetic north",
-        "Two survey lines"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** True north and magnetic north"
-    },
-    {
-      "id": 56,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Local attraction in a compass is caused by",
-      "options": [
-        "Magnetic materials nearby",
-        "Temperature",
-        "Wind",
-        "Humidity"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Magnetic materials nearby"
-    },
-    {
-      "id": 57,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Outcrop is where",
-      "options": [
-        "None",
-        "Coal is deepest",
-        "Water is found",
-        "Coal seam reaches the surface"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Coal seam reaches the surface"
-    },
-    {
-      "id": 58,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The height of instrument method is",
-      "options": [
-        "None",
-        "Slower but accurate",
-        "Same as rise and fall",
-        "Faster but no check"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Faster but no check"
-    },
-    {
-      "id": 59,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The purpose of a mine plan is to",
-      "options": [
-        "Only show geological data",
-        "Record and plan mining operations",
-        "Only show surface features",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Record and plan mining operations"
-    },
-    {
-      "id": 60,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Traversing with a total station is more accurate because",
-      "options": [
-        "Electronic measurement eliminates human error",
-        "It is cheaper",
-        "It is faster",
-        "None"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Electronic measurement eliminates human error"
-    },
-    {
-      "id": 61,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A prismatic compass measures",
-      "options": [
-        "Deflection angles",
-        "Internal angles",
-        "Bearings of lines",
-        "Vertical angles"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Bearings of lines"
-    },
-    {
-      "id": 62,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'set out' function of total station is used for",
-      "options": [
-        "None",
-        "Computing areas",
-        "Measuring existing features",
-        "Marking design coordinates on ground"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Marking design coordinates on ground"
-    },
-    {
-      "id": 63,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Weights in survey adjustments represent",
-      "options": [
-        "Distance measured",
-        "Relative reliability of observations",
-        "Time taken",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Relative reliability of observations"
-    },
-    {
-      "id": 64,
-      "subject": "Technical",
-      "topic": "Total Station & EDM",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Photogrammetry uses",
-      "options": [
-        "None",
-        "Only ground surveys",
-        "Only satellite images",
-        "Aerial photographs for mapping"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Aerial photographs for mapping"
-    },
-    {
-      "id": 65,
-      "subject": "Technical",
-      "topic": "Photogrammetry & Remote Sensing",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The duty of a mine surveyor includes",
-      "options": [
-        "Setting out and maintaining mine plans",
-        "Only surface survey",
-        "None",
-        "Only underground survey"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Setting out and maintaining mine plans"
-    },
-    {
-      "id": 66,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The accuracy of a total station is typically",
-      "options": [
-        "\u00b110 cm",
-        "\u00b11 m",
-        "None",
-        "\u00b12 mm + 2 ppm"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** \u00b12 mm + 2 ppm"
-    },
-    {
-      "id": 67,
-      "subject": "Technical",
-      "topic": "Angular Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The law of propagation of weights states",
-      "options": [
-        "Weight of sum = reciprocal of sum of reciprocals",
-        "Weight decreases",
-        "None",
-        "Weight is constant"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Weight of sum = reciprocal of sum of reciprocals"
-    },
-    {
-      "id": 68,
-      "subject": "Technical",
-      "topic": "Linear Measurement",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The accuracy of GPS in surveying depends on",
-      "options": [
-        "Only weather",
-        "Number of satellites and receiver quality",
-        "Only time of day",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Number of satellites and receiver quality"
-    },
-    {
-      "id": 69,
-      "subject": "Technical",
-      "topic": "Errors & Adjustments",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A vertical aerial photograph has",
-      "options": [
-        "Horizon at center",
-        "None",
-        "No scale variation",
-        "Nadir point at center"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Nadir point at center"
-    },
-    {
-      "id": 70,
-      "subject": "Technical",
-      "topic": "Mine Surveying",
-      "section": "Section A \u2014 Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Reciprocal levelling eliminates",
-      "options": [
-        "Wind errors",
-        "None",
-        "Temperature errors",
-        "Curvature and refraction errors"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Curvature and refraction errors"
-    },
-    {
-      "id": 71,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Antonym of 'ancient' is",
-      "options": [
-        "Historic",
-        "Old",
-        "Modern",
-        "Medieval"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Modern"
-    },
-    {
-      "id": 72,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Speed of sound is approximately",
-      "options": [
-        "3000 m/s",
-        "3430 m/s",
-        "30 m/s",
-        "343 m/s"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 343 m/s"
-    },
-    {
-      "id": 73,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Tangent of 45\u00b0 is",
-      "options": [
-        "1",
-        "0",
-        "\u221e",
-        "\u221a2"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** 1"
-    },
-    {
-      "id": 74,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The headquarters of Coal India Limited is in",
-      "options": [
-        "Kolkata",
-        "New Delhi",
-        "Mumbai",
-        "Singrauli"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Kolkata"
-    },
-    {
-      "id": 75,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Einstein is famous for the theory of",
-      "options": [
-        "Evolution",
-        "Gravity",
-        "Relativity",
-        "Electromagnetism"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Relativity"
-    },
-    {
-      "id": 76,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The capital of Madhya Pradesh is",
-      "options": [
-        "Bhopal",
-        "Gwalior",
-        "Jabalpur",
-        "Indore"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Bhopal"
-    },
-    {
-      "id": 77,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If a train travels 360 km in 4 hours, its speed is",
-      "options": [
-        "80 km/h",
-        "90 km/h",
-        "70 km/h",
-        "100 km/h"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 90 km/h"
-    },
-    {
-      "id": 78,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The pH of pure water is",
-      "options": [
-        "0",
-        "7",
-        "14",
-        "1"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 7"
-    },
-    {
-      "id": 79,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Which metal is liquid at room temperature",
-      "options": [
-        "Iron",
-        "Copper",
-        "Lead",
-        "Mercury"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Mercury"
-    },
-    {
-      "id": 80,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Which planet is known as the Red Planet",
-      "options": [
-        "Venus",
-        "Jupiter",
-        "Saturn",
-        "Mars"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Mars"
-    },
-    {
-      "id": 81,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The angle in a semicircle is",
-      "options": [
-        "45\u00b0",
-        "90\u00b0",
-        "180\u00b0",
-        "60\u00b0"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 90\u00b0"
-    },
-    {
-      "id": 82,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The boiling point of water is",
-      "options": [
-        "90\u00b0C",
-        "110\u00b0C",
-        "100\u00b0C",
-        "80\u00b0C"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** 100\u00b0C"
-    },
-    {
-      "id": 83,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "A can do work in 20 days, B in 30 days. Together in",
-      "options": [
-        "25 days",
-        "10 days",
-        "15 days",
-        "12 days"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** 12 days"
-    },
-    {
-      "id": 84,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Who discovered penicillin",
-      "options": [
-        "Louis Pasteur",
-        "Edward Jenner",
-        "Alexander Fleming",
-        "Robert Koch"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Alexander Fleming"
-    },
-    {
-      "id": 85,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "One kilometer equals",
-      "options": [
-        "100 meters",
-        "1000 meters",
-        "100,000 meters",
-        "10,000 meters"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 1000 meters"
-    },
-    {
-      "id": 86,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "180 degrees longitude is called",
-      "options": [
-        "Prime Meridian",
-        "Tropic of Cancer",
-        "International Date Line",
-        "Equator"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** International Date Line"
-    },
-    {
-      "id": 87,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Synonym of 'persevere' is",
-      "options": [
-        "Quit",
-        "Surrender",
-        "Persist",
-        "Abandon"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Persist"
-    },
-    {
-      "id": 88,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Profit percentage = (Profit / CP) \u00d7",
-      "options": [
+        "50",
         "100",
-        "None",
-        "Selling Price",
-        "Cost Price"
+        "150",
+        "200"
       ],
-      "answer": 0,
-      "solution": "**Answer.** 100"
+      "answer": "B",
+      "solution": "The standard stadia multiplying constant for a tachymeter with the stadia hairs equally spaced is 100."
     },
     {
-      "id": 89,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A natural satellite of Earth is",
-      "options": [
-        "Sun",
-        "Moon",
-        "Mars",
-        "None"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** Moon"
-    },
-    {
-      "id": 90,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-014",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Oxidation involves",
+      "stem": "In traversing steep terrain, 'vertical curvature correction' is important because:",
       "options": [
-        "None",
-        "Loss of electrons",
-        "Gain of electrons",
-        "No change"
+        "It affects only the horizontal angle measurements",
+        "It causes systematic errors in elevation measurements that increase with distance",
+        "It only affects temperature readings",
+        "It has no effect on survey measurements"
       ],
-      "answer": 1,
-      "solution": "**Answer.** Loss of electrons"
+      "answer": "B",
+      "solution": "Vertical curvature (combined with refraction) causes systematic errors in elevation that increase with the square of the distance."
     },
     {
-      "id": 91,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-015",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The currency of Japan is",
+      "stem": "A 'profile levelling' along a steep slope is used to determine:",
       "options": [
-        "Won",
-        "Yuan",
-        "Rupee",
-        "Yen"
+        "The plan of the area",
+        "The vertical cross-section showing elevation changes along a route",
+        "The geological map",
+        "The borehole data"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Yen"
+      "answer": "B",
+      "solution": "Profile levelling determines the vertical cross-section of the ground along a specified route, showing elevation changes."
     },
     {
-      "id": 92,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "Synonym of 'abundant' is",
-      "options": [
-        "Rare",
-        "Limited",
-        "Plentiful",
-        "Scarce"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Plentiful"
-    },
-    {
-      "id": 93,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "A does work in 10 days, B in 15 days. Together they finish in",
-      "options": [
-        "6 days",
-        "5 days",
-        "12 days",
-        "8 days"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** 6 days"
-    },
-    {
-      "id": 94,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Awareness",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Who was the first President of India",
-      "options": [
-        "Zakir Husain",
-        "APJ Abdul Kalam",
-        "Dr. S. Radhakrishnan",
-        "Dr. Rajendra Prasad"
-      ],
-      "answer": 3,
-      "solution": "**Answer.** Dr. Rajendra Prasad"
-    },
-    {
-      "id": 95,
-      "subject": "General Awareness & Aptitude",
-      "topic": "General Knowledge",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Photosynthesis occurs in",
-      "options": [
-        "Chloroplast",
-        "Nucleus",
-        "Mitochondria",
-        "Ribosome"
-      ],
-      "answer": 0,
-      "solution": "**Answer.** Chloroplast"
-    },
-    {
-      "id": 96,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "HCF of 12 and 18 is",
-      "options": [
-        "12",
-        "6",
-        "18",
-        "36"
-      ],
-      "answer": 1,
-      "solution": "**Answer.** 6"
-    },
-    {
-      "id": 97,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "The longest river in India is",
-      "options": [
-        "Godavari",
-        "Yamuna",
-        "Ganga",
-        "Brahmaputra"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Ganga"
-    },
-    {
-      "id": 98,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "hard",
-      "stem": "Which vitamin is produced in sunlight",
-      "options": [
-        "Vitamin B12",
-        "Vitamin A",
-        "Vitamin D",
-        "Vitamin C"
-      ],
-      "answer": 2,
-      "solution": "**Answer.** Vitamin D"
-    },
-    {
-      "id": 99,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Quantitative Aptitude",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-016",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The chemical formula of common salt is",
+      "stem": "When sighting a staff held at a lower level than the instrument in tachymetry, the vertical angle is:",
       "options": [
-        "MgCl\u2082",
-        "CaCl\u2082",
-        "NaCl",
-        "KCl"
+        "Positive (elevation angle)",
+        "Negative (depression angle)",
+        "Zero",
+        "90\u00b0"
       ],
-      "answer": 2,
-      "solution": "**Answer.** NaCl"
+      "answer": "B",
+      "solution": "When the staff is at a lower level, the line of sight is inclined downward, giving a negative (depression) vertical angle."
     },
     {
-      "id": 100,
-      "subject": "General Awareness & Aptitude",
-      "topic": "Reasoning",
-      "section": "Section B \u2014 General",
-      "type": "MCQ",
+      "id": "ncl-surveyor-07-017",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The hardest natural substance is",
+      "difficulty": "medium",
+      "stem": "The 'subtense bar' method of distance measurement is particularly useful in steep terrain because:",
       "options": [
-        "Topaz",
-        "Corundum",
-        "Quartz",
-        "Diamond"
+        "It requires only horizontal measurements",
+        "It determines horizontal distance by measuring the horizontal angle subtended by a bar of known length",
+        "It is cheaper than EDM",
+        "It does not require an instrument"
       ],
-      "answer": 3,
-      "solution": "**Answer.** Diamond"
+      "answer": "B",
+      "solution": "The subtense bar method determines horizontal distance by measuring the horizontal angle subtended by a bar of fixed length (usually 2 m), independent of slope."
+    },
+    {
+      "id": "ncl-surveyor-07-018",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In steep topography, the 'contouring' method helps in:",
+      "options": [
+        "Determining the plan area only",
+        "Representing the three-dimensional terrain on a two-dimensional map",
+        "Drilling boreholes",
+        "Measuring only horizontal distances"
+      ],
+      "answer": "B",
+      "solution": "Contouring represents the three-dimensional terrain surface on a two-dimensional map using lines of equal elevation."
+    },
+    {
+      "id": "ncl-surveyor-07-019",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The curvature correction for a distance of 5 km is approximately:",
+      "options": [
+        "0.34 m",
+        "1.68 m",
+        "3.37 m",
+        "6.73 m"
+      ],
+      "answer": "B",
+      "solution": "Curvature correction = 0.0673 \u00d7 D\u00b2 = 0.0673 \u00d7 5\u00b2 = 0.0673 \u00d7 25 \u2248 1.68 m."
+    },
+    {
+      "id": "ncl-surveyor-07-020",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "When traversing steep slopes, the 'reduction' of slope measurements to horizontal involves:",
+      "options": [
+        "Dividing the slope distance by the sine of the slope angle",
+        "Multiplying the slope distance by the cosine of the slope angle",
+        "Multiplying the slope distance by the tangent of the slope angle",
+        "Adding the slope distance to the vertical distance"
+      ],
+      "answer": "B",
+      "solution": "Horizontal distance = slope distance \u00d7 cos(slope angle). This reduces the slope measurement to its horizontal component."
+    },
+    {
+      "id": "ncl-surveyor-07-021",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An 'auxiliary station' in steep terrain traversing is established to:",
+      "options": [
+        "Replace the main station permanently",
+        "Provide an intermediate point for sighting when direct line of sight is obstructed",
+        "Take only temperature readings",
+        "Measure only the borehole depth"
+      ],
+      "answer": "B",
+      "solution": "Auxiliary stations provide intermediate sighting points when the direct line of sight between main stations is obstructed by terrain."
+    },
+    {
+      "id": "ncl-surveyor-07-022",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'refraction coefficient' for ordinary atmospheric conditions is approximately:",
+      "options": [
+        "0.07",
+        "0.13",
+        "0.20",
+        "0.50"
+      ],
+      "answer": "B",
+      "solution": "The average refraction coefficient for ordinary conditions is approximately 0.13, meaning refraction bends the line of sight toward the earth."
+    },
+    {
+      "id": "ncl-surveyor-07-023",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In steep topography, 'trigonometric levelling' is preferred over spirit levelling because:",
+      "options": [
+        "It gives higher accuracy",
+        "It can cover large elevation differences in a single observation",
+        "It is cheaper",
+        "It requires less skill"
+      ],
+      "answer": "B",
+      "solution": "Trigonometric levelling can measure large elevation differences in a single observation, making it efficient for steep terrain where spirit levelling would require many setups."
+    },
+    {
+      "id": "ncl-surveyor-07-024",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "When the staff is vertical but the line of sight is inclined at angle \u03b1 to the horizontal, the correct horizontal distance is:",
+      "options": [
+        "L \u00d7 cos \u03b1",
+        "L \u00d7 cos\u00b2 \u03b1",
+        "L \u00d7 sin \u03b1",
+        "L \u00d7 tan \u03b1"
+      ],
+      "answer": "B",
+      "solution": "For a vertical staff with an inclined line of sight, horizontal distance = L \u00d7 cos\u00b2\u03b1, where L is the stadia reading."
+    },
+    {
+      "id": "ncl-surveyor-07-025",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'traverse in steep terrain' should be plotted using:",
+      "options": [
+        "\u5e73\u9762 coordinates only",
+        "Both horizontal coordinates (northing, easting) and reduced levels",
+        "Only reduced levels",
+        "Only magnetic bearings"
+      ],
+      "answer": "B",
+      "solution": "A traverse in steep terrain should include both horizontal coordinates and reduced levels for complete three-dimensional positioning."
+    },
+    {
+      "id": "ncl-surveyor-07-026",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'reciprocal observation' method for curvature and refraction correction requires:",
+      "options": [
+        "Observations from one station only",
+        "Simultaneous observations from both ends of the line",
+        "Observations at different times of day",
+        "Observations by different surveyors"
+      ],
+      "answer": "B",
+      "solution": "Reciprocal observations are made simultaneously from both ends of the line to cancel out curvature and refraction effects."
+    },
+    {
+      "id": "ncl-surveyor-07-027",
+      "subject": "Mine Surveying",
+      "topic": "Traversing Steep Topography",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In steep topography, the 'offset' method of surveying involves:",
+      "options": [
+        "Measuring only horizontal angles",
+        "Taking perpendicular measurements from a main survey line to features on either side",
+        "Measuring only vertical angles",
+        "Drilling boreholes along the traverse"
+      ],
+      "answer": "B",
+      "solution": "Offsets are perpendicular measurements taken from a main survey line (chain line or traverse line) to locate features on either side."
+    },
+    {
+      "id": "ncl-surveyor-07-028",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "CAD software in mine surveying is primarily used for:",
+      "options": [
+        "Playing games in the office",
+        "Preparation, editing, and maintenance of mine plans and sections",
+        "Calculating employee salaries",
+        "Monitoring air quality"
+      ],
+      "answer": "B",
+      "solution": "CAD (Computer-Aided Design) software is the primary tool for digital preparation, editing, and maintenance of mine plans and sections."
+    },
+    {
+      "id": "ncl-surveyor-07-029",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A Digital Terrain Model (DTM) represents:",
+      "options": [
+        "Only the geological features",
+        "A three-dimensional mathematical representation of the ground surface",
+        "Only the underground workings",
+        "Only the haul roads"
+      ],
+      "answer": "B",
+      "solution": "A DTM is a digital representation of the ground surface, created from survey data points, showing the three-dimensional terrain."
+    },
+    {
+      "id": "ncl-surveyor-07-030",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "3D laser profiling of mine surfaces involves:",
+      "options": [
+        "Drawing plans manually",
+        "Using laser scanning to capture detailed three-dimensional surface geometry",
+        "Using only GPS for measurement",
+        "Manual measurement with a tape"
+      ],
+      "answer": "B",
+      "solution": "3D laser profiling uses laser scanning technology to capture high-density three-dimensional point data of mine surfaces."
+    },
+    {
+      "id": "ncl-surveyor-07-031",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "GIS (Geographic Information System) in mining is used for:",
+      "options": [
+        "Only drawing maps",
+        "Integration, analysis, and visualization of spatial data from multiple sources",
+        "Only playing videos",
+        "Only word processing"
+      ],
+      "answer": "B",
+      "solution": "GIS integrates multiple spatial datasets, enabling complex analysis, overlay operations, and visualization for mine planning and management."
+    },
+    {
+      "id": "ncl-surveyor-07-032",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The primary advantage of computer-based mine planning over manual methods is:",
+      "options": [
+        "It is always cheaper",
+        "Faster processing, easy modifications, and accurate volume calculations",
+        "It requires no training",
+        "It eliminates the need for surveyors"
+      ],
+      "answer": "B",
+      "solution": "Computer-based methods offer faster data processing, easy editing/modifications, accurate calculations, and efficient storage and retrieval."
+    },
+    {
+      "id": "ncl-surveyor-07-033",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'grid model' in DTM for mine surveying involves:",
+      "options": [
+        "Random placement of data points",
+        "Dividing the area into a regular grid and assigning elevation to each grid node",
+        "Drawing only contour lines",
+        "Using only cross-sections"
+      ],
+      "answer": "B",
+      "solution": "A grid model divides the terrain into a regular grid, with elevation values assigned to each grid intersection point."
+    },
+    {
+      "id": "ncl-surveyor-07-034",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Volume calculation using computer methods in opencast mining is done by:",
+      "options": [
+        "Manual measurement only",
+        "Comparing DTMs of different dates or using grid/prism methods",
+        "Counting the number of dumpers",
+        "Estimating by visual inspection"
+      ],
+      "answer": "B",
+      "solution": "Computer methods compare DTMs from different dates or use grid/prism methods to calculate volumes of excavation or dumping accurately."
+    },
+    {
+      "id": "ncl-surveyor-07-035",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'triangulated irregular network' (TIN) in DTM represents terrain using:",
+      "options": [
+        "A regular grid of points",
+        "A network of non-overlapping triangles connecting survey data points",
+        "Only contour lines",
+        "Only cross-sections"
+      ],
+      "answer": "B",
+      "solution": "TIN represents terrain as a network of non-overlapping triangles connecting survey data points, adapting to terrain complexity."
+    },
+    {
+      "id": "ncl-surveyor-07-036",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In mine plan preparation using CAD, the 'layer' concept is used to:",
+      "options": [
+        "Stack papers together",
+        "Organize different types of information (geology, workings, contours) on separate overlays",
+        "Print the plan faster",
+        "Make the plan heavier"
+      ],
+      "answer": "B",
+      "solution": "Layers in CAD allow different types of information (geological features, workings, contours, text) to be organized and managed separately."
+    },
+    {
+      "id": "ncl-surveyor-07-037",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'Digital Elevation Model' (DEM) differs from a DTM in that:",
+      "options": [
+        "They are identical",
+        "A DEM represents only the bare earth surface, while DTM may include features",
+        "A DEM is always more accurate",
+        "A DTM cannot represent terrain"
+      ],
+      "answer": "B",
+      "solution": "A DEM represents the bare earth surface without features, while a DTM may include above-ground features like buildings and vegetation."
+    },
+    {
+      "id": "ncl-surveyor-07-038",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'bench profiling' using computers in opencast mining helps in:",
+      "options": [
+        "Only planning future excavation",
+        "Monitoring bench geometry, slope stability, and volumetric changes over time",
+        "Only recording employee data",
+        "Only printing reports"
+      ],
+      "answer": "B",
+      "solution": "Computer-based bench profiling enables monitoring of bench geometry, slope stability assessment, and tracking volumetric changes over time."
+    },
+    {
+      "id": "ncl-surveyor-07-039",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In computerized mine surveying, 'data reduction' refers to:",
+      "options": [
+        "Deleting old data",
+        "Processing raw field measurements into useful coordinates and elevations",
+        "Increasing data size",
+        "Only storing data on hard drives"
+      ],
+      "answer": "B",
+      "solution": "Data reduction involves converting raw field measurements (angles, distances, stadia readings) into coordinates, elevations, and other useful information."
+    },
+    {
+      "id": "ncl-surveyor-07-040",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'highwall mapping' using computer methods involves:",
+      "options": [
+        "Manual painting of the highwall",
+        "Digital capture and analysis of highwall geometry, geology, and stability",
+        "Only taking photographs",
+        "Only measuring temperature"
+      ],
+      "answer": "B",
+      "solution": "Computer-based highwall mapping involves digital capture and analysis of highwall geometry, geological features, and stability parameters."
+    },
+    {
+      "id": "ncl-surveyor-07-041",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'contour generation' from survey data using computers involves:",
+      "options": [
+        "Drawing contours manually",
+        "Interpolating elevation values between survey points and generating contour lines algorithmically",
+        "Using only GPS data",
+        "Measuring each contour physically"
+      ],
+      "answer": "B",
+      "solution": "Computer algorithms interpolate elevation values between survey data points and generate contour lines using methods like linear interpolation or kriging."
+    },
+    {
+      "id": "ncl-surveyor-07-042",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In mine surveying, 'volumetric analysis' using computers is important for:",
+      "options": [
+        "Only calculating overburden",
+        "Estimating quantities of excavation, dumping, and coal production",
+        "Only planning haul roads",
+        "Only environmental monitoring"
+      ],
+      "answer": "B",
+      "solution": "Computer-based volumetric analysis calculates quantities of overburden removed, material dumped, coal produced, and remaining reserves."
+    },
+    {
+      "id": "ncl-surveyor-07-043",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'slope stability analysis' using computer software in opencast mining involves:",
+      "options": [
+        "Only visual inspection",
+        "Mathematical modeling of slope geometry, material properties, and failure mechanisms",
+        "Only taking photographs",
+        "Only measuring rainfall"
+      ],
+      "answer": "B",
+      "solution": "Computer-based slope stability analysis uses mathematical models (limit equilibrium, finite element) to assess slope safety factors."
+    },
+    {
+      "id": "ncl-surveyor-07-044",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The advantage of using GIS over CAD for mine planning is:",
+      "options": [
+        "GIS is cheaper",
+        "GIS can perform spatial analysis and integrate multiple data layers with attribute data",
+        "GIS cannot create maps",
+        "GIS is only for underground mines"
+      ],
+      "answer": "B",
+      "solution": "GIS offers spatial analysis capabilities, attribute data integration, and complex querying that basic CAD cannot provide."
+    },
+    {
+      "id": "ncl-surveyor-07-045",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In computerized mine surveying, 'coordinate transformation' is used to:",
+      "options": [
+        "Delete old coordinates",
+        "Convert coordinates between different reference systems or projections",
+        "Only display coordinates",
+        "Only print coordinates"
+      ],
+      "answer": "B",
+      "solution": "Coordinate transformation converts data between different reference systems (e.g., WGS84 to local grid) or map projections."
+    },
+    {
+      "id": "ncl-surveyor-07-046",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'dump profiling' using 3D laser scanning provides:",
+      "options": [
+        "Only the boundary of the dump",
+        "Detailed three-dimensional geometry including volumes, slopes, and surface features",
+        "Only the height of the dump",
+        "Only the colour of the dump material"
+      ],
+      "answer": "B",
+      "solution": "3D laser scanning of dumps provides detailed geometry including precise volume calculation, slope angles, surface features, and changes over time."
+    },
+    {
+      "id": "ncl-surveyor-07-047",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'cross-section generation' from DTM using computers involves:",
+      "options": [
+        "Manual drawing only",
+        "Extracting elevation profiles along any specified line from the digital model",
+        "Only taking field measurements",
+        "Only printing existing sections"
+      ],
+      "answer": "B",
+      "solution": "Computer software can automatically generate cross-sections along any specified line by extracting and interpolating elevation data from the DTM."
+    },
+    {
+      "id": "ncl-surveyor-07-048",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In mine planning, 'surface modeling' using computers helps in:",
+      "options": [
+        "Only recording data",
+        "Creating three-dimensional terrain models for volume calculations and visualization",
+        "Only word processing",
+        "Only sending emails"
+      ],
+      "answer": "B",
+      "solution": "Surface modeling creates 3D terrain representations for volume calculations, design optimization, and visualization of mine surfaces."
+    },
+    {
+      "id": "ncl-surveyor-07-049",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'database management' in computerized mine surveying stores:",
+      "options": [
+        "Only text files",
+        "Survey observations, coordinates, levels, and all related spatial and attribute data",
+        "Only photographs",
+        "Only audio recordings"
+      ],
+      "answer": "B",
+      "solution": "Survey databases store all field observations, computed coordinates, levels, and related data for easy retrieval and analysis."
+    },
+    {
+      "id": "ncl-surveyor-07-050",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In computerized mine plan preparation, 'symbol libraries' are used to:",
+      "options": [
+        "Replace survey instruments",
+        "Ensure consistent representation of standard mining features on plans",
+        "Only for decoration",
+        "Only for printing"
+      ],
+      "answer": "B",
+      "solution": "Symbol libraries provide standardized symbols for consistent representation of geological features, workings, and other mining elements."
+    },
+    {
+      "id": "ncl-surveyor-07-051",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'monitoring system' for dump/highwall stability using computers involves:",
+      "options": [
+        "Manual observations only",
+        "Automated data collection, processing, and alert generation for movement detection",
+        "Only taking photographs",
+        "Only recording temperatures"
+      ],
+      "answer": "B",
+      "solution": "Computer-based monitoring systems automate data collection from sensors, process data in real-time, and generate alerts when movement thresholds are exceeded."
+    },
+    {
+      "id": "ncl-surveyor-07-052",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'area calculation' method in computer software for mine plans typically uses:",
+      "options": [
+        "Only manual measurement",
+        "Coordinate geometry methods (shoelace formula) or numerical integration",
+        "Only visual estimation",
+        "Only counting grid squares"
+      ],
+      "answer": "B",
+      "solution": "Computer software calculates area using coordinate geometry methods (like the shoelace formula) or numerical integration from boundary coordinates."
+    },
+    {
+      "id": "ncl-surveyor-07-053",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In computerized surveying, 'error detection' capabilities include:",
+      "options": [
+        "Only human checking",
+        "Automated flagging of blunders, misclosures, and out-of-range values",
+        "Only paper-based records",
+        "Only visual inspection"
+      ],
+      "answer": "B",
+      "solution": "Computer software can automatically detect blunders, check misclosures, flag out-of-range values, and identify other survey errors."
+    },
+    {
+      "id": "ncl-surveyor-07-054",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'report generation' feature in mine survey software produces:",
+      "options": [
+        "Only graphs",
+        "Formatted reports with tables, calculations, and graphics for management and regulatory compliance",
+        "Only photographs",
+        "Only audio files"
+      ],
+      "answer": "B",
+      "solution": "Report generation produces formatted documents containing survey data, calculations, maps, and analysis results for various purposes."
+    },
+    {
+      "id": "ncl-surveyor-07-055",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'import/export' capability in mine survey software is important for:",
+      "options": [
+        "Only deleting data",
+        "Exchange of survey data between different software and formats (DXF, CSV, etc.)",
+        "Only printing",
+        "Only storing data"
+      ],
+      "answer": "B",
+      "solution": "Import/export capabilities enable data exchange between different software platforms and file formats, facilitating workflow integration."
+    },
+    {
+      "id": "ncl-surveyor-07-056",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In computerized mine surveying, 'quality control' involves:",
+      "options": [
+        "Only final checking",
+        "Automated checks on data accuracy, completeness, and consistency throughout the workflow",
+        "Only visual inspection",
+        "Only manual verification"
+      ],
+      "answer": "B",
+      "solution": "Computer-based quality control includes automated checks at each stage of data processing to ensure accuracy, completeness, and consistency."
+    },
+    {
+      "id": "ncl-surveyor-07-057",
+      "subject": "Mine Surveying",
+      "topic": "Computers in Mine Surveying",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'time-series analysis' of mine surface data using computers helps in:",
+      "options": [
+        "Only current measurement",
+        "Tracking changes in mine surfaces over time for stability monitoring and production tracking",
+        "Only historical records",
+        "Only future prediction"
+      ],
+      "answer": "B",
+      "solution": "Time-series analysis compares surface data from different dates to track changes, monitor stability, and assess production progress."
+    },
+    {
+      "id": "ncl-surveyor-07-058",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Surpac is a mine planning software primarily used for:",
+      "options": [
+        "Word processing",
+        "Geological modeling, mine design, and survey data management",
+        "Playing music",
+        "Sending emails"
+      ],
+      "answer": "B",
+      "solution": "Surpac is a comprehensive mine planning software used for geological modeling, resource estimation, mine design, and survey data management."
+    },
+    {
+      "id": "ncl-surveyor-07-059",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "AutoCAD is widely used in mine surveying for:",
+      "options": [
+        "Only 3D modeling",
+        "2D drafting and design of mine plans, sections, and profiles",
+        "Only data entry",
+        "Only printing photographs"
+      ],
+      "answer": "B",
+      "solution": "AutoCAD is extensively used for 2D drafting and design of mine plans, sections, profiles, and other engineering drawings."
+    },
+    {
+      "id": "ncl-surveyor-07-060",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Liscad is a surveying software package that is particularly strong in:",
+      "options": [
+        "Only game design",
+        "Land surveying computations, coordinate geometry, and traversing",
+        "Only video editing",
+        "Only music composition"
+      ],
+      "answer": "B",
+      "solution": "Liscad is specialized for land surveying computations including coordinate geometry, traversing, levelling, and area calculations."
+    },
+    {
+      "id": "ncl-surveyor-07-061",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Autoplotter is used in mine surveying for:",
+      "options": [
+        "Only word processing",
+        "Digital terrain modeling, contour generation, and volume calculations",
+        "Only video editing",
+        "Only playing games"
+      ],
+      "answer": "B",
+      "solution": "Autoplotter is used for DTM creation, contour generation, volume calculations, and profile plotting from survey data."
+    },
+    {
+      "id": "ncl-surveyor-07-062",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "RiScan Pro is the software associated with:",
+      "options": [
+        "GPS receivers",
+        "3D terrestrial laser scanners (Riegl scanners) for point cloud processing",
+        "Only total stations",
+        "Only levels"
+      ],
+      "answer": "B",
+      "solution": "RiScan Pro is Riegl's software for processing point cloud data from their 3D terrestrial laser scanners."
+    },
+    {
+      "id": "ncl-surveyor-07-063",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In Surpac, a 'digital terrain model' is created by:",
+      "options": [
+        "Manual drawing only",
+        "Triangulating survey points to create a TIN surface",
+        "Using only photographs",
+        "Only printing maps"
+      ],
+      "answer": "B",
+      "solution": "Surpac creates DTM by triangulating survey data points into a Triangulated Irregular Network (TIN) surface."
+    },
+    {
+      "id": "ncl-surveyor-07-064",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'AutoCAD block' feature in mine plan preparation is used to:",
+      "options": [
+        "Delete objects",
+        "Create reusable symbols for standard mining features",
+        "Only measure distances",
+        "Only change colors"
+      ],
+      "answer": "B",
+      "solution": "AutoCAD blocks allow creation of reusable symbols for standard mining features (boreholes, workings, symbols) for consistency."
+    },
+    {
+      "id": "ncl-surveyor-07-065",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In Liscad, the 'traverse computation' module performs:",
+      "options": [
+        "Only angle measurement",
+        "Adjustment of traverse observations and computation of coordinates",
+        "Only temperature recording",
+        "Only distance measurement"
+      ],
+      "answer": "B",
+      "solution": "Liscad's traverse module performs observation adjustment, coordinate computation, and error analysis for survey traverses."
+    },
+    {
+      "id": "ncl-surveyor-07-066",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "RiScan Pro's 'registration' process involves:",
+      "options": [
+        "Only printing point clouds",
+        "Aligning multiple scans from different positions into a common coordinate system",
+        "Only deleting data",
+        "Only taking photographs"
+      ],
+      "answer": "B",
+      "solution": "Registration in RiScan Pro aligns multiple scans from different scanner positions into a unified coordinate system."
+    },
+    {
+      "id": "ncl-surveyor-07-067",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In Surpac, 'geological modeling' helps in:",
+      "options": [
+        "Only drawing plans",
+        "Creating three-dimensional models of ore bodies and geological structures",
+        "Only printing reports",
+        "Only sending emails"
+      ],
+      "answer": "B",
+      "solution": "Surpac's geological modeling creates 3D models of ore bodies, coal seams, and geological structures for resource estimation."
+    },
+    {
+      "id": "ncl-surveyor-07-068",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "AutoCAD's 'layer management' in mine surveying is used to:",
+      "options": [
+        "Delete old drawings",
+        "Organize different types of information for selective display and plotting",
+        "Only change colors",
+        "Only print documents"
+      ],
+      "answer": "B",
+      "solution": "Layer management organizes different information types (contours, workings, text, symbols) for selective display, editing, and plotting."
+    },
+    {
+      "id": "ncl-surveyor-07-069",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Autoplotter's 'volume calculation' feature computes volumes by:",
+      "options": [
+        "Manual estimation only",
+        "Comparing two DTM surfaces or using grid-based methods",
+        "Only counting points",
+        "Only visual inspection"
+      ],
+      "answer": "B",
+      "solution": "Autoplotter calculates volumes by comparing two DTM surfaces (between two dates) or using grid-based methods for accurate volume computation."
+    },
+    {
+      "id": "ncl-surveyor-07-070",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In RiScan Pro, 'point cloud filtering' is done to:",
+      "options": [
+        "Only increase file size",
+        "Remove noise, unwanted points, and classify different surface types",
+        "Only delete all data",
+        "Only take photographs"
+      ],
+      "answer": "B",
+      "solution": "Point cloud filtering removes noise, vegetation, and unwanted points, and classifies points into different surface types (ground, buildings, etc.)."
+    },
+    {
+      "id": "ncl-surveyor-07-071",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Surpac's 'survey data management' includes:",
+      "options": [
+        "Only storing photographs",
+        "Import, storage, processing, and export of survey observations and coordinates",
+        "Only word processing",
+        "Only game playing"
+      ],
+      "answer": "B",
+      "solution": "Surpac manages survey data through import, storage, processing, and export of field observations, coordinates, and computed results."
+    },
+    {
+      "id": "ncl-surveyor-07-072",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In AutoCAD, the 'hatch' command is used in mine plans to:",
+      "options": [
+        "Only draw lines",
+        "Fill areas with patterns to represent different rock types or features",
+        "Only delete objects",
+        "Only measure distances"
+      ],
+      "answer": "B",
+      "solution": "The hatch command fills enclosed areas with patterns to represent different rock types, workings, or other features on mine plans."
+    },
+    {
+      "id": "ncl-surveyor-07-073",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Liscad's 'levelling' module is used for:",
+      "options": [
+        "Only distance measurement",
+        "Booking, reduction, and adjustment of levelling observations",
+        "Only angle measurement",
+        "Only temperature recording"
+      ],
+      "answer": "B",
+      "solution": "Liscad's levelling module handles booking of field observations, reduction of levels, and adjustment for misclosure."
+    },
+    {
+      "id": "ncl-surveyor-07-074",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Autoplotter supports import of survey data from:",
+      "options": [
+        "Only one format",
+        "Multiple formats including CSV, DXF, and raw instrument data",
+        "Only photographs",
+        "Only audio files"
+      ],
+      "answer": "B",
+      "solution": "Autoplotter imports data from various formats including CSV, DXF, and raw data from total stations and GPS receivers."
+    },
+    {
+      "id": "ncl-surveyor-07-075",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In RiScan Pro, 'classification' of point cloud data means:",
+      "options": [
+        "Only sorting alphabetically",
+        "Assigning points to categories (ground, vegetation, buildings, etc.)",
+        "Only deleting points",
+        "Only printing data"
+      ],
+      "answer": "B",
+      "solution": "Classification assigns each point in the cloud to categories like ground, vegetation, buildings, or other features for analysis."
+    },
+    {
+      "id": "ncl-surveyor-07-076",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Surpac's 'mine design' module is used for:",
+      "options": [
+        "Only word processing",
+        "Designing pit layouts, haul roads, benches, and dump locations",
+        "Only printing photographs",
+        "Only sending emails"
+      ],
+      "answer": "B",
+      "solution": "Surpac's mine design module designs pit layouts, haul roads, bench configurations, dump locations, and other mine infrastructure."
+    },
+    {
+      "id": "ncl-surveyor-07-077",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "AutoCAD's 'dimension' tool in mine plans is used to:",
+      "options": [
+        "Only draw lines",
+        "Add measurements and annotations showing distances, angles, and coordinates",
+        "Only delete objects",
+        "Only change colors"
+      ],
+      "answer": "B",
+      "solution": "The dimension tool adds measurement annotations showing distances, angles, coordinates, and other dimensions on mine plans."
+    },
+    {
+      "id": "ncl-surveyor-07-078",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In Liscad, 'coordinate geometry' (COGO) functions include:",
+      "options": [
+        "Only drawing lines",
+        "Intersection calculations, bearing/distance computations, and area calculations",
+        "Only printing",
+        "Only deleting data"
+      ],
+      "answer": "B",
+      "solution": "COGO functions include intersection calculations, bearing/distance computations, coordinate transformations, and area calculations."
+    },
+    {
+      "id": "ncl-surveyor-07-079",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "RiScan Pro can export point cloud data to:",
+      "options": [
+        "Only one format",
+        "Multiple formats including LAS, LAZ, E57, and ASCII",
+        "Only photographs",
+        "Only audio files"
+      ],
+      "answer": "B",
+      "solution": "RiScan Pro exports point cloud data to various industry-standard formats (LAS, LAZ, E57, ASCII) for use in other software."
+    },
+    {
+      "id": "ncl-surveyor-07-080",
+      "subject": "Mine Surveying",
+      "topic": "Software Knowledge",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In Surpac, 'resource estimation' involves:",
+      "options": [
+        "Only counting boreholes",
+        "Using geological models and statistical methods to estimate ore/reserve quantities",
+        "Only printing maps",
+        "Only sending emails"
+      ],
+      "answer": "B",
+      "solution": "Resource estimation uses geological models, geostatistical methods (kriging, inverse distance) to estimate ore body quantities and grades."
+    },
+    {
+      "id": "ncl-surveyor-07-g001",
+      "subject": "General Awareness",
+      "topic": "GA-Schemes",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "PM Fasal Bima Yojana is related to:",
+      "options": [
+        "A. Crop insurance",
+        "B. Soil health",
+        "C. Irrigation",
+        "D. Food storage"
+      ],
+      "answer": "A",
+      "solution": "PM Fasal Bima Yojana provides crop insurance to farmers."
+    },
+    {
+      "id": "ncl-surveyor-07-g002",
+      "subject": "General Awareness",
+      "topic": "GA-Schemes",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The National Infrastructure Pipeline (NIP) envisages investment of how much?",
+      "options": [
+        "A. \u20b950 lakh crore",
+        "B. \u20b9111 lakh crore",
+        "C. \u20b975 lakh crore",
+        "D. \u20b9200 lakh crore"
+      ],
+      "answer": "B",
+      "solution": "NIP envisages infrastructure investment of \u20b9111 lakh crore during 2020-2025."
+    },
+    {
+      "id": "ncl-surveyor-07-g003",
+      "subject": "General Awareness",
+      "topic": "GA-Schemes",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which scheme aims to provide clean drinking water to every household by 2024?",
+      "options": [
+        "A. Swajal",
+        "B. Jal Jeevan Mission",
+        "C. National Water Policy",
+        "D. Namami Gange"
+      ],
+      "answer": "B",
+      "solution": "Jal Jeevan Mission aims to provide piped water supply to every rural household."
+    },
+    {
+      "id": "ncl-surveyor-07-g004",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian city hosted the 2017 FIFA U-17 World Cup?",
+      "options": [
+        "A. Mumbai",
+        "B. Kolkata",
+        "C. New Delhi",
+        "D. All of the above"
+      ],
+      "answer": "D",
+      "solution": "The 2017 FIFA U-17 World Cup was held in Mumbai, Kolkata, New Delhi, and other cities."
+    },
+    {
+      "id": "ncl-surveyor-07-g005",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Who is the first Indian to score a triple century in Test cricket?",
+      "options": [
+        "A. Sachin Tendulkar",
+        "B. Virender Sehwag",
+        "C. Virat Kohli",
+        "D. Sunil Gavaskar"
+      ],
+      "answer": "B",
+      "solution": "Virender Sehwag scored India's first triple century (309) in Test cricket."
+    },
+    {
+      "id": "ncl-surveyor-07-g006",
+      "subject": "General Awareness",
+      "topic": "GA-Defense",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Agni missile series belongs to which category?",
+      "options": [
+        "A. Surface-to-air",
+        "B. Air-to-air",
+        "C. Ballistic missile",
+        "D. Cruise missile"
+      ],
+      "answer": "C",
+      "solution": "Agni is a series of medium to intercontinental range ballistic missiles."
+    },
+    {
+      "id": "ncl-surveyor-07-g007",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian weightlifter won a gold medal at the 2022 Commonwealth Games?",
+      "options": [
+        "A. Mirabai Chanu",
+        "B. PV Sindhu",
+        "C. Mary Kom",
+        "D. Saina Nehwal"
+      ],
+      "answer": "A",
+      "solution": "Mirabai Chanu won gold in weightlifting at the 2022 Commonwealth Games."
+    },
+    {
+      "id": "ncl-surveyor-07-g008",
+      "subject": "General Awareness",
+      "topic": "GA-Defense",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Tejas aircraft is manufactured by which Indian company?",
+      "options": [
+        "A. Tata Advanced Systems",
+        "B. Hindustan Aeronautics Limited (HAL)",
+        "C. Bharat Electronics",
+        "D. DRDO"
+      ],
+      "answer": "B",
+      "solution": "Tejas (LCA) is manufactured by HAL."
+    },
+    {
+      "id": "ncl-surveyor-07-g009",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which country will host the 2028 Summer Olympics?",
+      "options": [
+        "A. Paris",
+        "B. Los Angeles",
+        "C. Brisbane",
+        "D. Tokyo"
+      ],
+      "answer": "B",
+      "solution": "Los Angeles will host the 2028 Summer Olympics."
+    },
+    {
+      "id": "ncl-surveyor-07-g010",
+      "subject": "General Awareness",
+      "topic": "GA-Defense",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "India's first aircraft carrier INS Vikrant was commissioned in which year?",
+      "options": [
+        "A. 1961",
+        "B. 2013",
+        "C. 2022",
+        "D. 1971"
+      ],
+      "answer": "C",
+      "solution": "INS Vikrant (IAC-1) was commissioned on 2 September 2022."
+    },
+    {
+      "id": "ncl-surveyor-07-g011",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Neeraj Chopra won Olympic gold in which event?",
+      "options": [
+        "A. Discus throw",
+        "B. Shot put",
+        "C. Javelin throw",
+        "D. Hammer throw"
+      ],
+      "answer": "C",
+      "solution": "Neeraj Chopra won gold in javelin throw at Tokyo 2020 Olympics."
+    },
+    {
+      "id": "ncl-surveyor-07-g012",
+      "subject": "General Awareness",
+      "topic": "GA-Defense",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian state has its own commando force known as 'Garud Commando Force'?",
+      "options": [
+        "A. Assam",
+        "B. Manipur",
+        "C. Nagaland",
+        "D. Mizoram"
+      ],
+      "answer": "A",
+      "solution": "Assam has the Garud Commando Force under Assam Police."
+    },
+    {
+      "id": "ncl-surveyor-07-g013",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Who was the first woman to climb Mount Everest?",
+      "options": [
+        "A. Bachendri Pal",
+        "B. Santosh Yadav",
+        "C. Arunima Sinha",
+        "D. Malavath Purna"
+      ],
+      "answer": "A",
+      "solution": "Bachendri Pal was the first Indian woman to summit Everest in 1984."
+    },
+    {
+      "id": "ncl-surveyor-07-g014",
+      "subject": "General Awareness",
+      "topic": "GA-Defense",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which missile is India's first anti-satellite missile?",
+      "options": [
+        "A. Agni-V",
+        "B. BrahMos",
+        "C. Mission Shakti (ASAT)",
+        "D. Prithvi"
+      ],
+      "answer": "C",
+      "solution": "Mission Shakti (ASAT) demonstrated India's anti-satellite capability in 2019."
+    },
+    {
+      "id": "ncl-surveyor-07-g015",
+      "subject": "General Awareness",
+      "topic": "GA-Defense",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Border Roads Organisation (BRO) works under which ministry?",
+      "options": [
+        "A. Home Affairs",
+        "B. Defence",
+        "C. Road Transport",
+        "D. External Affairs"
+      ],
+      "answer": "B",
+      "solution": "BRO works under the Ministry of Defence."
+    },
+    {
+      "id": "ncl-surveyor-07-g016",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian badminton player became the first to win an Olympic medal?",
+      "options": [
+        "A. PV Sindhu",
+        "B. Saina Nehwal",
+        "C. Prakash Padukone",
+        "D. Kidambi Srikanth"
+      ],
+      "answer": "B",
+      "solution": "Saina Nehwal won a bronze medal at London 2012 Olympics."
+    },
+    {
+      "id": "ncl-surveyor-07-g017",
+      "subject": "General Awareness",
+      "topic": "GA-Defense",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The BrahMos missile is a joint venture between India and which country?",
+      "options": [
+        "A. Israel",
+        "B. Russia",
+        "C. France",
+        "D. USA"
+      ],
+      "answer": "B",
+      "solution": "BrahMos is a joint venture between India (DRDO) and Russia (NPO Mashinostroyeniya)."
+    },
+    {
+      "id": "ncl-surveyor-07-g018",
+      "subject": "General Awareness",
+      "topic": "GA-Sports",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "India won how many medals at the Tokyo 2020 Olympics?",
+      "options": [
+        "A. 4",
+        "B. 5",
+        "C. 6",
+        "D. 7"
+      ],
+      "answer": "C",
+      "solution": "India won 7 medals (1 gold, 2 silver, 4 bronze) at Tokyo 2020."
+    },
+    {
+      "id": "ncl-surveyor-07-g019",
+      "subject": "General Awareness",
+      "topic": "GA-Days",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian city is known as the 'Pink City'?",
+      "options": [
+        "A. Udaipur",
+        "B. Jodhpur",
+        "C. Jaipur",
+        "D. Bikaner"
+      ],
+      "answer": "C",
+      "solution": "Jaipur is known as the Pink City."
+    },
+    {
+      "id": "ncl-surveyor-07-g020",
+      "subject": "General Awareness",
+      "topic": "GA-Economy",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "India's GDP growth rate for FY 2023-24 was approximately:",
+      "options": [
+        "A. 5.2%",
+        "B. 6.5%",
+        "C. 7.2%",
+        "D. 8.2%"
+      ],
+      "answer": "C",
+      "solution": "India's GDP growth was approximately 7.2% in FY 2023-24."
     }
   ]
 }
