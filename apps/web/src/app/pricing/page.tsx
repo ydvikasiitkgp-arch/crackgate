@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { WCL_EXAMS } from "@/data/wcl";
 import { NCL_EXAMS } from "@/data/ncl";
@@ -109,6 +110,44 @@ export default function PricingPage() {
           {WCL_EXAMS.filter((e) => e.live).map((e) => (
             <WclPlanCard key={e.slug} exam={e} />
           ))}
+        </div>
+      </div>
+
+      {/* WCL + NCL Combo */}
+      <div className="mt-12">
+        <div className="card p-8 border-2 border-amber-400/50 bg-gradient-to-br from-amber-500/5 to-orange-500/5 relative overflow-hidden">
+          <div className="absolute top-4 right-4">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/20 px-3 py-1 text-xs font-bold text-amber-600 dark:text-amber-400 animate-pulse">
+              🔥 BEST VALUE
+            </span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">WCL</span>
+            <span className="text-muted text-lg">+</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-400">NCL</span>
+          </div>
+          <h3 className="mt-3 text-xl font-bold">WCL + NCL Mining Sirdar Combo</h3>
+          <div className="mt-3 flex items-baseline gap-2">
+            <span className="text-4xl font-extrabold">₹599</span>
+            <span className="text-lg text-muted line-through">₹798</span>
+            <span className="text-sm text-ok font-semibold">SAVE ₹198</span>
+          </div>
+          <ul className="mt-6 space-y-2 text-sm">
+            <li className="flex gap-2"><span className="text-ok">✓</span> WCL Mining Sirdar — 20 mocks</li>
+            <li className="flex gap-2"><span className="text-ok">✓</span> NCL Mining Sirdar — 20 mocks</li>
+            <li className="flex gap-2"><span className="text-ok">✓</span> 40 total mocks · 100 MCQs each · 120 min</li>
+            <li className="flex gap-2"><span className="text-ok">✓</span> No negative marking · CBT pattern</li>
+            <li className="flex gap-2"><span className="text-ok">✓</span> One payment · valid through recruitment cycle</li>
+          </ul>
+          <div className="mt-6">
+            <Link
+              href="/pay/upi?plan=pro&exam=DIPLOMA&subject=combo-wcl-ncl-mining-sirdar"
+              className="btn btn-accent w-full"
+            >
+              Get Combo — ₹599
+            </Link>
+          </div>
+          <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
         </div>
       </div>
 

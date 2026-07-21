@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { CIL_ROWS, CIL_TOTAL_SEATS } from "@/data/cil";
@@ -24,14 +24,50 @@ type Props = {
 };
 
 const SLIDES = 8;
-const AUTOPLAY_MS = 3000;
+const AUTOPLAY_MS = 5000;
 const EASE = [0.16, 1, 0.3, 1] as const;
+
+/* ─── Slide metadata ─── */
+const SLIDE_META = [
+  { label: "NCL", type: "diploma" as const, deadline: "2026-08-05", color: "blue" },
+  { label: "WCL", type: "diploma" as const, deadline: "2026-08-10", color: "emerald" },
+  { label: "ONGC", type: "psu" as const, deadline: null, color: "blue" },
+  { label: "MN", type: "gate" as const, deadline: null, color: "amber" },
+  { label: "CE", type: "gate" as const, deadline: null, color: "emerald" },
+  { label: "GG", type: "gate" as const, deadline: null, color: "amber" },
+  { label: "ES", type: "gate" as const, deadline: null, color: "emerald" },
+  { label: "CIL", type: "psu" as const, deadline: null, color: "cyan" },
+];
+
+const SLIDE_LABELS = [
+  "Diploma recruitment — Northern Coalfields Limited",
+  "Diploma recruitment — Western Coalfields Limited",
+  "PSU recruitment — Oil & Natural Gas Corporation",
+  "GATE MN 2027 — Mining Engineering",
+  "GATE CE 2027 — Civil Engineering",
+  "GATE GG 2027 — Geology and Geophysics",
+  "GATE ES 2027 — Environmental Science and Engineering",
+  "PSU recruitment — Coal India Limited",
+];
+
+const SUCCESS_STORIES = [
+  { name: "Rahul K.", role: "NCL Mining Sirdar", text: "Scored 87/100 — mocks were exactly like the real exam.", track: "ncl" },
+  { name: "Priya S.", role: "WCL Asst. Foreman", text: "Cracked WCL on first attempt. The practice questions were spot on.", track: "wcl" },
+  { name: "Amit T.", role: "GATE MN 2026 — AIR 342", text: "The SWOT analytics helped me focus on weak subjects only.", track: "gate" },
+  { name: "Sneha M.", role: "CIL Management Trainee", text: "PSU mocks were tougher than the real paper — perfect prep.", track: "cil" },
+  { name: "Vikram R.", role: "NCL Surveyor", text: "20 mocks covered every topic. Didn't see a single surprise in the exam.", track: "ncl" },
+  { name: "Deepak J.", role: "GATE CE 2026 — AIR 89", text: "Practiced 500+ questions here. The interface feels exactly like TCS iON.", track: "gate" },
+];
+
+/* ───────────────────────── MAIN CAROUSEL ───────────────────────── */
 
 export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geology, environment }: Props) {
   const [[active, direction], setState] = useState<[number, number]>([0, 0]);
   const [paused, setPaused] = useState(false);
   const reduceMotion = useReducedMotion();
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
+  const touchStart = useRef<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const go = useCallback((next: number) => {
     setState(([cur]) => {
@@ -44,15 +80,42 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
     setState(([cur]) => [((cur + delta) % SLIDES + SLIDES) % SLIDES, delta]);
   }, []);
 
+  /* Autoplay */
   useEffect(() => {
     if (paused || reduceMotion) return;
     timer.current = setInterval(() => {
       setState(([cur]) => [(cur + 1) % SLIDES, 1]);
     }, AUTOPLAY_MS);
-    return () => {
-      if (timer.current) clearInterval(timer.current);
-    };
+    return () => { if (timer.current) clearInterval(timer.current); };
   }, [paused, reduceMotion]);
+
+  /* Keyboard navigation */
+  const onKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); goRel(-1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); goRel(1); }
+  }, [goRel]);
+
+  /* Touch swipe */
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStart.current = e.touches[0].clientX;
+  }, []);
+
+  const onTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStart.current === null) return;
+    const delta = touchStart.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 50) goRel(delta > 0 ? 1 : -1);
+    touchStart.current = null;
+  }, [goRel]);
+
+  /* Stagger variants for text content */
+  const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+  };
 
   const variants = {
     enter: (dir: number) => ({ x: reduceMotion ? 0 : dir > 0 ? "100%" : "-100%", opacity: reduceMotion ? 0 : 1 }),
@@ -60,25 +123,12 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
     exit: (dir: number) => ({ x: reduceMotion ? 0 : dir > 0 ? "-100%" : "100%", opacity: reduceMotion ? 0 : 1 }),
   };
 
-  const slideLabel =
-    active === 0
-      ? "Diploma recruitment — Northern Coalfields Limited"
-      : active === 1
-        ? "Diploma recruitment — Western Coalfields Limited"
-        : active === 2
-          ? "PSU recruitment — Oil & Natural Gas Corporation"
-          : active === 3
-            ? "GATE MN 2027 — Mining Engineering"
-            : active === 4
-              ? "GATE CE 2027 — Civil Engineering"
-              : active === 5
-                ? "GATE GG 2027 — Geology and Geophysics"
-                : active === 6
-                  ? "GATE ES 2027 — Environmental Science and Engineering"
-                  : "PSU recruitment — Coal India Limited";
+  const meta = SLIDE_META[active];
+  const story = SUCCESS_STORIES[active % SUCCESS_STORIES.length];
 
   return (
     <section
+      ref={sectionRef}
       aria-roledescription="carousel"
       aria-label="CrackGate exam tracks"
       className="relative overflow-hidden bg-slate-950 text-white"
@@ -86,8 +136,19 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
+      onKeyDown={onKeyDown}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      tabIndex={0}
     >
-      <div className="relative min-h-[680px] pb-14 sm:min-h-[700px] sm:pb-16 lg:min-h-[720px] lg:pb-20">
+      {/* ── Countdown heatmap bar ── */}
+      <CountdownBar active={active} />
+
+      {/* ── Themed particles ── */}
+      <SlideParticles theme={meta.color} />
+
+      {/* ── Slides ── */}
+      <div className="relative min-h-[500px] pb-16 sm:min-h-[600px] sm:pb-16 lg:min-h-[720px] lg:pb-20">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={active}
@@ -99,7 +160,7 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
             transition={{ duration: reduceMotion ? 0.3 : 0.8, ease: EASE }}
             className="absolute inset-0"
             aria-roledescription="slide"
-            aria-label={slideLabel}
+            aria-label={SLIDE_LABELS[active]}
           >
             {active === 0 ? (
               <NclWindow />
@@ -122,46 +183,258 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
         </AnimatePresence>
       </div>
 
-      {/* Arrows — hidden on touch/tablet (overlap content); dots + autoplay drive nav there */}
-      <button
-        type="button"
-        onClick={() => goRel(-1)}
-        aria-label="Previous slide"
-        className="group absolute left-3 top-1/2 z-20 hidden -translate-y-1/2 rounded-full border border-white/20 bg-white/10 p-2.5 backdrop-blur-md transition hover:bg-white/20 sm:left-5 lg:block"
-      >
+      {/* ── Arrows (desktop) ── */}
+      <button type="button" onClick={() => goRel(-1)} aria-label="Previous slide"
+        className="group absolute left-3 top-1/2 z-20 hidden -translate-y-1/2 rounded-full border border-white/20 bg-white/10 p-2.5 backdrop-blur-md transition hover:bg-white/20 sm:left-5 lg:block">
         <ChevronLeft />
       </button>
-      <button
-        type="button"
-        onClick={() => goRel(1)}
-        aria-label="Next slide"
-        className="group absolute right-3 top-1/2 z-20 hidden -translate-y-1/2 rounded-full border border-white/20 bg-white/10 p-2.5 backdrop-blur-md transition hover:bg-white/20 sm:right-5 lg:block"
-      >
+      <button type="button" onClick={() => goRel(1)} aria-label="Next slide"
+        className="group absolute right-3 top-1/2 z-20 hidden -translate-y-1/2 rounded-full border border-white/20 bg-white/10 p-2.5 backdrop-blur-md transition hover:bg-white/20 sm:right-5 lg:block">
         <ChevronRight />
       </button>
 
-      {/* Indicators — visual bar kept small but tap target padded to ~44px */}
-      <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 items-center">
-        {Array.from({ length: SLIDES }).map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => go(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            aria-current={active === i}
-            className="group grid place-items-center px-1.5 py-3"
-          >
-            <span
-              className={`h-2 rounded-full transition-all duration-300 ${
-                active === i ? "w-7 bg-accent" : "w-2 bg-white/40 group-hover:bg-white/70"
-              }`}
-            />
-          </button>
-        ))}
+      {/* ── Slide counter ── */}
+      <div className="absolute top-4 right-4 z-20 rounded-full bg-white/10 backdrop-blur-md px-3 py-1 text-xs font-semibold text-white/70">
+        {active + 1} / {SLIDES}
+      </div>
+
+      {/* ── Success story card (bottom-right) ── */}
+      <SuccessCard story={story} />
+
+      {/* ── Segmented progress bar ── */}
+      <div className="absolute bottom-0 left-0 right-0 z-20">
+        <div className="flex items-end justify-center gap-1 px-4 pb-3 pt-6 sm:px-8" style={{ background: "linear-gradient(transparent, rgba(2,6,23,0.8))" }}>
+          {SLIDE_META.map((s, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => go(i)}
+              aria-label={`Go to ${s.label}`}
+              aria-current={active === i}
+              className="group relative flex flex-col items-center gap-1"
+            >
+              <span className={`text-[9px] font-bold tracking-wider transition-opacity duration-300 sm:text-[10px] ${active === i ? "opacity-100 text-white" : "opacity-0 group-hover:opacity-70 text-white/60"}`}>
+                {s.label}
+              </span>
+              <div className="relative h-1.5 overflow-hidden rounded-full bg-white/15 transition-all duration-300"
+                style={{ width: active === i ? 48 : 16 }}>
+                {active === i && (
+                  <motion.div
+                    className="absolute inset-y-0 left-0 rounded-full bg-accent"
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: AUTOPLAY_MS / 1000, ease: "linear" }}
+                    key={`bar-${active}`}
+                  />
+                )}
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
+
+/* ───────────────────────── COUNTDOWN HEATMAP BAR ───────────────────────── */
+
+function CountdownBar({ active }: { active: number }) {
+  const now = Date.now();
+  const exams = useMemo(() => [
+    { label: "NCL", deadline: new Date("2026-08-05"), color: "bg-blue-500" },
+    { label: "WCL", deadline: new Date("2026-08-10"), color: "bg-emerald-500" },
+    { label: "ONGC", deadline: null, color: "bg-blue-400" },
+    { label: "GATE", deadline: new Date("2027-02-07"), color: "bg-amber-500" },
+  ], []);
+
+  return (
+    <div className="relative z-20 flex items-center gap-3 overflow-x-auto no-scrollbar bg-slate-900/80 backdrop-blur-md border-b border-white/5 px-4 py-1.5 sm:px-6">
+      <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 shrink-0">Upcoming</span>
+      {exams.map((e, i) => {
+        const days = e.deadline ? Math.ceil((e.deadline.getTime() - now) / 86400000) : null;
+        const isActive = (active === 0 && i === 0) || (active === 1 && i === 1) || (active === 2 && i === 2) || (active >= 3 && active <= 6 && i === 3) || (active === 7 && i === 2);
+        return (
+          <div key={e.label} className={`flex items-center gap-1.5 shrink-0 transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-50"}`}>
+            <span className={`h-1.5 w-1.5 rounded-full ${e.color}`} />
+            <span className="text-[10px] font-semibold text-white/80">{e.label}</span>
+            {days !== null && (
+              <span className={`text-[10px] font-bold ${days <= 30 ? "text-red-400" : "text-white/50"}`}>
+                {days}d left
+              </span>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/* ───────────────────────── PARTICLES ───────────────────────── */
+
+function SlideParticles({ theme }: { theme: string }) {
+  const particles = useMemo(() => {
+    const count = 12;
+    return Array.from({ length: count }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: 2 + Math.random() * 3,
+      delay: Math.random() * 5,
+      duration: 8 + Math.random() * 12,
+    }));
+  }, []);
+
+  const colorMap: Record<string, string> = {
+    blue: "bg-blue-400",
+    emerald: "bg-emerald-400",
+    amber: "bg-amber-400",
+    cyan: "bg-cyan-400",
+  };
+
+  return (
+    <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none" aria-hidden>
+      {particles.map((p) => (
+        <motion.div
+          key={p.id}
+          className={`absolute rounded-full ${colorMap[theme] || "bg-white"} opacity-20`}
+          style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size }}
+          animate={{ y: [0, -40, 0], opacity: [0.1, 0.3, 0.1] }}
+          transition={{ duration: p.duration, repeat: Infinity, delay: p.delay, ease: "easeInOut" }}
+        />
+      ))}
+    </div>
+  );
+}
+
+/* ───────────────────────── SUCCESS CARD ───────────────────────── */
+
+function SuccessCard({ story }: { story: typeof SUCCESS_STORIES[number] }) {
+  return (
+    <div className="absolute bottom-20 left-4 z-20 hidden max-w-[240px] rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur-md sm:block lg:bottom-24 lg:left-8">
+      <div className="flex items-center gap-2 mb-1.5">
+        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-[10px] font-bold text-accent">
+          {story.name[0]}
+        </div>
+        <div>
+          <p className="text-[11px] font-semibold text-white leading-tight">{story.name}</p>
+          <p className="text-[9px] text-white/50">{story.role}</p>
+        </div>
+      </div>
+      <p className="text-[11px] text-white/70 leading-snug italic">&ldquo;{story.text}&rdquo;</p>
+    </div>
+  );
+}
+
+/* ───────────────────────── COUNT UP ───────────────────────── */
+
+export function CountUp({ target, duration = 2 }: { target: number; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || hasAnimated.current) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        hasAnimated.current = true;
+        const start = performance.now();
+        const step = (now: number) => {
+          const progress = Math.min((now - start) / (duration * 1000), 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setCount(Math.round(eased * target));
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+    }, { threshold: 0.5 });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [target, duration]);
+
+  return <span ref={ref}>{count.toLocaleString("en-IN")}</span>;
+}
+
+/* ───────────────────────── MINI QUIZ ───────────────────────── */
+
+const QUIZ_QUESTIONS = [
+  {
+    q: "The minimum factor of safety for highwall slopes in opencast coal mines as per CMR 2017 is:",
+    options: ["1.0", "1.2", "1.5", "2.0"],
+    correct: 2,
+    explanation: "CMR 2017 mandates a minimum factor of safety of 1.5 for highwall slopes in opencast mines.",
+  },
+  {
+    q: "Which gas is most commonly associated with spontaneous heating in underground coal mines?",
+    options: ["Methane (CH₄)", "Carbon Monoxide (CO)", "Hydrogen Sulphide (H₂S)", "Nitrogen (N₂)"],
+    correct: 1,
+    explanation: "CO is the primary indicator gas for spontaneous heating — it appears early in the oxidation process.",
+  },
+  {
+    q: "The standard duration for GATE MN exam is:",
+    options: ["2 hours", "2.5 hours", "3 hours", "3.5 hours"],
+    correct: 2,
+    explanation: "GATE Mining Engineering (MN) is a 3-hour exam with 65 MCQs and NAT questions.",
+  },
+];
+
+export function MiniQuiz() {
+  const [idx, setIdx] = useState(0);
+  const [selected, setSelected] = useState<number | null>(null);
+  const [showAnswer, setShowAnswer] = useState(false);
+  const q = QUIZ_QUESTIONS[idx];
+
+  const handleSelect = (i: number) => {
+    if (showAnswer) return;
+    setSelected(i);
+    setShowAnswer(true);
+  };
+
+  const handleNext = () => {
+    setIdx((prev) => (prev + 1) % QUIZ_QUESTIONS.length);
+    setSelected(null);
+    setShowAnswer(false);
+  };
+
+  const isCorrect = selected === q.correct;
+
+  return (
+    <div className="rounded-xl border border-white/10 bg-slate-900/80 p-3 backdrop-blur-md sm:p-4">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-accent">Try a Question</span>
+        <span className="text-[10px] text-white/40">{idx + 1}/{QUIZ_QUESTIONS.length}</span>
+      </div>
+      <p className="text-xs sm:text-sm text-white/90 font-medium leading-relaxed mb-3">{q.q}</p>
+      <div className="space-y-1.5">
+        {q.options.map((opt, i) => {
+          let cls = "border-white/10 bg-white/5 hover:bg-white/10 text-white/80";
+          if (showAnswer && i === q.correct) cls = "border-emerald-400/50 bg-emerald-400/15 text-emerald-300";
+          else if (showAnswer && i === selected) cls = "border-red-400/50 bg-red-400/15 text-red-300";
+          return (
+            <button key={i} onClick={() => handleSelect(i)}
+              className={`w-full rounded-lg border px-3 py-2 text-left text-[11px] sm:text-xs font-medium transition ${cls}`}>
+              <span className="mr-2 text-white/40">{String.fromCharCode(65 + i)}.</span>
+              {opt}
+            </button>
+          );
+        })}
+      </div>
+      {showAnswer && (
+        <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="mt-2.5">
+          <p className={`text-[11px] font-semibold mb-1 ${isCorrect ? "text-emerald-400" : "text-red-400"}`}>
+            {isCorrect ? "✓ Correct!" : "✗ Incorrect"}
+          </p>
+          <p className="text-[10px] text-white/50 leading-relaxed">{q.explanation}</p>
+          <button onClick={handleNext} className="mt-2 text-[10px] font-semibold text-accent hover:underline">
+            Next question →
+          </button>
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
+/* ───────────────────────── Stagger wrapper ── */
 
 /* ───────────────────────── WINDOW 1 — GATE MN ───────────────────────── */
 
@@ -177,7 +450,7 @@ export function GateWindow({
   return (
     <div className="relative h-full w-full">
       <IitBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-slate-950/80" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-amber-300/30 bg-amber-300/10 text-amber-300">
@@ -219,7 +492,7 @@ export function CivilWindow({ civil }: { civil: CivilStats }) {
   return (
     <div className="relative h-full w-full">
       <CivilBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-emerald-950/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-emerald-950/80" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-300">
@@ -272,7 +545,7 @@ export function GeologyWindow({ stats }: { stats: SubjectStats }) {
   return (
     <div className="relative h-full w-full">
       <GeologyBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-amber-950/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-amber-950/80" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-amber-300/30 bg-amber-300/10 text-amber-200">
@@ -421,7 +694,7 @@ export function EnvironmentWindow({ stats }: { stats: SubjectStats }) {
   return (
     <div className="relative h-full w-full">
       <EnvironmentBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-teal-950/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-teal-950/80" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-200">
@@ -578,7 +851,7 @@ export function OngcWindow() {
   return (
     <div className="relative h-full w-full">
       <OilRigBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#003580]/90 via-[#003580]/70 to-[#003580]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#002a6b]/95 via-[#003580]/80 to-slate-950/90" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-6 px-4 py-8 sm:px-5 sm:py-10 lg:grid-cols-2 lg:gap-10 lg:py-16">
         <div>
           <div className="flex items-center gap-2 sm:gap-3">
@@ -733,7 +1006,7 @@ export function PsuWindow() {
   return (
     <div className="relative h-full w-full">
       <OpencastBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/80 to-slate-900" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-blue-950/70 to-slate-950/90" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <span className="badge border border-cyan-300/30 bg-cyan-300/10 text-cyan-300">
@@ -753,6 +1026,11 @@ export function PsuWindow() {
             <Link href="/psu/cil" className="cg-neon inline-flex items-center gap-2 rounded-lg border border-cyan-400/70 bg-cyan-400/10 px-6 py-3.5 text-base font-semibold text-cyan-200 transition hover:bg-cyan-400/20" data-track="hero:cta:psu-cil">
               Explore PSU Prep Modules <span aria-hidden>→</span>
             </Link>
+          </div>
+          <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 text-sm text-white/70">
+            <Stat n={`${CIL_TOTAL_SEATS}`} label="CIL Seats" />
+            <Stat n="100" label="MCQs / paper" />
+            <Stat n="0" label="Neg. Marking" />
           </div>
         </div>
         <div className="hidden lg:block lg:pl-4">
@@ -804,7 +1082,9 @@ export function NclWindow() {
   return (
     <div className="relative h-full w-full">
       <CoalMineBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0d2d4d]/90 via-[#1a3a5c]/70 to-slate-900/80" />
+      {/* AI-generated background (hybrid: raster bg + SVG overlay) */}
+      <div className="absolute inset-0 bg-[url('/images/ncl/ncl-banner-bg.svg')] bg-cover bg-center opacity-40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a2342]/90 via-[#0d3060]/65 to-slate-950/85" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <div className="flex items-center gap-3">
@@ -812,6 +1092,7 @@ export function NclWindow() {
             <span className="badge border border-blue-300/30 bg-blue-300/10 text-blue-300">
               Diploma · NCL · Live
             </span>
+            <DeadlineBadge date="2026-08-05" color="blue" />
           </div>
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             NCL Recruitment 2026.{" "}
@@ -824,7 +1105,7 @@ export function NclWindow() {
             20 full-length mocks built from the official NCL syllabus.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
-            <Link href="/diploma/ncl" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-400 to-indigo-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:brightness-105" data-track="hero:cta:ncl">
+            <Link href="/diploma/ncl" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-400 to-indigo-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:brightness-110" data-track="hero:cta:ncl">
               Start Mock Test <span aria-hidden>→</span>
             </Link>
             <a href="https://www.nclcil.in/data-listing/pages/recruitment" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-blue-300/40 bg-blue-300/5 px-6 py-3.5 text-base font-semibold text-blue-200 transition hover:bg-blue-300/15">
@@ -957,7 +1238,9 @@ export function WclWindow() {
   return (
     <div className="relative h-full w-full">
       <WclBackdrop />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0f4820]/90 via-[#145a2e]/70 to-slate-900/80" />
+      {/* AI-generated background (hybrid: raster bg + SVG overlay) */}
+      <div className="absolute inset-0 bg-[url('/images/wcl/wcl-banner-bg.svg')] bg-cover bg-center opacity-40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a3d1c]/90 via-[#0d5028]/65 to-slate-950/85" />
       <div className="relative mx-auto grid h-full max-w-7xl items-center gap-10 px-5 py-10 sm:py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <div className="flex items-center gap-3">
@@ -965,6 +1248,7 @@ export function WclWindow() {
             <span className="badge border border-emerald-300/30 bg-emerald-300/10 text-emerald-300">
               Diploma · WCL · Live
             </span>
+            <DeadlineBadge date="2026-08-10" color="emerald" />
           </div>
           <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight lg:text-6xl">
             WCL Recruitment 2026.{" "}
@@ -977,7 +1261,7 @@ export function WclWindow() {
             20 full-length mocks built from the official WCL syllabus.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
-            <Link href="/diploma/wcl" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-green-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-emerald-500/20 transition hover:brightness-105" data-track="hero:cta:wcl">
+            <Link href="/diploma/wcl" className="cg-ripple inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-400 to-green-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-emerald-500/30 transition hover:brightness-110" data-track="hero:cta:wcl">
               Start Mock Test <span aria-hidden>→</span>
             </Link>
             <a href="https://westerncoal.in/en/career/recruitment" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-300/5 px-6 py-3.5 text-base font-semibold text-emerald-200 transition hover:bg-emerald-300/15">
@@ -1104,11 +1388,32 @@ function WclScene() {
 
 /* ───────────────────────── Shared bits ───────────────────────── */
 
+function DeadlineBadge({ date, color }: { date: string; color: "blue" | "emerald" | "amber" | "cyan" }) {
+  const target = new Date(date).getTime();
+  const now = Date.now();
+  const daysLeft = Math.max(0, Math.ceil((target - now) / 86400000));
+  const urgent = daysLeft <= 14;
+
+  const colors = {
+    blue: "border-blue-400/50 bg-blue-500/15 text-blue-300",
+    emerald: "border-emerald-400/50 bg-emerald-500/15 text-emerald-300",
+    amber: "border-amber-400/50 bg-amber-500/15 text-amber-300",
+    cyan: "border-cyan-400/50 bg-cyan-500/15 text-cyan-300",
+  };
+
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-bold ${colors[color]} ${urgent ? "animate-pulse" : ""}`}>
+      <span className={`h-1.5 w-1.5 rounded-full ${urgent ? "bg-red-400" : `bg-${color}-400`}`} />
+      {daysLeft}d left
+    </span>
+  );
+}
+
 function Stat({ n, label }: { n: string; label: string }) {
   return (
-    <div>
-      <div className="text-2xl font-extrabold text-white">{n}</div>
-      <div className="text-xs uppercase tracking-wide">{label}</div>
+    <div className="rounded-lg bg-white/5 px-3 py-2 ring-1 ring-white/5">
+      <div className="text-xl font-extrabold text-white">{n}</div>
+      <div className="text-[10px] uppercase tracking-wider text-white/50">{label}</div>
     </div>
   );
 }

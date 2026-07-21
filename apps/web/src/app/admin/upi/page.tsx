@@ -152,7 +152,7 @@ export default async function AdminUpiPage({
             const n = row?._count._all ?? 0;
             return (
               <span
-                key={e.exam}
+                key={e.label}
                 className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-sm"
               >
                 <span className="font-semibold">{e.label}</span>
@@ -186,7 +186,7 @@ export default async function AdminUpiPage({
           <FilterChip label="All exams" href="/admin/upi" active={!fExam} />
           {CATALOG.map((e) => (
             <FilterChip
-              key={e.exam}
+              key={e.label}
               label={e.label}
               href={`/admin/upi?exam=${e.exam}`}
               active={fExam === e.exam && !fSubject}

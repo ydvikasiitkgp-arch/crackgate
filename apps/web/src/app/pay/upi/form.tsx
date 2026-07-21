@@ -15,6 +15,10 @@ type Props = {
   defaultSubject?: string;
   /** Friendly label shown when attribution is locked from a deep link. */
   defaultSubjectLabel?: string;
+  /** True when purchasing a combo (shows both entitlements). */
+  isCombo?: boolean;
+  /** Display names for combo entitlements. */
+  comboLabels?: string[];
 };
 
 const APPS = ["PhonePe", "GPay", "Paytm", "BHIM", "Other"] as const;
@@ -35,6 +39,8 @@ export default function UpiClaimForm({
   defaultExam,
   defaultSubject = "",
   defaultSubjectLabel,
+  isCombo = false,
+  comboLabels = [],
 }: Props) {
   const router = useRouter();
   // Attribution is locked when the buyer arrived from a specific product CTA
@@ -121,6 +127,11 @@ export default function UpiClaimForm({
           Thanks, <b>{payerName.trim() || "there"}</b> — we&apos;ve received
           your <b className="capitalize">{plan}</b> claim of{" "}
           <b>₹{amountRupees}</b>.
+          {isCombo && comboLabels.length > 0 && (
+            <span className="block mt-1 text-xs text-muted">
+              This unlocks: {comboLabels.join(" + ")}
+            </span>
+          )}
         </p>
         <p className="mt-2 text-sm text-muted">
           We verify against our UPI app and unlock your access within a few

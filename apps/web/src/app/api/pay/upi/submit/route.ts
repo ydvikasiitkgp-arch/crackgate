@@ -7,14 +7,24 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { isValidPhone, normalizePhone } from "@/lib/whatsapp";
 import { hasEntitlement } from "@/lib/entitlements";
+import { subjectPrice, type ExamTrack } from "@/data/catalog";
 import { getPostHogClient } from "@/lib/posthog";
 
 export const runtime = "nodejs";
 
-const PLANS = {
-  pro:     { amountPaise: 49900, months: 18 },
-  premium: { amountPaise: 89900, months: 18 },
+// Combo definitions — must match the page.
+const COMBOS = {
+  "combo-wcl-ncl-mining-sirdar": {
+    pricePaise: 59900,
+    months: 18,
+    entitlements: [
+      { exam: "DIPLOMA" as ExamTrack, subject: "wcl-sirdar" },
+      { exam: "DIPLOMA" as ExamTrack, subject: "ncl-mining-sirdar" },
+    ],
+  },
 } as const;
+
+type ComboKey = keyof typeof COMBOS;
 
 const Body = z.object({
   plan: z.enum(["pro", "premium"]),
@@ -48,7 +58,17 @@ export async function POST(req: Request) {
 
   const { plan, payerName, payerPhone, payerEmail, examName, subject, upiApp, payerNote } =
     parsed.data;
-  const cfg = PLANS[plan];
+  const targetExam = EXAM_CODE[examName] ?? examName;
+
+  // Resolve the correct price from catalog
+  const isCombo = subject in COMBOS;
+  const combo = isCombo ? COMBOS[subject as ComboKey] : null;
+  const price = subjectPrice(targetExam, subject);
+  const expectedPaise = combo
+    ? combo.pricePaise
+    : plan === "premium"
+      ? price.premiumPaise
+      : price.proPaise;
 
   const phone = normalizePhone(payerPhone);
   if (!isValidPhone(phone)) {
@@ -59,14 +79,12 @@ export async function POST(req: Request) {
   }
 
   // Block stacking: if user already has the same (or higher) plan still valid,
-  // tell them. They can extend by buying again *after* current expiry — keeps
-  // Tier 0 simple. Premium > pro > free.
+  // tell them. They can extend by buying again *after* current expiry.
   const me = await db.user.findUnique({
     where: { id: session.user.id },
     select: { plan: true, planExpiry: true, phone: true },
   });
   const rank = { free: 0, pro: 1, premium: 2 } as const;
-  const targetExam = EXAM_CODE[examName] ?? examName;
 
   // GATE subjects sold per exam+subject Entitlement (not the legacy User.plan).
   const GATE_ENTITLEMENT_SUBJECTS = new Set(["civil"]);
@@ -74,8 +92,6 @@ export async function POST(req: Request) {
     targetExam === "GATE" && !GATE_ENTITLEMENT_SUBJECTS.has(subject.trim().toLowerCase());
 
   if (isGatePlanTrack) {
-    // GATE → Mining is the only track that drives the global User.plan, so its
-    // dedup is plan-based.
     if (
       me &&
       rank[me.plan] >= rank[plan] &&
@@ -92,9 +108,20 @@ export async function POST(req: Request) {
         { status: 409 },
       );
     }
+  } else if (combo) {
+    // For combos, check if ANY of the entitlements are already active
+    for (const ent of combo.entitlements) {
+      if (await hasEntitlement(session.user.id, ent.exam, ent.subject, plan)) {
+        return NextResponse.json(
+          {
+            error: "already_subscribed",
+            message: `You already have active access to ${ent.exam} · ${ent.subject}.`,
+          },
+          { status: 409 },
+        );
+      }
+    }
   } else if (await hasEntitlement(session.user.id, targetExam, subject, plan)) {
-    // Entitlement tracks (PSU · CIL, GATE · Civil, …) are gated per exam+subject —
-    // don't block a buyer just because their global plan is already pro/premium.
     return NextResponse.json(
       {
         error: "already_subscribed",
@@ -104,8 +131,7 @@ export async function POST(req: Request) {
     );
   }
 
-  // One pending claim at a time — replaces the old UTR-uniqueness dedup and
-  // stops accidental double submissions / spam.
+  // One pending claim at a time
   const pending = await db.upiPayment.findFirst({
     where: { userId: session.user.id, status: "pending" },
     select: { id: true },
@@ -122,11 +148,10 @@ export async function POST(req: Request) {
   }
 
   try {
-    // Fold exam + subject into the stored note so admins see them without a
-    // schema change. Keeps any free-form note the user added.
     const noteWithExam = [
       `Exam: ${examName}`,
       `Subject: ${subject}`,
+      combo ? `Combo: ${combo.entitlements.map((e) => `${e.exam}/${e.subject}`).join(", ")}` : "",
       payerNote,
     ]
       .filter(Boolean)
@@ -137,10 +162,10 @@ export async function POST(req: Request) {
       data: {
         userId: session.user.id,
         plan,
-        exam: EXAM_CODE[examName] ?? examName,
+        exam: targetExam,
         subject,
-        amountPaise: cfg.amountPaise,
-        periodMonths: cfg.months,
+        amountPaise: expectedPaise,
+        periodMonths: combo?.months ?? 18,
         payerName,
         payerPhone: phone,
         payerEmail,
@@ -151,7 +176,6 @@ export async function POST(req: Request) {
       select: { id: true, status: true, createdAt: true },
     });
 
-    // Backfill the user's phone if we don't have one (ignore unique conflicts).
     if (!me?.phone) {
       await db.user
         .update({ where: { id: session.user.id }, data: { phone } })
@@ -165,9 +189,10 @@ export async function POST(req: Request) {
         plan,
         exam_name: examName,
         subject,
-        amount_paise: cfg.amountPaise,
-        amount_rupees: Math.round(cfg.amountPaise / 100),
-        period_months: cfg.months,
+        is_combo: isCombo,
+        amount_paise: expectedPaise,
+        amount_rupees: Math.round(expectedPaise / 100),
+        period_months: combo?.months ?? 18,
         upi_app: upiApp ?? null,
       },
     });
