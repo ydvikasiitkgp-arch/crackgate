@@ -50,14 +50,6 @@ const SLIDE_LABELS = [
   "PSU recruitment — Coal India Limited",
 ];
 
-const SUCCESS_STORIES = [
-  { name: "Rahul K.", role: "NCL Mining Sirdar", text: "Scored 87/100 — mocks were exactly like the real exam.", track: "ncl" },
-  { name: "Priya S.", role: "WCL Asst. Foreman", text: "Cracked WCL on first attempt. The practice questions were spot on.", track: "wcl" },
-  { name: "Amit T.", role: "GATE MN 2026 — AIR 342", text: "The SWOT analytics helped me focus on weak subjects only.", track: "gate" },
-  { name: "Sneha M.", role: "CIL Management Trainee", text: "PSU mocks were tougher than the real paper — perfect prep.", track: "cil" },
-  { name: "Deepak J.", role: "GATE CE 2026 — AIR 89", text: "Practiced 500+ questions here. The interface feels exactly like TCS iON.", track: "gate" },
-];
-
 /* ───────────────────────── MAIN CAROUSEL ───────────────────────── */
 
 export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geology, environment }: Props) {
@@ -123,7 +115,6 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
   };
 
   const meta = SLIDE_META[active];
-  const story = SUCCESS_STORIES[active % SUCCESS_STORIES.length];
 
   return (
     <section
@@ -194,9 +185,6 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
         {active + 1} / {SLIDES}
       </div>
 
-      {/* ── Success story card (bottom-right) ── */}
-      <SuccessCard story={story} />
-
       {/* ── Segmented progress bar ── */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
         <div className="flex items-end justify-center gap-1 px-4 pb-3 pt-6 sm:px-8" style={{ background: "linear-gradient(transparent, rgba(2,6,23,0.8))" }}>
@@ -265,25 +253,6 @@ function SlideParticles({ theme }: { theme: string }) {
           transition={{ duration: p.duration, repeat: Infinity, delay: p.delay, ease: "easeInOut" }}
         />
       ))}
-    </div>
-  );
-}
-
-/* ───────────────────────── SUCCESS CARD ───────────────────────── */
-
-function SuccessCard({ story }: { story: typeof SUCCESS_STORIES[number] }) {
-  return (
-    <div className="absolute bottom-20 left-4 z-20 hidden max-w-[240px] rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur-md sm:block lg:bottom-24 lg:left-8">
-      <div className="flex items-center gap-2 mb-1.5">
-        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-[10px] font-bold text-accent">
-          {story.name[0]}
-        </div>
-        <div>
-          <p className="text-[11px] font-semibold text-white leading-tight">{story.name}</p>
-          <p className="text-[9px] text-white/50">{story.role}</p>
-        </div>
-      </div>
-      <p className="text-[11px] text-white/70 leading-snug italic">&ldquo;{story.text}&rdquo;</p>
     </div>
   );
 }
