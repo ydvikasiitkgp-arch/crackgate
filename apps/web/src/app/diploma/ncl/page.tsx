@@ -5,7 +5,7 @@ import { NCL_SIRDAR_MOCKS } from "@/data/diploma/ncl-sirdar-mocks";
 import { NCL_SURVEYOR_MOCKS } from "@/data/diploma/ncl-surveyor-mocks";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { AddToCartBtn } from "@/components/add-to-cart-btn";
+import { DiplomaCard } from "@/components/diploma-card";
 
 export const metadata = {
   title: "NCL Diploma Exams · CrackGate",
@@ -147,65 +147,26 @@ export default function NclIndexPage() {
         </div>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          {/* Mining Sirdar */}
-          <Link
+          <DiplomaCard
             href="/diploma/ncl/mining-sirdar"
-            className="card group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-pop"
-          >
-            <div className="flex items-center justify-between">
-              <span className="badge bg-blue-400/15 text-blue-700 dark:text-blue-300">T&S Gr. C</span>
-              <span className="badge badge-pro">20 mocks</span>
-            </div>
-            <h3 className="mt-4 text-lg font-bold text-ink">Mining Sirdar</h3>
-            <p className="mt-2 flex-1 text-sm text-muted leading-snug">
-              DGMS Mining Sirdar Certificate of Competency under Coal Mines Regulations, 2017.
-              Covers opencast working, explosives, safety, CMR 2017 duties, and general aptitude.
-            </p>
-            <ul className="mt-3 space-y-1 text-xs text-muted">
-              {SYLLABUS_SIRDAR.map((t) => (
-                <li key={t}>▸ {t}</li>
-              ))}
-            </ul>
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-sm font-semibold text-brand">
-                Open mock series <span className="transition-transform group-hover:translate-x-0.5">→</span>
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-muted">20 mocks · ₹399</span>
-                <AddToCartBtn exam="DIPLOMA" subject="ncl-mining-sirdar" />
-              </div>
-            </div>
-          </Link>
-
-          {/* Surveyor */}
-          <Link
+            badge="T&S Gr. C"
+            badgeCls="bg-blue-400/15 text-blue-700 dark:text-blue-300"
+            title="Mining Sirdar"
+            description="DGMS Mining Sirdar Certificate of Competency under Coal Mines Regulations, 2017. Covers opencast working, explosives, safety, CMR 2017 duties, and general aptitude."
+            syllabus={SYLLABUS_SIRDAR}
+            exam="DIPLOMA"
+            subject="ncl-mining-sirdar"
+          />
+          <DiplomaCard
             href="/diploma/ncl/surveyor"
-            className="card group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-pop"
-          >
-            <div className="flex items-center justify-between">
-              <span className="badge bg-indigo-400/15 text-indigo-700 dark:text-indigo-300">T&S Gr. B</span>
-              <span className="badge badge-pro">20 mocks</span>
-            </div>
-            <h3 className="mt-4 text-lg font-bold text-ink">Surveyor (Mining)</h3>
-            <p className="mt-2 flex-1 text-sm text-muted leading-snug">
-              Surveyors&apos; Certificate of Competency (SCC) under Coal Mines Regulations, 2017.
-              Covers linear measurement, theodolite, total station, levelling, and mine surveying.
-            </p>
-            <ul className="mt-3 space-y-1 text-xs text-muted">
-              {SYLLABUS_SURVEYOR.map((t) => (
-                <li key={t}>▸ {t}</li>
-              ))}
-            </ul>
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-sm font-semibold text-brand">
-                Open mock series <span className="transition-transform group-hover:translate-x-0.5">→</span>
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-muted">20 mocks · ₹399</span>
-                <AddToCartBtn exam="DIPLOMA" subject="ncl-surveyor" />
-              </div>
-            </div>
-          </Link>
+            badge="T&S Gr. B"
+            badgeCls="bg-indigo-400/15 text-indigo-700 dark:text-indigo-300"
+            title="Surveyor (Mining)"
+            description="Surveyors&apos; Certificate of Competency (SCC) under Coal Mines Regulations, 2017. Covers linear measurement, theodolite, total station, levelling, and mine surveying."
+            syllabus={SYLLABUS_SURVEYOR}
+            exam="DIPLOMA"
+            subject="ncl-surveyor"
+          />
         </div>
       </section>
 

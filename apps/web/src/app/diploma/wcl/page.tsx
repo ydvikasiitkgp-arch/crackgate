@@ -5,7 +5,7 @@ import { WCL_SIRDAR_MOCKS } from "@/data/diploma/wcl-mocks";
 import { WCL_AF_MOCKS } from "@/data/diploma/wcl-af-mocks";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { AddToCartBtn } from "@/components/add-to-cart-btn";
+import { DiplomaCard } from "@/components/diploma-card";
 
 export const metadata = {
   title: "WCL Diploma Exams · CrackGate",
@@ -146,65 +146,26 @@ export default function WclIndexPage() {
         </div>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          {/* Mining Sirdar */}
-          <Link
+          <DiplomaCard
             href="/diploma/wcl/mining-sirdar"
-            className="card group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-pop"
-          >
-            <div className="flex items-center justify-between">
-              <span className="badge bg-emerald-400/15 text-emerald-700 dark:text-emerald-300">T&S Grade-C</span>
-              <span className="badge badge-pro">20 mocks</span>
-            </div>
-            <h3 className="mt-4 text-lg font-bold text-ink">Mining Sirdar</h3>
-            <p className="mt-2 flex-1 text-sm text-muted leading-snug">
-              DGMS Mining Sirdar Certificate of Competency under Coal Mines Regulations, 2017.
-              Covers ventilation, blasting, depillaring, strata control, and face machineries.
-            </p>
-            <ul className="mt-3 space-y-1 text-xs text-muted">
-              {SYLLABUS_MINING.map((t) => (
-                <li key={t}>▸ {t}</li>
-              ))}
-            </ul>
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-sm font-semibold text-brand">
-                Open mock series <span className="transition-transform group-hover:translate-x-0.5">→</span>
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-muted">20 mocks · ₹399</span>
-                <AddToCartBtn exam="DIPLOMA" subject="wcl-sirdar" />
-              </div>
-            </div>
-          </Link>
-
-          {/* Assistant Foreman Electrical */}
-          <Link
+            badge="T&S Grade-C"
+            badgeCls="bg-emerald-400/15 text-emerald-700 dark:text-emerald-300"
+            title="Mining Sirdar"
+            description="DGMS Mining Sirdar Certificate of Competency under Coal Mines Regulations, 2017. Covers ventilation, blasting, depillaring, strata control, and face machineries."
+            syllabus={SYLLABUS_MINING}
+            exam="DIPLOMA"
+            subject="wcl-sirdar"
+          />
+          <DiplomaCard
             href="/diploma/wcl/assistant-foreman-electrical"
-            className="card group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-pop"
-          >
-            <div className="flex items-center justify-between">
-              <span className="badge bg-emerald-400/15 text-emerald-700 dark:text-emerald-300">T&S Grade-C</span>
-              <span className="badge badge-pro">20 mocks</span>
-            </div>
-            <h3 className="mt-4 text-lg font-bold text-ink">Assistant Foreman (Electrical)</h3>
-            <p className="mt-2 flex-1 text-sm text-muted leading-snug">
-              WCL Assistant Foreman (Trainee) Electrical / Electrical Supervisor CBT.
-              Covers EE basics, machines, drives, switchgear, earthing, and CEA 2023 safety.
-            </p>
-            <ul className="mt-3 space-y-1 text-xs text-muted">
-              {SYLLABUS_ELECTRICAL.map((t) => (
-                <li key={t}>▸ {t}</li>
-              ))}
-            </ul>
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-sm font-semibold text-brand">
-                Open mock series <span className="transition-transform group-hover:translate-x-0.5">→</span>
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-muted">20 mocks · ₹399</span>
-                <AddToCartBtn exam="DIPLOMA" subject="wcl-af-electrical" />
-              </div>
-            </div>
-          </Link>
+            badge="T&S Grade-C"
+            badgeCls="bg-emerald-400/15 text-emerald-700 dark:text-emerald-300"
+            title="Assistant Foreman (Electrical)"
+            description="WCL Assistant Foreman (Trainee) Electrical / Electrical Supervisor CBT. Covers EE basics, machines, drives, switchgear, earthing, and CEA 2023 safety."
+            syllabus={SYLLABUS_ELECTRICAL}
+            exam="DIPLOMA"
+            subject="wcl-af-electrical"
+          />
         </div>
       </section>
 

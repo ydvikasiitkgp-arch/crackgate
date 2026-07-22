@@ -48,7 +48,6 @@ export function AddToCartBtn({
 
   return (
     <button
-      onClickCapture={(e) => { e.preventDefault(); e.stopPropagation(); }}
       onClick={handleAdd}
       disabled={inCart || loading}
       className={`inline-flex items-center justify-center rounded-lg border font-semibold transition-all duration-150 ${sizeCls} ${variantCls} ${className}`}
