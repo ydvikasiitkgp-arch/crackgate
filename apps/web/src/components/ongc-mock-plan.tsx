@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ONGC_PATTERN, buildOngcMockPlan, type OngcMock } from "@/data/ongc-mocks";
 import { ongcLiveSetNos } from "@/data/ongc-mock-bank";
 import { ONGC_PRICE_RUPEES } from "@/data/ongc";
+import { AddToCartBtn } from "@/components/add-to-cart-btn";
 
 export function OngcMockPlan({
   discipline,
@@ -43,7 +44,7 @@ export function OngcMockPlan({
           </span>
         </div>
       ) : (
-        <OngcPaywall discipline={discipline} payHref={payHref} count={plan.length} />
+        <OngcPaywall discipline={discipline} slug={slug} payHref={payHref} count={plan.length} />
       )}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -55,7 +56,7 @@ export function OngcMockPlan({
   );
 }
 
-function OngcPaywall({ discipline, payHref, count }: { discipline: string; payHref: string; count: number }) {
+function OngcPaywall({ discipline, slug, payHref, count }: { discipline: string; slug: string; payHref: string; count: number }) {
   return (
     <div className="mt-6 overflow-hidden rounded-2xl border border-blue-400/30 bg-gradient-to-r from-[#003580] to-slate-900 text-white">
       <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
@@ -74,12 +75,15 @@ function OngcPaywall({ discipline, payHref, count }: { discipline: string; payHr
           <div className="text-right">
             <span className="text-3xl font-extrabold">₹{ONGC_PRICE_RUPEES}</span>
           </div>
-          <Link
-            href={payHref}
-            className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-blue-300/70 bg-blue-300/10 px-6 py-3 text-sm font-semibold text-blue-100 transition hover:bg-blue-300/20"
-          >
-            Unlock now <span aria-hidden>→</span>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href={payHref}
+              className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-blue-300/70 bg-blue-300/10 px-6 py-3 text-sm font-semibold text-blue-100 transition hover:bg-blue-300/20"
+            >
+              Unlock now <span aria-hidden>→</span>
+            </Link>
+            <AddToCartBtn exam="PSU" subject={slug} variant="light" size="md" />
+          </div>
           <span className="text-[11px] text-white/50">Pay via UPI · access in a few hours</span>
         </div>
       </div>

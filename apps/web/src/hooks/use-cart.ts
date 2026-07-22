@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useEffect, useCallback, useSyncExternalStore } from "react";
 
 export type CartItem = {
   id: string;
@@ -12,41 +12,80 @@ export type CartItem = {
   createdAt: string;
 };
 
+export type ComboDiscount = {
+  label: string;
+  originalTotalPaise: number;
+  discountedTotalPaise: number;
+  savingsPaise: number;
+};
+
 type CartState = {
   items: CartItem[];
+  rawTotalPaise: number;
   totalPaise: number;
   count: number;
   loading: boolean;
+  comboDiscounts: ComboDiscount[];
+  comboSavingsPaise: number;
 };
 
-export function useCart() {
-  const [state, setState] = useState<CartState>({
-    items: [],
-    totalPaise: 0,
-    count: 0,
-    loading: true,
-  });
+// ── singleton shared state ──────────────────────────────────────────
+let state: CartState = {
+  items: [],
+  rawTotalPaise: 0,
+  totalPaise: 0,
+  count: 0,
+  loading: true,
+  comboDiscounts: [],
+  comboSavingsPaise: 0,
+};
+const listeners = new Set<() => void>();
 
-  const fetchCart = useCallback(async () => {
-    try {
-      const res = await fetch("/api/cart");
-      if (res.ok) {
-        const data = await res.json();
-        setState({
-          items: data.items ?? [],
-          totalPaise: data.totalPaise ?? 0,
-          count: data.count ?? 0,
-          loading: false,
-        });
-      }
-    } catch {
-      setState((s) => ({ ...s, loading: false }));
+function emit() {
+  for (const fn of listeners) fn();
+}
+
+function subscribe(fn: () => void) {
+  listeners.add(fn);
+  return () => { listeners.delete(fn); };
+}
+
+function getSnapshot() {
+  return state;
+}
+
+function setCart(s: CartState) {
+  state = s;
+  emit();
+}
+
+async function fetchCart() {
+  try {
+    const res = await fetch("/api/cart");
+    if (res.ok) {
+      const data = await res.json();
+      setCart({
+        items: data.items ?? [],
+        rawTotalPaise: data.rawTotalPaise ?? 0,
+        totalPaise: data.totalPaise ?? 0,
+        count: data.count ?? 0,
+        loading: false,
+        comboDiscounts: data.comboDiscounts ?? [],
+        comboSavingsPaise: data.comboSavingsPaise ?? 0,
+      });
     }
-  }, []);
+  } catch {
+    setCart({ ...state, loading: false });
+  }
+}
+
+// ── hook ────────────────────────────────────────────────────────────
+export function useCart() {
+  const snap = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
 
   useEffect(() => {
     fetchCart();
-  }, [fetchCart]);
+  }, []);
 
   const addItem = useCallback(
     async (exam: string, subject: string, plan: string = "pro") => {
@@ -58,7 +97,7 @@ export function useCart() {
       if (res.ok) await fetchCart();
       return res.ok;
     },
-    [fetchCart],
+    [],
   );
 
   const removeItem = useCallback(
@@ -67,14 +106,14 @@ export function useCart() {
       if (res.ok) await fetchCart();
       return res.ok;
     },
-    [fetchCart],
+    [],
   );
 
   const clearCart = useCallback(async () => {
-    const items = state.items;
+    const items = snap.items;
     await Promise.all(items.map((i) => fetch(`/api/cart/${i.id}`, { method: "DELETE" })));
     await fetchCart();
-  }, [state.items, fetchCart]);
+  }, [snap.items]);
 
-  return { ...state, addItem, removeItem, clearCart, refetch: fetchCart };
+  return { ...snap, addItem, removeItem, clearCart, refetch: fetchCart };
 }

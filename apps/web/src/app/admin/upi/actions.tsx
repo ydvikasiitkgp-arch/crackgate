@@ -4,8 +4,19 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { isComboSlug, comboLabel } from "@/lib/combos";
+import { subjectLabel } from "@/data/catalog";
 
-export default function UpiReviewActions({ claimId, subject }: { claimId: string; subject?: string | null }) {
+type CartItem = { exam: string; subject: string; plan: string; pricePaise: number };
+
+export default function UpiReviewActions({
+  claimId,
+  subject,
+  items,
+}: {
+  claimId: string;
+  subject?: string | null;
+  items?: CartItem[] | null;
+}) {
   const router = useRouter();
   const [busy, setBusy] = useState<null | "approve" | "reject">(null);
   const [confirmApprove, setConfirmApprove] = useState(false);
@@ -13,7 +24,8 @@ export default function UpiReviewActions({ claimId, subject }: { claimId: string
   const [rejectReason, setRejectReason] = useState("");
   const [error, setError] = useState("");
 
-  const isCombo = subject ? isComboSlug(subject) : false;
+  const isCartCheckout = Array.isArray(items) && items.length > 0;
+  const isCombo = !isCartCheckout && subject ? isComboSlug(subject) : false;
   const comboFriendly = isCombo ? comboLabel(subject!) : null;
 
   async function approve() {
@@ -71,7 +83,20 @@ export default function UpiReviewActions({ claimId, subject }: { claimId: string
           <button className="absolute inset-0 bg-ink/40 backdrop-blur-sm" onClick={() => setConfirmApprove(false)} />
           <div className="relative bg-surface rounded-2xl border border-line shadow-pop w-full max-w-sm mx-4 p-6">
             <h3 className="font-bold text-lg">Approve this claim?</h3>
-            {isCombo ? (
+            {isCartCheckout ? (
+              <div className="text-sm text-muted mt-2">
+                <p>This cart contains <strong>{items!.length} items</strong>. It will create {items!.length} entitlement{items!.length > 1 ? "s" : ""}:</p>
+                <ul className="mt-2 space-y-1">
+                  {items!.map((item, i) => (
+                    <li key={i} className="flex items-center gap-1.5 text-xs">
+                      <span className="text-ok">✓</span>
+                      <span>{subjectLabel(item.exam, item.subject)}</span>
+                      <span className="text-muted">· {item.plan}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : isCombo ? (
               <p className="text-sm text-muted mt-2">
                 This is a <span className="text-ok font-medium">{comboFriendly}</span>. It will create <strong>2 entitlements</strong>: WCL Mining Sirdar + NCL Mining Sirdar.
               </p>

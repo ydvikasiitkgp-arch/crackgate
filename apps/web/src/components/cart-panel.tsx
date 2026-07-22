@@ -1,6 +1,7 @@
 "use client";
 
 import { X, Trash2, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 import { useCart } from "@/hooks/use-cart";
 
 function formatPrice(paise: number) {
@@ -14,7 +15,7 @@ export function CartPanel({
   open: boolean;
   onClose: () => void;
 }) {
-  const { items, totalPaise, count, loading, removeItem } = useCart();
+  const { items, totalPaise, count, loading, removeItem, comboDiscounts, comboSavingsPaise, rawTotalPaise } = useCart();
 
   if (!open) return null;
 
@@ -52,9 +53,13 @@ export function CartPanel({
             <div className="text-center py-12">
               <ShoppingCart className="w-12 h-12 text-muted mx-auto mb-3 opacity-40" />
               <p className="text-sm text-muted">Your cart is empty</p>
-              <p className="text-xs text-muted mt-1">
-                Add mocks from the pricing page
-              </p>
+              <Link
+                href="/cart"
+                onClick={onClose}
+                className="mt-3 inline-flex items-center gap-1.5 text-sm text-brand hover:underline"
+              >
+                Browse mocks <span aria-hidden>→</span>
+              </Link>
             </div>
           ) : (
             items.map((item) => (
@@ -90,11 +95,21 @@ export function CartPanel({
         {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-line px-5 py-4 space-y-3">
+            {comboDiscounts.length > 0 && (
+              <div className="rounded-lg bg-ok/10 border border-ok/20 px-3 py-2 text-xs text-ok font-medium">
+                Combo discount applied! You save {formatPrice(comboSavingsPaise)}
+              </div>
+            )}
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted">Total</span>
-              <span className="text-lg font-bold text-ink tabular-nums">
-                {formatPrice(totalPaise)}
-              </span>
+              <div className="text-right">
+                {comboSavingsPaise > 0 && (
+                  <span className="text-xs text-muted line-through mr-2">{formatPrice(rawTotalPaise)}</span>
+                )}
+                <span className="text-lg font-bold text-ink tabular-nums">
+                  {formatPrice(totalPaise)}
+                </span>
+              </div>
             </div>
             <a
               href="/pay/checkout"

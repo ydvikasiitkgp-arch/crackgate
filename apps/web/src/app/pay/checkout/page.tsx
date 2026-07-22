@@ -4,6 +4,7 @@ import QRCode from "qrcode";
 import { db } from "@/lib/db";
 import { whatsappLink } from "@/lib/contact";
 import { subjectPrice, subjectLabel } from "@/data/catalog";
+import { calculateComboDiscounts } from "@/lib/combos";
 import CheckoutForm from "./form";
 
 export const dynamic = "force-dynamic";
@@ -46,7 +47,10 @@ export default async function CheckoutPage() {
     };
   });
 
-  const totalPaise = items.reduce((sum, i) => sum + i.pricePaise, 0);
+  const rawTotalPaise = items.reduce((sum, i) => sum + i.pricePaise, 0);
+  const comboDiscounts = calculateComboDiscounts(items);
+  const comboSavingsPaise = comboDiscounts.reduce((sum, d) => sum + d.savingsPaise, 0);
+  const totalPaise = rawTotalPaise - comboSavingsPaise;
   const amountRupees = Math.round(totalPaise / 100);
 
   const [me, myClaims] = await Promise.all([
@@ -113,7 +117,25 @@ export default async function CheckoutPage() {
             </div>
           ))}
         </div>
+
+        {comboDiscounts.length > 0 && (
+          <div className="mt-3 pt-3 border-t border-line">
+            <div className="flex items-center justify-between text-sm text-ok font-semibold">
+              <span>{comboDiscounts[0].label}</span>
+              <span>-₹{Math.round(comboSavingsPaise / 100)}</span>
+            </div>
+          </div>
+        )}
+
         <div className="mt-3 pt-3 border-t border-line flex items-center justify-between">
+          {comboSavingsPaise > 0 && (
+            <span className="text-sm font-semibold text-muted">
+              <span className="line-through">₹{Math.round(rawTotalPaise / 100)}</span>
+            </span>
+          )}
+          {comboSavingsPaise > 0 && <span className="text-sm text-ok font-medium">You save ₹{Math.round(comboSavingsPaise / 100)}</span>}
+        </div>
+        <div className="mt-1 flex items-center justify-between">
           <span className="text-sm font-semibold text-muted">Total</span>
           <span className="text-xl font-extrabold text-ink">₹{amountRupees}</span>
         </div>

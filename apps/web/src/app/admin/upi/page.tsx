@@ -319,13 +319,29 @@ export default async function AdminUpiPage({
                     </td>
                     <td className="p-3 text-xs">{c.exam ?? "—"}</td>
                     <td className="p-3 text-xs">
-                      {c.items ? (
-                        <span className="inline-flex items-center gap-1">
-                          <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-500/15 text-blue-600 dark:text-blue-400">
-                            CART
+                      {Array.isArray(c.items) && c.items.length > 0 ? (
+                        <div className="space-y-1">
+                          <span className="inline-flex items-center gap-1">
+                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-500/15 text-blue-600 dark:text-blue-400">
+                              CART
+                            </span>
+                            <span className="text-muted">{c.items.length} items</span>
                           </span>
-                          <span className="text-muted">{Array.isArray(c.items) ? c.items.length : "?"} items</span>
-                        </span>
+                          {c.items.map((item: any, i: number) => (
+                            <div key={i} className="text-[11px] text-muted pl-1">
+                              {subjectLabel(item.exam, item.subject)} · {item.plan} · ₹{Math.round(item.pricePaise / 100)}
+                            </div>
+                          ))}
+                          {(() => {
+                            const rawTotal = c.items.reduce((s: number, item: any) => s + (item.pricePaise ?? 0), 0);
+                            const saved = rawTotal - c.amountPaise;
+                            return saved > 0 ? (
+                              <div className="text-[11px] text-ok font-medium pl-1">
+                                15% combo discount: -₹{Math.round(saved / 100)}
+                              </div>
+                            ) : null;
+                          })()}
+                        </div>
                       ) : c.subject && isComboSlug(c.subject) ? (
                         <span className="inline-flex items-center gap-1">
                           <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/15 text-amber-600 dark:text-amber-400">
@@ -346,7 +362,7 @@ export default async function AdminUpiPage({
                       {c.payerNote ?? "—"}
                     </td>
                     <td className="p-3">
-                      <UpiReviewActions claimId={c.id} subject={c.subject} />
+                      <UpiReviewActions claimId={c.id} subject={c.subject} items={c.items as any} />
                     </td>
                   </tr>
                 ))}

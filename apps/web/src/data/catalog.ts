@@ -47,6 +47,8 @@ const DIPLOMA_PRICE: SubjectPrice = { proPaise: 19900, premiumPaise: 34900 };
 const WCL_PRICE: SubjectPrice = { proPaise: 39900, premiumPaise: 39900 };
 const NCL_PRICE: SubjectPrice = { proPaise: 39900, premiumPaise: 39900 };
 
+const PSU_PRICE: SubjectPrice = { proPaise: 49900, premiumPaise: 49900 };
+
 export const CATALOG: CatalogExam[] = [
   {
     exam: "GATE",
@@ -66,11 +68,11 @@ export const CATALOG: CatalogExam[] = [
   {
     exam: "PSU",
     label: "PSU · Coal India (CIL)",
-    // PSU CIL disciplines are not live yet — recorded for attribution only.
     subjects: CIL_ROWS.map((r) => ({
       slug: r.slug,
       label: r.discipline,
-      live: false,
+      live: true,
+      price: PSU_PRICE,
     })),
   },
   {
@@ -79,7 +81,8 @@ export const CATALOG: CatalogExam[] = [
     subjects: ONGC_ROWS.map((r) => ({
       slug: r.slug,
       label: r.discipline,
-      live: false,
+      live: true,
+      price: PSU_PRICE,
     })),
   },
   {

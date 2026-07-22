@@ -58,3 +58,40 @@ export function comboEntitlementLabels(slug: string): string[] {
   if (!c) return [slug];
   return c.entitlements.map((e) => `${e.exam} · ${e.subject}`);
 }
+
+// ── Auto-discount combo groups ──────────────────────────────────────
+// When 2+ items are in the cart, a 15% combo discount applies.
+
+export const COMBO_DISCOUNT_PCT = 0.15;
+
+export interface CartComboDiscount {
+  label: string;
+  originalTotalPaise: number;
+  discountedTotalPaise: number;
+  savingsPaise: number;
+}
+
+/** Calculate combo discounts for a set of cart items.
+ *  Simple rule: 2+ items → 15% off the total. */
+export function calculateComboDiscounts(
+  items: { exam: string; subject: string }[],
+): CartComboDiscount[] {
+  if (items.length < 2) return [];
+
+  const originalTotalPaise = items.reduce((sum, i) => {
+    // We need prices — caller must pass pricePaise or we compute from catalog
+    return sum + ((i as any).pricePaise ?? 0);
+  }, 0);
+
+  if (originalTotalPaise <= 0) return [];
+
+  const savingsPaise = Math.round(originalTotalPaise * COMBO_DISCOUNT_PCT);
+  const discountedTotalPaise = originalTotalPaise - savingsPaise;
+
+  return [{
+    label: "Combo Discount (15% off)",
+    originalTotalPaise,
+    discountedTotalPaise,
+    savingsPaise,
+  }];
+}

@@ -5,6 +5,7 @@ import { z } from "zod";
 import { isValidPhone, normalizePhone } from "@/lib/whatsapp";
 import { subjectPrice, getSubject } from "@/data/catalog";
 import { getPostHogClient } from "@/lib/posthog";
+import { calculateComboDiscounts } from "@/lib/combos";
 
 export const runtime = "nodejs";
 
@@ -41,7 +42,7 @@ export async function POST(req: Request) {
   }
 
   // Validate each item against catalog and compute total
-  let totalPaise = 0;
+  let rawTotalPaise = 0;
   const validatedItems: { exam: string; subject: string; plan: string; pricePaise: number }[] = [];
 
   for (const item of body.items) {
@@ -56,7 +57,6 @@ export async function POST(req: Request) {
     const catalogPrice = subjectPrice(item.exam, item.subject);
     const expectedPaise = item.plan === "premium" ? catalogPrice.premiumPaise : catalogPrice.proPaise;
 
-    // Allow small tolerance (0) — must match exactly
     if (item.pricePaise !== expectedPaise) {
       return NextResponse.json(
         { error: "price_mismatch", message: `Price mismatch for ${sub.label}. Expected ₹${expectedPaise / 100}.` },
@@ -64,7 +64,7 @@ export async function POST(req: Request) {
       );
     }
 
-    totalPaise += expectedPaise;
+    rawTotalPaise += expectedPaise;
     validatedItems.push({
       exam: item.exam,
       subject: item.subject,
@@ -73,6 +73,11 @@ export async function POST(req: Request) {
     });
   }
 
+  // Calculate combo discounts
+  const comboDiscounts = calculateComboDiscounts(validatedItems);
+  const comboSavingsPaise = comboDiscounts.reduce((sum, d) => sum + d.savingsPaise, 0);
+  const finalTotalPaise = rawTotalPaise - comboSavingsPaise;
+
   // Create the multi-item UpiPayment
   const payment = await db.upiPayment.create({
     data: {
@@ -80,7 +85,7 @@ export async function POST(req: Request) {
       plan: validatedItems[0].plan as any, // primary item's plan
       exam: validatedItems[0].exam,
       subject: validatedItems.map((i) => i.subject).join(","),
-      amountPaise: totalPaise,
+      amountPaise: finalTotalPaise,
       items: validatedItems,
       payerName: body.payerName,
       payerPhone: phone,
@@ -100,7 +105,10 @@ export async function POST(req: Request) {
         properties: {
           payment_id: payment.id,
           item_count: validatedItems.length,
-          total_paise: totalPaise,
+          raw_total_paise: rawTotalPaise,
+          combo_savings_paise: comboSavingsPaise,
+          final_total_paise: finalTotalPaise,
+          combo_discount: comboDiscounts.length > 0,
           exams: [...new Set(validatedItems.map((i) => i.exam))],
         },
       });

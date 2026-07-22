@@ -3,10 +3,11 @@ import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { subjectPrice, getSubject } from "@/data/catalog";
+import { calculateComboDiscounts } from "@/lib/combos";
 
 export const runtime = "nodejs";
 
-// GET — list cart items with computed prices
+// GET — list cart items with computed prices + combo discounts
 export async function GET() {
   const session = await auth();
   if (!session?.user?.id) {
@@ -29,9 +30,19 @@ export async function GET() {
     };
   });
 
-  const totalPaise = enriched.reduce((sum, i) => sum + i.pricePaise, 0);
+  const rawTotalPaise = enriched.reduce((sum, i) => sum + i.pricePaise, 0);
+  const comboDiscounts = calculateComboDiscounts(enriched);
+  const comboSavingsPaise = comboDiscounts.reduce((sum, d) => sum + d.savingsPaise, 0);
+  const totalPaise = rawTotalPaise - comboSavingsPaise;
 
-  return NextResponse.json({ items: enriched, totalPaise, count: enriched.length });
+  return NextResponse.json({
+    items: enriched,
+    rawTotalPaise,
+    totalPaise,
+    count: enriched.length,
+    comboDiscounts,
+    comboSavingsPaise,
+  });
 }
 
 const AddBody = z.object({
