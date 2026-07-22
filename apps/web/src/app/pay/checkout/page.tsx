@@ -19,16 +19,29 @@ type CartItem = {
 };
 
 export default async function CheckoutPage() {
-  const session = await auth();
+  let session;
+  try {
+    session = await auth();
+  } catch (e) {
+    console.error("[checkout] auth() failed:", e);
+    redirect("/login?next=/pay/checkout");
+  }
+
   if (!session?.user?.id) {
     redirect("/login?next=/pay/checkout");
   }
 
   // Fetch cart items
-  const raw = await db.cart.findMany({
-    where: { userId: session.user.id },
-    orderBy: { createdAt: "asc" },
-  });
+  let raw;
+  try {
+    raw = await db.cart.findMany({
+      where: { userId: session.user.id },
+      orderBy: { createdAt: "asc" },
+    });
+  } catch (e) {
+    console.error("[checkout] db.cart.findMany failed:", e);
+    redirect("/cart?error=db");
+  }
 
   if (raw.length === 0) {
     redirect("/pricing");
@@ -48,51 +61,66 @@ export default async function CheckoutPage() {
   });
 
   const rawTotalPaise = items.reduce((sum, i) => sum + i.pricePaise, 0);
-  const comboDiscounts = calculateComboDiscounts(items);
+  const comboDiscounts = calculateComboDiscounts(items.map((i) => ({ exam: i.exam, subject: i.subject, pricePaise: i.pricePaise })));
   const comboSavingsPaise = comboDiscounts.reduce((sum, d) => sum + d.savingsPaise, 0);
   const totalPaise = rawTotalPaise - comboSavingsPaise;
   const amountRupees = Math.round(totalPaise / 100);
 
-  const [me, myClaims] = await Promise.all([
-    db.user.findUnique({
-      where: { id: session.user.id },
-      select: { name: true, email: true, phone: true },
-    }),
-    db.upiPayment.findMany({
-      where: { userId: session.user.id },
-      orderBy: { createdAt: "desc" },
-      take: 5,
-      select: {
-        id: true,
-        plan: true,
-        amountPaise: true,
-        status: true,
-        adminNote: true,
-        createdAt: true,
-      },
-    }),
-  ]);
+  let me = null;
+  let myClaims: {
+    id: string;
+    plan: string;
+    amountPaise: number;
+    status: "pending" | "approved" | "rejected";
+    adminNote: string | null;
+    createdAt: Date;
+  }[] = [];
+
+  try {
+    [me, myClaims] = await Promise.all([
+      db.user.findUnique({
+        where: { id: session.user.id },
+        select: { name: true, email: true, phone: true },
+      }),
+      db.upiPayment.findMany({
+        where: { userId: session.user.id },
+        orderBy: { createdAt: "desc" },
+        take: 5,
+        select: {
+          id: true,
+          plan: true,
+          amountPaise: true,
+          status: true,
+          adminNote: true,
+          createdAt: true,
+        },
+      }),
+    ]);
+  } catch (e) {
+    console.error("[checkout] user/payment lookup failed:", e);
+  }
 
   const vpa = process.env.NEXT_PUBLIC_UPI_VPA || "";
   const payeeName = process.env.NEXT_PUBLIC_UPI_PAYEE_NAME || "CrackGate";
 
-  // UPI note: use first item's subject for identification
   const note = `cg-cart-${session.user.id.slice(0, 8)}`;
   const upiUrl = vpa
     ? `upi://pay?pa=${encodeURIComponent(vpa)}&pn=${encodeURIComponent(payeeName)}&am=${amountRupees}&cu=INR&tn=${encodeURIComponent(note)}`
     : "";
 
-  const qrSvg = upiUrl
-    ? await QRCode.toString(upiUrl, {
+  let qrSvg = "";
+  if (upiUrl) {
+    try {
+      qrSvg = await QRCode.toString(upiUrl, {
         type: "svg",
         errorCorrectionLevel: "M",
         margin: 1,
         width: 256,
-      })
-    : "";
-
-  // Serialize items for the client form
-  const itemsJson = JSON.stringify(items);
+      });
+    } catch (e) {
+      console.error("[checkout] QRCode generation failed:", e);
+    }
+  }
 
   return (
     <div className="max-w-3xl mx-auto px-5 py-12">
