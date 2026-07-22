@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ShoppingCart, Trash2, ArrowRight, Sparkles } from "lucide-react";
 import { useCart, type ComboDiscount } from "@/hooks/use-cart";
@@ -12,8 +13,20 @@ function formatPrice(paise: number) {
 }
 
 export default function CartPage() {
-  const { items, rawTotalPaise, totalPaise, count, loading, removeItem, clearCart, refetch, comboDiscounts, comboSavingsPaise } = useCart();
+  const { items, rawTotalPaise, totalPaise, count, loading, removeItem, clearCart, syncToServer, refetch, comboDiscounts, comboSavingsPaise, loggedIn } = useCart();
   const [tab, setTab] = useState<"cart" | "browse">("browse");
+  const [syncing, setSyncing] = useState(false);
+  const router = useRouter();
+
+  async function handleCheckout() {
+    if (!loggedIn) {
+      router.push("/login?next=/pay/checkout");
+      return;
+    }
+    setSyncing(true);
+    await syncToServer();
+    router.push("/pay/checkout");
+  }
 
   const liveExams = CATALOG.map((exam) => ({
     ...exam,
@@ -60,6 +73,8 @@ export default function CartPage() {
               comboSavingsPaise={comboSavingsPaise}
               rawTotalPaise={rawTotalPaise}
               totalPaise={totalPaise}
+              onCheckout={handleCheckout}
+              syncing={syncing}
             />
           )}
         </div>
@@ -110,12 +125,13 @@ export default function CartPage() {
                       <span className="text-lg font-bold tabular-nums">{formatPrice(totalPaise)}</span>
                     </div>
                   </div>
-                  <Link
-                    href="/pay/checkout"
+                  <button
+                    onClick={handleCheckout}
+                    disabled={syncing}
                     className="btn btn-primary w-full justify-center"
                   >
-                    Checkout <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                    {syncing ? "Syncing…" : <>Checkout <ArrowRight className="w-4 h-4 ml-1" /></>}
+                  </button>
                 </>
               )}
             </div>
@@ -175,6 +191,8 @@ function CartContents({
   comboSavingsPaise,
   rawTotalPaise,
   totalPaise,
+  onCheckout,
+  syncing,
 }: {
   items: { id: string; exam: string; subject: string; label: string; plan: string; pricePaise: number }[];
   loading: boolean;
@@ -185,6 +203,8 @@ function CartContents({
   comboSavingsPaise: number;
   rawTotalPaise: number;
   totalPaise: number;
+  onCheckout: () => Promise<void>;
+  syncing: boolean;
 }) {
   const [clearing, setClearing] = useState(false);
 
@@ -285,9 +305,13 @@ function CartContents({
           <span className="text-lg font-bold text-ink tabular-nums">{formatPrice(totalPaise)}</span>
         </div>
       </div>
-      <Link href="/pay/checkout" className="btn btn-primary w-full justify-center mt-4">
-        Proceed to Checkout <ArrowRight className="w-4 h-4 ml-1" />
-      </Link>
+      <button
+        onClick={onCheckout}
+        disabled={syncing}
+        className="btn btn-primary w-full justify-center mt-4"
+      >
+        {syncing ? "Syncing…" : <>Proceed to Checkout <ArrowRight className="w-4 h-4 ml-1" /></>}
+      </button>
     </div>
   );
 }
