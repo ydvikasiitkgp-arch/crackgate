@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { WCL_EXAMS } from "@/data/wcl";
-import { NCL_EXAMS } from "@/data/ncl";
+import { useCart } from "@/hooks/use-cart";
 
 const PLANS = [
   { id: "free",    name: "Free",     price: 0,    period: "forever",    cta: "Current plan", highlight: false, badge: "",
@@ -17,48 +16,36 @@ const PLANS = [
   { id: "pro",     name: "Pro",      price: 499,  period: "/ GATE 2027 cycle",    cta: "Get Pro",     highlight: false, badge: "Most popular",
     perks: [
       "Everything in Free (Learn, Insights & Notes)",
-      "🔓 All 2,061 practice questions — fully unlocked",
+      "All 2,061 practice questions — fully unlocked",
       "Mock 01 free — full mock series is Premium-only",
       "Subject-wise SWOT & Mastery analytics",
       "Email support",
       "Access through GATE 2027 exam day",
     ] },
-  { id: "premium", name: "Premium · All-Access",  price: 899,  period: "/ GATE 2027 cycle", cta: "Get Premium", highlight: true, badge: "Best value · Go all-in",
+  { id: "premium", name: "Premium · All-Access",  price: 899,  period: "/ GATE 2027 cycle", cta: "Get Premium", highlight: true, badge: "Best value",
     perks: [
       "Everything in Pro, plus:",
-      "💎 All 10 mocks — the full test series, incl. final FLT",
+      "All 10 mocks — the full test series, incl. final FLT",
       "Weekly progress digest on WhatsApp",
       "Priority support",
       "Early access to GATE 2028 prep content",
     ] },
 ] as const;
 
-const PSU_PLANS = [
-  { id: "ongc", name: "ONGC CBT", price: 499, period: "per discipline", cta: "Unlock ONGC", highlight: false, badge: "5 disciplines",
-    payParams: "plan=pro&exam=PSU&subject=",
-    perks: [
-      "15 full-length mocks per discipline",
-      "85 MCQs · 120 min · no negative marking",
-      "Domain Knowledge + Aptitude + GA + English",
-      "SVG diagrams — geological maps, charts, graphs",
-      "Official ONGC CBT pattern (Advt. 1/2025)",
-      "One payment · valid through recruitment cycle",
-    ],
-    disciplines: ["Mechanical", "Petroleum", "Chemical", "Instrumentation", "Geology"],
-  },
-  { id: "cil", name: "CIL Management Trainee", price: 499, period: "per discipline", cta: "Unlock CIL", highlight: false, badge: "9 disciplines",
-    payParams: "plan=pro&exam=PSU&subject=",
-    perks: [
-      "15 full-length mocks per discipline",
-      "200 MCQs · 3 hrs · no negative marking",
-      "Paper-I (Non-Technical) + Paper-II (Professional)",
-      "SVG diagrams — mining ventilation, bench layouts",
-      "Official CIL MT exam pattern",
-      "One payment · valid through recruitment cycle",
-    ],
-    disciplines: ["Mining", "Civil", "Electrical", "Mechanical", "Personnel", "Finance", "Marketing", "Community", "Environment"],
-  },
-] as const;
+const MATRIX: { feature: string; free: string | boolean; pro: string | boolean; premium: string | boolean }[] = [
+  { feature: "Learn — concept lessons",         free: true,           pro: true,             premium: true               },
+  { feature: "Study Notes",                     free: true,           pro: true,             premium: true               },
+  { feature: "Insights dashboard",              free: true,           pro: true,             premium: "+ trends"         },
+  { feature: "Full-length mock tests",          free: "1 (Mock 01)",  pro: "1 (Mock 01)",   premium: "All 10"           },
+  { feature: "Practice Qs per subject",         free: "Pro only",     pro: "Full subject",   premium: "Full subject"     },
+  { feature: "Total practice questions",        free: "Pro only",     pro: "2,061",          premium: "2,061"            },
+  { feature: "Subject Mastery dashboard",       free: "Basic",        pro: "Full",           premium: "Full + trends"    },
+  { feature: "SWOT analytics",                  free: "Basic",        pro: "Detailed",       premium: "Detailed + percentile" },
+  { feature: "Score Trend chart",               free: true,           pro: true,             premium: "+ peer comparison" },
+  { feature: "Weekly progress digest",          free: false,          pro: false,            premium: true               },
+  { feature: "Support",                         free: "Community",    pro: "Email",          premium: "WhatsApp + email" },
+  { feature: "Validity",                        free: "Forever",      pro: "GATE 2027 cycle",premium: "GATE 2027 + 2028 early access" },
+];
 
 export default function PricingPage() {
   const sp = useSearchParams();
@@ -66,16 +53,19 @@ export default function PricingPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-16">
+      {/* Hero */}
       <div className="text-center">
-        <h1 className="text-4xl font-extrabold">Simple, honest pricing.</h1>
-        <p className="text-muted mt-3 max-w-xl mx-auto">
-          Start free. Upgrade when you want all mocks unlocked. Cancel any time — no auto-renewal traps.
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+          Simple, honest pricing.
+        </h1>
+        <p className="text-muted mt-3 max-w-xl mx-auto text-lg">
+          Start free. Upgrade when you want all mocks unlocked. No auto-renewal traps.
         </p>
       </div>
 
       {/* GATE Plans */}
-      <div className="mt-8 text-center">
-        <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 px-4 py-1.5 text-sm font-semibold text-brand">GATE 2027</span>
+      <div className="mt-12 text-center">
+        <SectionBadge color="brand">GATE 2027</SectionBadge>
       </div>
       <div className="grid md:grid-cols-3 gap-6 mt-6">
         {PLANS.map((p) => <PlanCard key={p.id} plan={p} defaultSubject={defaultSubject} />)}
@@ -83,143 +73,49 @@ export default function PricingPage() {
 
       <FeatureMatrix />
 
-      {/* PSU Plans */}
-      <div className="mt-20">
-        <div className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-4 py-1.5 text-sm font-semibold text-amber-600 dark:text-amber-400">PSU Recruitment Exams</span>
-          <h2 className="mt-4 text-3xl font-extrabold">Per-discipline pricing for PSU mocks</h2>
-          <p className="text-muted mt-3 max-w-xl mx-auto">
-            Each PSU discipline is independently priced. Pay once per discipline — unlock all mocks for that paper.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
-          {PSU_PLANS.map((p) => <PsuPlanCard key={p.id} plan={p} />)}
-        </div>
-      </div>
-
-      {/* WCL Diploma Plans */}
-      <div className="mt-20">
-        <div className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400">WCL Diploma Exams</span>
-          <h2 className="mt-4 text-3xl font-extrabold">₹399 per exam · 20 mocks each</h2>
-          <p className="text-muted mt-3 max-w-xl mx-auto">
-            Western Coalfields Limited recruitment. Pay once per exam — unlock all 20 mocks.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
-          {WCL_EXAMS.filter((e) => e.live).map((e) => (
-            <WclPlanCard key={e.slug} exam={e} />
-          ))}
-        </div>
-      </div>
-
-      {/* WCL + NCL Combo */}
-      <div className="mt-12">
-        <div className="card p-8 border-2 border-amber-400/50 bg-gradient-to-br from-amber-500/5 to-orange-500/5 relative overflow-hidden">
-          <div className="absolute top-4 right-4">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/20 px-3 py-1 text-xs font-bold text-amber-600 dark:text-amber-400 animate-pulse">
-              🔥 BEST VALUE
-            </span>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">WCL</span>
-            <span className="text-muted text-lg">+</span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-400">NCL</span>
-          </div>
-          <h3 className="mt-3 text-xl font-bold">WCL + NCL Mining Sirdar Combo</h3>
-          <div className="mt-3 flex items-baseline gap-2">
-            <span className="text-4xl font-extrabold">₹599</span>
-            <span className="text-lg text-muted line-through">₹798</span>
-            <span className="text-sm text-ok font-semibold">SAVE ₹198</span>
-          </div>
-          <ul className="mt-6 space-y-2 text-sm">
-            <li className="flex gap-2"><span className="text-ok">✓</span> WCL Mining Sirdar — 20 mocks</li>
-            <li className="flex gap-2"><span className="text-ok">✓</span> NCL Mining Sirdar — 20 mocks</li>
-            <li className="flex gap-2"><span className="text-ok">✓</span> 40 total mocks · 100 MCQs each · 120 min</li>
-            <li className="flex gap-2"><span className="text-ok">✓</span> No negative marking · CBT pattern</li>
-            <li className="flex gap-2"><span className="text-ok">✓</span> One payment · valid through recruitment cycle</li>
-          </ul>
-          <div className="mt-6">
-            <Link
-              href="/pay/upi?plan=pro&exam=DIPLOMA&subject=combo-wcl-ncl-mining-sirdar"
-              className="btn btn-accent w-full"
-            >
-              Get Combo — ₹599
-            </Link>
-          </div>
-          <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
-        </div>
-      </div>
-
-      {/* NCL Diploma Plans */}
-      <div className="mt-20">
-        <div className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400">NCL Diploma Exams</span>
-          <h2 className="mt-4 text-3xl font-extrabold">₹399 per exam · 20 mocks each</h2>
-          <p className="text-muted mt-3 max-w-xl mx-auto">
-            Northern Coalfields Limited recruitment. Pay once per exam — unlock all 20 mocks.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
-          {NCL_EXAMS.filter((e) => e.live).map((e) => (
-            <NclPlanCard key={e.slug} exam={e} />
-          ))}
-        </div>
-      </div>
-
-      <p className="text-center text-xs text-muted mt-12">
-        Prices in ₹ INR · GST extra where applicable · See our <a href="/refund" className="underline">refund policy</a>.
+      <p className="text-center text-xs text-muted mt-16">
+        Prices in INR · GST extra where applicable · See our <a href="/refund" className="underline">refund policy</a>.
       </p>
     </div>
   );
 }
 
-const MATRIX: { feature: string; free: string | boolean; pro: string | boolean; premium: string | boolean }[] = [
-  // Content — free for everyone
-  { feature: "Learn — concept lessons",         free: true,           pro: true,             premium: true               },
-  { feature: "Study Notes",                     free: true,           pro: true,             premium: true               },
-  { feature: "Insights dashboard",              free: true,           pro: true,             premium: "+ trends"         },
+/* ─── Section Badge ─── */
+function SectionBadge({ color, children }: { color: "brand" | "amber" | "emerald" | "blue"; children: React.ReactNode }) {
+  const cls = {
+    brand: "bg-brand/10 text-brand",
+    amber: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
+    emerald: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
+    blue: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
+  }[color];
+  return (
+    <span className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold ${cls}`}>
+      {children}
+    </span>
+  );
+}
 
-  // Tests
-  { feature: "Full-length mock tests",          free: "1 (Mock 01)",  pro: "1 (Mock 01)",   premium: "All 10"           },
-
-  // Practice
-  { feature: "Practice Qs per subject",         free: "🔒 Pro only",  pro: "Full subject",   premium: "Full subject"     },
-  { feature: "Total practice questions",        free: "🔒 Pro only",  pro: "2,061 (all free)", premium: "2,061 (all free)"   },
-
-  // Analytics
-  { feature: "Subject Mastery dashboard",       free: "Basic",        pro: "Full",           premium: "Full + trends"    },
-  { feature: "SWOT analytics",                  free: "Basic",        pro: "Detailed",       premium: "Detailed + percentile" },
-  { feature: "Score Trend chart",               free: true,           pro: true,             premium: "+ peer comparison" },
-
-  // Support / extras
-  { feature: "Weekly progress digest",          free: false,          pro: false,            premium: true               },
-  { feature: "Support",                         free: "Community",    pro: "Email",          premium: "WhatsApp + email" },
-  { feature: "Validity",                        free: "Forever",      pro: "GATE 2027 cycle",premium: "GATE 2027 + 2028 early access" },
-];
-
-function PsuPlanCard({ plan }: { plan: typeof PSU_PLANS[number] }) {
+/* ─── GATE Plan Card ─── */
+function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; defaultSubject?: string }) {
   const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState("");
   const router = useRouter();
   const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
 
   async function buy() {
-    if (!selected) return;
-    const slug = `${plan.id}-${selected.toLowerCase()}`;
+    if (plan.id === "free") return router.push("/login");
     if (devMode) {
       setLoading(true);
       try {
         const r = await fetch("/api/dev/set-plan", {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ plan: "pro" }),
+          body: JSON.stringify({ plan: plan.id }),
         });
         if (r.status === 401) return router.push(`/login?next=/pricing`);
         const t = await r.text();
         const data = t ? safeJson(t) : null;
-        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed (HTTP ${r.status})`);
-        return router.push(`/psu/${plan.id}/${slug}?upgrade=success&dev=1`);
+        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed`);
+        return router.push(`/dashboard?upgrade=success&dev=1`);
       } catch (e) {
         alert((e as Error).message);
       } finally {
@@ -227,174 +123,61 @@ function PsuPlanCard({ plan }: { plan: typeof PSU_PLANS[number] }) {
       }
       return;
     }
-    router.push(`/pay/upi?plan=pro&exam=PSU&subject=${slug}`);
+    router.push(defaultSubject
+      ? `/pay/upi?plan=${plan.id}&exam=GATE&subject=${defaultSubject}`
+      : `/pay/upi?plan=${plan.id}&exam=GATE`);
   }
 
+  const isFree = plan.id === "free";
+
   return (
-    <div className={`card p-8 flex flex-col ${plan.highlight ? "border-accent shadow-pop ring-2 ring-accent/40" : ""}`}>
-      {plan.badge && <div className="text-xs font-bold uppercase tracking-wide mb-2 text-brand">{plan.badge}</div>}
-      <h3 className="text-xl font-bold">{plan.name}</h3>
-      <div className="mt-3">
+    <div className={`relative card p-8 flex flex-col transition-all duration-200 hover:shadow-lg ${plan.highlight ? "border-accent shadow-pop ring-2 ring-accent/40" : "hover:-translate-y-0.5"}`}>
+      {plan.badge && (
+        <div className={`absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${plan.highlight ? "bg-accent text-white" : "bg-brand/15 text-brand"}`}>
+          {plan.badge}
+        </div>
+      )}
+      <h3 className="text-xl font-bold mt-1">{plan.name}</h3>
+      <div className="mt-4 flex items-baseline gap-1">
         <span className="text-4xl font-extrabold">₹{plan.price}</span>
-        <span className="text-sm text-muted ml-1">{plan.period}</span>
+        <span className="text-sm text-muted">{plan.period}</span>
       </div>
-      <ul className="mt-6 space-y-2 text-sm">
+      <ul className="mt-6 space-y-2.5 text-sm flex-1">
         {plan.perks.map((perk) => (
-          <li key={perk} className="flex gap-2"><span className="text-ok">✓</span> {perk}</li>
+          <li key={perk} className="flex gap-2.5">
+            <span className="text-ok mt-0.5 shrink-0">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+            </span>
+            <span>{perk}</span>
+          </li>
         ))}
       </ul>
-      <div className="mt-6 space-y-3">
-        <div>
-          <label htmlFor={`discipline-${plan.id}`} className="block text-xs font-semibold text-muted mb-1">
-            Discipline
-          </label>
-          <select
-            id={`discipline-${plan.id}`}
-            value={selected}
-            onChange={(e) => setSelected(e.target.value)}
-            className="input w-full"
+      {isFree ? (
+        <button onClick={() => router.push("/login")} className="btn btn-ghost mt-8">
+          Current plan
+        </button>
+      ) : (
+        <div className="space-y-2 mt-8">
+          <button
+            onClick={buy}
+            disabled={loading}
+            className={`btn w-full ${plan.id === "premium" ? "btn-accent" : "btn-primary"}`}
           >
-            <option value="">Select a discipline...</option>
-            {plan.disciplines.map((d) => (
-              <option key={d} value={d}>{d}</option>
-            ))}
-          </select>
+            {loading ? "..." : devMode ? `${plan.name}` : `${plan.cta} — ₹${plan.price}`}
+          </button>
+          <AddToCartButton
+            exam="GATE"
+            subject={defaultSubject || "mining"}
+            plan={plan.id}
+            label={`Add ${plan.name} to Cart`}
+          />
         </div>
-        <button
-          onClick={buy}
-          disabled={loading || !selected}
-          className="btn btn-primary w-full"
-        >
-          {loading ? "Loading…" : devMode ? `⚙ Dev: Unlock ${plan.name}` : `Get Pro — ₹${plan.price}`}
-        </button>
-      </div>
-      <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
+      )}
     </div>
   );
 }
 
-function WclPlanCard({ exam }: { exam: typeof WCL_EXAMS[number] }) {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
-
-  async function buy() {
-    if (devMode) {
-      setLoading(true);
-      try {
-        const r = await fetch("/api/dev/set-plan", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ plan: "pro" }),
-        });
-        if (r.status === 401) return router.push(`/login?next=/pricing`);
-        const t = await r.text();
-        const data = t ? safeJson(t) : null;
-        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed (HTTP ${r.status})`);
-        return router.push(`/diploma/wcl/${exam.slug}?upgrade=success&dev=1`);
-      } catch (e) {
-        alert((e as Error).message);
-      } finally {
-        setLoading(false);
-      }
-      return;
-    }
-    router.push(`/pay/upi?plan=pro&exam=DIPLOMA&subject=wcl-${exam.slug === "mining-sirdar" ? "sirdar" : "af-electrical"}`);
-  }
-
-  const subjectSlug = exam.slug === "mining-sirdar" ? "wcl-sirdar" : "wcl-af-electrical";
-
-  return (
-    <div className="card p-8 flex flex-col">
-      <div className="text-xs font-bold uppercase tracking-wide mb-2 text-emerald-600 dark:text-emerald-400">
-        {exam.mockCount} mocks
-      </div>
-      <h3 className="text-xl font-bold">{exam.name}</h3>
-      <div className="mt-3">
-        <span className="text-4xl font-extrabold">₹{exam.price}</span>
-        <span className="text-sm text-muted ml-1">one-time</span>
-      </div>
-      <ul className="mt-6 space-y-2 text-sm">
-        <li className="flex gap-2"><span className="text-ok">✓</span> {exam.mockCount} full-length mocks</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> 100 MCQs · 120 min · no negative marking</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> General Awareness + Technical section</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> WCL-specific facts &amp; CMR 2017 syllabus</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> One payment · valid through recruitment cycle</li>
-      </ul>
-      <div className="mt-6">
-        <button
-          onClick={buy}
-          disabled={loading}
-          className="btn btn-primary w-full"
-        >
-          {loading ? "Loading…" : devMode ? `⚙ Dev: Unlock ${exam.short}` : `Unlock — ₹${exam.price}`}
-        </button>
-      </div>
-      <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
-    </div>
-  );
-}
-
-function NclPlanCard({ exam }: { exam: typeof NCL_EXAMS[number] }) {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
-
-  async function buy() {
-    if (devMode) {
-      setLoading(true);
-      try {
-        const r = await fetch("/api/dev/set-plan", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ plan: "pro" }),
-        });
-        if (r.status === 401) return router.push(`/login?next=/pricing`);
-        const t = await r.text();
-        const data = t ? safeJson(t) : null;
-        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed (HTTP ${r.status})`);
-        return router.push(`/diploma/ncl/${exam.slug}?upgrade=success&dev=1`);
-      } catch (e) {
-        alert((e as Error).message);
-      } finally {
-        setLoading(false);
-      }
-      return;
-    }
-    router.push(`/pay/upi?plan=pro&exam=DIPLOMA&subject=ncl-${exam.slug}`);
-  }
-
-  return (
-    <div className="card p-8 flex flex-col">
-      <div className="text-xs font-bold uppercase tracking-wide mb-2 text-blue-600 dark:text-blue-400">
-        {exam.mockCount} mocks
-      </div>
-      <h3 className="text-xl font-bold">{exam.name}</h3>
-      <div className="mt-3">
-        <span className="text-4xl font-extrabold">₹{exam.price}</span>
-        <span className="text-sm text-muted ml-1">one-time</span>
-      </div>
-      <ul className="mt-6 space-y-2 text-sm">
-        <li className="flex gap-2"><span className="text-ok">✓</span> {exam.mockCount} full-length mocks</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> 100 MCQs · 120 min · no negative marking</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> Section A (Technical 70Q) + Section B (General 30Q)</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> NCL-specific syllabus &amp; CMR 2017</li>
-        <li className="flex gap-2"><span className="text-ok">✓</span> One payment · valid through recruitment cycle</li>
-      </ul>
-      <div className="mt-6">
-        <button
-          onClick={buy}
-          disabled={loading}
-          className="btn btn-primary w-full"
-        >
-          {loading ? "Loading…" : devMode ? `⚙ Dev: Unlock ${exam.short}` : `Unlock — ₹${exam.price}`}
-        </button>
-      </div>
-      <p className="text-[11px] text-muted mt-3 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
-    </div>
-  );
-}
-
+/* ─── Feature Matrix ─── */
 function FeatureMatrix() {
   return (
     <section className="mt-16">
@@ -436,87 +219,42 @@ function Cell({ v, highlight, accent }: { v: string | boolean; highlight?: boole
   );
 }
 
-function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; defaultSubject?: string }) {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
+function safeJson(t: string): { error?: string; message?: string } | null {
+  try { return JSON.parse(t); } catch { return null; }
+}
 
-  async function buy() {
-    if (plan.id === "free") return router.push("/login");
+/* ─── Add to Cart Button ─── */
+function AddToCartButton({
+  exam,
+  subject,
+  plan,
+  label,
+  disabled,
+}: {
+  exam: string;
+  subject: string;
+  plan?: string;
+  label?: string;
+  disabled?: boolean;
+}) {
+  const { addItem } = useCart();
+  const [added, setAdded] = useState(false);
 
-    if (devMode) {
-      setLoading(true);
-      try {
-        const r = await fetch("/api/dev/set-plan", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ plan: plan.id }),
-        });
-        if (r.status === 401) return router.push(`/login?next=/pricing`);
-        const t = await r.text();
-        const data = t ? safeJson(t) : null;
-        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed (HTTP ${r.status})`);
-        return router.push(`/dashboard?upgrade=success&dev=1`);
-      } catch (e) {
-        alert((e as Error).message);
-      } finally {
-        setLoading(false);
-      }
-      return;
-    }
-
-    if (defaultSubject) {
-      router.push(`/pay/upi?plan=${plan.id}&exam=GATE&subject=${defaultSubject}`);
-    } else {
-      router.push(`/pay/upi?plan=${plan.id}&exam=GATE`);
+  async function handleAdd() {
+    const ok = await addItem(exam, subject, plan ?? "pro");
+    if (ok) {
+      setAdded(true);
+      setTimeout(() => setAdded(false), 1500);
     }
   }
 
-  const isFree = plan.id === "free";
-
   return (
-    <div className={`card p-8 flex flex-col ${plan.highlight ? "border-accent shadow-pop ring-2 ring-accent/40" : ""}`}>
-      {plan.badge && <div className={`text-xs font-bold uppercase tracking-wide mb-2 ${plan.highlight ? "text-accent" : "text-brand"}`}>{plan.badge}</div>}
-      <h3 className="text-xl font-bold">{plan.name}</h3>
-      <div className="mt-3">
-        <span className="text-4xl font-extrabold">₹{plan.price}</span>
-        <span className="text-sm text-muted ml-1">{plan.period}</span>
-      </div>
-      <ul className="mt-6 space-y-2 text-sm">
-        {plan.perks.map((perk) => (
-          <li key={perk} className="flex gap-2"><span className="text-ok">✓</span> {perk}</li>
-        ))}
-      </ul>
-      {isFree ? (
-        <button
-          onClick={() => router.push("/login")}
-          className="btn btn-ghost mt-8"
-          data-track="pricing:current-plan"
-        >
-          Current plan
-        </button>
-      ) : (
-        <div className="mt-8">
-          <button
-            onClick={buy}
-            disabled={loading}
-            className={`btn w-full ${plan.id === "premium" ? "btn-accent" : "btn-primary"}`}
-            data-track={`pricing:buy:${plan.id}`}
-          >
-            {loading ? "…" : devMode ? `⚙ ${plan.name}` : `${plan.cta} — ₹${plan.price}`}
-          </button>
-        </div>
-      )}
-      {!isFree && !devMode && (
-        <p className="text-[11px] text-muted mt-2 text-center">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
-      )}
-      {devMode && !isFree && (
-        <p className="text-[11px] text-muted mt-2 text-center">Skips checkout · dev tools enabled</p>
-      )}
-    </div>
+    <button
+      onClick={handleAdd}
+      disabled={disabled || added}
+      className="btn btn-ghost w-full text-sm border border-line hover:border-brand/40 hover:bg-brand/5 transition-all"
+    >
+      {added ? "✓ Added" : label ?? "Add to Cart"}
+    </button>
   );
-}
-
-function safeJson(t: string): { error?: string; message?: string } | null {
-  try { return JSON.parse(t); } catch { return null; }
 }

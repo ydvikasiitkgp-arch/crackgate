@@ -93,8 +93,6 @@ export function UserMenu({
           {/* Primary nav */}
           <Section>
             <Item href="/dashboard" icon="📊" onClick={() => setOpen(false)}>Dashboard</Item>
-            <Item href="/practice"  icon="🎯" onClick={() => setOpen(false)}>Practice</Item>
-            <Item href="/mocks"     icon="📝" onClick={() => setOpen(false)}>Mock Tests</Item>
           </Section>
 
           {/* Account */}

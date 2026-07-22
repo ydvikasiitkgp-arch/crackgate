@@ -6,6 +6,7 @@ import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import UpiReviewActions from "./actions";
 import GrantAccessForm from "./grant";
 import { CATALOG, subjectLabel, getExam } from "@/data/catalog";
+import { isComboSlug, comboLabel } from "@/lib/combos";
 
 export const dynamic = "force-dynamic";
 
@@ -317,7 +318,25 @@ export default async function AdminUpiPage({
                       )}
                     </td>
                     <td className="p-3 text-xs">{c.exam ?? "—"}</td>
-                    <td className="p-3 text-xs">{c.subject ?? "—"}</td>
+                    <td className="p-3 text-xs">
+                      {c.items ? (
+                        <span className="inline-flex items-center gap-1">
+                          <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-500/15 text-blue-600 dark:text-blue-400">
+                            CART
+                          </span>
+                          <span className="text-muted">{Array.isArray(c.items) ? c.items.length : "?"} items</span>
+                        </span>
+                      ) : c.subject && isComboSlug(c.subject) ? (
+                        <span className="inline-flex items-center gap-1">
+                          <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/15 text-amber-600 dark:text-amber-400">
+                            COMBO
+                          </span>
+                          <span className="text-muted">{comboLabel(c.subject)}</span>
+                        </span>
+                      ) : (
+                        c.subject ?? "—"
+                      )}
+                    </td>
                     <td className="p-3 font-semibold">{c.plan}</td>
                     <td className="p-3 font-semibold">
                       ₹{Math.round(c.amountPaise / 100)}
@@ -327,7 +346,7 @@ export default async function AdminUpiPage({
                       {c.payerNote ?? "—"}
                     </td>
                     <td className="p-3">
-                      <UpiReviewActions claimId={c.id} />
+                      <UpiReviewActions claimId={c.id} subject={c.subject} />
                     </td>
                   </tr>
                 ))}

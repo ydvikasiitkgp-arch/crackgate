@@ -17,21 +17,9 @@ import {
   subjectPrice,
   type ExamTrack,
 } from "@/data/catalog";
+import { getCombo, isComboSlug, comboLabel } from "@/lib/combos";
 
 export const runtime = "nodejs";
-
-// Combo definitions — matches the pricing page + submit API + approve API.
-const COMBOS = {
-  "combo-wcl-ncl-mining-sirdar": {
-    pricePaise: 59900,
-    entitlements: [
-      { exam: "DIPLOMA" as ExamTrack, subject: "wcl-sirdar" },
-      { exam: "DIPLOMA" as ExamTrack, subject: "ncl-mining-sirdar" },
-    ],
-  },
-} as const;
-
-type ComboKey = keyof typeof COMBOS;
 
 const Body = z.object({
   identifier: z.string().trim().min(3, "Enter an email or phone number"),
@@ -54,8 +42,8 @@ export async function POST(req: Request) {
   const isEmail = identifier.includes("@");
 
   // Check if this is a combo grant
-  const isCombo = subject in COMBOS;
-  const combo = isCombo ? COMBOS[subject as ComboKey] : null;
+  const isCombo = isComboSlug(subject);
+  const combo = getCombo(subject);
 
   // Validate exam+subject against the catalog (skip validation for combos)
   if (!isCombo) {
@@ -204,6 +192,7 @@ export async function POST(req: Request) {
     subject,
     isTestUser,
     isCombo,
+    comboLabel: comboLabel(subject),
     comboEntitlements: combo?.entitlements.map((e) => `${e.exam} · ${e.subject}`) ?? [],
     expiry: expiry.toISOString().slice(0, 10),
   });

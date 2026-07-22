@@ -2,25 +2,15 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { CATALOG } from "@/data/catalog";
+import { CATALOG, subjectPrice } from "@/data/catalog";
+import { COMBOS, comboLabel } from "@/lib/combos";
 
-const PLANS = [
-  { value: "pro", label: "Pro", price: "₹499" },
-  { value: "premium", label: "Premium", price: "₹899" },
-] as const;
-
-// Combo definitions — matches the pricing page + submit API.
-const COMBOS = [
-  {
-    value: "combo-wcl-ncl-mining-sirdar",
-    label: "WCL + NCL Mining Sirdar Combo",
-    price: "₹599",
-    entitlements: [
-      { exam: "DIPLOMA", subject: "wcl-sirdar" },
-      { exam: "DIPLOMA", subject: "ncl-mining-sirdar" },
-    ],
-  },
-] as const;
+// Flatten combos into a list for the dropdown.
+const COMBO_OPTIONS = Object.values(COMBOS).map((c) => ({
+  value: c.slug,
+  label: c.label,
+  price: `₹${Math.round(c.pricePaise / 100)}`,
+}));
 
 type Result = {
   user: { email: string; name: string | null };
@@ -31,6 +21,7 @@ type Result = {
   expiry: string;
   isTestUser?: boolean;
   isCombo?: boolean;
+  comboLabel?: string;
   comboEntitlements?: string[];
 };
 
@@ -53,6 +44,11 @@ export default function GrantAccessForm() {
 
   const selectedSubject = subjects.find((s) => s.slug === subject);
   const isComboMode = Boolean(selectedCombo);
+
+  const resolvedPrice = useMemo(() => {
+    const p = subjectPrice(exam, subject);
+    return { pro: `₹${Math.round(p.proPaise / 100)}`, premium: `₹${Math.round(p.premiumPaise / 100)}` };
+  }, [exam, subject]);
 
   function onExamChange(nextExam: string) {
     setExam(nextExam);
@@ -116,7 +112,7 @@ export default function GrantAccessForm() {
               setSelectedCombo(e.target.value);
               if (e.target.value) {
                 // Auto-set exam and subject from combo
-                const combo = COMBOS.find((c) => c.value === e.target.value);
+                const combo = COMBOS[e.target.value];
                 if (combo) {
                   setExam(combo.entitlements[0].exam);
                   setSubject(combo.entitlements[0].subject);
@@ -126,7 +122,7 @@ export default function GrantAccessForm() {
             className="input mt-1 w-full"
           >
             <option value="">None (single exam)</option>
-            {COMBOS.map((c) => (
+            {COMBO_OPTIONS.map((c) => (
               <option key={c.value} value={c.value}>
                 {c.label} — {c.price}
               </option>
@@ -135,7 +131,7 @@ export default function GrantAccessForm() {
         </label>
         {isComboMode && (
           <p className="text-xs text-accent mt-1">
-            This will grant entitlements for: {COMBOS.find((c) => c.value === selectedCombo)?.entitlements.map((e) => `${e.exam} · ${e.subject}`).join(" + ")}
+            This will grant entitlements for: {COMBOS[selectedCombo]?.entitlements.map((e) => `${e.exam} · ${e.subject}`).join(" + ")}
           </p>
         )}
       </div>
@@ -196,7 +192,10 @@ export default function GrantAccessForm() {
         <div className="block">
           <span className="text-xs text-muted">Plan</span>
           <div className="mt-1 inline-flex rounded-lg border border-line p-0.5 bg-surface">
-            {PLANS.map((p) => {
+            {([
+              { value: "pro" as const, label: "Pro", price: resolvedPrice.pro },
+              { value: "premium" as const, label: "Premium", price: resolvedPrice.premium },
+            ]).map((p) => {
               const active = plan === p.value;
               return (
                 <button
@@ -258,8 +257,16 @@ export default function GrantAccessForm() {
             {result.isTestUser ? "Test grant" : "Granted"}{" "}
             <strong>{result.plan}</strong>
           </span>{" "}
-          ({result.exam} · {result.subject}) to{" "}
-          {result.user.name ?? result.user.email} for {result.months} months
+          {result.isCombo ? (
+            <>
+              <span className="text-ok font-medium">{result.comboLabel}</span>
+              {" → "}
+              <span className="text-muted">{result.comboEntitlements?.join(" + ")}</span>
+            </>
+          ) : (
+            <>({result.exam} · {result.subject})</>
+          )}{" "}
+          to {result.user.name ?? result.user.email} for {result.months} months
           (until {result.expiry}).
           {result.isTestUser && (
             <span className="block text-xs text-muted mt-1">

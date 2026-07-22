@@ -19,6 +19,8 @@ type Props = {
   isCombo?: boolean;
   /** Display names for combo entitlements. */
   comboLabels?: string[];
+  /** Friendly combo name, e.g. "WCL + NCL Mining Sirdar Combo". */
+  comboName?: string;
 };
 
 const APPS = ["PhonePe", "GPay", "Paytm", "BHIM", "Other"] as const;
@@ -41,6 +43,7 @@ export default function UpiClaimForm({
   defaultSubjectLabel,
   isCombo = false,
   comboLabels = [],
+  comboName,
 }: Props) {
   const router = useRouter();
   // Attribution is locked when the buyer arrived from a specific product CTA
@@ -127,9 +130,9 @@ export default function UpiClaimForm({
           Thanks, <b>{payerName.trim() || "there"}</b> — we&apos;ve received
           your <b className="capitalize">{plan}</b> claim of{" "}
           <b>₹{amountRupees}</b>.
-          {isCombo && comboLabels.length > 0 && (
-            <span className="block mt-1 text-xs text-muted">
-              This unlocks: {comboLabels.join(" + ")}
+          {isCombo && (
+            <span className="block mt-1 text-xs text-ok font-medium">
+              {comboName ?? "Combo"} — unlocks 2 test series
             </span>
           )}
         </p>

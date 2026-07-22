@@ -7,23 +7,9 @@ import { whatsappLink } from "@/lib/contact";
 import { getCilDiscipline } from "@/data/cil";
 import { getOngcDiscipline } from "@/data/ongc";
 import { getSubject, subjectPrice, type ExamTrack } from "@/data/catalog";
+import { getCombo, isComboSlug, comboLabel, comboEntitlementLabels } from "@/lib/combos";
 
 export const dynamic = "force-dynamic";
-
-// Combo definitions — a combo unlocks multiple entitlements at a discount.
-const COMBOS = {
-  "combo-wcl-ncl-mining-sirdar": {
-    priceRupees: 599,
-    label: "WCL + NCL Mining Sirdar Combo",
-    months: 18,
-    entitlements: [
-      { exam: "DIPLOMA" as ExamTrack, subject: "wcl-sirdar" },
-      { exam: "DIPLOMA" as ExamTrack, subject: "ncl-mining-sirdar" },
-    ],
-  },
-} as const;
-
-type ComboKey = keyof typeof COMBOS;
 
 // Map a catalog exam code (from the unlock CTA) to the form's exam label.
 const EXAM_LABEL: Record<string, string> = {
@@ -44,8 +30,8 @@ export default async function PayUpiPage({
   const subjectSlug = sp.subject?.trim();
 
   // Check if this is a combo purchase
-  const isCombo = Boolean(subjectSlug && subjectSlug in COMBOS);
-  const combo = isCombo ? COMBOS[subjectSlug as ComboKey] : null;
+  const isCombo = isComboSlug(subjectSlug ?? "");
+  const combo = isCombo ? getCombo(subjectSlug!) : null;
 
   // Resolve the correct price: combo has its own price, otherwise from catalog
   let amountRupees: number;
@@ -53,7 +39,7 @@ export default async function PayUpiPage({
   let months: number;
 
   if (combo) {
-    amountRupees = combo.priceRupees;
+    amountRupees = Math.round(combo.pricePaise / 100);
     displayLabel = combo.label;
     months = combo.months;
   } else {
@@ -62,13 +48,15 @@ export default async function PayUpiPage({
       ? Math.round(price.premiumPaise / 100)
       : Math.round(price.proPaise / 100);
     displayLabel = planKey === "premium" ? "Premium" : "Pro";
-    months = 18;
+    months = examCode === "DIPLOMA" ? 12 : 18;
   }
 
   const defaultExam = EXAM_LABEL[examCode];
   const defaultSubjectLabel =
-    examCode === "PSU" && subjectSlug && !isCombo
-      ? (() => {
+    isCombo
+      ? comboLabel(subjectSlug ?? "")
+      : examCode === "PSU" && subjectSlug
+        ? (() => {
           const isOngc = subjectSlug.startsWith("ongc-");
           const company = isOngc ? "ONGC" : "CIL";
           const discipline = isOngc
@@ -76,9 +64,14 @@ export default async function PayUpiPage({
             : getCilDiscipline(subjectSlug)?.discipline;
           return `PSU > ${company} > ${discipline ?? subjectSlug}`;
         })()
-      : subjectSlug && !isCombo
-        ? getSubject(examCode, subjectSlug)?.label ?? subjectSlug
-        : subjectSlug;
+        : subjectSlug
+          ? getSubject(examCode, subjectSlug)?.label ?? subjectSlug
+          : subjectSlug;
+
+  const subjectName = isCombo
+    ? combo?.label ?? "Combo"
+    : defaultSubjectLabel || displayLabel;
+  const validityText = `${months} months`;
 
   const session = await auth();
   if (!session?.user?.id) {
@@ -132,7 +125,7 @@ export default async function PayUpiPage({
     <div className="max-w-3xl mx-auto px-5 py-12">
       <h1 className="text-3xl font-extrabold">Pay ₹{amountRupees} via UPI</h1>
       <p className="text-muted mt-2">
-        {displayLabel} · valid through GATE 2027 cycle ({months} months).
+        {subjectName} · {displayLabel} plan · valid for {validityText}.
         Manual verification — your access unlocks within a few hours after we
         confirm the payment.
       </p>
@@ -211,8 +204,9 @@ export default async function PayUpiPage({
               defaultExam={defaultExam}
               defaultSubject={subjectSlug}
               defaultSubjectLabel={defaultSubjectLabel}
-              isCombo={isCombo}
-              comboLabels={combo?.entitlements.map((e) => `${e.exam} · ${e.subject}`) ?? []}
+            isCombo={isCombo}
+            comboName={combo?.label}
+            comboLabels={comboEntitlementLabels(subjectSlug ?? "")}
             />
           </div>
         </div>

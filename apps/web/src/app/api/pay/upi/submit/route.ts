@@ -9,22 +9,9 @@ import { isValidPhone, normalizePhone } from "@/lib/whatsapp";
 import { hasEntitlement } from "@/lib/entitlements";
 import { subjectPrice, type ExamTrack } from "@/data/catalog";
 import { getPostHogClient } from "@/lib/posthog";
+import { getCombo, isComboSlug } from "@/lib/combos";
 
 export const runtime = "nodejs";
-
-// Combo definitions — must match the page.
-const COMBOS = {
-  "combo-wcl-ncl-mining-sirdar": {
-    pricePaise: 59900,
-    months: 18,
-    entitlements: [
-      { exam: "DIPLOMA" as ExamTrack, subject: "wcl-sirdar" },
-      { exam: "DIPLOMA" as ExamTrack, subject: "ncl-mining-sirdar" },
-    ],
-  },
-} as const;
-
-type ComboKey = keyof typeof COMBOS;
 
 const Body = z.object({
   plan: z.enum(["pro", "premium"]),
@@ -61,8 +48,8 @@ export async function POST(req: Request) {
   const targetExam = EXAM_CODE[examName] ?? examName;
 
   // Resolve the correct price from catalog
-  const isCombo = subject in COMBOS;
-  const combo = isCombo ? COMBOS[subject as ComboKey] : null;
+  const isCombo = isComboSlug(subject);
+  const combo = getCombo(subject);
   const price = subjectPrice(targetExam, subject);
   const expectedPaise = combo
     ? combo.pricePaise
