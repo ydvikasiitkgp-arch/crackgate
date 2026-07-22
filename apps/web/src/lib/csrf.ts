@@ -22,7 +22,7 @@ function getAllowedOrigins(): string[] {
   const raw = process.env.APP_ORIGIN;
   if (raw) return raw.split(",").map((s) => s.trim()).filter(Boolean);
   return process.env.NODE_ENV === "production"
-    ? ["https://crackgate.in"]
+    ? ["https://crackgate.in", "https://www.crackgate.in"]
     : ["http://localhost:3000"];
 }
 
