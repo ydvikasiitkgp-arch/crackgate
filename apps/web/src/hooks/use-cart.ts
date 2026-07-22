@@ -253,5 +253,21 @@ export function useCart() {
     }
   }, [snap.loggedIn]);
 
-  return { ...snap, addItem, removeItem, clearCart, refetch: snap.loggedIn ? fetchServerCart : () => { setCart(buildLocalState()); } };
+  const syncToServer = useCallback(async () => {
+    if (!snap.loggedIn) return false;
+    const lsItems = lsRead();
+    if (lsItems.length === 0) return true;
+    for (const item of lsItems) {
+      await fetch("/api/cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(item),
+      }).catch(() => {});
+    }
+    lsClear();
+    await fetchServerCart();
+    return true;
+  }, [snap.loggedIn]);
+
+  return { ...snap, addItem, removeItem, clearCart, syncToServer, refetch: snap.loggedIn ? fetchServerCart : () => { setCart(buildLocalState()); } };
 }
