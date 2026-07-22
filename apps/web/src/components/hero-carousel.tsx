@@ -55,7 +55,6 @@ const SUCCESS_STORIES = [
   { name: "Priya S.", role: "WCL Asst. Foreman", text: "Cracked WCL on first attempt. The practice questions were spot on.", track: "wcl" },
   { name: "Amit T.", role: "GATE MN 2026 — AIR 342", text: "The SWOT analytics helped me focus on weak subjects only.", track: "gate" },
   { name: "Sneha M.", role: "CIL Management Trainee", text: "PSU mocks were tougher than the real paper — perfect prep.", track: "cil" },
-  { name: "Vikram R.", role: "NCL Surveyor", text: "20 mocks covered every topic. Didn't see a single surprise in the exam.", track: "ncl" },
   { name: "Deepak J.", role: "GATE CE 2026 — AIR 89", text: "Practiced 500+ questions here. The interface feels exactly like TCS iON.", track: "gate" },
 ];
 
@@ -141,9 +140,6 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
       onTouchEnd={onTouchEnd}
       tabIndex={0}
     >
-      {/* ── Countdown heatmap bar ── */}
-      <CountdownBar active={active} />
-
       {/* ── Themed particles ── */}
       <SlideParticles theme={meta.color} />
 
@@ -233,39 +229,6 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
         </div>
       </div>
     </section>
-  );
-}
-
-/* ───────────────────────── COUNTDOWN HEATMAP BAR ───────────────────────── */
-
-function CountdownBar({ active }: { active: number }) {
-  const now = Date.now();
-  const exams = useMemo(() => [
-    { label: "NCL", deadline: new Date("2026-08-05"), color: "bg-blue-500" },
-    { label: "WCL", deadline: new Date("2026-08-10"), color: "bg-emerald-500" },
-    { label: "ONGC", deadline: null, color: "bg-blue-400" },
-    { label: "GATE", deadline: new Date("2027-02-07"), color: "bg-amber-500" },
-  ], []);
-
-  return (
-    <div className="relative z-20 flex items-center gap-3 overflow-x-auto no-scrollbar bg-slate-900/80 backdrop-blur-md border-b border-white/5 px-4 py-1.5 sm:px-6">
-      <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 shrink-0">Upcoming</span>
-      {exams.map((e, i) => {
-        const days = e.deadline ? Math.ceil((e.deadline.getTime() - now) / 86400000) : null;
-        const isActive = (active === 0 && i === 0) || (active === 1 && i === 1) || (active === 2 && i === 2) || (active >= 3 && active <= 6 && i === 3) || (active === 7 && i === 2);
-        return (
-          <div key={e.label} className={`flex items-center gap-1.5 shrink-0 transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-50"}`}>
-            <span className={`h-1.5 w-1.5 rounded-full ${e.color}`} />
-            <span className="text-[10px] font-semibold text-white/80">{e.label}</span>
-            {days !== null && (
-              <span className={`text-[10px] font-bold ${days <= 30 ? "text-red-400" : "text-white/50"}`}>
-                {days}d left
-              </span>
-            )}
-          </div>
-        );
-      })}
-    </div>
   );
 }
 
