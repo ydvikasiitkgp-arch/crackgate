@@ -2,6 +2,7 @@
 
 import { useEffect, useCallback, useSyncExternalStore } from "react";
 import { subjectPrice, getSubject } from "@/data/catalog";
+import { calculateComboDiscounts } from "@/lib/combos";
 
 export type CartItem = {
   id: string;
@@ -84,14 +85,16 @@ function buildLocalState(): CartState {
   const lsItems = lsRead();
   const items = lsItems.map((i) => localItemToCart(i.exam, i.subject, i.plan));
   const rawTotalPaise = items.reduce((s, i) => s + i.pricePaise, 0);
+  const comboDiscounts = calculateComboDiscounts(items);
+  const comboSavingsPaise = comboDiscounts.reduce((s, d) => s + d.savingsPaise, 0);
   return {
     items,
     rawTotalPaise,
-    totalPaise: rawTotalPaise,
+    totalPaise: rawTotalPaise - comboSavingsPaise,
     count: items.length,
     loading: false,
-    comboDiscounts: [],
-    comboSavingsPaise: 0,
+    comboDiscounts,
+    comboSavingsPaise,
     loggedIn: false,
   };
 }

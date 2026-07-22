@@ -12,7 +12,7 @@ function formatPrice(paise: number) {
 }
 
 export default function CartPage() {
-  const { items, rawTotalPaise, totalPaise, count, loading, removeItem, refetch, comboDiscounts, comboSavingsPaise } = useCart();
+  const { items, rawTotalPaise, totalPaise, count, loading, removeItem, clearCart, refetch, comboDiscounts, comboSavingsPaise } = useCart();
   const [tab, setTab] = useState<"cart" | "browse">("browse");
 
   const liveExams = CATALOG.map((exam) => ({
@@ -54,6 +54,7 @@ export default function CartPage() {
               items={items}
               loading={loading}
               removeItem={removeItem}
+              clearCart={clearCart}
               refetch={refetch}
               comboDiscounts={comboDiscounts}
               comboSavingsPaise={comboSavingsPaise}
@@ -168,6 +169,7 @@ function CartContents({
   items,
   loading,
   removeItem,
+  clearCart,
   refetch,
   comboDiscounts,
   comboSavingsPaise,
@@ -177,6 +179,7 @@ function CartContents({
   items: { id: string; exam: string; subject: string; label: string; plan: string; pricePaise: number }[];
   loading: boolean;
   removeItem: (id: string) => Promise<boolean>;
+  clearCart: () => Promise<void>;
   refetch: () => void;
   comboDiscounts: ComboDiscount[];
   comboSavingsPaise: number;
@@ -187,10 +190,7 @@ function CartContents({
 
   async function handleClear() {
     setClearing(true);
-    for (const item of items) {
-      await fetch(`/api/cart/${item.id}`, { method: "DELETE" });
-    }
-    await refetch();
+    await clearCart();
     setClearing(false);
   }
 
