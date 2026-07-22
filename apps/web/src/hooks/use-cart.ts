@@ -94,8 +94,12 @@ export function useCart() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ exam, subject, plan }),
       });
-      if (res.ok) await fetchCart();
-      return res.ok;
+      if (res.ok) {
+        await fetchCart();
+        return { ok: true as const };
+      }
+      console.error("[cart] addItem failed:", res.status, await res.text());
+      return { ok: false as const, status: res.status };
     },
     [],
   );

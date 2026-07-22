@@ -152,7 +152,9 @@ export function getSubject(
   exam: string,
   subject: string,
 ): CatalogSubject | undefined {
-  return getExam(exam)?.subjects.find((s) => s.slug === subject);
+  return CATALOG.filter((e) => e.exam === exam)
+    .flatMap((e) => e.subjects)
+    .find((s) => s.slug === subject);
 }
 
 /** Flat list of every exam+subject pair (for filters / iteration). */
