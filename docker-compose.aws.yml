@@ -89,6 +89,8 @@ services:
       SENTRY_DSN: ${SENTRY_DSN:-}
       RESEND_API_KEY: ${RESEND_API_KEY}
       RESEND_FROM_EMAIL: ${RESEND_FROM_EMAIL:-support@crackgate.in}
+      # CSRF — allowed origins for POST/PUT/DELETE to /api/*
+      APP_ORIGIN: ${APP_ORIGIN:-https://crackgate.in,https://www.crackgate.in}
       AWS_REGION: ${AWS_REGION:-ap-south-1}
       UPLOADS_BUCKET: ${UPLOADS_BUCKET:-crackgate-uploads}
     healthcheck:
