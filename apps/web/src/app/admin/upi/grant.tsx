@@ -2,12 +2,15 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { CATALOG } from "@/data/catalog";
+import { CATALOG, subjectPrice } from "@/data/catalog";
+import { COMBOS, comboLabel } from "@/lib/combos";
 
-const PLANS = [
-  { value: "pro", label: "Pro", price: "₹499" },
-  { value: "premium", label: "Premium", price: "₹899" },
-] as const;
+// Flatten combos into a list for the dropdown.
+const COMBO_OPTIONS = Object.values(COMBOS).map((c) => ({
+  value: c.slug,
+  label: c.label,
+  price: `₹${Math.round(c.pricePaise / 100)}`,
+}));
 
 type Result = {
   user: { email: string; name: string | null };
@@ -17,6 +20,9 @@ type Result = {
   subject: string;
   expiry: string;
   isTestUser?: boolean;
+  isCombo?: boolean;
+  comboLabel?: string;
+  comboEntitlements?: string[];
 };
 
 export default function GrantAccessForm() {
@@ -26,21 +32,28 @@ export default function GrantAccessForm() {
   const [months, setMonths] = useState(18);
   const [exam, setExam] = useState<string>(CATALOG[0].exam);
   const subjects = useMemo(
-    () => CATALOG.find((e) => e.exam === exam)?.subjects ?? [],
+    () => CATALOG.filter((e) => e.exam === exam).flatMap((e) => e.subjects),
     [exam],
   );
   const [subject, setSubject] = useState<string>(CATALOG[0].subjects[0].slug);
+  const [selectedCombo, setSelectedCombo] = useState<string>("");
   const [isTestUser, setIsTestUser] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<Result | null>(null);
 
   const selectedSubject = subjects.find((s) => s.slug === subject);
+  const isComboMode = Boolean(selectedCombo);
+
+  const resolvedPrice = useMemo(() => {
+    const p = subjectPrice(exam, subject);
+    return { pro: `₹${Math.round(p.proPaise / 100)}`, premium: `₹${Math.round(p.premiumPaise / 100)}` };
+  }, [exam, subject]);
 
   function onExamChange(nextExam: string) {
     setExam(nextExam);
-    const first = CATALOG.find((e) => e.exam === nextExam)?.subjects[0];
-    if (first) setSubject(first.slug);
+    const allSubjects = CATALOG.filter((e) => e.exam === nextExam).flatMap((e) => e.subjects);
+    if (allSubjects.length > 0) setSubject(allSubjects[0].slug);
   }
 
   async function submit() {
@@ -55,8 +68,8 @@ export default function GrantAccessForm() {
           identifier: identifier.trim(),
           plan,
           months,
-          exam,
-          subject,
+          exam: isComboMode ? "DIPLOMA" : exam,
+          subject: isComboMode ? selectedCombo : subject,
           isTestUser,
         }),
       });
@@ -89,38 +102,74 @@ export default function GrantAccessForm() {
         access applies to. The user must have signed in once.
       </p>
 
-      {/* Exam + subject */}
-      <div className="grid sm:grid-cols-2 gap-3 mt-4">
+      {/* Combo selector */}
+      <div className="mt-4">
         <label className="block">
-          <span className="text-xs text-muted">Exam</span>
+          <span className="text-xs text-muted">Or select a combo</span>
           <select
-            value={exam}
-            onChange={(e) => onExamChange(e.target.value)}
+            value={selectedCombo}
+            onChange={(e) => {
+              setSelectedCombo(e.target.value);
+              if (e.target.value) {
+                // Auto-set exam and subject from combo
+                const combo = COMBOS[e.target.value];
+                if (combo) {
+                  setExam(combo.entitlements[0].exam);
+                  setSubject(combo.entitlements[0].subject);
+                }
+              }
+            }}
             className="input mt-1 w-full"
           >
-            {CATALOG.map((e) => (
-              <option key={e.exam} value={e.exam}>
-                {e.label}
+            <option value="">None (single exam)</option>
+            {COMBO_OPTIONS.map((c) => (
+              <option key={c.value} value={c.value}>
+                {c.label} — {c.price}
               </option>
             ))}
           </select>
         </label>
-        <label className="block">
-          <span className="text-xs text-muted">Subject</span>
-          <select
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            className="input mt-1 w-full"
-          >
-            {subjects.map((s) => (
-              <option key={s.slug} value={s.slug}>
-                {s.label}
-                {s.live ? "" : " · soon"}
-              </option>
-            ))}
-          </select>
-        </label>
+        {isComboMode && (
+          <p className="text-xs text-accent mt-1">
+            This will grant entitlements for: {COMBOS[selectedCombo]?.entitlements.map((e) => `${e.exam} · ${e.subject}`).join(" + ")}
+          </p>
+        )}
       </div>
+
+      {/* Exam + subject (hidden when combo is selected) */}
+      {!isComboMode && (
+        <div className="grid sm:grid-cols-2 gap-3 mt-4">
+          <label className="block">
+            <span className="text-xs text-muted">Exam</span>
+            <select
+              value={exam}
+              onChange={(e) => onExamChange(e.target.value)}
+              className="input mt-1 w-full"
+            >
+              {CATALOG.map((e) => (
+                <option key={e.label} value={e.exam}>
+                  {e.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className="text-xs text-muted">Subject</span>
+            <select
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="input mt-1 w-full"
+            >
+              {subjects.map((s) => (
+                <option key={s.slug} value={s.slug}>
+                  {s.label}
+                  {s.live ? "" : " · soon"}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+      )}
 
       {selectedSubject && !selectedSubject.live && (
         <p className="text-xs text-accent mt-2">
@@ -143,7 +192,10 @@ export default function GrantAccessForm() {
         <div className="block">
           <span className="text-xs text-muted">Plan</span>
           <div className="mt-1 inline-flex rounded-lg border border-line p-0.5 bg-surface">
-            {PLANS.map((p) => {
+            {([
+              { value: "pro" as const, label: "Pro", price: resolvedPrice.pro },
+              { value: "premium" as const, label: "Premium", price: resolvedPrice.premium },
+            ]).map((p) => {
               const active = plan === p.value;
               return (
                 <button
@@ -205,8 +257,16 @@ export default function GrantAccessForm() {
             {result.isTestUser ? "Test grant" : "Granted"}{" "}
             <strong>{result.plan}</strong>
           </span>{" "}
-          ({result.exam} · {result.subject}) to{" "}
-          {result.user.name ?? result.user.email} for {result.months} months
+          {result.isCombo ? (
+            <>
+              <span className="text-ok font-medium">{result.comboLabel}</span>
+              {" → "}
+              <span className="text-muted">{result.comboEntitlements?.join(" + ")}</span>
+            </>
+          ) : (
+            <>({result.exam} · {result.subject})</>
+          )}{" "}
+          to {result.user.name ?? result.user.email} for {result.months} months
           (until {result.expiry}).
           {result.isTestUser && (
             <span className="block text-xs text-muted mt-1">

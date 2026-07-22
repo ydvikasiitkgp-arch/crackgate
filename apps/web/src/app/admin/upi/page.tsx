@@ -6,6 +6,7 @@ import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import UpiReviewActions from "./actions";
 import GrantAccessForm from "./grant";
 import { CATALOG, subjectLabel, getExam } from "@/data/catalog";
+import { isComboSlug, comboLabel } from "@/lib/combos";
 
 export const dynamic = "force-dynamic";
 
@@ -152,7 +153,7 @@ export default async function AdminUpiPage({
             const n = row?._count._all ?? 0;
             return (
               <span
-                key={e.exam}
+                key={e.label}
                 className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-sm"
               >
                 <span className="font-semibold">{e.label}</span>
@@ -186,7 +187,7 @@ export default async function AdminUpiPage({
           <FilterChip label="All exams" href="/admin/upi" active={!fExam} />
           {CATALOG.map((e) => (
             <FilterChip
-              key={e.exam}
+              key={e.label}
               label={e.label}
               href={`/admin/upi?exam=${e.exam}`}
               active={fExam === e.exam && !fSubject}
@@ -317,7 +318,41 @@ export default async function AdminUpiPage({
                       )}
                     </td>
                     <td className="p-3 text-xs">{c.exam ?? "—"}</td>
-                    <td className="p-3 text-xs">{c.subject ?? "—"}</td>
+                    <td className="p-3 text-xs">
+                      {Array.isArray(c.items) && c.items.length > 0 ? (
+                        <div className="space-y-1">
+                          <span className="inline-flex items-center gap-1">
+                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-500/15 text-blue-600 dark:text-blue-400">
+                              CART
+                            </span>
+                            <span className="text-muted">{c.items.length} items</span>
+                          </span>
+                          {c.items.map((item: any, i: number) => (
+                            <div key={i} className="text-[11px] text-muted pl-1">
+                              {subjectLabel(item.exam, item.subject)} · {item.plan} · ₹{Math.round(item.pricePaise / 100)}
+                            </div>
+                          ))}
+                          {(() => {
+                            const rawTotal = c.items.reduce((s: number, item: any) => s + (item.pricePaise ?? 0), 0);
+                            const saved = rawTotal - c.amountPaise;
+                            return saved > 0 ? (
+                              <div className="text-[11px] text-ok font-medium pl-1">
+                                15% combo discount: -₹{Math.round(saved / 100)}
+                              </div>
+                            ) : null;
+                          })()}
+                        </div>
+                      ) : c.subject && isComboSlug(c.subject) ? (
+                        <span className="inline-flex items-center gap-1">
+                          <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/15 text-amber-600 dark:text-amber-400">
+                            COMBO
+                          </span>
+                          <span className="text-muted">{comboLabel(c.subject)}</span>
+                        </span>
+                      ) : (
+                        c.subject ?? "—"
+                      )}
+                    </td>
                     <td className="p-3 font-semibold">{c.plan}</td>
                     <td className="p-3 font-semibold">
                       ₹{Math.round(c.amountPaise / 100)}
@@ -327,7 +362,7 @@ export default async function AdminUpiPage({
                       {c.payerNote ?? "—"}
                     </td>
                     <td className="p-3">
-                      <UpiReviewActions claimId={c.id} />
+                      <UpiReviewActions claimId={c.id} subject={c.subject} items={c.items as any} />
                     </td>
                   </tr>
                 ))}

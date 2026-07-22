@@ -15,7 +15,9 @@ import {
   DEFAULT_SUBJECT,
   getSubject,
   subjectPrice,
+  type ExamTrack,
 } from "@/data/catalog";
+import { getCombo, isComboSlug, comboLabel } from "@/lib/combos";
 
 export const runtime = "nodejs";
 
@@ -39,13 +41,19 @@ export async function POST(req: Request) {
   const { identifier, plan, months, exam, subject, isTestUser } = parsed.data;
   const isEmail = identifier.includes("@");
 
-  // Validate exam+subject against the catalog so attribution stays clean.
-  const cat = getSubject(exam, subject);
-  if (!cat) {
-    return NextResponse.json(
-      { error: "invalid_subject", message: "Unknown exam or subject." },
-      { status: 400 },
-    );
+  // Check if this is a combo grant
+  const isCombo = isComboSlug(subject);
+  const combo = getCombo(subject);
+
+  // Validate exam+subject against the catalog (skip validation for combos)
+  if (!isCombo) {
+    const cat = getSubject(exam, subject);
+    if (!cat) {
+      return NextResponse.json(
+        { error: "invalid_subject", message: "Unknown exam or subject." },
+        { status: 400 },
+      );
+    }
   }
 
   const user = isEmail
@@ -76,15 +84,44 @@ export async function POST(req: Request) {
 
   const grantSource = isTestUser ? "test_grant" : "manual_grant";
 
-  const amountPaise = subjectPrice(exam, subject)[
-    plan === "premium" ? "premiumPaise" : "proPaise"
-  ];
+  // For combos, use the combo price; otherwise resolve from catalog
+  const amountPaise = combo
+    ? combo.pricePaise
+    : subjectPrice(exam, subject)[plan === "premium" ? "premiumPaise" : "proPaise"];
 
-  // Only the currently-live GATE Mining track drives the global User.plan so
-  // existing mock/practice gating keeps working. Other tracks are recorded as
-  // entitlements (attribution + future gating) without flipping the plan.
-  const syncsGlobalPlan =
-    exam === DEFAULT_EXAM && subject === DEFAULT_SUBJECT;
+  // For combos, create entitlements for all included exams
+  const entitlementOps = combo
+    ? combo.entitlements.map((ent) =>
+        db.entitlement.upsert({
+          where: { userId_exam_subject: { userId: user.id, exam: ent.exam, subject: ent.subject } },
+          create: {
+            userId: user.id,
+            exam: ent.exam,
+            subject: ent.subject,
+            tier: plan,
+            source: grantSource,
+            expiry,
+          },
+          update: { tier: plan, source: grantSource, expiry },
+        })
+      )
+    : [
+        db.entitlement.upsert({
+          where: { userId_exam_subject: { userId: user.id, exam, subject } },
+          create: {
+            userId: user.id,
+            exam,
+            subject,
+            tier: plan,
+            source: grantSource,
+            expiry,
+          },
+          update: { tier: plan, source: grantSource, expiry },
+        }),
+      ];
+
+  // Only the currently-live GATE Mining track drives the global User.plan
+  const syncsGlobalPlan = exam === DEFAULT_EXAM && subject === DEFAULT_SUBJECT && !isCombo;
 
   const ops: PrismaPromise<unknown>[] = [
     ...(syncsGlobalPlan
@@ -95,18 +132,7 @@ export async function POST(req: Request) {
           }),
         ]
       : []),
-    db.entitlement.upsert({
-      where: { userId_exam_subject: { userId: user.id, exam, subject } },
-      create: {
-        userId: user.id,
-        exam,
-        subject,
-        tier: plan,
-        source: grantSource,
-        expiry,
-      },
-      update: { tier: plan, source: grantSource, expiry },
-    }),
+    ...entitlementOps,
     db.activity.create({
       data: {
         userId: user.id,
@@ -118,6 +144,8 @@ export async function POST(req: Request) {
           amountPaise,
           exam,
           subject,
+          is_combo: isCombo,
+          combo_entitlements: combo?.entitlements.map((e) => `${e.exam}/${e.subject}`) ?? null,
           grantedBy: admin.email,
         },
       },
@@ -140,7 +168,14 @@ export async function POST(req: Request) {
           periodMonths: months,
           status: "captured",
           capturedAt: now,
-          raw: { source: grantSource, grantedBy: admin.email, exam, subject },
+          raw: {
+            source: grantSource,
+            grantedBy: admin.email,
+            exam,
+            subject,
+            is_combo: isCombo,
+            combo_entitlements: combo?.entitlements.map((e) => `${e.exam}/${e.subject}`) ?? null,
+          },
         },
       }),
     );
@@ -156,6 +191,9 @@ export async function POST(req: Request) {
     exam,
     subject,
     isTestUser,
+    isCombo,
+    comboLabel: comboLabel(subject),
+    comboEntitlements: combo?.entitlements.map((e) => `${e.exam} · ${e.subject}`) ?? [],
     expiry: expiry.toISOString().slice(0, 10),
   });
 }

@@ -64,6 +64,7 @@ model User {
   pageViews      PageView[]
   accounts       Account[]
   sessions       Session[]
+  cart           Cart[]
 
   @@index([plan])
   @@index([createdAt])
@@ -159,6 +160,7 @@ model UpiPayment {
   exam          String?                          // ExamTrack code (e.g. "GATE")
   subject       String?                          // subject slug (e.g. "mining")
   amountPaise   Int                              // 49900 = ₹499
+  items         Json?                            // multi-item checkout: [{exam, subject, plan, pricePaise}]
   periodMonths  Int             @default(18)
   payerName     String?                          // full name the user paid with
   payerPhone    String?                          // contact + reconciliation key (UPI payer)
@@ -178,6 +180,20 @@ model UpiPayment {
   @@index([userId, createdAt(sort: Desc)])
   @@index([status, createdAt])
   @@index([payerPhone])
+}
+
+// Shopping cart — persists across sessions for multi-item checkout.
+model Cart {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exam      String   // "GATE" | "PSU" | "STATE" | "DIPLOMA"
+  subject   String   // subject slug
+  plan      String   @default("pro") // "pro" | "premium"
+  createdAt DateTime @default(now())
+
+  @@unique([userId, exam, subject])
+  @@index([userId])
 }
 
 // ---------- NextAuth.js tables ----------

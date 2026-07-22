@@ -5,6 +5,7 @@ import { WCL_SIRDAR_MOCKS } from "@/data/diploma/wcl-mocks";
 import { WCL_AF_MOCKS } from "@/data/diploma/wcl-af-mocks";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { NewsletterForm } from "@/components/newsletter-form";
+import { AddToCartBtn } from "@/components/add-to-cart-btn";
 
 export const metadata = {
   title: "WCL Diploma Exams · CrackGate",
@@ -168,7 +169,10 @@ export default function WclIndexPage() {
               <span className="text-sm font-semibold text-brand">
                 Open mock series <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </span>
-              <span className="text-xs text-muted">20 mocks · ₹399</span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-muted">20 mocks · ₹399</span>
+                <AddToCartBtn exam="DIPLOMA" subject="wcl-sirdar" />
+              </div>
             </div>
           </Link>
 
@@ -195,9 +199,52 @@ export default function WclIndexPage() {
               <span className="text-sm font-semibold text-brand">
                 Open mock series <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </span>
-              <span className="text-xs text-muted">20 mocks · ₹399</span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-muted">20 mocks · ₹399</span>
+                <AddToCartBtn exam="DIPLOMA" subject="wcl-af-electrical" />
+              </div>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* COMBO DEAL */}
+      <section className="max-w-7xl mx-auto px-5 pb-16">
+        <div className="relative overflow-hidden rounded-2xl border-2 border-amber-400/60 bg-gradient-to-br from-amber-500/5 via-orange-500/5 to-red-500/5 p-6 sm:p-8 transition-all duration-200 hover:shadow-xl hover:shadow-amber-500/10">
+          <div className="absolute -top-16 -right-16 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-orange-400/10 rounded-full blur-3xl" />
+
+          <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex-1">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">WCL</span>
+                <span className="text-muted text-sm font-bold">+</span>
+                <span className="inline-flex items-center rounded-full bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-400">NCL</span>
+                <span className="inline-flex items-center rounded-full bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-600 dark:text-amber-400 animate-pulse">BEST VALUE</span>
+              </div>
+              <h3 className="text-2xl font-extrabold text-ink">WCL + NCL Mining Sirdar Combo</h3>
+              <div className="mt-3 flex items-baseline gap-3">
+                <span className="text-4xl font-extrabold">₹678</span>
+                <span className="text-lg text-muted line-through">₹798</span>
+                <span className="inline-flex items-center rounded-full bg-ok/15 px-2.5 py-0.5 text-xs font-bold text-ok">SAVE ₹120 (15% off)</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-sm text-muted">
+                <li className="flex gap-2.5"><span className="text-ok shrink-0"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg></span> WCL Mining Sirdar — 20 mocks</li>
+                <li className="flex gap-2.5"><span className="text-ok shrink-0"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg></span> NCL Mining Sirdar — 20 mocks</li>
+                <li className="flex gap-2.5"><span className="text-ok shrink-0"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg></span> 40 total mocks · 100 MCQs each · 120 min · no negative marking</li>
+                <li className="flex gap-2.5"><span className="text-ok shrink-0"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg></span> Add any 2+ mocks to cart — 15% off automatically</li>
+              </ul>
+            </div>
+            <div className="shrink-0 sm:text-right">
+              <Link
+                href="/cart"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-8 py-4 text-base font-bold text-white shadow-lg shadow-amber-500/25 transition hover:from-amber-400 hover:to-orange-400 hover:shadow-xl"
+              >
+                Add Both to Cart — Save 15%
+              </Link>
+              <p className="mt-2 text-xs text-muted">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
+            </div>
+          </div>
         </div>
       </section>
 

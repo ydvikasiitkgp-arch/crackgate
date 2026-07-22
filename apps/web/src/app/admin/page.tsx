@@ -8,6 +8,7 @@ import dynamicImport from "next/dynamic";
 import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import { AdminCommandBar } from "@/components/admin/admin-command-bar";
 import { AdminSectionHeader } from "@/components/admin/admin-section-header";
+import { isComboSlug, comboLabel } from "@/lib/combos";
 import {
   AdminEmptyState,
   AdminDataTableEmpty,
@@ -55,6 +56,10 @@ const SUBJECT_LABELS: Record<string, string> = {
   "ongc-chemical": "ONGC Chem",
   "ongc-instrumentation": "ONGC Instr",
   "ongc-geology": "ONGC Geo",
+  "wcl-sirdar": "WCL Mining Sirdar",
+  "wcl-af-electrical": "WCL AF Electrical",
+  "ncl-mining-sirdar": "NCL Mining Sirdar",
+  "ncl-surveyor": "NCL Surveyor",
 };
 
 function pctChange(
@@ -162,7 +167,18 @@ export default async function AdminPage() {
     db.payment.findMany({
       orderBy: { createdAt: "desc" },
       take: 8,
-      include: { user: { select: { email: true, name: true } } },
+      select: {
+        id: true,
+        plan: true,
+        amount: true,
+        status: true,
+        exam: true,
+        subject: true,
+        createdAt: true,
+        capturedAt: true,
+        raw: true,
+        user: { select: { email: true, name: true } },
+      },
     }),
     db.activity.findMany({
       orderBy: { ts: "desc" },
@@ -518,33 +534,48 @@ export default async function AdminPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-line/50">
-                {allEntitlements.slice(0, 10).map((e) => (
-                  <tr
-                    key={e.id}
-                    className="hover:bg-paper/50 transition-colors"
-                  >
-                    <td className="px-3 sm:px-6 py-3 font-medium">
-                      {e.user.email}
-                    </td>
-                    <td className="px-3 sm:px-6 py-3">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-brand/10 text-brand">
-                        {EXAM_LABELS[e.exam] ?? e.exam}
-                      </span>
-                    </td>
-                    <td className="px-3 sm:px-6 py-3">
-                      {SUBJECT_LABELS[e.subject] ?? e.subject}
-                    </td>
-                    <td className="hidden sm:table-cell px-3 sm:px-6 py-3">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
-                        {e.tier}
-                      </span>
-                    </td>
-                    <td className="hidden sm:table-cell px-3 sm:px-6 py-3 text-muted">{e.source}</td>
-                    <td className="px-3 sm:px-6 py-3 text-muted">
-                      {e.expiry ? fmtDate(e.expiry) : "∞"}
-                    </td>
-                  </tr>
-                ))}
+                {allEntitlements.slice(0, 10).map((e, idx, arr) => {
+                  const prev = arr[idx - 1];
+                  const isSameComboGroup = prev
+                    && prev.userId === e.userId
+                    && Math.abs(new Date(prev.createdAt).getTime() - new Date(e.createdAt).getTime()) < 5000
+                    && (prev.subject === "wcl-sirdar" || prev.subject === "ncl-mining-sirdar")
+                    && (e.subject === "wcl-sirdar" || e.subject === "ncl-mining-sirdar");
+                  return (
+                    <tr
+                      key={e.id}
+                      className="hover:bg-paper/50 transition-colors"
+                    >
+                      <td className="px-3 sm:px-6 py-3 font-medium">
+                        {e.user.email}
+                      </td>
+                      <td className="px-3 sm:px-6 py-3">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-brand/10 text-brand">
+                          {EXAM_LABELS[e.exam] ?? e.exam}
+                        </span>
+                      </td>
+                      <td className="px-3 sm:px-6 py-3">
+                        <span className="inline-flex items-center gap-1.5">
+                          {isSameComboGroup && (
+                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/15 text-amber-600 dark:text-amber-400">
+                              COMBO
+                            </span>
+                          )}
+                          {SUBJECT_LABELS[e.subject] ?? e.subject}
+                        </span>
+                      </td>
+                      <td className="hidden sm:table-cell px-3 sm:px-6 py-3">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
+                          {e.tier}
+                        </span>
+                      </td>
+                      <td className="hidden sm:table-cell px-3 sm:px-6 py-3 text-muted">{e.source}</td>
+                      <td className="px-3 sm:px-6 py-3 text-muted">
+                        {e.expiry ? fmtDate(e.expiry) : "∞"}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -566,6 +597,8 @@ export default async function AdminPage() {
             <thead className="text-xs text-muted uppercase tracking-wider border-b border-line">
               <tr>
                 <th className="px-3 sm:px-6 py-3 text-left">User</th>
+                <th className="px-3 sm:px-6 py-3 text-left">Exam</th>
+                <th className="hidden md:table-cell px-3 sm:px-6 py-3 text-left">Subject</th>
                 <th className="px-3 sm:px-6 py-3 text-left">Plan</th>
                 <th className="px-3 sm:px-6 py-3 text-left">Amount</th>
                 <th className="px-3 sm:px-6 py-3 text-left">Status</th>
@@ -576,7 +609,7 @@ export default async function AdminPage() {
             <tbody className="divide-y divide-line/50">
               {recentPayments.length === 0 ? (
                 <AdminDataTableEmpty
-                  colSpan={6}
+                  colSpan={8}
                   icon="CreditCard"
                   title="No payments yet"
                   description="Once Razorpay is live, captures show here."
@@ -592,6 +625,34 @@ export default async function AdminPage() {
                       {p.user.name && (
                         <div className="text-xs text-muted">{p.user.name}</div>
                       )}
+                    </td>
+                    <td className="px-3 sm:px-6 py-3">
+                      {p.exam ? (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-brand/10 text-brand">
+                          {EXAM_LABELS[p.exam] ?? p.exam}
+                        </span>
+                      ) : (
+                        <span className="text-muted">—</span>
+                      )}
+                    </td>
+                    <td className="hidden md:table-cell px-3 sm:px-6 py-3 text-xs text-muted">
+                      {(p.raw as any)?.items ? (
+                        <span className="inline-flex items-center gap-1">
+                          <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-500/15 text-blue-600 dark:text-blue-400">
+                            CART
+                          </span>
+                          <span>{Array.isArray((p.raw as any).items) ? (p.raw as any).items.length : "?"} items</span>
+                        </span>
+                      ) : p.subject && isComboSlug(p.subject) ? (
+                        <span className="inline-flex items-center gap-1">
+                          <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/15 text-amber-600 dark:text-amber-400">
+                            COMBO
+                          </span>
+                          <span>{comboLabel(p.subject)}</span>
+                        </span>
+                      ) : p.subject ? (
+                        SUBJECT_LABELS[p.subject] ?? p.subject
+                      ) : "—"}
                     </td>
                     <td className="px-3 sm:px-6 py-3">
                       <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">

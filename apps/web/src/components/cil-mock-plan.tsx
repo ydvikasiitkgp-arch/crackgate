@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CIL_PATTERN, buildCilMockPlan, type CilMock } from "@/data/cil-mocks";
 import { cilLiveSetNos } from "@/data/cil-mock-bank";
 import { CIL_PRICE_RUPEES } from "@/data/cil";
+import { AddToCartBtn } from "@/components/add-to-cart-btn";
 
 /**
  * Renders the full-length CIL Management Trainee mock series for a discipline
@@ -53,7 +54,7 @@ export function CilMockPlan({
           </span>
         </div>
       ) : (
-        <CilPaywall discipline={discipline} payHref={payHref} count={plan.length} />
+        <CilPaywall discipline={discipline} slug={slug} payHref={payHref} count={plan.length} />
       )}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +67,7 @@ export function CilMockPlan({
 }
 
 /** Top-of-series purchase banner shown to users without access. */
-function CilPaywall({ discipline, payHref, count }: { discipline: string; payHref: string; count: number }) {
+function CilPaywall({ discipline, slug, payHref, count }: { discipline: string; slug: string; payHref: string; count: number }) {
   return (
     <div className="mt-6 overflow-hidden rounded-2xl border border-cyan-400/30 bg-gradient-to-r from-blue-950 to-slate-900 text-white">
       <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
@@ -85,12 +86,15 @@ function CilPaywall({ discipline, payHref, count }: { discipline: string; payHre
           <div className="text-right">
             <span className="text-3xl font-extrabold">₹{CIL_PRICE_RUPEES}</span>
           </div>
-          <Link
-            href={payHref}
-            className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-cyan-400/70 bg-cyan-400/10 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
-          >
-            Unlock now <span aria-hidden>→</span>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href={payHref}
+              className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-cyan-400/70 bg-cyan-400/10 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/20"
+            >
+              Unlock now <span aria-hidden>→</span>
+            </Link>
+            <AddToCartBtn exam="PSU" subject={slug} variant="light" size="md" />
+          </div>
           <span className="text-[11px] text-white/50">Pay via UPI · access in a few hours</span>
         </div>
       </div>

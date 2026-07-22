@@ -6,16 +6,10 @@ import { db } from "@/lib/db";
 import { whatsappLink } from "@/lib/contact";
 import { getCilDiscipline } from "@/data/cil";
 import { getOngcDiscipline } from "@/data/ongc";
-import { getSubject } from "@/data/catalog";
+import { getSubject, subjectPrice, type ExamTrack } from "@/data/catalog";
+import { getCombo, isComboSlug, comboLabel, comboEntitlementLabels } from "@/lib/combos";
 
 export const dynamic = "force-dynamic";
-
-const PLANS = {
-  pro:     { amountRupees: 499, label: "Pro",     months: 18 },
-  premium: { amountRupees: 899, label: "Premium", months: 18 },
-} as const;
-
-type Plan = keyof typeof PLANS;
 
 // Map a catalog exam code (from the unlock CTA) to the form's exam label.
 const EXAM_LABEL: Record<string, string> = {
@@ -31,19 +25,38 @@ export default async function PayUpiPage({
   searchParams: Promise<{ plan?: string; exam?: string; subject?: string }>;
 }) {
   const sp = await searchParams;
-  const planKey: Plan = sp.plan === "premium" ? "premium" : "pro";
-  const cfg = PLANS[planKey];
-
-  // Optional deep-link attribution (e.g. from the CIL unlock CTA:
-  // /pay/upi?plan=pro&exam=PSU&subject=civil). The slug is the canonical value
-  // we submit/store (so it matches the entitlement gate); the label is only for
-  // display.
+  const planKey = sp.plan === "premium" ? "premium" : "pro";
   const examCode = (sp.exam ?? "").toUpperCase();
-  const defaultExam = EXAM_LABEL[examCode];
   const subjectSlug = sp.subject?.trim();
+
+  // Check if this is a combo purchase
+  const isCombo = isComboSlug(subjectSlug ?? "");
+  const combo = isCombo ? getCombo(subjectSlug!) : null;
+
+  // Resolve the correct price: combo has its own price, otherwise from catalog
+  let amountRupees: number;
+  let displayLabel: string;
+  let months: number;
+
+  if (combo) {
+    amountRupees = Math.round(combo.pricePaise / 100);
+    displayLabel = combo.label;
+    months = combo.months;
+  } else {
+    const price = subjectPrice(examCode, subjectSlug ?? "");
+    amountRupees = planKey === "premium"
+      ? Math.round(price.premiumPaise / 100)
+      : Math.round(price.proPaise / 100);
+    displayLabel = planKey === "premium" ? "Premium" : "Pro";
+    months = examCode === "DIPLOMA" ? 12 : 18;
+  }
+
+  const defaultExam = EXAM_LABEL[examCode];
   const defaultSubjectLabel =
-    examCode === "PSU" && subjectSlug
-      ? (() => {
+    isCombo
+      ? comboLabel(subjectSlug ?? "")
+      : examCode === "PSU" && subjectSlug
+        ? (() => {
           const isOngc = subjectSlug.startsWith("ongc-");
           const company = isOngc ? "ONGC" : "CIL";
           const discipline = isOngc
@@ -51,9 +64,14 @@ export default async function PayUpiPage({
             : getCilDiscipline(subjectSlug)?.discipline;
           return `PSU > ${company} > ${discipline ?? subjectSlug}`;
         })()
-      : subjectSlug
-        ? getSubject(examCode, subjectSlug)?.label ?? subjectSlug
-        : subjectSlug;
+        : subjectSlug
+          ? getSubject(examCode, subjectSlug)?.label ?? subjectSlug
+          : subjectSlug;
+
+  const subjectName = isCombo
+    ? combo?.label ?? "Combo"
+    : defaultSubjectLabel || displayLabel;
+  const validityText = `${months} months`;
 
   const session = await auth();
   if (!session?.user?.id) {
@@ -66,8 +84,6 @@ export default async function PayUpiPage({
   const vpa = process.env.NEXT_PUBLIC_UPI_VPA || "";
   const payeeName = process.env.NEXT_PUBLIC_UPI_PAYEE_NAME || "CrackGate";
 
-  // Prefill the claim form from the signed-in user (Google gives name+email;
-  // phone is usually empty until they tell us here).
   const [me, myClaims] = await Promise.all([
     db.user.findUnique({
       where: { id: session.user.id },
@@ -88,17 +104,14 @@ export default async function PayUpiPage({
     }),
   ]);
 
-  // Build UPI deep-link. tn = transaction note (max ~80 chars, plain ASCII).
-  // userId is included so we can sanity-check claims against the payer's note
-  // when the bank statement doesn't expose it directly.
+  // Build UPI deep-link with the correct amount
   const note = `cg-${planKey}-${session.user.id.slice(0, 8)}`;
   const upiUrl = vpa
     ? `upi://pay?pa=${encodeURIComponent(vpa)}&pn=${encodeURIComponent(
         payeeName,
-      )}&am=${cfg.amountRupees}&cu=INR&tn=${encodeURIComponent(note)}`
+      )}&am=${amountRupees}&cu=INR&tn=${encodeURIComponent(note)}`
     : "";
 
-  // Server-render QR as inline SVG (no client JS, no extra request).
   const qrSvg = upiUrl
     ? await QRCode.toString(upiUrl, {
         type: "svg",
@@ -110,9 +123,9 @@ export default async function PayUpiPage({
 
   return (
     <div className="max-w-3xl mx-auto px-5 py-12">
-      <h1 className="text-3xl font-extrabold">Pay ₹{cfg.amountRupees} via UPI</h1>
+      <h1 className="text-3xl font-extrabold">Pay ₹{amountRupees} via UPI</h1>
       <p className="text-muted mt-2">
-        {cfg.label} plan · valid through GATE 2027 cycle ({cfg.months} months).
+        {subjectName} · {displayLabel} plan · valid for {validityText}.
         Manual verification — your access unlocks within a few hours after we
         confirm the payment.
       </p>
@@ -131,8 +144,6 @@ export default async function PayUpiPage({
 
             <div
               className="mt-4 bg-white p-3 rounded-md w-full max-w-[280px] [&>svg]:w-full [&>svg]:h-auto"
-              // qrSvg is generated by `qrcode` from a fully-controlled string
-              // (UPI URL with encoded params) — no user input is interpolated.
               dangerouslySetInnerHTML={{ __html: qrSvg }}
             />
 
@@ -145,7 +156,7 @@ export default async function PayUpiPage({
             <div className="mt-3 text-sm">
               <div className="text-muted">Amount</div>
               <div className="text-2xl font-extrabold">
-                ₹{cfg.amountRupees}
+                ₹{amountRupees}
               </div>
             </div>
             <div className="mt-3 text-sm">
@@ -153,15 +164,32 @@ export default async function PayUpiPage({
               <div className="font-mono text-xs break-all">{note}</div>
             </div>
 
+            {/* Mobile: quick-launch UPI app buttons */}
+            <div className="mt-5 md:hidden">
+              <p className="text-xs font-semibold text-muted mb-2">Pay with</p>
+              <div className="flex gap-2">
+                <a href={upiUrl} className="flex-1 rounded-lg bg-[#5f259f] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">
+                  PhonePe
+                </a>
+                <a href={upiUrl} className="flex-1 rounded-lg bg-[#1a73e8] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">
+                  GPay
+                </a>
+                <a href={upiUrl} className="flex-1 rounded-lg bg-[#00b9f5] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">
+                  Paytm
+                </a>
+              </div>
+            </div>
+
+            {/* Desktop: single button */}
             <a
               href={upiUrl}
-              className="btn btn-primary mt-5 md:hidden"
+              className="btn btn-primary mt-5 md:hidden hidden"
             >
               Open in UPI app
             </a>
 
             <ol className="mt-5 text-xs text-muted list-decimal pl-4 space-y-1">
-              <li>Pay the <b>exact</b> amount — ₹{cfg.amountRupees}.</li>
+              <li>Pay the <b>exact</b> amount — ₹{amountRupees}.</li>
               <li>Wait for the <b>success</b> screen in your UPI app.</li>
               <li>Fill your name, phone &amp; email on the right and submit.</li>
             </ol>
@@ -171,11 +199,14 @@ export default async function PayUpiPage({
             <h2 className="font-bold text-lg">2 · Confirm your payment</h2>
             <UpiClaimForm
               plan={planKey}
-              amountRupees={cfg.amountRupees}
+              amountRupees={amountRupees}
               defaultPhone={me?.phone ?? ""}
               defaultExam={defaultExam}
               defaultSubject={subjectSlug}
               defaultSubjectLabel={defaultSubjectLabel}
+            isCombo={isCombo}
+            comboName={combo?.label}
+            comboLabels={comboEntitlementLabels(subjectSlug ?? "")}
             />
           </div>
         </div>
@@ -255,7 +286,7 @@ export default async function PayUpiPage({
           </div>
           <a
             href={whatsappLink(
-              `Hi! I need help with my ${cfg.label} (₹${cfg.amountRupees}) UPI payment.`,
+              `Hi! I need help with my ${displayLabel} (₹${amountRupees}) UPI payment.`,
             )}
             target="_blank"
             rel="noopener noreferrer"

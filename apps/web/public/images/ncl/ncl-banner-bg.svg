@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Sky gradient - deep navy to dusk gold -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="40%" stop-color="#0d2342"/>
+      <stop offset="70%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#2d4a6f"/>
+    </linearGradient>
+    <!-- Bench gradient -->
+    <linearGradient id="bench1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0f2847"/>
+    </linearGradient>
+    <linearGradient id="bench2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#162d4a"/>
+      <stop offset="100%" stop-color="#0a1f38"/>
+    </linearGradient>
+    <linearGradient id="bench3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2240"/>
+      <stop offset="100%" stop-color="#061528"/>
+    </linearGradient>
+    <!-- Fog overlay -->
+    <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#1a3a5c" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a1628" stop-opacity="0.8"/>
+    </linearGradient>
+    <!-- Vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#050d1a" stop-opacity="0.7"/>
+    </radialGradient>
+    <!-- Star glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+
+  <!-- Stars -->
+  <g fill="#e2e8f0" opacity="0.6" filter="url(#glow)">
+    <circle cx="120" cy="80" r="1.5"/>
+    <circle cx="340" cy="120" r="1"/>
+    <circle cx="580" cy="60" r="1.8"/>
+    <circle cx="820" cy="140" r="1.2"/>
+    <circle cx="1050" cy="50" r="1.5"/>
+    <circle cx="1280" cy="100" r="1"/>
+    <circle cx="1520" cy="70" r="1.8"/>
+    <circle cx="1750" cy="130" r="1.2"/>
+    <circle cx="200" cy="200" r="0.8"/>
+    <circle cx="450" cy="180" r="1.2"/>
+    <circle cx="700" cy="220" r="0.9"/>
+    <circle cx="950" cy="190" r="1.4"/>
+    <circle cx="1200" cy="160" r="1"/>
+    <circle cx="1450" cy="210" r="1.3"/>
+    <circle cx="1700" cy="180" r="0.8"/>
+  </g>
+
+  <!-- Distant mountains/hills -->
+  <path d="M0 450 Q200 380 400 420 Q600 360 800 400 Q1000 340 1200 380 Q1400 320 1600 370 Q1800 350 1920 380 L1920 500 L0 500 Z" fill="#0d1f38" opacity="0.6"/>
+
+  <!-- Bench 1 (furthest) -->
+  <path d="M0 520 H400 V460 H700 V400 H1000 V360 H1300 V380 H1600 V420 H1920 V520 Z" fill="url(#bench1)" opacity="0.8"/>
+  <path d="M0 520 H400 V460 H700 V400 H1000 V360 H1300 V380 H1600 V420 H1920" fill="none" stroke="#2d5a8a" stroke-width="1" opacity="0.4"/>
+
+  <!-- Bench 2 (middle) -->
+  <path d="M0 620 H300 V560 H550 V500 H800 V460 H1100 V440 H1400 V470 H1700 V520 H1920 V620 Z" fill="url(#bench2)" opacity="0.85"/>
+  <path d="M0 620 H300 V560 H550 V500 H800 V460 H1100 V440 H1400 V470 H1700 V520 H1920" fill="none" stroke="#1e4a7a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Bench 3 (closest) -->
+  <path d="M0 750 H200 V700 H450 V640 H700 V600 H950 V580 H1200 V570 H1500 V600 H1750 V650 H1920 V750 Z" fill="url(#bench3)" opacity="0.9"/>
+  <path d="M0 750 H200 V700 H450 V640 H700 V600 H950 V580 H1200 V570 H1500 V600 H1750 V650 H1920" fill="none" stroke="#153d6a" stroke-width="1" opacity="0.6"/>
+
+  <!-- Road/path on bench -->
+  <path d="M100 680 Q300 670 500 685 Q700 675 900 690 Q1100 680 1300 695 Q1500 685 1700 700" fill="none" stroke="#3a6a9a" stroke-width="3" opacity="0.3" stroke-dasharray="20 10"/>
+
+  <!-- Distant dumper truck silhouette -->
+  <g transform="translate(1400 550)" opacity="0.4">
+    <rect x="0" y="-25" width="60" height="25" rx="2" fill="#1a3a5c"/>
+    <rect x="-10" y="-20" width="15" height="20" rx="1" fill="#1a3a5c"/>
+    <circle cx="10" cy="5" r="8" fill="#0d2342" stroke="#2d5a8a" stroke-width="1"/>
+    <circle cx="45" cy="5" r="8" fill="#0d2342" stroke="#2d5a8a" stroke-width="1"/>
+  </g>
+
+  <!-- Distant dragline silhouette -->
+  <g transform="translate(500 420)" opacity="0.3">
+    <line x1="0" y1="80" x2="30" y2="0" stroke="#2d5a8a" stroke-width="2"/>
+    <line x1="60" y1="80" x2="30" y2="0" stroke="#2d5a8a" stroke-width="2"/>
+    <line x1="30" y1="0" x2="120" y2="20" stroke="#2d5a8a" stroke-width="1.5"/>
+    <line x1="120" y1="20" x2="120" y2="60" stroke="#2d5a8a" stroke-width="1"/>
+  </g>
+
+  <!-- Geometric grid overlay (subtle) -->
+  <g stroke="#3a7ac5" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="300" x2="1920" y2="300"/>
+    <line x1="0" y1="500" x2="1920" y2="500"/>
+    <line x1="0" y1="700" x2="1920" y2="700"/>
+    <line x1="400" y1="0" x2="400" y2="1080"/>
+    <line x1="800" y1="0" x2="800" y2="1080"/>
+    <line x1="1200" y1="0" x2="1200" y2="1080"/>
+    <line x1="1600" y1="0" x2="1600" y2="1080"/>
+  </g>
+
+  <!-- Fog layer -->
+  <rect width="1920" height="1080" fill="url(#fog)"/>
+
+  <!-- Atmospheric haze at bottom -->
+  <rect y="700" width="1920" height="380" fill="#0a1628" opacity="0.5"/>
+
+  <!-- Vignette -->
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+</svg>

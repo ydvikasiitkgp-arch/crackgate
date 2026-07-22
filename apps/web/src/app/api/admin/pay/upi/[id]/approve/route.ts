@@ -3,8 +3,9 @@ import { getAdminSession } from "@/lib/admin";
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 import { sendPaymentReceipt } from "@/lib/whatsapp";
-import { DEFAULT_EXAM, DEFAULT_SUBJECT } from "@/data/catalog";
+import { DEFAULT_EXAM, DEFAULT_SUBJECT, type ExamTrack } from "@/data/catalog";
 import { getPostHogClient } from "@/lib/posthog";
+import { getCombo, isComboSlug, comboLabel } from "@/lib/combos";
 
 export const runtime = "nodejs";
 
@@ -31,15 +32,83 @@ export async function POST(
   const expiry = new Date(now);
   expiry.setMonth(expiry.getMonth() + claim.periodMonths);
 
-  // Fall back to GATE/mining for legacy claims with no attribution.
-  const exam = claim.exam ?? DEFAULT_EXAM;
-  const subject = claim.subject ?? DEFAULT_SUBJECT;
-  // Only the live GATE Mining track drives the global User.plan.
-  const syncsGlobalPlan = exam === DEFAULT_EXAM && subject === DEFAULT_SUBJECT;
+  // Multi-item cart checkout: items JSON array is present
+  const cartItems = claim.items as unknown as { exam: string; subject: string; plan: string; pricePaise: number }[] | null;
+  const isCartCheckout = Array.isArray(cartItems) && cartItems.length > 0;
 
-  // Synthetic Payment row keeps the admin/payments view + revenue math unified
-  // with Razorpay captures. razorpayOrderId is namespaced "upi-<claim.id>" so
-  // it can never collide with a real Razorpay order id.
+  // Build entitlement operations — cart checkout creates N entitlements
+  let entitlementOps: any[];
+  let exams: string[] = [];
+  let subjects: string[] = [];
+
+  if (isCartCheckout) {
+    // Multi-item checkout — one entitlement per cart item
+    entitlementOps = cartItems!.map((item) => {
+      exams.push(item.exam);
+      subjects.push(item.subject);
+      return db.entitlement.upsert({
+        where: {
+          userId_exam_subject: { userId: claim.userId, exam: item.exam, subject: item.subject },
+        },
+        create: {
+          userId: claim.userId,
+          exam: item.exam,
+          subject: item.subject,
+          tier: item.plan as any,
+          source: "upi",
+          expiry,
+        },
+        update: { tier: item.plan as any, source: "upi", expiry },
+      });
+    });
+  } else {
+    // Single-item or combo — existing logic
+    const exam = claim.exam ?? DEFAULT_EXAM;
+    const subject = claim.subject ?? DEFAULT_SUBJECT;
+    exams = [exam];
+    subjects = [subject];
+
+    const isCombo = isComboSlug(subject);
+    const combo = getCombo(subject);
+
+    entitlementOps = combo
+      ? combo.entitlements.map((ent) =>
+          db.entitlement.upsert({
+            where: {
+              userId_exam_subject: { userId: claim.userId, exam: ent.exam, subject: ent.subject },
+            },
+            create: {
+              userId: claim.userId,
+              exam: ent.exam,
+              subject: ent.subject,
+              tier: claim.plan,
+              source: "upi",
+              expiry,
+            },
+            update: { tier: claim.plan, source: "upi", expiry },
+          })
+        )
+      : [
+          db.entitlement.upsert({
+            where: {
+              userId_exam_subject: { userId: claim.userId, exam, subject },
+            },
+            create: {
+              userId: claim.userId,
+              exam,
+              subject,
+              tier: claim.plan,
+              source: "upi",
+              expiry,
+            },
+            update: { tier: claim.plan, source: "upi", expiry },
+          }),
+        ];
+  }
+
+  // Only the live GATE Mining track drives the global User.plan.
+  const syncsGlobalPlan = !isCartCheckout && exams[0] === DEFAULT_EXAM && subjects[0] === DEFAULT_SUBJECT && !isComboSlug(subjects[0]);
+
   await db.$transaction([
     db.upiPayment.update({
       where: { id: claim.id },
@@ -57,20 +126,7 @@ export async function POST(
           }),
         ]
       : []),
-    db.entitlement.upsert({
-      where: {
-        userId_exam_subject: { userId: claim.userId, exam, subject },
-      },
-      create: {
-        userId: claim.userId,
-        exam,
-        subject,
-        tier: claim.plan,
-        source: "upi",
-        expiry,
-      },
-      update: { tier: claim.plan, source: "upi", expiry },
-    }),
+    ...entitlementOps,
     db.payment.create({
       data: {
         userId: claim.userId,
@@ -79,8 +135,8 @@ export async function POST(
         amount: claim.amountPaise,
         currency: "INR",
         plan: claim.plan,
-        exam,
-        subject,
+        exam: exams[0],
+        subject: subjects.join(","),
         periodMonths: claim.periodMonths,
         status: "captured",
         capturedAt: now,
@@ -90,8 +146,10 @@ export async function POST(
           payerPhone: claim.payerPhone,
           payerEmail: claim.payerEmail,
           upiApp: claim.upiApp,
-          exam,
-          subject,
+          exams,
+          subjects,
+          is_cart_checkout: isCartCheckout,
+          is_combo: !isCartCheckout && isComboSlug(subjects[0]),
           approvedBy: admin.email,
         },
       },
@@ -106,8 +164,9 @@ export async function POST(
           months: claim.periodMonths,
           amountPaise: claim.amountPaise,
           payerPhone: claim.payerPhone,
-          exam,
-          subject,
+          exams,
+          subjects,
+          is_cart_checkout: isCartCheckout,
           approvedBy: admin.email,
         },
       },
@@ -119,8 +178,10 @@ export async function POST(
     event: "upi_payment_approved",
     properties: {
       plan: claim.plan,
-      exam,
-      subject,
+      exams,
+      subjects,
+      is_cart_checkout: isCartCheckout,
+      item_count: isCartCheckout ? cartItems!.length : 1,
       amount_paise: claim.amountPaise,
       amount_rupees: Math.round(claim.amountPaise / 100),
       period_months: claim.periodMonths,

@@ -6,6 +6,7 @@ import { MegaNav } from "@/components/mega-nav";
 import { MobileSectionBar } from "@/components/mobile-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CommandPalette } from "@/components/command-palette";
+import { CartIcon } from "@/components/cart-icon";
 
 export async function SiteHeader() {
   const session = await auth();
@@ -21,6 +22,7 @@ export async function SiteHeader() {
 
         <div className="ml-auto flex items-center gap-2">
           <CommandPalette />
+          <CartIcon href="/cart" />
           <ThemeToggle />
           {u ? (
             <UserMenu

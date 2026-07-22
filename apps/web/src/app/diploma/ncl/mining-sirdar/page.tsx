@@ -4,6 +4,7 @@ import { NCL_SIRDAR_MOCKS, NCL_SIRDAR_PRICING } from "@/data/diploma/ncl-sirdar-
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ShareOnWhatsApp } from "@/components/share-on-whatsapp";
 import { NewsletterForm } from "@/components/newsletter-form";
+import { AddToCartBtn } from "@/components/add-to-cart-btn";
 import { auth } from "@/lib/auth";
 import { hasEntitlement } from "@/lib/entitlements";
 
@@ -144,12 +145,15 @@ export default async function NclMiningSirdarPage() {
                 <div className="text-right">
                   <span className="text-3xl font-extrabold">₹{NCL_SIRDAR_PRICING.pro}</span>
                 </div>
-                <Link
-                  href={payHref}
-                  className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/70 bg-blue-400/10 px-6 py-3 text-sm font-semibold text-blue-100 transition hover:bg-blue-400/20"
-                >
-                  Unlock now <span aria-hidden>→</span>
-                </Link>
+                <div className="flex items-center gap-2">
+                  <Link
+                    href={payHref}
+                    className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/70 bg-blue-400/10 px-6 py-3 text-sm font-semibold text-blue-100 transition hover:bg-blue-400/20"
+                  >
+                    Unlock now <span aria-hidden>→</span>
+                  </Link>
+                  <AddToCartBtn exam="DIPLOMA" subject="ncl-mining-sirdar" variant="light" size="md" />
+                </div>
                 <span className="text-[11px] text-white/50">Pay via UPI · access in a few hours</span>
               </div>
             </div>

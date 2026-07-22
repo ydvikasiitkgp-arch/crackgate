@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Underground gradient -->
+    <linearGradient id="ug" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1f14"/>
+      <stop offset="40%" stop-color="#0d2d1c"/>
+      <stop offset="100%" stop-color="#061510"/>
+    </linearGradient>
+    <!-- Headlamp beam -->
+    <radialGradient id="beam" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <!-- Fog -->
+    <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1f14" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#0d2d1c" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#061510" stop-opacity="0.6"/>
+    </linearGradient>
+    <!-- Vignette -->
+    <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#030a07" stop-opacity="0.8"/>
+    </radialGradient>
+    <!-- Dust particles filter -->
+    <filter id="dust">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="mono"/>
+      <feComponentTransfer in="mono" result="dots">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 1"/>
+      </feComponentTransfer>
+      <feComposite in="dots" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- Underground void -->
+  <rect width="1920" height="1080" fill="url(#ug)"/>
+
+  <!-- Rock walls - left side -->
+  <path d="M0 0 L180 0 L200 100 L160 200 L190 350 L150 500 L180 650 L140 800 L170 950 L150 1080 L0 1080 Z" fill="#0d2d1c" opacity="0.8"/>
+  <path d="M0 0 L120 0 L140 150 L100 300 L130 450 L90 600 L120 750 L80 900 L110 1080 L0 1080 Z" fill="#0a1f14" opacity="0.6"/>
+
+  <!-- Rock walls - right side -->
+  <path d="M1920 0 L1740 0 L1720 100 L1760 200 L1730 350 L1770 500 L1740 650 L1780 800 L1750 950 L1770 1080 L1920 1080 Z" fill="#0d2d1c" opacity="0.8"/>
+  <path d="M1920 0 L1800 0 L1780 150 L1820 300 L1790 450 L1830 600 L1800 750 L1840 900 L1810 1080 L1920 1080 Z" fill="#0a1f14" opacity="0.6"/>
+
+  <!-- Ceiling -->
+  <path d="M180 0 Q400 80 600 40 Q800 100 1000 60 Q1200 110 1400 50 Q1600 90 1740 0" fill="none" stroke="#1a4a30" stroke-width="3" opacity="0.4"/>
+  <path d="M180 0 Q400 80 600 40 Q800 100 1000 60 Q1200 110 1400 50 Q1600 90 1740 0 L1740 0 L180 0 Z" fill="#0d2d1c" opacity="0.5"/>
+
+  <!-- Floor -->
+  <path d="M180 1080 Q400 1000 600 1040 Q800 980 1000 1020 Q1200 970 1400 1030 Q1600 990 1740 1080 Z" fill="#061510" opacity="0.7"/>
+
+  <!-- Support pillars -->
+  <g fill="#1a4a30" opacity="0.5">
+    <rect x="350" y="200" width="60" height="700" rx="4"/>
+    <rect x="750" y="180" width="60" height="720" rx="4"/>
+    <rect x="1150" y="190" width="60" height="710" rx="4"/>
+    <rect x="1550" y="200" width="60" height="700" rx="4"/>
+  </g>
+
+  <!-- Conveyor belt -->
+  <g opacity="0.6">
+    <!-- Belt structure -->
+    <rect x="100" y="850" width="1720" height="8" rx="2" fill="#1a4a30"/>
+    <rect x="100" y="870" width="1720" height="4" rx="1" fill="#0d2d1c"/>
+    <!-- Rollers -->
+    <circle cx="200" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="400" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="600" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="800" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="1000" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="1200" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="1400" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="1600" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+    <circle cx="1800" cy="860" r="12" fill="#0d2d1c" stroke="#2d6b4a" stroke-width="2"/>
+  </g>
+
+  <!-- Ventilation duct (ceiling) -->
+  <g opacity="0.4">
+    <ellipse cx="960" cy="120" rx="120" ry="30" fill="none" stroke="#34d399" stroke-width="2"/>
+    <ellipse cx="960" cy="120" rx="100" ry="22" fill="none" stroke="#2d6b4a" stroke-width="1"/>
+    <!-- Fan blades -->
+    <g transform="translate(960 120)" stroke="#4ade80" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-18" x2="0" y2="18"/>
+      <line x1="-18" y1="0" x2="18" y2="0"/>
+      <line x1="-13" y1="-13" x2="13" y2="13"/>
+      <line x1="13" y1="-13" x2="-13" y2="13"/>
+    </g>
+  </g>
+
+  <!-- Headlamp beam (focal light) -->
+  <rect width="1920" height="1080" fill="url(#beam)"/>
+
+  <!-- Rails/track -->
+  <g stroke="#2d6b4a" stroke-width="3" opacity="0.4">
+    <line x1="300" y1="920" x2="300" y2="1080"/>
+    <line x1="380" y1="920" x2="380" y2="1080"/>
+    <line x1="1500" y1="920" x2="1500" y2="1080"/>
+    <line x1="1580" y1="920" x2="1580" y2="1080"/>
+  </g>
+
+  <!-- Dust particles -->
+  <g fill="#6ee7b7" opacity="0.3">
+    <circle cx="400" cy="300" r="1.5"/>
+    <circle cx="650" cy="450" r="1"/>
+    <circle cx="900" cy="250" r="1.8"/>
+    <circle cx="1150" cy="400" r="1.2"/>
+    <circle cx="1400" cy="350" r="1.5"/>
+    <circle cx="1650" cy="500" r="1"/>
+    <circle cx="500" cy="600" r="1.3"/>
+    <circle cx="800" cy="550" r="0.8"/>
+    <circle cx="1100" cy="650" r="1.4"/>
+    <circle cx="1450" cy="580" r="1.1"/>
+  </g>
+
+  <!-- Fog layer -->
+  <rect width="1920" height="1080" fill="url(#fog)"/>
+
+  <!-- Vignette -->
+  <rect width="1920" height="1080" fill="url(#vig)"/>
+</svg>
