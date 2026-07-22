@@ -6,6 +6,7 @@ import { whatsappLink } from "@/lib/contact";
 import { subjectPrice, subjectLabel } from "@/data/catalog";
 import { calculateComboDiscounts } from "@/lib/combos";
 import CheckoutForm from "./form";
+import { Shield, Clock, RotateCcw, MessageCircle, Package, Sparkles } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -31,7 +32,6 @@ export default async function CheckoutPage() {
     redirect("/login?next=/pay/checkout");
   }
 
-  // Fetch cart items
   let raw;
   try {
     raw = await db.cart.findMany({
@@ -47,7 +47,6 @@ export default async function CheckoutPage() {
     redirect("/pricing");
   }
 
-  // Enrich with prices and labels
   const items: CartItem[] = raw.map((r) => {
     const price = subjectPrice(r.exam, r.subject);
     return {
@@ -123,113 +122,187 @@ export default async function CheckoutPage() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-5 py-12">
-      <h1 className="text-3xl font-extrabold">Checkout — {items.length} item{items.length > 1 ? "s" : ""}</h1>
-      <p className="text-muted mt-2">
-        Single payment for all selected mocks. Manual verification — your access unlocks within a few hours.
-      </p>
+    <div className="max-w-4xl mx-auto px-5 py-10">
+      {/* Header */}
+      <div className="mb-8">
+        <h1 className="text-2xl font-extrabold text-ink">Checkout</h1>
+        <p className="text-sm text-muted mt-1">
+          Pay once, get access to all {items.length} mock{items.length > 1 ? "s" : ""}. Manual verification — unlocks within a few hours.
+        </p>
+      </div>
 
-      {/* Itemized summary */}
-      <div className="card p-5 mt-6">
-        <h2 className="font-bold text-sm text-muted uppercase tracking-wider">Order Summary</h2>
-        <div className="mt-3 divide-y divide-line">
-          {items.map((item) => (
-            <div key={item.id} className="flex items-center justify-between py-2.5 first:pt-0 last:pb-0">
-              <div className="min-w-0">
-                <p className="text-sm font-medium text-ink truncate">{item.label}</p>
-                <p className="text-xs text-muted capitalize">{item.exam} · {item.plan}</p>
+      <div className="grid lg:grid-cols-5 gap-8">
+        {/* Left: Payment — 3 cols */}
+        <div className="lg:col-span-3 space-y-6">
+          {/* UPI Payment */}
+          {vpa ? (
+            <>
+              {/* Step 1: Scan */}
+              <div className="card p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand/10 text-brand text-sm font-bold">1</div>
+                  <h2 className="font-bold text-ink">Scan & pay ₹{amountRupees}</h2>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <div className="flex flex-col items-center">
+                    <div
+                      className="bg-white p-3 rounded-xl w-full max-w-[220px] [&>svg]:w-full [&>svg]:h-auto shadow-sm"
+                      dangerouslySetInnerHTML={{ __html: qrSvg }}
+                    />
+                    <p className="text-[11px] text-muted mt-2">Scan with any UPI app</p>
+                  </div>
+
+                  <div className="flex-1 space-y-3">
+                    <div>
+                      <p className="text-[11px] text-muted font-medium uppercase tracking-wider">UPI ID</p>
+                      <p className="font-mono text-sm font-semibold select-all mt-0.5">{vpa}</p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] text-muted font-medium uppercase tracking-wider">Amount</p>
+                      <p className="text-2xl font-extrabold text-ink tabular-nums">₹{amountRupees}</p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] text-muted font-medium uppercase tracking-wider">Note</p>
+                      <p className="font-mono text-xs text-muted break-all mt-0.5">{note}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile UPI buttons */}
+                <div className="mt-5 sm:hidden">
+                  <p className="text-xs font-semibold text-muted mb-2">Pay with</p>
+                  <div className="flex gap-2">
+                    <a href={upiUrl} className="flex-1 rounded-lg bg-[#5f259f] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">PhonePe</a>
+                    <a href={upiUrl} className="flex-1 rounded-lg bg-[#1a73e8] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">GPay</a>
+                    <a href={upiUrl} className="flex-1 rounded-lg bg-[#00b9f5] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">Paytm</a>
+                  </div>
+                </div>
+
+                <ol className="mt-5 text-xs text-muted list-decimal pl-4 space-y-1.5">
+                  <li>Open your UPI app and scan the QR code (or copy the UPI ID).</li>
+                  <li>Pay the <b>exact</b> amount — ₹{amountRupees}.</li>
+                  <li>Wait for the <b>success</b> screen in your UPI app.</li>
+                  <li>Fill in your details on the right and submit.</li>
+                </ol>
               </div>
-              <span className="text-sm font-semibold text-ink tabular-nums shrink-0 ml-3">
-                ₹{Math.round(item.pricePaise / 100)}
-              </span>
-            </div>
-          ))}
-        </div>
 
-        {comboDiscounts.length > 0 && (
-          <div className="mt-3 pt-3 border-t border-line">
-            <div className="flex items-center justify-between text-sm text-ok font-semibold">
-              <span>{comboDiscounts[0].label}</span>
-              <span>-₹{Math.round(comboSavingsPaise / 100)}</span>
+              {/* Step 2: Confirm */}
+              <div className="card p-6">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand/10 text-brand text-sm font-bold">2</div>
+                  <h2 className="font-bold text-ink">Confirm your payment</h2>
+                </div>
+                <CheckoutForm
+                  items={items}
+                  amountRupees={amountRupees}
+                  rawTotalPaise={rawTotalPaise}
+                  comboSavingsPaise={comboSavingsPaise}
+                  comboDiscounts={comboDiscounts}
+                  defaultPhone={me?.phone ?? ""}
+                  defaultName={me?.name ?? ""}
+                  defaultEmail={me?.email ?? ""}
+                />
+              </div>
+            </>
+          ) : (
+            <div className="card p-5 border-warn text-warn-foreground">
+              UPI is not configured. Ask the admin to set <code>NEXT_PUBLIC_UPI_VPA</code>.
             </div>
-          </div>
-        )}
-
-        <div className="mt-3 pt-3 border-t border-line flex items-center justify-between">
-          {comboSavingsPaise > 0 && (
-            <span className="text-sm font-semibold text-muted">
-              <span className="line-through">₹{Math.round(rawTotalPaise / 100)}</span>
-            </span>
           )}
-          {comboSavingsPaise > 0 && <span className="text-sm text-ok font-medium">You save ₹{Math.round(comboSavingsPaise / 100)}</span>}
         </div>
-        <div className="mt-1 flex items-center justify-between">
-          <span className="text-sm font-semibold text-muted">Total</span>
-          <span className="text-xl font-extrabold text-ink">₹{amountRupees}</span>
+
+        {/* Right: Order Summary — 2 cols */}
+        <div className="lg:col-span-2">
+          <div className="sticky top-24 space-y-4">
+            {/* Items */}
+            <div className="card p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <Package className="w-4 h-4 text-muted" />
+                <h2 className="font-bold text-sm text-ink">Order Summary</h2>
+                <span className="ml-auto text-xs text-muted">{items.length} item{items.length > 1 ? "s" : ""}</span>
+              </div>
+
+              <div className="divide-y divide-line">
+                {items.map((item) => (
+                  <div key={item.id} className="flex items-center justify-between py-2.5 first:pt-0 last:pb-0">
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-ink truncate">{item.label}</p>
+                      <p className="text-[11px] text-muted capitalize">{item.exam} · {item.plan}</p>
+                    </div>
+                    <span className="text-sm font-semibold text-ink tabular-nums shrink-0 ml-3">
+                      ₹{Math.round(item.pricePaise / 100)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Discounts */}
+              {comboSavingsPaise > 0 && (
+                <div className="mt-3 pt-3 border-t border-line">
+                  <div className="flex items-center gap-2 text-sm text-ok font-semibold">
+                    <Sparkles className="w-4 h-4 shrink-0" />
+                    <span>{comboDiscounts[0]?.label ?? "Combo Discount"}</span>
+                  </div>
+                  <p className="text-xs text-ok/80 mt-1 ml-6">
+                    You save ₹{Math.round(comboSavingsPaise / 100)}
+                  </p>
+                </div>
+              )}
+
+              {/* Total */}
+              <div className="mt-3 pt-3 border-t border-line space-y-1">
+                {comboSavingsPaise > 0 && (
+                  <div className="flex items-center justify-between text-sm text-muted">
+                    <span>Subtotal</span>
+                    <span className="line-through tabular-nums">₹{Math.round(rawTotalPaise / 100)}</span>
+                  </div>
+                )}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-ink">Total</span>
+                  <span className="text-xl font-extrabold text-ink tabular-nums">₹{amountRupees}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust signals */}
+            <div className="card p-4">
+              <div className="grid grid-cols-1 gap-3">
+                <div className="flex items-center gap-3 text-xs text-muted">
+                  <Clock className="w-4 h-4 text-brand shrink-0" />
+                  <span>Access unlocks within a few hours of payment</span>
+                </div>
+                <div className="flex items-center gap-3 text-xs text-muted">
+                  <Shield className="w-4 h-4 text-brand shrink-0" />
+                  <span>You pay directly via UPI — we never see your bank details</span>
+                </div>
+                <div className="flex items-center gap-3 text-xs text-muted">
+                  <RotateCcw className="w-4 h-4 text-brand shrink-0" />
+                  <span>Covered by our <a href="/refund" className="text-brand hover:underline">refund policy</a></span>
+                </div>
+              </div>
+            </div>
+
+            {/* WhatsApp help */}
+            <a
+              href={whatsappLink(`Hi! I need help with my cart checkout (₹${amountRupees}) UPI payment.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card p-4 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer"
+            >
+              <MessageCircle className="w-5 h-5 text-brand shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-ink">Need help?</p>
+                <p className="text-xs text-muted">Chat with us on WhatsApp</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
-      {!vpa && (
-        <div className="card p-5 mt-6 border-warn text-warn-foreground">
-          UPI is not configured. Ask the admin to set <code>NEXT_PUBLIC_UPI_VPA</code>.
-        </div>
-      )}
-
-      {vpa && (
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
-          <div className="card p-6">
-            <h2 className="font-bold text-lg">1 · Scan & pay</h2>
-
-            <div
-              className="mt-4 bg-white p-3 rounded-md w-full max-w-[280px] [&>svg]:w-full [&>svg]:h-auto"
-              dangerouslySetInnerHTML={{ __html: qrSvg }}
-            />
-
-            <div className="mt-4 text-sm">
-              <div className="text-muted">UPI ID</div>
-              <div className="font-mono text-base font-semibold select-all">{vpa}</div>
-            </div>
-            <div className="mt-3 text-sm">
-              <div className="text-muted">Amount</div>
-              <div className="text-2xl font-extrabold">₹{amountRupees}</div>
-            </div>
-            <div className="mt-3 text-sm">
-              <div className="text-muted">Note (auto-filled)</div>
-              <div className="font-mono text-xs break-all">{note}</div>
-            </div>
-
-            {/* Mobile UPI buttons */}
-            <div className="mt-5 md:hidden">
-              <p className="text-xs font-semibold text-muted mb-2">Pay with</p>
-              <div className="flex gap-2">
-                <a href={upiUrl} className="flex-1 rounded-lg bg-[#5f259f] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">PhonePe</a>
-                <a href={upiUrl} className="flex-1 rounded-lg bg-[#1a73e8] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">GPay</a>
-                <a href={upiUrl} className="flex-1 rounded-lg bg-[#00b9f5] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">Paytm</a>
-              </div>
-            </div>
-
-            <ol className="mt-5 text-xs text-muted list-decimal pl-4 space-y-1">
-              <li>Pay the <b>exact</b> amount — ₹{amountRupees}.</li>
-              <li>Wait for the <b>success</b> screen in your UPI app.</li>
-              <li>Fill your name, phone &amp; email on the right and submit.</li>
-            </ol>
-          </div>
-
-          <div className="card p-6">
-            <h2 className="font-bold text-lg">2 · Confirm your payment</h2>
-            <CheckoutForm
-              items={items}
-              amountRupees={amountRupees}
-              defaultPhone={me?.phone ?? ""}
-              defaultName={me?.name ?? ""}
-              defaultEmail={me?.email ?? ""}
-            />
-          </div>
-        </div>
-      )}
-
+      {/* Recent claims */}
       {myClaims.length > 0 && (
-        <div className="card p-6 mt-8">
+        <div className="card p-6 mt-10">
           <h2 className="font-bold text-lg">Your recent claims</h2>
           <div className="mt-3 overflow-x-auto">
             <table className="w-full text-sm">
@@ -259,31 +332,6 @@ export default async function CheckoutPage() {
           </div>
         </div>
       )}
-
-      <div className="mt-8 grid sm:grid-cols-2 gap-4">
-        <div className="card p-5">
-          <h3 className="font-bold">Why this is safe</h3>
-          <ul className="mt-3 space-y-2 text-sm text-muted">
-            <li className="flex gap-2"><span aria-hidden>⏱️</span><span>Access unlocked within a few hours of payment.</span></li>
-            <li className="flex gap-2"><span aria-hidden>🔒</span><span>You pay directly through your own UPI app. We never see or store your bank details.</span></li>
-            <li className="flex gap-2"><span aria-hidden>↩️</span><span>Covered by our <a href="/refund" className="text-brand hover:underline">refund policy</a>.</span></li>
-          </ul>
-        </div>
-        <div className="card p-5 flex flex-col justify-between">
-          <div>
-            <h3 className="font-bold">Need help?</h3>
-            <p className="mt-2 text-sm text-muted">Payment stuck or access not unlocked? Message us on WhatsApp.</p>
-          </div>
-          <a
-            href={whatsappLink(`Hi! I need help with my cart checkout (₹${amountRupees}) UPI payment.`)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary mt-4 w-full"
-          >
-            💬 Chat with us on WhatsApp
-          </a>
-        </div>
-      </div>
     </div>
   );
 }

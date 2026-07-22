@@ -168,6 +168,7 @@ model UpiPayment {
   upiTxnRef     String?                          // legacy UPI reference (no longer collected)
   upiApp        String?                          // PhonePe | GPay | Paytm | BHIM | Other
   payerNote     String?                          // optional message from user
+  promoCode    String?                          // promo code applied at checkout
   status        UpiClaimStatus  @default(pending)
   adminNote     String?                          // reason if rejected
   reviewedById  String?
@@ -299,5 +300,21 @@ model OtpCode {
   @@index([phone, createdAt(sort: Desc)])
   @@index([ip, createdAt(sort: Desc)])
   @@index([expiresAt])
+}
+
+model PromoCode {
+  id        String    @id @default(cuid())
+  code      String    @unique                          // e.g. "FIRST10", "STUDENT50"
+  type      String                                     // "percent" | "flat"
+  value     Int                                        // percent: 10 = 10% off; flat: 5000 = ₹50 off (paise)
+  maxUses   Int?                                       // null = unlimited
+  usedCount Int       @default(0)
+  expiresAt DateTime?
+  active    Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([code])
+  @@index([active])
 }
 
