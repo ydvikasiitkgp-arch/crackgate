@@ -23,6 +23,8 @@ const Body = z.object({
   payerEmail: z.string().trim().email("Enter a valid email").max(120),
   upiApp: z.enum(["PhonePe", "GPay", "Paytm", "BHIM", "Other"]).optional(),
   payerNote: z.string().trim().max(280).optional(),
+  promoCode: z.string().trim().max(30).optional(),
+  promoDiscountPaise: z.number().int().nonnegative().optional(),
 });
 
 export async function POST(req: Request) {
@@ -76,7 +78,26 @@ export async function POST(req: Request) {
   // Calculate combo discounts
   const comboDiscounts = calculateComboDiscounts(validatedItems);
   const comboSavingsPaise = comboDiscounts.reduce((sum, d) => sum + d.savingsPaise, 0);
-  const finalTotalPaise = rawTotalPaise - comboSavingsPaise;
+  let finalTotalPaise = rawTotalPaise - comboSavingsPaise;
+
+  // Validate and apply promo code (server-side re-validation)
+  let promoDiscountPaise = 0;
+  let appliedPromoCode: string | null = null;
+  if (body.promoCode) {
+    const promo = await db.promoCode.findUnique({ where: { code: body.promoCode.toUpperCase() } });
+    if (promo && promo.active && (!promo.expiresAt || promo.expiresAt > new Date()) && (promo.maxUses == null || promo.usedCount < promo.maxUses)) {
+      if (promo.type === "percent") {
+        promoDiscountPaise = Math.round(finalTotalPaise * (promo.value / 100));
+      } else {
+        promoDiscountPaise = promo.value;
+      }
+      promoDiscountPaise = Math.min(promoDiscountPaise, finalTotalPaise);
+      appliedPromoCode = promo.code;
+      // Increment usage
+      await db.promoCode.update({ where: { id: promo.id }, data: { usedCount: { increment: 1 } } });
+    }
+  }
+  finalTotalPaise -= promoDiscountPaise;
 
   // Create the multi-item UpiPayment
   const payment = await db.upiPayment.create({
@@ -92,6 +113,7 @@ export async function POST(req: Request) {
       payerEmail: body.payerEmail,
       upiApp: body.upiApp,
       payerNote: body.payerNote,
+      promoCode: appliedPromoCode,
     },
   });
 
@@ -107,6 +129,8 @@ export async function POST(req: Request) {
           item_count: validatedItems.length,
           raw_total_paise: rawTotalPaise,
           combo_savings_paise: comboSavingsPaise,
+          promo_discount_paise: promoDiscountPaise,
+          promo_code: appliedPromoCode,
           final_total_paise: finalTotalPaise,
           combo_discount: comboDiscounts.length > 0,
           exams: [...new Set(validatedItems.map((i) => i.exam))],

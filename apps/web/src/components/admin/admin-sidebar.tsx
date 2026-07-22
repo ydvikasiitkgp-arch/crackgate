@@ -10,6 +10,7 @@ import {
   CreditCard,
   HelpCircle,
   BarChart3,
+  Tag,
   ChevronLeft,
   Menu,
   LogOut,
@@ -22,6 +23,7 @@ const NAV_ITEMS = [
   { href: "/admin/reports", label: "Reports", icon: FileText, badge: true },
   { href: "/admin/newsletter", label: "Newsletter", icon: Send },
   { href: "/admin/upi", label: "Payments", icon: CreditCard, badge: true },
+  { href: "/admin/promos", label: "Promo Codes", icon: Tag },
   { href: "/admin/questions", label: "Questions", icon: HelpCircle },
 ];
 
