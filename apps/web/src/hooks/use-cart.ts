@@ -174,13 +174,8 @@ async function mergeLocalToServer() {
   if (allOk) lsClear();
 }
 
-// ── init: runs once on client ───────────────────────────────────────
-let initialized = false;
+// ── init: runs on each component mount ──────────────────────────────
 function initCart() {
-  if (initialized) return;
-  initialized = true;
-
-  // Try server cart first
   fetchServerCart().then((loggedIn) => {
     if (loggedIn) {
       // Merge any leftover guest cart
