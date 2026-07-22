@@ -148,6 +148,7 @@ async function fetchServerCart(): Promise<boolean> {
       });
       return true;
     }
+    console.error("[cart:fetch] server returned", res.status, await res.text().catch(() => ""));
   } catch { /* ignore */ }
   return false;
 }
