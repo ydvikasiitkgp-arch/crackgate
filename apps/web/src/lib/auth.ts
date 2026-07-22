@@ -143,33 +143,39 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        // First-time creation: fetch plan/role from DB. Subsequent refreshes
-        // reuse cached token data — no DB hit on every request.
         token.uid = (user as { id: string }).id;
-        const full = await db.user.findUnique({
-          where: { id: token.uid as string },
-          select: { plan: true, role: true, picture: true, name: true, email: true },
-        });
-        if (full) {
-          token.plan  = full.plan;
-          token.role  = full.role;
-          token.name  = full.name;
-          token.email = full.email;
-          if (full.picture) token.picture = full.picture;
+        try {
+          const full = await db.user.findUnique({
+            where: { id: token.uid as string },
+            select: { plan: true, role: true, picture: true, name: true, email: true },
+          });
+          if (full) {
+            token.plan  = full.plan;
+            token.role  = full.role;
+            token.name  = full.name;
+            token.email = full.email;
+            if (full.picture) token.picture = full.picture;
+          }
+        } catch (e) {
+          console.error("[auth] jwt user lookup failed (continuing with cached token):", e);
         }
       }
-      // ponytail: revalidate plan/role from DB every 5 minutes to catch
-      // admin grants and plan changes without requiring re-login.
+      // Revalidate plan/role from DB every 5 minutes to catch admin grants
+      // and plan changes without requiring re-login.
       const lastCheck = (token as Record<string, unknown>).lastRoleCheck as number | undefined;
       const now = Date.now();
       if (!lastCheck || now - lastCheck > 5 * 60_000) {
-        const full = await db.user.findUnique({
-          where: { id: token.uid as string },
-          select: { plan: true, role: true },
-        });
-        if (full) {
-          token.plan = full.plan;
-          token.role = full.role;
+        try {
+          const full = await db.user.findUnique({
+            where: { id: token.uid as string },
+            select: { plan: true, role: true },
+          });
+          if (full) {
+            token.plan = full.plan;
+            token.role = full.role;
+          }
+        } catch (e) {
+          console.error("[auth] jwt role refresh failed (keeping cached values):", e);
         }
         (token as Record<string, unknown>).lastRoleCheck = now;
       }

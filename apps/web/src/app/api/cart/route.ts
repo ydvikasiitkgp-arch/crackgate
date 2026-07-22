@@ -9,15 +9,27 @@ export const runtime = "nodejs";
 
 // GET — list cart items with computed prices + combo discounts
 export async function GET() {
-  const session = await auth();
+  let session;
+  try {
+    session = await auth();
+  } catch (e) {
+    console.error("[cart] auth() failed in GET:", e);
+    return NextResponse.json({ error: "auth_failed" }, { status: 500 });
+  }
   if (!session?.user?.id) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const items = await db.cart.findMany({
-    where: { userId: session.user.id },
-    orderBy: { createdAt: "asc" },
-  });
+  let items;
+  try {
+    items = await db.cart.findMany({
+      where: { userId: session.user.id },
+      orderBy: { createdAt: "asc" },
+    });
+  } catch (e) {
+    console.error("[cart] db.cart.findMany failed in GET:", e);
+    return NextResponse.json({ error: "db_error" }, { status: 500 });
+  }
 
   const enriched = items.map((item) => {
     const price = subjectPrice(item.exam, item.subject);
@@ -53,7 +65,13 @@ const AddBody = z.object({
 
 // POST — add item to cart
 export async function POST(req: Request) {
-  const session = await auth();
+  let session;
+  try {
+    session = await auth();
+  } catch (e) {
+    console.error("[cart] auth() failed in POST:", e);
+    return NextResponse.json({ error: "auth_failed" }, { status: 500 });
+  }
   if (!session?.user?.id) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
@@ -69,23 +87,28 @@ export async function POST(req: Request) {
     );
   }
 
-  // Upsert — if already in cart, update plan
-  const item = await db.cart.upsert({
-    where: {
-      userId_exam_subject: {
+  let item;
+  try {
+    item = await db.cart.upsert({
+      where: {
+        userId_exam_subject: {
+          userId: session.user.id,
+          exam: body.exam,
+          subject: body.subject,
+        },
+      },
+      create: {
         userId: session.user.id,
         exam: body.exam,
         subject: body.subject,
+        plan: body.plan,
       },
-    },
-    create: {
-      userId: session.user.id,
-      exam: body.exam,
-      subject: body.subject,
-      plan: body.plan,
-    },
-    update: { plan: body.plan },
-  });
+      update: { plan: body.plan },
+    });
+  } catch (e) {
+    console.error("[cart] db.cart.upsert failed in POST:", e);
+    return NextResponse.json({ error: "db_error" }, { status: 500 });
+  }
 
   return NextResponse.json({ item });
 }
