@@ -15,18 +15,17 @@ function formatPrice(paise: number) {
 export default function CartPage() {
   const { items, rawTotalPaise, totalPaise, count, loading, removeItem, clearCart, syncToServer, refetch, comboDiscounts, comboSavingsPaise, loggedIn } = useCart();
   const [tab, setTab] = useState<"cart" | "browse">("browse");
-  const [syncing, setSyncing] = useState(false);
   const router = useRouter();
 
-  async function handleCheckout() {
+  function handleCheckout() {
     if (!loggedIn) {
       router.push("/login?next=/cart");
       return;
     }
-    setSyncing(true);
-    const ok = await syncToServer();
-    setSyncing(false);
-    if (ok) router.push("/pay/checkout");
+    // Don't block navigation on sync — server component validates cart + auth.
+    // Items from addItem() already hit the server; this is a safety net.
+    syncToServer();
+    router.push("/pay/checkout");
   }
 
   const liveExams = CATALOG.map((exam) => ({
@@ -75,7 +74,6 @@ export default function CartPage() {
               rawTotalPaise={rawTotalPaise}
               totalPaise={totalPaise}
               onCheckout={handleCheckout}
-              syncing={syncing}
             />
           )}
         </div>
@@ -128,10 +126,9 @@ export default function CartPage() {
                   </div>
                   <button
                     onClick={handleCheckout}
-                    disabled={syncing}
                     className="btn btn-primary w-full justify-center"
                   >
-                    {syncing ? "Syncing…" : <>Checkout <ArrowRight className="w-4 h-4 ml-1" /></>}
+                    Checkout <ArrowRight className="w-4 h-4 ml-1" />
                   </button>
                 </>
               )}
@@ -193,7 +190,6 @@ function CartContents({
   rawTotalPaise,
   totalPaise,
   onCheckout,
-  syncing,
 }: {
   items: { id: string; exam: string; subject: string; label: string; plan: string; pricePaise: number }[];
   loading: boolean;
@@ -204,8 +200,7 @@ function CartContents({
   comboSavingsPaise: number;
   rawTotalPaise: number;
   totalPaise: number;
-  onCheckout: () => Promise<void>;
-  syncing: boolean;
+  onCheckout: () => void;
 }) {
   const [clearing, setClearing] = useState(false);
 
@@ -308,10 +303,9 @@ function CartContents({
       </div>
       <button
         onClick={onCheckout}
-        disabled={syncing}
         className="btn btn-primary w-full justify-center mt-4"
       >
-        {syncing ? "Syncing…" : <>Proceed to Checkout <ArrowRight className="w-4 h-4 ml-1" /></>}
+        Proceed to Checkout <ArrowRight className="w-4 h-4 ml-1" />
       </button>
     </div>
   );
