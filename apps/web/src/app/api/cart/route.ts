@@ -14,7 +14,7 @@ export async function GET() {
     session = await auth();
   } catch (e) {
     console.error("[cart] auth() failed in GET:", e);
-    return NextResponse.json({ error: "auth_failed" }, { status: 500 });
+    return NextResponse.json({ error: "auth_failed", detail: String(e instanceof Error ? e.message : e) }, { status: 500 });
   }
   if (!session?.user?.id) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
@@ -28,33 +28,39 @@ export async function GET() {
     });
   } catch (e) {
     console.error("[cart] db.cart.findMany failed in GET:", e);
-    return NextResponse.json({ error: "db_error" }, { status: 500 });
+    return NextResponse.json({ error: "db_error", detail: String(e instanceof Error ? e.message : e) }, { status: 500 });
   }
 
-  const enriched = items.map((item) => {
-    const price = subjectPrice(item.exam, item.subject);
-    const sub = getSubject(item.exam, item.subject);
-    return {
-      ...item,
-      label: sub?.label ?? item.subject,
-      examLabel: sub ? getSubject(item.exam, item.subject)?.label?.split("·")[0]?.trim() : item.exam,
-      pricePaise: item.plan === "premium" ? price.premiumPaise : price.proPaise,
-    };
-  });
+  let enriched;
+  try {
+    enriched = items.map((item) => {
+      const price = subjectPrice(item.exam, item.subject);
+      const sub = getSubject(item.exam, item.subject);
+      return {
+        ...item,
+        label: sub?.label ?? item.subject,
+        examLabel: sub ? getSubject(item.exam, item.subject)?.label?.split("·")[0]?.trim() : item.exam,
+        pricePaise: item.plan === "premium" ? price.premiumPaise : price.proPaise,
+      };
+    });
 
-  const rawTotalPaise = enriched.reduce((sum, i) => sum + i.pricePaise, 0);
-  const comboDiscounts = calculateComboDiscounts(enriched);
-  const comboSavingsPaise = comboDiscounts.reduce((sum, d) => sum + d.savingsPaise, 0);
-  const totalPaise = rawTotalPaise - comboSavingsPaise;
+    const rawTotalPaise = enriched.reduce((sum, i) => sum + i.pricePaise, 0);
+    const comboDiscounts = calculateComboDiscounts(enriched);
+    const comboSavingsPaise = comboDiscounts.reduce((sum, d) => sum + d.savingsPaise, 0);
+    const totalPaise = rawTotalPaise - comboSavingsPaise;
 
-  return NextResponse.json({
-    items: enriched,
-    rawTotalPaise,
-    totalPaise,
-    count: enriched.length,
-    comboDiscounts,
-    comboSavingsPaise,
-  });
+    return NextResponse.json({
+      items: enriched,
+      rawTotalPaise,
+      totalPaise,
+      count: enriched.length,
+      comboDiscounts,
+      comboSavingsPaise,
+    });
+  } catch (e) {
+    console.error("[cart] enrichment failed in GET:", e);
+    return NextResponse.json({ error: "enrichment_error", detail: String(e instanceof Error ? e.message : e) }, { status: 500 });
+  }
 }
 
 const AddBody = z.object({
@@ -70,13 +76,18 @@ export async function POST(req: Request) {
     session = await auth();
   } catch (e) {
     console.error("[cart] auth() failed in POST:", e);
-    return NextResponse.json({ error: "auth_failed" }, { status: 500 });
+    return NextResponse.json({ error: "auth_failed", detail: String(e instanceof Error ? e.message : e) }, { status: 500 });
   }
   if (!session?.user?.id) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const body = AddBody.parse(await req.json());
+  let body;
+  try {
+    body = AddBody.parse(await req.json());
+  } catch (e) {
+    return NextResponse.json({ error: "invalid_body", detail: String(e instanceof Error ? e.message : e) }, { status: 400 });
+  }
 
   // Validate against catalog
   const sub = getSubject(body.exam, body.subject);
@@ -107,7 +118,7 @@ export async function POST(req: Request) {
     });
   } catch (e) {
     console.error("[cart] db.cart.upsert failed in POST:", e);
-    return NextResponse.json({ error: "db_error" }, { status: 500 });
+    return NextResponse.json({ error: "db_error", detail: String(e instanceof Error ? e.message : e) }, { status: 500 });
   }
 
   return NextResponse.json({ item });
@@ -121,23 +132,40 @@ const UpdateBody = z.object({
 
 // PUT — update plan for an existing cart item
 export async function PUT(req: Request) {
-  const session = await auth();
+  let session;
+  try {
+    session = await auth();
+  } catch (e) {
+    console.error("[cart] auth() failed in PUT:", e);
+    return NextResponse.json({ error: "auth_failed", detail: String(e instanceof Error ? e.message : e) }, { status: 500 });
+  }
   if (!session?.user?.id) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const body = UpdateBody.parse(await req.json());
+  let body;
+  try {
+    body = UpdateBody.parse(await req.json());
+  } catch (e) {
+    return NextResponse.json({ error: "invalid_body", detail: String(e instanceof Error ? e.message : e) }, { status: 400 });
+  }
 
-  const item = await db.cart.update({
-    where: {
-      userId_exam_subject: {
-        userId: session.user.id,
-        exam: body.exam,
-        subject: body.subject,
+  let item;
+  try {
+    item = await db.cart.update({
+      where: {
+        userId_exam_subject: {
+          userId: session.user.id,
+          exam: body.exam,
+          subject: body.subject,
+        },
       },
-    },
-    data: { plan: body.plan },
-  });
+      data: { plan: body.plan },
+    });
+  } catch (e) {
+    console.error("[cart] db.cart.update failed in PUT:", e);
+    return NextResponse.json({ error: "db_error", detail: String(e instanceof Error ? e.message : e) }, { status: 500 });
+  }
 
   return NextResponse.json({ item });
 }

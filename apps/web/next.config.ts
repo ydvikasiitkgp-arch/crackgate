@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https://lh3.googleusercontent.com https://ui-avatars.com https://*.razorpay.com",
       "font-src 'self' data:",
-      "connect-src 'self' https://*.razorpay.com",
+      "connect-src 'self' https://*.razorpay.com https://*.posthog.com",
       "frame-src https://checkout.razorpay.com https://api.razorpay.com",
       "object-src 'none'",
       "base-uri 'self'",
