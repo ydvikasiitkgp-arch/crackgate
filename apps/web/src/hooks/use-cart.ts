@@ -156,6 +156,7 @@ async function fetchServerCart(): Promise<boolean> {
 async function mergeLocalToServer() {
   const lsItems = lsRead();
   if (lsItems.length === 0) return;
+  console.log("[cart:merge] starting —", lsItems.length, "items to sync");
   let allOk = true;
   for (const item of lsItems) {
     try {
@@ -165,13 +166,14 @@ async function mergeLocalToServer() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(item),
       });
-      if (!res.ok) { allOk = false; console.error("[cart] merge POST failed:", item.subject, res.status); }
+      if (!res.ok) { allOk = false; console.error("[cart:merge] POST failed:", item.subject, res.status, await res.text().catch(() => "")); }
     } catch (e) {
       allOk = false;
-      console.error("[cart] merge POST error:", item.subject, e);
+      console.error("[cart:merge] POST error:", item.subject, e);
     }
   }
   if (allOk) lsClear();
+  console.log("[cart:merge] done — allOk:", allOk);
 }
 
 // ── init: runs on each component mount ──────────────────────────────
@@ -212,7 +214,7 @@ export function useCart() {
           await fetchServerCart();
           return { ok: true as const };
         }
-        console.error("[cart] addItem failed:", res.status, await res.text());
+        console.error("[cart:addItem] server POST failed:", res.status, await res.text().catch(() => ""));
         // Server failed but local state is updated — still usable
       }
 
@@ -258,8 +260,10 @@ export function useCart() {
   }, [snap.loggedIn]);
 
   const syncToServer = useCallback(async () => {
+    console.log("[cart:sync] called — loggedIn:", snap.loggedIn);
     if (!snap.loggedIn) return false;
     const lsItems = lsRead();
+    console.log("[cart:sync] localStorage items:", lsItems.length);
     if (lsItems.length === 0) return true;
     let allOk = true;
     for (const item of lsItems) {
@@ -270,14 +274,15 @@ export function useCart() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(item),
         });
-        if (!res.ok) { allOk = false; console.error("[cart] sync POST failed:", item.subject, res.status); }
+        if (!res.ok) { allOk = false; console.error("[cart:sync] POST failed:", item.subject, res.status, await res.text().catch(() => "")); }
       } catch (e) {
         allOk = false;
-        console.error("[cart] sync POST error:", item.subject, e);
+        console.error("[cart:sync] POST error:", item.subject, e);
       }
     }
     if (allOk) lsClear();
     await fetchServerCart();
+    console.log("[cart:sync] done — allOk:", allOk);
     return allOk;
   }, [snap.loggedIn]);
 
