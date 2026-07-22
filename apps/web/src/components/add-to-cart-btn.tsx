@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { ShoppingCart, Check, AlertCircle } from "lucide-react";
 import { useCart } from "@/hooks/use-cart";
 
@@ -24,7 +23,6 @@ export function AddToCartBtn({
   className?: string;
 }) {
   const { addItem, items } = useCart();
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const inCart = items.some((i) => i.exam === exam && i.subject === subject);
@@ -38,8 +36,6 @@ export function AddToCartBtn({
     const res = await addItem(exam, subject, "pro");
     if (res.ok) {
       setLoading(false);
-    } else if (res.status === 401) {
-      router.push("/login");
     } else {
       setError("Failed to add");
       setLoading(false);
