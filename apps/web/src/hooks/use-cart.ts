@@ -133,7 +133,7 @@ function setCart(s: CartState) {
 // ── server fetch ────────────────────────────────────────────────────
 async function fetchServerCart(): Promise<boolean> {
   try {
-    const res = await fetch("/api/cart");
+    const res = await fetch("/api/cart", { credentials: "include" });
     if (res.ok) {
       const data = await res.json();
       setCart({
@@ -156,14 +156,22 @@ async function fetchServerCart(): Promise<boolean> {
 async function mergeLocalToServer() {
   const lsItems = lsRead();
   if (lsItems.length === 0) return;
+  let allOk = true;
   for (const item of lsItems) {
-    await fetch("/api/cart", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(item),
-    }).catch(() => {});
+    try {
+      const res = await fetch("/api/cart", {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(item),
+      });
+      if (!res.ok) { allOk = false; console.error("[cart] merge POST failed:", item.subject, res.status); }
+    } catch (e) {
+      allOk = false;
+      console.error("[cart] merge POST error:", item.subject, e);
+    }
   }
-  lsClear();
+  if (allOk) lsClear();
 }
 
 // ── init: runs once on client ───────────────────────────────────────
@@ -201,6 +209,7 @@ export function useCart() {
         // Sync to server
         const res = await fetch("/api/cart", {
           method: "POST",
+          credentials: "include",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ exam, subject, plan }),
         });
@@ -227,7 +236,7 @@ export function useCart() {
       lsRemove(item.exam, item.subject);
 
       if (snap.loggedIn) {
-        const res = await fetch(`/api/cart/${id}`, { method: "DELETE" });
+        const res = await fetch(`/api/cart/${id}`, { method: "DELETE", credentials: "include" });
         if (res.ok) {
           await fetchServerCart();
           return true;
@@ -245,7 +254,7 @@ export function useCart() {
     lsClear();
     if (snap.loggedIn) {
       await Promise.all(
-        state.items.map((i) => fetch(`/api/cart/${i.id}`, { method: "DELETE" })),
+        state.items.map((i) => fetch(`/api/cart/${i.id}`, { method: "DELETE", credentials: "include" })),
       );
       await fetchServerCart();
     } else {
@@ -257,16 +266,24 @@ export function useCart() {
     if (!snap.loggedIn) return false;
     const lsItems = lsRead();
     if (lsItems.length === 0) return true;
+    let allOk = true;
     for (const item of lsItems) {
-      await fetch("/api/cart", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(item),
-      }).catch(() => {});
+      try {
+        const res = await fetch("/api/cart", {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(item),
+        });
+        if (!res.ok) { allOk = false; console.error("[cart] sync POST failed:", item.subject, res.status); }
+      } catch (e) {
+        allOk = false;
+        console.error("[cart] sync POST error:", item.subject, e);
+      }
     }
-    lsClear();
+    if (allOk) lsClear();
     await fetchServerCart();
-    return true;
+    return allOk;
   }, [snap.loggedIn]);
 
   return { ...snap, addItem, removeItem, clearCart, syncToServer, refetch: snap.loggedIn ? fetchServerCart : () => { setCart(buildLocalState()); } };

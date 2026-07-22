@@ -20,12 +20,13 @@ export default function CartPage() {
 
   async function handleCheckout() {
     if (!loggedIn) {
-      router.push("/login?next=/pay/checkout");
+      router.push("/login?next=/cart");
       return;
     }
     setSyncing(true);
-    await syncToServer();
-    router.push("/pay/checkout");
+    const ok = await syncToServer();
+    setSyncing(false);
+    if (ok) router.push("/pay/checkout");
   }
 
   const liveExams = CATALOG.map((exam) => ({
