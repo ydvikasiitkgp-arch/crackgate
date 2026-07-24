@@ -163,7 +163,7 @@ export default async function CheckoutPage() {
       <div className="mb-8">
         <div className="flex items-center gap-3">
           <h1 className="text-2xl font-extrabold text-ink">Secure Checkout</h1>
-          <div className="flex items-center gap-1.5 rounded-full bg-ok/10 px-3 py-1 text-xs font-bold text-ok">
+          <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 px-3 py-1 text-xs font-bold text-emerald-600 dark:text-emerald-400">
             <Lock className="w-3 h-3" />
             Encrypted
           </div>
@@ -490,7 +490,7 @@ export default async function CheckoutPage() {
           </div>
           <a
             href="#payerName"
-            className="rounded-xl bg-gradient-to-r from-brand to-brand-dark px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110"
+            className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition hover:from-indigo-500 hover:to-violet-500"
           >
             Pay ₹{amountRupees} →
           </a>

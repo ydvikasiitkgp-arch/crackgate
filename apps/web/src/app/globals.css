@@ -173,6 +173,13 @@ body {
   50%  { box-shadow: 0 0 20px rgba(34,211,238,.6), 0 0 6px rgba(34,211,238,.9); }
   100% { box-shadow: 0 0 4px rgba(34,211,238,.3); }
 }
+
+/* Success checkmark pulse */
+@keyframes cg-success-pulse {
+  0%   { transform: scale(0.8); opacity: 0; }
+  50%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
 /* Emerald variant for ONGC */
 .cg-pulse-emerald {
   animation: cg-pulse-emerald-glow 2s ease-in-out infinite;

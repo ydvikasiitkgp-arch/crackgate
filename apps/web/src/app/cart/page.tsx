@@ -196,7 +196,7 @@ export default function CartPage() {
                     {/* Checkout CTA */}
                     <button
                       onClick={handleCheckout}
-                      className="w-full rounded-xl bg-gradient-to-r from-brand to-brand-dark px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand/20 transition hover:brightness-110 hover:shadow-xl flex items-center justify-center gap-2"
+                      className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center gap-2"
                     >
                       Checkout <ArrowRight className="w-4 h-4" />
                     </button>
@@ -439,7 +439,7 @@ function CartContents({
       <div className="flex flex-col sm:flex-row gap-3 mt-4">
         <button
           onClick={onCheckout}
-          className="flex-1 rounded-xl bg-gradient-to-r from-brand to-brand-dark px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand/20 transition hover:brightness-110 hover:shadow-xl flex items-center justify-center gap-2"
+          className="flex-1 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center gap-2"
         >
           Proceed to Checkout <ArrowRight className="w-4 h-4" />
         </button>

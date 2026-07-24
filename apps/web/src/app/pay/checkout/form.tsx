@@ -164,62 +164,76 @@ export default function CheckoutForm({
 
   if (done) {
     return (
-      <div className="text-center py-6">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-ok/15">
-          <svg
-            viewBox="0 0 24 24"
-            className="h-11 w-11 text-ok"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden
-          >
-            <path d="M20 6 9 17l-5-5" />
-          </svg>
+      <div className="text-center py-8">
+        {/* Checkmark with gradient ring */}
+        <div className="relative mx-auto w-24 h-24">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400 to-green-500 animate-[cg-success-pulse_2s_ease-out_1]" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400 to-green-500 opacity-40 blur-xl animate-[cg-success-pulse_2s_ease-out_1]" />
+          <div className="relative flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-emerald-400 to-green-500 shadow-lg shadow-emerald-500/30">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-12 w-12 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
         </div>
-        <h3 className="mt-5 text-xl font-extrabold text-ok">
+
+        <h3 className="mt-6 text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">
           Payment submitted!
         </h3>
-        <p className="mt-2 text-sm text-muted max-w-sm mx-auto">
-          Thanks, <b>{payerName.trim() || "there"}</b> — we&apos;ve received
-          your payment of <b>₹{finalAmountRupees}</b> for {items.length} mock
-          {items.length > 1 ? "s" : ""}.
+        <p className="mt-3 text-sm text-muted max-w-sm mx-auto leading-relaxed">
+          Thanks, <b className="text-ink">{payerName.trim() || "there"}</b> —
+          we&apos;ve received your payment of{" "}
+          <b className="text-ink">₹{finalAmountRupees}</b> for {items.length}{" "}
+          mock{items.length > 1 ? "s" : ""}.
         </p>
-        <p className="mt-2 text-sm text-muted max-w-sm mx-auto">
+        <p className="mt-1.5 text-sm text-muted max-w-sm mx-auto leading-relaxed">
           We&apos;ll verify against our UPI app and unlock your access within a
-          few hours. You&apos;ll get a <b>WhatsApp confirmation</b>.
+          few hours. You&apos;ll get a{" "}
+          <b className="text-ink">WhatsApp confirmation</b>.
         </p>
 
         {/* What happens next */}
-        <div className="mt-6 max-w-xs mx-auto text-left rounded-xl border border-line bg-canvas p-4 space-y-3">
-          <p className="text-xs font-bold text-ink uppercase tracking-wider">
+        <div className="mt-7 max-w-sm mx-auto text-left rounded-xl border border-emerald-200 dark:border-emerald-800/50 bg-gradient-to-b from-emerald-50/80 to-transparent dark:from-emerald-900/20 dark:to-transparent p-5 space-y-3.5">
+          <p className="text-xs font-bold text-emerald-700 dark:text-emerald-300 uppercase tracking-wider">
             What happens next
           </p>
           <div className="flex items-start gap-3 text-xs text-muted">
-            <div className="flex items-center justify-center w-5 h-5 rounded-full bg-brand/10 text-brand text-[10px] font-bold shrink-0 mt-0.5">
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 text-[11px] font-bold shrink-0 mt-0.5">
               1
             </div>
-            <span>We verify your UPI payment (usually within 1-2 hours)</span>
+            <span className="leading-relaxed">
+              We verify your UPI payment (usually within 1-2 hours)
+            </span>
           </div>
           <div className="flex items-start gap-3 text-xs text-muted">
-            <div className="flex items-center justify-center w-5 h-5 rounded-full bg-brand/10 text-brand text-[10px] font-bold shrink-0 mt-0.5">
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 text-[11px] font-bold shrink-0 mt-0.5">
               2
             </div>
-            <span>Your mock access is unlocked and you&apos;re notified on WhatsApp</span>
+            <span className="leading-relaxed">
+              Your mock access is unlocked and you&apos;re notified on WhatsApp
+            </span>
           </div>
           <div className="flex items-start gap-3 text-xs text-muted">
-            <div className="flex items-center justify-center w-5 h-5 rounded-full bg-brand/10 text-brand text-[10px] font-bold shrink-0 mt-0.5">
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 text-[11px] font-bold shrink-0 mt-0.5">
               3
             </div>
-            <span>Start attempting mocks from your dashboard</span>
+            <span className="leading-relaxed">
+              Start attempting mocks from your dashboard
+            </span>
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-2 max-w-xs mx-auto">
+        <div className="mt-7 flex flex-col gap-2.5 max-w-xs mx-auto">
           <button
-            className="btn btn-primary w-full"
+            className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center gap-2"
             onClick={() => router.push("/dashboard")}
           >
             Go to Dashboard
@@ -230,9 +244,9 @@ export default function CheckoutForm({
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-ghost w-full text-sm"
+            className="rounded-xl border border-line bg-surface px-6 py-3 text-sm font-semibold text-ink hover:bg-canvas transition flex items-center justify-center gap-2"
           >
-            <MessageCircle className="w-4 h-4" />
+            <MessageCircle className="w-4 h-4 text-emerald-500" />
             Any questions? Chat with us
           </a>
         </div>
@@ -455,7 +469,7 @@ export default function CheckoutForm({
       <button
         type="submit"
         disabled={loading || !formValid}
-        className="w-full rounded-xl bg-gradient-to-r from-brand to-brand-dark px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand/20 transition hover:brightness-110 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:brightness-100 flex items-center justify-center gap-2"
+        className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-indigo-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:from-indigo-600 disabled:hover:to-violet-600 flex items-center justify-center gap-2"
       >
         {loading ? (
           <>
