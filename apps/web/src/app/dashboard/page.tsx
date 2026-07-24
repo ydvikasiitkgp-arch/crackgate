@@ -39,6 +39,7 @@ import { TrackSwitcher } from "@/components/track-switcher";
 import { ChooseExam } from "@/components/choose-exam";
 import { CilDashboard, type CilAttempt } from "@/components/cil-dashboard";
 import { CivilDashboard, type CivilAttempt } from "@/components/civil-dashboard";
+import { CourseHub, type CourseStats } from "@/components/course-hub";
 
 export const dynamic = "force-dynamic";
 
@@ -92,6 +93,9 @@ export default async function DashboardPage({
     }),
   ]);
 
+  // ── Per-track stats for the CourseHub ──────────────────────────────
+  const courseStats = computeCourseStats(allAttempts);
+
   // ── CIL (PSU) track — dedicated view, return early. ─────────────────
   if (activeTrack.kind === "cil") {
     const cilAttempts: CilAttempt[] = allAttempts
@@ -107,6 +111,7 @@ export default async function DashboardPage({
       }));
     return (
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
+        <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
         <CilDashboard track={activeTrack} attempts={cilAttempts} />
       </div>
@@ -128,6 +133,7 @@ export default async function DashboardPage({
       }));
     return (
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
+        <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
         <CivilDashboard track={activeTrack} attempts={ceAttempts} />
       </div>
@@ -138,6 +144,7 @@ export default async function DashboardPage({
   if (activeTrack.kind === "soon") {
     return (
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
+        <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
         <div className="card p-10 text-center">
           <div className="text-3xl">🚧</div>
@@ -363,6 +370,7 @@ export default async function DashboardPage({
   // ---------- Render ----------
   return (
     <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
+      <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={firstName} />
       <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
 
       {/* Tier 1 — Where do I stand? */}
@@ -593,4 +601,59 @@ function StatCard({ label, value }: { label: string; value: string | number }) {
       <div className="text-sm text-muted mt-0.5">{label}</div>
     </div>
   );
+}
+
+// ── Per-track stats from attempts (reused by CourseHub) ────────────
+const TRACK_PREFIX_MAP: Record<string, string> = {
+  "cil-civil": "PSU-civil", "cil-electrical": "PSU-electrical",
+  "cil-mechanical": "PSU-mechanical", "cil-system": "PSU-system",
+  "cil-e-and-t": "PSU-e-and-t", "cil-geology": "PSU-geology",
+  "cil-industrial-engineering": "PSU-industrial-engineering", "cil-mining": "PSU-mining",
+  "ce-mock": "GATE-civil", "gg-mock": "GATE-geology", "es-mock": "GATE-environment",
+  "mn-mock": "GATE-mining", "mn-pyq": "GATE-mining", "mock": "GATE-mining",
+  "pyq": "GATE-mining", "diploma": "DIPLOMA-general", "state": "STATE-general",
+};
+
+function resolveTrackKey(refId: string): string | null {
+  for (const [prefix, key] of Object.entries(TRACK_PREFIX_MAP)) {
+    if (refId.startsWith(prefix + "-") || refId === prefix) return key;
+  }
+  return null;
+}
+
+function computeCourseStats(
+  attempts: { refId: string; score: number; total: number; takenAt: Date }[],
+): Record<string, CourseStats> {
+  const since14d = new Date(Date.now() - 14 * 86_400_000);
+  const map: Record<string, { attempts: number; totalScored: number; totalQ: number; lastPracticed: Date | null; daily: Record<string, number> }> = {};
+
+  for (const a of attempts) {
+    const key = resolveTrackKey(a.refId);
+    if (!key) continue;
+    const t = map[key] ??= { attempts: 0, totalScored: 0, totalQ: 0, lastPracticed: null, daily: {} };
+    t.attempts++;
+    t.totalScored += a.score;
+    t.totalQ += a.total;
+    if (!t.lastPracticed || a.takenAt > t.lastPracticed) t.lastPracticed = a.takenAt;
+    if (a.takenAt >= since14d) {
+      const day = a.takenAt.toISOString().slice(0, 10);
+      t.daily[day] = (t.daily[day] ?? 0) + 1;
+    }
+  }
+
+  const result: Record<string, CourseStats> = {};
+  for (const [key, t] of Object.entries(map)) {
+    const sparkline: number[] = [];
+    for (let i = 13; i >= 0; i--) {
+      const d = new Date(Date.now() - i * 86_400_000).toISOString().slice(0, 10);
+      sparkline.push(t.daily[d] ?? 0);
+    }
+    result[key] = {
+      attempts: t.attempts,
+      accuracy: t.totalQ > 0 ? Math.round((t.totalScored / t.totalQ) * 100) : 0,
+      lastPracticed: t.lastPracticed?.toISOString() ?? null,
+      sparkline,
+    };
+  }
+  return result;
 }
