@@ -24,6 +24,7 @@ const RESOURCE_LINKS: Branch[] = [
   { label: "Blog", href: "/blog" },
   { label: "News", href: "/news" },
   { label: "About Us", href: "/about" },
+  { label: "Careers", href: "/about/careers" },
 ];
 
 export function MegaNav() {
@@ -76,6 +77,16 @@ export function MegaNav() {
   };
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
+
+  const isMostSpecificActive = (href: string) => {
+    if (!isActive(href)) return false;
+    return !RESOURCE_LINKS.some(
+      (other) =>
+        other.href !== href &&
+        other.href.length > href.length &&
+        isActive(other.href),
+    );
+  };
 
   // PSU mocks live under /mocks/cil-* and should highlight the PSU nav, not GATE.
   const isPsuMock = /^\/mocks\/(cil-)/.test(pathname);
@@ -319,7 +330,7 @@ export function MegaNav() {
                 href={l.href}
                 className={cn(
                   "block rounded-md px-3 py-2 text-sm font-medium",
-                  isActive(l.href) ? "text-brand bg-brand/5" : "text-ink hover:bg-canvas",
+                  isMostSpecificActive(l.href) ? "text-brand bg-brand/5" : "text-ink hover:bg-canvas",
                 )}
               >
                 {l.label}

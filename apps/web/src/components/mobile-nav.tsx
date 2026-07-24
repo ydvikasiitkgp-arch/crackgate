@@ -242,6 +242,7 @@ const RESOURCE_ITEMS: Leaf[] = [
   { href: "/blog", label: "Blog" },
   { href: "/news", label: "News" },
   { href: "/about", label: "About Us" },
+  { href: "/about/careers", label: "Careers" },
 ];
 
 function ResourcesSheet({ onClose }: { onClose: () => void }) {
@@ -269,7 +270,17 @@ function ResourcesSheet({ onClose }: { onClose: () => void }) {
         </div>
         <div className="px-3 pb-6 pt-1 space-y-1.5">
           {RESOURCE_ITEMS.map((item) => {
-            const active = pathname === item.href || pathname?.startsWith(item.href + "/");
+            const hasMoreSpecificMatch = RESOURCE_ITEMS.some(
+              (other) =>
+                other.href !== item.href &&
+                other.href.length > item.href.length &&
+                (pathname === other.href ||
+                  pathname?.startsWith(other.href + "/")),
+            );
+            const active =
+              (pathname === item.href ||
+                pathname?.startsWith(item.href + "/")) &&
+              !hasMoreSpecificMatch;
             return (
               <Link key={item.href} href={item.href} onClick={onClose} className={cn("flex items-center justify-between px-4 py-3 rounded-xl border transition-colors", active ? "border-brand/20 bg-brand/5" : "border-line/60 active:bg-canvas")}>
                 <div className="flex items-center gap-3 min-w-0">

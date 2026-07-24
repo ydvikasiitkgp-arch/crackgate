@@ -318,3 +318,17 @@ model PromoCode {
   @@index([active])
 }
 
+model CareerApplication {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  role      String
+  message   String?
+  portfolio String?
+  createdAt DateTime @default(now())
+
+  @@index([role])
+  @@index([createdAt])
+}
+
