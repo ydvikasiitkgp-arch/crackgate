@@ -6,6 +6,7 @@ import { WCL_AF_MOCKS } from "@/data/diploma/wcl-af-mocks";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { DiplomaCard } from "@/components/diploma-card";
+import { ComboAddToCartBtn } from "@/components/combo-add-to-cart-btn";
 
 export const metadata = {
   title: "WCL Diploma Exams · CrackGate",
@@ -197,12 +198,7 @@ export default function WclIndexPage() {
               </ul>
             </div>
             <div className="shrink-0 sm:text-right">
-              <Link
-                href="/cart"
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-8 py-4 text-base font-bold text-white shadow-lg shadow-amber-500/25 transition hover:from-amber-400 hover:to-orange-400 hover:shadow-xl"
-              >
-                Add Both to Cart — Save 15%
-              </Link>
+              <ComboAddToCartBtn />
               <p className="mt-2 text-xs text-muted">Pay via UPI · QR / GPay / PhonePe / Paytm</p>
             </div>
           </div>
