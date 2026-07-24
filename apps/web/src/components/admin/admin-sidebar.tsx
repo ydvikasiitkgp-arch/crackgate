@@ -15,6 +15,7 @@ import {
   Menu,
   LogOut,
   ExternalLink,
+  Users,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +26,7 @@ const NAV_ITEMS = [
   { href: "/admin/upi", label: "Payments", icon: CreditCard, badge: true },
   { href: "/admin/promos", label: "Promo Codes", icon: Tag },
   { href: "/admin/questions", label: "Questions", icon: HelpCircle },
+  { href: "/admin/careers", label: "Careers", icon: Users },
 ];
 
 const EXTERNAL_LINKS = [

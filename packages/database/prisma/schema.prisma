@@ -319,16 +319,20 @@ model PromoCode {
 }
 
 model CareerApplication {
-  id        String   @id @default(cuid())
-  name      String
-  email     String
-  phone     String
-  role      String
-  message   String?
-  portfolio String?
-  createdAt DateTime @default(now())
+  id         String    @id @default(cuid())
+  name       String
+  email      String
+  phone      String
+  role       String
+  message    String?
+  portfolio  String?
+  status     String    @default("new") // new | reviewed | shortlisted | rejected
+  notes      String?
+  reviewedAt DateTime?
+  createdAt  DateTime  @default(now())
 
   @@index([role])
+  @@index([status])
   @@index([createdAt])
 }
 
