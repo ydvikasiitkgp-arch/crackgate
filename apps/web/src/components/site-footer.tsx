@@ -21,6 +21,7 @@ export function SiteFooter() {
           <FooterLink href="/blog">Blog</FooterLink>
           <FooterLink href="/news">News</FooterLink>
           <FooterLink href="/about">About Us</FooterLink>
+          <FooterLink href="/about/careers">Careers</FooterLink>
         </FooterCol>
         <FooterCol title="Company">
           <FooterLink href="/contact">Contact</FooterLink>

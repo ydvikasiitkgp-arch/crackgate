@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
+import { subjectLabel } from "@/data/catalog";
 import { UserMenu } from "@/components/user-menu";
 import { BrandLockup } from "@/components/brand";
 import { MegaNav } from "@/components/mega-nav";
@@ -8,9 +10,28 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { CommandPalette } from "@/components/command-palette";
 import { CartIcon } from "@/components/cart-icon";
 
+async function getUserEntitlements(userId: string) {
+  const now = new Date();
+  const rows = await db.entitlement.findMany({
+    where: { userId },
+    orderBy: { createdAt: "desc" },
+    select: { exam: true, subject: true, tier: true, expiry: true },
+  });
+  return rows
+    .filter((r) => !r.expiry || r.expiry.getTime() > now.getTime())
+    .map((r) => ({
+      exam: r.exam,
+      subject: r.subject,
+      label: subjectLabel(r.exam, r.subject),
+      tier: r.tier as "pro" | "premium",
+      expiry: r.expiry?.toISOString() ?? null,
+    }));
+}
+
 export async function SiteHeader() {
   const session = await auth();
   const u = session?.user;
+  const entitlements = u?.id ? await getUserEntitlements(u.id) : [];
 
   return (
     <header className="sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-line">
@@ -31,6 +52,7 @@ export async function SiteHeader() {
               image={u.image ?? undefined}
               plan={u.plan ?? "free"}
               role={u.role}
+              entitlements={entitlements}
             />
           ) : (
             <Link href="/login" className="btn btn-primary text-sm">Get Started</Link>
@@ -62,6 +84,7 @@ const MINING_MODULES = [
 export async function MiningHeader() {
   const session = await auth();
   const u = session?.user;
+  const entitlements = u?.id ? await getUserEntitlements(u.id) : [];
 
   return (
     <header className="sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-line">
@@ -92,6 +115,7 @@ export async function MiningHeader() {
               image={u.image ?? undefined}
               plan={u.plan ?? "free"}
               role={u.role}
+              entitlements={entitlements}
             />
           ) : (
             <Link href="/login" className="btn btn-primary text-sm">Get Started</Link>
