@@ -3,7 +3,17 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ShoppingCart, Trash2, ArrowRight, Sparkles } from "lucide-react";
+import {
+  ShoppingCart,
+  Trash2,
+  ArrowRight,
+  Sparkles,
+  ShieldCheck,
+  Clock,
+  MessageCircle,
+  Tag,
+  Zap,
+} from "lucide-react";
 import { useCart, type ComboDiscount } from "@/hooks/use-cart";
 import { CATALOG } from "@/data/catalog";
 import { AddToCartBtn } from "@/components/add-to-cart-btn";
@@ -81,57 +91,151 @@ export default function CartPage() {
         {/* Cart sidebar (browse mode) */}
         {tab === "browse" && (
           <aside className="lg:col-span-1">
-            <div className="sticky top-24 card p-5 space-y-4">
-              <h3 className="font-semibold text-ink flex items-center gap-2">
-                <ShoppingCart className="w-4 h-4" />
-                Cart Summary
-              </h3>
-              {items.length === 0 ? (
-                <p className="text-sm text-muted">No items yet. Click + on any mock above.</p>
-              ) : (
-                <>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {items.map((item) => (
-                      <div key={item.id} className="flex items-center justify-between text-sm">
-                        <span className="truncate text-ink">{item.label}</span>
-                        <div className="flex items-center gap-2 shrink-0">
-                          <span className="text-muted tabular-nums">{formatPrice(item.pricePaise)}</span>
-                          <button onClick={() => removeItem(item.id)} className="text-muted hover:text-red-600">
-                            <Trash2 className="w-3.5 h-3.5" />
-                          </button>
+            <div className="sticky top-24 space-y-4">
+              {/* Main summary card */}
+              <div className="card overflow-hidden">
+                {/* Header */}
+                <div className="px-5 py-4 border-b border-line bg-surface/50">
+                  <div className="flex items-center gap-2">
+                    <ShoppingCart className="w-4 h-4 text-brand" />
+                    <h3 className="font-bold text-ink">Cart Summary</h3>
+                    {items.length > 0 && (
+                      <span className="ml-auto text-xs font-semibold text-muted bg-canvas px-2 py-0.5 rounded-full">
+                        {items.length}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {items.length === 0 ? (
+                  <div className="px-5 py-8 text-center">
+                    <ShoppingCart className="w-10 h-10 text-muted/30 mx-auto mb-2" />
+                    <p className="text-sm text-muted">Your cart is empty</p>
+                    <p className="text-xs text-muted/70 mt-1">
+                      Click + on any mock above to add it
+                    </p>
+                  </div>
+                ) : (
+                  <div className="p-5 space-y-4">
+                    {/* Items */}
+                    <div className="space-y-3">
+                      {items.map((item) => (
+                        <div key={item.id} className="group">
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="min-w-0">
+                              <p className="text-sm font-semibold text-ink leading-tight">
+                                {item.label}
+                              </p>
+                              <p className="text-[11px] text-muted mt-0.5 capitalize">
+                                {item.exam} · {item.plan}
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-1.5 shrink-0">
+                              <span className="text-sm font-bold text-ink tabular-nums">
+                                {formatPrice(item.pricePaise)}
+                              </span>
+                              <button
+                                onClick={() => removeItem(item.id)}
+                                className="p-1 rounded-md text-muted/50 hover:text-red-600 hover:bg-red-50 transition opacity-0 group-hover:opacity-100"
+                              >
+                                <Trash2 className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Combo discount badge */}
+                    {comboSavingsPaise > 0 && (
+                      <div className="rounded-xl bg-gradient-to-r from-ok/10 to-ok/5 border border-ok/30 px-4 py-3">
+                        <div className="flex items-center gap-2">
+                          <div className="flex items-center justify-center w-7 h-7 rounded-full bg-ok/15">
+                            <Sparkles className="w-3.5 h-3.5 text-ok" />
+                          </div>
+                          <div>
+                            <p className="text-xs font-bold text-ok">
+                              Combo discount applied!
+                            </p>
+                            <p className="text-[11px] text-ok/70">
+                              You save {formatPrice(comboSavingsPaise)}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                  {comboSavingsPaise > 0 && (
-                    <div className="rounded-lg bg-ok/10 border border-ok/30 px-3 py-2">
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-ok">
-                        <Sparkles className="w-3.5 h-3.5" />
-                        Combo discount applied!
-                      </div>
-                      <p className="text-xs text-ok/80 mt-0.5">You save {formatPrice(comboSavingsPaise)}</p>
-                    </div>
-                  )}
-                  <div className="border-t border-line pt-3 space-y-1">
-                    {comboSavingsPaise > 0 && (
-                      <div className="flex items-center justify-between text-sm text-muted">
-                        <span>Subtotal</span>
-                        <span className="line-through tabular-nums">{formatPrice(rawTotalPaise)}</span>
-                      </div>
                     )}
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-ink">Total</span>
-                      <span className="text-lg font-bold tabular-nums">{formatPrice(totalPaise)}</span>
+
+                    {/* Price breakdown */}
+                    <div className="border-t border-line pt-3 space-y-1.5">
+                      {comboSavingsPaise > 0 && (
+                        <>
+                          <div className="flex items-center justify-between text-xs text-muted">
+                            <span>Subtotal</span>
+                            <span className="line-through tabular-nums">
+                              {formatPrice(rawTotalPaise)}
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between text-xs text-ok font-medium">
+                            <span className="flex items-center gap-1">
+                              <Tag className="w-3 h-3" /> Combo discount
+                            </span>
+                            <span className="tabular-nums">
+                              -{formatPrice(comboSavingsPaise)}
+                            </span>
+                          </div>
+                        </>
+                      )}
+                      <div className="flex items-center justify-between pt-1.5 border-t border-line">
+                        <span className="text-sm font-bold text-ink">Total</span>
+                        <span className="text-xl font-extrabold text-ink tabular-nums">
+                          {formatPrice(totalPaise)}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Checkout CTA */}
+                    <button
+                      onClick={handleCheckout}
+                      className="w-full rounded-xl bg-gradient-to-r from-brand to-brand-dark px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand/20 transition hover:brightness-110 hover:shadow-xl flex items-center justify-center gap-2"
+                    >
+                      Checkout <ArrowRight className="w-4 h-4" />
+                    </button>
+
+                    {/* Trust micro-signals */}
+                    <div className="flex items-center justify-center gap-3 text-[10px] text-muted/70">
+                      <span className="flex items-center gap-1">
+                        <ShieldCheck className="w-3 h-3" />
+                        Secure
+                      </span>
+                      <span>·</span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3 h-3" />
+                        Unlocks in hours
+                      </span>
                     </div>
                   </div>
-                  <button
-                    onClick={handleCheckout}
-                    className="btn btn-primary w-full justify-center"
-                  >
-                    Checkout <ArrowRight className="w-4 h-4 ml-1" />
-                  </button>
-                </>
-              )}
+                )}
+              </div>
+
+              {/* Help card */}
+              <a
+                href="https://wa.me/919876543210?text=Hi!%20I%20need%20help%20with%20my%20cart."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card p-4 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer group"
+              >
+                <div className="flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 group-hover:bg-brand/15 transition">
+                  <MessageCircle className="w-4.5 h-4.5 text-brand" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-ink">
+                    Need help choosing?
+                  </p>
+                  <p className="text-[11px] text-muted">
+                    Chat with us on WhatsApp
+                  </p>
+                </div>
+              </a>
             </div>
           </aside>
         )}
@@ -227,14 +331,20 @@ function CartContents({
   }
 
   return (
-    <div className="space-y-3">
-      <div className="flex items-center justify-between mb-2">
-        <h2 className="font-semibold text-ink">{items.length} item{items.length !== 1 ? "s" : ""}</h2>
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h2 className="font-bold text-ink flex items-center gap-2">
+          Your Cart
+          <span className="text-xs font-semibold text-muted bg-surface px-2 py-0.5 rounded-full">
+            {items.length} item{items.length !== 1 ? "s" : ""}
+          </span>
+        </h2>
         <button
           onClick={handleClear}
           disabled={clearing}
-          className="text-xs text-muted hover:text-red-600 transition"
+          className="text-xs text-muted hover:text-red-600 transition flex items-center gap-1"
         >
+          <Trash2 className="w-3 h-3" />
           {clearing ? "Clearing…" : "Clear all"}
         </button>
       </div>
@@ -245,68 +355,104 @@ function CartContents({
           key={i}
           className="rounded-xl border-2 border-ok/40 bg-gradient-to-r from-ok/5 to-green-500/5 p-4"
         >
-          <div className="flex items-center gap-2 mb-1">
-            <Sparkles className="w-4 h-4 text-ok" />
-            <span className="text-sm font-bold text-ok">{d.label}</span>
-            <span className="inline-flex items-center rounded-full bg-ok/15 px-2 py-0.5 text-[10px] font-bold text-ok">
-              SAVE {formatPrice(d.savingsPaise)}
-            </span>
-          </div>
-          <div className="flex items-center gap-2 text-xs">
-            <span className="text-muted line-through">{formatPrice(d.originalTotalPaise)}</span>
-            <span className="font-bold text-ok">{formatPrice(d.discountedTotalPaise)}</span>
-          </div>
-        </div>
-      ))}
-
-      {items.map((item) => (
-        <div
-          key={item.id}
-          className="flex items-center justify-between gap-3 p-4 rounded-xl border border-line bg-canvas"
-        >
-          <div className="min-w-0">
-            <p className="text-sm font-medium text-ink truncate">{item.label}</p>
-            <p className="text-xs text-muted capitalize mt-0.5">{item.exam} · {item.plan} plan</p>
-          </div>
-          <div className="flex items-center gap-3 shrink-0">
-            <span className="text-sm font-semibold text-ink tabular-nums">{formatPrice(item.pricePaise)}</span>
-            <button
-              onClick={() => removeItem(item.id)}
-              className="p-1.5 rounded-lg hover:bg-red-50 text-muted hover:text-red-600 transition"
-            >
-              <Trash2 className="w-4 h-4" />
-            </button>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-ok/15">
+              <Sparkles className="w-5 h-5 text-ok" />
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-bold text-ok">{d.label}</span>
+                <span className="inline-flex items-center rounded-full bg-ok/15 px-2 py-0.5 text-[10px] font-bold text-ok">
+                  SAVE {formatPrice(d.savingsPaise)}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-xs mt-0.5">
+                <span className="text-muted line-through">
+                  {formatPrice(d.originalTotalPaise)}
+                </span>
+                <span className="font-bold text-ok">
+                  {formatPrice(d.discountedTotalPaise)}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       ))}
 
-      {/* Total */}
-      <div className="border-t border-line pt-4 mt-4 space-y-1">
-        {comboSavingsPaise > 0 && (
-          <div className="flex items-center justify-between text-sm text-muted">
-            <span>Subtotal</span>
-            <span className="line-through tabular-nums">{formatPrice(rawTotalPaise)}</span>
+      {/* Item cards */}
+      <div className="space-y-2">
+        {items.map((item) => (
+          <div
+            key={item.id}
+            className="group flex items-center justify-between gap-4 p-4 rounded-xl border border-line bg-canvas hover:border-brand/20 hover:shadow-sm transition"
+          >
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-ink truncate">
+                {item.label}
+              </p>
+              <p className="text-xs text-muted capitalize mt-0.5">
+                {item.exam} · {item.plan} plan
+              </p>
+            </div>
+            <div className="flex items-center gap-3 shrink-0">
+              <span className="text-sm font-bold text-ink tabular-nums">
+                {formatPrice(item.pricePaise)}
+              </span>
+              <button
+                onClick={() => removeItem(item.id)}
+                className="p-1.5 rounded-lg text-muted/50 hover:bg-red-50 hover:text-red-600 transition opacity-0 group-hover:opacity-100"
+              >
+                <Trash2 className="w-4 h-4" />
+              </button>
+            </div>
           </div>
-        )}
+        ))}
+      </div>
+
+      {/* Price breakdown */}
+      <div className="border-t border-line pt-4 space-y-1.5">
         {comboSavingsPaise > 0 && (
-          <div className="flex items-center justify-between text-sm text-ok font-medium">
-            <span className="flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5" /> Combo discount
-            </span>
-            <span className="tabular-nums">-{formatPrice(comboSavingsPaise)}</span>
-          </div>
+          <>
+            <div className="flex items-center justify-between text-sm text-muted">
+              <span>Subtotal</span>
+              <span className="line-through tabular-nums">
+                {formatPrice(rawTotalPaise)}
+              </span>
+            </div>
+            <div className="flex items-center justify-between text-sm text-ok font-medium">
+              <span className="flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" /> Combo discount
+              </span>
+              <span className="tabular-nums">-{formatPrice(comboSavingsPaise)}</span>
+            </div>
+          </>
         )}
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-ink">Total</span>
-          <span className="text-lg font-bold text-ink tabular-nums">{formatPrice(totalPaise)}</span>
+        <div className="flex items-center justify-between pt-2 border-t border-line">
+          <span className="text-sm font-bold text-ink">Total</span>
+          <span className="text-xl font-extrabold text-ink tabular-nums">
+            {formatPrice(totalPaise)}
+          </span>
         </div>
       </div>
-      <button
-        onClick={onCheckout}
-        className="btn btn-primary w-full justify-center mt-4"
-      >
-        Proceed to Checkout <ArrowRight className="w-4 h-4 ml-1" />
-      </button>
+
+      {/* Checkout CTA */}
+      <div className="flex flex-col sm:flex-row gap-3 mt-4">
+        <button
+          onClick={onCheckout}
+          className="flex-1 rounded-xl bg-gradient-to-r from-brand to-brand-dark px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand/20 transition hover:brightness-110 hover:shadow-xl flex items-center justify-center gap-2"
+        >
+          Proceed to Checkout <ArrowRight className="w-4 h-4" />
+        </button>
+        <div className="flex items-center justify-center gap-3 text-[11px] text-muted/70">
+          <span className="flex items-center gap-1">
+            <ShieldCheck className="w-3 h-3" /> Secure
+          </span>
+          <span>·</span>
+          <span className="flex items-center gap-1">
+            <Clock className="w-3 h-3" /> Unlocks in hours
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
