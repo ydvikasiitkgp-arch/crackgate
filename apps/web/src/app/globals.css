@@ -193,6 +193,38 @@ body {
   100% { box-shadow: 0 0 4px rgba(52,211,153,.3); }
 }
 
+/* Checkout: submit button shimmer */
+.cg-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.cg-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.15) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: none;
+}
+.cg-shimmer:hover::after {
+  animation: cg-shimmer-slide .6s ease-out forwards;
+}
+@keyframes cg-shimmer-slide {
+  to { transform: translateX(100%); }
+}
+
+/* Checkout: progress bar fill */
+.cg-progress-fill {
+  transition: width .6s cubic-bezier(.4,0,.2,1);
+}
+
+/* Checkout: copy-feedback flash */
+@keyframes cg-copy-flash {
+  0%   { opacity: 0; transform: translateY(4px); }
+  30%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cg-ripple::after { transition: none; }
 }

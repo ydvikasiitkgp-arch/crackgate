@@ -6,6 +6,7 @@ import { whatsappLink } from "@/lib/contact";
 import { subjectPrice, subjectLabel } from "@/data/catalog";
 import { calculateComboDiscounts } from "@/lib/combos";
 import CheckoutForm from "./form";
+import CopyCard from "./copy-card";
 import {
   Shield,
   Clock,
@@ -14,9 +15,8 @@ import {
   Package,
   Sparkles,
   Zap,
-  Users,
-  TrendingUp,
   Lock,
+  Check,
 } from "lucide-react";
 
 export const dynamic = "force-dynamic";
@@ -86,37 +86,13 @@ export default async function CheckoutPage() {
   const amountRupees = Math.round(totalPaise / 100);
 
   let me = null;
-  let myClaims: {
-    id: string;
-    plan: string;
-    amountPaise: number;
-    status: "pending" | "approved" | "rejected";
-    adminNote: string | null;
-    createdAt: Date;
-  }[] = [];
-
   try {
-    [me, myClaims] = await Promise.all([
-      db.user.findUnique({
-        where: { id: session.user.id },
-        select: { name: true, email: true, phone: true },
-      }),
-      db.upiPayment.findMany({
-        where: { userId: session.user.id },
-        orderBy: { createdAt: "desc" },
-        take: 5,
-        select: {
-          id: true,
-          plan: true,
-          amountPaise: true,
-          status: true,
-          adminNote: true,
-          createdAt: true,
-        },
-      }),
-    ]);
+    me = await db.user.findUnique({
+      where: { id: session.user.id },
+      select: { name: true, email: true, phone: true },
+    });
   } catch (e) {
-    console.error("[checkout] user/payment lookup failed:", e);
+    console.error("[checkout] user lookup failed:", e);
   }
 
   const vpa = process.env.NEXT_PUBLIC_UPI_VPA || "";
@@ -134,7 +110,7 @@ export default async function CheckoutPage() {
         type: "svg",
         errorCorrectionLevel: "M",
         margin: 1,
-        width: 256,
+        width: 288,
       });
     } catch (e) {
       console.error("[checkout] QRCode generation failed:", e);
@@ -143,42 +119,77 @@ export default async function CheckoutPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-5 py-8 pb-32 lg:pb-8">
-      {/* Urgency banner */}
-      <div className="mb-6 rounded-xl border border-amber-400/30 bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-amber-500/10 px-4 py-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm">
-        <span className="inline-flex items-center gap-1.5 text-amber-700 dark:text-amber-300 font-semibold">
-          <Zap className="w-3.5 h-3.5" />
-          Limited offer — save {comboSavingsPaise > 0 ? `₹${Math.round(comboSavingsPaise / 100)}` : "with combo"}
-        </span>
-        <span className="inline-flex items-center gap-1.5 text-muted">
-          <Users className="w-3.5 h-3.5" />
-          23 students enrolled this week
-        </span>
-        <span className="inline-flex items-center gap-1.5 text-muted">
-          <TrendingUp className="w-3.5 h-3.5" />
-          Best price — won&apos;t get lower
-        </span>
-      </div>
+      {/* Progress bar */}
+      <nav className="mb-8" aria-label="Checkout progress">
+        <ol className="flex items-center justify-center gap-0">
+          {[
+            { label: "Scan QR", done: true },
+            { label: "Enter details", done: false },
+            { label: "Done", done: false },
+          ].map((step, i) => (
+            <li key={step.label} className="flex items-center">
+              <div className="flex items-center gap-2">
+                <div
+                  className={`flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold transition ${
+                    step.done
+                      ? "bg-ok text-white"
+                      : i === 1
+                        ? "bg-brand text-white shadow-sm"
+                        : "bg-line text-muted"
+                  }`}
+                >
+                  {step.done ? (
+                    <Check className="w-3.5 h-3.5" />
+                  ) : (
+                    i + 1
+                  )}
+                </div>
+                <span
+                  className={`text-xs font-semibold hidden sm:inline ${
+                    step.done || i === 1 ? "text-ink" : "text-muted"
+                  }`}
+                >
+                  {step.label}
+                </span>
+              </div>
+              {i < 2 && (
+                <div className="w-8 sm:w-16 h-0.5 bg-line mx-2 sm:mx-3">
+                  <div
+                    className={`h-full cg-progress-fill ${
+                      step.done ? "bg-ok w-full" : "bg-brand/40 w-0"
+                    }`}
+                  />
+                </div>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
 
-      {/* Header with savings callout */}
+      {/* Savings banner — only when combo active */}
+      {comboSavingsPaise > 0 && (
+        <div className="mb-6 rounded-xl border border-ok/30 bg-gradient-to-r from-ok/10 via-emerald-500/5 to-ok/10 px-4 py-3 flex items-center justify-center gap-2 text-sm">
+          <Sparkles className="w-4 h-4 text-ok" />
+          <span className="font-bold text-ok">
+            Combo discount applied — you save ₹
+            {Math.round(comboSavingsPaise / 100)}
+          </span>
+        </div>
+      )}
+
+      {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-3">
           <h1 className="text-2xl font-extrabold text-ink">Secure Checkout</h1>
-          <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 px-3 py-1 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+          <div className="flex items-center gap-1.5 rounded-full bg-ok/10 border border-ok/30 px-3 py-1 text-xs font-bold text-ok">
             <Lock className="w-3 h-3" />
             Encrypted
           </div>
         </div>
         <p className="text-sm text-muted mt-1">
-          Pay once via UPI — get access to all {items.length} mock{items.length > 1 ? "s" : ""} instantly after verification.
+          Pay once via UPI — get access to all {items.length} mock
+          {items.length > 1 ? "s" : ""} instantly after verification.
         </p>
-        {comboSavingsPaise > 0 && (
-          <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-ok/10 border border-ok/30 px-3 py-2">
-            <Sparkles className="w-4 h-4 text-ok" />
-            <span className="text-sm font-bold text-ok">
-              You&apos;re saving ₹{Math.round(comboSavingsPaise / 100)} with the combo discount!
-            </span>
-          </div>
-        )}
       </div>
 
       <div className="grid lg:grid-cols-5 gap-8">
@@ -186,60 +197,56 @@ export default async function CheckoutPage() {
         <div className="lg:col-span-3 space-y-5">
           {vpa ? (
             <>
-              {/* Step 1: Scan */}
+              {/* Step 1: Scan QR — hero */}
               <div className="card p-5 sm:p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand text-white text-sm font-bold shadow-sm">
-                    1
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-ok text-white text-sm font-bold">
+                    <Check className="w-4 h-4" />
                   </div>
                   <div>
                     <h2 className="font-bold text-ink">Scan & pay</h2>
-                    <p className="text-xs text-muted">Open any UPI app and scan</p>
+                    <p className="text-xs text-muted">
+                      Open any UPI app and scan
+                    </p>
                   </div>
                   <div className="ml-auto text-right">
                     <p className="text-2xl font-extrabold text-ink tabular-nums">
                       ₹{amountRupees}
                     </p>
+                    {comboSavingsPaise > 0 && (
+                      <p className="text-xs text-ok font-semibold">
+                        Save ₹{Math.round(comboSavingsPaise / 100)}
+                      </p>
+                    )}
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-5">
-                  <div className="flex flex-col items-center shrink-0">
+                {/* QR — centered hero */}
+                <div className="flex flex-col items-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 rounded-2xl bg-brand/10 blur-xl scale-110" />
                     <div
-                      className="bg-white p-3 rounded-xl w-full max-w-[200px] [&>svg]:w-full [&>svg]:h-auto shadow-sm border border-line"
+                      className="relative bg-white p-4 rounded-2xl w-full max-w-[260px] [&>svg]:w-full [&>svg]:h-auto shadow-md border border-line"
                       dangerouslySetInnerHTML={{ __html: qrSvg }}
                     />
-                    <p className="text-[11px] text-muted mt-2">Scan with any UPI app</p>
                   </div>
-
-                  <div className="flex-1 space-y-3">
-                    <div className="rounded-lg bg-surface px-3 py-2">
-                      <p className="text-[10px] text-muted font-medium uppercase tracking-wider">
-                        UPI ID
-                      </p>
-                      <p className="font-mono text-sm font-semibold select-all mt-0.5">
-                        {vpa}
-                      </p>
-                    </div>
-                    <div className="rounded-lg bg-surface px-3 py-2">
-                      <p className="text-[10px] text-muted font-medium uppercase tracking-wider">
-                        Reference note
-                      </p>
-                      <p className="font-mono text-xs text-muted break-all mt-0.5">
-                        {note}
-                      </p>
-                    </div>
-                    <p className="text-[11px] text-muted leading-relaxed">
-                      Enter this note in the UPI app so we can match your payment. Pay the exact amount.
-                    </p>
-                  </div>
+                  <p className="text-xs text-muted mt-3 font-medium">
+                    Scan with any UPI app
+                  </p>
                 </div>
+
+                {/* Copy cards */}
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <CopyCard label="UPI ID" value={vpa} />
+                  <CopyCard label="Reference note" value={note} />
+                </div>
+                <p className="text-[11px] text-muted mt-2 text-center">
+                  Enter the reference note in your UPI app so we can match your
+                  payment. Pay the exact amount.
+                </p>
 
                 {/* Mobile UPI buttons */}
                 <div className="mt-5 sm:hidden">
-                  <p className="text-xs font-semibold text-muted mb-2">
-                    Quick pay with
-                  </p>
                   <div className="flex gap-2">
                     <a
                       href={upiUrl}
@@ -261,34 +268,18 @@ export default async function CheckoutPage() {
                     </a>
                   </div>
                 </div>
-
-                {/* How it works */}
-                <div className="mt-5 rounded-lg bg-canvas border border-line p-3">
-                  <ol className="text-xs text-muted list-decimal pl-4 space-y-1.5">
-                    <li>
-                      Open your UPI app and scan the QR code (or copy the UPI ID).
-                    </li>
-                    <li>
-                      Pay the <b>exact</b> amount — ₹{amountRupees}.
-                    </li>
-                    <li>
-                      Wait for the <b>success</b> screen in your UPI app.
-                    </li>
-                    <li>Fill in your details below and submit.</li>
-                  </ol>
-                </div>
               </div>
 
-              {/* Step 2: Confirm */}
+              {/* Step 2: Enter details */}
               <div className="card p-5 sm:p-6">
                 <div className="flex items-center gap-3 mb-1">
                   <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand text-white text-sm font-bold shadow-sm">
                     2
                   </div>
                   <div>
-                    <h2 className="font-bold text-ink">Confirm payment</h2>
+                    <h2 className="font-bold text-ink">Enter your details</h2>
                     <p className="text-xs text-muted">
-                      Tell us which app you used and your details
+                      We&apos;ll use this to verify your payment and unlock access
                     </p>
                   </div>
                 </div>
@@ -315,36 +306,27 @@ export default async function CheckoutPage() {
         {/* Right: Order Summary — 2 cols */}
         <div className="lg:col-span-2">
           <div className="sticky top-24 space-y-4">
-            {/* Savings hero */}
-            {comboSavingsPaise > 0 && (
-              <div className="rounded-xl border-2 border-ok/40 bg-gradient-to-br from-ok/5 to-ok/10 p-4 text-center">
-                <p className="text-xs font-semibold text-ok uppercase tracking-wider">
-                  Combo savings applied
-                </p>
-                <p className="mt-1 text-3xl font-extrabold text-ok tabular-nums">
-                  ₹{Math.round(comboSavingsPaise / 100)}
-                </p>
-                <p className="text-xs text-ok/70 mt-0.5">
-                  {comboDiscounts[0]?.label ?? "WCL + NCL Combo — 15% off"}
-                </p>
-              </div>
-            )}
-
-            {/* Items */}
-            <div className="card p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <Package className="w-4 h-4 text-muted" />
-                <h2 className="font-bold text-sm text-ink">Order Summary</h2>
-                <span className="ml-auto text-xs text-muted">
-                  {items.length} item{items.length > 1 ? "s" : ""}
-                </span>
+            {/* Order summary with inline savings */}
+            <div className="card overflow-hidden">
+              <div className="px-5 py-4 border-b border-line bg-surface/50">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Package className="w-4 h-4 text-muted" />
+                    <h2 className="font-bold text-sm text-ink">
+                      Order Summary
+                    </h2>
+                  </div>
+                  <span className="text-xs text-muted">
+                    {items.length} item{items.length > 1 ? "s" : ""}
+                  </span>
+                </div>
               </div>
 
-              <div className="divide-y divide-line">
+              <div className="p-5 space-y-3">
                 {items.map((item) => (
                   <div
                     key={item.id}
-                    className="flex items-center justify-between py-2.5 first:pt-0 last:pb-0"
+                    className="flex items-center justify-between"
                   >
                     <div className="min-w-0">
                       <p className="text-sm font-medium text-ink truncate">
@@ -359,81 +341,104 @@ export default async function CheckoutPage() {
                     </span>
                   </div>
                 ))}
-              </div>
 
-              {/* Total */}
-              <div className="mt-3 pt-3 border-t border-line space-y-1">
-                {comboSavingsPaise > 0 && (
-                  <div className="flex items-center justify-between text-sm text-muted">
-                    <span>Subtotal</span>
-                    <span className="line-through tabular-nums">
-                      ₹{Math.round(rawTotalPaise / 100)}
+                <div className="border-t border-line pt-3 space-y-1.5">
+                  {comboSavingsPaise > 0 && (
+                    <>
+                      <div className="flex items-center justify-between text-xs text-muted">
+                        <span>Subtotal</span>
+                        <span className="line-through tabular-nums">
+                          ₹{Math.round(rawTotalPaise / 100)}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between text-xs text-ok font-medium">
+                        <span className="flex items-center gap-1">
+                          <Sparkles className="w-3 h-3" />
+                          Combo discount
+                        </span>
+                        <span className="tabular-nums">
+                          -₹{Math.round(comboSavingsPaise / 100)}
+                        </span>
+                      </div>
+                    </>
+                  )}
+                  <div className="flex items-center justify-between pt-2 border-t border-line">
+                    <span className="text-sm font-bold text-ink">
+                      You pay
+                    </span>
+                    <span className="text-xl font-extrabold text-ink tabular-nums">
+                      ₹{amountRupees}
                     </span>
                   </div>
-                )}
-                {comboSavingsPaise > 0 && (
-                  <div className="flex items-center justify-between text-sm text-ok font-medium">
-                    <span>Combo discount</span>
-                    <span className="tabular-nums">
-                      -₹{Math.round(comboSavingsPaise / 100)}
-                    </span>
-                  </div>
-                )}
-                <div className="flex items-center justify-between pt-1 border-t border-line">
-                  <span className="text-sm font-bold text-ink">You pay</span>
-                  <span className="text-xl font-extrabold text-ink tabular-nums">
-                    ₹{amountRupees}
-                  </span>
                 </div>
               </div>
             </div>
 
-            {/* Trust signals */}
+            {/* What you get */}
             <div className="card p-4">
               <h3 className="text-xs font-bold text-ink mb-3 uppercase tracking-wider">
-                Why CrackGate?
+                What you get
               </h3>
-              <div className="grid grid-cols-1 gap-3">
-                <div className="flex items-start gap-3 text-xs text-muted">
-                  <Clock className="w-4 h-4 text-brand shrink-0 mt-0.5" />
-                  <span>
-                    Access unlocks <b>within a few hours</b> of payment verification
-                  </span>
-                </div>
-                <div className="flex items-start gap-3 text-xs text-muted">
-                  <Shield className="w-4 h-4 text-brand shrink-0 mt-0.5" />
-                  <span>
-                    Pay directly via UPI — we <b>never</b> see your bank details
-                  </span>
-                </div>
-                <div className="flex items-start gap-3 text-xs text-muted">
-                  <RotateCcw className="w-4 h-4 text-brand shrink-0 mt-0.5" />
-                  <span>
-                    Covered by our{" "}
-                    <a href="/refund" className="text-brand hover:underline font-medium">
-                      refund policy
-                    </a>
-                  </span>
-                </div>
+              <div className="grid grid-cols-1 gap-2.5">
+                {[
+                  {
+                    icon: <Zap className="w-4 h-4 text-brand" />,
+                    text: "All mocks + practice questions",
+                  },
+                  {
+                    icon: <Shield className="w-4 h-4 text-brand" />,
+                    text: "SWOT analytics dashboard",
+                  },
+                  {
+                    icon: <MessageCircle className="w-4 h-4 text-brand" />,
+                    text: "WhatsApp support",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.text}
+                    className="flex items-center gap-2.5 text-xs text-muted"
+                  >
+                    {item.icon}
+                    <span>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-3 pt-3 border-t border-line flex items-center gap-2 text-[11px] text-muted">
+                <Clock className="w-3.5 h-3.5 shrink-0" />
+                <span>
+                  Unlocks <b>within hours</b> of payment verification
+                </span>
+              </div>
+              <div className="mt-2 flex items-center gap-2 text-[11px] text-muted">
+                <RotateCcw className="w-3.5 h-3.5 shrink-0" />
+                <span>
+                  Covered by our{" "}
+                  <a
+                    href="/refund"
+                    className="text-brand hover:underline font-medium"
+                  >
+                    refund policy
+                  </a>
+                </span>
               </div>
             </div>
 
-            {/* WhatsApp help */}
+            {/* WhatsApp help — compact */}
             <a
               href={whatsappLink(
                 `Hi! I need help with my cart checkout (₹${amountRupees}) UPI payment.`,
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="card p-4 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer group"
+              className="card p-3 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer group"
             >
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand/10 group-hover:bg-brand/15 transition">
-                <MessageCircle className="w-5 h-5 text-brand" />
+              <div className="flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 group-hover:bg-brand/15 transition shrink-0">
+                <MessageCircle className="w-4 h-4 text-brand" />
               </div>
-              <div>
-                <p className="text-sm font-semibold text-ink">Need help?</p>
-                <p className="text-xs text-muted">
-                  Chat with us on WhatsApp — we reply fast
+              <div className="min-w-0">
+                <p className="text-xs font-semibold text-ink">Need help?</p>
+                <p className="text-[11px] text-muted truncate">
+                  Chat with us on WhatsApp
                 </p>
               </div>
             </a>
@@ -441,86 +446,27 @@ export default async function CheckoutPage() {
         </div>
       </div>
 
-      {/* Recent claims */}
-      {myClaims.length > 0 && (
-        <div className="card p-6 mt-10">
-          <h2 className="font-bold text-lg">Your recent claims</h2>
-          <div className="mt-3 overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="text-xs text-muted">
-                <tr className="text-left">
-                  <th className="py-2 pr-3">When</th>
-                  <th className="py-2 pr-3">Plan</th>
-                  <th className="py-2 pr-3">Amount</th>
-                  <th className="py-2 pr-3">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {myClaims.map((c) => (
-                  <tr key={c.id} className="border-t border-border/60">
-                    <td className="py-2 pr-3">
-                      {c.createdAt
-                        .toISOString()
-                        .slice(0, 16)
-                        .replace("T", " ")}
-                    </td>
-                    <td className="py-2 pr-3">{c.plan}</td>
-                    <td className="py-2 pr-3">
-                      ₹{Math.round(c.amountPaise / 100)}
-                    </td>
-                    <td className="py-2 pr-3">
-                      <StatusPill status={c.status} note={c.adminNote} />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
       {/* Mobile sticky CTA */}
       <div className="fixed bottom-0 left-0 right-0 lg:hidden border-t border-line bg-paper/95 backdrop-blur-md px-5 py-3 z-50">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <p className="text-xs text-muted">Total</p>
+            {comboSavingsPaise > 0 && (
+              <p className="text-xs text-ok font-semibold">
+                Save ₹{Math.round(comboSavingsPaise / 100)}
+              </p>
+            )}
             <p className="text-xl font-extrabold text-ink tabular-nums">
               ₹{amountRupees}
             </p>
           </div>
           <a
             href="#payerName"
-            className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition hover:from-indigo-500 hover:to-violet-500"
+            className="cg-shimmer rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition hover:from-indigo-500 hover:to-violet-500"
           >
-            Pay ₹{amountRupees} →
+            Continue →
           </a>
         </div>
       </div>
     </div>
-  );
-}
-
-function StatusPill({
-  status,
-  note,
-}: {
-  status: "pending" | "approved" | "rejected";
-  note?: string | null;
-}) {
-  const cls =
-    status === "approved"
-      ? "bg-ok/15 text-ok"
-      : status === "rejected"
-        ? "bg-err/15 text-err"
-        : "bg-warn/15 text-warn";
-  return (
-    <span className="inline-flex flex-col">
-      <span className={`px-2 py-0.5 rounded text-xs font-semibold ${cls}`}>
-        {status}
-      </span>
-      {status === "rejected" && note && (
-        <span className="text-[10px] text-muted mt-1">{note}</span>
-      )}
-    </span>
   );
 }
