@@ -16,11 +16,13 @@ import {
   LogOut,
   ExternalLink,
   Users,
+  LogIn,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/admin/logins", label: "Logins", icon: LogIn },
   { href: "/admin/reports", label: "Reports", icon: FileText, badge: true },
   { href: "/admin/newsletter", label: "Newsletter", icon: Send },
   { href: "/admin/upi", label: "Payments", icon: CreditCard, badge: true },
