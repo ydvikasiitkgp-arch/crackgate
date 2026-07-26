@@ -185,6 +185,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (token.email && adminEmails.includes(String(token.email).toLowerCase())) {
         token.role = "admin";
       }
+      // Throttled lastLoginAt update: once per 24h, fire-and-forget.
+      const lastLoginUpdate = (token as Record<string, unknown>).lastLoginUpdate as number | undefined;
+      if (!lastLoginUpdate || now - lastLoginUpdate > 24 * 60 * 60_000) {
+        (token as Record<string, unknown>).lastLoginUpdate = now;
+        db.user.update({ where: { id: token.uid as string }, data: { lastLoginAt: new Date() } })
+          .catch(() => {/* best-effort */});
+      }
       return token;
     },
     async session({ session, token }) {
