@@ -164,37 +164,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Team ── */}
-      <section className="max-w-4xl mx-auto px-5 py-20">
-        <div className="text-center">
-          <span className="badge bg-brand/10 text-brand">The Founders</span>
-          <h2 className="mt-3 text-3xl font-extrabold text-ink">
-            IIT Kharagpur alumni who understand the exam.
-          </h2>
-          <p className="mt-3 text-muted max-w-2xl mx-auto">
-            Our founders didn't just study at one of India's top institutions — they
-            leveraged that academic foundation to build a platform that reflects the
-            precision and rigor the GATE and PSU exams demand.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          <FounderCard
-            initials="VY"
-            name="Vikas Yadav"
-            role="Founder"
-            credentials="M.Tech, IIT Kharagpur"
-            blurb="An engineer by training and a problem-solver by nature. Vikas leads product development and question design at CrackGate, ensuring every problem meets the highest standards of accuracy and relevance."
-          />
-          <FounderCard
-            initials="VK"
-            name="Vishal Kumar"
-            role="Co-founder"
-            credentials="B.Tech, BIT Sindri · M.Tech, IIT Kharagpur · Coal India Limited"
-            blurb="With hands-on experience at Coal India Limited and a deep understanding of PSU recruitment standards, Vishal brings industry perspective to every question and solution on the platform."
-          />
-        </div>
-      </section>
-
       {/* ── Values ── */}
       <section className="bg-paper/50">
         <div className="max-w-5xl mx-auto px-5 py-20">
@@ -243,32 +212,6 @@ export default function About() {
   );
 }
 
-function FounderCard({
-  initials,
-  name,
-  role,
-  credentials,
-  blurb,
-}: {
-  initials: string;
-  name: string;
-  role: string;
-  credentials: string;
-  blurb: string;
-}) {
-  return (
-    <div className="card p-6 flex gap-5">
-      <div className="shrink-0 w-14 h-14 rounded-full bg-brand/10 text-brand grid place-items-center font-bold text-lg">
-        {initials}
-      </div>
-      <div className="min-w-0">
-        <div className="font-bold text-ink text-lg">{name}</div>
-        <div className="text-xs uppercase tracking-wider text-brand font-semibold">{role}</div>
-        <div className="text-sm text-ink/70 mt-1">{credentials}</div>
-        <p className="text-sm text-muted mt-2 leading-relaxed">{blurb}</p>
-      </div>
-    </div>
-  );
-}
+
 
 
