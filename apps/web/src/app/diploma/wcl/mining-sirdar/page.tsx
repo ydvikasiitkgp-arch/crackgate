@@ -6,6 +6,7 @@ import { ShareOnWhatsApp } from "@/components/share-on-whatsapp";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { AddToCartBtn } from "@/components/add-to-cart-btn";
 import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
 import { hasEntitlement } from "@/lib/entitlements";
 
 export const dynamic = "force-dynamic";
@@ -51,6 +52,15 @@ export default async function WCLMiningSirdarPage() {
   const userId = (session?.user as { id?: string } | undefined)?.id;
   const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
   const unlocked = isAdmin || (await hasEntitlement(userId ?? "", "DIPLOMA", "wcl-sirdar"));
+
+  const attempts = userId
+    ? await db.attempt.findMany({
+        where: { userId, kind: "mock" },
+        select: { id: true, refId: true, takenAt: true },
+      })
+    : [];
+  const completedIds = new Set(attempts.filter(a => a.refId.startsWith("diploma-wcl-sirdar-mock-")).map(a => a.refId));
+  const attemptMap = new Map(attempts.map(a => [a.refId, { id: a.id, takenAt: a.takenAt }]));
 
   const liveCount = WCL_SIRDAR_MOCKS.length;
   const payHref = "/pay/upi?plan=pro&exam=DIPLOMA&subject=wcl-sirdar";
@@ -168,14 +178,20 @@ export default async function WCLMiningSirdarPage() {
           </div>
         )}
 
+        {completedIds.size > 0 && (
+          <p className="text-sm text-muted mt-6">
+            {completedIds.size} / {liveCount} completed · {liveCount - completedIds.size} remaining
+          </p>
+        )}
+
         {/* Mock card grid */}
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {WCL_SIRDAR_MOCKS.map((m) => {
-            const canStart = unlocked;
+            const done = completedIds.has(m.id);
             return (
               <div key={m.id} className="card relative flex flex-col p-5">
-                <span className={`badge absolute right-4 top-4 ${unlocked ? "bg-brand/10 text-brand" : "badge-pro"}`}>
-                  {unlocked ? "Ready" : "Locked"}
+                <span className={`badge absolute right-4 top-4 ${done ? "bg-ok/10 text-ok" : unlocked ? "bg-brand/10 text-brand" : "badge-pro"}`}>
+                  {done ? "✓ Completed" : unlocked ? "Ready" : "Locked"}
                 </span>
                 <div className="text-xs font-mono text-brand">{m.title}</div>
                 <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted">
@@ -183,7 +199,11 @@ export default async function WCLMiningSirdarPage() {
                   <span className="rounded-md bg-canvas px-2 py-1">{m.duration} min</span>
                   <span className="rounded-md bg-canvas px-2 py-1">{m.totalMarks} marks</span>
                 </div>
-                {canStart ? (
+                {done ? (
+                  <Link href={`/result/${attemptMap.get(m.id)!.id}`} className="btn btn-ghost mt-4 w-full justify-center">
+                    Review Answers →
+                  </Link>
+                ) : unlocked ? (
                   <Link href={`/mocks/${m.id}`} className="btn btn-primary mt-4 w-full justify-center">
                     Start Mock
                   </Link>
