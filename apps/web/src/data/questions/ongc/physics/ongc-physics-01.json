@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The divergence of the electric field ∇·E in a region containing no charge is:",
       "options": [
-        "Positive and constant",
-        "Negative and constant",
         "Zero",
-        "Depends on the coordinate system"
+        "Depends on the coordinate system",
+        "Positive and constant",
+        "Negative and constant"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "By Gauss's law, ∇·E = ρ/ε₀. In a charge-free region ρ = 0, so ∇·E = 0 everywhere regardless of the coordinate system.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "hard",
       "stem": "The value of the contour integral ∮(z² + 1)/(z² − 4) dz taken counter-clockwise around |z| = 3 is:",
       "options": [
-        "0",
         "2πi",
         "4πi",
-        "6πi"
+        "6πi",
+        "0"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The integrand f(z) = (z²+1)/((z−2)(z+2)) has simple poles at z = 2 and z = −2, both inside |z| = 3. Residue at z = 2: lim(z→2)(z−2)·(z²+1)/((z−2)(z+2)) = (4+1)/(2+2) = 5/4. Residue at z = −2: lim(z→−2)(z+2)·(z²+1)/((z−2)(z+2)) = (4+1)/(−2−2) = −5/4. Sum of residues = 5/4 − 5/4 = 0. By the residue theorem, ∮f(z)dz = 2πi × 0 = 0.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "medium",
       "stem": "A 2×2 matrix A has eigenvalues 3 and −1. The determinant of A is:",
       "options": [
+        "−1",
         "2",
         "3",
-        "−3",
-        "−1"
+        "−3"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "det(A) = product of eigenvalues = 3 × (−1) = −3. This follows from the characteristic polynomial λ² − tr(A)λ + det(A) = 0, where det(A) = λ₁λ₂.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "medium",
       "stem": "The general solution of the differential equation y'' − 3y' + 2y = eˣ is:",
       "options": [
-        "c₁eˣ + c₂e²ˣ + xeˣ",
-        "c₁eˣ + c₂e²ˣ − xeˣ",
         "c₁eˣ + c₂e²ˣ + x²eˣ",
-        "c₁eˣ + c₂e²ˣ"
+        "c₁eˣ + c₂e²ˣ",
+        "c₁eˣ + c₂e²ˣ + xeˣ",
+        "c₁eˣ + c₂e²ˣ − xeˣ"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Homogeneous: r²−3r+2=0 → r=1,2, so y_h = c₁eˣ + c₂e²ˣ. Since eˣ is already a homogeneous solution, try y_p = Axeˣ. Then y_p' = A(eˣ + xeˣ), y_p'' = A(2eˣ + xeˣ). Substituting: A[(2eˣ+xeˣ) − 3(eˣ+xeˣ) + 2xeˣ] = A[−eˣ] = eˣ, so A = −1. General solution: y = c₁eˣ + c₂e²ˣ − xeˣ.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "easy",
       "stem": "The Fourier transform of the function f(t) = e^(−a|t|) where a > 0 is:",
       "options": [
-        "2a/(a² + ω²)",
         "a/(a² + ω²)",
         "1/(a² + ω²)",
-        "2a/(a + ω²)"
+        "2a/(a + ω²)",
+        "2a/(a² + ω²)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "F(ω) = ∫₋∞^∞ e^(−a|t|)e^(−iωt)dt = ∫₋∞^0 e^(at−iωt)dt + ∫₀^∞ e^(−at−iωt)dt = 1/(a−iω) + 1/(a+iω) = 2a/(a² + ω²). This is the Lorentzian function.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "medium",
       "stem": "For a simple pendulum of length l and mass m, the Lagrangian L = T − V in terms of the angular displacement θ is:",
       "options": [
+        "½ml²θ̇² − mglθ",
         "½ml²θ̇² − mgl(1 − cos θ)",
         "½ml²θ̇² + mgl(1 − cos θ)",
-        "½ml²θ̇² − mgl cos θ",
-        "½ml²θ̇² − mglθ"
+        "½ml²θ̇² − mgl cos θ"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "T = ½ml²θ̇² (kinetic energy of the bob). V = −mgl cos θ (taking the pivot as reference). L = T − V = ½ml²θ̇² + mgl cos θ. But conventionally V is measured from the lowest point: V = mgl(1 − cos θ), giving L = ½ml²θ̇² − mgl(1 − cos θ). Both are physically equivalent since the constant mgl doesn't affect equations of motion.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "In the Rutherford scattering of alpha particles, the impact parameter b is related to the scattering angle θ by the relation:",
       "options": [
-        "b = (kZ₁Z₂e²/2E) cot(θ/2)",
-        "b = (kZ₁Z₂e²/2E) tan(θ/2)",
         "b = (kZ₁Z₂e²/E) cot(θ/2)",
-        "b = (kZ₁Z₂e²/2E) sin(θ/2)"
+        "b = (kZ₁Z₂e²/2E) sin(θ/2)",
+        "b = (kZ₁Z₂e²/2E) cot(θ/2)",
+        "b = (kZ₁Z₂e²/2E) tan(θ/2)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The exact Rutherford formula: b = (kZ₁Z₂e²)/(2E) · cot(θ/2), where k = 1/(4πε₀), E is the kinetic energy of the projectile, and θ is the scattering angle. This follows from conservation of energy and angular momentum in the Coulomb potential.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "The Poisson bracket {q, p} for canonical variables q and p is equal to:",
       "options": [
-        "0",
         "1",
         "−1",
-        "q·p"
+        "q·p",
+        "0"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "By definition, {A, B} = Σᵢ(∂A/∂qᵢ · ∂B/∂pᵢ − ∂A/∂pᵢ · ∂B/∂qᵢ). For {q, p}: ∂q/∂q · ∂p/∂p − ∂q/∂p · ∂p/∂q = 1·1 − 0·0 = 1. This is the fundamental Poisson bracket of canonical variables.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "medium",
       "stem": "A particle has total energy E = 2mc² where m is its rest mass. Its momentum is:",
       "options": [
+        "mc/√2",
         "mc",
         "√3 mc",
-        "2mc",
-        "mc/√2"
+        "2mc"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Using E² = (pc)² + (mc²)²: (2mc²)² = (pc)² + (mc²)² → 4m²c⁴ = p²c² + m²c⁴ → p²c² = 3m²c⁴ → p = √3 mc.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "hard",
       "stem": "Two identical pendulums of length l are coupled by a spring of spring constant k attached at a distance a from the pivot. The frequency of the antisymmetric mode is:",
       "options": [
-        "√(g/l)",
         "√(g/l + 2ka²/ml²)",
         "√(g/l + ka²/ml²)",
-        "√(g/l − ka²/ml²)"
+        "√(g/l − ka²/ml²)",
+        "√(g/l)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For the antisymmetric mode, θ₁ = −θ₂ = θ, so the spring stretches by 2aθ. The effective potential becomes V = mgl(1−cosθ) + ½k(2aθ)² ≈ ½(mgl + 2ka²)θ². The equation of motion gives ml²θ̈ = −(mgl + 2ka²)θ, so ω² = g/l + 2ka²/(ml²).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "easy",
       "stem": "Which of Maxwell's equations predicts the existence of electromagnetic waves?",
       "options": [
+        "Lorentz force law",
         "Gauss's law for electricity",
         "Gauss's law for magnetism",
-        "Faraday's law + Ampère-Maxwell law",
-        "Lorentz force law"
+        "Faraday's law + Ampère-Maxwell law"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The coupling between changing electric fields (Ampère-Maxwell law: ∇×B = μ₀J + μ₀ε₀∂E/∂t) and changing magnetic fields (Faraday's law: ∇×E = −∂B/∂t) allows self-sustaining electromagnetic wave propagation. The other equations are constraints but don't by themselves predict waves.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "easy",
       "stem": "At the interface between a conductor and free space in electrostatics, the electric field just outside the conductor is:",
       "options": [
-        "Perpendicular to the surface with magnitude σ/ε₀",
-        "Parallel to the surface with magnitude σ/ε₀",
         "Perpendicular to the surface with magnitude σ/2ε₀",
-        "Zero"
+        "Zero",
+        "Perpendicular to the surface with magnitude σ/ε₀",
+        "Parallel to the surface with magnitude σ/ε₀"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Inside a conductor E = 0. Using Gauss's pillbox at the surface: E_above·n̂ − E_inside·n̂ = σ/ε₀. Since E_inside = 0, E_outside = σ/ε₀ directed perpendicular to the surface (outward for positive σ). This is a standard boundary condition result.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "The skin depth δ in a good conductor at frequency f is proportional to:",
       "options": [
-        "f",
         "√f",
         "1/f",
-        "1/√f"
+        "1/√f",
+        "f"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Skin depth δ = √(2/(ωμσ)) = √(1/(πfμσ)). So δ ∝ 1/√f. As frequency increases, the skin depth decreases — higher frequency EM waves penetrate less into conductors.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "The time-averaged Poynting vector for a plane electromagnetic wave in free space with electric field amplitude E₀ is:",
       "options": [
+        "ε₀E₀²/(2c)",
         "½ε₀cE₀²",
         "ε₀cE₀²",
-        "½ε₀E₀²/c",
-        "ε₀E₀²/(2c)"
+        "½ε₀E₀²/c"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "⟨S⟩ = ½E₀H₀ = ½E₀(B₀/μ₀) = ½E₀(E₀/c)/μ₀ = ½ε₀cE₀² (using c = 1/√(ε₀μ₀)). This represents the energy flux per unit area per unit time.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "hard",
       "stem": "Under the Lorentz gauge condition ∇·A + (1/c²)∂φ/∂t = 0, the retarded potentials satisfy:",
       "options": [
-        "Laplace's equation",
-        "Poisson's equation",
         "Wave equation with source terms",
-        "Helmholtz equation"
+        "Helmholtz equation",
+        "Laplace's equation",
+        "Poisson's equation"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "In the Lorentz gauge, both φ and A satisfy inhomogeneous wave equations: ∇²φ − (1/c²)∂²φ/∂t² = −ρ/ε₀ and ∇²A − (1/c²)∂²A/∂t² = −μ₀J. These are wave equations driven by the charge and current sources.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "hard",
       "stem": "The de Broglie wavelength of an electron accelerated through a potential difference V is:",
       "options": [
-        "h/√(2meV)",
         "h/√(2meV)²",
         "h√(2meV)",
-        "h/(meV)"
+        "h/(meV)",
+        "h/√(2meV)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "From eV = p²/(2m), we get p = √(2meV). The de Broglie wavelength λ = h/p = h/√(2meV). This is the standard expression used in electron diffraction experiments.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "medium",
       "stem": "The ground state energy of a particle in a one-dimensional infinite potential well of width L is:",
       "options": [
+        "πℏ/(2mL)",
         "π²ℏ²/(2mL²)",
         "ℏ²/(2mL²)",
-        "π²ℏ²/(mL²)",
-        "πℏ/(2mL)"
+        "π²ℏ²/(mL²)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For the infinite well, Eₙ = n²π²ℏ²/(2mL²). The ground state (n=1): E₁ = π²ℏ²/(2mL²). This is the zero-point energy — a purely quantum mechanical result with no classical analogue.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "medium",
       "stem": "The commutation relation between the angular momentum components [Lₓ, Lᵧ] is:",
       "options": [
-        "iℏLₓ",
-        "iℏLᵧ",
         "iℏL_z",
-        "−iℏL_z"
+        "−iℏL_z",
+        "iℏLₓ",
+        "iℏLᵧ"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The angular momentum commutation relations are [Lᵢ, Lⱼ] = iℏε_ijk Lₖ. So [Lₓ, Lᵧ] = iℏε_xyz L_z = iℏL_z. This cyclic symmetry is fundamental to angular momentum algebra.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "medium",
       "stem": "The number of radial nodes in the 3d orbital of hydrogen is:",
       "options": [
-        "0",
         "1",
         "2",
-        "3"
+        "3",
+        "0"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Number of radial nodes = n − l − 1. For 3d: n = 3, l = 2. Radial nodes = 3 − 2 − 1 = 0. The 3d orbital has no radial nodes — only the angular nodes (2 nodal planes).",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "easy",
       "stem": "In first-order time-independent perturbation theory, the first-order correction to the energy eigenvalue is:",
       "options": [
+        "dEₙ/dλ",
         "⟨n⁰|H'|n⁰⟩",
         "Σ_{m≠n} |⟨m⁰|H'|n⁰⟩|²/(Eₙ⁰ − Eₘ⁰)",
-        "⟨n⁰|H'|n¹⟩",
-        "dEₙ/dλ"
+        "⟨n⁰|H'|n¹⟩"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Eₙ⁽¹⁾ = ⟨n⁰|H'|n⁰⟩ — the expectation value of the perturbation in the unperturbed state. Option B is the second-order correction. Option D is the Hellmann-Feynman theorem, which gives the first-order energy but requires knowing the exact wavefunction.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "hard",
       "stem": "The efficiency of a Carnot engine operating between reservoirs at temperatures T₁ (hot) and T₂ (cold) is:",
       "options": [
-        "T₂/T₁",
-        "1 − T₂/T₁",
         "(T₁ − T₂)/T₁",
-        "Both B and C"
+        "Both B and C",
+        "T₂/T₁",
+        "1 − T₂/T₁"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "η_Carnot = 1 − T₂/T₁ = (T₁ − T₂)/T₁. Options B and C are mathematically identical. The Carnot efficiency is the maximum possible for any heat engine operating between these temperatures.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "hard",
       "stem": "In the canonical ensemble, the partition function Z is related to the Helmholtz free energy F by:",
       "options": [
-        "F = −kT ln Z",
         "F = kT ln Z",
         "F = −kT Z",
-        "F = kT/Z"
+        "F = kT/Z",
+        "F = −kT ln Z"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "F = −kT ln Z, where Z = Σᵢ e^(−βEᵢ) with β = 1/(kT). This is the fundamental relation connecting the microscopic partition function to the macroscopic thermodynamic potential. All thermodynamic quantities can be derived from F.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "At the critical point of a liquid-gas phase transition, which of the following is true?",
       "options": [
+        "Works under ideal conditions",
         "Latent heat is zero",
         "The compressibility diverges",
-        "The coexistence curve terminates",
-        "All of the above"
+        "The coexistence curve terminates"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "At the critical point: (a) the latent heat of vaporization goes to zero, (b) isothermal compressibility κ_T diverges (density fluctuations become macroscopic), and (c) the liquid-gas coexistence curve terminates — there is no distinction between liquid and gas phases.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "medium",
       "stem": "The average occupation number of fermions at energy E and temperature T is given by the:",
       "options": [
-        "Bose-Einstein distribution",
-        "Fermi-Dirac distribution",
         "Maxwell-Boltzmann distribution",
-        "Rayleigh-Jeans distribution"
+        "Rayleigh-Jeans distribution",
+        "Bose-Einstein distribution",
+        "Fermi-Dirac distribution"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Fermi-Dirac: ⟨n⟩ = 1/(e^((E−μ)/kT) + 1). The +1 in the denominator (vs −1 for Bose-Einstein) enforces the Pauli exclusion principle — no two fermions can occupy the same quantum state. At T → 0, this becomes a step function at E = μ = E_F.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "In LS coupling, the fine structure splitting of the 2P term of hydrogen gives two levels with total angular momentum j =:",
       "options": [
-        "1/2 and 3/2",
         "0 and 1",
         "1/2 and 5/2",
-        "3/2 and 5/2"
+        "3/2 and 5/2",
+        "1/2 and 3/2"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For a 2P term: L = 1, S = 1/2. In LS coupling, j takes values |L−S| to L+S = |1−1/2| to 1+1/2 = 1/2 and 3/2. The 2P₁/₂ and 2P₃/₂ levels have an energy splitting proportional to L·S.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "easy",
       "stem": "The normal Zeeman effect splits a spectral line into how many components in a magnetic field?",
       "options": [
+        "Depends on the quantum numbers",
         "1",
         "2",
-        "3",
-        "Depends on the quantum numbers"
+        "3"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "In the normal Zeeman effect (when S = 0), a spectral line splits into exactly 3 components: one unshifted (π polarization, Δm = 0) and two shifted (σ± polarization, Δm = ±1). The splitting is ΔE = μ_B B. This is a purely classical result also predicted by Lorentz's electron theory.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "medium",
       "stem": "The selection rule for pure rotational transitions in a diatomic molecule is:",
       "options": [
-        "ΔJ = 0",
-        "ΔJ = ±1",
         "ΔJ = ±2",
-        "ΔJ = 0, ±1"
+        "ΔJ = 0, ±1",
+        "ΔJ = 0",
+        "ΔJ = ±1"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For pure rotational (microwave) spectra: ΔJ = ±1. This gives the characteristic equally-spaced rotational lines at frequencies ν = 2B(J+1), where B = ℏ²/(2I) is the rotational constant. ΔJ = 0 is forbidden; ΔJ = ±2 applies to Raman spectra.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "easy",
       "stem": "Population inversion in a laser medium means:",
       "options": [
-        "All atoms are in the ground state",
         "More atoms are in the excited state than in the ground state",
         "Equal population of ground and excited states",
-        "Only one atom is excited"
+        "Applies to cohesive soils",
+        "All atoms are in the ground state"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Population inversion (N₂ > N₁) is necessary for stimulated emission to dominate over absorption. In thermal equilibrium, N₂ < N₁ (Boltzmann distribution). A pumping mechanism (optical, electrical) is required to achieve inversion, enabling laser amplification.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "hard",
       "stem": "The Franck-Condon principle explains the intensity distribution in electronic spectra based on:",
       "options": [
+        "Spin-orbit coupling strength",
         "Energy conservation only",
         "Overlap of vibrational wavefunctions in the two electronic states",
-        "Selection rules for rotational transitions",
-        "Spin-orbit coupling strength"
+        "Selection rules for rotational transitions"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Franck-Condon principle states that electronic transitions occur so fast that nuclear positions remain essentially unchanged (vertical transitions). The intensity of each vibronic line is proportional to the square of the overlap integral |⟨v'|v''⟩|² (Franck-Condon factor) between initial and final vibrational wavefunctions.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "medium",
       "stem": "In Raman scattering, the Stokes lines have frequency:",
       "options": [
-        "Higher than the incident light",
-        "Lower than the incident light",
         "Equal to the incident light",
-        "Twice the incident light"
+        "Twice the incident light",
+        "Higher than the incident light",
+        "Lower than the incident light"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Stokes lines: ν_scattered = ν_incident − ν_molecule (lower frequency, molecule gains energy). Anti-Stokes lines: ν_scattered = ν_incident + ν_molecule (higher frequency, molecule loses energy). Anti-Stokes is weaker because it requires the molecule to be in an excited vibrational state initially.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "hard",
       "stem": "Bragg's law for X-ray diffraction from crystal planes is:",
       "options": [
-        "nλ = 2d sin θ",
         "nλ = 2d cos θ",
         "nλ = d sin θ",
-        "λ = 2d sin θ"
+        "λ = 2d sin θ",
+        "nλ = 2d sin θ"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Bragg's law: nλ = 2d sin θ, where n is the order of diffraction, λ is the wavelength, d is the interplanar spacing, and θ is the glancing angle (measured from the plane, not the normal). This gives constructive interference from parallel crystal planes.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "easy",
       "stem": "In an intrinsic semiconductor at absolute zero, which of the following is true?",
       "options": [
+        "There is no band gap",
         "The conduction band is empty and the valence band is full",
         "Both bands are partially filled",
-        "The conduction band is full and the valence band is empty",
-        "There is no band gap"
+        "The conduction band is full and the valence band is empty"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "At T = 0 K, all electrons occupy the lowest available states. In an intrinsic semiconductor, the valence band is completely filled and the conduction band is completely empty. Thermal excitation across the band gap creates electron-hole pairs at T > 0.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "medium",
       "stem": "The Meissner effect in a superconductor refers to:",
       "options": [
-        "Zero electrical resistance",
-        "Expulsion of magnetic flux from the interior",
         "Quantization of magnetic flux",
-        "Josephson tunneling"
+        "Josephson tunneling",
+        "Zero electrical resistance",
+        "Expulsion of magnetic flux from the interior"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Meissner effect is the expulsion of magnetic flux (B = 0 inside) when a material transitions to the superconducting state — distinct from mere perfect diamagnetism. It demonstrates that superconductivity is a thermodynamic phase, not just zero resistance. Type-I superconductors show complete Meissner effect; Type-II show partial flux penetration via vortices.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "hard",
       "stem": "The density of states of phonons in a 3D Debye solid at low temperatures goes as:",
       "options": [
-        "T",
         "T²",
         "T³",
-        "constant"
+        "constant",
+        "T"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "At low T, the phonon density of states g(ω) ∝ ω². Combined with the Bose-Einstein occupation, the energy density u ∝ T⁴ and the heat capacity C_V ∝ T³ (Debye T³ law). This is the correct low-temperature limit for acoustic phonons in 3D.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "The magnetic susceptibility of a diamagnetic material is:",
       "options": [
+        "Zero at all temperatures",
         "Positive and large",
         "Negative and small",
-        "Positive and proportional to 1/T",
-        "Zero at all temperatures"
+        "Positive and proportional to 1/T"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diamagnetic susceptibility is negative (χ < 0) and small in magnitude (~10⁻⁵), and is essentially independent of temperature. Paramagnetic susceptibility is positive and follows Curie's law (χ ∝ 1/T). The negative sign indicates the induced moment opposes the applied field.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "easy",
       "stem": "In an n-type semiconductor, the majority carriers are:",
       "options": [
-        "Holes",
-        "Electrons",
         "Both equal",
-        "Depends on temperature"
+        "Depends on temperature",
+        "Holes",
+        "Electrons"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In n-type semiconductors, donor impurities (Group V like P, As) donate extra electrons. Electrons are majority carriers; holes are minority carriers. The n ≫ p in the bulk at room temperature.",
       "estSec": 10,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "hard",
       "stem": "The built-in potential of a silicon PN junction at room temperature with Nₐ = 10¹⁶ cm⁻³ and N_d = 10¹⁷ cm⁻³ is approximately:",
       "options": [
-        "0.3 V",
         "0.6 V",
         "0.7 V",
-        "0.9 V"
+        "0.9 V",
+        "0.3 V"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "V_bi = (kT/q) ln(NₐN_d/nᵢ²) = 0.026 × ln(10¹⁶ × 10¹⁷/(1.5×10¹⁰)²) = 0.026 × ln(10³³/2.25×10²⁰) = 0.026 × ln(4.44×10¹²) = 0.026 × 29.1 ≈ 0.76 V. Rounded to 0.7 V which is the standard value for Si.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "easy",
       "stem": "An ideal operational amplifier has:",
       "options": [
+        "Both A and C",
         "Infinite input impedance and zero output impedance",
         "Zero input impedance and infinite output impedance",
-        "Finite gain and finite bandwidth",
-        "Both A and C"
+        "Finite gain and finite bandwidth"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Ideal op-amp properties: infinite open-loop gain, infinite input impedance (no current drawn), zero output impedance (can drive any load), infinite bandwidth, and zero offset voltage. These are approximations — real op-amps approach these limits.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "easy",
       "stem": "The Boolean expression A + A̅B simplifies to:",
       "options": [
-        "A",
-        "A + B",
         "B",
-        "A̅ + B"
+        "A̅ + B",
+        "A",
+        "A + B"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A + A̅B = (A + A̅)(A + B) = 1 · (A + B) = A + B (using the distributive law of Boolean algebra). This is the absorption law.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "The semi-empirical mass formula for nuclear binding energy contains a volume term, surface term, Coulomb term, asymmetry term, and:",
       "options": [
-        "Pairing term",
         "Surface tension term",
         "Nuclear force term",
-        "Spin-orbit term"
+        "Spin-orbit term",
+        "Pairing term"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The five terms of the SEMF (Bethe-Weizsäcker formula): B = a_V A − a_S A^(2/3) − a_C Z(Z−1)/A^(1/3) − a_A(A−2Z)²/A ± a_P/A^(3/2). The pairing term (±a_P) accounts for the extra stability of even-even nuclei and instability of odd-odd nuclei.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "hard",
       "stem": "A student scored 72% in an exam where the passing mark is 60%. If the total marks are 200, by how many marks did the student exceed the passing mark?",
       "options": [
+        "60 marks",
         "24 marks",
         "36 marks",
-        "48 marks",
-        "60 marks"
+        "48 marks"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Student scored: 72% of 200 = 144. Passing: 60% of 200 = 120. Excess = 144 − 120 = 24 marks.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -933,12 +933,12 @@
       "difficulty": "medium",
       "stem": "A can complete a task in 12 days and B can complete it in 18 days. Working together, how many days will they take to finish the work?",
       "options": [
-        "7.2 days",
-        "7.5 days",
         "8 days",
-        "6 days"
+        "6 days",
+        "7.2 days",
+        "7.5 days"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A's rate = 1/12 per day; B's rate = 1/18 per day. Combined = 1/12 + 1/18 = 3/36 + 2/36 = 5/36 per day. Days = 36/5 = 7.2 days.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -959,12 +959,12 @@
       "difficulty": "medium",
       "stem": "A shopkeeper buys an article for Rs.800 and sells it at a 25% profit. What is the selling price?",
       "options": [
-        "Rs.950",
         "Rs.1,000",
         "Rs.1,050",
-        "Rs.1,100"
+        "Rs.1,100",
+        "Rs.950"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "SP = CP × (1 + profit%/100) = 800 × 1.25 = Rs.1,000.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "The average of five numbers is 42. If one number is excluded, the average becomes 38. What is the excluded number?",
       "options": [
+        "60",
         "52",
         "56",
-        "58",
-        "60"
+        "58"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Total of 5 numbers = 5 × 42 = 210. Total of 4 numbers = 4 × 38 = 152. Excluded number = 210 − 152 = 58.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1011,12 +1011,12 @@
       "difficulty": "hard",
       "stem": "Two dice are thrown simultaneously. What is the probability that the sum of the numbers is 7?",
       "options": [
-        "1/6",
-        "1/12",
         "5/36",
-        "7/36"
+        "7/36",
+        "1/6",
+        "1/12"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Total outcomes = 36. Favorable pairs for sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 outcomes. Probability = 6/36 = 1/6.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1037,12 +1037,12 @@
       "difficulty": "medium",
       "stem": "If A:B = 3:5 and B:C = 4:7, then A:B:C is:",
       "options": [
-        "12:20:35",
         "3:4:7",
         "12:20:21",
-        "9:15:35"
+        "9:15:35",
+        "12:20:35"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A:B = 3:5 and B:C = 4:7. Make B common: A:B = 12:20, B:C = 20:35. So A:B:C = 12:20:35.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1063,12 +1063,12 @@
       "difficulty": "medium",
       "stem": "A train 120 m long passes a pole in 12 seconds. How long will it take to pass a platform 180 m long?",
       "options": [
+        "35 sec",
         "20 sec",
         "25 sec",
-        "30 sec",
-        "35 sec"
+        "30 sec"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Speed = 120/12 = 10 m/s. Total distance = 120 + 180 = 300 m. Time = 300/10 = 30 seconds.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1089,12 +1089,12 @@
       "difficulty": "medium",
       "stem": "The compound interest on Rs.10,000 at 10% per annum for 2 years compounded annually is:",
       "options": [
-        "Rs.2,000",
-        "Rs.2,100",
         "Rs.2,200",
-        "Rs.1,100"
+        "Rs.1,100",
+        "Rs.2,000",
+        "Rs.2,100"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A = P(1 + r/100)ⁿ = 10000(1.1)² = 10000 × 1.21 = 12,100. CI = A − P = 12,100 − 10,000 = Rs.2,100.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1115,12 +1115,12 @@
       "difficulty": "hard",
       "stem": "How many ways can 5 books be arranged on a shelf?",
       "options": [
-        "25",
         "60",
         "120",
-        "720"
+        "720",
+        "25"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1141,12 +1141,12 @@
       "difficulty": "hard",
       "stem": "The HCF of 24, 36 and 60 is:",
       "options": [
+        "24",
         "6",
         "12",
-        "18",
-        "24"
+        "18"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "24 = 2³ × 3, 36 = 2² × 3², 60 = 2² × 3 × 5. HCF = 2² × 3 = 12.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1167,12 +1167,12 @@
       "difficulty": "hard",
       "stem": "A boat can travel 20 km upstream in 5 hours and 20 km downstream in 2 hours. What is the speed of the current?",
       "options": [
-        "2 km/h",
-        "3 km/h",
         "4 km/h",
-        "5 km/h"
+        "5 km/h",
+        "2 km/h",
+        "3 km/h"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Upstream speed = 20/5 = 4 km/h. Downstream speed = 20/2 = 10 km/h. Speed of current = (downstream − upstream)/2 = (10 − 4)/2 = 3 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1193,12 +1193,12 @@
       "difficulty": "medium",
       "stem": "Pipe A can fill a tank in 20 hours and Pipe B can empty it in 30 hours. If both are opened simultaneously, the tank will be full in:",
       "options": [
-        "50 hours",
         "60 hours",
         "40 hours",
-        "45 hours"
+        "45 hours",
+        "50 hours"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A's rate = 1/20 per hour (filling). B's rate = −1/30 per hour (emptying). Net rate = 1/20 − 1/30 = (3−2)/60 = 1/60 per hour. Time = 60 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1219,12 +1219,12 @@
       "difficulty": "hard",
       "stem": "The ratio of ages of A and B is 3:5. After 8 years, the ratio becomes 5:7. What is B's present age?",
       "options": [
+        "32 years",
         "16 years",
         "20 years",
-        "24 years",
-        "32 years"
+        "24 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Let A = 3x, B = 5x. After 8 years: (3x+8)/(5x+8) = 5/7. Cross multiply: 21x + 56 = 25x + 40 → 4x = 16 → x = 4. B's age = 5 × 4 = 20 years.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1245,12 +1245,12 @@
       "difficulty": "medium",
       "stem": "What comes next in the series: 2, 6, 12, 20, 30, ?",
       "options": [
-        "36",
-        "40",
         "42",
-        "48"
+        "48",
+        "36",
+        "40"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Differences: 4, 6, 8, 10, 12. The differences increase by 2. Next number = 30 + 12 = 42. Note: n(n+1) gives 2, 6, 12, 20, 30, 42 for n = 1, 2, 3, 4, 5, 6.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1271,12 +1271,12 @@
       "difficulty": "medium",
       "stem": "If COMPUTER is coded as DNPQVUJS, then SCIENCE is coded as:",
       "options": [
-        "TDJFODF",
         "TDJFO DF",
         "TEJFODF",
+        "TDJFODF",
         "TDJFODF"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Each letter is shifted +1: C→D, O→N... wait that doesn't work. Let me recheck: C(3)→D(4), O(15)→N(14)? No. Actually looking at C→D (+1), O→P (+1)... but the given is DNPQVUJS. C(3)→D(4) ✓, O(15)→N(14) ✗. Let me recheck the coding: COMPUTER has 8 letters, DNPQVUJS has 8 letters. C→D(+1), O→N(−1), M→P(+3), P→Q(+1), U→V(+1), T→U(+1), E→J(+5), R→S(+1). The pattern is inconsistent. The answer is TDJFODF based on a consistent +1 shift: S→T, C→D, I→J, E→F, N→O, C→D, E→F.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "A says to B, 'Your mother is the only daughter of my mother.' How is A related to B?",
       "options": [
+        "Aunt",
         "Mother",
         "Sister",
-        "Grandmother",
-        "Aunt"
+        "Grandmother"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "'The only daughter of my mother' = A's mother's only daughter = A herself (if she has no sisters) or A's sister. Since A is saying it, and 'your mother' = A (or A's sister). The most direct answer is Mother — A is B's mother.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1323,12 +1323,12 @@
       "difficulty": "hard",
       "stem": "A man walks 5 km North, turns right and walks 3 km, turns right again and walks 5 km. How far and in which direction is he from the starting point?",
       "options": [
-        "3 km East",
-        "3 km West",
         "5 km East",
-        "8 km North"
+        "8 km North",
+        "3 km East",
+        "3 km West"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Starting at origin: 5 km N → (0,5). Turn right (East) 3 km → (3,5). Turn right (South) 5 km → (3,0). Distance from origin = 3 km, direction = East.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1349,12 +1349,12 @@
       "difficulty": "easy",
       "stem": "Statements: All scientists are logical. Some logical people are creative. Conclusions: I. Some scientists are creative. II. Some creative people are logical.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Applies to cohesive soils",
+        "Depends on material properties",
+        "Applies to specific environments",
+        "Depends on operating conditions"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "From 'All scientists are logical' and 'Some logical people are creative', we cannot conclude that any scientists are creative (the creative logical people may not be scientists). But 'Some creative people are logical' directly follows from statement 2 by conversion. Only II follows.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1375,12 +1375,12 @@
       "difficulty": "medium",
       "stem": "If P > Q ≥ R < S, which of the following is definitely true?",
       "options": [
+        "R > P",
         "P > R",
         "P > S",
-        "Q < S",
-        "R > P"
+        "Q < S"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "From P > Q ≥ R, we get P > R (transitivity). We cannot determine P vs S (R < S doesn't connect to P), Q vs S (no direct relation), or R vs P (R < P from P > R).",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1401,12 +1401,12 @@
       "difficulty": "hard",
       "stem": "Five persons A, B, C, D, E are sitting in a row facing north. C is to the immediate right of A. B is at one of the ends. E is to the immediate left of D. D is not next to B. Who is sitting at the left end?",
       "options": [
-        "A",
-        "B",
         "C",
-        "E"
+        "E",
+        "A",
+        "B"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "B is at an end (not next to D). If B is at right end: ...E D. C is right of A, so A C. Arrangement: A C _ _ B or _ A C _ B. E D must be together. If left end: B _ _ _ _. D not next to B, so: B E D _ _ or B _ E D _. C right of A: A C. So: B E D A C or B A C E D (D next to E). The arrangement is B A C E D. E is not at left end — wait. Let me reconsider: E is at left end in E D _ _ _. B at right end. C right of A. D not next to B: E D A C B. Left end = E.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1427,12 +1427,12 @@
       "difficulty": "hard",
       "stem": "If a car travels at 60 km/h, it reaches a destination on time. If it travels at 40 km/h, it is 2 hours late. What is the distance?",
       "options": [
-        "120 km",
         "240 km",
         "180 km",
-        "360 km"
+        "360 km",
+        "120 km"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Let distance = d. Time at 60: d/60. Time at 40: d/40. d/40 − d/60 = 2 → (3d − 2d)/120 = 2 → d = 240 km.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1448,12 +1448,12 @@
       "difficulty": "easy",
       "stem": "In a class of 40 students, Rahul's rank from the top is 15. What is his rank from the bottom?",
       "options": [
+        "28",
         "25",
         "26",
-        "27",
-        "28"
+        "27"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Rank from bottom = Total students − Rank from top + 1 = 40 − 15 + 1 = 26.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1474,12 +1474,12 @@
       "difficulty": "hard",
       "stem": "In what ratio must water be mixed with milk costing Rs.30/litre to get a mixture worth Rs.20/litre?",
       "options": [
-        "1:2",
-        "2:3",
         "1:3",
-        "3:2"
+        "3:2",
+        "1:2",
+        "2:3"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Using alligation: Water (Rs.0) and Milk (Rs.30). Mean price = Rs.20. Ratio = (30−20):(20−0) = 10:20 = 1:2. Water:Milk = 1:2.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1500,12 +1500,12 @@
       "difficulty": "medium",
       "stem": "Two trains of lengths 120 m and 180 m are running in opposite directions at 54 km/h and 72 km/h. How long will they take to cross each other?",
       "options": [
-        "6 seconds",
         "8 seconds",
         "10 seconds",
-        "12 seconds"
+        "12 seconds",
+        "6 seconds"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Relative speed = 54 + 72 = 126 km/h = 126 × (5/18) = 35 m/s. Total distance = 120 + 180 = 300 m. Time = 300/35 ≈ 8.57 seconds. The closest option is 8 seconds.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1526,12 +1526,12 @@
       "difficulty": "hard",
       "stem": "Four friends P, Q, R, S are sitting around a square table, one on each side. P is to the left of Q. R is opposite P. Who is sitting to the right of R?",
       "options": [
+        "Cannot be determined",
         "P",
         "Q",
-        "S",
-        "Cannot be determined"
+        "S"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "P is left of Q (Q sits, P is on Q's left). R is opposite P. So: clockwise from top: Q, P, S, R (or equivalent rotation). S is to the right of R.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1552,12 +1552,12 @@
       "difficulty": "easy",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
-        "Mexico, Argentina",
-        "Saudi Arabia, Iran, UAE",
         "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Nigeria, South Africa",
+        "Mexico, Argentina",
+        "Saudi Arabia, Iran, UAE"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1573,12 +1573,12 @@
       "difficulty": "easy",
       "stem": "Aditya-L1 mission studies:",
       "options": [
-        "Moon's surface",
         "Mars atmosphere",
         "Sun",
-        "Deep space"
+        "Deep space",
+        "Moon's surface"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Aditya-L1 is India's first solar observation mission.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1594,12 +1594,12 @@
       "difficulty": "medium",
       "stem": "Delhi-Mumbai Expressway is the longest expressway in India at approximately:",
       "options": [
+        "2,000 km",
         "1,200 km",
         "1,386 km",
-        "1,500 km",
-        "2,000 km"
+        "1,500 km"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Delhi-Mumbai Expressway is approximately 1,386 km long.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1615,12 +1615,12 @@
       "difficulty": "medium",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
-        "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel",
+        "AMD"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1636,12 +1636,12 @@
       "difficulty": "hard",
       "stem": "OPEC+ recently agreed to extend oil production cuts through:",
       "options": [
-        "Q1 2025",
         "Q2 2025",
         "End of 2025",
-        "Q1 2026"
+        "Q1 2026",
+        "Q1 2025"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "OPEC+ extended production cuts through end of 2025.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1657,12 +1657,12 @@
       "difficulty": "hard",
       "stem": "The International Energy Agency (IEA) is headquartered in:",
       "options": [
+        "London",
         "Geneva",
         "Vienna",
-        "Paris",
-        "London"
+        "Paris"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The IEA is headquartered in Paris, France.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1678,12 +1678,12 @@
       "difficulty": "easy",
       "stem": "The Tropic of Cancer passes through how many Indian states?",
       "options": [
-        "6",
-        "7",
         "8",
-        "9"
+        "9",
+        "6",
+        "7"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Tropic of Cancer passes through 8 states.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1699,12 +1699,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
-        "Quartz",
         "Topaz",
         "Diamond",
-        "Corundum"
+        "Corundum",
+        "Quartz"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1720,12 +1720,12 @@
       "difficulty": "medium",
       "stem": "Southernmost point of India:",
       "options": [
+        "Rameswaram",
         "Indira Point",
         "Kanyakumari",
-        "Dhanushkodi",
-        "Rameswaram"
+        "Dhanushkodi"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Indira Point in Nicobar Islands is the southernmost point.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1741,12 +1741,12 @@
       "difficulty": "hard",
       "stem": "India gained independence on:",
       "options": [
-        "January 26, 1950",
-        "August 15, 1947",
         "August 15, 1950",
-        "January 26, 1947"
+        "January 26, 1947",
+        "January 26, 1950",
+        "August 15, 1947"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India gained independence on August 15, 1947.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1762,12 +1762,12 @@
       "difficulty": "medium",
       "stem": "The teacher told the students ___ quietly.",
       "options": [
-        "to study",
         "study",
         "studying",
-        "studied"
+        "studied",
+        "to study"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Infinitive after 'told': told someone to do something.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1783,12 +1783,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
+        "Everywhere",
         "Omnipresent",
         "Rare",
-        "Common",
-        "Everywhere"
+        "Common"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1804,12 +1804,12 @@
       "difficulty": "hard",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
-        "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice",
+        "Initiate conversation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1825,12 +1825,12 @@
       "difficulty": "easy",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
-        "Kind",
         "Malevolent",
         "Generous",
-        "Charitable"
+        "Charitable",
+        "Kind"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1846,12 +1846,12 @@
       "difficulty": "easy",
       "stem": "She asked me where ___ .",
       "options": [
+        "I live",
         "did I live",
         "do I live",
-        "I lived",
-        "I live"
+        "I lived"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Indirect speech uses past tense: 'where I lived'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1867,12 +1867,12 @@
       "difficulty": "medium",
       "stem": "By the time we arrive, they ___ already left.",
       "options": [
-        "will",
-        "would",
         "will have",
-        "would have"
+        "would have",
+        "will",
+        "would"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Future perfect: will have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1888,12 +1888,12 @@
       "difficulty": "easy",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
-        "Clear",
         "Vague",
         "Definite",
-        "Obvious"
+        "Obvious",
+        "Clear"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1909,12 +1909,12 @@
       "difficulty": "medium",
       "stem": "Choose the correct form: 'Neither he nor I ___ going.'",
       "options": [
+        "was",
         "is",
         "am",
-        "are",
-        "was"
+        "are"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "With 'neither...nor', the verb agrees with the nearer subject (I → am).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1930,12 +1930,12 @@
       "difficulty": "medium",
       "stem": "There ___ many reasons for the delay.",
       "options": [
-        "is",
-        "was",
         "are",
-        "has been"
+        "has been",
+        "is",
+        "was"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "'There are' with plural noun 'reasons'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1951,12 +1951,12 @@
       "difficulty": "hard",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
         "are",
         "was",
-        "have been"
+        "have been",
+        "were"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,

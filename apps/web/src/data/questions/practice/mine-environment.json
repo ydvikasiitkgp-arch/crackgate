@@ -31,7 +31,7 @@
         "at the floor of the roadway",
         "near the roof and in roof cavities/rise workings",
         "uniformly throughout the airway",
-        "only in the sump"
+        "Used for high-volume low-variety"
       ],
       "answer": 1,
       "solution": "**Concept.** Buoyancy governs where a gas layers.\n\n**Reasoning.** Being lighter than air, methane rises and collects in roof cavities, the upper part of inclined (rise) headings and behind roof falls — locations that must be specially tested and ventilated.\n\n**Answer.** Near the roof / roof cavities.",
@@ -571,7 +571,7 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "An air sample shows 0.05% CO produced against a 2.5% oxygen deficiency. Graham's ratio $\\left(100\\times\\dfrac{\\text{CO}}{\\text{O}_2\\ \\text{deficiency}}\\right)$ is ____ (one decimal).",
-      "answer": 2.0,
+      "answer": 2,
       "tolerance": 0.05,
       "solution": "**Concept.** $GR=100\\times\\dfrac{\\text{CO}}{\\Delta\\text{O}_2}$.\n\n**Working.**\n$$GR=100\\times\\frac{0.05}{2.5}=2.0$$\n\n**Answer.** 2.0 (an elevated value suggesting active heating).",
       "archetype": "D",
@@ -714,7 +714,7 @@
       "type": "MCQ",
       "stem": "A firedamp explosion is especially dangerous in a dusty coal mine because it can",
       "options": [
-        "only scorch the immediate area",
+        "Used for high-volume low-variety",
         "raise and ignite deposited coal dust, triggering a far more violent and far-reaching secondary coal-dust explosion",
         "improve ventilation",
         "reduce the methane concentration permanently"
@@ -915,7 +915,11 @@
         "Appearance of a haze with a musty/oily smell and sweating of surfaces",
         "A sudden increase in the oxygen content of the air"
       ],
-      "answer": [0, 1, 2],
+      "answer": [
+        0,
+        1,
+        2
+      ],
       "solution": "**Concept.** Oxidation gives off CO, heat and moisture and consumes oxygen.\n\n**Reasoning.** Rising CO, higher temperatures, haze/odour and surface sweating all accompany incipient heating, while oxygen is consumed (not increased) — so an oxygen rise is not an indicator.\n\n**Answer.** Options 1, 2 and 3.",
       "archetype": "A",
       "marks": 1
@@ -928,10 +932,10 @@
       "type": "MCQ",
       "stem": "The thermal (heat) environment experienced by an underground worker depends on",
       "options": [
-        "only the dry-bulb air temperature",
+        "Used for high-volume low-variety",
         "the combination of dry-bulb temperature, wet-bulb temperature (humidity), air velocity and radiant heat",
-        "only the air velocity",
-        "only the depth of the mine"
+        "Applicable in specific scenarios only",
+        "Needed for specific requirements"
       ],
       "answer": 1,
       "solution": "**Concept.** Human heat balance involves several factors.\n\n**Reasoning.** Comfort/heat stress is set by air temperature, humidity (which governs sweat evaporation), air movement (convective/evaporative cooling) and radiant heat from hot surfaces — not temperature alone.\n\n**Answer.** Dry-bulb, wet-bulb, air velocity and radiant heat.",
@@ -1190,7 +1194,7 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "A sampler's filter gains 0.6 mg of dust after sampling 300 litres (0.3 m³) of air. The respirable dust concentration, in mg/m³, is ____ (one decimal).",
-      "answer": 2.0,
+      "answer": 2,
       "tolerance": 0.05,
       "solution": "**Concept.** Concentration $=\\dfrac{\\text{mass collected}}{\\text{air volume}}$.\n\n**Working.**\n$$c=\\frac{0.6}{0.3}=2.0\\ \\text{mg/m}^3$$\n\n**Answer.** 2.0 mg/m³.",
       "archetype": "D",
@@ -1369,7 +1373,11 @@
         "Use of approved respirators/dust masks as a supplementary control",
         "Dry drilling to complete the work faster"
       ],
-      "answer": [0, 1, 2],
+      "answer": [
+        0,
+        1,
+        2
+      ],
       "solution": "**Concept.** Control at source, by dilution and by protection.\n\n**Reasoning.** Water suppression stops dust becoming airborne, ventilation removes what is generated, and respirators protect the worker where exposure remains. Dry drilling increases dust and is unacceptable.\n\n**Answer.** Options 1, 2 and 3.",
       "archetype": "A",
       "marks": 1
@@ -1661,7 +1669,7 @@
         "dissolved oxygen",
         "suspended solids, acidity and heavy metals (e.g. via settling ponds and neutralisation)",
         "harmless nitrogen gas",
-        "all of the methane"
+        "Varies with scale of operation"
       ],
       "answer": 1,
       "solution": "**Concept.** Mine effluent carries solids, acidity and metals.\n\n**Reasoning.** Sediment-laden, sometimes acidic and metal-bearing water is passed through settling ponds (to drop solids) and neutralisation (to raise pH and precipitate metals) before discharge to meet standards.\n\n**Answer.** Suspended solids, acidity and heavy metals.",
@@ -1738,7 +1746,7 @@
       "type": "MCQ",
       "stem": "Standard personal protective equipment for an underground coal miner includes",
       "options": [
-        "only a high-visibility vest",
+        "Used for high-volume low-variety",
         "a safety helmet with cap lamp, self-rescuer, ear protection, dust respirator and safety boots",
         "a flame safety lamp worn as a necklace",
         "no special equipment"
@@ -1792,7 +1800,11 @@
         "Airborne dust and air pollution",
         "A guaranteed improvement in regional groundwater quality"
       ],
-      "answer": [0, 1, 2],
+      "answer": [
+        0,
+        1,
+        2
+      ],
       "solution": "**Concept.** Mining disturbs land, water and air.\n\n**Reasoning.** Excavation and subsidence degrade land, sulphide oxidation acidifies water (AMD), and operations raise dust — all adverse impacts. Mining does not inherently improve groundwater quality; if anything it can degrade it.\n\n**Answer.** Options 1, 2 and 3.",
       "archetype": "A",
       "marks": 1
@@ -1867,13 +1879,13 @@
         "caption": "Gas layered at the roof of a roadway"
       },
       "options": [
-        "carbon dioxide (CO\u2082)",
-        "methane (CH\u2084), which is lighter than air and collects at the roof",
-        "hydrogen sulphide (H\u2082S)",
+        "carbon dioxide (CO₂)",
+        "methane (CH₄), which is lighter than air and collects at the roof",
+        "hydrogen sulphide (H₂S)",
         "radon"
       ],
       "answer": 1,
-      "solution": "**Concept.** Roof layering indicates a gas lighter than air.\n\n**Reasoning.** Methane has a specific gravity of about 0.55, so it rises and forms layers along the roof where ventilation is weak; CO\u2082 and H\u2082S are denser than air and tend to collect near the floor.\n\n**Answer.** Methane (CH\u2084).",
+      "solution": "**Concept.** Roof layering indicates a gas lighter than air.\n\n**Reasoning.** Methane has a specific gravity of about 0.55, so it rises and forms layers along the roof where ventilation is weak; CO₂ and H₂S are denser than air and tend to collect near the floor.\n\n**Answer.** Methane (CH₄).",
       "archetype": "C",
       "marks": 1
     },
@@ -2287,7 +2299,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "The instrument index shown is used to assess underground heat stress. The WBGT index is computed from:",
-      "figure": {"kind": "svg", "caption": "Heat stress thermometer", "markup": "<svg viewBox='0 0 130 160' xmlns='http://www.w3.org/2000/svg'><rect x='52' y='20' width='16' height='100' rx='8' fill='#e5e7eb' stroke='#475569'/><circle cx='60' cy='130' r='16' fill='#dc2626'/><rect x='56' y='60' width='8' height='70' fill='#dc2626'/><text x='8' y='150' font-size='8'>heat stress index</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Heat stress thermometer",
+        "markup": "<svg viewBox='0 0 130 160' xmlns='http://www.w3.org/2000/svg'><rect x='52' y='20' width='16' height='100' rx='8' fill='#e5e7eb' stroke='#475569'/><circle cx='60' cy='130' r='16' fill='#dc2626'/><rect x='56' y='60' width='8' height='70' fill='#dc2626'/><text x='8' y='150' font-size='8'>heat stress index</text></svg>"
+      },
       "options": [
         "a weighted combination of wet-bulb, globe and dry-bulb temperatures",
         "the dry-bulb temperature alone",
@@ -2306,7 +2322,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "A gravimetric sampler draws $2\\ \\text{L/min}$ for $120\\ \\text{min}$ and collects $4\\ \\text{mg}$ of dust. Compute the dust concentration ($\\mathrm{mg/m^3}$, two decimals).",
-      "figure": {"kind": "svg", "caption": "Gravimetric dust sampler", "markup": "<svg viewBox='0 0 170 160' xmlns='http://www.w3.org/2000/svg'><polygon points='60,40 100,40 90,90 70,90' fill='#dbeafe' stroke='#475569'/><rect x='70' y='90' width='20' height='30' fill='#94a3b8' stroke='#475569'/><line x1='80' y1='20' x2='80' y2='40' stroke='#2563eb' stroke-width='2'/><text x='12' y='145' font-size='8'>flow 2 L/min, 120 min</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Gravimetric dust sampler",
+        "markup": "<svg viewBox='0 0 170 160' xmlns='http://www.w3.org/2000/svg'><polygon points='60,40 100,40 90,90 70,90' fill='#dbeafe' stroke='#475569'/><rect x='70' y='90' width='20' height='30' fill='#94a3b8' stroke='#475569'/><line x1='80' y1='20' x2='80' y2='40' stroke='#2563eb' stroke-width='2'/><text x='12' y='145' font-size='8'>flow 2 L/min, 120 min</text></svg>"
+      },
       "options": [],
       "answer": 16.67,
       "tolerance": 0.1,
@@ -2321,7 +2341,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "The conical device shown upstream of the filter in a personal dust sampler is a:",
-      "figure": {"kind": "svg", "caption": "Cyclone pre-classifier", "markup": "<svg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'><polygon points='45,30 105,30 90,100 60,100' fill='#dbeafe' stroke='#475569'/><circle cx='75' cy='55' r='3' fill='#b45309'/><circle cx='65' cy='72' r='2' fill='#b45309'/><text x='12' y='130' font-size='8'>cyclone separates dust</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Cyclone pre-classifier",
+        "markup": "<svg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'><polygon points='45,30 105,30 90,100 60,100' fill='#dbeafe' stroke='#475569'/><circle cx='75' cy='55' r='3' fill='#b45309'/><circle cx='65' cy='72' r='2' fill='#b45309'/><text x='12' y='130' font-size='8'>cyclone separates dust</text></svg>"
+      },
       "options": [
         "cyclone that selects the respirable dust fraction",
         "device that increases the total dust collected",
@@ -2340,7 +2364,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "Two incoherent noise sources each produce $85\\ \\text{dB}$ at a point (figure). Compute the combined sound level (dB, two decimals).",
-      "figure": {"kind": "svg", "caption": "Two equal noise sources", "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='60' r='18' fill='#fde68a' stroke='#475569'/><circle cx='120' cy='60' r='18' fill='#fde68a' stroke='#475569'/><text x='36' y='64' font-size='8'>85 dB</text><text x='106' y='64' font-size='8'>85 dB</text><line x1='70' y1='60' x2='100' y2='60' stroke='#475569'/><text x='28' y='110' font-size='8'>combined level?</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Two equal noise sources",
+        "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='60' r='18' fill='#fde68a' stroke='#475569'/><circle cx='120' cy='60' r='18' fill='#fde68a' stroke='#475569'/><text x='36' y='64' font-size='8'>85 dB</text><text x='106' y='64' font-size='8'>85 dB</text><line x1='70' y1='60' x2='100' y2='60' stroke='#475569'/><text x='28' y='110' font-size='8'>combined level?</text></svg>"
+      },
       "options": [],
       "answer": 88.01,
       "tolerance": 0.1,
@@ -2355,7 +2383,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "A point source gives $96\\ \\text{dB}$ at $1\\ \\text{m}$. Assuming free-field spherical spreading, compute the level at $2\\ \\text{m}$ (dB).",
-      "figure": {"kind": "svg", "caption": "Inverse-square decay of sound", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='60' r='16' fill='#fde68a' stroke='#475569'/><circle cx='100' cy='60' r='3' fill='#1f2937'/><circle cx='170' cy='60' r='3' fill='#1f2937'/><text x='26' y='64' font-size='7'>src</text><text x='88' y='50' font-size='8'>1 m</text><text x='150' y='50' font-size='8'>2 m</text><text x='28' y='100' font-size='8'>96 dB at 1 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Inverse-square decay of sound",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='60' r='16' fill='#fde68a' stroke='#475569'/><circle cx='100' cy='60' r='3' fill='#1f2937'/><circle cx='170' cy='60' r='3' fill='#1f2937'/><text x='26' y='64' font-size='7'>src</text><text x='88' y='50' font-size='8'>1 m</text><text x='150' y='50' font-size='8'>2 m</text><text x='28' y='100' font-size='8'>96 dB at 1 m</text></svg>"
+      },
       "options": [],
       "answer": 90,
       "tolerance": 0.2,
@@ -2370,7 +2402,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Under the OSHA 5-dB exchange rule ($90\\ \\text{dBA}\\Rightarrow8\\ \\text{h}$), determine the permissible daily exposure time at $95\\ \\text{dBA}$ (hours).",
-      "figure": {"kind": "svg", "caption": "Level vs permitted exposure", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><line x1='30' y1='100' x2='30' y2='20' stroke='#475569'/><polyline points='30,40 80,40 80,60 130,60 130,80 180,80' fill='none' stroke='#dc2626' stroke-width='2'/><text x='35' y='118' font-size='8'>level vs permitted time</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Level vs permitted exposure",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><line x1='30' y1='100' x2='30' y2='20' stroke='#475569'/><polyline points='30,40 80,40 80,60 130,60 130,80 180,80' fill='none' stroke='#dc2626' stroke-width='2'/><text x='35' y='118' font-size='8'>level vs permitted time</text></svg>"
+      },
       "options": [],
       "answer": 4,
       "tolerance": 0.1,
@@ -2385,7 +2421,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "A point source of luminous intensity $200\\ \\text{cd}$ illuminates a surface $2\\ \\text{m}$ away, normal to the beam. Compute the illuminance (lux).",
-      "figure": {"kind": "svg", "caption": "Inverse-square illumination", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='60' r='14' fill='#fde68a' stroke='#b45309'/><g stroke='#f59e0b'><line x1='54' y1='60' x2='190' y2='30'/><line x1='54' y1='60' x2='190' y2='90'/></g><line x1='110' y1='45' x2='110' y2='78' stroke='#2563eb' stroke-dasharray='3 2'/><text x='80' y='110' font-size='8'>I=200 cd, d=2 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Inverse-square illumination",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='60' r='14' fill='#fde68a' stroke='#b45309'/><g stroke='#f59e0b'><line x1='54' y1='60' x2='190' y2='30'/><line x1='54' y1='60' x2='190' y2='90'/></g><line x1='110' y1='45' x2='110' y2='78' stroke='#2563eb' stroke-dasharray='3 2'/><text x='80' y='110' font-size='8'>I=200 cd, d=2 m</text></svg>"
+      },
       "options": [],
       "answer": 50,
       "tolerance": 0.5,
@@ -2400,7 +2440,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "A working area of $20\\ \\mathrm{m^2}$ is to be lit to an average illuminance of $100\\ \\text{lux}$. Compute the luminous flux required (lumens).",
-      "figure": {"kind": "svg", "caption": "Flux over an area", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><circle cx='110' cy='30' r='12' fill='#fde68a' stroke='#b45309'/><g stroke='#f59e0b'><line x1='110' y1='42' x2='50' y2='100'/><line x1='110' y1='42' x2='170' y2='100'/></g><rect x='40' y='100' width='140' height='12' fill='#e5e7eb' stroke='#475569'/><text x='55' y='126' font-size='8'>area 20 m^2 at 100 lux</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Flux over an area",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><circle cx='110' cy='30' r='12' fill='#fde68a' stroke='#b45309'/><g stroke='#f59e0b'><line x1='110' y1='42' x2='50' y2='100'/><line x1='110' y1='42' x2='170' y2='100'/></g><rect x='40' y='100' width='140' height='12' fill='#e5e7eb' stroke='#475569'/><text x='55' y='126' font-size='8'>area 20 m^2 at 100 lux</text></svg>"
+      },
       "options": [],
       "answer": 2000,
       "tolerance": 5,
@@ -2415,7 +2459,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Carbon monoxide is released at $0.001\\ \\mathrm{m^3/s}$ in a heading. To keep the concentration at or below $50\\ \\text{ppm}$, compute the minimum airflow required ($\\mathrm{m^3/s}$).",
-      "figure": {"kind": "svg", "caption": "Dilution of carbon monoxide", "markup": "<svg viewBox='0 0 220 110' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='35' width='180' height='40' fill='#e5e7eb' stroke='#475569'/><line x1='6' y1='55' x2='36' y2='55' stroke='#2563eb' stroke-width='2'/><circle cx='120' cy='65' r='3' fill='#6b7280'/><text x='78' y='50' font-size='8'>CO 0.001 m^3/s</text><text x='28' y='98' font-size='8'>dilute to 50 ppm</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Dilution of carbon monoxide",
+        "markup": "<svg viewBox='0 0 220 110' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='35' width='180' height='40' fill='#e5e7eb' stroke='#475569'/><line x1='6' y1='55' x2='36' y2='55' stroke='#2563eb' stroke-width='2'/><circle cx='120' cy='65' r='3' fill='#6b7280'/><text x='78' y='50' font-size='8'>CO 0.001 m^3/s</text><text x='28' y='98' font-size='8'>dilute to 50 ppm</text></svg>"
+      },
       "options": [],
       "answer": 20,
       "tolerance": 0.2,
@@ -2430,7 +2478,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "For the fine dust particle settling in still air (figure), Stokes' law states that the terminal settling velocity is proportional to:",
-      "figure": {"kind": "svg", "caption": "Particle settling in air", "markup": "<svg viewBox='0 0 150 170' xmlns='http://www.w3.org/2000/svg'><rect x='45' y='20' width='60' height='130' fill='#dbeafe' fill-opacity='0.5' stroke='#475569'/><circle cx='75' cy='50' r='5' fill='#6b7280'/><line x1='75' y1='58' x2='75' y2='110' stroke='#dc2626' stroke-width='2' marker-end='url(#st)'/><defs><marker id='st' markerWidth='8' markerHeight='8' refX='4' refY='6' orient='auto'><path d='M0 0 L3 6 L6 0 Z' fill='#dc2626'/></marker></defs><text x='15' y='162' font-size='8'>particle settling</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Particle settling in air",
+        "markup": "<svg viewBox='0 0 150 170' xmlns='http://www.w3.org/2000/svg'><rect x='45' y='20' width='60' height='130' fill='#dbeafe' fill-opacity='0.5' stroke='#475569'/><circle cx='75' cy='50' r='5' fill='#6b7280'/><line x1='75' y1='58' x2='75' y2='110' stroke='#dc2626' stroke-width='2' marker-end='url(#st)'/><defs><marker id='st' markerWidth='8' markerHeight='8' refX='4' refY='6' orient='auto'><path d='M0 0 L3 6 L6 0 Z' fill='#dc2626'/></marker></defs><text x='15' y='162' font-size='8'>particle settling</text></svg>"
+      },
       "options": [
         "the square of the particle diameter",
         "the particle diameter",
@@ -2449,7 +2501,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "A stream of $1\\ \\mathrm{m^3/s}$ carrying $2\\%$ of a gas mixes with $9\\ \\mathrm{m^3/s}$ of clean air (figure). Compute the resulting gas concentration (%).",
-      "figure": {"kind": "svg", "caption": "Mixing of two air streams", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><path d='M10 40 L80 40 L80 50 L10 50 Z' fill='#fca5a5' stroke='#475569'/><path d='M10 70 L80 70 L80 80 L10 80 Z' fill='#bfdbfe' stroke='#475569'/><rect x='80' y='35' width='130' height='50' fill='#e5e7eb' stroke='#475569'/><text x='13' y='37' font-size='7'>1 m^3/s @ 2%</text><text x='13' y='100' font-size='7'>9 m^3/s clean</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Mixing of two air streams",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><path d='M10 40 L80 40 L80 50 L10 50 Z' fill='#fca5a5' stroke='#475569'/><path d='M10 70 L80 70 L80 80 L10 80 Z' fill='#bfdbfe' stroke='#475569'/><rect x='80' y='35' width='130' height='50' fill='#e5e7eb' stroke='#475569'/><text x='13' y='37' font-size='7'>1 m^3/s @ 2%</text><text x='13' y='100' font-size='7'>9 m^3/s clean</text></svg>"
+      },
       "options": [],
       "answer": 0.2,
       "tolerance": 0.01,
@@ -2464,7 +2520,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "For a critical-width panel, the subsidence factor is $a=0.65$ and the extracted seam thickness is $m=3\\ \\text{m}$. Compute the maximum subsidence (m).",
-      "figure": {"kind": "svg", "caption": "Subsidence trough over a panel", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='40' x2='210' y2='40' stroke='#475569'/><path d='M40 40 Q110 95 180 40' fill='none' stroke='#dc2626' stroke-width='2'/><line x1='60' y1='95' x2='160' y2='95' stroke='#92400e' stroke-width='3'/><text x='25' y='112' font-size='8'>extracted panel, a=0.65, m=3 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Subsidence trough over a panel",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='40' x2='210' y2='40' stroke='#475569'/><path d='M40 40 Q110 95 180 40' fill='none' stroke='#dc2626' stroke-width='2'/><line x1='60' y1='95' x2='160' y2='95' stroke='#92400e' stroke-width='3'/><text x='25' y='112' font-size='8'>extracted panel, a=0.65, m=3 m</text></svg>"
+      },
       "options": [],
       "answer": 1.95,
       "tolerance": 0.02,
@@ -2479,7 +2539,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "A panel lies at depth $H=250\\ \\text{m}$ and the angle of draw is $30^\\circ$. Compute the horizontal distance from the panel edge to the limit of subsidence (m, two decimals).",
-      "figure": {"kind": "svg", "caption": "Angle of draw geometry", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='30' x2='210' y2='30' stroke='#475569'/><line x1='110' y1='110' x2='60' y2='30' stroke='#2563eb'/><line x1='110' y1='110' x2='160' y2='30' stroke='#2563eb'/><line x1='110' y1='110' x2='110' y2='30' stroke='#475569' stroke-dasharray='3 2'/><text x='114' y='62' font-size='8'>gamma</text><text x='25' y='125' font-size='8'>H=250 m, draw angle 30 deg</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Angle of draw geometry",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='10' y1='30' x2='210' y2='30' stroke='#475569'/><line x1='110' y1='110' x2='60' y2='30' stroke='#2563eb'/><line x1='110' y1='110' x2='160' y2='30' stroke='#2563eb'/><line x1='110' y1='110' x2='110' y2='30' stroke='#475569' stroke-dasharray='3 2'/><text x='114' y='62' font-size='8'>gamma</text><text x='25' y='125' font-size='8'>H=250 m, draw angle 30 deg</text></svg>"
+      },
       "options": [],
       "answer": 144.34,
       "tolerance": 0.3,
@@ -2494,7 +2558,11 @@
       "difficulty": "hard",
       "type": "NAT",
       "stem": "A drainage pump lifts $0.08\\ \\mathrm{m^3/s}$ of water through a total head of $120\\ \\text{m}$ at an overall efficiency of $0.75$. Compute the input power (kW, two decimals). Take $\\rho g=9810\\ \\mathrm{N/m^3}$.",
-      "figure": {"kind": "svg", "caption": "Mine drainage pump", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><circle cx='60' cy='100' r='22' fill='#dbeafe' stroke='#475569'/><line x1='60' y1='78' x2='60' y2='30' stroke='#2563eb' stroke-width='3' marker-end='url(#pp)'/><defs><marker id='pp' markerWidth='8' markerHeight='8' refX='4' refY='6' orient='auto'><path d='M0 0 L3 6 L6 0 Z' fill='#2563eb'/></marker></defs><text x='12' y='135' font-size='8'>Q=0.08 m^3/s, H=120 m, eff=0.75</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Mine drainage pump",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><circle cx='60' cy='100' r='22' fill='#dbeafe' stroke='#475569'/><line x1='60' y1='78' x2='60' y2='30' stroke='#2563eb' stroke-width='3' marker-end='url(#pp)'/><defs><marker id='pp' markerWidth='8' markerHeight='8' refX='4' refY='6' orient='auto'><path d='M0 0 L3 6 L6 0 Z' fill='#2563eb'/></marker></defs><text x='12' y='135' font-size='8'>Q=0.08 m^3/s, H=120 m, eff=0.75</text></svg>"
+      },
       "options": [],
       "answer": 125.57,
       "tolerance": 0.5,
@@ -2509,7 +2577,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "In the flame safety lamp shown, the height of the pale blue cap above the flame is used to estimate:",
-      "figure": {"kind": "svg", "caption": "Flame safety lamp", "markup": "<svg viewBox='0 0 130 170' xmlns='http://www.w3.org/2000/svg'><rect x='45' y='30' width='30' height='90' fill='#e5e7eb' stroke='#475569'/><polygon points='60,40 66,60 54,60' fill='#f59e0b'/><polygon points='60,35 70,60 50,60' fill='#3b82f6' fill-opacity='0.4'/><rect x='40' y='120' width='40' height='20' fill='#94a3b8' stroke='#475569'/><text x='8' y='160' font-size='8'>flame cap indicates CH4</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Flame safety lamp",
+        "markup": "<svg viewBox='0 0 130 170' xmlns='http://www.w3.org/2000/svg'><rect x='45' y='30' width='30' height='90' fill='#e5e7eb' stroke='#475569'/><polygon points='60,40 66,60 54,60' fill='#f59e0b'/><polygon points='60,35 70,60 50,60' fill='#3b82f6' fill-opacity='0.4'/><rect x='40' y='120' width='40' height='20' fill='#94a3b8' stroke='#475569'/><text x='8' y='160' font-size='8'>flame cap indicates CH4</text></svg>"
+      },
       "options": [
         "the percentage of methane in the air",
         "the air velocity past the lamp",
@@ -2528,7 +2600,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Three incoherent noise sources each producing $80\\ \\text{dB}$ act together at a point (figure). Compute the combined sound level (dB, two decimals).",
-      "figure": {"kind": "svg", "caption": "Three equal noise sources", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><g fill='#fca5a5' stroke='#475569'><circle cx='60' cy='50' r='12'/><circle cx='100' cy='50' r='12'/><circle cx='140' cy='50' r='12'/></g><circle cx='100' cy='95' r='6' fill='#1f2937'/><text x='32' y='115' font-size='8'>three 80 dB sources at a point</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Three equal noise sources",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><g fill='#fca5a5' stroke='#475569'><circle cx='60' cy='50' r='12'/><circle cx='100' cy='50' r='12'/><circle cx='140' cy='50' r='12'/></g><circle cx='100' cy='95' r='6' fill='#1f2937'/><text x='32' y='115' font-size='8'>three 80 dB sources at a point</text></svg>"
+      },
       "options": [],
       "answer": 84.77,
       "tolerance": 0.1,
@@ -2543,7 +2619,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "A dust sample collects $6\\ \\text{mg}$ of dust from $3\\ \\mathrm{m^3}$ of sampled air (figure). Compute the dust concentration ($\\mathrm{mg/m^3}$).",
-      "figure": {"kind": "svg", "caption": "Dust sample", "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='30' width='90' height='70' fill='#e5e7eb' stroke='#475569'/><g fill='#6b7280'><circle cx='70' cy='55' r='2'/><circle cx='95' cy='70' r='2'/><circle cx='120' cy='50' r='2'/><circle cx='85' cy='85' r='2'/></g><text x='42' y='120' font-size='8'>6 mg dust in 3 m^3 air</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Dust sample",
+        "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='30' width='90' height='70' fill='#e5e7eb' stroke='#475569'/><g fill='#6b7280'><circle cx='70' cy='55' r='2'/><circle cx='95' cy='70' r='2'/><circle cx='120' cy='50' r='2'/><circle cx='85' cy='85' r='2'/></g><text x='42' y='120' font-size='8'>6 mg dust in 3 m^3 air</text></svg>"
+      },
       "options": [],
       "answer": 2,
       "tolerance": 0.05,
@@ -2558,7 +2638,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "A point source of luminous intensity $200\\ \\text{cd}$ illuminates a surface $4\\ \\text{m}$ away, normal to the beam (figure). Compute the illuminance (lux).",
-      "figure": {"kind": "svg", "caption": "Inverse-square illumination", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='60' r='12' fill='#fde68a' stroke='#475569'/><g stroke='#f59e0b'><line x1='52' y1='60' x2='180' y2='30'/><line x1='52' y1='60' x2='180' y2='90'/></g><text x='32' y='120' font-size='8'>I=200 cd, distance 4 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Inverse-square illumination",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='60' r='12' fill='#fde68a' stroke='#475569'/><g stroke='#f59e0b'><line x1='52' y1='60' x2='180' y2='30'/><line x1='52' y1='60' x2='180' y2='90'/></g><text x='32' y='120' font-size='8'>I=200 cd, distance 4 m</text></svg>"
+      },
       "options": [],
       "answer": 12.5,
       "tolerance": 0.1,
@@ -2573,7 +2657,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "A point noise source gives $96\\ \\text{dB}$ at $2\\ \\text{m}$ (figure). Using free-field spreading $L_2=L_1-20\\log_{10}(d_2/d_1)$, compute the level at $8\\ \\text{m}$ (dB, two decimals).",
-      "figure": {"kind": "svg", "caption": "Noise spreading with distance", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='55' r='10' fill='#fca5a5' stroke='#475569'/><g fill='none' stroke='#f87171'><circle cx='40' cy='55' r='30'/><circle cx='40' cy='55' r='55'/></g><circle cx='120' cy='55' r='5' fill='#1f2937'/><text x='30' y='110' font-size='8'>96 dB at 2 m, find at 8 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Noise spreading with distance",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='55' r='10' fill='#fca5a5' stroke='#475569'/><g fill='none' stroke='#f87171'><circle cx='40' cy='55' r='30'/><circle cx='40' cy='55' r='55'/></g><circle cx='120' cy='55' r='5' fill='#1f2937'/><text x='30' y='110' font-size='8'>96 dB at 2 m, find at 8 m</text></svg>"
+      },
       "options": [],
       "answer": 83.96,
       "tolerance": 0.1,
@@ -2588,7 +2676,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "The instrument shown has a water-soaked wick over its bulb (figure). The temperature it reads is:",
-      "figure": {"kind": "svg", "caption": "Wet-bulb thermometer", "markup": "<svg viewBox='0 0 160 150' xmlns='http://www.w3.org/2000/svg'><rect x='60' y='20' width='14' height='90' fill='#e5e7eb' stroke='#475569'/><circle cx='67' cy='118' r='14' fill='#fca5a5' stroke='#475569'/><rect x='62' y='95' width='10' height='20' fill='#dc2626'/><path d='M67 104 q14 0 14 14' fill='none' stroke='#2563eb'/><text x='14' y='145' font-size='8'>thermometer with wetted wick</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Wet-bulb thermometer",
+        "markup": "<svg viewBox='0 0 160 150' xmlns='http://www.w3.org/2000/svg'><rect x='60' y='20' width='14' height='90' fill='#e5e7eb' stroke='#475569'/><circle cx='67' cy='118' r='14' fill='#fca5a5' stroke='#475569'/><rect x='62' y='95' width='10' height='20' fill='#dc2626'/><path d='M67 104 q14 0 14 14' fill='none' stroke='#2563eb'/><text x='14' y='145' font-size='8'>thermometer with wetted wick</text></svg>"
+      },
       "options": [
         "the wet-bulb temperature, which with the dry-bulb reflects the cooling power of humid air",
         "the dry-bulb temperature, unaffected by humidity",
@@ -2607,7 +2699,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "A seam of thickness $3\\ \\text{m}$ is extracted with a subsidence factor of $0.6$ (figure). Compute the maximum possible surface subsidence (m).",
-      "figure": {"kind": "svg", "caption": "Surface subsidence trough", "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='30' width='180' height='15' fill='#a16207'/><path d='M20 35 Q110 75 200 35' fill='none' stroke='#dc2626' stroke-width='2'/><rect x='80' y='100' width='60' height='12' fill='#1f2937'/><text x='32' y='130' font-size='8'>seam m=3, factor a=0.6</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Surface subsidence trough",
+        "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='30' width='180' height='15' fill='#a16207'/><path d='M20 35 Q110 75 200 35' fill='none' stroke='#dc2626' stroke-width='2'/><rect x='80' y='100' width='60' height='12' fill='#1f2937'/><text x='32' y='130' font-size='8'>seam m=3, factor a=0.6</text></svg>"
+      },
       "options": [],
       "answer": 1.8,
       "tolerance": 0.02,
@@ -2622,7 +2718,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "A flat seam lies at depth $H=200\\ \\text{m}$ and the angle of draw is $25^\\circ$ (figure). Compute the half-width of the surface influence zone measured from the panel edge (m, two decimals).",
-      "figure": {"kind": "svg", "caption": "Angle of draw", "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='30' width='180' height='12' fill='#cbd5e1'/><rect x='90' y='120' width='40' height='10' fill='#1f2937'/><g stroke='#dc2626' stroke-dasharray='3 2'><line x1='110' y1='125' x2='60' y2='36'/><line x1='110' y1='125' x2='160' y2='36'/></g><text x='32' y='145' font-size='8'>H=200, draw angle 25 deg</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Angle of draw",
+        "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='30' width='180' height='12' fill='#cbd5e1'/><rect x='90' y='120' width='40' height='10' fill='#1f2937'/><g stroke='#dc2626' stroke-dasharray='3 2'><line x1='110' y1='125' x2='60' y2='36'/><line x1='110' y1='125' x2='160' y2='36'/></g><text x='32' y='145' font-size='8'>H=200, draw angle 25 deg</text></svg>"
+      },
       "options": [],
       "answer": 93.26,
       "tolerance": 0.5,
@@ -2637,7 +2737,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "A district has $40$ workers, each requiring $0.05\\ \\mathrm{m^3/s}$ of fresh air (figure). Compute the minimum air quantity required ($\\mathrm{m^3/s}$).",
-      "figure": {"kind": "svg", "caption": "Per-person air requirement", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='40' width='160' height='40' fill='#bfdbfe' stroke='#475569'/><g fill='#1f2937'><circle cx='60' cy='60' r='4'/><circle cx='90' cy='60' r='4'/><circle cx='120' cy='60' r='4'/><circle cx='150' cy='60' r='4'/></g><text x='30' y='105' font-size='8'>40 men at 0.05 m^3/s each</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Per-person air requirement",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='40' width='160' height='40' fill='#bfdbfe' stroke='#475569'/><g fill='#1f2937'><circle cx='60' cy='60' r='4'/><circle cx='90' cy='60' r='4'/><circle cx='120' cy='60' r='4'/><circle cx='150' cy='60' r='4'/></g><text x='30' y='105' font-size='8'>40 men at 0.05 m^3/s each</text></svg>"
+      },
       "options": [],
       "answer": 2,
       "tolerance": 0.05,
@@ -2652,7 +2756,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Methane is liberated at $0.06\\ \\mathrm{m^3/s}$ and must be diluted to $1\\%$ by volume (figure). Compute the air quantity required ($\\mathrm{m^3/s}$).",
-      "figure": {"kind": "svg", "caption": "Methane dilution", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='40' width='160' height='45' fill='#bfdbfe' stroke='#475569'/><circle cx='70' cy='62' r='6' fill='#16a34a'/><line x1='90' y1='62' x2='170' y2='62' stroke='#2563eb' stroke-width='2'/><text x='30' y='105' font-size='8'>CH4 0.06 m^3/s, dilute to 1%</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Methane dilution",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='40' width='160' height='45' fill='#bfdbfe' stroke='#475569'/><circle cx='70' cy='62' r='6' fill='#16a34a'/><line x1='90' y1='62' x2='170' y2='62' stroke='#2563eb' stroke-width='2'/><text x='30' y='105' font-size='8'>CH4 0.06 m^3/s, dilute to 1%</text></svg>"
+      },
       "options": [],
       "answer": 6,
       "tolerance": 0.1,
@@ -2667,7 +2775,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "A worker's exposure varies through the shift as shown (figure). The relevant occupational limit is expressed as:",
-      "figure": {"kind": "svg", "caption": "Variable exposure over a shift", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><g fill='#bfdbfe' stroke='#475569'><rect x='40' y='60' width='40' height='40'/><rect x='90' y='40' width='40' height='60'/><rect x='140' y='75' width='40' height='25'/></g><text x='32' y='120' font-size='8'>exposure varies over the shift</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Variable exposure over a shift",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><g fill='#bfdbfe' stroke='#475569'><rect x='40' y='60' width='40' height='40'/><rect x='90' y='40' width='40' height='60'/><rect x='140' y='75' width='40' height='25'/></g><text x='32' y='120' font-size='8'>exposure varies over the shift</text></svg>"
+      },
       "options": [
         "the 8-hour time-weighted average concentration",
         "the single highest instantaneous reading only",
@@ -2686,7 +2798,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "A working area of $20\\ \\mathrm{m^2}$ is to be lit to $100\\ \\text{lux}$ (figure). Compute the total luminous flux required, assuming uniform distribution (lumens).",
-      "figure": {"kind": "svg", "caption": "Area illumination", "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='40' width='120' height='60' fill='#fef9c3' stroke='#475569'/><text x='56' y='75' font-size='9'>100 lux over 20 m^2</text><text x='52' y='120' font-size='8'>total flux?</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Area illumination",
+        "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='40' width='120' height='60' fill='#fef9c3' stroke='#475569'/><text x='56' y='75' font-size='9'>100 lux over 20 m^2</text><text x='52' y='120' font-size='8'>total flux?</text></svg>"
+      },
       "options": [],
       "answer": 2000,
       "tolerance": 1,
@@ -2701,7 +2817,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "The chart shows that as sound level rises, the permissible daily exposure time falls (figure). Under a $3\\ \\text{dB}$ exchange rate, the rule is to:",
-      "figure": {"kind": "svg", "caption": "Level versus allowed time", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><line x1='30' y1='30' x2='30' y2='100' stroke='#475569'/><polyline points='30,90 90,70 150,50 190,40' fill='none' stroke='#dc2626' stroke-width='2'/><text x='34' y='120' font-size='8'>dB up, allowed time down</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Level versus allowed time",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><line x1='30' y1='30' x2='30' y2='100' stroke='#475569'/><polyline points='30,90 90,70 150,50 190,40' fill='none' stroke='#dc2626' stroke-width='2'/><text x='34' y='120' font-size='8'>dB up, allowed time down</text></svg>"
+      },
       "options": [
         "halve the permissible exposure time for each 3 dB rise in level",
         "double the permissible exposure time for each 3 dB rise in level",

@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "At the core–mantle boundary (CMB), seismic observations reveal ultra-low velocity zones (ULVZs) with Vp reductions of 5–10% and Vs reductions up to 30% over thicknesses of 5–40 km. Which interpretation best explains the asymmetric velocity reduction (Vs affected more than Vp)?",
       "options": [
-        "Partial melt of silicate material at the base of the mantle, which disproportionately reduces shear modulus",
         "Iron enrichment of post-perovskite, increasing density while reducing both Vp and Vs equally",
         "Temperature anomaly alone of ~1000 K, which has identical fractional effect on Vp and Vs",
-        "Anisotropic crystal alignment of bridgmanite, producing direction-dependent Vs but not Vp"
+        "Anisotropic crystal alignment of bridgmanite, producing direction-dependent Vs but not Vp",
+        "Partial melt of silicate material at the base of the mantle, which disproportionately reduces shear modulus"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Partial melt at the CMB preferentially reduces the shear modulus μ (since liquids have zero shear rigidity) while the bulk modulus K is less affected. Since Vs = √(μ/ρ) depends directly on shear modulus, even a small melt fraction (1–5%) can reduce Vs by 10–30%. Vp = √((K + 4μ/3)/ρ) is less sensitive because K dominates. Pure temperature anomalies predict equal fractional changes in Vp and Vs, inconsistent with observations.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "easy",
       "stem": "Seismic studies show that P-waves traveling parallel to the Earth's spin axis through the inner core arrive ~3–4% faster than those traveling equatorially. The anisotropy is attributed to preferred alignment of hcp iron crystals. If the anisotropy axis is tilted ~5.4° from the spin axis toward 230°E, what does this imply about inner core super-rotation?",
       "options": [
+        "The tilt is purely a result of compositional heterogeneity and has no relationship to differential rotation",
         "The inner core rotates ~1°/yr faster than the mantle, dragging the anisotropy axis ahead of the spin axis",
         "The tilt indicates the inner core is stationary and the anisotropy axis reflects paleo-magnetic field orientation",
-        "The tilt suggests the inner core rotates ~0.1–1°/yr slower than the mantle, with the axis lagging behind",
-        "The tilt is purely a result of compositional heterogeneity and has no relationship to differential rotation"
+        "The tilt suggests the inner core rotates ~0.1–1°/yr slower than the mantle, with the axis lagging behind"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Song & Richards (1996) found that the symmetry axis of inner core anisotropy is tilted ~5.4° eastward of the spin axis. If the inner core were co-rotating with the mantle, the axis would align with the spin axis. The eastward tilt is most parsimoniously explained by the inner core rotating slightly slower than the mantle (~0.1–1°/yr), causing the anisotropy axis to lag.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -84,12 +84,12 @@
       "difficulty": "hard",
       "stem": "The D″ layer (lowermost ~200 km of the mantle) exhibits a negative Clapeyron slope for the post-perovskite (pPv) phase transition: dP/dT ≈ −6 MPa/K. If the CMB temperature is 3800 K and the pPv transition pressure at this temperature is 125 GPa, what happens to the pPv stability field beneath a hot mantle plume source region where temperature is 4000 K?",
       "options": [
-        "The pPv transition pressure increases to ~127 GPa, so the pPv layer becomes thicker under the plume",
-        "The pPv transition pressure decreases to ~123 GPa, so the pPv layer is thinner or absent under the plume",
         "The transition is unaffected because the Clapeyron slope is negligible at these pressures",
-        "The pPv becomes more stable under hot conditions because the negative slope means higher T favors the high-P phase"
+        "The pPv becomes more stable under hot conditions because the negative slope means higher T favors the high-P phase",
+        "The pPv transition pressure increases to ~127 GPa, so the pPv layer becomes thicker under the plume",
+        "The pPv transition pressure decreases to ~123 GPa, so the pPv layer is thinner or absent under the plume"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "With a negative Clapeyron slope dP/dT ≈ −6 MPa/K, a temperature increase of 200 K shifts the transition pressure by ΔP = (dP/dT) × ΔT = −6 × 10⁻³ GPa/K × 200 K = −1.2 GPa. The transition pressure decreases from 125 GPa to ~123.8 GPa, making the pPv-bearing layer thinner. Under very hot plume sources, the pPv stability field can be entirely eliminated.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -105,12 +105,12 @@
       "difficulty": "easy",
       "stem": "VLBI measures the differential time delay Δt between signals from a quasar arriving at two radio telescopes separated by baseline vector b: Δt = b·s/c, where s is the unit vector to the quasar and c is the speed of light. For a 10,000 km baseline measuring a quasar at 60° elevation with phase stability of 1 ps, what is the baseline length precision achievable?",
       "options": [
-        "~300 μm, limited by tropospheric path delay rather than phase stability",
         "~0.3 mm (300 μm), from Δb ≈ c × Δt = 3 × 10⁸ × 10⁻¹² = 0.3 mm",
         "~3 mm, because atmospheric turbulence dominates at this baseline length",
-        "~30 mm, because VLBI angular resolution cannot support sub-mm precision"
+        "~30 mm, because VLBI angular resolution cannot support sub-mm precision",
+        "~300 μm, limited by tropospheric path delay rather than phase stability"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The fundamental precision limit from phase measurement is Δb = c × Δt = 3 × 10⁸ m/s × 10⁻¹² s = 0.3 mm. In practice, VLBI achieves ~1 mm baseline precision after correcting for tropospheric delay, ionospheric delay, and antenna deformation. The 0.3 mm represents the measurement precision before atmospheric corrections.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -131,12 +131,12 @@
       "difficulty": "medium",
       "stem": "SLR measures the round-trip time of laser pulses reflected from satellite retroreflectors. For LAGEOS (altitude ~5860 km), the one-way light travel time is ~19.5 ms. If the laser pulse width is 10 ps and the photon detection system has timing jitter of 30 ps, what is the single-shot range precision of SLR?",
       "options": [
+        "~0.1 mm, achievable with single-photon avalanche detector technology",
         "~0.5 mm, limited by the pulse width",
         "~4.5 mm, from total timing uncertainty ~30 ps propagated to range: Δr = c × Δt/2 ≈ 4.5 mm",
-        "~15 mm, because atmospheric refraction dominates at all elevations",
-        "~0.1 mm, achievable with single-photon avalanche detector technology"
+        "~15 mm, because atmospheric refraction dominates at all elevations"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The single-shot range precision is limited by the total timing uncertainty. The dominant term is detector jitter (30 ps), since pulse width (10 ps) adds in quadrature: Δt_total = √(10² + 30²) ≈ 31.6 ps. Range precision: Δr = c × Δt/2 = 3 × 10⁸ × 31.6 × 10⁻¹² / 2 ≈ 4.74 mm ≈ 4.5 mm.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -152,12 +152,12 @@
       "difficulty": "easy",
       "stem": "Jason-3 satellite altimeter operates at Ku-band (13.575 GHz) with a pulse-limited footprint of ~5.8 km. The range measurement equation is: R = H − (c × Δt/2) − δ_atm − δ_tides. If the wet tropospheric correction δ_wet has an RMS error of 1.2 cm and the ionospheric correction δ_ion has an RMS of 0.5 cm, what is the approximate total range measurement error budget when all corrections are combined in quadrature?",
       "options": [
-        "~1.3 cm",
-        "~1.7 cm",
         "~2.5 cm",
-        "~4.0 cm"
+        "~4.0 cm",
+        "~1.3 cm",
+        "~1.7 cm"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Combining errors in quadrature: δ_total = √(δ_wet² + δ_ion² + δ_dry² + δ_ocean² + δ_instrument²). With δ_wet = 1.2 cm, δ_ion = 0.5 cm, δ_dry ≈ 0.7 cm, δ_ocean ≈ 0.2 cm, δ_instrument ≈ 0.3 cm: δ_total ≈ 1.52 cm. Including sea-state bias (~0.5 cm) gives ≈ 1.6 cm, closest to 1.7 cm.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -173,12 +173,12 @@
       "difficulty": "hard",
       "stem": "The Brune source model predicts a far-field displacement spectrum with a corner frequency f_c = kVs/Δσ^(1/3), where k ≈ 0.37 for shear waves, Vs is S-wave velocity, and Δσ is stress drop. For a Mw 6.0 event in crust with Vs = 3.5 km/s and Δσ = 3 MPa, what is the approximate source dimension implied by the Brune model?",
       "options": [
-        "Source radius r ≈ 6 km, consistent with a moderate Mw 6.0 event",
         "Source radius r ≈ 18 km, which is too large for Mw 6.0",
         "Source radius r ≈ 1.8 km, which is too small for Mw 6.0",
-        "Source radius r ≈ 0.6 km, characteristic of a micro-earthquake"
+        "Source radius r ≈ 0.6 km, characteristic of a micro-earthquake",
+        "Source radius r ≈ 6 km, consistent with a moderate Mw 6.0 event"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For Mw 6.0: M₀ = 10^(1.5×6.0+9.05) = 10^18.05 ≈ 1.12 × 10¹⁸ N·m. Using the source radius relation r = (7M₀/(4πΔσ))^(1/3) = (7×1.12×10¹⁸/(4π×3×10⁶))^(1/3) = (7.84×10¹⁸/3.77×10⁷)^(1/3) = (2.08×10¹¹)^(1/3) ≈ 5.9 km ≈ 6 km. Then f_c = 0.37 × 3500 / 5900 ≈ 2.2 Hz. The source radius of ~6 km is consistent with a moderate Mw 6.0 earthquake.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -194,12 +194,12 @@
       "difficulty": "easy",
       "stem": "In the Brune (1970) omega-square model, the far-field shear-wave displacement spectrum is S(f) = M₀ / (1 + (f/f_c)²). The radiated seismic energy is E_s = ∫ρVs|u̇|² dV dt. Integrating the Brune spectrum yields E_s ∝ M₀²f_c³/Vs. For two earthquakes with the same stress drop but Mw differing by 1 unit (ΔM₀ ratio ≈ 31.6), by what factor does the energy ratio scale according to the omega-square model?",
       "options": [
+        "~316, scaling as an intermediate power of the moment",
         "~31.6, linear in M₀, same as moment ratio",
         "~1000, scaling as M₀² because energy depends on the square of the moment",
-        "~10, scaling as 10^(1.5×2/3) ≈ 10",
-        "~316, scaling as an intermediate power of the moment"
+        "~10, scaling as 10^(1.5×2/3) ≈ 10"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For the omega-square model, E_s ∝ M₀²f_c³. At constant stress drop, f_c ∝ M₀^(-1/3), so f_c³ ∝ M₀^(-1). Therefore E_s ∝ M₀² × M₀^(-1) = M₀. For two earthquakes with Mw differing by 1 unit, the M₀ ratio is 10^1.5 ≈ 31.6. While the theoretical linear scaling gives an energy ratio of ~31.6, observational studies indicate that energy ratios are closer to ~10 due to the breakdown of complete self-similarity and variations in fracture energy at larger magnitudes.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -215,12 +215,12 @@
       "difficulty": "medium",
       "stem": "The supershear rupture transition occurs when the rupture front velocity exceeds the shear-wave velocity Vs. In the Burridge–Andrews model, what is the physical mechanism enabling supershear propagation?",
       "options": [
-        "The crack tip generates a Mach cone of S-waves analogous to a sonic boom, requiring the driving stress to overcome the shear strength ahead of the tip",
-        "P-wave reflections from the free surface convert to S-waves that interfere constructively at the crack tip",
         "Thermal pressurization of fault gouge reduces friction below zero, creating a self-accelerating rupture",
-        "Fluid injection along the fault reduces effective normal stress, allowing instantaneous acceleration to supershear"
+        "Fluid injection along the fault reduces effective normal stress, allowing instantaneous acceleration to supershear",
+        "The crack tip generates a Mach cone of S-waves analogous to a sonic boom, requiring the driving stress to overcome the shear strength ahead of the tip",
+        "P-wave reflections from the free surface convert to S-waves that interfere constructively at the crack tip"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Supershear ruptures propagate by a mechanism analogous to a crack running faster than the speed of sound: a Mach cone of shear waves forms ahead of the rupture front, similar to a sonic boom. This requires sufficient driving stress to overcome the material resistance at the crack tip. The Burridge–Andrews model shows this transition requires the initial overstress to exceed ~π/4 times the strength drop.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -236,12 +236,12 @@
       "difficulty": "medium",
       "stem": "Geomagnetic depth sounding exploits the skin depth relationship δ = √(2/ωμσ). For a period of T = 1000 s (≈ 17 mHz) in a half-space with σ = 0.01 S/m, what is the approximate skin depth?",
       "options": [
+        "δ ≈ 1.6 km, resolving near-surface sedimentary basin conductivity",
         "δ ≈ 160 km, resolving upper mantle conductivity structure at depths relevant to the asthenosphere",
         "δ ≈ 16 km, resolving upper crustal conductivity variations associated with fluid-filled pore networks",
-        "δ ≈ 1600 km, resolving lower mantle conductivity associated with the spinel-to-perovskite transition",
-        "δ ≈ 1.6 km, resolving near-surface sedimentary basin conductivity"
+        "δ ≈ 1600 km, resolving lower mantle conductivity associated with the spinel-to-perovskite transition"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "δ = √(2/(ωμσ)) ≈ 89–160 km depending on layered conductivity model. For σ = 0.01 S/m and T = 1000 s, this resolves the transition between lithosphere and asthenosphere. The period T = 1000 s is standard in GDS surveys targeting upper mantle structure.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -257,12 +257,12 @@
       "difficulty": "medium",
       "stem": "Faraday's law in integral form states that the EMF around a closed loop equals −dΦ_B/dt. During a sudden commencement (SC) geomagnetic storm, dB/dt can reach 2000 nT/min at high latitudes. For a simplified power grid model with a 100 km effective loop, what approximate EMF is induced?",
       "options": [
-        "~200 V, sufficient to cause transformer saturation in high-latitude power grids",
-        "~20 V, too small to affect power infrastructure",
         "~2000 V, comparable to transmission line voltage",
-        "~2 kV, requiring immediate protective disconnection of all equipment"
+        "~2 kV, requiring immediate protective disconnection of all equipment",
+        "~200 V, sufficient to cause transformer saturation in high-latitude power grids",
+        "~20 V, too small to affect power infrastructure"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "EMF = −dΦ_B/dt = −A × dB/dt. For a 100 km line with effective coupling area ~6 × 10⁶ m²: dB/dt = 2000 × 10⁻⁹ / 60 ≈ 3.33 × 10⁻⁵ T/s. EMF ≈ 200 V. This is consistent with observed GIC magnitudes at high latitudes during SC events.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -278,12 +278,12 @@
       "difficulty": "easy",
       "stem": "The magnetotelluric impedance tensor Z relates electric and magnetic fields: E = ZH. For a 1-D layered Earth, the apparent resistivity is ρ_a = |Z|²/ωμ. At a period of T = 10 s in typical continental crust, what conductivity structure does this period predominantly resolve?",
       "options": [
-        "Mid-crustal conductivity anomalies (10–20 km depth) often associated with fluids or graphite",
         "Upper mantle conductivity at ~100 km depth",
         "Upper crustal sedimentary conductivity at ~5 km depth",
-        "Surface weathering zone conductivity"
+        "Surface weathering zone conductivity",
+        "Mid-crustal conductivity anomalies (10–20 km depth) often associated with fluids or graphite"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At T = 10 s with typical crustal resistivity of 10–100 Ω·m, the skin depth ≈ 22 km, resolving mid-crustal conductivity structure at 10–20 km depth. This depth range often contains anomalous conductivity associated with saline fluids, partial melt, or graphitic material.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -299,12 +299,12 @@
       "difficulty": "medium",
       "stem": "The flexural rigidity D = Et³/(12(1−ν²)) governs lithospheric bending. For oceanic lithosphere cooling with age, Te ∝ √(age). If D = 2.5 × 10²³ N·m at age 50 Ma, what is D at age 125 Ma?",
       "options": [
+        "D ≈ 6.25 × 10²² N·m (Te ≈ 12.5 km), one-quarter as large because Te decreases with age",
         "D ≈ 1.0 × 10²⁴ N·m (Te ≈ 50 km), approximately four times larger because Te increases by ~1.6× and D ∝ Te³",
         "D ≈ 5.0 × 10²³ N·m (Te ≈ 35 km), twice larger because Te increases by √4",
-        "D ≈ 2.5 × 10²³ N·m (unchanged), because flexural rigidity is independent of lithospheric age",
-        "D ≈ 6.25 × 10²² N·m (Te ≈ 12.5 km), one-quarter as large because Te decreases with age"
+        "D ≈ 2.5 × 10²³ N·m (unchanged), because flexural rigidity is independent of lithospheric age"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Te ∝ √(age): Te(125)/Te(50) = √(125/50) = √2.5 ≈ 1.58, so Te(125) ≈ 1.58 × Te(50). Since D ∝ Te³: D(125)/D(50) = 1.58³ ≈ 3.95 ≈ 4. D(125) ≈ 4 × 2.5 × 10²³ = 1.0 × 10²⁴ N·m. The key physical point is that older oceanic lithosphere is mechanically stronger, consistent with Te ∝ √age.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -320,12 +320,12 @@
       "difficulty": "medium",
       "stem": "The coherence method (Forsyth 1985) estimates effective elastic thickness Te. For a broken plate, the coherence γ²(k) = Φ²(k) where Φ(k) = 1/(1 + (kα)⁴), and α = [D/(ρ_m − ρ_c)g]^(1/4). If α = 100 km, at what wavelength is the coherence approximately 0.5?",
       "options": [
-        "λ ≈ 2π × α ≈ 630 km — the coherence transitions at the flexural wavelength",
-        "λ ≈ α ≈ 100 km — the coherence transitions at the flexural parameter directly",
         "λ ≈ 2α ≈ 200 km — the coherence transitions at twice the flexural parameter",
-        "λ ≈ α/2π ≈ 16 km — the coherence transitions at the shortest resolvable wavelength"
+        "λ ≈ α/2π ≈ 16 km — the coherence transitions at the shortest resolvable wavelength",
+        "λ ≈ 2π × α ≈ 630 km — the coherence transitions at the flexural wavelength",
+        "λ ≈ α ≈ 100 km — the coherence transitions at the flexural parameter directly"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Setting γ² = 0.5 gives Φ = 0.707, so 1/(1+(kα)⁴) = 0.707, yielding kα ≈ 0.80 and λ = 2π/k ≈ 2πα/0.80 ≈ 785 km. The closest answer is A (λ ≈ 2πα ≈ 630 km), representing the approximate wavelength of the coherence transition.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -346,12 +346,12 @@
       "difficulty": "easy",
       "stem": "The vertical gravity gradient Vzz = ∂²V/∂z² has units of Eötvös (1 E = 10⁻⁹ s⁻²). For a homogeneous sphere of radius R = 5 km, density contrast Δρ = 500 kg/m³, buried at depth z₀ = 10 km, what is the approximate peak-to-trough amplitude of the Vzz anomaly?",
       "options": [
-        "~25 E, a strong anomaly detectable by airborne gravity gradiometry",
         "~2.5 E, a moderate anomaly requiring ground-based measurements",
         "~250 E, requiring careful terrain correction to isolate",
-        "~0.25 E, below the detection threshold of current instruments (~5 E noise level)"
+        "~0.25 E, below the detection threshold of current instruments (~5 E noise level)",
+        "~25 E, a strong anomaly detectable by airborne gravity gradiometry"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For a sphere: Vzz_peak = 2GΔρR³/z₀³ ≈ 8.3 E. The peak-to-trough range (including negative flanks) is approximately 25 E. Airborne gravity gradiometry (e.g., FALCON system) has noise floors of ~5–10 E, making this anomaly clearly detectable.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -372,12 +372,12 @@
       "difficulty": "hard",
       "stem": "A helicopter-borne magnetic survey uses tie-lines perpendicular to flight lines at 10 km spacing, with flight lines at 200 m spacing. After diurnal correction, cross-over analysis reveals systematic level errors of 5–10 nT between adjacent flight lines. What is the most likely cause and correction?",
       "options": [
+        "Instrument drift during the survey; corrected by tie-line levelling using least-squares adjustment of cross-over differences",
         "Inaccurate diurnal correction; solved by using a nearby observatory with 1-minute data",
         "Altitude variation along flight lines due to terrain; corrected by upward continuation",
-        "Magnetic heading error from the helicopter's own field; eliminated by compensation modeling",
-        "Instrument drift during the survey; corrected by tie-line levelling using least-squares adjustment of cross-over differences"
+        "Magnetic heading error from the helicopter's own field; eliminated by compensation modeling"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Systematic level errors between adjacent flight lines are most commonly caused by instrument drift and incomplete diurnal correction. Tie-line levelling is the standard correction: cross-over differences at intersections are used in a least-squares adjustment to compute time-varying corrections for each flight line.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -393,12 +393,12 @@
       "difficulty": "hard",
       "stem": "In aeromagnetic processing, the IGRF is subtracted to obtain the 'anomalous field.' The IGRF represents the main geomagnetic field up to spherical harmonic degree n = 13, corresponding to ~300 km spatial resolution. What type of anomalies does IGRF subtraction fail to resolve?",
       "options": [
-        "Crustal anomalies shorter than ~300 km; these are the anomalies of interest and require no correction",
-        "Regional anomalies from the lower mantle; compensated by applying a polynomial trend to the residual field",
         "Crustal anomalies longer than ~300 km; compensated by adding back the crustal field from a satellite-derived model such as MF7",
-        "Diurnal variations; compensated by using observatory base station data during the survey"
+        "Diurnal variations; compensated by using observatory base station data during the survey",
+        "Crustal anomalies shorter than ~300 km; these are the anomalies of interest and require no correction",
+        "Regional anomalies from the lower mantle; compensated by applying a polynomial trend to the residual field"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The IGRF with n = 13 represents the core field with spatial resolution ~300 km. It does not contain crustal anomalies shorter than ~300 km, so these are preserved in the residual field after IGRF subtraction. These short-wavelength anomalies are the primary target of aeromagnetic surveys and require no further correction.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "The magnetic susceptibility of rocks depends on mineral composition, grain size, and domain state. For SD magnetite grains with volume V = 10⁻¹⁸ m³ (diameter ~120 nm) at T = 300 K, using χ ≈ μ₀M_s²V/(3kT), what order of magnitude is the expected susceptibility?",
       "options": [
-        "~10⁻³ SI, high susceptibility typical of magnetite-rich rocks",
         "~10⁻¹ SI, very high susceptibility approaching metallic values",
         "~10⁻⁶ SI, low susceptibility typical of paramagnetic minerals",
-        "~10⁻⁹ SI, extremely low, essentially non-magnetic"
+        "~10⁻⁹ SI, extremely low, essentially non-magnetic",
+        "~10⁻³ SI, high susceptibility typical of magnetite-rich rocks"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "χ = μ₀M_s²V/(3kT) ≈ 0.023 SI. This is in the ~10⁻² to 10⁻³ SI range, consistent with typical magnetite-bearing rocks. SD grains can easily magnetize through rotation of the magnetization vector within the energy well.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -440,12 +440,12 @@
       "difficulty": "medium",
       "stem": "The self-potential (SP) anomaly over a massive sulfide ore body is primarily generated by electrochemical polarization. The SP potential V at distance r from a polarizable sphere in the far field follows V ∝ cos θ/r². For a 50 m diameter ore body at 100 m depth with surface SP amplitude of −200 mV, what is the expected SP signature at 500 m horizontal distance?",
       "options": [
+        "−80 mV, maintaining ~40% of peak amplitude due to conductive overburden channeling",
         "−8 mV, decaying as 1/r² with a cos θ factor giving ~4% of the peak anomaly",
         "−40 mV, decaying as 1/r with no angular dependence",
-        "−0.8 mV, decaying as 1/r³, essentially at noise level",
-        "−80 mV, maintaining ~40% of peak amplitude due to conductive overburden channeling"
+        "−0.8 mV, decaying as 1/r³, essentially at noise level"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Using the dipole far-field approximation: V(500 m)/V(100 m) ≈ (100/500)² × cos θ = 0.04 × cos θ. At θ = 0: V ≈ −200 × 0.04 = −8 mV. The SP anomaly from a compact source decays as 1/r² in the far field.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -461,12 +461,12 @@
       "difficulty": "easy",
       "stem": "Streaming potentials in porous media arise from electrokinetic coupling. The coupling coefficient C_sp = εζ/ησ. For sandstone with ε = 80ε₀, ζ = −50 mV, η = 10⁻³ Pa·s, and σ = 0.01 S/m, what is the streaming potential coupling coefficient?",
       "options": [
-        "~35 mV/MPa, a strong coupling that generates measurable SP anomalies over aquifers",
-        "~0.35 mV/MPa, too weak to detect at the surface",
         "~350 mV/MPa, unrealistically large, exceeding the zeta potential itself",
-        "~3.5 μV/MPa, characteristic of tight crystalline rock, not sandstone"
+        "~3.5 μV/MPa, characteristic of tight crystalline rock, not sandstone",
+        "~35 mV/MPa, a strong coupling that generates measurable SP anomalies over aquifers",
+        "~0.35 mV/MPa, too weak to detect at the surface"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "C_sp = εζ/ησ = (80 × 8.854 × 10⁻¹² × 0.05)/(10⁻³ × 10⁻²) ≈ 3.54 × 10⁻⁶ V/Pa = 35 mV/MPa. In practice, C_sp for sandstone is typically 10–100 mV/MPa.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -482,12 +482,12 @@
       "difficulty": "hard",
       "stem": "In SP surveys, telluric currents produce slowly varying background noise of 5–20 mV amplitude. Electrode polarization at non-polarizable electrodes introduces drift of 1–5 mV/hour. If an SP anomaly of interest has amplitude 50 mV and lateral extent 200 m, what survey strategy best separates the anomaly from these noise sources?",
       "options": [
-        "Use a single non-polarizable electrode and measure absolute potentials along a profile, correcting for drift using repeat measurements at a base station",
         "Use a gradient array with fixed electrodes and map the full grid, as gradient measurements cancel telluric and drift effects automatically",
         "Use a remote reference electrode 10 km away to measure the regional telluric field, subtracting it from the local measurements",
-        "All of the above — the best approach combines base station drift correction, gradient mapping, and remote reference subtraction"
+        "Applies to specific environments",
+        "Use a single non-polarizable electrode and measure absolute potentials along a profile, correcting for drift using repeat measurements at a base station"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "SP interpretation requires addressing multiple noise sources simultaneously: (1) Base station drift correction handles electrode polarization drift. (2) Gradient array measurements naturally cancel the slowly varying telluric field. (3) Remote reference subtraction provides an independent measure of the regional telluric field. In practice, all three strategies are used in combination.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -503,12 +503,12 @@
       "difficulty": "easy",
       "stem": "In transient electromagnetic (TEM) methods, the current in a transmitter loop is abruptly switched off, inducing eddy currents that diffuse downward like a 'smoke ring.' The diffusion depth is z_diff = √(2t/(μσ)). For σ = 0.01 S/m, at what time after switch-off do the eddy currents reach 1 km depth?",
       "options": [
+        "t ≈ 500 s — impractically long, beyond any operational TEM system",
         "t ≈ 0.05 s (50 ms) — typical of late-time TEM responses in resistive environments",
         "t ≈ 5 ms — characteristic of early-to-mid time TEM responses",
-        "t ≈ 0.5 s — requires long recording windows dominated by noise",
-        "t ≈ 500 s — impractically long, beyond any operational TEM system"
+        "t ≈ 0.5 s — requires long recording windows dominated by noise"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "t = z²μσ/2 = (1000)² × (4π × 10⁻⁷) × 0.01 / 2 = 6.28 × 10⁻³ s ≈ 6.3 ms. The closest answer is B (5 ms). The 'smoke ring' concept (Nabighan 1979) shows that the peak current density migrates to z ≈ √(2t/(μσ)).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -524,12 +524,12 @@
       "difficulty": "easy",
       "stem": "The late-time TEM response in a homogeneous half-space decays as V(t) ∝ t^(-5/2). For a layered earth with a conductive layer (σ₂ = 1 S/m) beneath a resistive layer (σ₁ = 0.01 S/m, thickness h = 100 m), at what approximate time does the response first sense the conductive layer?",
       "options": [
-        "t ≈ h²μσ₁/2 — the time for the smoke ring to reach the layer boundary",
-        "t ≈ h²μσ₂/2 — using the conductive layer's properties",
         "t ≈ h²μ(σ₁+σ₂)/4 — averaging the two conductivities",
-        "t ≈ 1/(fσ₁) — the skin depth at 1 Hz equals the layer thickness"
+        "t ≈ 1/(fσ₁) — the skin depth at 1 Hz equals the layer thickness",
+        "t ≈ h²μσ₁/2 — the time for the smoke ring to reach the layer boundary",
+        "t ≈ h²μσ₂/2 — using the conductive layer's properties"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The smoke ring first reaches the layer boundary at t = h²μσ₁/2 = (100)² × 4π × 10⁻⁷ × 0.01 / 2 ≈ 63 μs. For a resistive overburden of 100 m, the eddy currents diffuse through the resistive layer in this time, after which the conductive layer beneath begins to influence the response.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -545,12 +545,12 @@
       "difficulty": "easy",
       "stem": "The depth of investigation (DOI) in TEM depends on transmitter loop size, current waveform, and earth conductivity. For a 100 m × 100 m square loop with step-off waveform in a half-space of σ = 0.1 S/m, z_max ≈ 0.55√(t/(μσ)) (McNeill 1990). For a recording window of 10 ms, what is the approximate DOI?",
       "options": [
-        "~150 m — suitable for groundwater exploration in moderate-resistivity terrain",
         "~1500 m — deep enough for mineral exploration targets",
         "~15 m — only sensitive to near-surface weathering zone",
-        "~1.5 km — requires a much larger transmitter loop and longer recording time"
+        "~1.5 km — requires a much larger transmitter loop and longer recording time",
+        "~150 m — suitable for groundwater exploration in moderate-resistivity terrain"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "z_max = 0.55√(t/(μσ)) = 0.55 × √(0.01/(4π × 10⁻⁷ × 0.1)) = 0.55 × 282 ≈ 155 m. This is closest to option A (150 m). For mineral exploration at 1.5 km depth, a much larger loop and longer recording time would be needed.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -566,12 +566,12 @@
       "difficulty": "medium",
       "stem": "The semblance coefficient for NMO-corrected CMP gathers is S(v) = |Σᵢ sᵢ(t)|²/(N Σᵢ |sᵢ(t)|²). For a perfect reflection with no noise in a 24-trace gather, what is the maximum semblance value, and how does it change when residual NMO error of one sample exists on one trace?",
       "options": [
+        "S = 1.0 regardless of NMO accuracy because semblance is insensitive to timing errors",
         "S = 1.0 with perfect NMO; drops to ~0.92–0.96 with one trace misaligned by one sample",
         "S = 24 with perfect NMO; drops to 23 with one misaligned trace",
-        "S = 0.5 for a perfect reflection; increases to 1.0 with any coherent event",
-        "S = 1.0 regardless of NMO accuracy because semblance is insensitive to timing errors"
+        "S = 0.5 for a perfect reflection; increases to 1.0 with any coherent event"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For perfect NMO: all traces align, Σsᵢ = 24A, Σ|sᵢ|² = 24A², S = (24A)²/(24 × 24A²) = 1.0. With one trace shifted: 23 traces sum coherently, S ≈ 0.92–0.96. Semblance is a normalized measure (0 to 1) that decreases rapidly with timing errors.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -587,12 +587,12 @@
       "difficulty": "hard",
       "stem": "Residual statics corrections account for near-surface velocity variations. The surface-consistent model decomposes traveltime: t_ij = s_i + r_j + G_k(x) + C_n. If the near-surface has a 5 m thick low-velocity layer (V₀ = 300 m/s) laterally varying to 500 m/s, what is the maximum residual static?",
       "options": [
-        "~5 ms — (5/300 − 5/500) × 1000 ≈ 6.7 ms, significant at 50 Hz bandwidth",
-        "~0.5 ms — negligible for most processing flows",
         "~50 ms — comparable to a full wavelet period, requiring pre-stack depth migration",
-        "~0.05 ms — below the digitization interval of 4 ms typically used in acquisition"
+        "~0.05 ms — below the digitization interval of 4 ms typically used in acquisition",
+        "~5 ms — (5/300 − 5/500) × 1000 ≈ 6.7 ms, significant at 50 Hz bandwidth",
+        "~0.5 ms — negligible for most processing flows"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Δt = d/V₁ − d/V₂ = 5/300 − 5/500 = 0.01667 − 0.01 = 0.00667 s ≈ 6.7 ms. At 50 Hz (period = 20 ms), a 6.7 ms static is about one-third of a wavelength, causing significant misalignment in CMP stacking.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -608,12 +608,12 @@
       "difficulty": "easy",
       "stem": "The coherence cube (Bahorich & Farmer, 1995) computes trace-to-trace similarity. For a geologically continuous layer with no faults, what coherence value is expected, and how does a vertical fault with 50 m throw affect it?",
       "options": [
-        "Coherence ≈ 1.0 for continuous layer; drops to ~0.5–0.7 across the fault where traces are misaligned",
         "Coherence ≈ 0.5 for all geology because coherence is always less than 1",
         "Coherence ≈ 1.0 regardless of faults because coherence measures amplitude, not timing",
-        "Coherence ≈ 0.0 for continuous geology because adjacent traces are never identical"
+        "Coherence ≈ 0.0 for continuous geology because adjacent traces are never identical",
+        "Coherence ≈ 1.0 for continuous layer; drops to ~0.5–0.7 across the fault where traces are misaligned"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For a continuous, flat-lying reflector: all traces have identical waveforms, giving coherence → 1.0. Across a fault with 50 m throw, traces on opposite sides see different reflector depths, causing waveform misalignment. The coherence drops to 0.5–0.7, providing the diagnostic fault expression on coherence slices.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "easy",
       "stem": "Digital rock physics (DRP) uses high-resolution 3D imaging to create numerical rock models. For a sandstone imaged at 1 μm resolution in a 300³ voxel subvolume, the computed porosity is 0.22 and permeability is 850 mD. If the subvolume represents only 10⁻⁶ of the total reservoir volume, what is the primary concern?",
       "options": [
+        "Binary pore geometry cannot represent the true complexity of real pore systems",
         "The subvolume is too small to capture long-range heterogeneity (bedding, facies variations) that dominate reservoir-scale flow behavior",
         "The 1 μm resolution is too coarse to resolve individual pore throats in sandstone",
-        "The FIB-SEM imaging introduces artifacts that make computed permeability systematically too low",
-        "Binary pore geometry cannot represent the true complexity of real pore systems"
+        "The FIB-SEM imaging introduces artifacts that make computed permeability systematically too low"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The fundamental challenge in DRP upscaling is the representative elementary volume (REV) concept. A 300³ μm subvolume captures grain-scale heterogeneity but misses larger-scale features: cross-bedding (cm to m scale), bioturbation (cm scale), and facies boundaries (m to 10 m scale). These features create permeability anisotropy and preferential flow paths.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "medium",
       "stem": "Pore-network modeling extracts a simplified network of pores and throats for simulating multiphase flow. In a water-wet sandstone with φ = 0.25 and Swi = 0.20, what happens to oil relative permeability (kro) during a waterflood as Sw increases from Swi to Sor?",
       "options": [
-        "kro decreases monotonically from ~1.0 at Swi to 0 at Sor, following a power-law kro ∝ (1−Sw)ⁿ with n typically 2–4",
-        "kro initially increases due to snap-off displacements, then decreases to 0 at Sor",
         "kro remains constant at 1.0 until Sw reaches 0.5, then drops sharply to 0 at Sor",
-        "kro follows an S-curve, with a plateau at intermediate water saturations due to trapped oil clusters"
+        "kro follows an S-curve, with a plateau at intermediate water saturations due to trapped oil clusters",
+        "kro decreases monotonically from ~1.0 at Swi to 0 at Sor, following a power-law kro ∝ (1−Sw)ⁿ with n typically 2–4",
+        "kro initially increases due to snap-off displacements, then decreases to 0 at Sor"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In water-wet systems, oil relative permeability decreases monotonically as water saturation increases. The standard Brooks-Corey model gives kro = ((1−Sw−Sor)/(1−Swi−Sor))^n with n ≈ 2–4. Water preferentially invades the largest pore throats, reducing oil connectivity progressively.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "medium",
       "stem": "Upscaling converts fine-scale property distributions to coarse-scale effective properties. For a layered sandstone with permeabilities 100, 10, 1000, and 50 mD, what do the arithmetic and harmonic averages indicate?",
       "options": [
-        "Arithmetic = 290 mD, Harmonic ≈ 30.5 mD, ratio ≈ 9.5 — strong heterogeneity, harmonic or power-average upscaling recommended",
         "Arithmetic = 290 mD, Harmonic = 290 mD, ratio = 1.0 — homogeneous rock, arithmetic average sufficient",
         "Arithmetic = 100 mD, Harmonic = 100 mD — both averages give the same result for any layered system",
-        "Arithmetic = 290 mD, Harmonic = 29 mD, ratio = 10 — moderate heterogeneity, arithmetic average acceptable"
+        "Arithmetic = 290 mD, Harmonic = 29 mD, ratio = 10 — moderate heterogeneity, arithmetic average acceptable",
+        "Arithmetic = 290 mD, Harmonic ≈ 30.5 mD, ratio ≈ 9.5 — strong heterogeneity, harmonic or power-average upscaling recommended"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Arithmetic = (100+10+1000+50)/4 = 290 mD. Harmonic = 4/(0.01+0.1+0.001+0.02) = 4/0.131 ≈ 30.5 mD. The ratio ≈ 9.5 indicates significant heterogeneity. Arithmetic overpredicts flow capacity, harmonic underpredicts. Power-average or flow-based upscaling gives the correct effective permeability.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -702,12 +702,12 @@
       "difficulty": "easy",
       "stem": "The stationary (undecimated) wavelet transform (SWT) differs from DWT by omitting downsampling. For a seismic trace of length N = 1024 samples, how many coefficients does the SWT produce at each scale, and what advantage does this provide?",
       "options": [
+        "Variable numbers: N at scale 1, N/2 at scale 2, etc., matching the DWT but with zero-padding",
         "N coefficients at every scale (1024 per level), giving shift-invariance and avoiding artifacts in denoised seismic data",
         "N/2 coefficients at every scale (512 per level), same as DWT but with better frequency resolution",
-        "2N coefficients at every scale (2048 per level), providing oversampling for noise reduction",
-        "Variable numbers: N at scale 1, N/2 at scale 2, etc., matching the DWT but with zero-padding"
+        "2N coefficients at every scale (2048 per level), providing oversampling for noise reduction"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The SWT produces N coefficients at every decomposition level (no downsampling). The key advantage is shift-invariance: translating the input translates each scale's coefficients by one sample, unlike DWT where downsampling causes aliasing. For seismic denoising, this means wavelet thresholding does not create artifacts.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -723,12 +723,12 @@
       "difficulty": "medium",
       "stem": "Matching pursuit (MP) decomposes a seismic trace into a sum of waveforms from an overcomplete dictionary. For a reflectivity series convolved with a Ricker wavelet (30 Hz), if the true reflectivity has 5 spikes in a 500 ms trace, how many atoms would MP typically need for exact reconstruction?",
       "options": [
-        "5 atoms — one per reflectivity spike, since MP converges to the exact solution for sparse signals",
-        "50 atoms — MP requires many atoms to approximate the wavelet sidelobes of each spike",
         "125 atoms — the trace length divided by the wavelet duration gives the number of atoms needed",
-        "1 atom — a single global atom can represent the entire trace if the dictionary is rich enough"
+        "1 atom — a single global atom can represent the entire trace if the dictionary is rich enough",
+        "5 atoms — one per reflectivity spike, since MP converges to the exact solution for sparse signals",
+        "50 atoms — MP requires many atoms to approximate the wavelet sidelobes of each spike"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Matching pursuit exactly reconstructs a signal that is a sum of dictionary atoms. If the true reflectivity consists of 5 spikes and the dictionary contains the Ricker wavelet at all positions, MP will select the atom centered at each spike position in 5 iterations, achieving exact reconstruction.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -744,12 +744,12 @@
       "difficulty": "medium",
       "stem": "Compressive sensing states that a signal x of length N with K nonzero entries in some transform domain can be recovered from M = O(K log(N/K)) random measurements. For a 3D seismic volume with N = 10⁹ voxels and K = 10⁶ significant wavelet coefficients, what is the approximate minimum M?",
       "options": [
-        "M ≈ 2 × 10⁷ — about 2% of the full volume, enabling dramatic acquisition cost reduction",
         "M ≈ 10⁹ — CS requires all measurements, same as Nyquist sampling",
         "M ≈ 10⁶ — equal to the sparsity level, with no logarithmic factor",
-        "M ≈ 2 × 10⁹ — CS doubles the number of measurements needed"
+        "M ≈ 2 × 10⁹ — CS doubles the number of measurements needed",
+        "M ≈ 2 × 10⁷ — about 2% of the full volume, enabling dramatic acquisition cost reduction"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "M = C × K × log(N/K) = C × 10⁶ × log(10³) ≈ 2 × 10⁷ for C ≈ 3. This is about 2% of the full volume. The logarithmic factor log(N/K) ≈ 6.9 ensures stable recovery with high probability.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -770,12 +770,12 @@
       "difficulty": "hard",
       "stem": "NMR logging measures T₂ distribution, reflecting pore size. The T₂ relaxation rate is 1/T₂ = 1/T₂,bulk + ρ₂(S/V). For sandstone with ρ₂ = 10 μm/s and cylindrical pores with radius r = 10 μm, what is the expected T₂ and how does it compare to the 33 ms cutoff?",
       "options": [
+        "T₂ ≈ 2 ms — extremely fast relaxation, clay-bound water",
         "T₂ ≈ 500 ms — well above the 33 ms cutoff, free (moveable) fluid",
         "T₂ ≈ 20 ms — below the 33 ms cutoff, bound fluid",
-        "T₂ ≈ 200 ms — above the 33 ms cutoff, free fluid in sandstone",
-        "T₂ ≈ 2 ms — extremely fast relaxation, clay-bound water"
+        "T₂ ≈ 200 ms — above the 33 ms cutoff, free fluid in sandstone"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For cylindrical pores: S/V = 2/r. 1/T₂ = ρ₂(S/V) = 10 × 2/10 = 2 s⁻¹, giving T₂ = 500 ms. However, practical ρ₂ values range from 5–30 μm/s and pore geometries are irregular, so T₂ ≈ 200 ms is a more realistic estimate. The standard T₂ cutoff for sandstone is 33 ms: T₂ > 33 ms indicates free fluid.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -791,12 +791,12 @@
       "difficulty": "easy",
       "stem": "NMR diffusion-T₂ mapping separates fluid types. For crude oil with η = 10 cP, D_oil ≈ 2.3 × 10⁻¹⁰ m²/s. If the T₂ of this oil is 200 ms, does it fall above or below the water line on a D-T₂ map?",
       "options": [
-        "Below the water line — oil diffusivity is lower than water at the same T₂, on the viscosity-controlled diffusion trend",
-        "On the water line — oil and water have the same D-T₂ relationship at reservoir conditions",
         "Above the water line — oil diffusivity exceeds water due to lower molecular weight",
-        "Cannot be determined without knowing the oil composition and temperature"
+        "Cannot be determined without knowing the oil composition and temperature",
+        "Below the water line — oil diffusivity is lower than water at the same T₂, on the viscosity-controlled diffusion trend",
+        "On the water line — oil and water have the same D-T₂ relationship at reservoir conditions"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The free-diffusion line connects D = D₀ for different fluids. Water at T₂ ≈ 2.5 s has D ≈ 2.3 × 10⁻⁹ m²/s. Oil at T₂ = 200 ms has D = 2.3 × 10⁻¹⁰ m²/s — one order of magnitude lower. The oil point falls below the free-diffusion line, which is the basis for fluid typing with D-T₂ maps.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -812,12 +812,12 @@
       "difficulty": "medium",
       "stem": "NMR porosity (φ_NMR) is determined from the initial amplitude of the echo train. In a gas-bearing sandstone with φ = 0.25, φ_NMR = 0.15 (underestimated), what causes the NMR porosity deficit in gas zones?",
       "options": [
-        "Gas has very short T₂ due to low hydrogen index and diffusion effects, causing initial echoes to decay before the first measurement window",
         "Gas has very long T₂, exceeding the echo spacing, causing signal aliasing",
         "The NMR tool cannot detect gas because gas is non-magnetic",
-        "The porosity deficit is due to borehole rugosity, not gas effects"
+        "The porosity deficit is due to borehole rugosity, not gas effects",
+        "Gas has very short T₂ due to low hydrogen index and diffusion effects, causing initial echoes to decay before the first measurement window"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In gas zones, NMR porosity is underestimated because: (1) Gas has a low hydrogen index (HI ≈ 0.3–0.4), so signal amplitude is proportional to HI × porosity. (2) Gas molecules diffuse rapidly in the magnetic field gradient, accelerating T₂ decay, pushing signal into very early echo times below the tool's first-echo time. (3) The combination of low HI and diffusion-enhanced relaxation means much of the gas signal is missed.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -833,12 +833,12 @@
       "difficulty": "medium",
       "stem": "In neutron logging, the thermal neutron capture cross-section (Σ) of chlorine (³⁵Cl) is 44 barns, while hydrogen (¹H) is 0.33 barns. In saline formation water (100,000 ppm NaCl), how does the high chlorine content affect the thermal neutron porosity measurement?",
       "options": [
+        "The chlorine effect is only significant for pulsed neutron tools, not continuous-source neutron logs",
         "High Σ_Cl causes rapid thermal neutron absorption, reducing the neutron population and giving an erroneously low porosity reading",
         "Chlorine has no effect because thermal neutron tools measure epithermal neutrons",
-        "High chlorine increases the neutron count rate because chlorine is a neutron source",
-        "The chlorine effect is only significant for pulsed neutron tools, not continuous-source neutron logs"
+        "High chlorine increases the neutron count rate because chlorine is a neutron source"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Chlorine has a very high thermal neutron capture cross-section (44 barns vs. 0.33 for hydrogen). In saline formation water, Σ_water ≈ 100 c.u. vs. 22 c.u. for fresh water. This additional absorption reduces the thermal neutron population faster, which can be misinterpreted as lower porosity.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -854,12 +854,12 @@
       "difficulty": "easy",
       "stem": "Natural gamma-ray spectroscopy logs measure K (%), U (ppm), and Th (ppm). In a shale with K = 3.5%, Th = 12 ppm, and U = 4 ppm, what does the Th/U ratio indicate about the depositional environment?",
       "options": [
-        "Th/U = 3.0; values > 2 indicate reducing (anoxic) conditions where uranium is mobile and thorium is immobile",
-        "Th/U = 3.0; values > 2 indicate oxidizing conditions where uranium is precipitated and thorium is leached",
         "Th/U = 0.3; values < 1 indicate reducing conditions where uranium is enriched",
-        "Th/U = 3.0; values > 2 indicate high-energy depositional environments with heavy mineral concentrations"
+        "Th/U = 3.0; values > 2 indicate high-energy depositional environments with heavy mineral concentrations",
+        "Th/U = 3.0; values > 2 indicate reducing (anoxic) conditions where uranium is mobile and thorium is immobile",
+        "Th/U = 3.0; values > 2 indicate oxidizing conditions where uranium is precipitated and thorium is leached"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Th/U = 12/4 = 3.0. Th is immobile in both oxidizing and reducing conditions, while U is soluble as U⁶⁺ in oxidizing conditions (leached) and insoluble as U⁴⁺ in reducing conditions (precipitated). Th/U > 2 indicates reducing (anoxic) conditions where U has been leached away.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -875,12 +875,12 @@
       "difficulty": "hard",
       "stem": "The jackknife bootstrap method estimates model parameter uncertainty by resampling data with replacement. For a linear inversion (Gm = d) with B = 1000 bootstrap realizations, what is the relationship between bootstrap standard deviation and the formal covariance matrix (G^TG)^(-1)σ²?",
       "options": [
-        "They should be approximately equal for linear inversions with Gaussian noise, validating the bootstrap as a non-parametric alternative",
         "The bootstrap always gives larger uncertainties because it accounts for non-Gaussian noise",
         "The bootstrap gives smaller uncertainties because resampling reduces the effective noise level",
-        "The bootstrap cannot be applied to inverse problems because the model space is continuous"
+        "The bootstrap cannot be applied to inverse problems because the model space is continuous",
+        "They should be approximately equal for linear inversions with Gaussian noise, validating the bootstrap as a non-parametric alternative"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For linear inversions with Gaussian noise, the formal covariance C_m = (G^TG)^(-1)σ² provides theoretically correct uncertainties. The bootstrap converges to the same estimates as B → ∞. This equivalence validates the bootstrap: if bootstrap uncertainties match formal analysis, it confirms the Gaussian noise assumption.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -901,12 +901,12 @@
       "difficulty": "easy",
       "stem": "The null space of the forward operator G consists of model vectors n such that Gn = 0. For a 1D resistivity inversion with 10 layers and 5 soundings, if rank(G) = 5, what does the 5-dimensional null space imply?",
       "options": [
+        "The null space has no physical significance; it is an artifact of the matrix representation",
         "The inversion is underdetermined: 5 independent combinations of layer resistivities cannot be resolved from the data alone; regularization adds information to reduce the null space",
         "The inversion is overconstrained: the null space indicates redundant data that should be removed",
-        "The null space represents noise in the data; it should be projected out using SVD",
-        "The null space has no physical significance; it is an artifact of the matrix representation"
+        "The null space represents noise in the data; it should be projected out using SVD"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "With N_null = 10 − 5 = 5, five independent linear combinations of model parameters cannot be determined from the data. This is fundamental underdetermination. Regularization (Tikhonov, smoothness, Occam's inversion) adds prior information that constrains the null space. Resolution matrix diagonal elements close to 1 indicate well-resolved parameters; values near 0 indicate parameters controlled by regularization.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -922,12 +922,12 @@
       "difficulty": "hard",
       "stem": "A geophysical equipment costs ₹8,00,000. After a 15% discount and then 10% tax on the discounted price, what is the final price?",
       "options": [
-        "₹7,48,000",
-        "₹7,92,000",
         "₹8,28,000",
-        "₹6,80,000"
+        "₹6,80,000",
+        "₹7,48,000",
+        "₹7,92,000"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Discounted price = 8,00,000 × 0.85 = 6,80,000. Tax = 6,80,000 × 0.10 = 68,000. Final price = 6,80,000 + 68,000 = 7,48,000.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -948,12 +948,12 @@
       "difficulty": "medium",
       "stem": "In a seismic survey crew, the ratio of field engineers to technicians to support staff is 2:5:3. If there are 40 people in total, how many are technicians?",
       "options": [
-        "8",
         "12",
         "20",
-        "15"
+        "15",
+        "8"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Total parts = 2 + 5 + 3 = 10. Technicians = (5/10) × 40 = 20.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -974,12 +974,12 @@
       "difficulty": "medium",
       "stem": "A geophysical service company buys a magnetometer for ₹5,00,000 and sells it at 20% profit. If the selling price is further increased by 10% during peak demand, what is the total profit percentage?",
       "options": [
+        "25%",
         "30%",
         "32%",
-        "35%",
-        "25%"
+        "35%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SP₁ = 5,00,000 × 1.20 = 6,00,000. SP₂ = 6,00,000 × 1.10 = 6,60,000. Profit = 1,60,000. Profit% = (1,60,000/5,00,000) × 100 = 32%.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1000,12 +1000,12 @@
       "difficulty": "hard",
       "stem": "Machine A can digitize seismic data in 12 hours, Machine B in 15 hours. If both work together, how long will they take?",
       "options": [
-        "6 hours 40 minutes",
-        "7 hours 30 minutes",
         "8 hours",
-        "6 hours"
+        "6 hours",
+        "6 hours 40 minutes",
+        "7 hours 30 minutes"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Rate A = 1/12, Rate B = 1/15. Combined = 3/20. Time = 20/3 = 6 hours 40 minutes.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "₹10,00,000 invested at 8% simple interest per annum for 3 years will yield total interest of:",
       "options": [
-        "₹2,40,000",
         "₹2,60,000",
         "₹2,00,000",
-        "₹3,00,000"
+        "₹3,00,000",
+        "₹2,40,000"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SI = P × R × T / 100 = 10,00,000 × 8 × 3 / 100 = ₹2,40,000.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1052,12 +1052,12 @@
       "difficulty": "medium",
       "stem": "A seismic vessel travels at 12 km/h downstream. What distance is covered in 5 hours?",
       "options": [
+        "45 km",
         "60 km",
         "50 km",
-        "40 km",
-        "45 km"
+        "40 km"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Distance = Speed × Time = 12 × 5 = 60 km.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1078,12 +1078,12 @@
       "difficulty": "medium",
       "stem": "The average depth measured at 5 stations in a gravity survey is 1200 m. If one reading of 1500 m is excluded, what is the new average?",
       "options": [
-        "1125 m",
-        "1150 m",
         "1200 m",
-        "1100 m"
+        "1100 m",
+        "1125 m",
+        "1150 m"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Total of 5 = 6000 m. After excluding 1500: new total = 4500. New average = 4500/4 = 1125 m.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1104,12 +1104,12 @@
       "difficulty": "medium",
       "stem": "In how many ways can 3 geophysicists be assigned to 5 different wells, with at most one person per well?",
       "options": [
-        "10",
         "60",
         "125",
-        "15"
+        "15",
+        "10"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ways = P(5,3) = 5!/(5-3)! = 5 × 4 × 3 = 60.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1130,12 +1130,12 @@
       "difficulty": "hard",
       "stem": "A die is thrown twice. What is the probability that the sum of the numbers obtained is 9?",
       "options": [
+        "1/12",
         "1/9",
         "1/6",
-        "5/36",
-        "1/12"
+        "5/36"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Favorable outcomes: (3,6), (4,5), (5,4), (6,3) = 4 ways. Total = 36. Probability = 4/36 = 1/9.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1156,12 +1156,12 @@
       "difficulty": "medium",
       "stem": "Complete the series: 2, 6, 12, 20, 30, ?",
       "options": [
-        "42",
-        "36",
         "40",
-        "38"
+        "38",
+        "42",
+        "36"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Differences: 4, 6, 8, 10, 12. Next = 30 + 12 = 42.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1187,7 +1187,7 @@
         "HSBWJUZ",
         "HSBWJUZ"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Each letter shifts by +1: G→H, R→S, A→B, V→W, I→J, T→U, Y→Z = HSBWJUZ.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1208,12 +1208,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a woman, a man says: 'She is the daughter of the woman who is the mother of the husband of my mother.' How is the woman related to the man?",
       "options": [
+        "Mother",
         "Sister",
         "Daughter",
-        "Wife",
-        "Mother"
+        "Wife"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "'Husband of my mother' = father. 'Mother of father' = paternal grandmother. 'Daughter of paternal grandmother' = father's sister or father. The woman is the daughter of my paternal grandmother, so she could be my aunt. Among the options, Sister is the closest answer.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1234,12 +1234,12 @@
       "difficulty": "hard",
       "stem": "Statements: All seismic interpreters are geophysicists. Some geophysicists are geologists. Conclusions: I. Some seismic interpreters are geologists. II. Some geologists are seismic interpreters.",
       "options": [
-        "Only conclusion I follows",
-        "Only conclusion II follows",
-        "Both conclusions follow",
-        "Neither conclusion follows"
+        "Applicable in specific scenarios only",
+        "Suitable for narrow use cases",
+        "Applies to ring topology only",
+        "Common in all rock types"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "From 'All interpreters are geophysicists' and 'Some geophysicists are geologists,' we cannot conclude that any interpreters are geologists. The 'some geophysicists who are geologists' might not include any interpreters. Neither conclusion follows definitively.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1260,12 +1260,12 @@
       "difficulty": "easy",
       "stem": "A field geologist walks 5 km north, turns right and walks 3 km, then turns right again and walks 5 km. In which direction is he from his starting point?",
       "options": [
-        "North",
         "South",
         "East",
-        "West"
+        "West",
+        "North"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "North 5 km → East 3 km → South 5 km. Net: 3 km East. Direction: East.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1286,12 +1286,12 @@
       "difficulty": "medium",
       "stem": "The sum of ages of a father and son is 55 years. After 5 years, the father's age will be three times the son's age. What is the son's current age?",
       "options": [
+        "8 years",
         "12 years",
         "10 years",
-        "15 years",
-        "8 years"
+        "15 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "F + S = 55. After 5 years: F+5 = 3(S+5) → F = 3S + 10. 3S + 10 + S = 55 → 4S = 45 → S = 11.25. Closest option is 10 years.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1312,12 +1312,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills a tank in 6 hours, Pipe B empties it in 8 hours. If both are opened together, how long to fill?",
       "options": [
-        "24 hours",
-        "20 hours",
         "14 hours",
-        "12 hours"
+        "12 hours",
+        "24 hours",
+        "20 hours"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Rate A = 1/6, Rate B = −1/8. Net = 1/24. Time = 24 hours.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1338,12 +1338,12 @@
       "difficulty": "medium",
       "stem": "A cylindrical water tank has radius 2 m and height 5 m. What is its capacity in litres?",
       "options": [
-        "62,832 litres",
         "20,000 litres",
         "40,000 litres",
-        "60,000 litres"
+        "60,000 litres",
+        "62,832 litres"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Volume = πr²h = π × 4 × 5 = 20π ≈ 62.832 m³ = 62,832 litres.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1364,12 +1364,12 @@
       "difficulty": "medium",
       "stem": "A survey boat goes 24 km upstream in 6 hours and 24 km downstream in 3 hours. What is the speed of the stream?",
       "options": [
+        "1 km/h",
         "2 km/h",
         "4 km/h",
-        "3 km/h",
-        "1 km/h"
+        "3 km/h"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Speed upstream = 4 km/h. Speed downstream = 8 km/h. Boat speed = 6 km/h. Stream speed = 2 km/h.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1390,12 +1390,12 @@
       "difficulty": "hard",
       "stem": "Seismic surveys conducted by ONGC: 2019: 45, 2020: 38, 2021: 52, 2022: 61, 2023: 70. What is the percentage increase from 2020 to 2023?",
       "options": [
-        "84.2%",
-        "75.5%",
         "80.0%",
-        "70.0%"
+        "70.0%",
+        "84.2%",
+        "75.5%"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Increase = 70 − 38 = 32. Percentage = (32/38) × 100 ≈ 84.2%.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1416,12 +1416,12 @@
       "difficulty": "medium",
       "stem": "Magnetic survey line-km flown per quarter: Q1=800, Q2=1200, Q3=950, Q4=1100. What is the average per quarter?",
       "options": [
-        "1012.5 km",
         "1050 km",
         "975 km",
-        "1100 km"
+        "1100 km",
+        "1012.5 km"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Average = (800+1200+950+1100)/4 = 4050/4 = 1012.5 km.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1442,12 +1442,12 @@
       "difficulty": "medium",
       "stem": "At what time between 3 and 4 o'clock will the hour and minute hands be together?",
       "options": [
+        "3:20 minutes exactly",
         "3:16 and 4/11 minutes",
         "3:18 and 2/11 minutes",
-        "3:15 minutes exactly",
-        "3:20 minutes exactly"
+        "3:15 minutes exactly"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "At 3:00, the minute hand is 15 minute-spaces behind. Relative speed = 11/12 min per minute. Time = 15 × 12/11 = 180/11 = 16 and 4/11 minutes past 3.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1468,12 +1468,12 @@
       "difficulty": "easy",
       "stem": "From a point 50 m from the base of a tower, the angle of elevation to the top is 60°. What is the height?",
       "options": [
-        "50√3 m",
-        "50/√3 m",
         "100 m",
-        "50 m"
+        "50 m",
+        "50√3 m",
+        "50/√3 m"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "tan(60°) = height/50. height = 50 × √3 ≈ 86.6 m.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1489,12 +1489,12 @@
       "difficulty": "medium",
       "stem": "If sin θ = 3/5 and θ is acute, what is tan θ?",
       "options": [
-        "3/4",
         "4/3",
         "3/5",
-        "5/3"
+        "5/3",
+        "3/4"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Adjacent = √(25−9) = 4. tan θ = 3/4.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1515,12 +1515,12 @@
       "difficulty": "medium",
       "stem": "ONGC exploration budget: Seismic = 40%, Drilling = 30%, Well Logging = 20%, Other = 10%. Total budget ₹500 crore. How much for Well Logging?",
       "options": [
+        "₹50 crore",
         "₹100 crore",
         "₹150 crore",
-        "₹200 crore",
-        "₹50 crore"
+        "₹200 crore"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Well Logging = 20% of 500 = ₹100 crore.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1541,12 +1541,12 @@
       "difficulty": "easy",
       "stem": "A triangular survey plot has sides 13, 14, and 15 units. What is its area?",
       "options": [
-        "72 sq units",
-        "84 sq units",
         "90 sq units",
-        "105 sq units"
+        "105 sq units",
+        "72 sq units",
+        "84 sq units"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Heron's formula: s = 21. Area = √(21 × 8 × 7 × 6) = √(7056) = 84.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1567,12 +1567,12 @@
       "difficulty": "easy",
       "stem": "Delhi-Mumbai Expressway is the longest expressway in India at approximately:",
       "options": [
-        "1,200 km",
         "1,386 km",
         "1,500 km",
-        "2,000 km"
+        "2,000 km",
+        "1,200 km"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Delhi-Mumbai Expressway is approximately 1,386 km long.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1588,12 +1588,12 @@
       "difficulty": "easy",
       "stem": "Which Indian IT company recently partnered with NVIDIA for AI cloud services?",
       "options": [
+        "HCL",
         "TCS",
         "Infosys",
-        "Wipro",
-        "HCL"
+        "Wipro"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Infosys partnered with NVIDIA for AI cloud services.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1609,12 +1609,12 @@
       "difficulty": "medium",
       "stem": "COP28 was held in which country?",
       "options": [
-        "Egypt",
-        "UAE",
         "India",
-        "UK"
+        "UK",
+        "Egypt",
+        "UAE"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "COP28 was held in Dubai, UAE.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1630,12 +1630,12 @@
       "difficulty": "medium",
       "stem": "OPEC+ recently agreed to extend oil production cuts through:",
       "options": [
-        "Q1 2025",
         "Q2 2025",
         "End of 2025",
-        "Q1 2026"
+        "Q1 2026",
+        "Q1 2025"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "OPEC+ extended production cuts through end of 2025.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1651,12 +1651,12 @@
       "difficulty": "hard",
       "stem": "Which country successfully landed on the Moon's south pole in 2023?",
       "options": [
+        "Japan",
         "USA",
         "China",
-        "India",
-        "Japan"
+        "India"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "India's Chandrayaan-3 successfully landed on the Moon's south pole.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1672,12 +1672,12 @@
       "difficulty": "hard",
       "stem": "The National Green Hydrogen Mission has an initial outlay of:",
       "options": [
-        "₹12,000 crore",
-        "₹19,744 crore",
         "₹25,000 crore",
-        "₹50,000 crore"
+        "₹50,000 crore",
+        "₹12,000 crore",
+        "₹19,744 crore"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The National Green Hydrogen Mission has an outlay of ₹19,744 crore.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1693,12 +1693,12 @@
       "difficulty": "easy",
       "stem": "Smallest state in India by area:",
       "options": [
-        "Sikkim",
         "Goa",
         "Tripura",
-        "Mizoram"
+        "Mizoram",
+        "Sikkim"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Goa is the smallest state by area (3,702 sq km).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1714,12 +1714,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
+        "Corundum",
         "Quartz",
         "Topaz",
-        "Diamond",
-        "Corundum"
+        "Diamond"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1735,12 +1735,12 @@
       "difficulty": "medium",
       "stem": "Minimum age for Lok Sabha membership:",
       "options": [
-        "21 years",
-        "25 years",
         "30 years",
-        "35 years"
+        "35 years",
+        "21 years",
+        "25 years"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Minimum age for Lok Sabha membership is 25 years.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1756,12 +1756,12 @@
       "difficulty": "hard",
       "stem": "World Environment Day is celebrated on:",
       "options": [
-        "March 22",
         "June 5",
         "April 22",
-        "May 21"
+        "May 21",
+        "March 22"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "World Environment Day is celebrated on June 5th.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1777,12 +1777,12 @@
       "difficulty": "hard",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
+        "Stable",
         "Permanent",
         "Transient",
-        "Eternal",
-        "Stable"
+        "Eternal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1798,12 +1798,12 @@
       "difficulty": "medium",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
-        "at",
         "in",
-        "of"
+        "of",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1819,12 +1819,12 @@
       "difficulty": "hard",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
-        "Each of",
         "the students",
         "have submitted",
-        "their assignments"
+        "their assignments",
+        "Each of"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1840,12 +1840,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
+        "No article",
         "A",
         "An",
-        "The",
-        "No article"
+        "The"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1861,12 +1861,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
-        "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent",
+        "Rare"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1882,12 +1882,12 @@
       "difficulty": "medium",
       "stem": "The teacher told the students ___ quietly.",
       "options": [
-        "to study",
         "study",
         "studying",
-        "studied"
+        "studied",
+        "to study"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Infinitive after 'told': told someone to do something.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1903,12 +1903,12 @@
       "difficulty": "easy",
       "stem": "Convert to passive: 'The committee approved the proposal.'",
       "options": [
+        "The proposal were approved by the committee",
         "The proposal was approved by the committee",
         "The proposal is approved by the committee",
-        "The proposal has been approved by committee",
-        "The proposal were approved by the committee"
+        "The proposal has been approved by committee"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Past simple passive: was/were + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1924,12 +1924,12 @@
       "difficulty": "medium",
       "stem": "What does 'resilient' mean?",
       "options": [
-        "Fragile",
-        "Able to recover quickly",
         "Slow",
-        "Weak"
+        "Weak",
+        "Fragile",
+        "Able to recover quickly"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Resilient means able to recover quickly from difficulties.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1945,12 +1945,12 @@
       "difficulty": "medium",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
         "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1966,12 +1966,12 @@
       "difficulty": "hard",
       "stem": "She asked me where ___ .",
       "options": [
+        "I live",
         "did I live",
         "do I live",
-        "I lived",
-        "I live"
+        "I lived"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Indirect speech uses past tense: 'where I lived'.",
       "estSec": 15,
       "topicWeight": 0.1,

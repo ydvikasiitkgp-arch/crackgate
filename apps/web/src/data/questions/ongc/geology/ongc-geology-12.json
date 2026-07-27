@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "In a plutonic system with 4 components and 4 phases under isobaric conditions, the variance according to the modified Gibbs phase rule is:",
       "options": [
+        "F = C - P + 3 = 3 (trivariant)",
         "F = C - P + 1 = 1 (univariant)",
         "F = C - P + 2 = 2 (bivariant)",
-        "F = C - P + 0 = 0 (invariant)",
-        "F = C - P + 3 = 3 (trivariant)"
+        "F = C - P + 0 = 0 (invariant)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Isobaric modified phase rule: F = C - P + 1. With C=4, P=4: F = 1. Univariant cotectic line.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -58,12 +58,12 @@
       "difficulty": "easy",
       "stem": "A rock subjected to sigma1=100 MPa, sigma2=60 MPa, sigma3=20 MPa. The maximum shear stress is:",
       "options": [
-        "40 MPa",
         "80 MPa",
         "60 MPa",
-        "50 MPa"
+        "50 MPa",
+        "40 MPa"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "tau_max = (sigma1 - sigma3)/2 = 40 MPa. Intermediate stress sigma2 does not affect tau_max.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -84,12 +84,12 @@
       "difficulty": "hard",
       "stem": "A mineral grain shows 1st-order grey birefringence (delta=0.009) at 30 um. At 60 um, the interference colour shifts to:",
       "options": [
-        "2nd-order grey",
-        "1st-order yellow",
         "2nd-order yellow",
-        "3rd-order blue"
+        "3rd-order blue",
+        "2nd-order grey",
+        "1st-order yellow"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "R = delta x t. At 30um: R=0.27um (1st-order grey). At 60um: R=0.54um (upper 1st-order, near 2nd-order boundary). Doubling thickness doubles retardation.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -110,12 +110,12 @@
       "difficulty": "easy",
       "stem": "In a Bouma sequence, which division is most commonly missing when a turbidity current decelerates rapidly, bypassing the upper flow regime?",
       "options": [
+        "Division E (mudstone)",
         "Division A (massive sand)",
         "Division B (parallel-laminated sand)",
-        "Division C (ripple-laminated sand)",
-        "Division E (mudstone)"
+        "Division C (ripple-laminated sand)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Division B (upper flow regime plane bed) is most commonly missing. Rapid deceleration skips from A directly to C. Common in proximal turbidites.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -136,12 +136,12 @@
       "difficulty": "medium",
       "stem": "During fractional crystallization of basaltic magma (olivine + cpx + plagioclase), which trace element is MOST incompatible?",
       "options": [
-        "Ni",
         "Cr",
         "Light REE",
-        "Sr"
+        "Sr",
+        "Ni"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "LREE (La, Ce, Nd) are highly incompatible in all three phases (D<<1). Ni is compatible in olivine, Cr in cpx, Sr in plagioclase.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -157,12 +157,12 @@
       "difficulty": "easy",
       "stem": "If a taxon FAD is diachronous due to migration, which biozone concept is MOST affected?",
       "options": [
-        "Assemblage zone",
-        "Range zone",
         "Concurrent range zone",
-        "Taxon-range zone"
+        "Taxon-range zone",
+        "Assemblage zone",
+        "Range zone"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Taxon-range zone defined by FAD+LAD of single taxon. Diachronous FAD makes boundaries diachronous. Assemblage zones use multiple taxa and are less sensitive.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -178,12 +178,12 @@
       "difficulty": "easy",
       "stem": "A pelitic schist contains garnet + staurolite + kyanite + muscovite. The kyanite presence indicates P-T conditions:",
       "options": [
+        "In the andalusite field",
         "Below Al2SiO5 triple point",
         "In the kyanite stability field",
-        "In the sillimanite field",
-        "In the andalusite field"
+        "In the sillimanite field"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Kyanite is high-pressure polymorph. Staurolite = medium grade. Together: ~550-700C, 0.6-1.0 GPa, kyanite field.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -204,12 +204,12 @@
       "difficulty": "hard",
       "stem": "Threshold capillary pressure for oil to enter a water-saturated carrier bed is inversely proportional to:",
       "options": [
-        "Oil-water interfacial tension",
         "Pore throat radius",
         "Density difference (rho_w - rho_o)",
-        "Contact angle cos(theta)"
+        "Contact angle cos(theta)",
+        "Oil-water interfacial tension"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Pc = 2*gamma*cos(theta)/r. Inversely proportional to pore throat radius.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -230,12 +230,12 @@
       "difficulty": "medium",
       "stem": "A type-1 sequence boundary is distinguished from type-2 by:",
       "options": [
-        "Basinal downlap only",
-        "Coastal onlap truncation at boundary",
         "Continuous parallel reflectors",
-        "Prograding clinoforms below"
+        "Prograding clinoforms below",
+        "Basinal downlap only",
+        "Coastal onlap truncation at boundary"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Type-1: truncation of coastal onlap + erosion + basinward facies shift. Type-2: lacks significant erosion.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -251,12 +251,12 @@
       "difficulty": "easy",
       "stem": "Anomalous fading in OSL dating primarily affects which mineral?",
       "options": [
-        "Quartz",
-        "Feldspar",
         "Calcium carbonate",
-        "Zircon"
+        "Zircon",
+        "Quartz",
+        "Feldspar"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Feldspar: quantum mechanical tunneling of trapped electrons. Quartz does not show significant fading.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -277,12 +277,12 @@
       "difficulty": "medium",
       "stem": "In DePaolo AFC model, trace element plot curvature is controlled by r, which equals:",
       "options": [
+        "Magma chamber temperature",
         "Ratio of mass assimilated to mass crystallized",
         "Bulk distribution coefficient",
-        "Initial melt composition",
-        "Magma chamber temperature"
+        "Initial melt composition"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "r = Ma/Mc. r=0 = pure FC. Higher r = more curved trends on log-log plots.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -298,12 +298,12 @@
       "difficulty": "easy",
       "stem": "Wilson carbonate facies 7 (fusulinid facies) represents:",
       "options": [
-        "Outer shelf with pelagic fauna",
         "Basinal lime mudstone",
         "Open marine shelf with fusulinids, echinoderms, brachiopods",
-        "Restricted lagoon with evaporites"
+        "Restricted lagoon with evaporites",
+        "Outer shelf with pelagic fauna"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Open marine shelf, normal salinity, diverse shelly fauna. Between reef margin (6) and restricted shelf (8).",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "The stringer zone beneath a VMS deposit is characterized by:",
       "options": [
-        "Disseminated pyrite + chalcopyrite in chlorite-sericite alteration",
-        "Massive pyrrhotite in talc-carbonate matrix",
         "Banded magnetite in quartz veinlets",
-        "Galena + sphalerite in barite gangue"
+        "Galena + sphalerite in barite gangue",
+        "Disseminated pyrite + chalcopyrite in chlorite-sericite alteration",
+        "Massive pyrrhotite in talc-carbonate matrix"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Stockwork zone: disseminated pyrite + chalcopyrite (Cu-dominant) in chlorite-sericite alteration.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -345,12 +345,12 @@
       "difficulty": "easy",
       "stem": "If porosity decreases from 15% to 10% (constant grain size), permeability decreases by approximately:",
       "options": [
+        "Factor of ~16",
         "Factor of ~2",
         "Factor of ~4",
-        "Factor of ~8",
-        "Factor of ~16"
+        "Factor of ~8"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "k proportional to phi^3/(1-phi)^2. Ratio at 15% vs 10% is ~3.8, so approximately 4x decrease.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -371,12 +371,12 @@
       "difficulty": "hard",
       "stem": "Sediment from 5500m depth in the Pacific (CCD ~4500m) is most likely:",
       "options": [
-        "Calcareous ooze",
         "Siliceous ooze",
         "Red clay (pelagic clay)",
-        "Mixed ooze"
+        "Mixed ooze",
+        "Calcareous ooze"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Below CCD: calcareous dissolves. Red clay dominates: wind-blown dust, cosmic particles, ~1 mm/kyr accumulation.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -392,12 +392,12 @@
       "difficulty": "easy",
       "stem": "The smectite-to-illite transformation releases which ion affecting reservoir quality?",
       "options": [
-        "Na+",
-        "K+",
         "Si4+ (dissolved silica)",
-        "Fe3+"
+        "Fe3+",
+        "Na+",
+        "K+"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Reaction: Smectite + K+ -> Illite + Quartz + H2O. Released silica precipitates as quartz cement causing porosity loss.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -413,12 +413,12 @@
       "difficulty": "hard",
       "stem": "A 25km Plinian eruption column corresponds to a mass discharge rate of approximately:",
       "options": [
+        "10^9 kg/s",
         "10^6 kg/s",
         "10^7 kg/s",
-        "10^8 kg/s",
-        "10^9 kg/s"
+        "10^8 kg/s"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "H=0.234*M^0.25. M=(25/0.234)^4 ~ 1.3e8 kg/s. VEI 5-6.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -439,12 +439,12 @@
       "difficulty": "easy",
       "stem": "For a horizontal cylinder, depth to axis equals the gravity anomaly half-width. If x_half = 500m, z =",
       "options": [
-        "250 m",
         "500 m",
         "1000 m",
-        "750 m"
+        "750 m",
+        "250 m"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For horizontal cylinder, z = x_half = 500m. Sphere: z=1.3*x_half. Thin dike: z=0.5*x_half.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -465,12 +465,12 @@
       "difficulty": "hard",
       "stem": "Drag foliation in till (A-axes parallel ice flow, A-B planes dipping upglacier) indicates:",
       "options": [
-        "Brittle fracturing",
-        "Ductile deformation with progressive simple shear",
         "Cataclastic flow",
-        "Pressure solution"
+        "Pressure solution",
+        "Brittle fracturing",
+        "Ductile deformation with progressive simple shear"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Progressive simple shear. Analogous to S-C fabrics in mylonites.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -486,12 +486,12 @@
       "difficulty": "easy",
       "stem": "Cooper-Jacob method: T=2.3Q/(4*pi*ds). With ds=1.5m/cycle and Q=10 L/s, T is approximately:",
       "options": [
+        "1.2e-5 m2/s",
         "1.2e-3 m2/s",
         "1.2e-4 m2/s",
-        "1.2e-2 m2/s",
-        "1.2e-5 m2/s"
+        "1.2e-2 m2/s"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "T=2.3*0.01/(4*pi*1.5)=0.023/18.85=1.22e-3 m2/s.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -512,12 +512,12 @@
       "difficulty": "medium",
       "stem": "The Great Unconformity (Grand Canyon) gap represents approximately:",
       "options": [
-        "100 Myr",
         "500 Myr",
         "1.2 Gyr",
-        "2.5 Gyr"
+        "2.5 Gyr",
+        "100 Myr"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Separates ~1.75 Ga Vishnu Schist from ~525 Ma Tapeats Sandstone. One of most significant temporal gaps.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -533,12 +533,12 @@
       "difficulty": "medium",
       "stem": "Quartz-magnetite delta18O fractionation of 6.0 per mil corresponds to approximately:",
       "options": [
-        "300C",
-        "500C",
         "700C",
-        "900C"
+        "900C",
+        "300C",
+        "500C"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Clayton-Epstein geothermometer. For delta=6.0 per mil, T ~ 500C.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -554,12 +554,12 @@
       "difficulty": "hard",
       "stem": "In water-wet sandstone, relative permeability to water at residual oil saturation is typically:",
       "options": [
+        "Exactly 1.0",
         "Very low (<0.05)",
         "Moderate (~0.2-0.4)",
-        "High (>0.8)",
-        "Exactly 1.0"
+        "High (>0.8)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At Sor, oil immobile. k_rw typically 0.2-0.4.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -580,12 +580,12 @@
       "difficulty": "easy",
       "stem": "Most severe temporal decorrelation in InSAR caused by:",
       "options": [
-        "Atmospheric water vapor",
         "Orbit differences",
         "Vegetation changes and surface modification",
-        "Topographic phase errors"
+        "Topographic phase errors",
+        "Atmospheric water vapor"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Surface scattering changes between acquisitions. PSInSAR developed to overcome this.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -601,12 +601,12 @@
       "difficulty": "medium",
       "stem": "Cu grade in potassic zone relative to phyllic zone in porphyry Cu deposits is typically:",
       "options": [
-        "Much lower",
-        "Similar but higher Au",
         "Higher with bornite-dominant mineralization",
-        "Zero"
+        "Zero",
+        "Much lower",
+        "Similar but higher Au"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Potassic zone = highest Cu grade, bornite dominant. Also Au-enriched.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -622,12 +622,12 @@
       "difficulty": "easy",
       "stem": "If Mg/Ca ratio in foraminifera doubles, the temperature increase is approximately:",
       "options": [
+        "~20C",
         "~5C",
         "~10C",
-        "~15C",
-        "~20C"
+        "~15C"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Mg/Ca = B*exp(A*T), A~0.09/C. dT = ln(2)/0.09 ~ 7.7C. Closest ~10C.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "A compound landslide (Varnes 1978) involves:",
       "options": [
-        "Only translational movement",
         "Rotational slump in head + translational slide in toe",
         "Rapid debris flow only",
-        "Slow creep without discrete surface"
+        "Slow creep without discrete surface",
+        "Used for static loading only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Combines rotational slumping (head) with translational sliding (toe).",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -669,12 +669,12 @@
       "difficulty": "hard",
       "stem": "Diagnostic seismic geometry of a lowstand systems tract:",
       "options": [
-        "Onlapping reflectors above downlapping surface",
-        "Downlapping onto sequence boundary with progradational clinoforms",
         "Parallel reflectors draping surface",
-        "Chaotic reflectors"
+        "Chaotic reflectors",
+        "Onlapping reflectors above downlapping surface",
+        "Downlapping onto sequence boundary with progradational clinoforms"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "LST: progradational geometries with downlapping reflectors onto sequence boundary.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -690,12 +690,12 @@
       "difficulty": "medium",
       "stem": "Mars lacks plate tectonics primarily because:",
       "options": [
+        "Core fully solidified",
         "Lower gravity prevents subduction",
         "Lithosphere too thick/rigid; mantle convection too sluggish",
-        "No water for subduction zones",
-        "Core fully solidified"
+        "No water for subduction zones"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Smaller size -> faster heat loss -> thicker lithosphere (~300-500km). Slower convection.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -711,12 +711,12 @@
       "difficulty": "medium",
       "stem": "The Re-Os system (t1/2=41.6 Gyr) is uniquely useful for dating:",
       "options": [
-        "Upper mantle peridotites and mantle-derived melts",
         "Detrital minerals",
         "Metamorphic garnets",
-        "Young volcanic ashes (<1 Ma)"
+        "Young volcanic ashes (<1 Ma)",
+        "Upper mantle peridotites and mantle-derived melts"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Re and Os are siderophile/chalcophile. Ideal for mantle rocks, sulfide ores, organic-rich shales.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -732,12 +732,12 @@
       "difficulty": "hard",
       "stem": "A knickpoint retreats at 1 m/yr over 10 km. Complete retreat takes:",
       "options": [
-        "10,000 years",
-        "1,000 years",
         "100,000 years",
-        "100 years"
+        "100 years",
+        "10,000 years",
+        "1,000 years"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Time = 10000m / 1m/yr = 10000 years.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -753,12 +753,12 @@
       "difficulty": "medium",
       "stem": "If a Brazilian disc fails at contact points first, the measured tensile strength:",
       "options": [
+        "Cannot be interpreted",
         "Overestimates true value",
         "Underestimates true value",
-        "Is correct",
-        "Cannot be interpreted"
+        "Is correct"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Contact crushing requires higher load. Overestimates sigma_t.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -774,12 +774,12 @@
       "difficulty": "hard",
       "stem": "Peak oil generation occurs at approximately which vitrinite reflectance?",
       "options": [
-        "Ro = 0.3-0.5%",
         "Ro = 0.6-0.9%",
         "Ro = 1.0-1.3%",
-        "Ro = 1.5-2.0%"
+        "Ro = 1.5-2.0%",
+        "Ro = 0.3-0.5%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Oil window: Ro 0.6-1.3%, peak ~0.8-0.9%.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -800,12 +800,12 @@
       "difficulty": "hard",
       "stem": "At fast-spreading ridges, the axial magma chamber is typically:",
       "options": [
-        "Large 100% melt body",
-        "Thin lens (~100m) of 10-50% melt over crystal mush",
         "Solid cumulate pile",
-        "Magma lake erupting every 10 kyr"
+        "Magma lake erupting every 10 kyr",
+        "Large 100% melt body",
+        "Thin lens (~100m) of 10-50% melt over crystal mush"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "AMC: thin melt-rich lens at 1-2km depth, underlain by mush zone.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -826,12 +826,12 @@
       "difficulty": "hard",
       "stem": "Si4+/O2- radius ratio 0.186 predicts CN=3, yet Si always has CN=4 in silicates because:",
       "options": [
+        "O too large for trigonal",
         "Pauling rules for metallic bonds only",
         "Si-O bonds have significant covalent character; SiO4 tetrahedron very stable",
-        "Radius ratio calculation incorrect",
-        "O too large for trigonal"
+        "Radius ratio calculation incorrect"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Si-O bonds have covalent character. SiO4 tetrahedron exceptionally stable.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -852,12 +852,12 @@
       "difficulty": "easy",
       "stem": "The stage between continental rifting and seafloor spreading in the Wilson Cycle:",
       "options": [
-        "Mature ocean basin",
         "Narrow marine trough with thinned crust, transitional volcanism",
         "Collision zone",
-        "Stable craton"
+        "Stable craton",
+        "Mature ocean basin"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Juvenile stage: active rifting, narrow sea. Thinned continental crust, nascent oceanic crust.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -873,12 +873,12 @@
       "difficulty": "medium",
       "stem": "Rate-limiting step in pyrite oxidation under unsaturated conditions:",
       "options": [
-        "Chemical reaction with O2",
-        "O2 diffusion through air-filled pore spaces",
         "Bacterial catalysis by A. ferrooxidans",
-        "Dissolution of secondary sulfates"
+        "Dissolution of secondary sulfates",
+        "Chemical reaction with O2",
+        "O2 diffusion through air-filled pore spaces"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "O2 diffusion through vadose zone controls rate. D_O2 in air ~1e-5 vs water ~1e-9 m2/s.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -894,12 +894,12 @@
       "difficulty": "medium",
       "stem": "Zircon: 206Pb/238U age=730 Ma, 207Pb/235U age=1045 Ma. Discordia through point and origin indicates:",
       "options": [
+        "Inherited zircon",
         "Crystallization at 1045 Ma",
         "Crystallization at 730 Ma with later Pb loss",
-        "Crystallization at 730 Ma with Pb gain",
-        "Inherited zircon"
+        "Crystallization at 730 Ma with Pb gain"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Discordia through origin = Pb loss. Upper intercept = crystallization age (>730 Ma).",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -920,12 +920,12 @@
       "difficulty": "medium",
       "stem": "North Atlantic Deep Water is characterized by:",
       "options": [
-        "Low T, low S",
         "Moderate T, high S",
         "Low T, moderate S - cold and salty",
-        "Variable T, very high S"
+        "Variable T, very high S",
+        "Low T, low S"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "NADW: T~2-4C, S~34.9-35.0 PSU. Cold, salty, dense.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -946,12 +946,12 @@
       "difficulty": "medium",
       "stem": "Doubly drained clay (H=10m, drainage path=5m), Cv=1e-7 m2/s. Time for 90% consolidation (Tv=0.848):",
       "options": [
-        "~8 years",
-        "~32 years",
         "~128 years",
-        "~256 years"
+        "~256 years",
+        "~8 years",
+        "~32 years"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "t = 0.848*25/1e-7 = 2.12e8 s ~ 6.7 years. Closest ~8 years.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -967,12 +967,12 @@
       "difficulty": "hard",
       "stem": "If log10(2) = 0.301 and log10(3) = 0.477, the number of digits in 6^20 is:",
       "options": [
+        "18",
         "15",
         "16",
-        "17",
-        "18"
+        "17"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "6^20 = (2*3)^20. log10(6^20) = 20*(0.301+0.477) = 20*0.778 = 15.56. Digits = floor(15.56)+1 = 16.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -993,12 +993,12 @@
       "difficulty": "medium",
       "stem": "A shopkeeper marks up goods 40% above cost. Two successive discounts of 10% each result in:",
       "options": [
-        "8% profit",
         "15.6% profit",
         "15.6% loss",
-        "8% loss"
+        "8% loss",
+        "8% profit"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "MP=140. After two 10% discounts: 140*0.9*0.9 = 113.4. Profit = 13.4%.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1019,12 +1019,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills tank in 12 hrs, B in 15 hrs, C empties in 20 hrs. All open together fill in:",
       "options": [
-        "8 hours",
-        "10 hours",
         "12 hours",
-        "15 hours"
+        "15 hours",
+        "8 hours",
+        "10 hours"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Net rate = 1/12+1/15-1/20 = (5+4-3)/60 = 6/60 = 1/10. Time = 10 hours.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1045,12 +1045,12 @@
       "difficulty": "medium",
       "stem": "Two dice thrown. Probability sum is a multiple of 3:",
       "options": [
+        "1/2",
         "1/3",
         "5/18",
-        "7/18",
-        "1/2"
+        "7/18"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Sums 3,6,9,12 are multiples of 3. Favorable = 2+5+4+1 = 12 out of 36 = 1/3.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1071,12 +1071,12 @@
       "difficulty": "easy",
       "stem": "Mixture milk:water = 7:3. Remove 20% and replace with water. New ratio:",
       "options": [
-        "21:19",
         "14:11",
         "7:5",
-        "21:17"
+        "21:17",
+        "21:19"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Remaining: 5.6M + 2.4W. Add 2W: 5.6M + 4.4W = 14:11.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1097,12 +1097,12 @@
       "difficulty": "easy",
       "stem": "A cone melted into cylinder with height = 1/3 of cone's height. Cylinder radius to cone radius ratio:",
       "options": [
-        "sqrt(3):1",
-        "3:1",
         "1:1",
-        "sqrt(3):sqrt(3)"
+        "sqrt(3):sqrt(3)",
+        "sqrt(3):1",
+        "3:1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "(1/3)*pi*R^2*H = pi*r^2*(H/3). R^2 = 3*r^2. R/r = sqrt(3).",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1123,12 +1123,12 @@
       "difficulty": "hard",
       "stem": "If x + 1/x = 5, then x^3 + 1/x^3 =",
       "options": [
+        "140",
         "110",
         "125",
-        "130",
-        "140"
+        "130"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "(x+1/x)^3 = x^3+1/x^3+3(x+1/x). 125 = x^3+1/x^3+15. x^3+1/x^3 = 110.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1149,12 +1149,12 @@
       "difficulty": "medium",
       "stem": "Population increased 10% then decreased 10%. Current = 9900. Two years ago:",
       "options": [
-        "10000",
         "11000",
         "12000",
-        "12100"
+        "12100",
+        "10000"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "0.99*P = 9900. P = 10000.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1175,12 +1175,12 @@
       "difficulty": "medium",
       "stem": "If sin(theta) + cos(theta) = sqrt(2), then tan(theta) + cot(theta) =",
       "options": [
-        "1",
-        "sqrt(2)",
         "2",
-        "3"
+        "3",
+        "1",
+        "sqrt(2)"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "(sin+cos)^2=2. 1+2sin*cos=2. sin*cos=1/2. tan+cot = 1/(sin*cos) = 2.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1201,12 +1201,12 @@
       "difficulty": "medium",
       "stem": "How many times do clock hands overlap in 12 hours?",
       "options": [
+        "22",
         "10",
         "11",
-        "12",
-        "22"
+        "12"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Hands overlap 11 times in 12 hours (approximately every 65.45 minutes).",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1227,12 +1227,12 @@
       "difficulty": "easy",
       "stem": "Average of 50 numbers is 38. If two numbers 45 and 55 are removed, new average:",
       "options": [
-        "37.87",
         "38.13",
         "37.5",
-        "38.0"
+        "38.0",
+        "37.87"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Sum = 50*38 = 1900. Remove 100: 1800. 48 numbers: 1800/48 = 37.5.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1253,12 +1253,12 @@
       "difficulty": "medium",
       "stem": "Rs 5000 at 8% SI for 3 years. Interest earned:",
       "options": [
-        "1000",
-        "1200",
         "1400",
-        "1500"
+        "1500",
+        "1000",
+        "1200"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "SI = PRT/100 = 5000*8*3/100 = 1200.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1279,12 +1279,12 @@
       "difficulty": "hard",
       "stem": "Number of ways to arrange 5 boys and 3 girls in a row so no two girls are together:",
       "options": [
+        "7200",
         "14400",
         "28800",
-        "57600",
-        "7200"
+        "57600"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Place 5 boys: 5! = 120. 6 gaps choose 3: 6C3 = 20. Arrange girls: 3! = 6. Total = 120*20*6 = 14400.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1300,12 +1300,12 @@
       "difficulty": "medium",
       "stem": "In a triangle, if each side is doubled, the area increases by:",
       "options": [
-        "2 times",
         "3 times",
         "4 times",
-        "8 times"
+        "8 times",
+        "2 times"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Area proportional to side^2. Doubling sides gives 4x area. Increase = 4x.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1326,12 +1326,12 @@
       "difficulty": "medium",
       "stem": "Two vessels contain milk:water = 3:2 and 5:3. Ratio to mix for 1:1:",
       "options": [
-        "1:3",
-        "3:13",
         "5:13",
-        "13:5"
+        "13:5",
+        "1:3",
+        "3:13"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Vessel1: 3/5 milk. Vessel2: 5/8 milk. For 1/2 milk: (3/5)x + (5/8)(1-x) = 1/2. x = 5/13.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1352,12 +1352,12 @@
       "difficulty": "easy",
       "stem": "Two pipes fill a tank in 10 and 15 hours. A leak empties in 30 hours. All open:",
       "options": [
+        "10 hours",
         "6 hours",
         "7.5 hours",
-        "8 hours",
-        "10 hours"
+        "8 hours"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Net rate = 1/10+1/15-1/30 = (3+2-1)/30 = 4/30 = 2/15. Time = 7.5 hours.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1378,12 +1378,12 @@
       "difficulty": "hard",
       "stem": "Simplify: (sqrt(5)+sqrt(3))/(sqrt(5)-sqrt(3)):",
       "options": [
-        "4+sqrt(15)",
         "4+2sqrt(15)",
         "2+sqrt(15)",
-        "4+sqrt(6)"
+        "4+sqrt(6)",
+        "4+sqrt(15)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Multiply by conjugate: (5+3+2sqrt(15))/(5-3) = (8+2sqrt(15))/2 = 4+sqrt(15).",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1399,12 +1399,12 @@
       "difficulty": "medium",
       "stem": "LCM of two numbers is 2520, HCF is 4. If one number is 84, other:",
       "options": [
-        "120",
-        "140",
         "160",
-        "180"
+        "180",
+        "120",
+        "140"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Product = LCM*HCF = 2520*4 = 10080. Other = 10080/84 = 120.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1420,12 +1420,12 @@
       "difficulty": "medium",
       "stem": "Father is 3 times son's age. In 10 years, father will be twice son's age. Present ages:",
       "options": [
+        "Son 8, Father 24",
         "Son 10, Father 30",
         "Son 12, Father 36",
-        "Son 15, Father 45",
-        "Son 8, Father 24"
+        "Son 15, Father 45"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "F=3S. 3S+10 = 2(S+10). 3S+10 = 2S+20. S=10. F=30.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1446,12 +1446,12 @@
       "difficulty": "medium",
       "stem": "Boat speed 10 km/h, stream speed 2 km/h. Time to go 24 km upstream and return:",
       "options": [
-        "5 hours",
         "6 hours",
         "7 hours",
-        "4.5 hours"
+        "4.5 hours",
+        "5 hours"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Up: 10-2=8 km/h. Down: 10+2=12 km/h. Time = 24/8+24/12 = 3+2 = 5 hours.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1472,12 +1472,12 @@
       "difficulty": "medium",
       "stem": "A and B invest 60000 and 80000. Profit 28000. A's share:",
       "options": [
-        "12000",
-        "14000",
         "16000",
-        "10000"
+        "10000",
+        "12000",
+        "14000"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ratio = 60:80 = 3:4. A's share = 28000*3/7 = 12000.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1498,12 +1498,12 @@
       "difficulty": "medium",
       "stem": "A rectangular field length increased 20%, breadth reduced 10%. Change in area:",
       "options": [
+        "-2%",
         "+8%",
         "+10%",
-        "+12%",
-        "-2%"
+        "+12%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "New area = 1.2*0.9 = 1.08. Increase = 8%.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1519,12 +1519,12 @@
       "difficulty": "medium",
       "stem": "sqrt(0.0016) + sqrt(0.0004) =",
       "options": [
-        "0.06",
         "0.08",
         "0.10",
-        "0.12"
+        "0.12",
+        "0.06"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "sqrt(0.0016)=0.04. sqrt(0.0004)=0.02. Sum=0.06.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1540,12 +1540,12 @@
       "difficulty": "hard",
       "stem": "HCF of 12, 18, and 24 is:",
       "options": [
-        "3",
-        "6",
         "12",
-        "24"
+        "24",
+        "3",
+        "6"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "12=2^2*3, 18=2*3^2, 24=2^3*3. HCF = 2*3 = 6.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1561,12 +1561,12 @@
       "difficulty": "hard",
       "stem": "Rs 2000 at 10% CI for 2 years compounded annually:",
       "options": [
+        "400",
         "220",
         "420",
-        "440",
-        "400"
+        "440"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Amount = 2000*(1.1)^2 = 2000*1.21 = 2420. CI = 2420-2000 = 420.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1587,12 +1587,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
-        "KG Basin",
         "Mumbai High",
         "Cauvery Basin",
-        "Assam"
+        "Assam",
+        "KG Basin"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1608,12 +1608,12 @@
       "difficulty": "easy",
       "stem": "India's indigenous aircraft carrier is:",
       "options": [
-        "INS Vikrant",
-        "INS Vikramaditya",
         "INS Arighat",
-        "INS Arihant"
+        "INS Arihant",
+        "INS Vikrant",
+        "INS Vikramaditya"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "INS Vikrant is India's first indigenous aircraft carrier.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1629,12 +1629,12 @@
       "difficulty": "medium",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
+        "Qualcomm",
         "Intel",
         "AMD",
-        "Nvidia",
-        "Qualcomm"
+        "Nvidia"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1650,12 +1650,12 @@
       "difficulty": "medium",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
-        "Delhi-Mumbai",
         "Mumbai-Ahmedabad",
         "Chennai-Bangalore",
-        "Kolkata-Hyderabad"
+        "Kolkata-Hyderabad",
+        "Delhi-Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The first bullet train project connects Mumbai and Ahmedabad.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1671,12 +1671,12 @@
       "difficulty": "hard",
       "stem": "Which PSU recently achieved the milestone of 1 billion tonnes of crude oil production?",
       "options": [
-        "BPCL",
-        "HPCL",
         "ONGC",
-        "IOCL"
+        "IOCL",
+        "BPCL",
+        "HPCL"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "ONGC achieved this milestone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1692,12 +1692,12 @@
       "difficulty": "hard",
       "stem": "India's coal production target for FY2025 is:",
       "options": [
+        "1500 MT",
         "900 MT",
         "1000 MT",
-        "1200 MT",
-        "1500 MT"
+        "1200 MT"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "India targets 1200 MT of coal production.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1713,12 +1713,12 @@
       "difficulty": "easy",
       "stem": "SI unit of electric current is:",
       "options": [
-        "Volt",
         "Watt",
         "Ampere",
-        "Ohm"
+        "Ohm",
+        "Volt"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Ampere is the SI unit of electric current.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1734,12 +1734,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
-        "Quartz",
-        "Topaz",
         "Diamond",
-        "Corundum"
+        "Corundum",
+        "Quartz",
+        "Topaz"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1755,12 +1755,12 @@
       "difficulty": "medium",
       "stem": "World Environment Day is celebrated on:",
       "options": [
+        "May 21",
         "March 22",
         "June 5",
-        "April 22",
-        "May 21"
+        "April 22"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "World Environment Day is celebrated on June 5th.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1776,12 +1776,12 @@
       "difficulty": "hard",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
-        "5",
         "6",
         "7",
-        "8"
+        "8",
+        "5"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1797,12 +1797,12 @@
       "difficulty": "medium",
       "stem": "What does 'resilient' mean?",
       "options": [
-        "Fragile",
-        "Able to recover quickly",
         "Slow",
-        "Weak"
+        "Weak",
+        "Fragile",
+        "Able to recover quickly"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Resilient means able to recover quickly from difficulties.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
+        "Everywhere",
         "Omnipresent",
         "Rare",
-        "Common",
-        "Everywhere"
+        "Common"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1839,12 +1839,12 @@
       "difficulty": "medium",
       "stem": "She asked me where ___ .",
       "options": [
-        "did I live",
         "do I live",
         "I lived",
-        "I live"
+        "I live",
+        "did I live"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Indirect speech uses past tense: 'where I lived'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1860,12 +1860,12 @@
       "difficulty": "medium",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
-        "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen",
+        "Improve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1881,12 +1881,12 @@
       "difficulty": "hard",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
+        "Stable",
         "Permanent",
         "Transient",
-        "Eternal",
-        "Stable"
+        "Eternal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1902,12 +1902,12 @@
       "difficulty": "hard",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
-        "Lazy",
         "Hardworking",
         "Careless",
-        "Slow"
+        "Slow",
+        "Lazy"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1923,12 +1923,12 @@
       "difficulty": "medium",
       "stem": "By the time we arrive, they ___ already left.",
       "options": [
-        "will",
-        "would",
         "will have",
-        "would have"
+        "would have",
+        "will",
+        "would"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Future perfect: will have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1944,12 +1944,12 @@
       "difficulty": "medium",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
+        "Obvious",
         "Clear",
         "Vague",
-        "Definite",
-        "Obvious"
+        "Definite"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1965,12 +1965,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
-        "A",
         "An",
         "The",
-        "No article"
+        "No article",
+        "A"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1986,12 +1986,12 @@
       "difficulty": "hard",
       "stem": "There ___ many reasons for the delay.",
       "options": [
-        "is",
-        "was",
         "are",
-        "has been"
+        "has been",
+        "is",
+        "was"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "'There are' with plural noun 'reasons'.",
       "estSec": 15,
       "topicWeight": 0.1,

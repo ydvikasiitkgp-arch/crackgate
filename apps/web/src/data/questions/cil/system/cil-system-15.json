@@ -1201,10 +1201,10 @@
       "difficulty": "hard",
       "stem": "Statement: Coal production has grown 8% this year while renewable energy grew 25%. Conclusion I: India is moving towards green energy. II: Coal production is declining in absolute terms.",
       "options": [
-        "Neither follows",
-        "Only II follows",
-        "Only I follows",
-        "Both follow"
+        "Depends on operating conditions",
+        "Works for particular conditions",
+        "Valid in controlled settings",
+        "Applies to specific environments"
       ],
       "answer": 2,
       "solution": "Only I follows",
@@ -1327,10 +1327,10 @@
       "difficulty": "hard",
       "stem": "Statement: The government has increased the import duty on coal. Conclusion I: Domestic coal production will increase. II: Coal prices will fall.",
       "options": [
-        "Neither follows",
-        "Only I follows",
-        "Both follow",
-        "Only II follows"
+        "Applicable in specific scenarios only",
+        "Works for particular conditions",
+        "Suitable for narrow use cases",
+        "Valid in controlled settings"
       ],
       "answer": 0,
       "solution": "Neither follows",
@@ -1453,10 +1453,10 @@
       "difficulty": "medium",
       "stem": "Statements: All fruits are sweet. Some sweet are sour. No sour is bitter. Conclusions: I. Some fruits are sour. II. Some sweet are not bitter.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Neither follows",
-        "Both follow"
+        "Works for particular conditions",
+        "Valid in controlled settings",
+        "Used in limited applications",
+        "Suitable for high-rise buildings"
       ],
       "answer": 1,
       "solution": "Only II follows",
@@ -1558,10 +1558,10 @@
       "difficulty": "hard",
       "stem": "Statements: All flowers are plants. Some plants are trees. No tree is bush. Conclusions: I. Some flowers are trees. II. Some plants are not bushes.",
       "options": [
-        "Only I follows",
-        "Neither follows",
-        "Only II follows",
-        "Both follow"
+        "Works for particular conditions",
+        "Required for specialized cases",
+        "Valid in controlled settings",
+        "Varies with scale of operation"
       ],
       "answer": 2,
       "solution": "Only II follows",
@@ -1579,10 +1579,10 @@
       "difficulty": "hard",
       "stem": "Statements: All A are B. Some B are C. All C are D. No D is E. Conclusions: I. No A is E. II. Some C are not E.",
       "options": [
-        "Only I follows",
-        "Neither follows",
-        "Both follow",
-        "Only II follows"
+        "Works for particular conditions",
+        "Varies with scale of operation",
+        "Required for specialized cases",
+        "Valid in controlled settings"
       ],
       "answer": 2,
       "solution": "Both follow",
@@ -2272,9 +2272,9 @@
       "difficulty": "medium",
       "stem": "An ALU can be built using:",
       "options": [
-        "Only adders",
-        "Only multiplexers",
-        "Only logic gates",
+        "Works for short-span bridges",
+        "Suitable for peer-to-peer models",
+        "Required for specialized cases",
         "Arithmetic circuits + logic gates + multiplexer"
       ],
       "answer": 3,
@@ -2422,7 +2422,7 @@
         "Speeds up data retrieval at the cost of slower writes",
         "Slows down reads",
         "Cannot be created on text columns",
-        "Only works for numeric data"
+        "Works for short-span bridges"
       ],
       "answer": 0,
       "solution": "Index = data structure (B+tree, hash) for fast lookup. Trade-off: slower INSERT/UPDATE.",
@@ -2461,7 +2461,7 @@
       "difficulty": "medium",
       "stem": "A top-down parser:",
       "options": [
-        "Only works for left-recursive grammars",
+        "Works for short-span bridges",
         "Builds from the leaves (input)",
         "Builds the parse tree from the start symbol, trying to match the input",
         "Uses shift-reduce actions"
@@ -2503,9 +2503,9 @@
       "difficulty": "medium",
       "stem": "Transaction concurrency problems include:",
       "options": [
-        "Only lost update",
-        "Only serialization",
-        "Only deadlock",
+        "Works for short-span bridges",
+        "Suitable for peer-to-peer models",
+        "Required for specialized cases",
         "Dirty read, non-repeatable read, phantom read"
       ],
       "answer": 3,
@@ -2631,8 +2631,8 @@
       "options": [
         "Both synthesized and inherited",
         "No attributes",
-        "Only synthesized attributes (bottom-up evaluation)",
-        "Only inherited attributes"
+        "Works for short-span bridges",
+        "Suitable for peer-to-peer models"
       ],
       "answer": 2,
       "solution": "S-attributed: attributes computed bottom-up. L-attributed: left-to-right (top-down + inherited).",
@@ -2887,9 +2887,9 @@
       "stem": "Code optimization can be:",
       "options": [
         "Peephole only",
-        "Only global",
+        "Works for short-span bridges",
         "Local (within basic block), global (within function), or inter-procedural",
-        "Only local"
+        "Suitable for peer-to-peer models"
       ],
       "answer": 2,
       "solution": "Optimization levels: local (peephole), global (loop, data-flow), inter-procedural.",
@@ -3039,9 +3039,9 @@
       "stem": "Sequential circuits have:",
       "options": [
         "No feedback",
-        "Only inputs and outputs",
+        "Works for short-span bridges",
         "Memory elements (feedback path)",
-        "Only combinational logic"
+        "Suitable for peer-to-peer models"
       ],
       "answer": 2,
       "solution": "Sequential = output depends on current inputs + past states (has memory).",
@@ -3211,10 +3211,10 @@
       "difficulty": "medium",
       "stem": "The NAND and NOR gates are called universal gates because they can:",
       "options": [
-        "Only store data",
+        "Works for short-span bridges",
         "Implement any Boolean function",
         "Work without power",
-        "Only invert signals"
+        "Suitable for peer-to-peer models"
       ],
       "answer": 1,
       "solution": "Any logic function can be built using only NAND (or only NOR) gates.",
@@ -3679,9 +3679,9 @@
       "stem": "Boyer-Moore uses:",
       "options": [
         "Bad character rule and good suffix rule (worst-case O(nm) but sublinear in practice)",
-        "Only suffix array",
-        "Only prefix function",
-        "Only hash function"
+        "Works for short-span bridges",
+        "Suitable for peer-to-peer models",
+        "Required for specialized cases"
       ],
       "answer": 0,
       "solution": "Boyer-Moore: compares right-to-left. Bad character: shift to align mismatch with last occurrence. Good suffix: match suffix.",
@@ -4208,9 +4208,9 @@
       "difficulty": "medium",
       "stem": "The STL contains:",
       "options": [
-        "Only algorithms",
-        "Only containers",
-        "Only strings and I/O",
+        "Works for short-span bridges",
+        "Suitable for peer-to-peer models",
+        "Required for specialized cases",
         "Containers, algorithms, iterators, and function objects"
       ],
       "answer": 3,

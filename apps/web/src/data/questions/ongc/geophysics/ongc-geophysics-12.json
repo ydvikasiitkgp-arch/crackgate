@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The post-glacial rebound data constrain the viscosity profile of the Earth's mantle. If the lower mantle viscosity is approximately 10^23 Pa·s and the asthenospheric viscosity is 10^19 Pa·s, by what factor does the relaxation time for a degree-2 harmonic increase when the lithospheric thickness doubles from 100 km to 200 km, assuming a simple Maxwell rheology?",
       "options": [
+        "16×",
         "2×",
         "4×",
-        "8×",
-        "16×"
+        "8×"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For a Maxwell material, the characteristic relaxation time is τ = η/μ, where η is viscosity and μ is shear modulus. For viscoelastic relaxation of surface loads, the time constant scales as τ ~ ηL/(ρgD²) for lithospheric flexure problems, where L is the load wavelength and D is lithospheric thickness. When lithospheric thickness doubles, the flexural rigidity increases as D³, and the relaxation time increases approximately as D². Thus doubling thickness from 100 km to 200 km increases the relaxation time by a factor of approximately 8 (2³ = 8). The Maxwell relaxation time couples with the gravitational loading timescale to produce this cubic dependence on thickness.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -58,12 +58,12 @@
       "difficulty": "hard",
       "stem": "In a convecting mantle, the temperature gradient follows the adiabatic gradient given by (dT/dz) = αgT/Cp. Given that the thermal expansion coefficient α ≈ 3 × 10⁻⁵ K⁻¹, gravitational acceleration g = 10 m/s², temperature T = 2000 K, and specific heat Cp = 1200 J/(kg·K) at mid-mantle depths, what is the adiabatic temperature gradient?",
       "options": [
-        "0.3 K/km",
-        "0.5 K/km",
         "0.8 K/km",
-        "1.2 K/km"
+        "1.2 K/km",
+        "0.3 K/km",
+        "0.5 K/km"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The adiabatic gradient is (dT/dz) = αgT/Cp = (3 × 10⁻⁵)(10)(2000)/1200 = 600/1200 = 0.5 K/km. This gradient represents the temperature change that a parcel of mantle material experiences as it moves vertically without exchanging heat with its surroundings. In a vigorously convecting mantle, the actual temperature gradient closely follows this adiabat within the well-mixed interior, deviating only in thermal boundary layers at the surface and core-mantle boundary.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -79,12 +79,12 @@
       "difficulty": "easy",
       "stem": "The D'' layer at the base of the mantle exhibits a seismic velocity increase of approximately 2-3% over a thickness of ~200 km. If this velocity jump is attributed to a phase transition in bridgmanite to post-perovskite, what is the Clapeyron slope required to explain the observed transition pressure variation of approximately 5 GPa across the topography of the core-mantle boundary (which has ~5 km peak-to-trough topography)?",
       "options": [
-        "0.6 MPa/K",
         "1.5 MPa/K",
         "3.5 MPa/K",
-        "6.0 MPa/K"
+        "6.0 MPa/K",
+        "0.6 MPa/K"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The Clapeyron slope γ = dP/dT. The temperature variation across CMB topography of ~5 km is approximately ΔT = (dT/dz) × 5 km ≈ 1.5 K/km × 5 km = 7.5 K (using adiabatic gradient). The pressure variation due to topography is ΔP = ρg Δh ≈ 5500 × 10 × 5000 ≈ 275 MPa ≈ 0.275 GPa. However, the phase transition pressure variation across the CMB topography is ~5 GPa. So γ = ΔP_transition/ΔT ≈ 5000 MPa / (5 × adiabatic ΔT). With the post-perovskite Clapeyron slope being positive (~2.5-7 MPa/K), the required value to match observations is approximately 3.5 MPa/K, consistent with ab initio calculations.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -100,12 +100,12 @@
       "difficulty": "easy",
       "stem": "In Satellite Laser Ranging (SLR), the range to a satellite is determined by measuring the round-trip travel time of a laser pulse. If the timing uncertainty is 10 picoseconds and the refractive index correction for the troposphere requires knowledge of the zenith wet delay to ±1 mm precision, what is the corresponding required precision in the atmospheric water vapor measurement?",
       "options": [
+        "2.0 mm",
         "0.1 mm",
         "0.5 mm",
-        "1.0 mm",
-        "2.0 mm"
+        "1.0 mm"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The relationship between zenith wet delay (ZWD) and precipitable water vapor (PWV) is approximately ZWD = π × PWV, where π ≈ 6.2 mm/mm (the conversion factor varies with temperature). For a ZWD precision of ±1 mm, the required PWV precision is approximately 1 mm / 6.2 ≈ 0.16 mm. However, the question asks about the total atmospheric correction including both wet and dry components. The tropospheric mapping function converts ZWD to slant delay, and the total zenith delay requires water vapor knowledge to approximately 1 mm precision in PWV. Given that SLR achieves ~1 cm range precision, and tropospheric correction is a major error source, the required water vapor measurement precision is approximately 1.0 mm to maintain sub-centimeter accuracy.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -121,12 +121,12 @@
       "difficulty": "medium",
       "stem": "The GRACE satellite pair measures Earth's gravity field by precise inter-satellite ranging. If the K-band ranging system achieves a precision of 1 μm at a sampling rate of 1 Hz, and the satellites are separated by 220 km, what is the minimum detectable gravity anomaly at the spatial resolution of 300 km half-wavelength?",
       "options": [
-        "0.1 mGal",
-        "0.5 mGal",
         "1.0 mGal",
-        "5.0 mGal"
+        "5.0 mGal",
+        "0.1 mGal",
+        "0.5 mGal"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "GRACE's gravity recovery precision depends on the inter-satellite range-rate measurement. With 1 μm precision at 1 Hz, the range-rate precision is ~1 μm/s. The gravity anomaly δg relates to range-rate perturbation through δg ≈ (δṙ/r₀) × (GM/r₀²), where r₀ is the orbital radius. For typical GRACE orbit parameters (r₀ ≈ 6800 km), and accounting for the satellite separation and spherical harmonic degree (l ≈ 40 for 300 km resolution), the minimum detectable gravity anomaly is approximately 1.0 mGal (10⁻⁵ m/s²). This is consistent with GRACE's demonstrated capability of detecting gravity changes of ~1 cm equivalent water height at monthly time scales.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -147,12 +147,12 @@
       "difficulty": "easy",
       "stem": "GRACE-FO detects temporal gravity changes due to mass redistribution. If the Greenland ice sheet loses mass at a rate of 280 Gt/year, what is the corresponding rate of change in the degree-2 zonal gravitational coefficient J₂?",
       "options": [
-        "-1.2 × 10⁻¹¹ /year",
         "-3.6 × 10⁻¹¹ /year",
         "-6.0 × 10⁻¹¹ /year",
-        "-9.0 × 10⁻¹¹ /year"
+        "-9.0 × 10⁻¹¹ /year",
+        "-1.2 × 10⁻¹¹ /year"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The rate of change of J₂ due to ice mass loss is approximately ΔJ₂/Δt = -(R_E²/GM_E) × (ΔM/Δt) × (2/3) × sin²(φ)/sin²(φ), where the factor depends on the latitude distribution. For Greenland centered at ~72°N, the contribution is ΔJ₂ ≈ -(R_E²/GM_E) × (ΔM/Δt) × (2cos²φ - 1)/3. With R_E = 6.371 × 10⁶ m, GM_E = 3.986 × 10¹⁴ m³/s², ΔM/Δt = 280 × 10¹² kg/year, and cos²(72°) ≈ 0.095, the rate is approximately -6.0 × 10⁻¹¹ per year. This is consistent with the observed post-glacial rebound signal being partially offset by ice mass loss.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -168,12 +168,12 @@
       "difficulty": "hard",
       "stem": "In full moment tensor inversion using broadband seismic data, the condition number of the Green's function matrix indicates solution stability. For a shallow earthquake recorded by 20 stations with good azimuthal coverage, if the condition number increases from 50 to 500 when including the volumetric component, what does this imply about the resolved source parameters?",
       "options": [
+        "The station distribution is inadequate for any inversion",
         "The isotropic component is well resolved",
         "The isotropic component is poorly resolved and the solution is trade-off dominated",
-        "The double-couple component is unreliable",
-        "The station distribution is inadequate for any inversion"
+        "The double-couple component is unreliable"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A high condition number (>100) indicates that the inverse problem is ill-conditioned, meaning small errors in data produce large changes in the solution. When including the isotropic (volumetric) component causes a tenfold increase in condition number, it implies severe trade-offs between the isotropic and deviatoric components. The double-couple (shear) component may still be reasonably resolved, but the isotropic component is poorly constrained. This is a common problem for shallow earthquakes where the free-surface reflections and near-source structure create strong trade-offs between explosion/implosion and dip-slip components. The solution requires either regularization (damping) or constraining the trace of the moment tensor.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -189,12 +189,12 @@
       "difficulty": "hard",
       "stem": "In synthetic waveform modeling using reflectivity methods, the frequency band used affects the resolved structure. If the dominant frequency is 0.1 Hz and the velocity contrast at a boundary is 10%, what is the minimum thickness of a layer that can be resolved as a distinct unit in the waveform?",
       "options": [
-        "250 m",
-        "500 m",
         "1000 m",
-        "2000 m"
+        "2000 m",
+        "250 m",
+        "500 m"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The vertical resolution in seismic waveform modeling is governed by the wavelength. At 0.1 Hz with an average crustal velocity of 3.5 km/s, the wavelength λ = V/f = 3.5/0.1 = 35 km. The tuning thickness (minimum resolvable layer thickness) is approximately λ/4 for a thin bed, which is about 8.75 km. However, for distinct boundary resolution (not tuning), the criterion is approximately λ/2 to λ. With a 10% velocity contrast, the reflection coefficient is sufficient for detection, and the minimum resolvable thickness is approximately 1000 m (λ/35 ≈ 1 km) when considering the full waveform information including interference patterns. This represents the practical limit for identifying distinct geological units.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -210,12 +210,12 @@
       "difficulty": "medium",
       "stem": "The quality factor Q describes seismic attenuation. If the Q-value for P-waves in the upper mantle is approximately 150 at 1 Hz, and attenuation follows a frequency-dependent model Q(f) = Q₀f^α with α = 0.2, what is the Q-value at 10 Hz?",
       "options": [
-        "240",
         "300",
         "380",
-        "500"
+        "500",
+        "240"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Using Q(f) = Q₀f^α with Q₀ = 150 at f = 1 Hz and α = 0.2: Q(10) = 150 × 10^0.2 = 150 × 1.585 = 237.7 ≈ 240. However, this model assumes Q₀ is defined at 1 Hz. If the reference frequency is different or if we interpret α as the power-law exponent differently, the calculation may vary. With the standard formulation and α = 0.2, Q increases with frequency, meaning higher frequencies are less attenuated per cycle. At 10 Hz, Q ≈ 380 when accounting for the proper normalization where Q₀ = 150 represents the Q-value at 1 Hz in the earth model used. The exact value depends on the reference frequency convention.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -231,12 +231,12 @@
       "difficulty": "medium",
       "stem": "The Earth's gravitational potential is expressed in spherical harmonics. If the degree-2 coefficient C₂₀ (or J₂) has a value of -4.8417 × 10⁻⁴, and the corresponding Legendre polynomial P₂₀(cos θ) = (3cos²θ - 1)/2, what is the flattening implied by this coefficient at the equator?",
       "options": [
+        "1/302.0",
         "1/298.2",
         "1/299.0",
-        "1/300.5",
-        "1/302.0"
+        "1/300.5"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The relationship between J₂ and Earth's flattening f is given by J₂ = (2/3)f - (1/3)f² + ... For small f, J₂ ≈ (2/3)f, so f ≈ (3/2)J₂ = (3/2)(4.8417 × 10⁻⁴) = 7.2626 × 10⁻⁴ = 1/1376. However, this is the dynamical flattening. The geometric flattening f = (a-b)/a relates differently. Using the exact relationship J₂ = C₂₀ = (ω²a³)/(3GM) × f × (1 - f), and solving with Earth's rotation rate ω, semi-major axis a, and GM, the geometric flattening is approximately 1/298.257, which rounds to 1/298.2. This is consistent with the WGS-84 ellipsoid value.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "The geomagnetic field is described by Gauss coefficients g_l^m and h_l^m. The dipole moment of the Earth is approximately 8.0 × 10²² A·m². If the axial dipole coefficient g₁⁰ = -29,404 nT, what is the ratio of the dipole moment computed from Gauss coefficients to that from the simple dipole formula M = 4πR³g₁⁰/μ₀?",
       "options": [
-        "0.5",
-        "1.0",
         "1.5",
-        "2.0"
+        "2.0",
+        "0.5",
+        "1.0"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The dipole moment M is related to g₁⁰ by M = (4πR_E³/μ₀) × |g₁⁰|. With R_E = 6.371 × 10⁶ m, μ₀ = 4π × 10⁻⁷ H/m, and |g₁⁰| = 29,404 × 10⁻⁹ T: M = (4π × (6.371 × 10⁶)³ / (4π × 10⁻⁷)) × 29,404 × 10⁻⁹ = (6.371 × 10⁶)³ × 10⁷ × 29,404 × 10⁻⁹ ≈ 8.0 × 10²² A·m². The ratio is 1.0, confirming that the Gauss coefficient representation and the simple dipole formula give identical results when properly normalized. The factor of 4π/μ₀ accounts for the conversion between the magnetic potential coefficients and the physical dipole moment.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -273,12 +273,12 @@
       "difficulty": "hard",
       "stem": "The magnetic Reynolds number Rm = UL/η determines whether dynamo action can occur. For the Earth's outer core, with typical flow velocity U ≈ 10⁻⁴ m/s, length scale L ≈ 10⁶ m, and magnetic diffusivity η ≈ 1 m²/s, what is Rm and what does it imply about the dynamo?",
       "options": [
-        "Rm ≈ 100, marginal dynamo action",
         "Rm ≈ 1000, vigorous dynamo action",
         "Rm ≈ 10,000, strong dynamo action",
-        "Rm ≈ 100,000, turbulent dynamo"
+        "Rm ≈ 100,000, turbulent dynamo",
+        "Rm ≈ 100, marginal dynamo action"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The magnetic Reynolds number Rm = UL/η = (10⁻⁴)(10⁶)/1 = 100. However, the actual values in the Earth's core are higher: U ≈ 10⁻³ to 10⁻² m/s (secular variation implies faster flows), L ≈ 5 × 10⁵ m (outer core thickness), and η ≈ 0.5-1 m²/s. This gives Rm ≈ 500-10,000. The commonly cited value for Earth's core dynamo is Rm ≈ 10³-10⁴, indicating strong dynamo action. At Rm > ~10-50 (the critical value for dynamo onset), magnetic field generation can overcome Ohmic diffusion. Earth's core operates well above this threshold, sustaining the geodynamo over billions of years.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -294,12 +294,12 @@
       "difficulty": "hard",
       "stem": "Full tensor gradiometry (FTG) measures all five independent components of the gravity gradient tensor. If a buried sphere of radius 50 m and density contrast 500 kg/m³ is at 200 m depth, what is the approximate magnitude of the Tzz component directly above the sphere?",
       "options": [
+        "200 Eötvös",
         "20 Eötvös",
         "50 Eötvös",
-        "100 Eötvös",
-        "200 Eötvös"
+        "100 Eötvös"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For a sphere, the vertical gravity gradient Tzz = (2GM/R³) × (3z² - R²)/R² where R is the distance from the center. Directly above at depth z = 200 m, with sphere center at 200 m + 50 m = 250 m: The sphere's mass M = (4/3)π(50)³(500) ≈ 2.618 × 10⁸ kg. At the surface (z = 0), the distance to sphere center is 250 m. Tzz = (2GM/r³)(3cos²θ - 1) where at θ = 0 (directly above), Tzz = 4GM/r³ = 4(6.674 × 10⁻¹¹)(2.618 × 10⁸)/(250)³ = 3.6 × 10⁻⁵ /s² = 36 Eötvös. With corrections for the finite size and including the full tensor treatment, the value is approximately 100 Eötvös for the Tzz component. The exact value depends on the geometry and requires integration over the sphere volume.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -315,12 +315,12 @@
       "difficulty": "hard",
       "stem": "In 2D gravity forward modeling, the gravity anomaly of a horizontal cylinder of radius R and density contrast Δρ at depth D is given by g_z = (2GΔρπR²D)/(x² + D²). If the anomaly peaks at 50 mGal and the half-width at half-maximum is 200 m, what is the depth to the cylinder center?",
       "options": [
-        "100 m",
-        "150 m",
         "200 m",
-        "250 m"
+        "250 m",
+        "100 m",
+        "150 m"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The half-width at half-maximum (HWHM) for a horizontal cylinder occurs when g_z = g_max/2. Setting x = HWHM: g_max/2 = (2GΔρπR²D)/(HWHM² + D²). Since g_max = 2GΔρπR²/D (at x = 0), we get: 1/2 = D²/(HWHM² + D²), which gives HWHM² + D² = 2D², so HWHM = D. Therefore, the depth D equals the half-width at half-maximum, which is 200 m. This is a fundamental property of the horizontal cylinder gravity anomaly: the depth equals the half-width at half-maximum amplitude.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -336,12 +336,12 @@
       "difficulty": "medium",
       "stem": "In joint gravity-seismic inversion, the coupling between density and velocity is often described by Gardner's relation ρ = aV^b. If the exponent b = 0.25 and the reference values are ρ₀ = 2.2 g/cm³ at V₀ = 2.0 km/s, what density corresponds to a seismic velocity of 4.0 km/s?",
       "options": [
-        "2.50 g/cm³",
         "2.63 g/cm³",
         "2.75 g/cm³",
-        "2.89 g/cm³"
+        "2.89 g/cm³",
+        "2.50 g/cm³"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Using Gardner's relation ρ = aV^b, first find the constant a from reference values: a = ρ₀/V₀^b = 2.2/(2.0)^0.25 = 2.2/1.1892 = 1.850. Then for V = 4.0 km/s: ρ = 1.850 × (4.0)^0.25 = 1.850 × 1.4142 = 2.616 g/cm³. Alternatively, using the ratio form: ρ = ρ₀(V/V₀)^b = 2.2 × (4.0/2.0)^0.25 = 2.2 × 2^0.25 = 2.2 × 1.1892 = 2.616 g/cm³. This rounds to 2.63 g/cm³. Gardner's empirical relation is widely used in joint inversion to constrain density models from seismic velocity models.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -357,12 +357,12 @@
       "difficulty": "easy",
       "stem": "In Thellier paleointensity experiments, the Arai plot shows NRM remaining versus pTRM acquired. If the slope of the best-fit line through the data points is -0.8 and the laboratory field is 50 μT, what is the ancient field intensity?",
       "options": [
+        "80 μT",
         "40 μT",
         "50 μT",
-        "62.5 μT",
-        "80 μT"
+        "62.5 μT"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In the Thellier method, the Arai plot slope = -B_ancient/B_lab, where B_ancient is the ancient field and B_lab is the laboratory field. The negative sign indicates that as pTRM increases, NRM decreases. The magnitude of the slope gives |B_ancient/B_lab| = 0.8. Therefore B_ancient = 0.8 × B_lab = 0.8 × 50 μT = 40 μT. This method assumes that the thermoremanent magnetization (TRM) is proportional to the field intensity and that the blocking temperature spectrum is linear. The quality of the paleointensity estimate depends on the linearity of the Arai plot and the absence of secondary magnetizations.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "In the modified Thellier-Thellier method, partial thermoremanent magnetization (pTRM) checks are used to detect alteration. If a pTRM check at temperature T₁ shows a 15% increase in TRM acquired compared to the original measurement at T₁, what does this indicate about the sample?",
       "options": [
-        "The sample has gained magnetic minerals due to heating",
-        "The sample has lost magnetic minerals due to heating",
         "The sample is perfectly stable",
-        "The laboratory field was incorrect"
+        "The laboratory field was incorrect",
+        "The sample has gained magnetic minerals due to heating",
+        "The sample has lost magnetic minerals due to heating"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In Thellier experiments, pTRM checks involve reheating to the same temperature to verify that the TRM acquisition property hasn't changed. A 15% increase in pTRM at temperature T₁ means the sample can now acquire more TRM at that temperature than it originally could. This indicates that heating has caused mineralogical alteration, typically creating new magnetic minerals (e.g., oxidation of pyrrhotite to magnetite, or breakdown of clay minerals). This alteration makes the paleointensity estimate unreliable because the assumption of constant magnetic properties is violated. Such samples should be rejected or only the unaltered portion of the Arai plot used.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -399,12 +399,12 @@
       "difficulty": "medium",
       "stem": "The Vine-Matthews hypothesis explains magnetic anomaly patterns over mid-ocean ridges. If the spreading rate is 5 cm/year and the magnetic polarity sequence has a normal polarity episode lasting 1 million years, what is the width of the corresponding magnetic anomaly stripe on one side of the ridge?",
       "options": [
-        "25 km",
         "50 km",
         "75 km",
-        "100 km"
+        "100 km",
+        "25 km"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The width of a magnetic anomaly stripe is determined by the spreading rate and the duration of the polarity episode. For a full spreading rate of 5 cm/year, the half-rate (one side of the ridge) is 2.5 cm/year = 25 km/Ma. For a polarity episode lasting 1 million years, the width on one side = 25 km/Ma × 1 Ma = 25 km. However, the anomaly itself is broader than the geological source due to the magnetic dipole effect and the finite thickness of the magnetized layer. The observed magnetic anomaly (peak-to-trough) is approximately 1.5-2 times the geological source width. For a 1 Ma episode at 2.5 cm/year half-rate, the source width is 25 km, but the observed anomaly width is approximately 50 km due to the dipole effect. The answer depends on whether we're asking about the source or the observed anomaly.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -420,12 +420,12 @@
       "difficulty": "hard",
       "stem": "In induced polarization (IP), the Cole-Cole model describes the frequency-dependent complex resistivity. If the chargeability m = 0.1, time constant τ = 0.1 s, and frequency dependence c = 0.5, what is the apparent phase angle at f = 100 Hz?",
       "options": [
+        "-20°",
         "-5°",
         "-10°",
-        "-15°",
-        "-20°"
+        "-15°"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Cole-Cole model for complex resistivity is ρ(ω) = ρ₀[1 - m(1 - 1/(1 + (iωτ)^c))]. The phase angle φ = -arctan[m × sin(cπ/2)/((1-m) + m × cos(cπ/2) + (ωτ)^c × cos(cπ/2))]. With ω = 2π × 100 = 628.3 rad/s, τ = 0.1 s, so ωτ = 62.83. With c = 0.5: (ωτ)^c = 62.83^0.5 = 7.927. sin(cπ/2) = sin(π/4) = 0.7071, cos(cπ/2) = 0.7071. Phase φ ≈ -arctan[0.1 × 0.7071/((0.9) + 0.1 × 0.7071 + 7.927 × 0.7071)] = -arctan[0.07071/(0.9 + 0.07071 + 5.605)] = -arctan[0.07071/6.576] = -arctan(0.01076) ≈ -0.62°. However, for typical IP measurements at higher frequencies or with different parameters, the phase can be larger. With the given parameters, the phase at 100 Hz is approximately -10° when accounting for the full frequency dependence.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -441,12 +441,12 @@
       "difficulty": "easy",
       "stem": "In complex resistivity (CR) surveys, the frequency effect (FE) is defined as (ρ_DC - ρ_AC)/ρ_AC × 100%. If the DC resistivity is 1000 Ω·m and the AC resistivity at 10 Hz is 900 Ω·m, what is the frequency effect?",
       "options": [
-        "5%",
-        "10%",
         "11%",
-        "15%"
+        "15%",
+        "5%",
+        "10%"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The frequency effect FE = (ρ_DC - ρ_AC)/ρ_AC × 100% = (1000 - 900)/900 × 100% = 100/900 × 100% = 11.11% ≈ 11%. This parameter quantifies the IP effect and is related to the chargeability of the subsurface. A higher FE indicates stronger IP response, typically associated with disseminated metallic mineralization or clay-rich zones. The FE is related to the Cole-Cole parameters by FE ≈ m × (1 - (1 + (ωτ)^c)^(-1)) × 100%, where m is the chargeability. For the given values, this corresponds to a chargeability of approximately 0.11.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -462,12 +462,12 @@
       "difficulty": "medium",
       "stem": "In spectral induced polarization (SIP), the phase angle typically shows a frequency-dependent peak. For a rock containing disseminated pyrite grains of radius a = 10 μm, if the diffusion time constant is τ_D = a²/D where D is the diffusion coefficient, and D ≈ 10⁻⁹ m²/s, what is the peak frequency of the SIP response?",
       "options": [
-        "10 Hz",
         "100 Hz",
         "1 kHz",
-        "10 kHz"
+        "10 kHz",
+        "10 Hz"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The diffusion time constant for SIP is τ_D = a²/D = (10 × 10⁻⁶)²/(10⁻⁹) = 10⁻¹⁰/10⁻⁹ = 0.1 s. The peak frequency in the SIP response occurs at f_peak = 1/(2πτ_D) = 1/(2π × 0.1) = 1.59 Hz. However, for disseminated sulfides, the peak frequency is often higher due to the Warburg impedance model. The frequency at which the phase angle is maximum is f_max ≈ 1/(2πτ) where τ is the relaxation time constant. For the given parameters, f_max ≈ 100 Hz when considering the full spectral model with grain size distribution and surface effects. The exact peak frequency depends on the grain geometry, mineralogy, and electrolyte composition.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -483,12 +483,12 @@
       "difficulty": "easy",
       "stem": "In controlled-source electromagnetic (CSEM) surveying for hydrocarbons, the airwave effect can mask the subsurface response. If the sea water resistivity is 0.3 Ω·m, sea water depth is 1000 m, and the source frequency is 0.25 Hz, what is the skin depth in the sea water?",
       "options": [
+        "1000 m",
         "250 m",
         "500 m",
-        "750 m",
-        "1000 m"
+        "750 m"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The skin depth δ = √(2/(ωμσ)) = √(2/(2πf × 4π × 10⁻⁷ × σ)). With f = 0.25 Hz and σ = 1/0.3 = 3.33 S/m: ω = 2π × 0.25 = 1.571 rad/s. δ = √(2/(1.571 × 4π × 10⁻⁷ × 3.33)) = √(2/(6.59 × 10⁻⁶)) = √(3.035 × 10⁵) = 551 m ≈ 500 m. The airwave becomes significant when the sea water depth exceeds the skin depth, as the electromagnetic signal can propagate through the air path and interfere with the subsurface response. At 0.25 Hz in 0.3 Ω·m sea water, the skin depth of ~500 m means that for water depths of 1000 m, the airwave can dominate the received signal.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -504,12 +504,12 @@
       "difficulty": "hard",
       "stem": "In marine CSEM, the transmitter-receiver offset affects the sensitivity to resistive layers. For a 1D earth model with sea water (0.3 Ω·m, 1000 m thick) over a resistive layer (10 Ω·m, 500 m thick) on a conductive basement (1 Ω·m), at what offset does the response become sensitive to the resistive layer?",
       "options": [
-        "1 km",
-        "3 km",
         "5 km",
-        "10 km"
+        "10 km",
+        "1 km",
+        "3 km"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "In marine CSEM, the sensitivity to a resistive layer (like a hydrocarbon reservoir) increases with offset. The optimal offset for detecting a resistive layer is approximately 2-3 times the water depth. For a water depth of 1000 m, the optimal offset is 2000-3000 m. However, the offset at which the response first becomes sensitive to the resistive layer is typically 3-5 km for this geometry. The EM signal propagates through the sea water and into the seafloor; at short offsets, the direct wave dominates, while at longer offsets, the guided wave through the resistive layer becomes significant. For the given model, the response becomes sensitive to the 10 Ω·m layer at offsets of approximately 5 km.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -530,12 +530,12 @@
       "difficulty": "medium",
       "stem": "The airwave in marine CSEM propagates from the source upward to the sea surface, along the air-sea interface, and back down to the receiver. If the sea water depth is h and the air wave velocity is c (speed of light), the travel time for the airwave path is approximately:",
       "options": [
-        "t ≈ 2h√(μ₀ε₀) + x/c",
         "t ≈ 2h/c + x/c",
         "t ≈ 2h√(μ₀σ) + x/c",
-        "t ≈ 2h/(c√(μ₀σ)) + x/c"
+        "t ≈ 2h/(c√(μ₀σ)) + x/c",
+        "t ≈ 2h√(μ₀ε₀) + x/c"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The airwave path consists of: (1) propagation from source at depth h to the sea surface: distance h, velocity c (in air), time = h/c; (2) propagation along the air-sea interface from source location to receiver location: distance x, velocity c, time = x/c; (3) propagation from sea surface to receiver at depth h: distance h, velocity c, time = h/c. Total travel time t = 2h/c + x/c. This is a simplified geometric optics approximation. In reality, the airwave is a diffracted wave that follows the sea surface, and the exact treatment requires full-wave solutions. The airwave arrives before the subsurface-guided wave and can mask the response from resistive layers in the seafloor.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -551,12 +551,12 @@
       "difficulty": "medium",
       "stem": "Elastic impedance (EI) extends acoustic impedance to non-normal incidence. For a two-layer model with Vp₁ = 2500 m/s, Vs₁ = 1200 m/s, ρ₁ = 2.2 g/cm³ and Vp₂ = 3000 m/s, Vs₂ = 1500 m/s, ρ₂ = 2.4 g/cm³, what is the P-P reflection coefficient at 30° incidence using the exact Zoeppritz equation versus the Aki-Richards approximation?",
       "options": [
+        "Both give 0.18",
         "Both give 0.10",
         "Exact: 0.12, Approx: 0.11",
-        "Exact: 0.15, Approx: 0.14",
-        "Both give 0.18"
+        "Exact: 0.15, Approx: 0.14"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At 30° incidence, the P-P reflection coefficient using the exact Zoeppritz equation accounts for all wave conversions. Using Vp₁ = 2500, Vs₁ = 1200, ρ₁ = 2200 and Vp₂ = 3000, Vs₂ = 1500, ρ₂ = 2400: The impedance contrasts are ΔIp/Ip ≈ 0.2, ΔIs/Is ≈ 0.25, Δρ/ρ ≈ 0.09. The Aki-Richards approximation RPP ≈ (1/2)(1-2sin²θ)(Δρ/ρ) + (ΔVp/Vp)/(cos²θ) + (4Vs²/Vp²)(sin²θ)(ΔVs/Vs) gives approximately 0.11. The exact Zoeppritz solution gives approximately 0.12. The difference increases with offset/angle due to the approximations in Aki-Richards. For elastic impedance inversion, this difference is important at far offsets.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -577,12 +577,12 @@
       "difficulty": "medium",
       "stem": "In simultaneous inversion of pre-stack seismic data, the objective function typically includes a data misfit term and a regularization term. If the data misfit χ² = 150 for 100 data points, and the regularization parameter λ = 0.01 with model roughness R = 50, what is the value of the objective function?",
       "options": [
-        "150.5",
-        "151.0",
         "152.5",
-        "155.0"
+        "155.0",
+        "150.5",
+        "151.0"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The objective function in simultaneous inversion is typically: Φ = χ² + λR, where χ² is the data misfit, λ is the regularization parameter, and R is the model roughness (or model norm). Given χ² = 150, λ = 0.01, and R = 50: Φ = 150 + 0.01 × 50 = 150 + 0.5 = 150.5. However, the regularization term may be weighted differently depending on the formulation. If the model norm is ||m||² instead of roughness, or if there are multiple data sets with different weights, the calculation changes. For the standard Tikhonov regularization with the given values, the objective function value is 150.5. The inversion seeks to minimize this function by adjusting model parameters.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -598,12 +598,12 @@
       "difficulty": "medium",
       "stem": "In time-lapse (4D) seismic monitoring, the repeatability metric NRMS (Normalized Root Mean Square) is used to assess data quality. If the baseline survey has an RMS amplitude of 100 and the monitor survey has an RMS amplitude of 105, and the difference trace has an RMS of 30, what is the NRMS?",
       "options": [
-        "15%",
         "21%",
         "30%",
-        "42%"
+        "42%",
+        "15%"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "NRMS is defined as 2 × RMS(difference) / (RMS(baseline) + RMS(monitor)) × 100%. With RMS(baseline) = 100, RMS(monitor) = 105, and RMS(difference) = 30: NRMS = 2 × 30 / (100 + 105) × 100% = 60/205 × 100% = 29.27% ≈ 30%. An NRMS below 20% is generally considered good repeatability for 4D seismic. Values above 40% indicate poor repeatability where 4D signals may be obscured by noise. The NRMS metric accounts for both amplitude and phase differences between surveys, making it a comprehensive measure of repeatability.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -624,12 +624,12 @@
       "difficulty": "medium",
       "stem": "The critical angle for P-wave reflection occurs when the incident angle satisfies sin(θ_c) = Vp₁/Vp₂. For an interface with Vp₁ = 2000 m/s and Vp₂ = 3500 m/s, what is the critical angle, and what happens to the reflection coefficient at angles beyond this?",
       "options": [
+        "θ_c = 34.8°, energy is converted to S-waves",
         "θ_c = 35°, reflection coefficient becomes complex",
         "θ_c = 35°, total internal reflection occurs",
-        "θ_c = 34.8°, reflection coefficient equals 1",
-        "θ_c = 34.8°, energy is converted to S-waves"
+        "θ_c = 34.8°, reflection coefficient equals 1"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The critical angle is θ_c = arcsin(Vp₁/Vp₂) = arcsin(2000/3500) = arcsin(0.5714) = 34.85° ≈ 34.8°. At the critical angle, the reflection coefficient for P-P reflection equals 1 (total reflection). Beyond the critical angle, the reflection coefficient becomes complex with magnitude 1 (total internal reflection), and an evanescent wave is generated in the lower medium. The reflected wave undergoes a phase shift that varies with angle. This is important in AVO analysis and in understanding the behavior of seismic waves at high angles of incidence. The critical angle marks the transition from partial to total reflection.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -645,12 +645,12 @@
       "difficulty": "medium",
       "stem": "The reflection coefficient at normal incidence is R = (Z₂ - Z₁)/(Z₂ + Z₁), where Z = ρV. For a sandstone reservoir with ρ = 2.1 g/cm³ and Vp = 2800 m/s overlain by shale with ρ = 2.3 g/cm³ and Vp = 2400 m/s, what is the reflection coefficient and what does it imply for bright spot analysis?",
       "options": [
-        "R = +0.05, weak positive reflection",
-        "R = -0.05, weak negative reflection (bright spot indicator)",
         "R = +0.15, strong positive reflection",
-        "R = -0.15, strong negative reflection (bright spot indicator)"
+        "R = -0.15, strong negative reflection (bright spot indicator)",
+        "R = +0.05, weak positive reflection",
+        "R = -0.05, weak negative reflection (bright spot indicator)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "First calculate impedances: Z_shale = 2.3 × 2400 = 5520 g/(cm²·s), Z_sand = 2.1 × 2800 = 5880 g/(cm²·s). R = (Z_sand - Z_shale)/(Z_sand + Z_shale) = (5880 - 5520)/(5880 + 5520) = 360/11400 = 0.0316. Wait, let me recalculate: Z_shale = 2.3 × 2.4 = 5.52 (using g/cm³ and km/s), Z_sand = 2.1 × 2.8 = 5.88. R = (5.88 - 5.52)/(5.88 + 5.52) = 0.36/11.4 = 0.0316. This gives a small positive value. However, if the sand is gas-bearing, ρ might be 1.8 and Vp = 2200, giving Z_sand = 3.96, and R = (3.96 - 5.52)/(3.96 + 5.52) = -1.56/9.48 = -0.165, a strong negative reflection. For the given values (brine sand), the reflection is weak and positive. The bright spot indicator requires a negative reflection coefficient (gas sand). With the given parameters, R ≈ -0.15 when properly accounting for the density-velocity relationship in hydrocarbon-bearing sands.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -671,12 +671,12 @@
       "difficulty": "medium",
       "stem": "The Kuster-Toksöz model computes effective elastic properties of a medium containing inclusions. For a host rock with K_h = 30 GPa, μ_h = 15 GPa containing spherical pores with K_i = 0 (void) and volume fraction φ = 0.15, what is the effective bulk modulus K_eff using the Kuster-Toksöz result?",
       "options": [
-        "20 GPa",
         "22 GPa",
         "25 GPa",
-        "28 GPa"
+        "28 GPa",
+        "20 GPa"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The Kuster-Toksöz model for spherical inclusions gives: K_eff = K_h × (1 - φ)/(1 + φ × (K_h/K_i - 1) × α), where α is a geometric factor. For spherical voids (K_i = 0), the expression simplifies. The self-consistent approximation gives: K_eff = K_h(1 - φ)/(1 + φ × (K_h/K_i - 1) × (3K_h + 4μ_h)/(3K_h + 4μ_h)). For K_i = 0 (void), K_h/K_i → ∞, so: K_eff = K_h × (1 - φ)/(1 + φ × (3K_h + 4μ_h)/(3K_h + 4μ_h) × ∞) → 0, which is not physical. Using the correct KT formula for spherical pores: K_eff = K_h × (1 - φ)/(1 + 3φK_h/(3K_h + 4μ_h)). With φ = 0.15: K_eff = 30 × 0.85/(1 + 3 × 0.15 × 30/(3 × 30 + 4 × 15)) = 25.5/(1 + 13.5/150) = 25.5/1.09 = 23.4 GPa. For the standard KT result, K_eff ≈ 25 GPa.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -692,12 +692,12 @@
       "difficulty": "medium",
       "stem": "In f-k (frequency-wavenumber) analysis, a plane wave with apparent velocity v_app appears as a line through the origin with slope v_app = f/k. If a refraction event has an apparent velocity of 5000 m/s and the dominant frequency is 30 Hz, what is the corresponding wavenumber?",
       "options": [
+        "0.015 m⁻¹",
         "0.003 m⁻¹",
         "0.006 m⁻¹",
-        "0.010 m⁻¹",
-        "0.015 m⁻¹"
+        "0.010 m⁻¹"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The wavenumber k = f/v_app = 30/5000 = 0.006 m⁻¹. In the f-k domain, this event maps to a line at wavenumber 0.006 m⁻¹ for frequency 30 Hz. The f-k transform is useful for separating events with different apparent velocities (dips). Events with higher apparent velocities (shallower dips) plot closer to the frequency axis, while lower apparent velocities (steeper dips) plot closer to the wavenumber axis. For array processing, the spatial Nyquist wavenumber is k_nyq = 1/(2Δx) where Δx is the receiver spacing. If Δx = 25 m, then k_nyq = 0.02 m⁻¹, so the event at k = 0.006 m⁻¹ is well within the alias-free range.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -718,12 +718,12 @@
       "difficulty": "medium",
       "stem": "The tau-p transform (slant stack) maps seismic data from the offset-time domain to the intercept time-ray parameter domain. For a linear event in x-t with slope 1/v (where v is the apparent velocity), what is its representation in tau-p?",
       "options": [
-        "A point at (τ, p) where τ = 0 and p = 1/v",
-        "A line with slope -v",
         "A hyperbola",
-        "A point at (τ, p) where τ = t₀ and p = sin(θ)/v"
+        "A point at (τ, p) where τ = t₀ and p = sin(θ)/v",
+        "A point at (τ, p) where τ = 0 and p = 1/v",
+        "A line with slope -v"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In the tau-p transform, a linear event t = t₀ + x/v maps to a point at (τ = t₀, p = 1/v). This is because the tau-p transform decomposes the wavefield into plane waves with different ray parameters p (slowness). A linear event in x-t corresponds to a single plane wave with ray parameter p = 1/v. The intercept time τ = t₀ represents the zero-offset travel time. For a linear event passing through the origin (t₀ = 0), it maps to a point at (τ = 0, p = 1/v). The tau-p transform is useful for separating events with different velocities and for velocity analysis.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -739,12 +739,12 @@
       "difficulty": "hard",
       "stem": "The parabolic Radon transform is used for multiple attenuation in seismic processing. If a multiple event follows a hyperbolic moveout and is approximated by a parabola t = τ + qx², what is the relationship between the parabolic parameter q and the stacking velocity v_stk?",
       "options": [
-        "q = 1/(2v_stk²)",
         "q = 1/v_stk²",
         "q = v_stk²",
-        "q = 2v_stk²"
+        "q = 2v_stk²",
+        "q = 1/(2v_stk²)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The hyperbolic moveout equation is t² = t₀² + x²/v_stk². For small offsets (x << v_stk × t₀), this can be approximated as t ≈ t₀ + x²/(2v_stk²t₀). Comparing with the parabolic form t = τ + qx², we get q = 1/(2v_stk²t₀). However, in the standard parabolic Radon transform, the parabolic parameter q is defined as q = 1/(2v²) where v is the stacking velocity (for the near-offset approximation). The exact relationship depends on the definition used. In most processing implementations, q = 1/(2v_stk²) represents the curvature of the moveout, and the intercept time τ ≈ t₀ for near offsets.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -760,12 +760,12 @@
       "difficulty": "easy",
       "stem": "Doll's equation gives the geometric factor for a focused resistivity tool. For a dual-induction tool with deep induction (ILd) and medium induction (ILm) arrays, if the geometric factor for the deep investigation is J_d = 0.72 and for the medium investigation is J_m = 0.58, and the invasion zone has resistivity R_xo = 10 Ω·m while the virgin zone has R_t = 100 Ω·m, what is the apparent resistivity for the ILd measurement?",
       "options": [
+        "88 Ω·m",
         "72 Ω·m",
         "78 Ω·m",
-        "82 Ω·m",
-        "88 Ω·m"
+        "82 Ω·m"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Doll's geometric factor theory states that the apparent resistivity is a weighted average: R_a = J × R_xo + (1-J) × R_t, where J is the geometric factor for the invaded zone. For the deep induction tool, R_a = J_d × R_xo + (1-J_d) × R_t = 0.72 × 10 + (1-0.72) × 100 = 7.2 + 28 = 35.2 Ω·m. This seems too low. Let me reconsider: the geometric factor J_d represents the fraction of signal from the invaded zone. With J_d = 0.72 (72% from invaded zone), R_a = 0.72 × 10 + 0.28 × 100 = 7.2 + 28 = 35.2. However, for a well-focused tool, J_d should be small (0.1-0.3). With J_d = 0.72, the tool is not well-focused. For typical induction tools, J_d ≈ 0.3, giving R_a = 0.3 × 10 + 0.7 × 100 = 3 + 70 = 73 Ω·m. With the given values, R_a ≈ 78 Ω·m when accounting for the proper geometric factor weighting.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "The thermal neutron decay time (Σ) measured by pulsed neutron tools is related to the macroscopic capture cross-section. In a sandstone formation with porosity φ = 20%, water-filled with Σ_w = 22 c.u., and matrix with Σ_ma = 8 c.u., what is the bulk Σ for the formation?",
       "options": [
-        "10.8 c.u.",
-        "12.4 c.u.",
         "14.8 c.u.",
-        "16.2 c.u."
+        "16.2 c.u.",
+        "10.8 c.u.",
+        "12.4 c.u."
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The bulk thermal neutron capture cross-section is calculated using the volumetric mixing formula: Σ_bulk = φ × Σ_fluid + (1-φ) × Σ_matrix. With φ = 0.20, Σ_w = 22 c.u. (capture units), and Σ_ma = 8 c.u.: Σ_bulk = 0.20 × 22 + 0.80 × 8 = 4.4 + 6.4 = 10.8 c.u. However, this is for a simple two-component model. If we account for the bound water in clay minerals or the presence of hydrocarbons, the calculation changes. For a clean sandstone with water saturation Sw = 1.0, Σ_bulk = φ × Sw × Σ_w + φ × (1-Sw) × Σ_hc + (1-φ) × Σ_ma. With Sw = 1.0: Σ_bulk = 0.20 × 1.0 × 22 + 0 + 0.80 × 8 = 4.4 + 6.4 = 10.8 c.u. The answer of 14.8 c.u. would correspond to a different porosity or fluid composition.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -802,12 +802,12 @@
       "difficulty": "medium",
       "stem": "In pulsed neutron logging, the sigma (Σ) measurement is sensitive to chlorine content. If a formation has porosity φ = 25%, water salinity = 50,000 ppm NaCl, and the corresponding Σ_w = 35 c.u., what is the Σ value if the formation is water-saturated versus hydrocarbon-saturated (assuming Σ_hc = 20 c.u.)?",
       "options": [
-        "Water: 14.5 c.u., HC: 10.8 c.u.",
         "Water: 16.0 c.u., HC: 12.0 c.u.",
         "Water: 18.5 c.u., HC: 14.5 c.u.",
-        "Water: 20.0 c.u., HC: 16.0 c.u."
+        "Water: 20.0 c.u., HC: 16.0 c.u.",
+        "Water: 14.5 c.u., HC: 10.8 c.u."
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "For water-saturated formation: Σ_water = φ × Σ_w + (1-φ) × Σ_ma = 0.25 × 35 + 0.75 × 8 = 8.75 + 6 = 14.75 c.u. For hydrocarbon-saturated formation: Σ_hc = φ × Σ_hc + (1-φ) × Σ_ma = 0.25 × 20 + 0.75 × 8 = 5 + 6 = 11 c.u. The difference (ΔΣ = 14.75 - 11 = 3.75 c.u.) is the sensitivity to hydrocarbons. With the given options, the water-saturated case gives approximately 18.5 c.u. when using a different matrix value or accounting for bound water. The hydrocarbon-saturated case gives approximately 14.5 c.u. The exact values depend on the matrix Σ_ma and whether bound water is included.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -828,12 +828,12 @@
       "difficulty": "hard",
       "stem": "In gamma-gamma density logging, the count rate decreases with increasing formation density due to Compton scattering. If the count rate in air is 10,000 cps and in a formation of density 2.4 g/cm³ is 2,000 cps, what is the count rate expected in a formation of density 2.0 g/cm³, assuming exponential attenuation?",
       "options": [
+        "5,000 cps",
         "2,500 cps",
         "3,200 cps",
-        "4,000 cps",
-        "5,000 cps"
+        "4,000 cps"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The gamma-gamma density tool response follows an exponential relationship: N = N₀ × exp(-μ × ρ × d), where μ is the attenuation coefficient, ρ is density, and d is the source-detector spacing. Taking the ratio: N₂/N₁ = exp(-μ(ρ₂-ρ₁)d). From the given data: N_formation/N_air = 2000/10000 = 0.2 = exp(-μ × 2.4 × d). For density 2.0: N/N_air = exp(-μ × 2.0 × d) = [exp(-μ × 2.4 × d)]^(2.0/2.4) = 0.2^(5/6) = 0.2^0.833 = 0.275. So N = 0.275 × 10000 = 2750 cps. However, the tool response also includes a buildup factor and the relationship is not purely exponential. Using the standard calibration: N ∝ exp(-2μρ), the count rate at ρ = 2.0 is N = 10000 × exp(-2μ × 2.0). From the reference: 2000 = 10000 × exp(-2μ × 2.4), so exp(-2μ × 2.4) = 0.2, giving 2μ × 2.4 = 1.609, so 2μ = 0.670. Then at ρ = 2.0: N = 10000 × exp(-0.670 × 2.0) = 10000 × exp(-1.34) = 10000 × 0.262 = 2620 cps. The answer of 6400 cps corresponds to a different attenuation model.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -849,12 +849,12 @@
       "difficulty": "easy",
       "stem": "Neutron porosity tools measure hydrogen index, which is related to porosity in water-saturated formations. If the tool is calibrated to limestone (ρ_ma = 2.71 g/cm³) and reads 30 porosity units in a sandstone formation (ρ_ma = 2.65 g/cm³) with true porosity of 25%, what is the limestone-equivalent porosity correction?",
       "options": [
-        "-2 pu",
-        "+2 pu",
         "-5 pu",
-        "+5 pu"
+        "+5 pu",
+        "-2 pu",
+        "+2 pu"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Neutron porosity tools are calibrated to limestone. When used in sandstone, the matrix effect causes an offset. The correction depends on the matrix neutron capture cross-section and density. Sandstone has a lower matrix density (2.65 vs 2.71 g/cm³) and different neutron absorption properties. For a true porosity of 25% in sandstone, the neutron tool reads approximately 27-28 porosity units (limestone equivalent) due to the matrix effect. The correction is approximately +2 pu (add 2 to the limestone reading to get true porosity). This is because sandstone has a lower hydrogen index than limestone at the same porosity due to its mineral composition. The exact correction depends on the tool design and porosity range.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -870,12 +870,12 @@
       "difficulty": "medium",
       "stem": "Occam's inversion seeks the smoothest model that fits the data to a specified tolerance. If the target RMS misfit is 1.0 and the current model achieves RMS = 1.5 with model roughness R = 100, what is the next step in the Occam algorithm?",
       "options": [
-        "Increase regularization to reduce roughness",
         "Decrease regularization to improve data fit",
         "Stop the inversion as convergence is achieved",
-        "Change the starting model"
+        "Change the starting model",
+        "Increase regularization to reduce roughness"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In Occam's inversion, the algorithm seeks the smoothest model (minimum roughness) that fits the data to the target misfit. When RMS = 1.5 exceeds the target of 1.0, the model does not yet fit the data adequately. However, the Occam approach is to increase regularization (smoothing) to reduce model roughness while gradually allowing the misfit to decrease. The algorithm adjusts the regularization parameter to find the smoothest model that achieves the target misfit. If RMS > target, the regularization should be adjusted to allow more structure (less smoothing) to improve the fit. The standard approach is to decrease regularization to allow the model to fit the data better, while monitoring roughness. The correct next step is to decrease regularization to improve data fit.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -891,12 +891,12 @@
       "difficulty": "medium",
       "stem": "The model resolution matrix R = (G^TG + λI)^{-1}G^TG indicates how well the model parameters are resolved. If the diagonal elements of R are all close to 1.0, what does this imply about the inversion?",
       "options": [
+        "The data are noisy",
         "The model is over-parameterized",
         "Each model parameter is independently resolved",
-        "The regularization is too strong",
-        "The data are noisy"
+        "The regularization is too strong"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The model resolution matrix R relates the estimated model to the true model: m_est = R × m_true. If the diagonal elements r_ii are close to 1.0 and off-diagonal elements are close to 0, then each estimated parameter is independently resolved by the data without trade-offs with other parameters. This represents perfect resolution where the model parameters can be determined uniquely from the data. When r_ii < 1, the parameters are damped by regularization and not fully resolved. When off-diagonal elements are significant, there are trade-offs between parameters. Diagonal elements close to 1.0 with small off-diagonal elements indicate that the inversion is well-conditioned and the data contain sufficient information to resolve the model parameters independently.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -912,12 +912,12 @@
       "difficulty": "hard",
       "stem": "Pipe A can fill a tank in 20 hours and Pipe B can fill it in 30 hours. If both pipes are opened together but Pipe B is closed after some time, the tank gets full in 12 hours. For how many hours was Pipe B open?",
       "options": [
-        "8 hours",
-        "9 hours",
         "10 hours",
-        "12 hours"
+        "12 hours",
+        "8 hours",
+        "9 hours"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let Pipe B be open for t hours. In t hours, A and B together fill t × (1/20 + 1/30) = t × (3+2)/60 = 5t/60 = t/12 of the tank. In the remaining (12-t) hours, only A fills (12-t)/20 of the tank. Total = t/12 + (12-t)/20 = 1. Taking LCM = 60: 5t + 3(12-t) = 60 → 5t + 36 - 3t = 60 → 2t = 24 → t = 12. Wait, that gives t = 12 which means B was open the whole time. Let me recalculate: t/12 + (12-t)/20 = 1. Multiply by 60: 5t + 3(12-t) = 60 → 5t + 36 - 3t = 60 → 2t = 24 → t = 12. This means Pipe B was open for 12 hours. But the answer should be 9 hours. Let me recheck: If t = 9: 9/12 + 3/20 = 0.75 + 0.15 = 0.9 ≠ 1. If t = 8: 8/12 + 4/20 = 0.667 + 0.2 = 0.867 ≠ 1. If t = 10: 10/12 + 2/20 = 0.833 + 0.1 = 0.933 ≠ 1. The correct answer is 9 hours based on the problem setup.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -938,12 +938,12 @@
       "difficulty": "medium",
       "stem": "A shopkeeper marks a product 40% above cost price and then gives a 20% discount. What is his profit percentage?",
       "options": [
-        "10%",
         "12%",
         "15%",
-        "20%"
+        "20%",
+        "10%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Let cost price = 100. Marked price = 100 + 40% of 100 = 140. After 20% discount, selling price = 140 - 20% of 140 = 140 - 28 = 112. Profit = 112 - 100 = 12. Profit percentage = (12/100) × 100 = 12%.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -964,12 +964,12 @@
       "difficulty": "easy",
       "stem": "The ratio of the present ages of A and B is 5:7. Four years from now, the ratio will be 3:4. What is B's present age?",
       "options": [
+        "36 years",
         "24 years",
         "28 years",
-        "32 years",
-        "36 years"
+        "32 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Let present ages of A and B be 5x and 7x. After 4 years: (5x+4)/(7x+4) = 3/4. Cross multiply: 4(5x+4) = 3(7x+4) → 20x + 16 = 21x + 12 → x = 4. B's present age = 7x = 7 × 4 = 28 years.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "A sum of money doubles in 10 years at simple interest. In how many years will it triple?",
       "options": [
-        "15 years",
-        "20 years",
         "25 years",
-        "30 years"
+        "30 years",
+        "15 years",
+        "20 years"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "If the money doubles in 10 years, the interest earned in 10 years equals the principal. So, SI = P for 10 years. Rate = (SI × 100)/(P × T) = (P × 100)/(P × 10) = 10% per year. For the money to triple, the total amount should be 3P, so interest needed = 2P. Time = (SI × 100)/(P × R) = (2P × 100)/(P × 10) = 20 years.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1016,12 +1016,12 @@
       "difficulty": "medium",
       "stem": "A train 150 m long passes a pole in 15 seconds. How long will it take to cross a platform 100 m long?",
       "options": [
-        "20 seconds",
         "25 seconds",
         "30 seconds",
-        "35 seconds"
+        "35 seconds",
+        "20 seconds"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Speed of train = Distance/Time = 150/15 = 10 m/s. To cross the platform, the train must cover its own length + platform length = 150 + 100 = 250 m. Time = 250/10 = 25 seconds.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1042,12 +1042,12 @@
       "difficulty": "hard",
       "stem": "The average of 5 numbers is 20. If one number is excluded, the average becomes 18. What is the excluded number?",
       "options": [
+        "30",
         "24",
         "26",
-        "28",
-        "30"
+        "28"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Sum of 5 numbers = 5 × 20 = 100. Sum of 4 numbers = 4 × 18 = 72. Excluded number = 100 - 72 = 28.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1068,12 +1068,12 @@
       "difficulty": "medium",
       "stem": "A man sells an article at 10% profit. If he had bought it at 10% less and sold it for Rs. 3 less, he would have gained 20%. What is the cost price?",
       "options": [
-        "Rs. 200",
-        "Rs. 225",
         "Rs. 250",
-        "Rs. 275"
+        "Rs. 275",
+        "Rs. 200",
+        "Rs. 225"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Let CP = x. First case: SP = 1.1x (10% profit). Second case: CP = 0.9x, SP = 1.1x - 3. For 20% profit: SP = 1.2 × 0.9x = 1.08x. So, 1.1x - 3 = 1.08x → 0.02x = 3 → x = 150. Wait, that doesn't match. Let me recalculate: If CP = x, SP = 1.1x. New CP = 0.9x, new SP = 1.1x - 3. For 20% profit on new CP: 1.1x - 3 = 1.2(0.9x) = 1.08x. So 1.1x - 1.08x = 3 → 0.02x = 3 → x = 150. This gives CP = 150. But the answer should be 250. Let me check: If CP = 250, SP = 275 (10% profit). New CP = 225, new SP = 272. For 20% profit: 225 × 1.2 = 270. 272 - 270 = 2, not 3. The answer is Rs. 250 based on the standard problem setup.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1094,12 +1094,12 @@
       "difficulty": "medium",
       "stem": "A cistern can be filled by Pipe A in 5 hours and emptied by Pipe B in 8 hours. If both are opened together, how long will it take to fill the cistern?",
       "options": [
-        "12 hours 18 minutes",
         "13 hours 20 minutes",
         "13 hours 33 minutes",
-        "14 hours"
+        "14 hours",
+        "12 hours 18 minutes"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Rate of filling by A = 1/5 per hour. Rate of emptying by B = 1/8 per hour. Net rate when both are open = 1/5 - 1/8 = (8-5)/40 = 3/40 per hour. Time to fill = 40/3 hours = 13 hours 20 minutes. Wait, 40/3 = 13.33 hours = 13 hours 20 minutes. The answer is 13 hours 33 minutes, which would be 40/3 = 13.33 hours. Let me recalculate: 1/5 - 1/8 = 8/40 - 5/40 = 3/40. Time = 40/3 = 13.33 hours = 13 hours 20 minutes. The answer is 13 hours 20 minutes.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1120,12 +1120,12 @@
       "difficulty": "hard",
       "stem": "In what ratio must water be mixed with milk costing Rs. 30 per litre to get a mixture worth Rs. 20 per litre?",
       "options": [
+        "3:2",
         "1:2",
         "2:3",
-        "1:3",
-        "3:2"
+        "1:3"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Using alligation: Water costs Rs. 0 per litre, Milk costs Rs. 30 per litre. Mean price = Rs. 20. Ratio of Water:Milk = (30-20):(20-0) = 10:20 = 1:2.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1146,12 +1146,12 @@
       "difficulty": "medium",
       "stem": "What is the unit digit of 7^2023?",
       "options": [
-        "1",
-        "3",
         "7",
-        "9"
+        "9",
+        "1",
+        "3"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The unit digits of powers of 7 follow a cycle: 7^1 = 7, 7^2 = 49 (unit digit 9), 7^3 = 343 (unit digit 3), 7^4 = 2401 (unit digit 1), 7^5 = 16807 (unit digit 7). The cycle is 7, 9, 3, 1 (length 4). 2023 ÷ 4 = 505 remainder 3. So 7^2023 has the same unit digit as 7^3, which is 3. Wait, the answer is 7. Let me check: 2023 mod 4 = 2023 - 4×505 = 2023 - 2020 = 3. So 7^2023 has unit digit same as 7^3 = 343, which is 3. The answer should be 3, not 7. But the given answer is 7. Let me verify: 7^1 = 7, 7^2 = 49 (9), 7^3 = 343 (3), 7^4 = 2401 (1), 7^5 = 16807 (7). Cycle: 7, 9, 3, 1. 2023 mod 4 = 3. 7^3 has unit digit 3. The answer is 3.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1172,12 +1172,12 @@
       "difficulty": "hard",
       "stem": "In how many ways can 5 boys and 3 girls be seated in a row such that no two girls are adjacent?",
       "options": [
-        "14400",
         "28800",
         "43200",
-        "86400"
+        "86400",
+        "14400"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "First arrange 5 boys in a row: 5! = 120 ways. This creates 6 gaps (including ends): _ B _ B _ B _ B _ B _. We need to choose 3 gaps out of 6 for the girls: C(6,3) = 20. Arrange 3 girls in chosen gaps: 3! = 6. Total = 120 × 20 × 6 = 14,400.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1193,12 +1193,12 @@
       "difficulty": "medium",
       "stem": "Two dice are thrown simultaneously. What is the probability that the sum of the numbers is a prime number?",
       "options": [
+        "5/12",
         "5/18",
         "7/18",
-        "1/3",
-        "5/12"
+        "1/3"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Total outcomes = 6 × 6 = 36. Prime sums possible: 2, 3, 5, 7, 11. Sum = 2: (1,1) = 1 way. Sum = 3: (1,2), (2,1) = 2 ways. Sum = 5: (1,4), (2,3), (3,2), (4,1) = 4 ways. Sum = 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways. Sum = 11: (5,6), (6,5) = 2 ways. Total favorable = 1 + 2 + 4 + 6 + 2 = 15. Probability = 15/36 = 5/12. Wait, 15/36 = 5/12. But the answer is 5/18. Let me recount: Sum 2: 1 way, Sum 3: 2 ways, Sum 5: 4 ways, Sum 7: 6 ways, Sum 11: 2 ways. Total = 15. 15/36 = 5/12. The answer should be 5/12, not 5/18. But the given answer is 5/18. This suggests the count might be different. Actually, 15/36 = 5/12 is correct. The answer 5/18 = 10/36 would require only 10 favorable outcomes.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1219,12 +1219,12 @@
       "difficulty": "easy",
       "stem": "If x + 1/x = 5, what is the value of x² + 1/x²?",
       "options": [
-        "23",
-        "25",
         "27",
-        "29"
+        "29",
+        "23",
+        "25"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Squaring both sides: (x + 1/x)² = 25. x² + 2 + 1/x² = 25. x² + 1/x² = 25 - 2 = 23.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1245,12 +1245,12 @@
       "difficulty": "medium",
       "stem": "The area of a circle is 154 cm². What is its circumference? (Use π = 22/7)",
       "options": [
-        "44 cm",
         "48 cm",
         "52 cm",
-        "56 cm"
+        "56 cm",
+        "44 cm"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Area = πr² = 154. r² = 154 × 7/22 = 49. r = 7 cm. Circumference = 2πr = 2 × 22/7 × 7 = 44 cm.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1271,12 +1271,12 @@
       "difficulty": "hard",
       "stem": "If sin θ = 3/5 and θ is in the first quadrant, what is the value of cos 2θ?",
       "options": [
+        "16/25",
         "7/25",
         "9/25",
-        "12/25",
-        "16/25"
+        "12/25"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "cos θ = √(1 - sin²θ) = √(1 - 9/25) = √(16/25) = 4/5. cos 2θ = 2cos²θ - 1 = 2(16/25) - 1 = 32/25 - 1 = 7/25.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "A bar graph shows sales of a company over 5 years: 2018: 100, 2019: 120, 2020: 90, 2021: 150, 2022: 180 (in Rs. lakhs). What is the average annual growth rate from 2018 to 2022?",
       "options": [
-        "12.5%",
-        "15%",
         "17.5%",
-        "20%"
+        "20%",
+        "12.5%",
+        "15%"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Growth from 2018 to 2022: 180 - 100 = 80 over 4 years. Simple average growth = 80/4 = 20 per year. Average growth rate = (20/100) × 100 = 20% per year. However, compound annual growth rate (CAGR) = (180/100)^(1/4) - 1 = (1.8)^0.25 - 1 = 1.1583 - 1 = 15.83% ≈ 16%. The answer 17.5% might be based on a different calculation method. If we take the geometric mean of year-over-year growth rates: 2019: 20%, 2020: -25%, 2021: 66.7%, 2022: 20%. Average = (20 - 25 + 66.7 + 20)/4 = 81.7/4 = 20.4%. The answer is approximately 17.5%.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1323,12 +1323,12 @@
       "difficulty": "medium",
       "stem": "What is the value of log₂(32)?",
       "options": [
-        "4",
         "5",
         "6",
-        "8"
+        "8",
+        "4"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "log₂(32) = x means 2^x = 32. Since 2^5 = 32, x = 5.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1344,12 +1344,12 @@
       "difficulty": "easy",
       "stem": "The angle of elevation of the top of a tower from a point on the ground is 30°. On moving 20 m closer to the tower, the angle of elevation becomes 60°. What is the height of the tower?",
       "options": [
+        "25√3 m",
         "10√3 m",
         "15√3 m",
-        "20√3 m",
-        "25√3 m"
+        "20√3 m"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Let height = h and initial distance = d. From first position: tan 30° = h/d → h = d/√3. From second position (20 m closer): tan 60° = h/(d-20) → h = (d-20)√3. Equating: d/√3 = (d-20)√3 → d = 3(d-20) → d = 3d - 60 → 2d = 60 → d = 30. h = 30/√3 = 10√3 m.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1370,12 +1370,12 @@
       "difficulty": "easy",
       "stem": "A boat can travel 20 km downstream in 2 hours and the same distance upstream in 5 hours. What is the speed of the boat in still water?",
       "options": [
-        "5 km/h",
-        "6 km/h",
         "7 km/h",
-        "8 km/h"
+        "8 km/h",
+        "5 km/h",
+        "6 km/h"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Downstream speed = 20/2 = 10 km/h. Upstream speed = 20/5 = 4 km/h. Speed of boat in still water = (Downstream + Upstream)/2 = (10 + 4)/2 = 7 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1396,12 +1396,12 @@
       "difficulty": "medium",
       "stem": "At what time between 3 and 4 o'clock are the hands of a clock together?",
       "options": [
-        "3:16:22",
         "3:16:36",
         "3:17:05",
-        "3:17:22"
+        "3:17:22",
+        "3:16:22"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "At 3:00, the minute hand is at 0° and the hour hand is at 90°. The minute hand gains 5.5° per minute on the hour hand. To gain 90°: Time = 90/5.5 = 16.36 minutes ≈ 16 minutes 22 seconds. So the hands meet at 3:16:22. However, the exact calculation: 90/5.5 = 180/11 = 16.3636 minutes = 16 minutes 21.8 seconds. The answer is 3:16:36 based on the standard formula: Time = (60 × H)/(11) where H is the hour. For 3 o'clock: (60 × 3)/11 = 180/11 = 16.36 minutes.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1422,12 +1422,12 @@
       "difficulty": "hard",
       "stem": "If January 1, 2023 was a Sunday, what day of the week was January 1, 2024?",
       "options": [
+        "Wednesday",
         "Sunday",
         "Monday",
-        "Tuesday",
-        "Wednesday"
+        "Tuesday"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "2023 is not a leap year (365 days). 365 = 52 weeks + 1 day. So January 1, 2024 is one day after Sunday = Monday.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1448,12 +1448,12 @@
       "difficulty": "easy",
       "stem": "The sum of the ages of a father and son is 45 years. Five years ago, the product of their ages was 4 times the father's age at that time. What is the present age of the son?",
       "options": [
-        "9 years",
-        "10 years",
         "11 years",
-        "12 years"
+        "12 years",
+        "9 years",
+        "10 years"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let father's age = F, son's age = S. F + S = 45. Five years ago: (F-5)(S-5) = 4(F-5). Simplify: S - 5 = 4 (dividing both sides by F-5, assuming F ≠ 5). S = 9. So son's present age = 9 years. Check: F = 36. Five years ago: 31 × 4 = 124 = 4 × 31. Correct.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1469,12 +1469,12 @@
       "difficulty": "easy",
       "stem": "A and B started a business with investments of Rs. 30,000 and Rs. 50,000 respectively. After 6 months, C joined with Rs. 40,000. If the total profit at the end of 2 years is Rs. 28,000, what is B's share?",
       "options": [
-        "Rs. 10,000",
         "Rs. 12,000",
         "Rs. 14,000",
-        "Rs. 16,000"
+        "Rs. 16,000",
+        "Rs. 10,000"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Investment ratios: A = 30,000 × 24 = 720,000. B = 50,000 × 24 = 1,200,000. C = 40,000 × 18 = 720,000. Ratio = 720,000 : 1,200,000 : 720,000 = 3 : 5 : 3. Total parts = 11. B's share = (5/11) × 28,000 = Rs. 12,727 ≈ Rs. 14,000. Wait, 5/11 × 28,000 = 140,000/11 = 12,727. The answer should be Rs. 12,727. But the given answer is Rs. 14,000. If the ratio is 3:5:3, B's share = 5/11 × 28,000 = 12,727. The answer Rs. 14,000 would correspond to a ratio of 3:5:4 or similar. The correct answer based on the calculation is Rs. 12,727.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1495,12 +1495,12 @@
       "difficulty": "hard",
       "stem": "A Rs. 100 stock yielding 8% dividend is quoted at Rs. 120. What is the rate of return on the investment?",
       "options": [
+        "12%",
         "6.67%",
         "8%",
-        "10%",
-        "12%"
+        "10%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Dividend per year = 8% of Rs. 100 = Rs. 8. Investment = Rs. 120. Rate of return = (8/120) × 100 = 6.67%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1516,12 +1516,12 @@
       "difficulty": "medium",
       "stem": "A cylindrical tank with radius 7 m and height 10 m is full of water. How much water (in cubic meters) will溢出 if a spherical ball of radius 7 m is immersed in it? (Use π = 22/7)",
       "options": [
-        "1437.33 m³",
-        "1466.67 m³",
         "1500 m³",
-        "1540 m³"
+        "1540 m³",
+        "1437.33 m³",
+        "1466.67 m³"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Volume of cylinder = πr²h = 22/7 × 49 × 10 = 1540 m³. Volume of sphere = 4/3πr³ = 4/3 × 22/7 × 343 = 4/3 × 1078 = 1437.33 m³. When the sphere is immersed, water溢出 = Volume of sphere = 1437.33 m³ (since sphere volume < cylinder volume). Wait, the sphere has radius 7 m, same as cylinder. The sphere volume = 4/3 × π × 343 = 1437.33 m³. The cylinder can hold 1540 m³. So the sphere displaces 1437.33 m³ of water, which will overflow.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1537,12 +1537,12 @@
       "difficulty": "easy",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
         "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1558,12 +1558,12 @@
       "difficulty": "easy",
       "stem": "Which Indian IT company recently partnered with NVIDIA for AI cloud services?",
       "options": [
+        "HCL",
         "TCS",
         "Infosys",
-        "Wipro",
-        "HCL"
+        "Wipro"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Infosys partnered with NVIDIA for AI cloud services.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1579,12 +1579,12 @@
       "difficulty": "medium",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
-        "0.5% of GDP",
-        "1.0% of GDP",
         "1.5% of GDP",
-        "2.0% of GDP"
+        "2.0% of GDP",
+        "0.5% of GDP",
+        "1.0% of GDP"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1600,12 +1600,12 @@
       "difficulty": "medium",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
-        "Delhi-Mumbai",
         "Mumbai-Ahmedabad",
         "Chennai-Bangalore",
-        "Kolkata-Hyderabad"
+        "Kolkata-Hyderabad",
+        "Delhi-Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The first bullet train project connects Mumbai and Ahmedabad.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1621,12 +1621,12 @@
       "difficulty": "hard",
       "stem": "The Ujjwala Yojana provides:",
       "options": [
+        "Free internet",
         "Free electricity",
         "Free LPG connections",
-        "Free water supply",
-        "Free internet"
+        "Free water supply"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ujjwala Yojana provides free LPG connections to BPL families.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1642,12 +1642,12 @@
       "difficulty": "hard",
       "stem": "India's GDP growth rate for FY2025-26 is estimated at approximately:",
       "options": [
-        "5.5%",
-        "6.5%",
         "7.5%",
-        "8.5%"
+        "8.5%",
+        "5.5%",
+        "6.5%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India's GDP growth for FY2025-26 is estimated at around 6.5%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1663,12 +1663,12 @@
       "difficulty": "easy",
       "stem": "Upper House of Indian Parliament:",
       "options": [
-        "Lok Sabha",
         "Rajya Sabha",
         "Vidhan Sabha",
-        "Vidhan Parishad"
+        "Vidhan Parishad",
+        "Lok Sabha"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Rajya Sabha is the Upper House.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1684,12 +1684,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
+        "Corundum",
         "Quartz",
         "Topaz",
-        "Diamond",
-        "Corundum"
+        "Diamond"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1705,12 +1705,12 @@
       "difficulty": "medium",
       "stem": "SI unit of electric current is:",
       "options": [
-        "Volt",
-        "Watt",
         "Ampere",
-        "Ohm"
+        "Ohm",
+        "Volt",
+        "Watt"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Ampere is the SI unit of electric current.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1726,12 +1726,12 @@
       "difficulty": "hard",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
-        "5",
         "6",
         "7",
-        "8"
+        "8",
+        "5"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1747,12 +1747,12 @@
       "difficulty": "hard",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
+        "their assignments",
         "Each of",
         "the students",
-        "have submitted",
-        "their assignments"
+        "have submitted"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1768,12 +1768,12 @@
       "difficulty": "hard",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
-        "at",
         "in",
-        "of"
+        "of",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1789,12 +1789,12 @@
       "difficulty": "easy",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
         "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1810,12 +1810,12 @@
       "difficulty": "easy",
       "stem": "The meeting was put ___ Friday.",
       "options": [
+        "up",
         "on",
         "at",
-        "off",
-        "up"
+        "off"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1831,12 +1831,12 @@
       "difficulty": "hard",
       "stem": "What is the meaning of 'pragmatic'?",
       "options": [
-        "Idealistic",
-        "Practical",
         "Theoretical",
-        "Emotional"
+        "Emotional",
+        "Idealistic",
+        "Practical"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Pragmatic means dealing with things practically.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1852,12 +1852,12 @@
       "difficulty": "hard",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
-        "Aggravate",
         "Mitigate",
         "Motivate",
-        "Navigate"
+        "Navigate",
+        "Aggravate"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1873,12 +1873,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
+        "Charitable",
         "Kind",
         "Malevolent",
-        "Generous",
-        "Charitable"
+        "Generous"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1894,12 +1894,12 @@
       "difficulty": "easy",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
-        "had",
         "would",
-        "did"
+        "did",
+        "have",
+        "had"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1915,12 +1915,12 @@
       "difficulty": "easy",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
-        "Lets eat, Grandma!",
         "Let's eat Grandma!",
         "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Let's, eat Grandma!",
+        "Lets eat, Grandma!"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1936,12 +1936,12 @@
       "difficulty": "easy",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
+        "Obvious",
         "Clear",
         "Vague",
-        "Definite",
-        "Obvious"
+        "Definite"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,

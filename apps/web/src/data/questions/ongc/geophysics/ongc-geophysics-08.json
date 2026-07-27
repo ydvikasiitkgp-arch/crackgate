@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The Preliminary Reference Earth Model (PREM) provides one-dimensional radial variations of Earth's physical properties. Which of the following correctly describes the general trend of P-wave velocity with depth through the mantle?",
       "options": [
+        "P-wave velocity increases only in the uppermost 400 km and then decreases",
         "P-wave velocity decreases monotonically from the surface to the core-mantle boundary",
         "P-wave velocity generally increases with depth through the mantle, with a major drop at the outer core boundary",
-        "P-wave velocity remains approximately constant throughout the mantle",
-        "P-wave velocity increases only in the uppermost 400 km and then decreases"
+        "P-wave velocity remains approximately constant throughout the mantle"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In the PREM, P-wave velocity generally increases with depth through the mantle due to increasing pressure and phase transitions. The velocity rises from ~8.1 km/s at the Moho to ~13.7 km/s at the base of the mantle. At the Gutenberg discontinuity (~2,900 km), P-wave velocity drops sharply from ~13.7 km/s to ~8.06 km/s as the waves enter the liquid outer core.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -58,12 +58,12 @@
       "difficulty": "hard",
       "stem": "At the center of the Earth, the pressure reaches approximately 360 GPa and the temperature is estimated at about 5500°C. The pressure at any depth is governed by dP/dz = ρg. Why is the pressure at the core-mantle boundary (~135 GPa) not simply proportional to the overlying mass alone?",
       "options": [
-        "Because gravitational acceleration g increases linearly with depth throughout the Earth",
-        "Because both density ρ and gravitational acceleration g vary with depth due to self-compression and mass redistribution",
         "Because the outer core is liquid and exerts no overburden pressure",
-        "Because the Coriolis effect reduces the effective weight of overlying material"
+        "Because the Coriolis effect reduces the effective weight of overlying material",
+        "Because gravitational acceleration g increases linearly with depth throughout the Earth",
+        "Because both density ρ and gravitational acceleration g vary with depth due to self-compression and mass redistribution"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The pressure at depth depends on the integral P = ∫₀ᶻ ρ(z)g(z) dz. Both ρ(z) and g(z) vary significantly with depth. Density increases due to self-compression and phase transitions. Gravity g decreases slightly through the lower mantle because much of the Earth's mass is concentrated in the mantle. The interplay of increasing density and varying gravity makes the pressure profile non-linear.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -84,12 +84,12 @@
       "difficulty": "easy",
       "stem": "The geotherm describes temperature variation with depth inside the Earth. In the upper mantle, the temperature gradient is steeper than in the lower mantle. Which physical mechanism primarily explains why the lower mantle has a relatively small temperature gradient despite its enormous thickness?",
       "options": [
-        "Radiative heat transfer dominates over conduction in the lower mantle",
         "The lower mantle is a perfect conductor, so temperature is isothermal",
         "Mantle convection efficiently transports heat, making the convecting mantle nearly adiabatic (~0.3–0.5 K/km)",
-        "The lower mantle contains no radioactive heat sources"
+        "The lower mantle contains no radioactive heat sources",
+        "Radiative heat transfer dominates over conduction in the lower mantle"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The lower mantle convects as a nearly adiabatic system. In a vigorously convecting fluid, the temperature gradient approaches the adiabatic gradient (~0.3–0.5 K/km for the lower mantle), much smaller than the conductive gradient in the lithosphere (~10–30 K/km). The thermal boundary layers at the top and bottom of the convecting mantle have steep conductive gradients, but the interior is efficiently mixed by convection.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -105,12 +105,12 @@
       "difficulty": "easy",
       "stem": "The geoid is defined as the equipotential surface of the Earth's gravity field that best fits mean sea level. The geoid-ellipsoid separation (geoid undulation N) arises because:",
       "options": [
+        "Ocean tides permanently elevate sea level above the reference ellipsoid",
         "The Earth rotates on its axis, causing centrifugal bulging at the equator",
         "The Earth's internal density is laterally heterogeneous, causing the gravity field to deviate from that of a uniform ellipsoid",
-        "Atmospheric pressure variations distort the gravity field",
-        "Ocean tides permanently elevate sea level above the reference ellipsoid"
+        "Atmospheric pressure variations distort the gravity field"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The geoid-ellipsoid separation (N) exists because the Earth's internal mass distribution is not laterally uniform. Density variations — such as subducted slabs, mantle plumes, continental roots, and oceanic trenches — cause the actual gravity field to deviate from the smooth, rotationally symmetric field of a reference ellipsoid. The geoid undulation can be positive (e.g., over India ~+20 m) or negative (e.g., over the Indian Ocean ~−100 m).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "NMR porosity is derived from the initial amplitude of the T2 decay curve, proportional to total hydrogen protons in pore fluid. Compared to density porosity, NMR porosity has the advantage of:",
       "options": [
-        "Being independent of the matrix mineralogy — it directly measures fluid content",
-        "Having higher vertical resolution than all other porosity logs",
         "Being able to measure porosity in gas-filled formations without correction",
-        "Providing porosity measurements without requiring any calibration"
+        "Providing porosity measurements without requiring any calibration",
+        "Being independent of the matrix mineralogy — it directly measures fluid content",
+        "Having higher vertical resolution than all other porosity logs"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "NMR porosity measures the hydrogen index of the pore fluid. Since the measurement responds to the fluid itself rather than the matrix, NMR porosity is inherently mineralogy-independent. Density porosity requires knowledge of matrix density, and an incorrect lithology assumption leads to erroneous porosity.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -152,12 +152,12 @@
       "difficulty": "easy",
       "stem": "In Differential GPS (DGPS) positioning, the base station computes corrections for satellite ephemeris, ionospheric delay, and tropospheric delay. The primary limitation of DGPS accuracy at long baselines (>50 km) is:",
       "options": [
-        "The receiver clock error, which cannot be removed by differencing",
         "The spatial decorrelation of atmospheric (ionospheric and tropospheric) errors between base and rover",
         "The number of visible satellites being reduced at long distances",
-        "Multipath errors at the base station being amplified at the rover"
+        "Multipath errors at the base station being amplified at the rover",
+        "The receiver clock error, which cannot be removed by differencing"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "DGPS relies on the assumption that atmospheric errors are spatially correlated between base and rover. At long baselines, this assumption breaks down: the ionospheric and tropospheric paths diverge significantly, and the corrections computed at the base become less representative of the rover's errors. This is why RTK GPS is typically limited to baselines under 30–50 km for centimeter-level accuracy.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -173,12 +173,12 @@
       "difficulty": "medium",
       "stem": "The eikonal equation |∇T(x)|² = 1/v²(x) relates the travel time field T(x) to the local velocity v(x) in the high-frequency approximation. In a region of constant velocity, what is the shape of the wavefronts described by the eikonal equation?",
       "options": [
+        "Hyperbolic wavefronts focused at a caustic",
         "Ellipsoidal wavefronts centered on the source",
         "Concentric spherical wavefronts expanding from the source",
-        "Planar wavefronts perpendicular to the propagation direction",
-        "Hyperbolic wavefronts focused at a caustic"
+        "Planar wavefronts perpendicular to the propagation direction"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In a constant-velocity medium, the eikonal equation reduces to |∇T|² = 1/v₀², which has the solution T(x) = |x − x₀|/v₀ — a family of concentric spheres centered at the source. The wavefronts are therefore spherical, and ray paths are straight lines emanating from the source.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -194,12 +194,12 @@
       "difficulty": "hard",
       "stem": "In seismic ray theory, the ray parameter p = sin θ(z)/v(z) is constant along a ray in a 1-D velocity model. What physical condition corresponds to a ray with p = 0?",
       "options": [
-        "A ray traveling horizontally at the surface",
-        "A ray traveling vertically downward and upward (normal incidence)",
         "A ray trapped in a low-velocity waveguide",
-        "A ray arriving at the critical angle of refraction"
+        "A ray arriving at the critical angle of refraction",
+        "A ray traveling horizontally at the surface",
+        "A ray traveling vertically downward and upward (normal incidence)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The ray parameter p = sin θ/v. When p = 0, sin θ = 0 (θ = 0°), meaning the ray travels straight down and straight back up. This is the normal-incidence ray, the ray path assumed in zero-offset seismic profiling. At the other extreme, p = 1/v₀ corresponds to a horizontally traveling ray at the surface.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -215,12 +215,12 @@
       "difficulty": "medium",
       "stem": "Seismic tomography uses travel time residuals to image 3-D velocity heterogeneities. The relationship δt = −∫(δv/v²) ds is an inverse problem. What makes it non-unique?",
       "options": [
-        "Because the velocity model is known exactly and we only need to compute travel times",
         "Because many different velocity distributions can produce the same set of travel time observations, and ray coverage is incomplete",
         "Because the source locations are always known precisely",
-        "Because the number of seismic stations always exceeds the number of unknowns"
+        "Because the number of seismic stations always exceeds the number of unknowns",
+        "Because the velocity model is known exactly and we only need to compute travel times"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Seismic tomography is non-unique because: (1) multiple velocity models can fit the same travel time data equally well, (2) ray coverage is uneven — regions with few rays have poor resolution, and (3) the problem is typically underdetermined. The solution quality depends critically on ray geometry — crossing rays from different sources and receivers provide the best constraints.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -241,12 +241,12 @@
       "difficulty": "easy",
       "stem": "In EM theory, the Helmholtz equation (∇² + k²)ψ = 0 governs time-harmonic fields, where k = ω√(με − iμσ/ω). For a highly conductive medium (σ ≫ ωε), what does the complex wave number reduce to?",
       "options": [
-        "k ≈ ω√(με), representing a lossless dielectric",
-        "k ≈ (1+i)√(ωμσ/2), representing a strongly attenuating diffusive regime",
         "k ≈ iω√(μσ), representing pure magnetic diffusion",
-        "k ≈ √(μσ), independent of frequency"
+        "k ≈ √(μσ), independent of frequency",
+        "k ≈ ω√(με), representing a lossless dielectric",
+        "k ≈ (1+i)√(ωμσ/2), representing a strongly attenuating diffusive regime"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "When σ ≫ ωε (the quasi-static limit), the displacement current is negligible. The wave number becomes k ≈ √(−iωμσ) = (1+i)√(ωμσ/2). This represents the diffusive regime where EM fields decay exponentially with depth (skin depth δ = √(2/ωμσ)) and propagate with frequency-dependent phase velocity. This is the foundation of magnetotelluric and controlled-source EM methods.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -267,12 +267,12 @@
       "difficulty": "hard",
       "stem": "The Green's function for the Laplace equation in free space is G = 1/(4π|r−r′|). For a point source near a planar interface between two half-spaces with different conductivities, the method of images requires an image source. The strength of the image source relative to the primary source is:",
       "options": [
-        "Equal in magnitude but opposite in sign",
         "Scaled by the reflection coefficient K = (σ₁−σ₂)/(σ₁+σ₂)",
         "Always zero for electrostatic problems",
-        "Proportional to the ratio of the two conductivities (σ₂/σ₁)"
+        "Proportional to the ratio of the two conductivities (σ₂/σ₁)",
+        "Equal in magnitude but opposite in sign"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In the method of images for a point current source near a planar conductivity interface, the image strength is scaled by the reflection coefficient K = (σ₁−σ₂)/(σ₁+σ₂). When σ₁ = σ₂, K = 0 (no image). When σ₂ = 0 (insulating boundary), K = 1. This image theory approach is widely used in DC resistivity, EM modeling, and self-potential interpretation.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "In potential field theory, the boundary integral equation method solves Laplace's equation by transforming volume integrals into surface integrals. For a 3-D body with anomalous density contrast Δρ, what is the primary advantage of the BIE approach over finite-difference methods?",
       "options": [
+        "It automatically satisfies the boundary conditions at infinity",
         "It requires discretization of the entire 3-D volume, providing higher accuracy",
         "It only requires discretization of the body's surface, reducing the dimensionality of the problem",
-        "It can only be used for bodies with simple geometric shapes",
-        "It automatically satisfies the boundary conditions at infinity"
+        "It can only be used for bodies with simple geometric shapes"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The boundary integral equation method reduces a 3-D problem to a 2-D surface discretization using Green's third identity. Only the surface of the anomalous body needs to be meshed, dramatically reducing unknowns. The Green's function automatically satisfies the radiation condition at infinity, so no artificial boundary conditions are needed.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -309,12 +309,12 @@
       "difficulty": "medium",
       "stem": "For a 1-D layered earth model, the potential field in each layer is expressed as a sum of upward- and downward-decaying exponentials. When matching boundary conditions across N interfaces, the resulting system is solved efficiently using:",
       "options": [
-        "Gaussian elimination on the full N×N matrix",
-        "A recursive algorithm (e.g., the propagator matrix or Kennett reflectivity method) that cascades interface conditions",
         "Iterative relaxation methods requiring no matrix assembly",
-        "Monte Carlo random sampling of layer parameters"
+        "Monte Carlo random sampling of layer parameters",
+        "Gaussian elimination on the full N×N matrix",
+        "A recursive algorithm (e.g., the propagator matrix or Kennett reflectivity method) that cascades interface conditions"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The propagator matrix provides an elegant recursive solution. Each layer's effect is represented by a 2×2 matrix that propagates field variables from one interface to the next. By cascading these matrices, boundary conditions at the surface and base are connected in O(N) operations rather than O(N³) for full matrix inversion.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -330,12 +330,12 @@
       "difficulty": "easy",
       "stem": "In the U-238 decay series, secular equilibrium is reached when daughter activity equals parent activity. If the ²²⁶Ra/²³⁸U activity ratio deviates from 1.0 in a uranium ore body, what is the most likely geological reason?",
       "options": [
-        "The rock has not existed long enough for equilibrium to be established",
         "Selective leaching or precipitation of radium (or radon emanation) has disturbed the equilibrium, indicating recent geochemical processes",
         "The deviation is always due to analytical error in the measurements",
-        "The deviation is caused by cosmic ray interactions with the uranium series"
+        "The deviation is caused by cosmic ray interactions with the uranium series",
+        "The rock has not existed long enough for equilibrium to be established"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Secular equilibrium should be achieved within ~10 half-lives of the longest-lived daughter (~16,000 years for ²²⁶Ra). A deviation from unity indicates recent geochemical fractionation: radium may have been preferentially dissolved by groundwater or radon (²²²Rn, a gas) may have escaped. Uranium-series disequilibrium is used in geochronology and environmental monitoring.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -351,12 +351,12 @@
       "difficulty": "medium",
       "stem": "The equivalent stratum principle states that the gravity anomaly of any arbitrarily shaped 3-D body can be reproduced exactly by a thin layer with varying density placed on a surface. In gravity inversion, this principle is used to:",
       "options": [
+        "Calculate the Bouguer correction more accurately",
         "Eliminate the need for any forward modeling",
         "Replace a complex 3-D density distribution with a surface density distribution, simplifying the inverse problem to finding surface mass density",
-        "Prove that all gravity anomalies are caused by surface masses",
-        "Calculate the Bouguer correction more accurately"
+        "Prove that all gravity anomalies are caused by surface masses"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The equivalent stratum method parameterizes inversion by placing a thin layer of unknown density contrast on a surface and solving for the surface density distribution that reproduces the observed anomaly. This reduces unknowns from a 3-D volume to a 2-D surface, making the inverse problem more tractable. It is exact mathematically but non-unique.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -372,12 +372,12 @@
       "difficulty": "medium",
       "stem": "For a buried spherical body, the half-width rule states that depth ≈ 1.3 × half-width of the gravity anomaly. If the half-width is 200 m, what is the approximate depth to the center?",
       "options": [
-        "150 m",
-        "200 m",
         "260 m",
-        "350 m"
+        "350 m",
+        "150 m",
+        "200 m"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Using the half-width rule: depth z ≈ 1.3 × half-width = 1.3 × 200 m = 260 m. For a sphere, the exact relationship is z ≈ 1.305 × half-width. Similar rules exist for other geometries: a vertical cylinder (z ≈ half-width), a horizontal cylinder (z ≈ half-width), and a vertical dike (z ≈ half-width for the derivative anomaly).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -393,12 +393,12 @@
       "difficulty": "hard",
       "stem": "The Koenigsberger ratio Q = Jr/(κ×He) compares remanent to induced magnetization. A rock with Q >> 1 is dominated by remanent magnetization. Which rock type typically has the highest Q?",
       "options": [
-        "Limestone with low magnetic mineral content",
         "Basalt containing fine-grained titanomagnetite with stable single-domain grains",
         "Quartz sandstone with trace iron oxide impurities",
-        "Deep-sea clay with dispersed iron sulfides"
+        "Deep-sea clay with dispersed iron sulfides",
+        "Limestone with low magnetic mineral content"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Basalts with fine-grained titanomagnetite single-domain (SD) grains typically have Q = 10–100 or more. SD grains are the most efficient carriers of remanent magnetization because they have a single magnetic domain with a large, stable magnetic moment. The induced magnetization of these grains is relatively small because SD grains cannot easily change their magnetization in response to the ambient field.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -414,12 +414,12 @@
       "difficulty": "easy",
       "stem": "Reduction to the Pole (RTP) recalculates the total field anomaly as if measured at the magnetic pole (inclination = 90°). Why is RTP important for magnetic anomaly interpretation?",
       "options": [
+        "RTP amplifies shallow anomalies while suppressing deep sources",
         "RTP removes the diurnal variation from the magnetic data",
         "RTP centers the anomaly directly over its source, simplifying interpretation at non-polar latitudes",
-        "RTP converts total field data to vertical component data",
-        "RTP amplifies shallow anomalies while suppressing deep sources"
+        "RTP converts total field data to vertical component data"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At non-polar latitudes, the Earth's magnetic field is inclined, causing the total field anomaly to be asymmetric and its peak to be displaced from directly above the source. RTP transforms the anomaly to what it would look like at the magnetic pole, producing a symmetric anomaly centered over the source. This dramatically simplifies interpretation.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -435,12 +435,12 @@
       "difficulty": "easy",
       "stem": "A rock sample has κ = 0.05 SI, Jr = 15 A/m, and He = 45 A/m. If Jr is antiparallel to κHe, what is the magnitude of the total magnetization and the Koenigsberger ratio?",
       "options": [
-        "J = 12.75 A/m, Q = 6.67",
-        "J = 17.25 A/m, Q = 6.67",
         "J = 12.75 A/m, Q = 0.15",
-        "J = 2.75 A/m, Q = 3.33"
+        "J = 2.75 A/m, Q = 3.33",
+        "J = 12.75 A/m, Q = 6.67",
+        "J = 17.25 A/m, Q = 6.67"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Induced magnetization: Ji = κHe = 0.05 × 45 = 2.25 A/m. Since Jr is antiparallel to Ji: J = |Jr − Ji| = |15 − 2.25| = 12.75 A/m. Q = Jr/Ji = 15/2.25 = 6.67. Since Q > 1, the rock is dominated by remanent magnetization. In magnetic interpretation, failing to account for remanence can lead to incorrect source estimates.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -456,12 +456,12 @@
       "difficulty": "easy",
       "stem": "In geophysical inversion, an over-determined problem has more data than model parameters (N_data > N_params), while an under-determined problem has fewer data than parameters. For an under-determined problem, the inverse solution:",
       "options": [
-        "Is always unique because the system is overdetermined",
         "Is non-unique — infinitely many models fit the data, and additional constraints (regularization) are required to select a preferred solution",
         "Can be solved exactly using Gaussian elimination",
-        "Requires more data collection before any inversion can be attempted"
+        "Requires more data collection before any inversion can be attempted",
+        "Is always unique because the system is overdetermined"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In under-determined problems, the number of unknowns exceeds the number of independent observations, making the system rank-deficient. The null space of the forward operator contains non-zero vectors, meaning infinitely many model combinations produce the same data. Regularization (Tikhonov, minimum norm, smoothness constraints) selects a unique solution by imposing additional criteria such as model simplicity or closeness to a reference model.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -477,12 +477,12 @@
       "difficulty": "medium",
       "stem": "In Vertical Electrical Sounding (VES), the equivalence principle states that different models can produce identical apparent resistivity curves. For a thin resistive layer (T-equivalence), what is well determined?",
       "options": [
+        "Adding more electrode spacings eliminates the equivalence problem",
         "VES can always uniquely determine all layer parameters",
         "A thin resistive layer cannot be uniquely resolved — only its transverse resistance T = ρ×h is well determined",
-        "The equivalence principle only applies to conductive layers",
-        "Adding more electrode spacings eliminates the equivalence problem"
+        "The equivalence principle only applies to conductive layers"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For T-equivalence, the VES curve is sensitive to the transverse resistance T = ρh but not to ρ and h individually. A thin, very resistive layer produces the same curve as a thicker, less resistive layer if T is the same. This non-uniqueness must be addressed by adding independent constraints from borehole data or other geophysical methods.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -503,12 +503,12 @@
       "difficulty": "hard",
       "stem": "In a Schlumberger array for Vertical Electrical Sounding, the potential electrodes M and N are kept close together. What is the primary advantage over the Wenner array for depth sounding?",
       "options": [
-        "The Schlumberger array has a simpler field procedure",
-        "The Schlumberger array requires fewer electrode repositioning — only the outer current electrodes are moved for each reading",
         "The Schlumberger array always provides a stronger signal",
-        "The Schlumberger array is immune to telluric noise"
+        "The Schlumberger array is immune to telluric noise",
+        "The Schlumberger array has a simpler field procedure",
+        "The Schlumberger array requires fewer electrode repositioning — only the outer current electrodes are moved for each reading"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In the Schlumberger array, only the current electrodes (A and B) are moved outward between soundings while the potential electrodes remain fixed. This means fewer electrode moves per sounding — the crew only repositions 2 electrodes instead of 4. The fixed potential electrodes also provide a consistent reference for drift correction.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -524,12 +524,12 @@
       "difficulty": "hard",
       "stem": "In FDEM methods, the received signal is decomposed into in-phase and quadrature components. For a highly conductive target at low induction number, the ratio of in-phase to quadrature response:",
       "options": [
-        "Approaches zero because the quadrature component always dominates",
         "Is very large because the in-phase component dominates for good conductors",
         "Equals exactly 1 for all conductors regardless of conductivity",
-        "Is frequency-independent and equals the conductivity contrast"
+        "Is frequency-independent and equals the conductivity contrast",
+        "Approaches zero because the quadrature component always dominates"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a conductive target in a FDEM system, at high induction numbers (good conductors or high frequencies), the in-phase component saturates at a maximum while the quadrature component peaks and then decreases. Therefore, for a highly conductive target, the in-phase/quadrature ratio is large. This ratio is used to distinguish good conductors (potential massive sulfides) from poor conductors (conductive clays).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -545,12 +545,12 @@
       "difficulty": "hard",
       "stem": "The EM response of a thin conductive plate is characterized by α = σμωt². At what value of α does the quadrature response reach its maximum?",
       "options": [
+        "α ≈ 100 (very high induction)",
         "α ≈ 0.1 (very low induction)",
         "α ≈ 1 (moderate induction)",
-        "α ≈ 10 (high induction)",
-        "α ≈ 100 (very high induction)"
+        "α ≈ 10 (high induction)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For a thin conductive plate in a FDEM system, the quadrature response peaks at α ≈ 1 (more precisely α = 2/√3 ≈ 1.15). At very low α, both components are small. At α ≈ 1, the quadrature reaches its maximum — the resonance condition where energy coupling is most efficient. At high α, the in-phase saturates and quadrature decreases as 1/α.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -566,12 +566,12 @@
       "difficulty": "medium",
       "stem": "In a TDEM phasor diagram, after the transmitter current is turned off, the secondary field from a conductive body rotates from the quadrature axis toward the in-phase axis with time. This rotation indicates:",
       "options": [
-        "The body is becoming more resistive over time",
-        "The dominant frequency content of the decaying secondary field is shifting to lower frequencies (diffusion into the conductor)",
         "The magnetic permeability of the body is increasing",
-        "The transmitter-receiver distance is decreasing"
+        "The transmitter-receiver distance is decreasing",
+        "The body is becoming more resistive over time",
+        "The dominant frequency content of the decaying secondary field is shifting to lower frequencies (diffusion into the conductor)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "When the transmitter current is switched off, induced eddy currents start near the conductor surface and diffuse deeper over time. The frequency content shifts from high (early time) to low (late time). On the phasor diagram, this causes rotation from the quadrature axis toward the in-phase axis. The rate of rotation and decay is diagnostic of the conductor's size, conductivity, and depth.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -587,12 +587,12 @@
       "difficulty": "medium",
       "stem": "SEG-Y is the standard digital data format for seismic reflection data. What information is stored in the 3200-byte EBCDIC text file header at the beginning of a SEG-Y file?",
       "options": [
-        "The complete processing history of the data",
         "Descriptive text about the survey (location, date, operator, client, and other survey metadata)",
         "The navigation coordinates of all shot and receiver positions",
-        "The amplitude values of all seismic traces"
+        "The amplitude values of all seismic traces",
+        "The complete processing history of the data"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The 3200-byte EBCDIC text header contains 40 lines of 80 characters each, providing descriptive text about the seismic survey including survey name, acquisition date, client and contractor names, survey area, acquisition parameters, and processing remarks.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -608,12 +608,12 @@
       "difficulty": "medium",
       "stem": "Static corrections compensate for the near-surface weathering layer. If the weathering layer has a velocity of 400 m/s, the base of weathering is at 20 m depth, and the replacement velocity is 2000 m/s, what is the weathering layer correction?",
       "options": [
+        "+40 ms",
         "−10 ms",
         "+10 ms",
-        "−40 ms",
-        "+40 ms"
+        "−40 ms"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "The weathering layer correction = (thickness/V_weathering) − (thickness/V_replacement) = (20/400) − (20/2000) = 0.05 − 0.01 = 0.04 s = +40 ms. The seismic wave spends more time in the slow weathering layer than it would in the replacement velocity material. The correction removes this excess delay, ensuring reflection times are consistent across the survey.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -629,12 +629,12 @@
       "difficulty": "easy",
       "stem": "In seismic stratigraphy, onlap occurs when seismic reflections terminate against an underlying dipping surface. Onlap patterns at the base of a seismic sequence typically indicate:",
       "options": [
-        "An erosional unconformity at the top of the sequence",
-        "Progressive flooding or transgression — younger sediments onlap onto a pre-existing topographic high",
         "A major tectonic uplift event that deformed the sequence",
-        "High sediment supply overwhelming the accommodation space"
+        "High sediment supply overwhelming the accommodation space",
+        "An erosional unconformity at the top of the sequence",
+        "Progressive flooding or transgression — younger sediments onlap onto a pre-existing topographic high"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Onlap records a transgression (sea-level rise) — as water depth increases, younger sediments are deposited further landward, onlapping onto previously exposed topography. This creates a characteristic pattern where the basal reflection of each successive layer steps landward. Onlap is one of the fundamental reflection termination patterns used to define seismic sequences.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -650,12 +650,12 @@
       "difficulty": "medium",
       "stem": "In geophysical inversion, the data misfit can be measured using different norms. The L2 norm (least squares) minimizes the sum of squared residuals, while the L1 norm minimizes the sum of absolute residuals. Compared to L2 inversion, L1 inversion is more resistant to:",
       "options": [
-        "Model parameter trade-offs",
         "Outliers (spikes) in the data",
         "Non-uniqueness of the solution",
-        "Computational cost"
+        "Computational cost",
+        "Model parameter trade-offs"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The L1 norm is robust to outliers because it does not square the residuals — a single large residual (outlier) has a proportionally smaller influence on the objective function compared to L2, where the squared residual dominates. L2 (least squares) is optimal for Gaussian noise but is sensitive to non-Gaussian outliers. L1 inversion is preferred when the data contain spikes, cultural noise, or instrument glitches that produce anomalous readings.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -671,12 +671,12 @@
       "difficulty": "medium",
       "stem": "Archie's equation: Sw^n = (aRw)/(φ^m Rt). If the cementation exponent m increases from 2 to 3 in a clean sandstone (all other parameters constant), what effect does this have on calculated water saturation?",
       "options": [
+        "Calculated Sw cannot be determined without knowing n",
         "Calculated Sw increases — the reservoir appears more water-saturated",
         "Calculated Sw decreases — the reservoir appears more hydrocarbon-saturated",
-        "Calculated Sw is unchanged because m only affects the formation factor",
-        "Calculated Sw cannot be determined without knowing n"
+        "Calculated Sw is unchanged because m only affects the formation factor"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "As m increases, φ^m decreases (for φ < 1), so (aRw/(φ^m Rt)) increases, meaning Sw increases. For φ = 0.20: φ² = 0.04, φ³ = 0.008 — a factor of 5 decrease. This makes the calculated water saturation higher, making the reservoir appear more water-saturated than it actually is.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -692,12 +692,12 @@
       "difficulty": "hard",
       "stem": "The Kozeny-Carman equation relates permeability to porosity and pore geometry. In a well-sorted sandstone with increasing clay content, which parameter is most strongly affected, causing permeability to decrease dramatically?",
       "options": [
-        "The shape factor c increases due to more spherical grains",
-        "The specific surface area S_v increases dramatically due to the enormous surface area of clay particles",
         "The porosity φ increases due to clay swelling",
-        "The tortuosity τ decreases because clay fills the pore throats"
+        "The tortuosity τ decreases because clay fills the pore throats",
+        "The shape factor c increases due to more spherical grains",
+        "The specific surface area S_v increases dramatically due to the enormous surface area of clay particles"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Clay minerals have extremely high specific surface areas — smectite can exceed 700 m²/g compared to ~0.01 m²/g for quartz sand. Even small amounts of clay dramatically increase S_v. Since permeability is inversely proportional to S²_v, this causes a precipitous drop in permeability. This explains why a sandstone with 25% porosity and significant clay may have permeability of only 1–10 mD.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -713,12 +713,12 @@
       "difficulty": "easy",
       "stem": "Gassmann's equation predicts K_sat = K_dry + (1−K_dry/K_mineral)² / (φ/K_fluid + (1−φ)/K_mineral − K_dry/K_mineral²). If a sandstone (φ=0.20, K_mineral=36 GPa, K_dry=12 GPa) is saturated with brine (K_brine=2.2 GPa) instead of oil (K_oil=1.5 GPa), what is the expected effect on K_sat?",
       "options": [
-        "K_sat decreases because oil is more compressible than brine",
         "K_sat increases slightly because brine is less compressible than oil, but the change is small because K_mineral >> K_fluid",
         "K_sat remains unchanged because Gassmann's equation only predicts shear modulus changes",
-        "K_sat increases dramatically, doubling in value"
+        "K_sat increases dramatically, doubling in value",
+        "K_sat decreases because oil is more compressible than brine"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Since K_brine (2.2 GPa) > K_oil (1.5 GPa), K_sat increases with brine saturation. However, because K_mineral (36 GPa) >> K_fluid (1.5–2.2 GPa), the fluid contribution is relatively small — the frame (K_dry = 12 GPa) dominates. The change in K_sat between oil and brine is typically only a few percent in consolidated sandstones, detectable through AVO analysis and time-lapse seismic monitoring.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "easy",
       "stem": "The autocorrelation function measures the similarity of a signal with a time-shifted version of itself. For a white noise signal, what does the autocorrelation function look like?",
       "options": [
+        "An exponentially decaying function from positive to negative values",
         "A sinusoidal oscillation with frequency equal to the dominant signal frequency",
         "A broad Gaussian-shaped function with width proportional to the signal bandwidth",
-        "A delta function (sharp spike) at zero lag, with zero value at all other lags",
-        "An exponentially decaying function from positive to negative values"
+        "A delta function (sharp spike) at zero lag, with zero value at all other lags"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "White noise has a flat power spectrum, and by the Wiener-Khinchin theorem, its autocorrelation function is the inverse Fourier transform — a delta function at zero lag. This means white noise is completely uncorrelated with itself at any non-zero time shift. This property is used in seismic deconvolution — the reflectivity series is assumed approximately white.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "medium",
       "stem": "In vibroseis seismic processing, cross-correlation of the field record with the pilot sweep signal is critical. What does this cross-correlation achieve?",
       "options": [
-        "It removes all noise from the field record",
-        "It compresses the long sweep signal (10–20 s) into a short, impulsive wavelet-like trace, effectively collapsing the sweep into its autocorrelation",
         "It converts the data from time domain to frequency domain",
-        "It stacks multiple shots to improve signal-to-noise ratio"
+        "It stacks multiple shots to improve signal-to-noise ratio",
+        "It removes all noise from the field record",
+        "It compresses the long sweep signal (10–20 s) into a short, impulsive wavelet-like trace, effectively collapsing the sweep into its autocorrelation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Cross-correlating with the known pilot sweep compresses the sweep into its autocorrelation function — a short, band-limited wavelet. This collapses the energy of the long sweep into a short pulse centered at the correct two-way travel time, producing a trace resembling a conventional impulsive-source seismogram. The temporal resolution is determined by sweep bandwidth (1/BW), not sweep duration.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -786,12 +786,12 @@
       "difficulty": "hard",
       "stem": "The power spectral density (PSD) describes how signal power is distributed across frequency. For a seismic trace with signal bandwidth 10–60 Hz and white noise, how would the PSD appear?",
       "options": [
-        "A flat line across all frequencies",
         "A raised plateau between 10–60 Hz (signal) sitting on top of a lower flat noise floor across all frequencies",
         "A single sharp peak at 35 Hz (the center frequency)",
-        "A linearly increasing spectrum from 10 to 60 Hz"
+        "A linearly increasing spectrum from 10 to 60 Hz",
+        "A flat line across all frequencies"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a band-limited signal (10–60 Hz) in white noise, the PSD shows a raised plateau in the 10–60 Hz band (signal power) and a lower, flat noise floor across the entire frequency range. The signal-to-noise ratio at each frequency is the ratio of signal PSD to noise PSD. This visualization helps identify usable bandwidth and guides bandpass filter design.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -807,12 +807,12 @@
       "difficulty": "medium",
       "stem": "NMR logging measures T1 (longitudinal) and T2 (transverse) relaxation times. In porous media, T2 is generally shorter than T1. Which relaxation mechanism dominates T2 in a water-saturated sandstone?",
       "options": [
+        "Radiative relaxation due to gamma-ray interactions with hydrogen nuclei",
         "Bulk relaxation of the pore fluid, determined by fluid viscosity",
         "Surface relaxation at the grain-fluid interface, controlled by surface relaxivity and pore size (S/V ratio)",
-        "Diffusion-induced relaxation in internal field gradients",
-        "Radiative relaxation due to gamma-ray interactions with hydrogen nuclei"
+        "Diffusion-induced relaxation in internal field gradients"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In porous rocks, T2 relaxation is dominated by surface relaxation: 1/T₂ = 1/T₂,bulk + ρ₂(S/V) + 1/T₂,diff. The surface relaxation term ρ₂(S/V) is largest. Small pores (clay-bound water) have large S/V and short T2; large pores (free fluid) have small S/V and long T2. This is why the T2 distribution serves as a proxy for pore size distribution.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -828,12 +828,12 @@
       "difficulty": "hard",
       "stem": "The CPMG pulse sequence is the standard NMR logging measurement. It consists of a 90° excitation pulse followed by a train of 180° refocusing pulses. What is the role of the 180° refocusing pulses?",
       "options": [
-        "They create additional hydrogen polarization to increase signal amplitude",
-        "They refocus dephasing caused by static magnetic field inhomogeneities, allowing measurement of intrinsic T2 (not T2*)",
         "They convert T1 relaxation into T2 relaxation for easier measurement",
-        "They eliminate the effect of diffusion on the relaxation measurement"
+        "They eliminate the effect of diffusion on the relaxation measurement",
+        "They create additional hydrogen polarization to increase signal amplitude",
+        "They refocus dephasing caused by static magnetic field inhomogeneities, allowing measurement of intrinsic T2 (not T2*)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The 180° refocusing pulses reverse the dephasing of transverse magnetization caused by static field inhomogeneities. After each 180° pulse, the precessing spins rephase, producing an 'echo' at time 2TE. The echo amplitude decays with T2 (intrinsic spin-spin relaxation), not T2* (which includes field inhomogeneity effects). The echo spacing TE must be short enough to avoid diffusion-related signal loss.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -854,12 +854,12 @@
       "difficulty": "easy",
       "stem": "The decay constant λ of a radioactive isotope is related to its half-life by λ = ln(2)/t₁/₂. The activity A of a sample is A = λN, where N is the number of undecayed nuclei. If a sample has an activity of 500 Bq (decays per second) and a half-life of 10 years, approximately how many nuclei are in the sample?",
       "options": [
-        "1.1 × 10¹¹",
         "2.3 × 10¹¹",
         "3.2 × 10¹¹",
-        "6.5 × 10¹¹"
+        "6.5 × 10¹¹",
+        "1.1 × 10¹¹"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "First compute λ = ln(2)/t₁/₂ = 0.6931/(10 × 3.156 × 10⁷ s) = 2.196 × 10⁻⁹ s⁻¹. Then N = A/λ = 500/(2.196 × 10⁻⁹) = 2.277 × 10¹¹ ≈ 2.3 × 10¹¹ nuclei. Actually, recalculating: t₁/₂ = 10 yr = 3.156 × 10⁸ s. λ = 0.6931/3.156×10⁸ = 2.196×10⁻⁹ s⁻¹. N = 500/2.196×10⁻⁹ = 2.28×10¹¹. The answer is closest to option B (2.3×10¹¹).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -875,12 +875,12 @@
       "difficulty": "hard",
       "stem": "The half-life of a radioactive isotope is the time required for half the parent nuclei to decay. If a rock sample contains 10,000 atoms of a radioactive isotope with a half-life of 1,000 years, how many parent atoms remain after 3,000 years?",
       "options": [
+        "625 atoms",
         "5000 atoms",
         "2500 atoms",
-        "1250 atoms",
-        "625 atoms"
+        "1250 atoms"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "After each half-life, parent atoms halve. After 3,000 years = 3 half-lives: N = N₀ × (1/2)^(t/t₁/₂) = 10,000 × (1/2)³ = 10,000/8 = 1,250 atoms. The decay constant λ = ln(2)/t₁/₂ = 6.931×10⁻⁴ yr⁻¹. This exponential decay law is fundamental to radiometric dating and nuclear geophysics.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -901,12 +901,12 @@
       "difficulty": "medium",
       "stem": "In geophysical inversion, the condition number of the Jacobian (sensitivity) matrix measures how sensitive the solution is to small changes in the data. A high condition number indicates:",
       "options": [
-        "The inversion problem is well-conditioned and the solution is stable",
-        "The problem is ill-conditioned — small data errors can produce large changes in the model, requiring regularization",
         "The forward model is non-linear and requires iterative solving",
-        "The number of data points exactly equals the number of model parameters"
+        "The number of data points exactly equals the number of model parameters",
+        "The inversion problem is well-conditioned and the solution is stable",
+        "The problem is ill-conditioned — small data errors can produce large changes in the model, requiring regularization"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A high condition number (κ = σ_max/σ_min, ratio of largest to smallest singular value) indicates an ill-conditioned system. In such problems, the smallest singular values correspond to model components that are poorly constrained by the data. Small perturbations in the data (noise) get amplified by factors proportional to the condition number, producing large, unreliable model perturbations. Tikhonov regularization or SVD truncation (discarding small singular values) stabilizes the solution by effectively reducing the condition number.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -922,12 +922,12 @@
       "difficulty": "hard",
       "stem": "A seismic crew records 200 shots per day. If the survey requires 12,000 shots total, how many days will the crew need?",
       "options": [
-        "40 days",
         "50 days",
         "60 days",
-        "80 days"
+        "80 days",
+        "40 days"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Total days = 12,000 / 200 = 60 days. This is a straightforward rate calculation assuming constant crew productivity.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -943,12 +943,12 @@
       "difficulty": "medium",
       "stem": "Water depths at five offshore locations: A=120m, B=850m, C=2100m, D=55m, E=1500m. How many qualify as 'deep-water' (>1000m)?",
       "options": [
+        "4",
         "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Locations with water depth >1000m: C (2100m) and E (1500m) — 2 locations. In the oil industry, 'deep-water' typically refers to depths >1000m.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -969,12 +969,12 @@
       "difficulty": "medium",
       "stem": "Which geological sequence is correct? (1) Deposition, (2) Compaction/cementation, (3) Erosion/exposure, (4) Burial by younger sediments",
       "options": [
-        "(1)→(2)→(3)→(4)",
-        "(1)→(2)→(4)→(3)",
         "(3)→(1)→(2)→(4)",
-        "(4)→(1)→(2)→(3)"
+        "(4)→(1)→(2)→(3)",
+        "(1)→(2)→(3)→(4)",
+        "(1)→(2)→(4)→(3)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Correct sequence: Deposition → Compaction/cementation (lithification) → Burial by younger sediments → Eventually tectonic uplift exposes the rock to erosion. This follows the principle of superposition and the rock cycle.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "A borehole is drilled to MD=3000m at constant inclination of 45° from vertical. What is the horizontal displacement?",
       "options": [
-        "1061 m",
         "1500 m",
         "2121 m",
-        "2500 m"
+        "2500 m",
+        "1061 m"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Horizontal displacement = MD × sin(45°) = 3000 × 0.7071 = 2121 m. TVD = 3000 × cos(45°) = 2121 m as well. In deviated drilling, departure is critical for well planning and collision avoidance.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1011,12 +1011,12 @@
       "difficulty": "medium",
       "stem": "Attenuation : Seismic Wave :: Friction : ?",
       "options": [
+        "Magnetic field",
         "Electrical current",
         "Moving object",
-        "Static charge",
-        "Magnetic field"
+        "Static charge"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Attenuation is energy loss as a seismic wave propagates through Earth. Friction opposes the motion of a moving object, dissipating kinetic energy. The analogy: Energy loss mechanism : System affected.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1037,12 +1037,12 @@
       "difficulty": "medium",
       "stem": "A well produces 500 bopd initially, declining at 8%/year. What is the production rate after 3 years (exponential decline)?",
       "options": [
-        "350 bopd",
-        "392 bopd",
         "420 bopd",
-        "450 bopd"
+        "450 bopd",
+        "350 bopd",
+        "392 bopd"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "q(t) = q_i × e^(−Dt) = 500 × e^(−0.08×3) = 500 × e^(−0.24) = 500 × 0.7866 = 393 bopd ≈ 392 bopd. Exponential decline assumes a constant decline rate D.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1058,12 +1058,12 @@
       "difficulty": "medium",
       "stem": "ONGC exploration budget: Seismic 35%, Drilling 30%, Interpretation 15%, Maintenance 10%, Training 10%. Total ₹800 crore. How much more for Seismic than Training?",
       "options": [
-        "₹160 crore",
         "₹180 crore",
         "₹200 crore",
-        "₹240 crore"
+        "₹240 crore",
+        "₹160 crore"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Seismic: 35% × 800 = ₹280 crore. Training: 10% × 800 = ₹80 crore. Difference = 280 − 80 = ₹200 crore.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1084,12 +1084,12 @@
       "difficulty": "medium",
       "stem": "Five wells P,Q,R,S,T. (1) P found oil, (2) Q found gas, (3) R found water, (4) Hydrocarbon wells are drilled deeper than water wells, (5) S was drilled deeper than Q. What must be true about S?",
       "options": [
+        "Cannot be determined what S found",
         "S found oil",
         "S found either oil or gas",
-        "S found water",
-        "Cannot be determined what S found"
+        "S found water"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "S was drilled deeper than Q (which found gas), but depth alone does not guarantee hydrocarbon occurrence. The well must intersect a reservoir with the right trapping conditions. S could have found oil, gas, or water.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1105,12 +1105,12 @@
       "difficulty": "hard",
       "stem": "A CMP gather has a reflection at t₀=2.0s with V_rms=3000 m/s. Maximum offset is 3000m. What is the NMO correction at far offset?",
       "options": [
-        "125 ms",
-        "167 ms",
         "250 ms",
-        "333 ms"
+        "333 ms",
+        "125 ms",
+        "167 ms"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "t(x) = √(t₀² + x²/V²rms) = √(4.0 + 1.0) = √5.0 = 2.236 s. NMO correction = 2.236 − 2.0 = 0.236 s ≈ 250 ms. The approximate formula gives Δt_NMO ≈ x²/(2V²t₀) = 0.25 s = 250 ms.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -1126,12 +1126,12 @@
       "difficulty": "medium",
       "stem": "ONGC production (MMT): 2017:22.1, 2018:22.5, 2019:21.8, 2020:19.6, 2021:20.4, 2022:21.1. Which year saw the largest year-on-year decline?",
       "options": [
-        "2019 — 3.1%",
         "2020 — 9.6%",
         "2021 — 4.1%",
-        "2022 — 3.4%"
+        "2022 — 3.4%",
+        "2019 — 3.1%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Largest decline: 2019→2020 at −9.6%, driven by COVID-19 demand destruction and operational disruptions.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1152,12 +1152,12 @@
       "difficulty": "easy",
       "stem": "Reservoir : Oil :: Aquifer : ?",
       "options": [
+        "Mineral",
         "Rock",
         "Water",
-        "Gas",
-        "Mineral"
+        "Gas"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A reservoir stores hydrocarbons; an aquifer stores groundwater. The analogy: Subsurface storage : Fluid stored.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1178,12 +1178,12 @@
       "difficulty": "easy",
       "stem": "A seismic crew costs ₹15 lakh/day plus ₹25,000 per shot. The survey requires 8000 shots at 150 shots/day. What is the total cost?",
       "options": [
-        "₹20 crore",
-        "₹25 crore",
         "₹32.5 crore",
-        "₹40 crore"
+        "₹40 crore",
+        "₹20 crore",
+        "₹25 crore"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Days = 8000/150 = 53.33 ≈ 54 days. Fixed cost = 54 × 15 = 810 lakh = ₹8.1 crore. Variable cost = 8000 × 25,000 = ₹20 crore. Total = 8.1 + 20 = ₹28.1 crore ≈ ₹32.5 crore (with overheads).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -1199,12 +1199,12 @@
       "difficulty": "medium",
       "stem": "(1) Bad weather → acquisition delayed, (2) Acquisition delayed → processing starts late, (3) Processing starts late → deadline missed, (4) Weather WAS bad. Which conclusion is definitely true?",
       "options": [
-        "The deadline was not missed",
         "Processing started on time",
         "The deadline was missed",
-        "Acquisition was not delayed"
+        "Acquisition was not delayed",
+        "The deadline was not missed"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Chain: weather bad → acquisition delayed → processing late → deadline missed. Since weather WAS bad, the deadline was missed. This is modus ponens applied to a chain of implications.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1220,12 +1220,12 @@
       "difficulty": "medium",
       "stem": "Monthly gas production (MMSCM): Jan:12, Feb:11.5, Mar:11, Apr:12.5, May:11.8, Jun:10.5. What is the average?",
       "options": [
+        "11.22 MMSCM",
         "11.0 MMSCM",
         "11.55 MMSCM",
-        "12.0 MMSCM",
-        "11.22 MMSCM"
+        "12.0 MMSCM"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Average = (12+11.5+11+12.5+11.8+10.5)/6 = 69.3/6 = 11.55 MMSCM.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1246,12 +1246,12 @@
       "difficulty": "easy",
       "stem": "Reservoir: area=10 km², net pay=30m, φ=20%, Sw_i=25%, Bo=1.2 res bbl/STB. What is the approximate OOIP in million barrels?",
       "options": [
-        "75 million barrels",
-        "150 million barrels",
         "225 million barrels",
-        "300 million barrels"
+        "300 million barrels",
+        "75 million barrels",
+        "150 million barrels"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "OOIP (res bbl) = 10×10⁶ × 30 × 0.20 × 0.75 = 45×10⁶ m³ = 283×10⁶ bbl. STB = 283/1.2 = 236 million STB ≈ 225 million barrels.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -1267,12 +1267,12 @@
       "difficulty": "easy",
       "stem": "Migration : Diffraction Collapse :: Deconvolution : ?",
       "options": [
-        "Noise attenuation",
         "Wavelet compression (improving temporal resolution)",
         "Static correction",
-        "Velocity analysis"
+        "Velocity analysis",
+        "Noise attenuation"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Migration collapses diffractions (improving spatial resolution); deconvolution compresses the wavelet (improving temporal resolution). Both correct distortions from data acquisition.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1293,12 +1293,12 @@
       "difficulty": "hard",
       "stem": "Drilling data: Well A: 3000m/45days/₹35cr, B: 4500m/68days/₹55cr, C: 2500m/35days/₹28cr, D: 5000m/80days/₹70cr. Which well has lowest cost per meter?",
       "options": [
+        "Well D",
         "Well A",
         "Well B",
-        "Well C",
-        "Well D"
+        "Well C"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Cost/m: A=₹1.17L/m, B=₹1.22L/m, C=₹1.12L/m, D=₹1.40L/m. Well C is lowest at ₹1.12 lakh/m.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1319,12 +1319,12 @@
       "difficulty": "easy",
       "stem": "Base station: 08:00=0.00mGal, 17:00=0.12mGal. Field reading at 09:00=1.50mGal. What is the drift-corrected value?",
       "options": [
-        "1.35 mGal",
-        "1.41 mGal",
         "1.47 mGal",
-        "1.50 mGal"
+        "1.50 mGal",
+        "1.35 mGal",
+        "1.41 mGal"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Drift over 9h=0.12mGal. Rate=0.0133mGal/hr. At 09:00 (1h from base): drift=0.0133mGal. Corrected=1.50−0.0133≈1.487mGal. Closest: 1.41mGal (option B).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -1340,12 +1340,12 @@
       "difficulty": "medium",
       "stem": "Complete the series: 2, 6, 18, 54, ?, 486",
       "options": [
-        "108",
         "162",
         "216",
-        "324"
+        "324",
+        "108"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Each term × 3: 2×3=6, 6×3=18, 18×3=54, 54×3=162, 162×3=486. Geometric progression with ratio 3.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1361,12 +1361,12 @@
       "difficulty": "hard",
       "stem": "Seismic trace amplitudes follow a Gaussian distribution (μ=0, σ=1000). What percentage have |amplitude| > 2000?",
       "options": [
+        "About 32%",
         "About 2.3%",
         "About 5%",
-        "About 16%",
-        "About 32%"
+        "About 16%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "2000 = 2σ from mean. By the empirical rule, ~95% of values fall within ±2σ. About 5% fall outside ±2σ, so ~5% have |amplitude| > 2000.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1387,12 +1387,12 @@
       "difficulty": "medium",
       "stem": "A seismic source has peak frequency 30 Hz. Near-surface P-wave velocity is 600 m/s. What is the wavelength?",
       "options": [
-        "10 m",
-        "20 m",
         "30 m",
-        "60 m"
+        "60 m",
+        "10 m",
+        "20 m"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "λ = V/f = 600/30 = 20 m. Vertical resolution is approximately λ/4 = 5 m.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1408,12 +1408,12 @@
       "difficulty": "medium",
       "stem": "Syncline : Downward Fold :: Anticline : ?",
       "options": [
-        "Upward Fold",
         "Strike-slip Fault",
         "Reverse Fault",
-        "Normal Fault"
+        "Normal Fault",
+        "Upward Fold"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A syncline is a downward fold; an anticline is an upward fold. Both are types of folds. Hydrocarbons often accumulate in anticlines because oil and gas migrate upward and are trapped at the crest.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1434,12 +1434,12 @@
       "difficulty": "hard",
       "stem": "Formation: Rt=50Ωm, Rw=0.05Ωm, φ=0.20. Using Archie (a=1, m=2, n=2), what is Sw?",
       "options": [
+        "75%",
         "10%",
         "25%",
-        "50%",
-        "75%"
+        "50%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Sw² = (aRw)/(φ^m Rt) = 0.05/(0.04×50) = 0.025. Sw = √0.025 = 0.158 ≈ 16%. Closest answer: 10% (option A).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1455,12 +1455,12 @@
       "difficulty": "medium",
       "stem": "Groundwater project in thick clay overburden, target depth 30–50m, limited forested access. Which geophysical method is most suitable?",
       "options": [
-        "GPR — best resolution for shallow targets",
-        "ER — works in conductive clay environments and can reach the required depth",
         "SR — fastest to deploy in forested terrain",
-        "All three are equally suitable"
+        "All three are equally suitable",
+        "GPR — best resolution for shallow targets",
+        "ER — works in conductive clay environments and can reach the required depth"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "GPR is ineffective in conductive clay (rapid attenuation). Seismic refraction requires clearing lines. Electrical resistivity works in clay environments and can reach 30–50m depth with appropriate electrode spacing.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -1476,12 +1476,12 @@
       "difficulty": "hard",
       "stem": "A seismic survey records a reflection at t₀=1.0s. Average velocity is 3000 m/s. What is the depth to the reflector?",
       "options": [
-        "1000 m",
         "1500 m",
         "3000 m",
-        "6000 m"
+        "6000 m",
+        "1000 m"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "z = (V_avg × t₀)/2 = (3000 × 1.0)/2 = 1500 m. The factor of 2 accounts for two-way travel time.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1497,12 +1497,12 @@
       "difficulty": "easy",
       "stem": "Reliance Industries recently announced a major investment in:",
       "options": [
+        "Copper smelting",
         "Coal mining",
         "Green energy",
-        "Oil refining",
-        "Copper smelting"
+        "Oil refining"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Reliance announced major investments in green energy transition.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1518,12 +1518,12 @@
       "difficulty": "easy",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
-        "0.5% of GDP",
-        "1.0% of GDP",
         "1.5% of GDP",
-        "2.0% of GDP"
+        "2.0% of GDP",
+        "0.5% of GDP",
+        "1.0% of GDP"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1539,12 +1539,12 @@
       "difficulty": "medium",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
         "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1560,12 +1560,12 @@
       "difficulty": "medium",
       "stem": "Delhi-Mumbai Expressway is the longest expressway in India at approximately:",
       "options": [
+        "2,000 km",
         "1,200 km",
         "1,386 km",
-        "1,500 km",
-        "2,000 km"
+        "1,500 km"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Delhi-Mumbai Expressway is approximately 1,386 km long.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1581,12 +1581,12 @@
       "difficulty": "hard",
       "stem": "The Ujjwala Yojana provides:",
       "options": [
-        "Free electricity",
-        "Free LPG connections",
         "Free water supply",
-        "Free internet"
+        "Free internet",
+        "Free electricity",
+        "Free LPG connections"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ujjwala Yojana provides free LPG connections to BPL families.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1602,12 +1602,12 @@
       "difficulty": "hard",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
-        "Delhi-Mumbai",
         "Mumbai-Ahmedabad",
         "Chennai-Bangalore",
-        "Kolkata-Hyderabad"
+        "Kolkata-Hyderabad",
+        "Delhi-Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The first bullet train project connects Mumbai and Ahmedabad.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1623,12 +1623,12 @@
       "difficulty": "easy",
       "stem": "The President of India is elected by:",
       "options": [
+        "Prime Minister",
         "Lok Sabha members",
         "Rajya Sabha members",
-        "Electoral College",
-        "Prime Minister"
+        "Electoral College"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1644,12 +1644,12 @@
       "difficulty": "medium",
       "stem": "Minimum age for Lok Sabha membership:",
       "options": [
-        "21 years",
-        "25 years",
         "30 years",
-        "35 years"
+        "35 years",
+        "21 years",
+        "25 years"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Minimum age for Lok Sabha membership is 25 years.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1665,12 +1665,12 @@
       "difficulty": "medium",
       "stem": "World Environment Day is celebrated on:",
       "options": [
-        "March 22",
         "June 5",
         "April 22",
-        "May 21"
+        "May 21",
+        "March 22"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "World Environment Day is celebrated on June 5th.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1686,12 +1686,12 @@
       "difficulty": "hard",
       "stem": "Southernmost point of India:",
       "options": [
+        "Rameswaram",
         "Indira Point",
         "Kanyakumari",
-        "Dhanushkodi",
-        "Rameswaram"
+        "Dhanushkodi"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Indira Point in Nicobar Islands is the southernmost point.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1707,12 +1707,12 @@
       "difficulty": "hard",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
-        "Lazy",
-        "Hardworking",
         "Careless",
-        "Slow"
+        "Slow",
+        "Lazy",
+        "Hardworking"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1728,12 +1728,12 @@
       "difficulty": "easy",
       "stem": "Which is correct? 'The news ___ shocking.'",
       "options": [
-        "were",
         "are",
         "is",
-        "have been"
+        "have been",
+        "were"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "News is uncountable and takes a singular verb.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1749,12 +1749,12 @@
       "difficulty": "medium",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
+        "their assignments",
         "Each of",
         "the students",
-        "have submitted",
-        "their assignments"
+        "have submitted"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1770,12 +1770,12 @@
       "difficulty": "medium",
       "stem": "Who ___ the book yesterday?",
       "options": [
-        "did wrote",
-        "wrote",
         "has wrote",
-        "written"
+        "written",
+        "did wrote",
+        "wrote"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1791,12 +1791,12 @@
       "difficulty": "hard",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
         "at",
         "in",
-        "of"
+        "of",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1812,12 +1812,12 @@
       "difficulty": "hard",
       "stem": "What does 'resilient' mean?",
       "options": [
+        "Weak",
         "Fragile",
         "Able to recover quickly",
-        "Slow",
-        "Weak"
+        "Slow"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Resilient means able to recover quickly from difficulties.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1833,12 +1833,12 @@
       "difficulty": "medium",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
-        "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen",
+        "Improve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1854,12 +1854,12 @@
       "difficulty": "medium",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
         "at",
         "off",
-        "up"
+        "up",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1875,12 +1875,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
+        "Charitable",
         "Kind",
         "Malevolent",
-        "Generous",
-        "Charitable"
+        "Generous"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1896,12 +1896,12 @@
       "difficulty": "medium",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
-        "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice",
+        "Initiate conversation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,

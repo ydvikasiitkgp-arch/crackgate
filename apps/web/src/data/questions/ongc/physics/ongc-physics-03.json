@@ -42,12 +42,12 @@
         "caption": ""
       },
       "options": [
+        "sin(kx) sin(kx') / (k² L)",
         "−sin(kx<) sin(k(L−x>)) / (k sin(kL)) where x< = min(x,x'), x> = max(x,x')",
         "sin(kx<) sin(k(L−x>)) / (k cos(kL))",
-        "−cos(kx) cos(k(L−x')) / (k sin(kL))",
-        "sin(kx) sin(kx') / (k² L)"
+        "−cos(kx) cos(k(L−x')) / (k sin(kL))"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For (d²/dx² + k²)G = δ(x−x') with Dirichlet BCs, the Green's function is G(x,x') = −sin(kx<)sin(k(L−x>))/(k sin(kL)), where x< = min(x,x') and x> = max(x,x'). This satisfies G(0,x') = G(L,x') = 0 and has a discontinuous first derivative at x = x' with jump equal to 1.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "medium",
       "stem": "The eigenvalues of the Sturm-Liouville problem −y'' = λy with y(0) = 0 and y'(1) + y(1) = 0 satisfy the transcendental equation tan(√λ) = −√λ. The first three eigenvalues are approximately:",
       "options": [
-        "λ₁ ≈ 2.03, λ₂ ≈ 15.7, λ₃ ≈ 49.4",
-        "λ₁ = π², λ₂ = 4π², λ₃ = 9π²",
         "λ₁ = π²/4, λ₂ = 9π²/4, λ₃ = 25π²/4",
-        "λ₁ ≈ 4.49, λ₂ ≈ 22.2, λ₃ ≈ 61.2"
+        "λ₁ ≈ 4.49, λ₂ ≈ 22.2, λ₃ ≈ 61.2",
+        "λ₁ ≈ 2.03, λ₂ ≈ 15.7, λ₃ ≈ 49.4",
+        "λ₁ = π², λ₂ = 4π², λ₃ = 9π²"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The general solution is y = sin(√λ x) (satisfying y(0)=0). The condition y'(1)+y(1)=0 gives √λ cos(√λ) + sin(√λ) = 0, i.e. tan(√λ) = −√λ. The first three positive roots are √λ ≈ 1.17, 4.07, 7.00, giving λ ≈ 2.03, 15.7, 49.4.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -84,12 +84,12 @@
       "difficulty": "medium",
       "stem": "Under a rotation of 90° about the z-axis, a symmetric second-rank Cartesian tensor with T₁₂ = T₂₁ transforms to T'₁₂ =:",
       "options": [
-        "T₂₁",
         "−T₁₂",
         "T₁₂",
-        "0"
+        "0",
+        "T₂₁"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a 90° rotation about z: a = [[0,−1,0],[1,0,0],[0,0,1]]. T'₁₂ = a₁₂a₂₁T₂₁ = (−1)(1)T₂₁ = −T₂₁. Since T is symmetric, T'₁₂ = −T₁₂. The off-diagonal component changes sign.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -105,12 +105,12 @@
       "difficulty": "easy",
       "stem": "By the Cauchy integral formula, the value of ∮(z³ + 2z)/(z − i) dz around |z| = 2 counter-clockwise is:",
       "options": [
+        "0",
         "−2π",
         "2πi(i³ + 2i)",
-        "−π",
-        "0"
+        "−π"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Cauchy integral formula: ∮f(z)/(z−z₀)dz = 2πi f(z₀). f(z) = z³ + 2z, z₀ = i. f(i) = i³ + 2i = −i + 2i = i. Integral = 2πi(i) = 2πi² = −2π.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -131,12 +131,12 @@
         "caption": ""
       },
       "options": [
-        "At a discontinuity, the series converges to the average of left and right limits",
-        "The series converges uniformly everywhere",
         "The series converges to f(x) at all points",
-        "Only odd harmonics are present"
+        "Typical of igneous intrusions",
+        "At a discontinuity, the series converges to the average of left and right limits",
+        "The series converges uniformly everywhere"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "At x = 0, f(0⁺) = 1 and f(0⁻) = −1. The Dirichlet theorem states the series converges to (1 + (−1))/2 = 0 at the discontinuity — the midpoint of the jump.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -152,12 +152,12 @@
       "difficulty": "easy",
       "stem": "The Hamilton-Jacobi equation for a system with Hamiltonian H(q, p, t) is:",
       "options": [
-        "H(q, ∂S/∂q, t) + ∂S/∂t = 0",
         "H(q, ∂S/∂q, t) − ∂S/∂t = 0",
         "∂S/∂t + H(q, p, t) = 0 where p = ∂S/∂q",
-        "Both A and C"
+        "Both A and C",
+        "H(q, ∂S/∂q, t) + ∂S/∂t = 0"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "The Hamilton-Jacobi equation is H(q, ∂S/∂q, t) + ∂S/∂t = 0. Option C states the same: setting p = ∂S/∂q and requiring ∂S/∂t = −H. Both A and C are correct formulations.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -173,12 +173,12 @@
       "difficulty": "medium",
       "stem": "Which of the following is NOT a property of Poisson brackets?",
       "options": [
+        "Jacobi identity: {{A,B},C} + {{B,C},A} + {{C,A},B} = 0",
         "Antisymmetry: {A, B} = −{B, A}",
         "Leibniz rule: {A, BC} = {A,B}C + B{A,C}",
-        "Commutativity: {A, B} = {B, A}",
-        "Jacobi identity: {{A,B},C} + {{B,C},A} + {{C,A},B} = 0"
+        "Commutativity: {A, B} = {B, A}"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Poisson brackets are antisymmetric ({A,B} = −{B,A}), NOT commutative. They satisfy the Leibniz rule and Jacobi identity, forming a Lie algebra on the space of observables.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -194,12 +194,12 @@
       "difficulty": "easy",
       "stem": "A particle of rest mass m accelerated from rest reaches v = 0.8c. The ratio of kinetic energy to rest energy is:",
       "options": [
-        "5/3",
-        "2/3",
         "4/3",
-        "1"
+        "1",
+        "5/3",
+        "2/3"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "γ = 1/√(1−0.64) = 5/3. K = (γ−1)mc² = (5/3−1)mc² = (2/3)mc². Ratio K/(mc²) = 2/3.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -215,12 +215,12 @@
       "difficulty": "medium",
       "stem": "A bead slides without friction on a wire y = x²/(4a). Using Lagrange multipliers to enforce the constraint, the constraint force magnitude equals:",
       "options": [
-        "λ|∇f| where f = y − x²/(4a) is the constraint function",
         "λm",
         "λg",
-        "λ/√(1 + x²/(4a²))"
+        "λ/√(1 + x²/(4a²))",
+        "λ|∇f| where f = y − x²/(4a) is the constraint function"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In the Lagrange multiplier method, the constraint force is F_c = λ∇f where f(q,t) = 0. For f = y − x²/(4a), the constraint force magnitude is N = λ|∇f| = λ√(1 + x²/(4a²)).",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -236,12 +236,12 @@
       "difficulty": "easy",
       "stem": "In the symplectic formulation, the Hamiltonian vector field X_H is defined by:",
       "options": [
-        "ι_{X_H}ω = −dH (interior product gives minus gradient)",
         "ι_{X_H}ω = dH",
         "X_H = dH",
-        "ω(X_H) = 0"
+        "ω(X_H) = 0",
+        "ι_{X_H}ω = −dH (interior product gives minus gradient)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Hamiltonian vector field is defined by ι_{X_H}ω = −dH, meaning ω(X_H, Y) = −dH(Y) for all tangent vectors Y. In coordinates, this gives Hamilton's equations q̇ = ∂H/∂p and ṗ = −∂H/∂q.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -262,12 +262,12 @@
         "caption": ""
       },
       "options": [
+        "P = q²a²/(6πε₀c²)",
         "P = q²a²/(6πε₀c³)",
         "P = q²a²/(3πε₀c³)",
-        "P = q²a²/(12πε₀c³)",
-        "P = q²a²/(6πε₀c²)"
+        "P = q²a²/(12πε₀c³)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Larmor formula: P = q²a²/(6πε₀c³) in SI units. This is the total power radiated by a non-relativistic point charge. The radiation pattern is proportional to sin²θ.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -283,12 +283,12 @@
       "difficulty": "medium",
       "stem": "The plasma frequency ωₚ = √(ne²/(mε₀)). For n = 10²⁰ m⁻³, ωₚ is approximately:",
       "options": [
-        "5.6 × 10¹⁰ rad/s",
-        "1.8 × 10¹¹ rad/s",
         "5.6 × 10¹² rad/s",
-        "1.8 × 10¹³ rad/s"
+        "1.8 × 10¹³ rad/s",
+        "5.6 × 10¹⁰ rad/s",
+        "1.8 × 10¹¹ rad/s"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Using ωₚ [rad/s] = 56.4√n (n in m⁻³): ωₚ = 56.4 × √(10²⁰) = 56.4 × 10¹⁰ = 5.64 × 10¹¹ rad/s. For n = 10²⁰, this gives ~5.6 × 10¹¹, closest to option C.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -309,12 +309,12 @@
         "caption": ""
       },
       "options": [
-        "Is halved",
         "Is reduced by a factor of √2",
         "Is doubled",
-        "Remains unchanged"
+        "Remains unchanged",
+        "Is halved"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "δ ∝ 1/√ω. If ω doubles, δ_new = δ/√2. The skin depth decreases by a factor of √2 ≈ 1.414.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -330,12 +330,12 @@
       "difficulty": "easy",
       "stem": "The intrinsic wave impedance of free space η₀ = √(μ₀/ε₀) has the numerical value:",
       "options": [
+        "30π ≈ 94 Ω",
         "120π ≈ 377 Ω",
         "60π ≈ 188 Ω",
-        "240π ≈ 754 Ω",
-        "30π ≈ 94 Ω"
+        "240π ≈ 754 Ω"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "η₀ = √(μ₀/ε₀) = 120π ≈ 376.73 Ω ≈ 377 Ω. This is the ratio of electric to magnetic field amplitudes in a plane wave in vacuum.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -351,12 +351,12 @@
       "difficulty": "medium",
       "stem": "An antenna has directivity D = 4 (6 dB). This means:",
       "options": [
-        "Peak radiation intensity is 4 times the isotropic average",
-        "Total radiated power is 4 times that of a dipole",
         "Beamwidth is 4 times narrower",
-        "Gain is 4 times the efficiency"
+        "Gain is 4 times the efficiency",
+        "Peak radiation intensity is 4 times the isotropic average",
+        "Total radiated power is 4 times that of a dipole"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "D = U_max/U_avg. D = 4 means peak radiation intensity is 4 times the average (isotropic) value. Gain G = ηD where η is radiation efficiency.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -372,12 +372,12 @@
       "difficulty": "medium",
       "stem": "The completeness (closure) relation for an orthonormal basis {|n⟩} is:",
       "options": [
-        "Σₙ |n⟩⟨n| = 1̂ (identity operator)",
         "Σₙ |n⟩|n⟩ = 0",
         "⟨n|m⟩ = 1 for all n, m",
-        "Σₙ ⟨n|n⟩ = ∞"
+        "Σₙ ⟨n|n⟩ = ∞",
+        "Σₙ |n⟩⟨n| = 1̂ (identity operator)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The completeness relation Σₙ |n⟩⟨n| = 1̂ states that outer products of basis kets form a resolution of the identity. Any state |ψ⟩ = Σₙ |n⟩⟨n|ψ⟩.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -393,12 +393,12 @@
       "difficulty": "medium",
       "stem": "For two spin-1/2 particles, the triplet state |J=1, M=0⟩ is:",
       "options": [
+        "(|↑↓⟩ + i|↓↑⟩)/√2",
         "(|↑↓⟩ + |↓↑⟩)/√2",
         "(|↑↓⟩ − |↓↑⟩)/√2",
-        "|↑↑⟩",
-        "(|↑↓⟩ + i|↓↑⟩)/√2"
+        "|↑↑⟩"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Triplet states: |1,1⟩ = |↑↑⟩, |1,0⟩ = (|↑↓⟩+|↓↑⟩)/√2, |1,−1⟩ = |↓↓⟩. Singlet: |0,0⟩ = (|↑↓⟩−|↓↑⟩)/√2. The symmetric combination gives the triplet M=0 state.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -414,12 +414,12 @@
       "difficulty": "easy",
       "stem": "For two non-interacting fermions in single-particle states |a⟩ and |b⟩, the correct two-particle state is:",
       "options": [
-        "(|a⟩|b⟩ − |b⟩|a⟩)/√2",
-        "(|a⟩|b⟩ + |b⟩|a⟩)/√2",
         "|a⟩|b⟩",
-        "|a⟩|a⟩ + |b⟩|b⟩"
+        "|a⟩|a⟩ + |b⟩|b⟩",
+        "(|a⟩|b⟩ − |b⟩|a⟩)/√2",
+        "(|a⟩|b⟩ + |b⟩|a⟩)/√2"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Fermions require antisymmetric wavefunction: |Ψ⟩ = (|a⟩|b⟩ − |b⟩|a⟩)/√2. This ensures |Ψ⟩ vanishes if a = b (Pauli exclusion). This is the two-particle Slater determinant.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -435,12 +435,12 @@
       "difficulty": "easy",
       "stem": "For a two-level system with probability p in |↑⟩ and (1−p) in |↓⟩, the density matrix is:",
       "options": [
-        "ρ = p|↑⟩⟨↑| + (1−p)|↓⟩⟨↓|",
         "ρ = p|↑⟩⟨↓| + (1−p)|↓⟩⟨↑|",
         "ρ = diag(1−p, p)",
-        "ρ = (|↑⟩ + |↓⟩)(⟨↑| + ⟨↓|)/2"
+        "ρ = (|↑⟩ + |↓⟩)(⟨↑| + ⟨↓|)/2",
+        "ρ = p|↑⟩⟨↑| + (1−p)|↓⟩⟨↓|"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Density matrix for a statistical mixture: ρ = Σᵢ pᵢ|ψᵢ⟩⟨ψᵢ| = p|↑⟩⟨↑| + (1−p)|↓⟩⟨↓| = diag(p, 1−p). Diagonal elements give occupation probabilities.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -456,12 +456,12 @@
       "difficulty": "hard",
       "stem": "Bell's theorem (1964) shows that:",
       "options": [
+        "All measurements can be made simultaneously",
         "Quantum mechanics is experimentally wrong",
         "No local hidden variable theory can reproduce all quantum predictions",
-        "Entanglement allows faster-than-light communication",
-        "All measurements can be made simultaneously"
+        "Entanglement allows faster-than-light communication"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Bell's theorem proves no local hidden variable theory can reproduce all quantum predictions. Bell inequalities are violated by entangled states (confirmed by Aspect, 1982). This rules out local realism but not FTL communication (no-signaling theorem).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -477,12 +477,12 @@
       "difficulty": "medium",
       "stem": "The pressure P of a completely degenerate (T=0) Fermi gas is related to Fermi energy E_F by:",
       "options": [
-        "P = (2/5)(N/V)E_F",
-        "P = (2/3)(N/V)E_F",
         "P = (N/V)kT_F",
-        "P = (3/5)(N/V)E_F"
+        "P = (3/5)(N/V)E_F",
+        "P = (2/5)(N/V)E_F",
+        "P = (2/3)(N/V)E_F"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P = (2/3)(U/V) where U = (3/5)NE_F. So P = (2/3)(3/5)(N/V)E_F = (2/5)(N/V)E_F. This pressure exists at T=0 due to Pauli exclusion.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -498,12 +498,12 @@
       "difficulty": "medium",
       "stem": "The Clausius-Clapeyron equation dP/dT = L/(TΔV) for the liquid-gas transition:",
       "options": [
-        "dP/dT is always positive",
         "dP/dT is always negative",
         "dP/dT = 0 at the critical point",
-        "Both A and C"
+        "Both A and C",
+        "dP/dT is always positive"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "For liquid-gas: dP/dT = L/(TΔV) > 0 since both L and ΔV > 0. At the critical point, L → 0 and ΔV → 0, so the coexistence curve terminates. Both A and C are correct.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -519,12 +519,12 @@
       "difficulty": "hard",
       "stem": "For mixing equal volumes of two different ideal gases at same T and P, the entropy of mixing per mole is:",
       "options": [
+        "R/2",
         "−R Σ xᵢ ln xᵢ = R ln 2 ≈ 5.76 J/(mol·K)",
         "R ln 4",
-        "2R ln 2",
-        "R/2"
+        "2R ln 2"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ΔS_mix = −R Σ xᵢ ln xᵢ = −R(½ ln ½ + ½ ln ½) = R ln 2 ≈ 5.76 J/(mol·K). Mixing increases accessible microstates.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "The Johnson-Nyquist noise voltage spectral density for a resistor R at temperature T is:",
       "options": [
-        "S_V(f) = 4kTR",
-        "S_V(f) = 2kTR",
         "S_V(f) = kTR",
-        "S_V(f) = 4kTR²"
+        "S_V(f) = 4kTR²",
+        "S_V(f) = 4kTR",
+        "S_V(f) = 2kTR"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Johnson-Nyquist noise: S_V(f) = 4kTR (V²/Hz). From the fluctuation-dissipation theorem, voltage fluctuations are proportional to dissipation (R) and temperature T. White noise for hf ≪ kT.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -561,12 +561,12 @@
       "difficulty": "easy",
       "stem": "The quadratic Stark shift ΔE = −½αE² for the hydrogen 1s ground state:",
       "options": [
-        "Is negative (level shifts down, α > 0)",
         "Is positive (level shifts up)",
         "Is zero",
-        "Is proportional to E, not E²"
+        "Is proportional to E, not E²",
+        "Is negative (level shifts down, α > 0)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ΔE = −½αE² where α is the polarizability (α > 0). The negative sign means the ground state energy decreases — the induced dipole is energetically favorable. For H 1s: α = (9/2)a₀³.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -587,12 +587,12 @@
         "caption": ""
       },
       "options": [
+        "Rotational selection rules are relaxed",
         "Electronic transitions are fast compared to nuclear motion (vertical transitions)",
         "Nuclear kinetic energy is conserved",
-        "The transition dipole is independent of nuclear coordinates",
-        "Rotational selection rules are relaxed"
+        "The transition dipole is independent of nuclear coordinates"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Electronic transitions (~10⁻¹⁵ s) are much faster than nuclear motion (~10⁻¹³ s), so nuclear positions remain unchanged. Intensity ∝ |⟨v'|v''⟩|², the vibrational wavefunction overlap.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -608,12 +608,12 @@
       "difficulty": "hard",
       "stem": "For the carbon atom (1s²2s²2p²), Hund's rules predict the ground state term is:",
       "options": [
-        "³P₀",
-        "¹D₂",
         "¹S₀",
-        "³P₁"
+        "³P₁",
+        "³P₀",
+        "¹D₂"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For 2p²: (1) Maximize S: S=1 (triplet). (2) Maximize L: L=1 (P). (3) Less-than-half-filled: J=|L−S|=0. Ground state: ³P₀.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -629,12 +629,12 @@
       "difficulty": "medium",
       "stem": "The Born-Oppenheimer approximation separates electronic and nuclear wavefunctions because:",
       "options": [
-        "Nuclei are much heavier than electrons and move much more slowly",
         "Electrons are much heavier than nuclei",
         "EM force between electrons is stronger",
-        "Nuclear forces are short-ranged"
+        "Nuclear forces are short-ranged",
+        "Nuclei are much heavier than electrons and move much more slowly"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "m_nucleus/m_electron ≈ 1836–23000. Heavier nuclei move much more slowly, so electrons adapt instantaneously to nuclear positions.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -650,12 +650,12 @@
       "difficulty": "medium",
       "stem": "The bond order of N₂ (14 electrons) in MO theory is:",
       "options": [
+        "1.5",
         "1",
         "2",
-        "3",
-        "1.5"
+        "3"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "N₂: (σ1s)²(σ*1s)²(σ2s)²(σ*2s)²(π2p)⁴(σ2p)². Bonding: 10, Antibonding: 4. Bond order = (10−4)/2 = 3. Triple bond, consistent with 945 kJ/mol dissociation energy.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
         "caption": ""
       },
       "options": [
-        "|V_G|, the Fourier component of the periodic potential",
-        "2|V_G|",
         "4|V_G|",
-        "ℏ²π²/(2ma²)"
+        "ℏ²π²/(2ma²)",
+        "|V_G|, the Fourier component of the periodic potential",
+        "2|V_G|"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "At k = π/a, degenerate plane-wave states are split by the periodic potential. The energy gap = 2|V_G| where V_G is the Fourier component of V(x).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "easy",
       "stem": "The effective mass (1/m*)ᵢⱼ = (1/ℏ²)(∂²E/∂kᵢ∂kⱼ). Near the band minimum, m* is typically:",
       "options": [
-        "Greater than the free electron mass",
         "Less than the free electron mass (lighter)",
         "Always positive and isotropic",
-        "Exactly equal to the free electron mass"
+        "Exactly equal to the free electron mass",
+        "Greater than the free electron mass"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Near the band minimum, curvature ∂²E/∂k² is larger than free electron, giving m* < m_e. E.g., GaAs: m* ≈ 0.067m_e. Can be anisotropic or negative near band maxima.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "hard",
       "stem": "In the Drude model σ = ne²τ/m. If scattering rate 1/τ doubles:",
       "options": [
+        "Resistivity is halved",
         "Conductivity doubles",
         "Conductivity is halved",
-        "Conductivity is quartered",
-        "Resistivity is halved"
+        "Conductivity is quartered"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "σ = ne²τ/m. If 1/τ doubles, τ halves: σ_new = σ/2. Conductivity halved, resistivity doubled.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "medium",
       "stem": "The Drude optical conductivity at high frequency (ωτ ≫ 1) behaves as:",
       "options": [
-        "σ(ω) ≈ ne²τ/m (same as DC)",
-        "σ(ω) ≈ ne²/(mω²τ)",
         "σ(ω) is purely imaginary: σ(ω) ≈ ine²/(ωm)",
-        "σ(ω) ≈ ne²/(iωm)"
+        "σ(ω) ≈ ne²/(iωm)",
+        "σ(ω) ≈ ne²τ/m (same as DC)",
+        "σ(ω) ≈ ne²/(mω²τ)"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "σ(ω) = (ne²τ/m)/(1−iωτ). For ωτ ≫ 1: σ(ω) ≈ ne²/(−iωm) = ine²/(ωm). Imaginary part dominates; real part (absorption) decreases as 1/(ω²τ).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "medium",
       "stem": "The Wiedemann-Franz law κ/σ = LT. The Sommerfeld Lorenz number L is:",
       "options": [
-        "π²k²_B/(3e²) ≈ 2.44 × 10⁻⁸ WΩK⁻²",
         "k_B/e ≈ 8.6 × 10⁻⁵ VK⁻¹",
         "2k²_B/(3e²)",
-        "π²k²_B/(6e²)"
+        "π²k²_B/(6e²)",
+        "π²k²_B/(3e²) ≈ 2.44 × 10⁻⁸ WΩK⁻²"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "L = π²k²_B/(3e²) = π²(1.38×10⁻²³)²/(3(1.6×10⁻¹⁹)²) ≈ 2.44 × 10⁻⁸ WΩK⁻². Universal ratio — both thermal and electrical transport carried by same electrons.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -786,12 +786,12 @@
         "caption": ""
       },
       "options": [
+        "The inverse of the input",
         "The time derivative of the input voltage",
         "The time integral of the input voltage",
-        "The product of input and gain",
-        "The inverse of the input"
+        "The product of input and gain"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "V_out = −RC(dV_in/dt). The feedback resistor and input capacitor create a circuit where output is proportional to the rate of change of input voltage.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -807,12 +807,12 @@
       "difficulty": "easy",
       "stem": "The Colpitts oscillator uses a capacitive divider. The oscillation frequency is:",
       "options": [
-        "f = 1/(2π√(LC_eff)) where C_eff = C₁C₂/(C₁+C₂)",
-        "f = 1/(2π√(LC)) where C = C₁ + C₂",
         "f = 1/(2πRC)",
-        "f = 1/(2π√(L/R))"
+        "f = 1/(2π√(L/R))",
+        "f = 1/(2π√(LC_eff)) where C_eff = C₁C₂/(C₁+C₂)",
+        "f = 1/(2π√(LC)) where C = C₁ + C₂"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "C_eff = C₁C₂/(C₁+C₂) is the series combination. Resonant frequency: f = 1/(2π√(LC_eff)).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "When J = 1 and K = 1, a JK flip-flop:",
       "options": [
-        "Sets Q = 1",
         "Resets Q = 0",
         "Toggles Q (complements current state)",
-        "Latches current state"
+        "Latches current state",
+        "Sets Q = 1"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "JK: J=0,K=0 → hold; J=0,K=1 → reset; J=1,K=0 → set; J=1,K=1 → toggle. Eliminates the forbidden SR condition.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -849,12 +849,12 @@
       "difficulty": "easy",
       "stem": "A 4-bit SISO shift register receives bits 1, 0, 1, 1 sequentially. After 4 clocks, output at last stage is:",
       "options": [
+        "Depends on clock speed",
         "1",
         "0",
-        "1 (the first bit entered)",
-        "Depends on clock speed"
+        "1 (the first bit entered)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "First bit entered shifts through all 4 stages after 4 clocks. First bit = 1, so output = 1.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -870,12 +870,12 @@
       "difficulty": "easy",
       "stem": "A 12-bit SAR ADC with 0–5 V range has LSB size:",
       "options": [
-        "1.22 mV",
-        "2.44 mV",
         "4.88 mV",
-        "9.76 mV"
+        "9.76 mV",
+        "1.22 mV",
+        "2.44 mV"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "LSB = 5/2¹² = 5/4096 ≈ 1.22 mV. 12-bit resolves into 4096 levels.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -891,12 +891,12 @@
       "difficulty": "medium",
       "stem": "The asymmetry term −a_A(A−2Z)²/A in the Bethe-Weizsäcker formula penalizes:",
       "options": [
-        "Any imbalance between proton and neutron numbers",
         "Large surface area",
         "Coulomb repulsion",
-        "Odd-A nuclei"
+        "Odd-A nuclei",
+        "Any imbalance between proton and neutron numbers"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Minimized when Z = N. Penalizes neutron-proton imbalance from Pauli exclusion requiring fermions in different quantum states.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -912,12 +912,12 @@
       "difficulty": "hard",
       "stem": "A product's price is increased by 25% then decreased by 20%. Net effect:",
       "options": [
+        "10% increase",
         "No change",
         "5% increase",
-        "5% decrease",
-        "10% increase"
+        "5% decrease"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "100 → 125 (↑25%) → 100 (↓20%). 1.25 × 0.8 = 1. No change.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -938,12 +938,12 @@
       "difficulty": "hard",
       "stem": "3 men or 5 women complete work in 12 days. 6 men and 5 women together take:",
       "options": [
-        "4 days",
-        "5 days",
         "6 days",
-        "8 days"
+        "8 days",
+        "4 days",
+        "5 days"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "1 man = 1/36/day, 1 woman = 1/60/day. 6/36 + 5/60 = 1/6 + 1/12 = 1/4. Time = 4 days.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -964,12 +964,12 @@
       "difficulty": "easy",
       "stem": "Trader marks goods 40% above CP, gives 10% discount. Profit%:",
       "options": [
-        "26%",
         "28%",
         "30%",
-        "36%"
+        "36%",
+        "26%"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CP=100, MP=140, SP=140×0.9=126. Profit=26%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Average of 20 students is 50 kg. Including teacher, average increases by 1 kg. Teacher's weight:",
       "options": [
+        "72 kg",
         "61 kg",
         "70 kg",
-        "71 kg",
-        "72 kg"
+        "71 kg"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "20×50=1000. 21×51=1071. Teacher=1071−1000=71 kg.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1016,12 +1016,12 @@
       "difficulty": "easy",
       "stem": "Bag: 5 red, 3 blue, 2 green. Two drawn without replacement. P(both red):",
       "options": [
-        "1/5",
-        "2/9",
         "1/4",
-        "1/6"
+        "1/6",
+        "1/5",
+        "2/9"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "P = (5/10)(4/9) = 20/90 = 2/9.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1042,12 +1042,12 @@
       "difficulty": "medium",
       "stem": "3 boys and 3 girls in a row, no two girls together:",
       "options": [
-        "72",
         "144",
         "36",
-        "216"
+        "216",
+        "72"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Boys: 3!=6. Gaps: C(4,3)=4. Girls: 3!=6. Total=6×4×6=144.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1063,12 +1063,12 @@
       "difficulty": "hard",
       "stem": "Difference between CI and SI on Rs.8000 at 5% for 3 years:",
       "options": [
+        "Rs.100",
         "Rs.50",
         "Rs.61",
-        "Rs.80",
-        "Rs.100"
+        "Rs.80"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SI=1200. CI=8000(1.05)³−8000=1261. Diff=61.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1089,12 +1089,12 @@
       "difficulty": "medium",
       "stem": "A:B=4:5. 5 years ago 3:4. B's age:",
       "options": [
-        "15",
-        "20",
         "25",
-        "30"
+        "30",
+        "15",
+        "20"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "(4x−5)/(5x−5)=3/4. 16x−20=15x−15. x=5. B=25.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1115,12 +1115,12 @@
       "difficulty": "hard",
       "stem": "300 km apart, cars at 60 and 40 km/h towards each other. Meet after:",
       "options": [
-        "2 hours",
         "3 hours",
         "2.5 hours",
-        "4 hours"
+        "4 hours",
+        "2 hours"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Relative speed=100 km/h. Time=300/100=3 hours.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1141,12 +1141,12 @@
       "difficulty": "hard",
       "stem": "Remainder when 2²⁰ is divided by 7:",
       "options": [
+        "4",
         "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "2³=8≡1(mod7). 2²⁰=(2³)⁶×2²≡1×4=4(mod7). Remainder=4. Answer D.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1162,12 +1162,12 @@
       "difficulty": "hard",
       "stem": "HCF=12, LCM=360, one number=72. Other number:",
       "options": [
-        "40",
-        "50",
         "60",
-        "80"
+        "80",
+        "40",
+        "50"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "HCF×LCM=product. 12×360=72×x. x=60.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "Three pipes fill in 12, 15, 20 hours. Together:",
       "options": [
-        "4 hours",
         "5 hours",
         "6 hours",
-        "8 hours"
+        "8 hours",
+        "4 hours"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "1/12+1/15+1/20=5/60+4/60+3/60=12/60=1/5. Time=5 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1214,12 +1214,12 @@
       "difficulty": "easy",
       "stem": "200 m train at 72 km/h passes a man. Time:",
       "options": [
+        "15 sec",
         "8 sec",
         "10 sec",
-        "12 sec",
-        "15 sec"
+        "12 sec"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Speed=20 m/s. Time=200/20=10 sec.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1240,12 +1240,12 @@
       "difficulty": "medium",
       "stem": "Boat goes 24 km upstream in 3h and 24 km downstream in 2h. Stream speed:",
       "options": [
-        "2 km/h",
-        "3 km/h",
         "4 km/h",
-        "5 km/h"
+        "5 km/h",
+        "2 km/h",
+        "3 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Up=8, Down=12. Current=(12−8)/2=2 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1266,12 +1266,12 @@
       "difficulty": "hard",
       "stem": "Father is 3 times son's age. In 10 years, father will be twice son's age. Son's present age:",
       "options": [
-        "5",
         "10",
         "15",
-        "20"
+        "20",
+        "5"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "F=3s. (3s+10)=2(s+10). 3s+10=2s+20. s=10.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1292,12 +1292,12 @@
       "difficulty": "medium",
       "stem": "What comes next: 3, 8, 18, 38, 78, ?",
       "options": [
+        "178",
         "148",
         "158",
-        "168",
-        "178"
+        "168"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Differences: 5, 10, 20, 40. Each doubles. Next=78+80=158.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1318,12 +1318,12 @@
       "difficulty": "medium",
       "stem": "If DELHI is coded as CCIDD (shifts −1,−2,−3,−4,−5), then MUMBAI is coded as:",
       "options": [
-        "LTLAHH",
-        "LTLAHI",
         "LTLAHZ",
-        "LTLAHH"
+        "LTLAHH",
+        "LTLAHH",
+        "LTLAHI"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Each letter shifted by its position: M−1=L, U−2=T, M−3=J, B−4=X... The intended encoding gives LTLAHI.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1344,12 +1344,12 @@
       "difficulty": "hard",
       "stem": "A woman says to a man, 'You are the son of my mother's only daughter.' The man is the woman's:",
       "options": [
-        "Brother",
         "Son",
         "Nephew",
-        "Husband"
+        "Husband",
+        "Brother"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "My mother's only daughter = myself. 'Son of me' = my son.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1370,12 +1370,12 @@
       "difficulty": "hard",
       "stem": "Walk 10 km N, right 5 km, right 10 km. From start:",
       "options": [
+        "10 km West",
         "10 km North",
         "5 km South",
-        "5 km East",
-        "10 km West"
+        "5 km East"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "(0,10)→(5,10)→(5,0). 5 km East of start.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1396,12 +1396,12 @@
       "difficulty": "medium",
       "stem": "All flowers are beautiful. Some beautiful are expensive. Conclusions: I. Some flowers are expensive. II. Some beautiful are flowers.",
       "options": [
-        "Only I",
-        "Only II",
         "Both",
-        "Neither"
+        "Neither",
+        "Works for short-span bridges",
+        "Suitable for narrow use cases"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "II follows (conversion of 'All flowers are beautiful'). I doesn't necessarily follow.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "A,B,C,D,E in line. A not adj to B. C left of D. E at end. B right of C. Left end:",
       "options": [
-        "A",
         "C",
         "D",
-        "E"
+        "E",
+        "A"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "BC block. E at end. E A C B D satisfies all conditions. Left end = E.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1448,12 +1448,12 @@
       "difficulty": "hard",
       "stem": "A > B ≥ C = D > E. Definitely true:",
       "options": [
+        "Valid in controlled settings",
         "A > C",
         "B > D",
-        "C > E",
-        "All of the above"
+        "C > E"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A > B ≥ C → A > C ✓. B ≥ D (not necessarily >). C = D > E → C > E ✓. A and C both true.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1474,12 +1474,12 @@
       "difficulty": "hard",
       "stem": "50 runners. Amit 12th from front, Raj 15th from back. Between them:",
       "options": [
-        "22",
-        "23",
         "24",
-        "25"
+        "25",
+        "22",
+        "23"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Raj from front = 50−15+1=36. Between = 36−12−1=23.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1500,12 +1500,12 @@
       "difficulty": "medium",
       "stem": "Six friends A–F in a circle. A opposite D. B to A's right. C between E and F. E not adj to A or D. Opposite B:",
       "options": [
-        "C",
         "E",
         "F",
-        "Cannot be determined"
+        "Cannot be determined",
+        "C"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A pos 1, D pos 4 (opposite). B pos 2 (right of A). E not adj to A(1) or D(4) → E pos 5. Opposite B(2) = pos 5 = E.",
       "estSec": 50,
       "topicWeight": 0.1,
@@ -1526,12 +1526,12 @@
       "difficulty": "hard",
       "stem": "Statement: All cats are animals. Some animals are pets. Conclusions: I. Some cats are pets. II. Some pets are animals.",
       "options": [
-        "Only I",
-        "Only II",
-        "Both",
-        "Neither"
+        "Neither",
+        "Works for short-span bridges",
+        "Suitable for narrow use cases",
+        "Both"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "II follows directly from statement 2 (conversion). I doesn't necessarily follow.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1547,12 +1547,12 @@
       "difficulty": "easy",
       "stem": "Which PSU recently achieved the milestone of 1 billion tonnes of crude oil production?",
       "options": [
-        "BPCL",
-        "HPCL",
         "ONGC",
-        "IOCL"
+        "IOCL",
+        "BPCL",
+        "HPCL"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "ONGC achieved this milestone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1568,12 +1568,12 @@
       "difficulty": "easy",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
-        "Mexico, Argentina",
         "Saudi Arabia, Iran, UAE",
         "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Nigeria, South Africa",
+        "Mexico, Argentina"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1589,12 +1589,12 @@
       "difficulty": "medium",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
+        "2.0% of GDP",
         "0.5% of GDP",
         "1.0% of GDP",
-        "1.5% of GDP",
-        "2.0% of GDP"
+        "1.5% of GDP"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1610,12 +1610,12 @@
       "difficulty": "medium",
       "stem": "The Ujjwala Yojana provides:",
       "options": [
-        "Free electricity",
-        "Free LPG connections",
         "Free water supply",
-        "Free internet"
+        "Free internet",
+        "Free electricity",
+        "Free LPG connections"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ujjwala Yojana provides free LPG connections to BPL families.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1631,12 +1631,12 @@
       "difficulty": "hard",
       "stem": "India's crude oil imports from Russia increased significantly due to:",
       "options": [
-        "Pipeline completion",
         "Discounted prices post-sanctions",
         "New trade agreement",
-        "Currency swap"
+        "Currency swap",
+        "Pipeline completion"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "India increased imports from Russia due to discounted prices after Western sanctions.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1652,12 +1652,12 @@
       "difficulty": "hard",
       "stem": "India's GDP growth rate for FY2025-26 is estimated at approximately:",
       "options": [
+        "8.5%",
         "5.5%",
         "6.5%",
-        "7.5%",
-        "8.5%"
+        "7.5%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India's GDP growth for FY2025-26 is estimated at around 6.5%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1673,12 +1673,12 @@
       "difficulty": "easy",
       "stem": "The largest desert in India is:",
       "options": [
-        "Thar Desert",
-        "Rann of Kutch",
         "Ladakh Desert",
-        "Spiti Desert"
+        "Spiti Desert",
+        "Thar Desert",
+        "Rann of Kutch"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Thar Desert is the largest desert in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1694,12 +1694,12 @@
       "difficulty": "medium",
       "stem": "The Tropic of Cancer passes through how many Indian states?",
       "options": [
-        "6",
         "7",
         "8",
-        "9"
+        "9",
+        "6"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Tropic of Cancer passes through 8 states.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1715,12 +1715,12 @@
       "difficulty": "medium",
       "stem": "The President of India is elected by:",
       "options": [
+        "Prime Minister",
         "Lok Sabha members",
         "Rajya Sabha members",
-        "Electoral College",
-        "Prime Minister"
+        "Electoral College"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1736,12 +1736,12 @@
       "difficulty": "hard",
       "stem": "India gained independence on:",
       "options": [
-        "January 26, 1950",
-        "August 15, 1947",
         "August 15, 1950",
-        "January 26, 1947"
+        "January 26, 1947",
+        "January 26, 1950",
+        "August 15, 1947"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India gained independence on August 15, 1947.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1757,12 +1757,12 @@
       "difficulty": "medium",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
         "had",
         "would",
-        "did"
+        "did",
+        "have"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1778,12 +1778,12 @@
       "difficulty": "easy",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
+        "Everywhere",
         "Omnipresent",
         "Rare",
-        "Common",
-        "Everywhere"
+        "Common"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1799,12 +1799,12 @@
       "difficulty": "hard",
       "stem": "Choose the correct sentence: 'The team are working hard.'",
       "options": [
-        "Correct — team is plural",
-        "Incorrect — should be 'is working'",
         "Incorrect — should be 'were working'",
-        "Both A and C"
+        "Both A and C",
+        "Correct — team is plural",
+        "Incorrect — should be 'is working'"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Collective noun 'team' takes a singular verb in formal English.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1820,12 +1820,12 @@
       "difficulty": "medium",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
         "are",
         "was",
-        "have been"
+        "have been",
+        "were"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1841,12 +1841,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
+        "No article",
         "A",
         "An",
-        "The",
-        "No article"
+        "The"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1862,12 +1862,12 @@
       "difficulty": "medium",
       "stem": "Who ___ the book yesterday?",
       "options": [
-        "did wrote",
-        "wrote",
         "has wrote",
-        "written"
+        "written",
+        "did wrote",
+        "wrote"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1883,12 +1883,12 @@
       "difficulty": "medium",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
         "at",
         "in",
-        "of"
+        "of",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1904,12 +1904,12 @@
       "difficulty": "easy",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
+        "Let's, eat Grandma!",
         "Lets eat, Grandma!",
         "Let's eat Grandma!",
-        "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Lets eat Grandma!"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1925,12 +1925,12 @@
       "difficulty": "hard",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
-        "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice",
+        "Initiate conversation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1946,12 +1946,12 @@
       "difficulty": "medium",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
         "at",
         "off",
-        "up"
+        "up",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,

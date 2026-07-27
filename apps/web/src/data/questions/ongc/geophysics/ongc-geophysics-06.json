@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The Gutenberg discontinuity at approximately 2,900 km depth marks the boundary between which two layers of the Earth?",
       "options": [
-        "Crust and upper mantle",
-        "Upper mantle and lower mantle",
         "Lower mantle and outer core",
-        "Outer core and inner core"
+        "Outer core and inner core",
+        "Crust and upper mantle",
+        "Upper mantle and lower mantle"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The Gutenberg discontinuity (G discontinuity) lies at ~2,900 km depth and separates the solid lower mantle (D'' layer) from the liquid outer core. At this boundary, P-wave velocity drops sharply from ~13.7 km/s to ~8.0 km/s, and S-waves disappear entirely, indicating the transition from a solid silicate mantle to a liquid iron-nickel outer core. The depth was first identified by Beno Gutenberg in 1914.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "hard",
       "stem": "According to the Airy hypothesis of isostasy, mountain ranges have deep crustal 'roots' that extend into the denser mantle. If the crustal density is 2,670 kg/m³ and the mantle density is 3,300 kg/m³, what is the approximate depth of the crustal root beneath a mountain with 4 km of surface elevation above the surrounding plain?",
       "options": [
-        "8 km",
         "16 km",
         "21 km",
-        "32 km"
+        "32 km",
+        "8 km"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Using the Airy isostasy model, the depth of the root (r) is related to the surface elevation (h) by the relationship: r = h × ρ_mantle / (ρ_mantle − ρ_crust). Here, h = 4 km, ρ_mantle = 3,300, ρ_crust = 2,670. So r = 4 × 3300 / (3300 − 2670) = 4 × 3300 / 630 = 4 × 5.238 ≈ 21 km. This shows that for every kilometre of elevation above the plain, approximately 5.2 km of root extends below the normal crustal thickness — a direct consequence of the density contrast between crust and mantle.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "medium",
       "stem": "In the context of absolute plate motion models, the no-net-rotation (NNR) reference frame and the hotspot reference frame sometimes yield different apparent polar wander paths. Which of the following best explains why the NNR frame may not represent true absolute motion?",
       "options": [
+        "Plate motions measured by GPS directly validate the NNR frame",
         "Hotspots are fixed relative to the spin axis, making them unreliable reference points",
         "Net rotation of the lithosphere relative to the mantle is possible if mantle flow includes a net torsional component, meaning the NNR frame is only a kinematic convention",
-        "The NNR frame accounts for all mantle drag forces and is therefore more physically accurate",
-        "Plate motions measured by GPS directly validate the NNR frame"
+        "The NNR frame accounts for all mantle drag forces and is therefore more physically accurate"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The NNR reference frame is defined such that the integrated motion of all lithospheric plates sums to zero — it is a kinematic convention, not necessarily a physically meaningful frame. If the entire lithosphere rotates as a net torsional component relative to the deep mantle (due to asymmetric mantle convection, slab pull distribution, or basal drag), the NNR frame would misrepresent true absolute motions. Hotspot-based frames assume deep-mantle plumes are relatively stationary, though this assumption is also debated. Neither frame is 'absolutely' correct; they provide different perspectives on plate kinematics. GPS data measure relative plate motions and must be tied to a reference frame to yield absolute motions.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -110,12 +110,12 @@
       "difficulty": "medium",
       "stem": "The World Geodetic System 1984 (WGS 84) defines a reference ellipsoid with a semi-major axis of 6,378,137.0 m and a flattening of 1/298.257223563. What does the flattening parameter physically represent?",
       "options": [
-        "The ratio of the polar radius to the equatorial radius",
-        "The difference between the equatorial and polar radii divided by the equatorial radius",
         "The eccentricity of the ellipse multiplied by the semi-major axis",
-        "The angle between the equatorial plane and the rotation axis"
+        "The angle between the equatorial plane and the rotation axis",
+        "The ratio of the polar radius to the equatorial radius",
+        "The difference between the equatorial and polar radii divided by the equatorial radius"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Flattening (f) is defined as f = (a − b)/a, where a is the semi-major axis (equatorial radius) and b is the semi-minor axis (polar radius). It quantifies how much the ellipsoid deviates from a perfect sphere. For WGS 84, f ≈ 1/298.257, meaning the equatorial radius exceeds the polar radius by about 21.385 km (f × a ≈ 21,385 m). This oblateness arises from Earth's rotation, which causes centrifugal bulging at the equator.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -131,12 +131,12 @@
       "difficulty": "hard",
       "stem": "In Differential GPS (DGPS), a reference station at a known location broadcasts corrections to mobile receivers. Which of the following error sources is MOST effectively reduced by DGPS?",
       "options": [
-        "Multipath interference at the receiver antenna",
         "Satellite clock and ephemeris errors, which are spatially correlated over short baselines",
         "Receiver thermal noise, which is independent at each station",
-        "Ionospheric scintillation, which varies on sub-second timescales"
+        "Ionospheric scintillation, which varies on sub-second timescales",
+        "Multipath interference at the receiver antenna"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "DGPS works on the principle that GPS errors (satellite clock biases, orbital/ephemeris errors, and to some extent tropospheric delays) are spatially correlated — they affect nearby receivers similarly. By computing the difference between the observed pseudorange at the known reference station and the computed range, a correction can be transmitted to the rover. Errors that are NOT spatially correlated — receiver-specific thermal noise, multipath (which depends on local environment), and rapid ionospheric scintillation — are not effectively cancelled. The effectiveness of DGPS degrades with increasing baseline length as spatial decorrelation increases.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -152,12 +152,12 @@
       "difficulty": "hard",
       "stem": "The geoid undulation N is defined as the separation between the geoid and the reference ellipsoid. If the GPS-derived ellipsoidal height h = 850 m and the orthometric height H = 810 m at a station, what is the geoid undulation N?",
       "options": [
+        "-1660 m",
         "-40 m",
         "+40 m",
-        "+1660 m",
-        "-1660 m"
+        "+1660 m"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The fundamental geodetic relationship is h = H + N, where h is the ellipsoidal height (from GPS), H is the orthometric height (height above the geoid/mean sea level), and N is the geoid undulation. Rearranging: N = h − H = 850 − 810 = +40 m. A positive N means the geoid lies above the reference ellipsoid at this location, which is common in regions with mass surpluses (e.g., near mountain ranges or mantle density anomalies). The Indian Geoid model (Indian Geoid 2020) shows undulations ranging from about −25 m to +65 m across the Indian subcontinent.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -173,12 +173,12 @@
       "difficulty": "medium",
       "stem": "In an isotropic, homogeneous elastic medium, the P-wave velocity is given by v_P = √((λ + 2μ)/ρ) and the S-wave velocity by v_S = √(μ/ρ). If λ = μ (Lamé's first parameter equals the shear modulus), what is the ratio v_P/v_S?",
       "options": [
-        "√2",
-        "2",
         "√3",
-        "3"
+        "3",
+        "√2",
+        "2"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Given λ = μ, we substitute into the velocity expressions: v_P = √((μ + 2μ)/ρ) = √(3μ/ρ) and v_S = √(μ/ρ). Therefore, v_P/v_S = √(3μ/ρ) / √(μ/ρ) = √3 ≈ 1.732. This ratio v_P/v_S = √3 is characteristic of a Poisson solid (Poisson's ratio ν = 0.25), which is a reasonable first-order approximation for many Earth materials. In real Earth materials, v_P/v_S varies from ~1.7 to ~2.0 depending on composition, temperature, and fluid saturation.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -194,12 +194,12 @@
       "difficulty": "easy",
       "stem": "Which of the following seismic surface waves exhibits elliptical retrograde particle motion in the vertical plane and has the greatest penetration depth for a given frequency?",
       "options": [
-        "Love wave",
         "Rayleigh wave",
         "Stoneley wave",
-        "Lamb wave"
+        "Lamb wave",
+        "Love wave"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Rayleigh waves are retrograde elliptical surface waves with particle motion in the vertical plane containing the direction of propagation. The motion is retrograde (counter-clockwise when viewed from the right for a wave propagating to the right) at the surface and becomes prograde with depth. Rayleigh waves penetrate to approximately one wavelength deep, which is greater than Love wave penetration (~0.5 wavelengths). Stoneley waves are confined to interfaces, and Lamb waves propagate in plates. Rayleigh wave velocity is approximately 0.92 × v_S for a Poisson solid.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -215,12 +215,12 @@
       "difficulty": "easy",
       "stem": "In a first-motion focal mechanism solution (beach ball diagram), the two nodal planes separate compressional (up) first motions from dilatational (down) first motions. For a pure strike-slip earthquake on a vertical fault striking N45°E with right-lateral motion, which of the following correctly describes the orientation of the two nodal planes?",
       "options": [
+        "Plane 1: N45°E/45° (oblique), Plane 2: N135°E/45° (oblique)",
         "Plane 1: N45°E/vertical (strike-slip), Plane 2: N45°W/vertical (strike-slip)",
         "Plane 1: N45°E/90° (right-lateral), Plane 2: N45°W/90° (left-lateral)",
-        "Plane 1: N0°E/45° (normal), Plane 2: N90°E/45° (reverse)",
-        "Plane 1: N45°E/45° (oblique), Plane 2: N135°E/45° (oblique)"
+        "Plane 1: N0°E/45° (normal), Plane 2: N90°E/45° (reverse)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For a pure right-lateral strike-slip fault striking N45°E on a vertical plane, the two nodal planes are: (1) the fault plane — N45°E/90° (right-lateral), and (2) the auxiliary plane — N45°W/90° (or equivalently N135°E/90°, left-lateral). The auxiliary plane is perpendicular to the fault plane and contains the slip vector. In a beach ball, the first-motion pattern shows two white (dilatational) quadrants and two dark (compressional) quadrants arranged in a cross pattern. The auxiliary plane is seismologically indistinguishable from the fault plane without additional geological or geodetic information.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -236,12 +236,12 @@
       "difficulty": "easy",
       "stem": "Laplace's equation ∇²V = 0 is satisfied by the gravitational potential in source-free regions. Which of the following conditions is necessary and sufficient for a function V(x, y, z) to be a valid solution to Laplace's equation in a simply connected domain?",
       "options": [
-        "V must be harmonic, i.e., it has continuous second partial derivatives and satisfies ∇²V = 0 everywhere in the domain",
-        "V must be zero at the boundary of the domain",
         "V must be expressible as a single power series in 1/r",
-        "V must have no singularities anywhere, including at infinity"
+        "V must have no singularities anywhere, including at infinity",
+        "V must be harmonic, i.e., it has continuous second partial derivatives and satisfies ∇²V = 0 everywhere in the domain",
+        "V must be zero at the boundary of the domain"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A function is harmonic if it has continuous second-order partial derivatives and satisfies Laplace's equation (∇²V = ∂²V/∂x² + ∂²V/∂y² + ∂²V/∂z² = 0) throughout its domain. This is the fundamental requirement. Boundary conditions (option B) determine the particular solution but are not part of the definition. Power series in 1/r (option C) represent specific solutions (spherical harmonics) but not all solutions. Harmonic functions can have singularities outside the domain of interest (e.g., at point mass locations), and the domain is source-free by assumption.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -257,12 +257,12 @@
       "difficulty": "medium",
       "stem": "Green's third identity states that the potential at an external point due to a volume distribution of sources can be expressed as a surface integral plus a volume integral. In potential field geophysics, this identity is used to:",
       "options": [
-        "Directly compute the gravitational field of a point mass",
         "Relate the potential on a closed surface to the interior source distribution, enabling boundary-value problem formulations",
         "Convert frequency-domain data to the time domain",
-        "Eliminate the need for regularization in inverse problems"
+        "Eliminate the need for regularization in inverse problems",
+        "Directly compute the gravitational field of a point mass"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Green's third identity (a consequence of Green's theorem and the divergence theorem) expresses the potential V at any point as a combination of surface integrals involving V and ∂V/∂n on a closed surface S, plus a volume integral of the source density. In geophysics, this is fundamental to boundary-value formulations: given measured field data on a surface (e.g., gravity measurements on the Earth's surface), the identity relates these measurements to the subsurface density distribution. It forms the mathematical basis for upward/downward continuation, equivalent source techniques, and the connection between surface observations and subsurface sources.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -283,12 +283,12 @@
       "difficulty": "medium",
       "stem": "The Helmholtz equation (∇² + k²)ψ = 0 is the time-harmonic form of the wave equation. In electromagnetic methods, the wavenumber k is complex: k = ω√(με − iμσ/ω). For a highly conducting medium where σ/(ωε) >> 1, the imaginary part of k dominates. What is the physical consequence of this dominance?",
       "options": [
+        "The magnetic permeability becomes frequency-dependent",
         "The wave propagates without attenuation",
         "The wave is heavily attenuated and the fields diffuse rather than propagate as waves",
-        "The wave velocity becomes infinite",
-        "The magnetic permeability becomes frequency-dependent"
+        "The wave velocity becomes infinite"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "When σ/(ωε) >> 1 (the quasi-static or induction-dominated regime), the complex wavenumber k ≈ √(−iωμσ) = (1−i)/δ where δ = √(2/(ωμσ)) is the skin depth. The real and imaginary parts of k are equal in magnitude, meaning the wave amplitude decays exponentially (attenuation) at the same rate as it oscillates (propagation). The fields diffuse into the conductor rather than propagating as radiation. This is the basis of diffusive electromagnetic methods (MT, controlled-source EM) in conductive Earth materials. At low frequencies (long skin depths), EM fields penetrate deeply; at high frequencies, they are confined near the surface.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -304,12 +304,12 @@
       "difficulty": "hard",
       "stem": "A LaCoste-Romberg gravimeter measures the relative difference in gravitational acceleration between two points. What is the primary physical principle used in this instrument?",
       "options": [
-        "Measuring the period of a pendulum",
-        "Measuring the displacement of a mass on a zero-length spring, where the restoring force is proportional to the total extension",
         "Measuring the deflection of a torsion balance",
-        "Measuring the capacitance change between parallel plates"
+        "Measuring the capacitance change between parallel plates",
+        "Measuring the period of a pendulum",
+        "Measuring the displacement of a mass on a zero-length spring, where the restoring force is proportional to the total extension"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The LaCoste-Romberg gravimeter uses a 'zero-length spring' — a spring manufactured under tension so that its unstressed length is effectively zero. A mass is suspended from this spring, and the balance condition is mg = kx, where g is gravitational acceleration, m is the proof mass, k is the spring constant, and x is the extension. A change in g causes the mass to displace, and this displacement is measured using an optical lever or capacitive sensor. The zero-length spring design provides very high sensitivity (~0.01 mGal) because the restoring force is proportional to the total extension, not the extension beyond equilibrium.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -325,12 +325,12 @@
       "difficulty": "easy",
       "stem": "The Bouguer gravity anomaly is obtained by applying the free-air correction, the Bouguer slab correction, and the terrain correction to the observed gravity. In a mountainous region, the terrain correction is always:",
       "options": [
-        "Negative, because nearby mountains increase the observed gravity",
         "Positive, because it accounts for the mass deficiency below the station relative to the Bouguer slab",
         "Zero, because the Bouguer slab correction already accounts for all topographic effects",
-        "Can be positive or negative depending on whether the terrain is higher or lower than the station"
+        "Can be positive or negative depending on whether the terrain is higher or lower than the station",
+        "Negative, because nearby mountains increase the observed gravity"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "The terrain correction accounts for the gravitational effect of topographic deviations from the flat Bouguer slab model. Terrain higher than the station attracts the gravimeter upward, reducing the vertical component of gravity (negative effect that must be corrected positively). Terrain lower than the station represents mass deficiency relative to the slab (also requiring a positive correction). In practice, the terrain correction is ALWAYS positive because both mountains above and valleys below the station produce effects that reduce the measured gravity relative to the Bouguer slab model. This is because: (1) elevated terrain pulls horizontally on the mass, reducing the vertical component, and (2) missing mass in valleys removes a positive vertical contribution.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -351,12 +351,12 @@
       "difficulty": "medium",
       "stem": "The gravity gradient tensor is a symmetric 3×3 tensor with 5 independent components. The vertical gravity gradient T_zz = ∂²V/∂z² provides information about subsurface density contrasts. What is the physical significance of the trace of the gravity gradient tensor (∇²V = T_xx + T_yy + T_zz)?",
       "options": [
+        "It is proportional to the curvature of the geoid",
         "It equals the local gravitational acceleration",
         "It equals zero outside the source body (satisfies Laplace's equation)",
-        "It equals twice the density at the observation point",
-        "It is proportional to the curvature of the geoid"
+        "It equals twice the density at the observation point"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The trace of the gravity gradient tensor equals ∇²V, which is Laplace's equation in source-free regions. Outside the source body (where ρ = 0), the gravitational potential satisfies ∇²V = 0, so T_xx + T_yy + T_zz = 0. Inside the source body, ∇²V = −4πGρ (Poisson's equation). This constraint reduces the 9 tensor components to 5 independent ones outside sources. Full-tensor gradiometry (FTG) measures all 5 independent components, providing enhanced spatial resolution and the ability to separate overlapping anomalies compared to conventional gravity surveys.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -372,12 +372,12 @@
       "difficulty": "medium",
       "stem": "The magnetic susceptibility (κ) of a rock quantifies its ability to become magnetized in an applied magnetic field. Which of the following minerals has the highest magnetic susceptibility and dominates the magnetic properties of most igneous rocks?",
       "options": [
-        "Quartz",
-        "Magnetite (Fe₃O₄)",
         "Calcite",
-        "Feldspar"
+        "Feldspar",
+        "Quartz",
+        "Magnetite (Fe₃O₄)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Magnetite (Fe₃O₄) has a ferrimagnetic structure with a saturation magnetization of ~480 kA/m and susceptibilities typically in the range 10⁻¹–10⁴ SI (volume), orders of magnitude higher than paramagnetic minerals like biotite or pyroxene (~10⁻³–10⁻⁵ SI). Even small amounts of magnetite (0.1–1% by volume) dominate the bulk magnetic susceptibility of a rock. Quartz, calcite, and feldspar are diamagnetic (negative susceptibility, ~−10⁻⁵ SI) and contribute negligibly to the rock's magnetic properties. This is why magnetic surveys primarily map variations in magnetite content.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -393,12 +393,12 @@
       "difficulty": "medium",
       "stem": "Reduction to the Pole (RTP) is a standard processing step in magnetic data interpretation. What is the primary purpose of RTP?",
       "options": [
-        "To remove the effects of temporal magnetic field variations (diurnal correction)",
         "To transform the observed magnetic anomaly to what it would look like if measured at the magnetic pole, where the field is vertical, thereby centering anomalies directly over their sources",
         "To convert total magnetic intensity to the vertical component only",
-        "To remove the regional trend from the magnetic data"
+        "To remove the regional trend from the magnetic data",
+        "To remove the effects of temporal magnetic field variations (diurnal correction)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "RTP transforms magnetic anomaly data as if the geomagnetic field were vertical (i.e., at the magnetic pole). At non-polar latitudes, the inclined ambient field causes magnetic anomalies to be asymmetric and shifted laterally from their sources — the positive and negative lobes are offset. RTP corrects this by applying a Fourier-domain filter that accounts for the inclination and declination of the field. The result centers positive anomalies directly over causative bodies, greatly simplifying interpretation. RTP can be unstable at low magnetic latitudes (near the magnetic equator) where the field is nearly horizontal, requiring special techniques like low-latitude RTP or phase-correction filters.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -414,12 +414,12 @@
       "difficulty": "easy",
       "stem": "Euler deconvolution is used to estimate the location and depth of magnetic (or gravity) sources. The structural index (N) in Euler's equation determines the type of source body being modeled. What is the structural index for a sphere (approximating a compact, equidimensional body)?",
       "options": [
+        "N = 3 (for a dipole",
         "N = 0 (for a contact or step)",
         "N = 1 (for a horizontal cylinder)",
-        "N = 2 (for a sphere)",
-        "N = 3 (for a dipole"
+        "N = 2 (for a sphere)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The structural index N in Euler's homogeneity equation relates to the geometry of the source: N = 0 for a contact/step (2D), N = 1 for a horizontal cylinder (2D) or vertical pipe, N = 2 for a sphere or point pole, N = 3 for a dipole. The Euler equation is (x−x₀)∂T/∂x + (y−y₀)∂T/∂y + (z−z₀)∂T/∂z = N(B−T), where (x₀,y₀,z₀) is the source location, T is the total field, and B is the background value. The correct structural index must be chosen based on geological knowledge of the expected source geometry; an incorrect N yields erroneous depth estimates.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -435,12 +435,12 @@
       "difficulty": "hard",
       "stem": "In a Wenner electrode configuration for DC resistivity surveying, four electrodes are placed in a line with equal spacing 'a' between adjacent electrodes. What is the formula for apparent resistivity (ρ_a) in terms of the measured voltage (ΔV) and current (I)?",
       "options": [
-        "ρ_a = 2πa × (ΔV/I)",
-        "ρ_a = πa × (ΔV/I)",
         "ρ_a = (ΔV/I) / (2πa)",
-        "ρ_a = a × (ΔV/I)"
+        "ρ_a = a × (ΔV/I)",
+        "ρ_a = 2πa × (ΔV/I)",
+        "ρ_a = πa × (ΔV/I)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For the Wenner array with equal electrode spacing a, the geometric factor K = 2πa. The apparent resistivity is ρ_a = K × (ΔV/I) = 2πa(ΔV/I). This is derived from the potential distribution due to point current sources on the surface of a homogeneous half-space: V = (ρI)/(2πr) for each current electrode, with appropriate signs for the two current electrodes and measurement between the two potential electrodes. The Wenner array has high signal-to-noise ratio and good vertical resolution but requires all four electrodes to be moved for each measurement point.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -461,12 +461,12 @@
       "difficulty": "easy",
       "stem": "Induced Polarization (IP) measurements in time-domain mode record the voltage decay after the transmitted current is switched off. The chargeability (m) is defined as the ratio of the integral of the decay voltage to the primary voltage. IP effects are most pronounced in rocks containing:",
       "options": [
-        "Quartz and feldspar, due to their high electrical resistance",
         "Disseminated metallic sulphides and clays, due to electrode polarization and membrane polarization respectively",
         "Magnetite, due to its ferrimagnetic properties",
-        "Dry sand, due to the lack of pore fluid"
+        "Dry sand, due to the lack of pore fluid",
+        "Quartz and feldspar, due to their high electrical resistance"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "IP effects arise from two mechanisms: (1) Electrode polarization — occurs at the interface between metallic minerals (pyrite, chalcopyrite, galena) and electrolyte, where charge accumulation at mineral-electrolyte interfaces causes a voltage decay when current is switched off. (2) Membrane polarization — occurs in clay-rich rocks where fine clay particles in pore throats impede ion movement, creating charge accumulation. Magnetite can also produce IP effects but the most diagnostic IP anomalies are associated with disseminated sulphide mineralization, making IP a primary exploration tool for massive sulphide deposits.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -482,12 +482,12 @@
       "difficulty": "hard",
       "stem": "The Dar-Zarrouk parameters — longitudinal conductance (S = σt) and transverse resistance (T = ρt) — are used to characterize layered earth models. For a thin conductive layer at depth, which parameter is more sensitive to the layer's presence in a vertical electrical sounding (VES)?",
       "options": [
+        "Neither, because Dar-Zarrouk parameters only apply to 2D structures",
         "Longitudinal conductance S, because current preferentially flows through conductive layers",
         "Transverse resistance T, because current is forced to cross the layer",
-        "Both S and T are equally sensitive to all layers",
-        "Neither, because Dar-Zarrouk parameters only apply to 2D structures"
+        "Both S and T are equally sensitive to all layers"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In a layered earth, DC resistivity soundings exhibit equivalence — multiple different layer models can produce identical surface responses. The Dar-Zarrouk parameters help resolve this: a thin conductive layer (low ρ, small t) is best characterized by its longitudinal conductance S = σt = t/ρ (the S-equivalence), because current flows preferentially through conductive layers (horizontally). Conversely, a thin resistive layer is best characterized by its transverse resistance T = ρt (the T-equivalence), because current must cross it vertically. For a thin conductive layer, S is well-determined from the sounding data, but the individual values of ρ and t cannot be resolved independently.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -503,12 +503,12 @@
       "difficulty": "easy",
       "stem": "The skin depth (δ) in electromagnetic methods defines the depth at which the EM field amplitude decays to 1/e of its surface value. If the frequency of the transmitted signal is doubled while all other parameters remain constant, the skin depth:",
       "options": [
-        "Doubles",
-        "Halves",
         "Decreases by a factor of √2",
-        "Increases by a factor of √2"
+        "Increases by a factor of √2",
+        "Doubles",
+        "Halves"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The skin depth is given by δ = √(2ρ/(ωμ)) = √(ρ/(πfμ)), where ρ is resistivity, ω = 2πf is angular frequency, f is frequency, and μ is magnetic permeability. Since δ ∝ 1/√f, doubling the frequency (f → 2f) changes δ by a factor of 1/√2 ≈ 0.707. So the skin depth decreases by a factor of √2. This inverse-square-root relationship between skin depth and frequency is fundamental to frequency-domain EM methods — lower frequencies penetrate deeper, providing information about deeper structures.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "Magnetotelluric (MT) impedance Z(ω) is computed from the ratio of the electric field to the magnetic field at the Earth's surface. The apparent resistivity is ρ_a = |Z|²/(ωμ). For a uniform half-space of resistivity ρ, what is the phase of the MT impedance?",
       "options": [
-        "0°",
         "45°",
         "90°",
-        "180°"
+        "180°",
+        "0°"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a uniform half-space, the MT impedance is Z = √(iωμρ/2) = √(ωμρ/2) × e^(iπ/4). The phase of Z is π/4 = 45°. This is a fundamental result: for a uniform Earth, the electric and magnetic fields are 45° out of phase. For a layered Earth, the phase deviates from 45° — phases greater than 45° indicate increasing conductivity with depth (approaching 90° for a perfect conductor), while phases less than 45° indicate decreasing conductivity with depth (approaching 0° for a perfect insulator). The phase is often more diagnostic than apparent resistivity for identifying conductivity boundaries.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -555,12 +555,12 @@
       "difficulty": "medium",
       "stem": "Ground Penetrating Radar (GPR) uses high-frequency electromagnetic pulses (10 MHz – 2 GHz) to image shallow subsurface structures. In which of the following geological environments would GPR have the GREATEST penetration depth?",
       "options": [
+        "Volcanic terrain with conductive ash layers",
         "Clay-rich soil with high moisture content",
         "Dry, resistive sand or gravel with minimal clay content",
-        "Saturated marine sediments",
-        "Volcanic terrain with conductive ash layers"
+        "Saturated marine sediments"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "GPR penetration depth is inversely related to the electrical conductivity (and thus inversely related to the dielectric loss) of the subsurface material. In dry, resistive sand or gravel (ρ > 1000 Ω·m), GPR signals propagate with minimal attenuation and can penetrate 10–30 m or more. In clay-rich soils (ρ < 10 Ω·m), saturated sediments, or conductive volcanic materials, the EM energy is rapidly absorbed, limiting penetration to 1–3 m or less. GPR works best in: dry materials, frozen ground, clean sands/gravels, fresh-water saturated formations, and resistive bedrock. Frequency also affects penetration: lower frequencies (10–100 MHz) penetrate deeper but with lower resolution.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "In Common Mid-Point (CMP) seismic acquisition, multiple source-receiver pairs share the same midpoint location but have different offsets. What is the primary advantage of CMP stacking?",
       "options": [
-        "It eliminates the need for static corrections",
-        "It enhances the signal-to-noise ratio (SNR) by a factor of √N, where N is the number of traces in the CMP gather",
         "It automatically corrects for normal moveout (NMO)",
-        "It provides information about the velocity of the water column in marine surveys"
+        "It provides information about the velocity of the water column in marine surveys",
+        "It eliminates the need for static corrections",
+        "It enhances the signal-to-noise ratio (SNR) by a factor of √N, where N is the number of traces in the CMP gather"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "CMP stacking improves SNR by coherently summing N traces that share the same subsurface reflection point. Random noise reduces by √N while coherent signal stacks constructively (after NMO correction), yielding an SNR improvement of √N. For N = 24 folds, this is approximately a 5× improvement. CMP stacking also: (1) attenuates multiples (if velocity filtering is applied), (2) provides redundancy for velocity analysis, and (3) improves spatial sampling. The NMO correction must be applied before stacking to align reflections across offsets, using the velocity model derived from the data.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -597,12 +597,12 @@
       "difficulty": "medium",
       "stem": "Seismic migration repositions dipping reflectors to their true subsurface locations and collapses diffraction hyperbolae. In a time-migrated seismic section, the migration aperture (the lateral distance over which migration operator spreads energy) is controlled by:",
       "options": [
-        "Only the dominant frequency of the seismic wavelet",
         "The dip of the reflector, the depth of the reflector, and the migration velocity",
-        "Only the number of channels in the recording spread",
-        "The sampling interval in the shot domain"
+        "Applies to specific environments",
+        "The sampling interval in the shot domain",
+        "Used for high-volume low-variety"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The migration aperture — the lateral distance over which the migration operator must spread to correctly position a reflector — depends on: (1) reflector dip (steeper dips require wider aperture), (2) depth (deeper reflectors require wider aperture for the same dip), and (3) migration velocity (higher velocities increase the aperture). The aperture can be approximated as W = 2z tan(θ) where z is depth and θ is the maximum dip. Insufficient aperture results in undermigration (dipping events not fully repositioned), while excessive aperture increases computational cost and may introduce artifacts. Aperture apodization (tapering at the edges) is used to reduce edge effects.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -618,12 +618,12 @@
       "difficulty": "easy",
       "stem": "Amplitude Variation with Offset (AVO) analysis uses the Zoeppritz equations to relate reflection coefficient to angle of incidence. In a Class III AVO anomaly (bright spot), a gas-sand layer has lower impedance than the overlying shale. How does the reflection coefficient typically behave as the incidence angle increases from 0° to 30°?",
       "options": [
+        "The reflection coefficient is zero at all angles due to impedance matching",
         "The magnitude of the negative reflection coefficient decreases with increasing angle",
         "The reflection coefficient becomes more negative (larger in magnitude) with increasing angle",
-        "The reflection coefficient is positive and increases with angle",
-        "The reflection coefficient is zero at all angles due to impedance matching"
+        "The reflection coefficient is positive and increases with angle"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Class III AVO anomalies (Rutherford and Williams classification) are characterized by: (1) a negative intercept (A < 0) due to lower impedance in the gas sand, and (2) a negative gradient (B < 0) causing the reflection coefficient to become more negative with increasing offset. This produces a 'bright spot' that brightens further at far offsets. The negative gradient arises from the specific relationships between Vp, Vs, and density across the gas-sand/shale interface. Class I is positive intercept, decreasing magnitude; Class II is near-zero intercept, becoming negative; Class III is negative intercept, becoming more negative.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -639,12 +639,12 @@
       "difficulty": "medium",
       "stem": "Gassmann's equation relates the bulk modulus of a saturated rock (K_sat) to the dry-rock bulk modulus (K_dry), the mineral bulk modulus (K_0), the pore fluid bulk modulus (K_f), and the porosity (φ). For a rock with fixed mineralogy and porosity, replacing brine (K_f ≈ 2.2 GPa) with gas (K_f ≈ 0.0001 GPa) will:",
       "options": [
-        "Increase K_sat significantly, causing a large increase in P-wave velocity",
-        "Decrease K_sat, causing a decrease in P-wave velocity, while S-wave velocity is nearly unchanged",
         "Increase both Vp and Vs equally",
-        "Have no effect on elastic moduli because the mineral framework is unchanged"
+        "Have no effect on elastic moduli because the mineral framework is unchanged",
+        "Increase K_sat significantly, causing a large increase in P-wave velocity",
+        "Decrease K_sat, causing a decrease in P-wave velocity, while S-wave velocity is nearly unchanged"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Gassmann's equation: K_sat = K_dry + (1 − K_dry/K_0)² / (φ/K_f + (1−φ)/K_0 − K_dry/K_0²). Replacing brine with gas dramatically reduces K_f (from ~2.2 GPa to ~0.0001 GPa), which decreases the denominator φ/K_f, increasing the overall fraction, but the dominant effect is that K_sat ≈ K_dry (the fluid term becomes negligible). This causes a significant drop in Vp = √((K_sat + 4μ/3)/ρ_sat). Since shear modulus μ is unaffected by fluid (fluids don't support shear), Vs = √(μ/ρ_sat) changes only slightly due to the small density reduction when gas replaces brine. This Vp drop with minimal Vs change is the basis of AVO analysis for direct hydrocarbon detection.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -660,12 +660,12 @@
       "difficulty": "hard",
       "stem": "Archie's equation relates the formation factor (F = R₀/R_w) to porosity (φ) as F = a/φᵐ, where a is the tortuosity factor and m is the cementation exponent. For a well-cemented sandstone with intergranular porosity, typical values are a ≈ 1 and m ≈ 2. If such a sandstone has 20% porosity and R_w = 0.05 Ω·m, what is the formation factor F?",
       "options": [
-        "5",
         "25",
         "100",
-        "400"
+        "400",
+        "5"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Using Archie's equation: F = a/φᵐ = 1/(0.20)² = 1/0.04 = 25. The formation factor F represents the ratio of the resistivity of a 100% water-saturated rock (R₀) to the resistivity of the formation water (R_w). So R₀ = F × R_w = 25 × 0.05 = 1.25 Ω·m. The cementation exponent m reflects how porosity is interconnected: m ≈ 1 for unconsolidated sands, m ≈ 2 for consolidated sandstones, and m ≈ 2.5–3 for carbonates with vuggy porosity. The tortuosity factor a accounts for the deviation from a straight capillary model.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -681,12 +681,12 @@
       "difficulty": "medium",
       "stem": "In the design of a 3D seismic survey for reservoir characterization, the spatial sampling interval (trace spacing) must satisfy the Nyquist criterion to avoid spatial aliasing. If the maximum dip of a target reflector is 30° and the dominant frequency is 50 Hz with an average velocity of 2500 m/s, what is the maximum allowable trace spacing to avoid aliasing of the dipping event?",
       "options": [
+        "50 m",
         "6.25 m",
         "12.5 m",
-        "25 m",
-        "50 m"
+        "25 m"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Nyquist criterion for spatial sampling of a dipping reflector requires: Δx ≤ v/(2f_max sin(θ_max)), where v is the velocity, f_max is the maximum frequency, and θ_max is the maximum dip. However, a more practical form uses the apparent wavelength along the surface: λ_apparent = v/(f sin θ), and the sampling must be ≤ λ_apparent/2. With v = 2500 m/s, f = 50 Hz, θ = 30°: Δx ≤ 2500/(2 × 50 × sin 30°) = 2500/(2 × 50 × 0.5) = 2500/50 = 25 m. However, in practice, trace spacing should be at most λ_apparent/4 to avoid aliasing in processing (migration, dip-moveout). This gives Δx ≤ 25/2 = 12.5 m. The 12.5 m answer is the practical standard.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "The Fourier transform of a real-valued seismic trace x(t) satisfies the property X(−f) = X*(f), where X* denotes the complex conjugate. This property implies that:",
       "options": [
-        "The amplitude spectrum is asymmetric about f = 0",
-        "The amplitude spectrum is symmetric (even function) and the phase spectrum is antisymmetric (odd function)",
         "The phase spectrum is always zero",
-        "The time-domain signal must be causal"
+        "The time-domain signal must be causal",
+        "The amplitude spectrum is asymmetric about f = 0",
+        "The amplitude spectrum is symmetric (even function) and the phase spectrum is antisymmetric (odd function)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For a real-valued signal x(t), the Fourier transform exhibits Hermitian symmetry: X(−f) = X*(f). This means: |X(−f)| = |X(f)| — the amplitude spectrum is an even (symmetric) function, and arg(X(−f)) = −arg(X(f)) — the phase spectrum is an odd (antisymmetric) function. This is a fundamental property that allows us to represent a real signal using only positive frequencies, with the negative frequency components being redundant. The symmetry is exploited in seismic data processing to design zero-phase filters and in spectral analysis to interpret amplitude spectra.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -723,12 +723,12 @@
       "difficulty": "medium",
       "stem": "In seismic deconvolution, the goal is to remove the source wavelet w(t) from the recorded trace x(t) = w(t) * r(t) + n(t), where r(t) is the reflectivity and n(t) is noise. Wiener least-squares deconvolution designs an inverse filter f(t) such that f(t) * w(t) ≈ δ(t). What assumption about the reflectivity r(t) is critical for Wiener deconvolution to work effectively?",
       "options": [
-        "r(t) is a band-limited white noise process",
         "r(t) is a periodic signal",
         "r(t) has a known frequency spectrum matching the wavelet",
-        "r(t) is spatially correlated across traces"
+        "r(t) is spatially correlated across traces",
+        "r(t) is a band-limited white noise process"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Wiener deconvolution assumes the reflectivity r(t) is a white noise process — it has a flat amplitude spectrum (equal power at all frequencies) and is uncorrelated in time. This assumption is reasonable for many sedimentary sequences where reflections arise from random impedance contrasts. Given this assumption, the power spectrum of the trace is |X(f)|² = |W(f)|² × |R(f)|² ≈ |W(f)|² × constant (since R(f) is white). The Wiener filter can then estimate |W(f)|² from the data and design an inverse filter that whitens the trace, effectively compressing the wavelet and improving temporal resolution. Non-white reflectivity (e.g., from periodic thin beds) violates this assumption and degrades deconvolution performance.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -744,12 +744,12 @@
       "difficulty": "hard",
       "stem": "The Hilbert transform of a real signal x(t) produces a phase-shifted version x̂(t) that is 90° out of phase at all frequencies. The analytic signal z(t) = x(t) + ix̂(t) is used in seismic attribute analysis. What physical quantity does |z(t)| represent?",
       "options": [
+        "The time derivative of the signal",
         "The instantaneous frequency of the signal",
         "The instantaneous amplitude (envelope) of the signal",
-        "The instantaneous phase of the signal",
-        "The time derivative of the signal"
+        "The instantaneous phase of the signal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The analytic signal z(t) = x(t) + ix̂(t) has modulus |z(t)| = √(x²(t) + x̂²(t)), which is the instantaneous amplitude or envelope of the signal. The instantaneous phase is φ(t) = arctan(x̂(t)/x(t)), and the instantaneous frequency is f(t) = (1/2π)dφ/dt. The envelope |z(t)| is particularly useful in seismic attribute analysis because it highlights bright spots (hydrocarbon indicators), unconformities, and stratigraphic features. It is always positive and smooth, unlike the oscillating raw signal. The envelope is computed by applying the Hilbert transform (a 90° phase shifter implemented as a convolution with 1/(πt)) to each trace.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -770,12 +770,12 @@
       "difficulty": "easy",
       "stem": "The Spontaneous Potential (SP) log measures the natural electrical potential between a borehole electrode and a surface reference electrode. In a permeable sandstone formation surrounded by shale, the SP deflection is:",
       "options": [
-        "Always positive (to the right) regardless of the salinity contrast",
-        "Negative (to the left) when formation water is more saline than mud filtrate",
         "Zero because there is no current source in the formation",
-        "Positive (to the right) when formation water is more saline than mud filtrate"
+        "Positive (to the right) when formation water is more saline than mud filtrate",
+        "Always positive (to the right) regardless of the salinity contrast",
+        "Negative (to the left) when formation water is more saline than mud filtrate"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The SP deflection in a permeable bed is driven by the electrochemical potential arising from the salinity contrast between the borehole mud filtrate (R_mf) and the formation water (R_w). When R_w < R_mf (formation water more saline), ions flow from the formation into the borehole, producing a negative SP deflection (left deflection) relative to the shale baseline. When R_w > R_mf (formation water fresher), the deflection is positive (right). The SP log is used to: (1) identify permeable beds, (2) estimate formation water resistivity R_w from the static SP (SSP), and (3) perform water saturation calculations via Archie's equation.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -791,12 +791,12 @@
       "difficulty": "hard",
       "stem": "The density log uses a gamma-ray source (¹³⁷Cs, 662 keV) and two detectors to measure the bulk density of the formation through Compton scattering. Why is a dual-detector (near-far) system used instead of a single detector?",
       "options": [
-        "To measure both density and porosity simultaneously",
         "To compensate for borehole rugosity and mudcake effects on the gamma-ray count rate",
         "To measure the formation's natural gamma-ray emission",
-        "To increase the depth of investigation beyond 1 meter"
+        "To increase the depth of investigation beyond 1 meter",
+        "To measure both density and porosity simultaneously"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The dual-detector (near-far) density tool uses a ratio technique to compensate for borehole effects. Both detectors see the same formation, but the near detector is more affected by borehole conditions (mudcake, rugosity, standoff). The ratio of near-to-far count rates is related to formation density through a calibration curve, and this ratio automatically compensates for borehole irregularities that would bias a single-detector measurement. The补偿 (compensated) density log provides bulk density ρ_b with accuracy of ±0.01 g/cm³ in good borehole conditions. The density-derived porosity is: φ_D = (ρ_ma − ρ_b)/(ρ_ma − ρ_f), where ρ_ma is matrix density and ρ_f is fluid density.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -812,12 +812,12 @@
       "difficulty": "easy",
       "stem": "The sonic (acoustic) log measures the interval transit time (Δt, in μs/ft or μs/m) of P-waves through the formation. In a gas-bearing sandstone, the transit time is significantly higher (slower velocity) compared to a water-bearing sandstone of the same porosity. This effect is known as:",
       "options": [
+        "Borehole breakout",
         "Cycle skipping",
         "Gas effect or 'ballooning' of transit time",
-        "Anisotropy correction",
-        "Borehole breakout"
+        "Anisotropy correction"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Gas in the pore space dramatically reduces the bulk modulus of the rock-fluid system (since K_gas << K_brine), causing a large decrease in P-wave velocity (increase in Δt). This 'gas effect' produces anomalously high transit times that can be misinterpreted as high porosity if not recognized. The Wyllie time-average equation (Δt = φΔt_f + (1−φ)Δt_ma) overestimates porosity in gas zones because it does not account for the non-linear velocity-porosity relationship in gas-bearing rocks. The Raymer-Hunt-Bridge equation provides better estimates. The gas effect is most pronounced in the sonic log and is also visible in the density-neutron crossplot as a 'gas crossover.'",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -833,12 +833,12 @@
       "difficulty": "hard",
       "stem": "Radioactive decay follows the law N(t) = N₀ e^(−λt), where λ is the decay constant. The half-life t₁/₂ is the time required for half the atoms to decay. If a radioactive isotope has a half-life of 100 days, what fraction of the original atoms remains after 300 days?",
       "options": [
-        "1/2",
-        "1/4",
         "1/8",
-        "1/16"
+        "1/16",
+        "1/2",
+        "1/4"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "After n half-lives, the fraction remaining is (1/2)ⁿ. Here, 300 days = 3 half-lives (300/100 = 3), so the fraction remaining is (1/2)³ = 1/8 = 12.5%. This exponential decay law is fundamental to radiometric dating, nuclear logging tools (e.g., gamma-gamma density logging uses ¹³⁷Cs with t₁/₂ = 30.2 years), and health physics. The decay constant λ = ln(2)/t₁/₂ ≈ 0.693/t₁/₂.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -854,12 +854,12 @@
       "difficulty": "medium",
       "stem": "A Geiger-Müller (GM) counter detects ionizing radiation by means of gas ionization and avalanche multiplication. What is the main limitation of a GM counter for quantitative gamma-ray spectroscopy in well logging?",
       "options": [
-        "It cannot detect alpha particles",
         "It cannot distinguish between different gamma-ray energies because each detected photon produces an identical output pulse regardless of its energy",
         "It requires a high-voltage power supply that cannot be operated in borehole conditions",
-        "It is too sensitive and saturates in high radiation environments"
+        "It is too sensitive and saturates in high radiation environments",
+        "It cannot detect alpha particles"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The GM counter operates in the Geiger region where each ionizing event triggers a complete avalanche discharge, producing a large output pulse of uniform amplitude regardless of the energy of the initiating radiation. This means a GM counter can count gamma rays but cannot determine their energy — it provides no spectroscopic information. For gamma-ray spectroscopy (e.g., spectral gamma-ray logging to distinguish K, U, Th), scintillation detectors (NaI(Tl), BGO, or LaBr₃) are used because they produce output pulses proportional to the deposited energy. Scintillation detectors are the standard for modern spectral gamma-ray logging tools.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -875,12 +875,12 @@
       "difficulty": "medium",
       "stem": "In geophysical inversion, the forward problem computes predicted data d_pred = G(m) from a model m, and the inverse problem finds m that fits the observed data. Most geophysical inverse problems are ill-posed, meaning they may have:",
       "options": [
+        "A solution that is independent of the data",
         "A unique, stable solution for any dataset",
         "No solution, infinitely many solutions, or a solution that is unstable to small data perturbations",
-        "Only one solution that is always stable",
-        "A solution that is independent of the data"
+        "Applies to specific environments"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ill-posedness (in the sense of Hadamard) means the inverse problem may: (1) have no solution (if the data are inconsistent with any model), (2) have infinitely many solutions (non-uniqueness — multiple models fit the data equally well), or (3) have a solution that is unstable (small data errors cause large model changes). This is inherent to geophysical problems because: data are有限 and noisy, the sensitivity kernel may be rank-deficient, and the problem is underdetermined (more model parameters than data). Regularization (e.g., Tikhonov) stabilizes the inversion by adding constraints (smoothness, minimum norm, geological priors) to select a physically reasonable solution from the family of acceptable solutions.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -901,12 +901,12 @@
       "difficulty": "hard",
       "stem": "Tikhonov regularization stabilizes geophysical inversion by adding a penalty term to the objective function: Φ(m) = Φ_d + λΦ_m, where Φ_d = ||W_d(G(m) − d_obs)||² is the data misfit and Φ_m = ||W_m(m − m_ref)||² is the model regularization term. The regularization parameter λ controls the trade-off. If λ is chosen too large, the inversion result will:",
       "options": [
-        "Fit the noise in the data perfectly",
-        "Be overly smooth or biased toward the reference model, underfitting the data",
         "Produce a model with maximum complexity",
-        "Diverge from any reasonable solution"
+        "Diverge from any reasonable solution",
+        "Fit the noise in the data perfectly",
+        "Be overly smooth or biased toward the reference model, underfitting the data"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The regularization parameter λ controls the balance between fitting the data (Φ_d) and satisfying the model constraints (Φ_m). A very large λ forces the model to stay close to m_ref (or be very smooth if W_m is a derivative operator), regardless of how well it fits the data — the result is an underfit, over-smoothed model that may miss important features. A very small λ allows the model to fit the data closely but may incorporate noise and produce an unstable, oscillatory model. The optimal λ is typically chosen using: (1) the L-curve method (corner of the trade-off curve), (2) generalized cross-validation (GCV), or (3) targeting a specific misfit level (χ² = N_data for Gaussian noise).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -922,12 +922,12 @@
       "difficulty": "medium",
       "stem": "A company's revenue increased from ₹800 crore to ₹1000 crore in one year. What is the percentage increase in revenue?",
       "options": [
-        "20%",
         "25%",
         "30%",
-        "40%"
+        "40%",
+        "20%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Percentage increase = ((New − Old)/Old) × 100 = ((1000 − 800)/800) × 100 = (200/800) × 100 = 25%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -948,12 +948,12 @@
       "difficulty": "easy",
       "stem": "A can complete a task in 12 days and B can complete the same task in 18 days. If they work together for 4 days and then A leaves, how many more days will B need to finish the remaining work?",
       "options": [
+        "8 days",
         "5 days",
         "6 days",
-        "7 days",
-        "8 days"
+        "7 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "A's rate = 1/12 per day, B's rate = 1/18 per day. Together: (1/12 + 1/18) = (3 + 2)/36 = 5/36 per day. Work done in 4 days = 4 × 5/36 = 20/36 = 5/9. Remaining work = 1 − 5/9 = 4/9. B alone completes 1/18 per day. Days for B = (4/9)/(1/18) = (4/9) × 18 = 8 days.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -974,12 +974,12 @@
       "difficulty": "easy",
       "stem": "A shopkeeper marks an article 40% above the cost price and then offers a discount of 20%. What is the profit percentage?",
       "options": [
-        "10%",
-        "12%",
         "15%",
-        "20%"
+        "20%",
+        "10%",
+        "12%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let CP = 100. Marked price (MP) = 100 × 1.40 = 140. Selling price (SP) = 140 × 0.80 = 112. Profit = SP − CP = 112 − 100 = 12. Profit% = (12/100) × 100 = 12%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1000,12 +1000,12 @@
       "difficulty": "hard",
       "stem": "The average of 5 numbers is 42. If one number is excluded, the average becomes 38. What is the excluded number?",
       "options": [
-        "52",
         "56",
         "58",
-        "60"
+        "60",
+        "52"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Sum of 5 numbers = 5 × 42 = 210. Sum of 4 numbers = 4 × 38 = 152. Excluded number = 210 − 152 = 58.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1026,12 +1026,12 @@
       "difficulty": "hard",
       "stem": "Two dice are thrown simultaneously. What is the probability that the sum of the numbers on the two dice is greater than 9?",
       "options": [
+        "1/12",
         "1/6",
         "1/9",
-        "5/36",
-        "1/12"
+        "5/36"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Total outcomes = 6 × 6 = 36. Favourable outcomes (sum > 9): (4,6), (5,5), (5,6), (6,4), (6,5), (6,6) = 6 outcomes. Probability = 6/36 = 1/6.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1052,12 +1052,12 @@
       "difficulty": "medium",
       "stem": "In how many ways can the letters of the word 'GEOPHYSICS' be arranged such that the vowels always come together?",
       "options": [
-        "8! × 3!",
-        "8! × 4!",
         "7! × 3!",
-        "10! / 2!"
+        "10! / 2!",
+        "8! × 3!",
+        "8! × 4!"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "GEOPHYSICS has 10 letters: G, E, O, P, H, Y, S, I, C, S. Vowels: E, O, I (3 vowels). Treating the 3 vowels as one block: we have 7 consonants + 1 block = 8 entities. Arrangements = 8! × 3! (3! for internal arrangement of vowels). = 8! × 6 = 241,920.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1073,12 +1073,12 @@
       "difficulty": "easy",
       "stem": "The ratio of the present ages of A and B is 3:5. If the sum of their present ages is 48 years, what is B's age?",
       "options": [
-        "18 years",
         "24 years",
         "30 years",
-        "36 years"
+        "36 years",
+        "18 years"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Let ages be 3x and 5x. 3x + 5x = 48 → 8x = 48 → x = 6. B's age = 5x = 30 years.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1099,12 +1099,12 @@
       "difficulty": "medium",
       "stem": "A train 180 m long passes a pole in 12 seconds. How long will it take to cross a platform 240 m long?",
       "options": [
+        "28 seconds",
         "20 seconds",
         "22 seconds",
-        "24 seconds",
-        "28 seconds"
+        "24 seconds"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Speed of train = 180/12 = 15 m/s. Total distance to cross platform = 180 + 240 = 420 m. Time = 420/15 = 28 seconds.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1120,12 +1120,12 @@
       "difficulty": "medium",
       "stem": "The compound interest on a sum of ₹10,000 for 2 years at 10% per annum compounded annually is:",
       "options": [
-        "₹2,000",
-        "₹2,100",
         "₹2,200",
-        "₹2,500"
+        "₹2,500",
+        "₹2,000",
+        "₹2,100"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Amount = 10,000 × (1 + 10/100)² = 10,000 × (1.1)² = 10,000 × 1.21 = ₹12,100. CI = 12,100 − 10,000 = ₹2,100.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1146,12 +1146,12 @@
       "difficulty": "easy",
       "stem": "A cylindrical tank has a radius of 7 m and a height of 10 m. What is the volume of the tank? (Use π = 22/7)",
       "options": [
-        "1,200 m³",
         "1,400 m³",
         "1,540 m³",
-        "2,200 m³"
+        "2,200 m³",
+        "1,200 m³"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Volume = πr²h = (22/7) × 7² × 10 = (22/7) × 49 × 10 = 22 × 7 × 10 = 1,540 m³.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1172,12 +1172,12 @@
       "difficulty": "medium",
       "stem": "What is the remainder when 2²⁵ is divided by 7?",
       "options": [
+        "4",
         "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "2¹ = 2 (mod 7), 2² = 4 (mod 7), 2³ = 1 (mod 7). The cycle repeats every 3. 25 = 3 × 8 + 1, so 2²⁵ = 2¹ = 2 (mod 7). Remainder = 2.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1198,12 +1198,12 @@
       "difficulty": "medium",
       "stem": "In what ratio must a grocer mix two types of rice costing ₹30/kg and ₹45/kg respectively, to get a mixture worth ₹36/kg?",
       "options": [
-        "2:1",
-        "3:2",
         "3:1",
-        "4:3"
+        "4:3",
+        "2:1",
+        "3:2"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Using alligation: ₹30 ————— ₹45. Difference from mean (₹36): |30 − 36| = 6, |45 − 36| = 9. Ratio = 9:6 = 3:2.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "The HCF of two numbers is 12 and their LCM is 360. If one of the numbers is 72, what is the other number?",
       "options": [
-        "48",
         "50",
         "54",
-        "60"
+        "60",
+        "48"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "HCF × LCM = Product of numbers. 12 × 360 = 72 × x. x = (12 × 360)/72 = 4320/72 = 60.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1250,12 +1250,12 @@
       "difficulty": "medium",
       "stem": "Pipe A can fill a tank in 20 hours and Pipe B can empty it in 30 hours. If both pipes are opened simultaneously when the tank is empty, how many hours will it take to fill the tank?",
       "options": [
+        "80 hours",
         "40 hours",
         "50 hours",
-        "60 hours",
-        "80 hours"
+        "60 hours"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "A fills at 1/20 per hour, B empties at 1/30 per hour. Net rate = 1/20 − 1/30 = (3 − 2)/60 = 1/60 per hour. Time to fill = 60 hours.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1276,12 +1276,12 @@
       "difficulty": "hard",
       "stem": "A is twice as old as B. 5 years ago, A was three times as old as B. How old is A now?",
       "options": [
-        "20 years",
-        "15 years",
         "10 years",
-        "25 years"
+        "25 years",
+        "20 years",
+        "15 years"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let A's present age = 2x and B's present age = x. Five years ago: A − 5 = 3(B − 5). So 2x − 5 = 3(x − 5) → 2x − 5 = 3x − 15 → x = 10. A's present age = 2x = 20 years.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1302,12 +1302,12 @@
       "difficulty": "medium",
       "stem": "A vessel contains 80 litres of pure milk. 8 litres of milk is taken out and replaced with water. This process is repeated twice. How much milk remains in the vessel?",
       "options": [
-        "58.32 litres",
         "60.48 litres",
         "64.00 litres",
-        "65.61 litres"
+        "65.61 litres",
+        "58.32 litres"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "After each operation, the fraction of milk remaining = (1 − 8/80) = 9/10. After 2 operations: 80 × (9/10)² = 80 × 81/100 = 64.8 litres. The closest option is 64.00 litres.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1328,12 +1328,12 @@
       "difficulty": "medium",
       "stem": "A boat can travel 24 km upstream in 6 hours and 24 km downstream in 4 hours. What is the speed of the current?",
       "options": [
+        "4 km/hr",
         "1 km/hr",
         "2 km/hr",
-        "3 km/hr",
-        "4 km/hr"
+        "3 km/hr"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Upstream speed = 24/6 = 4 km/hr. Downstream speed = 24/4 = 6 km/hr. Speed of current = (Downstream − Upstream)/2 = (6 − 4)/2 = 1 km/hr.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1354,12 +1354,12 @@
       "difficulty": "hard",
       "stem": "A 120 m long train crosses a 180 m long platform in 12 seconds. What is the speed of the train in km/hr?",
       "options": [
-        "75 km/hr",
-        "60 km/hr",
         "90 km/hr",
-        "45 km/hr"
+        "45 km/hr",
+        "75 km/hr",
+        "60 km/hr"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Distance covered = length of train + length of platform = 120 + 180 = 300 m. Time = 12 seconds. Speed = 300/12 = 25 m/s. Converting to km/hr: 25 × 3.6 = 90 km/hr.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1380,12 +1380,12 @@
       "difficulty": "medium",
       "stem": "What comes next in the series: 2, 6, 12, 20, 30, ?",
       "options": [
-        "40",
         "42",
         "44",
-        "48"
+        "48",
+        "40"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The differences are: 4, 6, 8, 10, ?. The differences increase by 2 each time. Next difference = 12. Next term = 30 + 12 = 42. Alternatively, the nth term = n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1406,12 +1406,12 @@
       "difficulty": "hard",
       "stem": "In a certain code language, each letter is replaced by the letter that is 3 positions ahead in the alphabet. For example, 'A' becomes 'D' and 'X' becomes 'A' (wrapping around). Using this code, how is 'GEOPHYSICS' written?",
       "options": [
+        "JHRSBKVBVH",
         "JHRSBKVBVF",
         "JRQSBKVBVF",
-        "JHRSBLVBVF",
-        "JHRSBKVBVH"
+        "JHRSBLVBVF"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Each letter is shifted forward by 3: G→J, E→H, O→R, P→S, H→K, Y→B, S→V, I→L, C→F, S→V. So GEOPHYSICS is written as JHRSBKVBVF.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1432,12 +1432,12 @@
       "difficulty": "easy",
       "stem": "Find the odd one out: Seismograph, Gravimeter, Magnetometer, Altimeter",
       "options": [
-        "Seismograph",
-        "Gravimeter",
         "Magnetometer",
-        "Altimeter"
+        "Altimeter",
+        "Seismograph",
+        "Gravimeter"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Seismograph, Gravimeter, and Magnetometer are all geophysical instruments used to measure properties of the Earth's interior (seismic waves, gravity, and magnetic field respectively). An Altimeter measures altitude (height above a reference level), which is primarily a navigational/meteorological instrument, not a geophysical field measurement tool. While altimeters can be used in airborne geophysical surveys, they do not measure a geophysical field parameter.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a photograph, a man said, 'She is the daughter of the only son of my father's father.' How is the person in the photograph related to the man?",
       "options": [
-        "Sister",
         "Daughter",
         "Niece",
-        "Mother"
+        "Mother",
+        "Sister"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "My father's father = my grandfather. Only son of my grandfather = my father (or my uncle, but 'only son' means father). Daughter of my father = my sister or me... wait. Only son of my father's father = my father. Daughter of my father = my sister. But the answer options don't have sister. Let me re-examine: 'Only son of my father's father' = my father. 'Daughter of my father' could be the man's sister. But sister is option A. However, this is a common trick question. If the man IS the only son, then 'only son of my father's father' could be the man himself. Then 'daughter of the man' = daughter. Actually, the standard interpretation: my father's father = grandfather. Only son of grandfather = father (or the man himself if he's the only son). If it's the man himself, then daughter. If it's his father, then sister. The answer given is niece, which suggests: my father's father = grandfather. Only son of grandfather could be the man's uncle (father's brother). Daughter of uncle = niece. The answer is C (niece).",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1479,12 +1479,12 @@
       "difficulty": "hard",
       "stem": "Rahul starts from point A and walks 10 km North, then turns right and walks 6 km, then turns right again and walks 8 km. In which direction is he from point A?",
       "options": [
+        "South-West",
         "North-East",
         "North-West",
-        "South-East",
-        "South-West"
+        "South-East"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Starting at A, Rahul goes 10 km North to point B, then turns right (East) and walks 6 km to point C, then turns right (South) and walks 8 km to point D. From A: North displacement = 10 − 8 = 2 km North. East displacement = 6 km East. So D is 2 km North and 6 km East of A, which is in the North-East direction.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1505,12 +1505,12 @@
       "difficulty": "medium",
       "stem": "Statements: All geophysicists are scientists. Some scientists are professors. Conclusions: I. Some geophysicists are professors. II. Some professors are geophysicists. Which conclusion(s) logically follow(s)?",
       "options": [
-        "Only conclusion I follows",
-        "Only conclusion II follows",
-        "Both conclusions I and II follow",
-        "Neither conclusion I nor II follows"
+        "Suitable for high-rise buildings",
+        "Works under ideal conditions",
+        "Applies to specific environments",
+        "Used for high-volume low-variety"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "From 'All geophysicists are scientists' and 'Some scientists are professors,' we cannot conclude that any geophysicist is a professor. The 'some scientists' who are professors may not include any geophysicists. This is the fallacy of the undistributed middle. Similarly, we cannot conclude that some professors are geophysicists. Neither conclusion follows necessarily. A Venn diagram shows that the geophysicist circle is entirely within the scientist circle, and the professor circle overlaps with the scientist circle but may not overlap with the geophysicist circle.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1531,12 +1531,12 @@
       "difficulty": "medium",
       "stem": "A bar chart shows the production of a company (in tonnes) over 5 years: 2020: 120, 2021: 150, 2022: 130, 2023: 180, 2024: 200. What is the average annual growth rate from 2020 to 2024?",
       "options": [
-        "12.5%",
         "13.6%",
         "15.0%",
-        "16.7%"
+        "16.7%",
+        "12.5%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Average annual growth rate (CAGR) = [(Final/Initial)^(1/n) − 1] × 100 = [(200/120)^(1/4) − 1] × 100 = [(1.667)^(0.25) − 1] × 100. (1.667)^0.25 ≈ 1.1362. CAGR ≈ 13.62%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1557,12 +1557,12 @@
       "difficulty": "easy",
       "stem": "Aditya-L1 mission studies:",
       "options": [
+        "Deep space",
         "Moon's surface",
         "Mars atmosphere",
-        "Sun",
-        "Deep space"
+        "Sun"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Aditya-L1 is India's first solar observation mission.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1578,12 +1578,12 @@
       "difficulty": "easy",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
-        "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel",
+        "AMD"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1599,12 +1599,12 @@
       "difficulty": "medium",
       "stem": "COP28 was held in which country?",
       "options": [
-        "Egypt",
         "UAE",
         "India",
-        "UK"
+        "UK",
+        "Egypt"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "COP28 was held in Dubai, UAE.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
+        "2.0% of GDP",
         "0.5% of GDP",
         "1.0% of GDP",
-        "1.5% of GDP",
-        "2.0% of GDP"
+        "1.5% of GDP"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1641,12 +1641,12 @@
       "difficulty": "hard",
       "stem": "Which Indian IT company recently partnered with NVIDIA for AI cloud services?",
       "options": [
-        "TCS",
-        "Infosys",
         "Wipro",
-        "HCL"
+        "HCL",
+        "TCS",
+        "Infosys"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Infosys partnered with NVIDIA for AI cloud services.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1662,12 +1662,12 @@
       "difficulty": "hard",
       "stem": "The National Green Hydrogen Mission has an initial outlay of:",
       "options": [
-        "₹12,000 crore",
         "₹19,744 crore",
         "₹25,000 crore",
-        "₹50,000 crore"
+        "₹50,000 crore",
+        "₹12,000 crore"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The National Green Hydrogen Mission has an outlay of ₹19,744 crore.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1683,12 +1683,12 @@
       "difficulty": "easy",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
+        "8",
         "5",
         "6",
-        "7",
-        "8"
+        "7"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1704,12 +1704,12 @@
       "difficulty": "medium",
       "stem": "Southernmost point of India:",
       "options": [
-        "Indira Point",
-        "Kanyakumari",
         "Dhanushkodi",
-        "Rameswaram"
+        "Rameswaram",
+        "Indira Point",
+        "Kanyakumari"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Indira Point in Nicobar Islands is the southernmost point.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1725,12 +1725,12 @@
       "difficulty": "medium",
       "stem": "The river flowing through maximum Indian states:",
       "options": [
-        "Ganga",
         "Yamuna",
         "Godavari",
-        "Narmada"
+        "Narmada",
+        "Ganga"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Ganga flows through 11 states.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1746,12 +1746,12 @@
       "difficulty": "hard",
       "stem": "India gained independence on:",
       "options": [
+        "January 26, 1947",
         "January 26, 1950",
         "August 15, 1947",
-        "August 15, 1950",
-        "January 26, 1947"
+        "August 15, 1950"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India gained independence on August 15, 1947.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1767,12 +1767,12 @@
       "difficulty": "hard",
       "stem": "Convert to passive: 'The committee approved the proposal.'",
       "options": [
-        "The proposal was approved by the committee",
-        "The proposal is approved by the committee",
         "The proposal has been approved by committee",
-        "The proposal were approved by the committee"
+        "The proposal were approved by the committee",
+        "The proposal was approved by the committee",
+        "The proposal is approved by the committee"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Past simple passive: was/were + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1788,12 +1788,12 @@
       "difficulty": "medium",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
         "at",
         "off",
-        "up"
+        "up",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1809,12 +1809,12 @@
       "difficulty": "easy",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
+        "Stable",
         "Permanent",
         "Transient",
-        "Eternal",
-        "Stable"
+        "Eternal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1830,12 +1830,12 @@
       "difficulty": "medium",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
-        "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen",
+        "Improve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1851,12 +1851,12 @@
       "difficulty": "hard",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
-        "Lets eat, Grandma!",
         "Let's eat Grandma!",
         "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Let's, eat Grandma!",
+        "Lets eat, Grandma!"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1872,12 +1872,12 @@
       "difficulty": "medium",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
+        "their assignments",
         "Each of",
         "the students",
-        "have submitted",
-        "their assignments"
+        "have submitted"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1893,12 +1893,12 @@
       "difficulty": "hard",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
-        "at",
         "in",
-        "of"
+        "of",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1914,12 +1914,12 @@
       "difficulty": "easy",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
         "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1935,12 +1935,12 @@
       "difficulty": "hard",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
+        "have been",
         "were",
         "are",
-        "was",
-        "have been"
+        "was"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1956,12 +1956,12 @@
       "difficulty": "medium",
       "stem": "Which is correct? 'The news ___ shocking.'",
       "options": [
-        "were",
-        "are",
         "is",
-        "have been"
+        "have been",
+        "were",
+        "are"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "News is uncountable and takes a singular verb.",
       "estSec": 15,
       "topicWeight": 0.1,

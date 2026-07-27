@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The fundamental group pi_1 of a circle S^1 is isomorphic to:",
       "options": [
-        "The integers Z",
         "The trivial group {0}",
         "The real numbers R",
-        "Z_2"
+        "Z_2",
+        "The integers Z"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The fundamental group of S^1 is pi_1(S^1) = Z (the integers), where the integer n represents the winding number of loops around the circle. This is computed via the covering space R -> S^1 given by t -> exp(2*pi*i*t).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "medium",
       "stem": "The spectrum of the Hamiltonian for a free particle on a circle (periodic boundary conditions) consists of:",
       "options": [
-        "Discrete energy levels E_n = n^2*hbar^2/(2*m*L^2)",
-        "A continuous spectrum from 0 to infinity",
         "A single energy level",
-        "Two energy levels only"
+        "Two energy levels only",
+        "Discrete energy levels E_n = n^2*hbar^2/(2*m*L^2)",
+        "A continuous spectrum from 0 to infinity"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For a particle on a ring of circumference L with periodic boundary conditions psi(x+L) = psi(x), the wavefunctions are psi_n = exp(2*pi*i*n*x/L) with energies E_n = (2*pi*n*hbar)^2/(2*m*L^2). The spectrum is discrete because of the compact domain.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "easy",
       "stem": "In classical mechanics, gauge invariance of the charged particle Lagrangian under A -> A + grad(chi) requires the transformation psi -> psi * exp(ie*chi/hbar). This is an example of:",
       "options": [
+        "Galilean symmetry",
         "Local U(1) gauge symmetry",
         "Global U(1) symmetry",
-        "Lorentz symmetry",
-        "Galilean symmetry"
+        "Lorentz symmetry"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Local (spacetime-dependent) U(1) gauge symmetry requires the introduction of the gauge field A_mu to maintain invariance. This is the classical analogue of the minimal coupling prescription in quantum mechanics and is the foundation of electromagnetism as a gauge theory.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "medium",
       "stem": "In cavity quantum electrodynamics (QED), an atom in a high-finesse cavity can exhibit vacuum Rabi oscillations. The frequency of these oscillations is:",
       "options": [
-        "g (atom-cavity coupling strength)",
         "Delta (atom-cavity detuning)",
         "kappa (cavity decay rate)",
-        "Gamma (atomic decay rate)"
+        "Gamma (atomic decay rate)",
+        "g (atom-cavity coupling strength)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "On resonance (Delta = 0), the vacuum Rabi frequency is 2g where g is the single-photon coupling strength. The atom and cavity exchange energy at this frequency. For strong coupling (g >> kappa, Gamma), coherent quantum dynamics dominate. This is the basis of circuit QED and cavity QED experiments.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "medium",
       "stem": "Bell's inequality shows that quantum mechanics is incompatible with local hidden variable theories. The maximum quantum violation (Tsirelson bound) for the CHSH inequality is:",
       "options": [
-        "2",
-        "2*sqrt(2)",
         "3",
-        "4"
+        "4",
+        "2",
+        "2*sqrt(2)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Local hidden variables: |S| <= 2 (Bell/CHSH inequality). Quantum mechanics: |S| <= 2*sqrt(2) ~ 2.828 (Tsirelson bound). This maximum is achieved by maximally entangled states and specific measurement settings. The experimental violation confirms quantum nonlocality.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "hard",
       "stem": "Hawking radiation from a black hole has a temperature T_H = hbar*c^3/(8*pi*G*M*k_B). For a solar mass black hole, this temperature is approximately:",
       "options": [
+        "10^6 Kelvin",
         "60 nanoKelvin",
         "1 milliKelvin",
-        "1 Kelvin",
-        "10^6 Kelvin"
+        "1 Kelvin"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "T_H ~ 60 nK for M = M_sun. This is far below the CMB temperature (2.7 K), so stellar black holes absorb more radiation than they emit. Only primordial black holes with M << M_sun would have T_H > 2.7 K and could evaporate. The evaporation time scales as M^3.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "easy",
       "stem": "The transition from hadronic matter to quark-gluon plasma (QGP) is predicted by lattice QCD to occur at a critical temperature of approximately:",
       "options": [
-        "150 MeV (~1.7 x 10^12 K)",
         "1 MeV",
         "1 GeV",
-        "10 GeV"
+        "10 GeV",
+        "150 MeV (~1.7 x 10^12 K)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Lattice QCD predicts the deconfinement transition at T_c ~ 155 MeV (1.8 x 10^12 K). At this temperature, hadrons 'melt' into a plasma of quarks and gluons. The crossover (not a sharp phase transition for physical quark masses) was confirmed at RHIC and LHC.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "CP violation in the Standard Model arises from the complex phase in the CKM matrix. The parameter epsilon in the kaon system measures:",
       "options": [
-        "The amount of CP violation in K^0-K^0_bar mixing",
-        "The strong CP phase",
         "The Weinberg angle",
-        "The top quark mass"
+        "The top quark mass",
+        "The amount of CP violation in K^0-K^0_bar mixing",
+        "The strong CP phase"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "epsilon_K ~ 2.2 x 10^-3 parametrizes indirect CP violation in the neutral kaon system (K_L -> pi*pi decay). It arises from the imaginary part of box diagrams contributing to K^0-K^0_bar mixing. Direct CP violation is parametrized by epsilon'/epsilon.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "medium",
       "stem": "The first direct detection of gravitational waves (GW150914) by LIGO was from:",
       "options": [
+        "Rotating neutron star",
         "Merging black holes (binary black hole merger)",
         "Neutron star merger",
-        "Supernova explosion",
-        "Rotating neutron star"
+        "Supernova explosion"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "GW150914 (September 14, 2015) detected gravitational waves from the merger of two black holes (36 and 29 solar masses) 1.3 billion light-years away. The signal matched general relativistic predictions perfectly. Nobel Prize in Physics 2017 (Weiss, Barish, Thorne).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "medium",
       "stem": "A 3D topological insulator is characterized by:",
       "options": [
-        "Bulk band gap with conducting surface states protected by time-reversal symmetry",
-        "A superconducting gap",
         "Ferromagnetic order",
-        "Antiferromagnetic order"
+        "Antiferromagnetic order",
+        "Bulk band gap with conducting surface states protected by time-reversal symmetry",
+        "A superconducting gap"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Topological insulators (Bi_2Se_3, Bi_2Te_3) have an insulating bulk but conducting surface states with Dirac cone dispersion. These states are topologically protected: they cannot be gapped by time-reversal symmetric perturbations. The Z_2 topological invariant distinguishes trivial and topological insulators.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "medium",
       "stem": "The protein folding problem concerns how a polypeptide chain acquires its native 3D structure. The folding process occurs on a timescale of:",
       "options": [
-        "Microseconds to milliseconds",
         "Nanoseconds",
         "Seconds to minutes",
-        "Hours"
+        "Hours",
+        "Microseconds to milliseconds"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Most small proteins fold in microseconds to milliseconds (Levinthal's paradox: random search would take 10^77 years). The folding funnel landscape guides the process. AlphaFold (DeepMind, 2020) solved the protein structure prediction problem using deep learning.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "medium",
       "stem": "Earth's magnetic field is generated by the geodynamo - convective motion of liquid iron in the outer core. The field reverses polarity irregularly. The last reversal (Brunhes-Matuyama) occurred approximately:",
       "options": [
+        "1 billion years ago",
         "780,000 years ago",
         "10,000 years ago",
-        "10 million years ago",
-        "1 billion years ago"
+        "10 million years ago"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Brunhes-Matuyama reversal occurred ~780 ka. The current field is weakening (~10% per century) and the magnetic north pole is moving from Canada toward Siberia. Some interpret this as a possible precursor to reversal, though the process is not periodic.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "easy",
       "stem": "Climate sensitivity is defined as the equilibrium temperature change for a doubling of atmospheric CO_2. The IPCC AR6 best estimate is approximately:",
       "options": [
-        "3 degrees C",
-        "1 degree C",
         "5 degrees C",
-        "10 degrees C"
+        "10 degrees C",
+        "3 degrees C",
+        "1 degree C"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "IPCC AR6 (2021) gives equilibrium climate sensitivity as 2.5-4.0 degrees C (best estimate 3 degrees C). This ranges from 'likely' to 'very likely' given various feedback mechanisms (water vapor, clouds, albedo). This is a critical parameter for climate projections.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "hard",
       "stem": "In MRI (Magnetic Resonance Imaging), the Larmor frequency for hydrogen protons at 1.5 T is approximately:",
       "options": [
-        "63.9 MHz",
         "127.8 MHz",
         "255.6 MHz",
-        "42.6 MHz"
+        "42.6 MHz",
+        "63.9 MHz"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Larmor frequency f = gamma*B/(2*pi) where gamma/2pi = 42.58 MHz/T for ^1H. At 1.5 T: f = 42.58 * 1.5 = 63.87 MHz. At 3 T: 127.7 MHz. Higher field strength gives better signal-to-noise ratio but increases specific absorption rate (SAR).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "easy",
       "stem": "The spectral theorem for compact self-adjoint operators on a Hilbert space states that the operator can be written as:",
       "options": [
+        "As a nilpotent operator",
         "An infinite sum of lambda_n * |n><n| where lambda_n are eigenvalues",
         "As a single projection operator",
-        "As a unitary matrix",
-        "As a nilpotent operator"
+        "As a unitary matrix"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The spectral theorem: T = sum_n lambda_n P_n where P_n = |n><n> are projectors onto eigenspaces. This is fundamental for quantum mechanics (observable eigenvalues) and functional analysis. For compact operators the eigenvalues accumulate only at zero.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "easy",
       "stem": "A rolling coin (without slipping) is an example of a non-holonomic system because:",
       "options": [
-        "The constraint cannot be integrated to reduce the number of generalized coordinates",
-        "The constraint is frictionless",
         "The coin has no mass",
-        "The coin is perfectly rigid"
+        "The coin is perfectly rigid",
+        "The constraint cannot be integrated to reduce the number of generalized coordinates",
+        "The constraint is frictionless"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Non-holonomic constraints are velocity-dependent and non-integrable (e.g., v = omega*r for rolling). They reduce the accessible velocity space but not the configuration space. The coin can reach any position/orientation despite the constraint - the configuration space is still full-dimensional.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "hard",
       "stem": "The quantum Hall effect exhibits quantized Hall conductance sigma_xy = nu*e^2/h where nu is the filling factor. For the integer quantum Hall effect, nu equals:",
       "options": [
-        "An integer",
         "A fraction",
         "Zero",
-        "A half-integer"
+        "A half-integer",
+        "An integer"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The integer quantum Hall effect (von Klitzing, Nobel 1985): sigma_xy = n*e^2/h (n = 1, 2, 3...). The quantization is exact to 1 part in 10^9, independent of sample geometry. This is used as a resistance standard. The fractional quantum Hall effect (Laughlin, Nobel 1998) has nu = p/q.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "medium",
       "stem": "In quantum electrodynamics (QED), the anomalous magnetic moment of the electron (g-2)/2 arises from:",
       "options": [
+        "Weak interaction corrections",
         "Loop corrections (virtual electron-positron pairs and photons)",
         "Tree-level Dirac equation prediction",
-        "Classical electrodynamics",
-        "Weak interaction corrections"
+        "Classical electrodynamics"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Dirac equation predicts g = 2 exactly. QED corrections (Schwinger, 1948): (g-2)/2 = alpha/(2*pi) ~ 0.00116 (first order). Higher orders agree with experiment to 12 decimal places - the most precise prediction in physics.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "easy",
       "stem": "The semi-empirical mass formula (Bethe-Weizsäcker) for nuclear binding energy includes volume, surface, Coulomb, asymmetry, and pairing terms. The pairing term accounts for:",
       "options": [
-        "Even-even nuclei being more bound than odd-A nuclei",
-        "The Pauli exclusion principle in nuclear matter",
         "Nuclear saturation",
-        "Nuclear deformation"
+        "Nuclear deformation",
+        "Even-even nuclei being more bound than odd-A nuclei",
+        "The Pauli exclusion principle in nuclear matter"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The pairing term Delta(A) = +a_p/A^(3/4) for even-even, 0 for odd-A, -a_p/A^(3/4) for odd-odd nuclei. It reflects the tendency of nucleons to form Cooper-like pairs (S=0, L=0), analogous to superconductivity in nuclei. Even-even nuclei have the highest binding energy per nucleon.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "hard",
       "stem": "The Lawson criterion for a self-sustaining D-T fusion reaction specifies the product of density and confinement time n*tau_E must exceed approximately:",
       "options": [
-        "10^20 s/m^3",
         "10^14 s/m^3",
         "10^10 s/m^3",
-        "10^24 s/m^3"
+        "10^24 s/m^3",
+        "10^20 s/m^3"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Lawson criterion: n*tau_E > 1.5 x 10^20 s/m^3 at T ~ 15 keV for D-T fusion. This defines the 'triple product' n*tau_E*T > 3 x 10^21 keV*s/m^3. ITER aims to achieve n*tau_E ~ 3 x 10^21 s/m^3, exceeding the criterion by a factor of 15.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "hard",
       "stem": "A squeezed state of light reduces quantum noise in one quadrature below the vacuum level while increasing it in the orthogonal quadrature. The Heisenberg uncertainty principle is satisfied because:",
       "options": [
+        "The state is classical",
         "The product of uncertainties Delta_x * Delta_p >= hbar/2",
         "One uncertainty becomes zero",
-        "Both uncertainties decrease simultaneously",
-        "The state is classical"
+        "Both uncertainties decrease simultaneously"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Squeezing redistributes quantum noise: Delta_x < sqrt(hbar/2) but Delta_p > sqrt(hbar/2) such that the product still satisfies the uncertainty principle. Applications: gravitational wave detection (LIGO), quantum communication, sub-shot-noise measurements.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "easy",
       "stem": "Superconducting transmon qubits operate at temperatures of approximately:",
       "options": [
-        "10-20 milliKelvin",
-        "4 Kelvin",
         "77 Kelvin",
-        "300 Kelvin"
+        "300 Kelvin",
+        "10-20 milliKelvin",
+        "4 Kelvin"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Transmon qubits require dilution refrigerator temperatures (10-20 mK) to suppress thermal excitations (k_B*T << hbar*omega, where omega ~ 5 GHz). At 20 mK, thermal population is ~10^(-5). IBM and Google use transmons in their quantum processors.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "easy",
       "stem": "The Gutenberg-Richter law describes the frequency-magnitude distribution of earthquakes: log10(N) = a - b*M. The b-value is typically close to:",
       "options": [
-        "1.0",
         "0.5",
         "2.0",
-        "0.1"
+        "0.1",
+        "1.0"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "b ~ 1.0 globally, meaning for each magnitude 5 earthquake there are ~10 magnitude 4 and ~100 magnitude 3 earthquakes. Deviations from b=1 indicate stress conditions: b < 1 suggests increased stress (fewer small earthquakes), b > 1 suggests stress release.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "hard",
       "stem": "The Hodgkin-Huxley model describes action potential generation in neurons. The model includes voltage-gated ion channels for:",
       "options": [
+        "Sodium and Calcium only",
         "Sodium (Na^+) and Potassium (K^+) with a leak current",
-        "Only Calcium (Ca^2+)",
-        "Only Chloride (Cl^-)",
-        "Sodium and Calcium only"
+        "Suitable for high-rise buildings",
+        "Works under ideal conditions"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The HH model (Nobel Prize 1963): C_m*dV/dt = -g_Na*m^3*h*(V-E_Na) - g_K*n^4*(V-E_K) - g_L*(V-E_L). Four coupled ODEs for V, m, h, n. The sodium current is responsible for the upstroke, potassium for repolarization. This model revolutionized computational neuroscience.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "Technetium-99m is the most widely used radioisotope in diagnostic nuclear medicine. Its half-life is approximately:",
       "options": [
-        "6 hours",
-        "6 days",
         "60 hours",
-        "6 minutes"
+        "6 minutes",
+        "6 hours",
+        "6 days"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Tc-99m has t_1/2 = 6.01 hours, ideal for diagnostic imaging: long enough for imaging, short enough to limit patient dose. It emits 140 keV gamma rays (optimal for gamma cameras). Produced from Mo-99/Tc-99m generators.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "easy",
       "stem": "The Fokker-Planck equation describes the time evolution of the probability distribution for a stochastic process. For Brownian motion, it reduces to:",
       "options": [
-        "The diffusion equation (heat equation)",
         "The wave equation",
         "Laplace's equation",
-        "Poisson's equation"
+        "Poisson's equation",
+        "The diffusion equation (heat equation)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Fokker-Planck equation: dp/dt = -d/dx(A*p) + (1/2)*d^2/dx^2(B^2*p). For Brownian motion (A=0, B=sqrt(2D)): dp/dt = D*d^2p/dx^2 (diffusion equation). This connects microscopic (Langevin equation) to macroscopic (probability distribution) descriptions.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "hard",
       "stem": "Hamiltonian mechanics has a natural geometric structure on phase space given by the symplectic 2-form omega. Liouville's theorem (phase space volume preservation) follows from:",
       "options": [
+        "The uncertainty principle",
         "The closedness of the symplectic form (d*omega = 0)",
         "The Hamiltonian being conserved",
-        "Time-reversal symmetry",
-        "The uncertainty principle"
+        "Time-reversal symmetry"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The symplectic form omega = sum dp_i ^ dq_i is closed (d*omega = 0). By Cartan's formula, the Lie derivative L_X omega = d(i_X omega) + i_X(d*omega) = 0 for the Hamiltonian vector field X. This implies phase space volume is preserved under Hamiltonian flow.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "Quantum chromodynamics (QCD) is based on the gauge group SU(3). The gauge bosons (gluons) carry:",
       "options": [
-        "Color charge (unlike photons which are electrically neutral)",
-        "Electric charge",
         "No charge at all",
-        "Only mass"
+        "Suitable for high-rise buildings",
+        "Color charge (unlike photons which are electrically neutral)",
+        "Electric charge"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Unlike photons (neutral under U(1)_em), gluons carry color charge (8 types, one for each SU(3) generator). This leads to gluon self-interaction, asymptotic freedom (alpha_s decreases at short distances), and confinement (color charge cannot be isolated).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "medium",
       "stem": "The rotation curves of spiral galaxies show flat velocity profiles at large radii, implying the presence of:",
       "options": [
-        "Dark matter halo (missing mass)",
         "Supermassive black holes only",
         "Interstellar gas",
-        "Modified Newtonian dynamics only"
+        "Modified Newtonian dynamics only",
+        "Dark matter halo (missing mass)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Galaxy rotation curves: v(r) ~ constant for r >> optical disk, implying M(r) ~ r (enclosed mass grows linearly). This requires a dark matter halo extending well beyond the visible galaxy. The virial theorem and gravitational lensing provide independent confirmation.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "hard",
       "stem": "A Josephson junction consists of two superconductors separated by a thin barrier. The Josephson relations describe the supercurrent I = I_c*sin(phi) and the voltage-frequency relation V = (hbar/2e)*d*phi/dt. The second relation implies:",
       "options": [
+        "The current is proportional to resistance",
         "A DC voltage produces an AC current (AC Josephson effect)",
         "An AC voltage produces a DC current",
-        "No current flows",
-        "The current is proportional to resistance"
+        "No current flows"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The AC Josephson effect: a DC voltage V produces oscillations at frequency f = 2eV/h ~ 483.6 GHz/mV. This is used as a voltage standard (the Josephson constant 2e/h). The inverse: microwaves at frequency f produce quantized voltage steps V_n = n*h*f/(2e).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "medium",
       "stem": "Grand Unified Theories (GUTs) predict that protons are not absolutely stable. The current experimental lower limit on the proton lifetime is approximately:",
       "options": [
-        "> 10^34 years",
-        "> 10^10 years",
         "> 10^20 years",
-        "> 10^50 years"
+        "> 10^50 years",
+        "> 10^34 years",
+        "> 10^10 years"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Super-Kamiokande limits: tau(p -> e^+*pi^0) > 2.4 x 10^34 years, tau(p -> K^+*nu) > 5.9 x 10^33 years. GUTs predict proton decay via X-boson exchange with tau ~ M_GUT^4/(alpha_GUT^2*m_p^5). Minimal SU(5) is ruled out, but supersymmetric GUTs are still viable.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "medium",
       "stem": "The Kolmogorov complexity K(x) of a string x measures the shortest program that produces x. For a truly random string of length n, K(x) is approximately:",
       "options": [
-        "n (incompressible)",
         "log(n)",
         "sqrt(n)",
-        "n/2"
+        "n/2",
+        "n (incompressible)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A random string is incompressible: K(x) ~ n (the shortest description is the string itself). This connects algorithmic information theory to thermodynamics: entropy measures the average information content, analogous to Kolmogorov complexity for typical strings.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "hard",
       "stem": "Nuclear isomers are metastable excited states of nuclei. The longest-lived isomer known is:",
       "options": [
+        "Tantalum-180m (half-life 10^15 years)",
         "Hafnium-178m2 (half-life 31 years)",
         "Technetium-99m (half-life 6 hours)",
-        "Uranium-235m (half-life 26 minutes)",
-        "Tantalum-180m (half-life 10^15 years)"
+        "Uranium-235m (half-life 26 minutes)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Hf-178m2 has t_1/2 = 31 years, storing 2.45 MeV of energy. Ta-180m has an even longer half-life (~10^15 years) but is technically a ground state isomer. The isomeric transition releases gamma rays, making isomers candidates for gamma-ray lasers.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "hard",
       "stem": "Enhanced Geothermal Systems (EGS) extract heat from hot dry rock at depths of typically:",
       "options": [
-        "3-10 km",
-        "100-500 m",
         "50-100 km",
-        "0.5-1 km"
+        "0.5-1 km",
+        "3-10 km",
+        "100-500 m"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "EGS targets hot dry rock (HDR) at 3-10 km depth where temperatures reach 150-350 degrees C. Water is injected to fracture the rock and extract heat. The geothermal gradient averages ~25-30 degrees C/km. EGS could provide baseload renewable energy globally.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "CRISPR-Cas9 gene editing relies on RNA-DNA hybridization for target recognition. The energy of binding between guide RNA and target DNA is typically:",
       "options": [
-        "~2-3 kcal/mol per base pair",
         "~10 kcal/mol per base pair",
         "~0.1 kcal/mol per base pair",
-        "~50 kcal/mol per base pair"
+        "~50 kcal/mol per base pair",
+        "~2-3 kcal/mol per base pair"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "RNA-DNA hybrid stability is ~2-3 kcal/mol per base pair (weaker than DNA-DNA ~3 kcal/mol). The Cas9 protein requires ~20 bp of complementarity for stable binding, with the PAM sequence (NGG) providing initial recognition. Mismatches near the PAM are less tolerated.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "medium",
       "stem": "In radiation therapy, the linear-quadratic model describes cell survival as S = exp(-alpha*D - beta*D^2). The alpha/beta ratio determines:",
       "options": [
+        "The treatment time",
         "The sensitivity to dose fractionation",
         "The total dose delivered",
-        "The beam energy",
-        "The treatment time"
+        "The beam energy"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The alpha/beta ratio (Gy) characterizes tissue response to fractionation: high alpha/beta (~10 Gy) for tumors, low alpha/beta (~3 Gy) for late-responding normal tissues. This is the basis for hypofractionation schedules in modern radiotherapy.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "In quantum field theory, renormalization removes infinities by absorbing them into redefined (renormalized) parameters. The number of independent renormalization constants in QED is:",
       "options": [
-        "3 (charge, mass, field strength)",
-        "1",
         "2",
-        "4"
+        "4",
+        "3 (charge, mass, field strength)",
+        "1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "QED requires renormalization of: (1) charge (vacuum polarization), (2) electron mass (self-energy), (3) field strength/wavefunction (vertex corrections + self-energy). The Ward identity ensures Z_1 = Z_2, reducing the number of independent constants.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "hard",
       "stem": "The baryon asymmetry of the universe (more matter than antimatter) requires three Sakharov conditions. One of these is:",
       "options": [
-        "C and CP violation in particle interactions",
         "Conservation of baryon number",
         "Thermal equilibrium at all times",
-        "Exact CPT symmetry"
+        "Exact CPT symmetry",
+        "C and CP violation in particle interactions"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Sakharov conditions (1967): (1) Baryon number violation, (2) C and CP violation, (3) Departure from thermal equilibrium. These explain why matter survived baryon-antibaryon annihilation in the early universe. CP violation is observed in K and B meson systems.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "medium",
       "stem": "The kilonova observed during the neutron star merger GW170817 was powered by:",
       "options": [
+        "Gravitational wave energy",
         "Radioactive decay of r-process nuclei",
         "Thermal emission from the remnant",
-        "Synchrotron radiation",
-        "Gravitational wave energy"
+        "Synchrotron radiation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Kilonovae are powered by radioactive decay of heavy elements (r-process nucleosynthesis) synthesized in the neutron-rich ejecta. This confirmed that neutron star mergers are a major (possibly dominant) site of r-process element production, including gold, platinum, and uranium.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "Neuromorphic computing chips (e.g., Intel Loihi, IBM TrueNorth) mimic the brain's architecture by using:",
       "options": [
-        "Spiking neural networks with event-driven computation",
-        "Traditional von Neumann architecture",
         "Analog voltage amplifiers",
-        "Optical transistors"
+        "Optical transistors",
+        "Spiking neural networks with event-driven computation",
+        "Traditional von Neumann architecture"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Neuromorphic chips use artificial spiking neurons and synapses with event-driven (asynchronous) computation. This enables low-power inference at the edge: Loihi 2 achieves 1000x energy efficiency vs GPUs for certain inference tasks. Applications: sensory processing, robotics, adaptive control.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "medium",
       "stem": "If A can do a work in 15 days and B in 20 days, together they can do it in:",
       "options": [
-        "8.57 days",
         "9 days",
         "10 days",
-        "12 days"
+        "12 days",
+        "8.57 days"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "1/15 + 1/20 = 7/60. Time = 60/7 = 8.57 days.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -933,12 +933,12 @@
       "difficulty": "medium",
       "stem": "If A's salary is 20% more than B's, then B's salary is less than A's by:",
       "options": [
+        "15%",
         "16.67%",
         "20%",
-        "25%",
-        "15%"
+        "25%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Let B = 100, A = 120. B is less than A by 20/120 = 16.67%.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -959,12 +959,12 @@
       "difficulty": "medium",
       "stem": "Rs. 5000 at 8% per annum simple interest for 3 years amounts to:",
       "options": [
-        "Rs. 5400",
-        "Rs. 6000",
         "Rs. 6200",
-        "Rs. 6400"
+        "Rs. 6400",
+        "Rs. 5400",
+        "Rs. 6000"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "SI = 5000*8*3/100 = 1200. Amount = 5000+1200 = 6200.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "A and B invest Rs. 6000 and Rs. 8000 respectively. Profit of Rs. 2100 is to be shared in the ratio:",
       "options": [
-        "3:4",
         "4:3",
         "6:8",
-        "3:7"
+        "3:7",
+        "3:4"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Ratio = 6000:8000 = 3:4.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1011,12 +1011,12 @@
       "difficulty": "easy",
       "stem": "The sum of ages of 5 children born at 3-year intervals is 50. The age of the youngest child is:",
       "options": [
+        "10",
         "4",
         "6",
-        "8",
-        "10"
+        "8"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Let youngest = x. Ages: x, x+3, x+6, x+9, x+12. Sum = 5x+30 = 50. 5x = 20. x = 4.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1037,12 +1037,12 @@
       "difficulty": "medium",
       "stem": "Two trains 150m and 200m long are moving in the same direction at 40 km/h and 50 km/h. The faster train crosses the slower train in:",
       "options": [
-        "126 seconds",
-        "120 seconds",
         "100 seconds",
-        "90 seconds"
+        "90 seconds",
+        "126 seconds",
+        "120 seconds"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Relative speed = 50-40 = 10 km/h = 10*5/18 = 50/18 m/s. Distance = 150+200 = 350m. Time = 350/(50/18) = 350*18/50 = 126 seconds.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1063,12 +1063,12 @@
       "difficulty": "medium",
       "stem": "If January 1, 2024 is a Monday, what day is January 1, 2025?",
       "options": [
-        "Monday",
         "Tuesday",
         "Wednesday",
-        "Thursday"
+        "Thursday",
+        "Monday"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "2024 is a leap year (366 days). 366 = 52 weeks + 2 days. So Jan 1, 2025 is Monday + 2 = Wednesday. Wait: 366 mod 7 = 2. Monday + 2 days = Wednesday. But the answer should be Tuesday if we count from Monday as day 0. Let me recalculate: Jan 1 2024 = Monday. Dec 31 2024 is 365 days later (leap year). 365 mod 7 = 1. So Jan 1 2025 is Tuesday.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1089,12 +1089,12 @@
       "difficulty": "easy",
       "stem": "The area of a triangle with base 14 cm and height 8 cm is:",
       "options": [
+        "28 cm^2",
         "56 cm^2",
         "112 cm^2",
-        "224 cm^2",
-        "28 cm^2"
+        "224 cm^2"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Area = (1/2)*base*height = (1/2)*14*8 = 56 cm^2.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1110,12 +1110,12 @@
       "difficulty": "medium",
       "stem": "The average of 2, 4, 6, 8, 10 is:",
       "options": [
-        "5",
-        "6",
         "7",
-        "8"
+        "8",
+        "5",
+        "6"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Average = (2+4+6+8+10)/5 = 30/5 = 6.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1136,12 +1136,12 @@
       "difficulty": "easy",
       "stem": "A shopkeeper gives two successive discounts of 10% and 20%. The single equivalent discount is:",
       "options": [
-        "28%",
         "30%",
         "25%",
-        "27%"
+        "27%",
+        "28%"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "After 10% discount: 0.9. After 20%: 0.9*0.8 = 0.72. Effective discount = 1-0.72 = 28%.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1157,12 +1157,12 @@
       "difficulty": "medium",
       "stem": "Statements: All roses are flowers. Some flowers are thorns. Conclusions: I. Some roses are thorns. II. Some thorns are flowers.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Valid in controlled settings",
+        "Suitable for high-rise buildings",
+        "Works under ideal conditions",
+        "Used in limited applications"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "From 'Some flowers are thorns', we can conclude 'Some thorns are flowers' (converse is valid). We cannot conclude 'Some roses are thorns'. Only II follows.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -1183,12 +1183,12 @@
       "difficulty": "medium",
       "stem": "In a code language, if TABLE is written as SZBKD, how is CHAIR written?",
       "options": [
-        "BGZHQ",
-        "AGYHP",
         "BGYHQ",
-        "BGZIQ"
+        "BGZIQ",
+        "BGZHQ",
+        "AGYHP"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The coding pattern: each letter is shifted backward by 1 position (T->S, A->Z, B->S, L->K, E->D). So CHAIR: C->B, H->G, A->Z, I->H, R->Q = BGZHQ.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -1209,12 +1209,12 @@
       "difficulty": "hard",
       "stem": "Five people A, B, C, D, E sit in a row. A sits in the middle. B sits to the left of A. Who sits at the extreme right?",
       "options": [
-        "C",
         "D",
         "E",
-        "Cannot be determined"
+        "Cannot be determined",
+        "C"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "With only these constraints, the positions of C, D, E are not fully determined. We know A is in position 3, B is in position 1 or 2. The remaining positions could be filled by C, D, E in various ways.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -1235,12 +1235,12 @@
       "difficulty": "medium",
       "stem": "The mirror image of the letter 'R' is:",
       "options": [
+        "D",
         "A reversed R",
         "P",
-        "B",
-        "D"
+        "B"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The mirror image of 'R' is a horizontally reversed 'R'. It is not any standard letter.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1256,12 +1256,12 @@
       "difficulty": "easy",
       "stem": "On a standard die, the sum of numbers on opposite faces is:",
       "options": [
-        "6",
-        "7",
         "8",
-        "9"
+        "9",
+        "6",
+        "7"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "On a standard die, opposite faces sum to 7: 1-6, 2-5, 3-4.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1277,12 +1277,12 @@
       "difficulty": "easy",
       "stem": "In a pie chart showing expenditure, if food is 30% and rent is 20%, the angle for food is:",
       "options": [
-        "90 degrees",
         "108 degrees",
         "72 degrees",
-        "120 degrees"
+        "120 degrees",
+        "90 degrees"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Angle = 30% of 360 = 0.3*360 = 108 degrees.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1303,12 +1303,12 @@
       "difficulty": "hard",
       "stem": "Pipe A fills a tank in 6 hours and Pipe B in 8 hours. Both are opened, but after 2 hours B is closed. Time to fill the remaining:",
       "options": [
+        "3 hours",
         "1 hour 20 minutes",
         "2 hours",
-        "2 hours 40 minutes",
-        "3 hours"
+        "2 hours 40 minutes"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In 2 hours: A fills 2/6 = 1/3, B fills 2/8 = 1/4. Total = 1/3+1/4 = 7/12. Remaining = 5/12. A alone: (5/12)/(1/6) = 5/2 = 2.5 hours = 2 hours 30 minutes. Wait, 5/12 divided by 1/6 = 5/12 * 6 = 30/12 = 2.5 hours = 2 hours 30 minutes. This doesn't match any option. Let me recalculate: remaining = 5/12, A's rate = 1/6 per hour, time = (5/12)/(1/6) = 5/2 = 2.5 hours = 2 hours 30 minutes. This is not in options. If option C is 2 hours 40 minutes, that's 8/3 hours. 8/3 * 1/6 = 8/18 = 4/9. But we need 5/12. These don't match.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1329,12 +1329,12 @@
       "difficulty": "medium",
       "stem": "A number is increased by 20% and then decreased by 20%. The final number is:",
       "options": [
-        "Same as original",
-        "4% less",
         "4% more",
-        "2% less"
+        "2% less",
+        "Same as original",
+        "4% less"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let original = 100. After +20%: 120. After -20%: 96. Change = -4%.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1355,12 +1355,12 @@
       "difficulty": "easy",
       "stem": "A car travels 200 km in 4 hours. Its speed in m/s is approximately:",
       "options": [
-        "13.89",
         "15.25",
         "16.67",
-        "18.33"
+        "18.33",
+        "13.89"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Speed = 200/4 = 50 km/h = 50*5/18 = 250/18 = 13.89 m/s.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1376,12 +1376,12 @@
       "difficulty": "medium",
       "stem": "The HCF of 24 and 36 is:",
       "options": [
+        "4",
         "6",
         "12",
-        "8",
-        "4"
+        "8"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "24 = 2^3*3, 36 = 2^2*3^2. HCF = 2^2*3 = 12.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1402,12 +1402,12 @@
       "difficulty": "hard",
       "stem": "Choose the correct verb: 'The team _____ playing well.'",
       "options": [
-        "is",
-        "are",
         "were",
-        "have been"
+        "have been",
+        "is",
+        "are"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Team is a collective noun acting as a unit, so singular verb 'is' is correct.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1423,12 +1423,12 @@
       "difficulty": "medium",
       "stem": "What does 'run out of' mean?",
       "options": [
-        "To exhaust the supply of",
         "To escape from",
         "To exercise",
-        "To meet someone"
+        "To meet someone",
+        "To exhaust the supply of"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "'Run out of' means to use up the supply of something.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1444,12 +1444,12 @@
       "difficulty": "hard",
       "stem": "Choose the correct conditional: 'If it _____ tomorrow, we will cancel the picnic.'",
       "options": [
+        "would rain",
         "rains",
         "rained",
-        "will rain",
-        "would rain"
+        "will rain"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In first conditional (real/likely future), use present simple in the if-clause: 'If it rains...'",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1465,12 +1465,12 @@
       "difficulty": "medium",
       "stem": "Choose the one-word substitute for 'One who speaks many languages':",
       "options": [
-        "Polyglot",
-        "Monoglot",
         "Linguist",
-        "Philologist"
+        "Philologist",
+        "Polyglot",
+        "Monoglot"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A polyglot is a person who speaks many languages. A linguist studies languages but may not speak many.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1486,12 +1486,12 @@
       "difficulty": "hard",
       "stem": "In reading comprehension, context clues are used to:",
       "options": [
-        "Determine the meaning of unfamiliar words",
         "Memorize the passage",
         "Skip difficult sections",
-        "Write a summary"
+        "Write a summary",
+        "Determine the meaning of unfamiliar words"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Context clues are hints within the text that help determine the meaning of unfamiliar words. Types include definition, synonym, antonym, example, and inference clues.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1507,12 +1507,12 @@
       "difficulty": "easy",
       "stem": "BPCL recently commissioned a new refinery in:",
       "options": [
+        "Andhra Pradesh",
         "Assam",
         "Kerala",
-        "Maharashtra",
-        "Andhra Pradesh"
+        "Maharashtra"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "BPCL commissioned a refinery in Andhra Pradesh.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1528,12 +1528,12 @@
       "difficulty": "easy",
       "stem": "India's highest civilian award is:",
       "options": [
-        "Padma Vibhushan",
-        "Bharat Ratna",
         "Padma Bhushan",
-        "Gandhi Peace Prize"
+        "Gandhi Peace Prize",
+        "Padma Vibhushan",
+        "Bharat Ratna"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Bharat Ratna is India's highest civilian award.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1549,12 +1549,12 @@
       "difficulty": "medium",
       "stem": "India's indigenous aircraft carrier is:",
       "options": [
-        "INS Vikrant",
         "INS Vikramaditya",
         "INS Arighat",
-        "INS Arihant"
+        "INS Arihant",
+        "INS Vikrant"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "INS Vikrant is India's first indigenous aircraft carrier.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1570,12 +1570,12 @@
       "difficulty": "medium",
       "stem": "COP28 was held in which country?",
       "options": [
+        "UK",
         "Egypt",
         "UAE",
-        "India",
-        "UK"
+        "India"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "COP28 was held in Dubai, UAE.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1591,12 +1591,12 @@
       "difficulty": "hard",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
-        "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel",
+        "AMD"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1612,12 +1612,12 @@
       "difficulty": "hard",
       "stem": "India's 5G rollout was led by which telecom operator?",
       "options": [
-        "Airtel",
         "Jio",
         "BSNL",
-        "Vi"
+        "Vi",
+        "Airtel"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Reliance Jio led the 5G rollout in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1633,12 +1633,12 @@
       "difficulty": "easy",
       "stem": "The highest peak in India is:",
       "options": [
+        "Mount Everest",
         "K2",
         "Kangchenjunga",
-        "Nanda Devi",
-        "Mount Everest"
+        "Nanda Devi"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Kangchenjunga (8,586 m) is the highest peak in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1654,12 +1654,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
-        "Quartz",
-        "Topaz",
         "Diamond",
-        "Corundum"
+        "Corundum",
+        "Quartz",
+        "Topaz"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1675,12 +1675,12 @@
       "difficulty": "medium",
       "stem": "The President of India is elected by:",
       "options": [
-        "Lok Sabha members",
         "Rajya Sabha members",
         "Electoral College",
-        "Prime Minister"
+        "Prime Minister",
+        "Lok Sabha members"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1696,12 +1696,12 @@
       "difficulty": "hard",
       "stem": "India gained independence on:",
       "options": [
+        "January 26, 1947",
         "January 26, 1950",
         "August 15, 1947",
-        "August 15, 1950",
-        "January 26, 1947"
+        "August 15, 1950"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India gained independence on August 15, 1947.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1717,12 +1717,12 @@
       "difficulty": "hard",
       "stem": "Who ___ the book yesterday?",
       "options": [
-        "did wrote",
-        "wrote",
         "has wrote",
-        "written"
+        "written",
+        "did wrote",
+        "wrote"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1738,12 +1738,12 @@
       "difficulty": "hard",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
         "at",
         "off",
-        "up"
+        "up",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1759,12 +1759,12 @@
       "difficulty": "easy",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
+        "Stable",
         "Permanent",
         "Transient",
-        "Eternal",
-        "Stable"
+        "Eternal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1780,12 +1780,12 @@
       "difficulty": "medium",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
-        "at",
         "in",
-        "of"
+        "of",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1801,12 +1801,12 @@
       "difficulty": "medium",
       "stem": "What does 'candid' mean?",
       "options": [
-        "Secretive",
         "Frank and honest",
         "Formal",
-        "Polite"
+        "Polite",
+        "Secretive"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Candid means truthful and straightforward; frank.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1822,12 +1822,12 @@
       "difficulty": "medium",
       "stem": "What does 'ameliorate' mean?",
       "options": [
+        "Maintain",
         "Worsen",
         "Improve",
-        "Destroy",
-        "Maintain"
+        "Destroy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1843,12 +1843,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
-        "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent",
+        "Rare"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1864,12 +1864,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'pragmatic'?",
       "options": [
-        "Idealistic",
         "Practical",
         "Theoretical",
-        "Emotional"
+        "Emotional",
+        "Idealistic"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Pragmatic means dealing with things practically.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1885,12 +1885,12 @@
       "difficulty": "hard",
       "stem": "Which is correct? 'The news ___ shocking.'",
       "options": [
+        "have been",
         "were",
         "are",
-        "is",
-        "have been"
+        "is"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "News is uncountable and takes a singular verb.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1906,12 +1906,12 @@
       "difficulty": "easy",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
-        "had",
         "would",
-        "did"
+        "did",
+        "have",
+        "had"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,

@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The thermal Rayleigh number for mantle convection is Ra = (ρ₀ α g ΔT d³)/(κ η). For the lower mantle with η = 10²¹ Pa·s, κ = 10⁻⁶ m²/s, α = 2×10⁻⁵ K⁻¹, ΔT = 2500 K, d = 2900 km, ρ₀ = 4500 kg/m³, and g ≈ 10 m/s², the classical estimate gives Ra ~ 10⁶–10⁸. Which statement correctly interprets this result for mantle dynamics?",
       "options": [
-        "Ra ~ 10³ indicates the lower mantle is in a stagnant-lid regime with negligible convection",
-        "Ra ~ 10⁶–10⁸ means the lower mantle convects vigorously in a regime between laminar and chaotic, consistent with whole-mantle convection and plume generation",
         "Ra ~ 10¹² is unphysically large, suggesting the model assumptions are incorrect",
-        "Ra is irrelevant because mantle convection is governed solely by plate driving forces"
+        "Ra is irrelevant because mantle convection is governed solely by plate driving forces",
+        "Ra ~ 10³ indicates the lower mantle is in a stagnant-lid regime with negligible convection",
+        "Ra ~ 10⁶–10⁸ means the lower mantle convects vigorously in a regime between laminar and chaotic, consistent with whole-mantle convection and plume generation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Substituting values: Ra = (4500 × 2×10⁻⁵ × 10 × 2500 × (2.9×10⁶)³)/(10⁻⁶ × 10²¹) ≈ 10⁷. This places Earth's mantle in a regime where convection is vigorous enough for whole-mantle overturn and plume generation, but not fully turbulent. This is consistent with observations of large-scale mantle flow from seismic tomography.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -58,12 +58,12 @@
       "difficulty": "easy",
       "stem": "Post-glacial rebound in Fennoscandia produces ~10 mm/yr uplift. The uplift follows h(t) = h₀[1 − exp(−t/τ)] with h₀ ≈ 300 m and ice removal ~9000 years ago. Given dh/dt = (h₀/τ)exp(−t/τ), what mantle viscosity η is consistent with the observed uplift rate?",
       "options": [
+        "The uplift rate is independent of viscosity and governed solely by lithospheric flexural rigidity",
         "η ≈ 10¹⁸ Pa·s, corresponding to a very weak asthenosphere that relaxes rapidly",
         "η ≈ 10²⁰ Pa·s, consistent with a relatively low upper-mantle viscosity allowing incomplete relaxation after 9000 yr",
-        "η ≈ 10²² Pa·s, implying the mantle is nearly rigid and deformation is predominantly elastic",
-        "The uplift rate is independent of viscosity and governed solely by lithospheric flexural rigidity"
+        "η ≈ 10²² Pa·s, implying the mantle is nearly rigid and deformation is predominantly elastic"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Setting dh/dt = 0.01 m/yr with h₀ = 300 m and t = 9000 yr: 0.01 = (300/τ)exp(−9000/τ). Solving iteratively gives τ ~ 5000–10000 yr, corresponding to η ~ 10²⁰ Pa·s — the well-established upper-mantle viscosity from PGR studies.",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -80,12 +80,12 @@
       "difficulty": "hard",
       "stem": "True polar wander (TPW) involves reorientation of the entire solid Earth relative to the spin axis due to mass redistribution. The restoring torque arises from hydrostatic ellipticity with C − A ≈ 2.6×10³⁵ kg·m². If a lithospheric load of ΔI = 2×10³⁴ kg·m² is applied, what is the maximum TPW angle θ?",
       "options": [
-        "θ ≈ sin⁻¹(ΔI/(C−A)) ≈ 4.4°, representing a small but geologically significant reorientation",
         "θ ≈ 5°–15°, representing the maximum TPW consistent with paleomagnetic observations for large-scale loads",
         "θ ≈ 90°, because there is no physical limit to polar wander in a non-rigid Earth",
-        "TPW is purely an apparent wander due to plate motion and does not represent true reorientation"
+        "TPW is purely an apparent wander due to plate motion and does not represent true reorientation",
+        "θ ≈ sin⁻¹(ΔI/(C−A)) ≈ 4.4°, representing a small but geologically significant reorientation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The restoring torque equals the applied torque when sinθ = ΔI/(C−A) = 2×10³⁴/2.6×10³⁵ ≈ 0.077, giving θ ≈ 4.4°. However, for realistic large-scale loads (supercontinent assembly, slab accumulation), observed TPW angles range 5°–15° in the paleomagnetic record. The exact value depends on load geometry and Earth's elastic response.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -101,12 +101,12 @@
       "difficulty": "medium",
       "stem": "Stokes' formula computes geoid height N from gravity anomalies Δg: N = (R/4πγ) ∫∫ S(ψ) Δg dω. In practice, a cap of radius ψ₀ is used. Which statement about truncation error and modified Stokes functions is correct?",
       "options": [
-        "Truncation error is negligible for ψ₀ > 30° because the Stokes function decays as 1/ψ for large ψ",
-        "Modified Stokes functions (Wong-Gore, Meissl) apply a truncation modulator to minimize distant anomaly effects, and optimal ψ₀ depends on reference field resolution",
         "The truncation error can be eliminated by subtracting a spherical harmonic expansion to degree 360 from observed anomalies",
-        "Stokes' formula is only valid for a spherical Earth; for an ellipsoid, Vening Meinesz' formula must always be used"
+        "Stokes' formula is only valid for a spherical Earth; for an ellipsoid, Vening Meinesz' formula must always be used",
+        "Truncation error is negligible for ψ₀ > 30° because the Stokes function decays as 1/ψ for large ψ",
+        "Modified Stokes functions (Wong-Gore, Meissl) apply a truncation modulator to minimize distant anomaly effects, and optimal ψ₀ depends on reference field resolution"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Classical Stokes integration requires global anomalies, which are unavailable. Truncation introduces errors dependent on long-wavelength content outside the cap. Modified Stokes functions weight the integrand to taper to zero at ψ₀, suppressing distant anomalies. Optimal ψ₀ (typically 1°–5°) balances signal preservation against noise. The Wong-Gore and Meissl functions are standard choices in modern geoid determination.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -122,12 +122,12 @@
       "difficulty": "hard",
       "stem": "The LAMBDA method is the standard for GNSS carrier-phase ambiguity resolution. Which best describes its approach to integer least-squares estimation?",
       "options": [
+        "It solves ambiguity by applying the Chinese Remainder Theorem to combine code and carrier measurements",
         "It searches all integer combinations in a brute-force manner, feasible for single-baseline solutions only",
         "It applies a Z-transformation (integer Gaussian decorrelation) to the ambiguity covariance matrix, then performs a reduced-search-space integer least-squares search",
-        "It uses a Kalman filter to sequentially estimate float ambiguities and rounds them when the filter converges",
-        "It solves ambiguity by applying the Chinese Remainder Theorem to combine code and carrier measurements"
+        "It uses a Kalman filter to sequentially estimate float ambiguities and rounds them when the filter converges"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "LAMBDA (Teunissen) key steps: (1) Compute float ambiguity estimates and covariance via least-squares. (2) Apply integer-preserving Z-transformation that decorrelates the covariance — this reduces search volume by orders of magnitude. (3) Perform integer least-squares search in decorrelated space using reduced search ellipsoid. (4) Transform back. The decorrelation step is the crucial innovation distinguishing LAMBDA from brute-force or rounding approaches.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -148,12 +148,12 @@
       "difficulty": "hard",
       "stem": "Earth's free oscillations (normal modes) are excited by large earthquakes (M ≥ 8). Spheroidal modes ᵢSₗ and toroidal modes ᵢTₗ have distinct sensitivities. Which statement correctly describes their physical difference?",
       "options": [
-        "Spheroidal modes involve purely radial displacement and are sensitive only to density; toroidal modes involve purely tangential displacement and are sensitive only to shear velocity",
         "Spheroidal modes involve both radial and tangential displacements with free-surface deformation, sensitive to density, bulk modulus, and shear modulus; toroidal modes involve purely tangential displacement with no radial component, sensitive only to shear modulus and density",
         "Both modes have identical sensitivity to compressional velocity; they differ only in angular order dependence",
-        "Toroidal modes cannot be observed on the surface because they produce no vertical displacement; spheroidal modes produce only vertical displacement"
+        "Toroidal modes cannot be observed on the surface because they produce no vertical displacement; spheroidal modes produce only vertical displacement",
+        "Spheroidal modes involve purely radial displacement and are sensitive only to density; toroidal modes involve purely tangential displacement and are sensitive only to shear velocity"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Spheroidal modes involve both radial and horizontal displacements with free-surface deformation, recorded on both vertical and horizontal seismometers, sensitive to density, K, and μ. Toroidal modes involve purely tangential torsional displacements with no radial component — sensitive only to μ and ρ, not K. Both produce horizontal surface motion; toroidal modes produce zero vertical motion. Their sensitivity kernels are used in seismic tomography to resolve radial Earth structure.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -169,12 +169,12 @@
       "difficulty": "medium",
       "stem": "Love wave dispersion (c vs. T) is sensitive to Vs(z) in the crust and upper mantle. The inverse problem is non-unique. Which approach provides the most rigorous assessment of model non-uniqueness and parameter resolution?",
       "options": [
-        "Grid search over a single parameter (Vs at 30 km depth) to find the minimum misfit model",
-        "Monte Carlo sampling of the posterior probability distribution using reversible-jump MCMC that allows the number of layers to vary",
         "Damping the least-squares Jacobian with a fixed regularization parameter to obtain a single smooth model",
-        "Computing the resolution matrix from the Gauss-Newton approximation and declaring all parameters resolved if diagonal elements exceed 0.8"
+        "Computing the resolution matrix from the Gauss-Newton approximation and declaring all parameters resolved if diagonal elements exceed 0.8",
+        "Grid search over a single parameter (Vs at 30 km depth) to find the minimum misfit model",
+        "Monte Carlo sampling of the posterior probability distribution using reversible-jump MCMC that allows the number of layers to vary"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Surface wave dispersion inversion is inherently non-unique. RJMCMC (1) treats the number of layers as an unknown that can vary during sampling, (2) generates an ensemble of models from the posterior distribution, (3) quantifies parameter uncertainty through credible intervals. Grid search is limited to 1D. Damped least-squares gives a single model. Resolution matrix analysis is a linear approximation that doesn't capture nonlinear non-uniqueness.",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -190,12 +190,12 @@
       "difficulty": "medium",
       "stem": "The spectral ratio method estimates crustal Q: A(f) = A₀(f)·exp(−πfT/Q) with Brune source A₀(f) ∝ f²/(f² + f₀²). If f₀ is incorrectly assumed much larger than the true value, what happens to estimated Q?",
       "options": [
+        "Q becomes negative, indicating the method has failed",
         "Q is overestimated because the spectral rolloff from the source is attributed to attenuation",
         "Q is underestimated because the steeper-than-expected spectral slope is attributed to stronger attenuation",
-        "Q is unaffected because source and attenuation terms separate cleanly in the frequency domain",
-        "Q becomes negative, indicating the method has failed"
+        "Q is unaffected because source and attenuation terms separate cleanly in the frequency domain"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "If f₀' >> f₀ (overestimated), the source term ≈ 1 for all frequencies, so the entire spectral shape is attributed to attenuation. The true spectrum rolls off as 1/f² above f₀, steeper than exponential attenuation. Fitting exp(−πfT/Q) to this steeper rolloff yields a smaller Q (stronger attenuation) than truth. This source-attenuation trade-off is fundamental in seismic Q estimation.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -211,12 +211,12 @@
       "difficulty": "hard",
       "stem": "Upward continuation to height h is F{U_h} = F{U_0}·exp(−|k|h) in the wavenumber domain. Which statement about the relationship between upward continuation and vertical differentiation is correct?",
       "options": [
-        "Upward continuation and vertical differentiation are mathematically identical operations in the wavenumber domain",
         "The first vertical derivative at height h is obtained by upward continuation to h followed by multiplication by |k|: ∂U_h/∂z = F⁻¹{|k|·F{U_0}·exp(−|k|h)}",
         "The nth vertical derivative requires n successive upward continuations of height h/n each",
-        "Vertical derivatives can only be computed in the space domain using finite differences; the wavenumber approach is an approximation"
+        "Vertical derivatives can only be computed in the space domain using finite differences; the wavenumber approach is an approximation",
+        "Upward continuation and vertical differentiation are mathematically identical operations in the wavenumber domain"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In the wavenumber domain, vertical differentiation corresponds to multiplication by |k|. The first vertical derivative at height h is: |k|·exp(−|k|h)·F{U_0}, combining upward continuation and differentiation. These operations commute and are exact in Fourier space. Higher-order derivatives involve |k|ⁿ, amplifying high-wavenumber noise — making regularization essential.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -232,12 +232,12 @@
       "difficulty": "easy",
       "stem": "The equivalent source method represents a potential field as the field of simple sources on a fictitious surface. If regularization λ||m||² is added, what is the effect of increasing λ on the source distribution and continued field?",
       "options": [
+        "λ has no effect because the equivalent source method is inherently stable",
         "Source magnitudes increase, and the continued field becomes smoother",
         "Source magnitudes decrease (damped toward zero), the distribution becomes smoother, and the continued field has reduced amplitude at short wavelengths",
-        "Source magnitudes become negative, creating artificial cancellation",
-        "λ has no effect because the equivalent source method is inherently stable"
+        "Source magnitudes become negative, creating artificial cancellation"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The inversion solves m = (GᵀG + λI)⁻¹Gᵀd. Increasing λ: (1) damps source magnitudes toward zero (Tikhonov penalizes large ||m||), (2) produces smoother source distribution by suppressing high-wavenumber variations, (3) the continued field has reduced short-wavelength amplitude. This is the standard regularization trade-off: fit-to-data vs. model smoothness.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -253,12 +253,12 @@
       "difficulty": "hard",
       "stem": "A second-order polynomial z(x,y) = a₀ + a₁x + a₂y + a₃x² + a₄xy + a₅y² is fitted to gravity/magnetic data to define regional trend. If L ≫ λ_local, which statement about polynomial regional-residual separation is most accurate?",
       "options": [
-        "The polynomial exactly captures the regional trend and completely removes it, leaving a pure residual",
-        "The polynomial captures most of the long-wavelength regional trend but may partially absorb short-wavelength residual anomalies, especially near survey edges where edge effects are strongest",
         "The polynomial is ineffective because it cannot represent any trend with curvature",
-        "The residual anomaly is unaffected by polynomial degree chosen, as long as fitted in a least-squares sense"
+        "The residual anomaly is unaffected by polynomial degree chosen, as long as fitted in a least-squares sense",
+        "The polynomial exactly captures the regional trend and completely removes it, leaving a pure residual",
+        "The polynomial captures most of the long-wavelength regional trend but may partially absorb short-wavelength residual anomalies, especially near survey edges where edge effects are strongest"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Polynomial fitting limitations: (1) Only captures regional if it has the same functional form. (2) Near edges, the polynomial is poorly constrained and develops artificial curvature (edge effects). (3) If residual has significant amplitude, least-squares fitting partially absorbs it into the regional estimate. (4) Higher-degree polynomials capture more regional curvature but increasingly absorb residual signal. It is an approximation with inherent trade-offs.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -274,12 +274,12 @@
       "difficulty": "medium",
       "stem": "In the Vening Meinesz flexural model, Moho depth h_Moho = h_surf·(ρ_c/(ρ_m−ρ_c))·[1 − D|k|⁴/(ρ_mg + D|k|⁴)], where D is flexural rigidity. If T_e → ∞ (rigid plate), what is the predicted Moho root beneath a load of wavelength λ = 400 km?",
       "options": [
-        "The Moho root equals h_surf·ρ_c/(ρ_m−ρ_c), i.e., the Airy isostasy prediction",
         "The Moho root approaches zero because the rigid plate distributes the load over a very large area, reducing local compensation",
         "The Moho root is exactly twice the Airy prediction because the rigid plate amplifies the isostatic response",
-        "The Moho root is independent of load wavelength and equals the Airy prediction for all wavelengths"
+        "The Moho root is independent of load wavelength and equals the Airy prediction for all wavelengths",
+        "The Moho root equals h_surf·ρ_c/(ρ_m−ρ_c), i.e., the Airy isostasy prediction"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "As T_e → ∞, D → ∞, so D|k|⁴/(ρ_mg + D|k|⁴) → 1 for all k ≠ 0. Therefore h_Moho = h_surf·(ρ_c/(ρ_m−ρ_c))·[1−1] = 0. An infinitely rigid plate spreads the compensating root over infinite area, producing no local Moho depression. This is the opposite of Airy isostasy (T_e = 0), which predicts maximum local compensation. For realistic T_e (20–100 km), response is wavelength-dependent.",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -295,12 +295,12 @@
       "difficulty": "hard",
       "stem": "A mantle plume with excess temperature ΔT = 300 K, α = 3×10⁻⁵ K⁻¹, radius R = 150 km, extending from 100 km to 660 km depth (ρ₀ = 3300 kg/m³). What is the expected gravity anomaly at the surface above the plume centre?",
       "options": [
+        "A positive anomaly of about +200 mGal, comparable to oceanic trench free-air anomalies",
         "A negative anomaly of about −50 to −100 mGal because the hot, less-dense plume mass deficit produces a gravity low",
         "A positive anomaly of about +20 to +40 mGal because the plume's dynamic topography uplift creates a mass excess",
-        "Near zero because the mass deficit from thermal expansion is exactly compensated by surface dynamic uplift",
-        "A positive anomaly of about +200 mGal, comparable to oceanic trench free-air anomalies"
+        "Near zero because the mass deficit from thermal expansion is exactly compensated by surface dynamic uplift"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Thermal density perturbation: δρ = −ρ₀αΔT ≈ −30 kg/m³. The plume cylinder mass deficit ≈ −1.2×10¹⁸ kg produces a negative gravity anomaly. Dynamic uplift (a few km of topography) partially compensates but only contributes ~10–20 mGal. The net effect is a negative anomaly of −50 to −100 mGal, consistent with gravity observations over oceanic hotspots.",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -316,12 +316,12 @@
       "difficulty": "medium",
       "stem": "The Bouguer gravity anomaly over a sedimentary basin is −40 mGal with density contrast Δρ = −400 kg/m³. Using the infinite slab approximation Δg = 2πGΔρD, what is the approximate maximum sediment thickness?",
       "options": [
-        "D ≈ 0.5 km, typical for a thin passive-margin section",
-        "D ≈ 2.5 km, consistent with a moderately filled rift basin",
         "D ≈ 5.0 km, representing a deeply subsided foreland basin",
-        "D ≈ 10 km, unreasonably thick for any sedimentary basin"
+        "D ≈ 10 km, unreasonably thick for any sedimentary basin",
+        "D ≈ 0.5 km, typical for a thin passive-margin section",
+        "D ≈ 2.5 km, consistent with a moderately filled rift basin"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "D = Δg/(2πGΔρ) = (−4×10⁻⁴)/(2π × 6.674×10⁻¹¹ × (−400)) ≈ 2380 m ≈ 2.4 km. The slab approximation overestimates gravity for finite-width basins, so true depth is slightly greater. ~2.5 km is reasonable for a rift basin.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -337,12 +337,12 @@
       "difficulty": "hard",
       "stem": "Aeromagnetic data at 80 m terrain clearance, 200 m line spacing, encounters a magnetic spike from a power line. Which processing step best removes this noise without distorting geological signal?",
       "options": [
-        "High-pass filter with cutoff wavelength equal to flight-line spacing",
         "Median filter with window width of 3–5 data points along the flight line to suppress the spike while preserving edges",
         "Low-pass Gaussian filter with σ = 1 km to smooth out the spike",
-        "Interpolate the spike location using minimum curvature and replace spiked values"
+        "Interpolate the spike location using minimum curvature and replace spiked values",
+        "High-pass filter with cutoff wavelength equal to flight-line spacing"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A magnetic spike is a high-amplitude, very short-wavelength (1–3 points) feature. A median filter with small window (3–5 points): (1) preserves edges/gradients of geological anomalies, (2) effectively removes impulse noise (median is robust to outliers), (3) has minimal effect on longer-wavelength signals. High-pass removes both spike and short-wavelength geology. Low-pass smears the spike but degrades real anomalies. Interpolation is more invasive.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -363,12 +363,12 @@
       "difficulty": "easy",
       "stem": "A ground magnetic microlevel survey (5 m station, 20 m line spacing) with diurnal correction shows a systematic E-W gradient of 2 nT across the area. What is the most likely cause?",
       "options": [
+        "Instrument drift producing a linear trend proportional to survey duration",
         "Incomplete removal of the IGRF, which has spatial gradients of ~1–2 nT/km in most regions",
         "A regional geological trend from a large-scale magnetic body, which should be preserved",
-        "A time-varying ionospheric current correlated with solar activity",
-        "Instrument drift producing a linear trend proportional to survey duration"
+        "A time-varying ionospheric current correlated with solar activity"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A systematic 2 nT gradient over ~500 m (~4 nT/km) is consistent with incomplete IGRF removal. The IGRF has spatial gradients of 1–5 nT/km depending on location/epoch. If the survey spans months or the IGRF epoch is misaligned, residual gradients of this magnitude are common. Standard practice is to remove a first-order polynomial trend after IGRF correction.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -389,12 +389,12 @@
       "difficulty": "medium",
       "stem": "The Curie depth (z_B) is estimated from the radially averaged power spectrum slope. The Okubo method uses ln[P(k)] ∝ −2k·z_B at low wavenumbers. If the power spectrum shows slope −6 km at intermediate wavenumbers and −15 km at low wavenumbers, what is the Curie depth?",
       "options": [
-        "z_B = 3 km (half of 6 km slope), representing very shallow Curie depth due to high heat flow",
-        "z_B = 7.5 km (half of 15 km slope), indicating a thin magnetic crust",
         "z_B = 15 km (the slope itself), assuming the low-wavenumber slope directly gives depth",
-        "The method cannot distinguish between top and base of magnetic sources"
+        "The method cannot distinguish between top and base of magnetic sources",
+        "z_B = 3 km (half of 6 km slope), representing very shallow Curie depth due to high heat flow",
+        "z_B = 7.5 km (half of 15 km slope), indicating a thin magnetic crust"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For a magnetic layer bounded by z_T (top) and z_B (base), the power spectrum at low k approximates P(k) ∝ t²·exp(−2kz_B), giving slope −2z_B. The steeper slope of −15 km at low wavenumbers gives z_B = 15/2 = 7.5 km. The shallower slope of −6 km at intermediate wavenumbers gives z_T = 6/2 = 3 km. Layer thickness = 4.5 km. A Curie depth of 7.5 km is reasonable for high-heat-flow regions.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -410,12 +410,12 @@
       "difficulty": "easy",
       "stem": "In 3D resistivity forward modeling, ∇·(σ∇V) = −Iδ(r−r_s) is discretized on a 3D grid. If the conductivity model has sharp boundaries (e.g., conductive ore in resistive host), which numerical issues arise and how are they best mitigated?",
       "options": [
-        "The linear system becomes singular because the conductivity contrast creates a null space; mitigate by adding a small constant to all conductivities",
         "The matrix becomes ill-conditioned due to large conductivity contrast, slowing iterative solver convergence; mitigate using preconditioning and logarithmic conductivity transformation",
         "The finite-difference stencil fails at boundaries because the gradient is discontinuous; mitigate by using harmonic averaging of conductivities at cell interfaces",
-        "Both the ill-conditioning and boundary discretization issues are correct and represent complementary approaches in production codes"
+        "Both the ill-conditioning and boundary discretization issues are correct and represent complementary approaches in production codes",
+        "The linear system becomes singular because the conductivity contrast creates a null space; mitigate by adding a small constant to all conductivities"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "3D resistivity forward modeling faces two challenges with sharp contrasts: (1) Ill-conditioning: Large contrasts (e.g., 1000:1) make the matrix ill-conditioned. Preconditioning (incomplete Cholesky, multigrid) and logarithmic parameterization (σ = exp(m)) are standard remedies. (2) Boundary discretization: At interfaces, harmonic averaging (σ_h = 2σ₁σ₂/(σ₁+σ₂)) ensures correct current conservation. Both approaches are used in production codes (DCIP3D, RES3DINV).",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -431,12 +431,12 @@
       "difficulty": "hard",
       "stem": "The Laterolog 7 uses seven electrodes with focusing to force current horizontally. In conductive mud (ρ_m = 1 Ω·m) with R_t = 100 Ω·m and thin bed of R_xo = 20 Ω·m, what is the primary advantage of the Laterolog over the dual-induction tool?",
       "options": [
+        "The Laterolog is unaffected by borehole size and mud resistivity corrections",
         "The Laterolog has higher vertical resolution and better measures R_t of thin resistive beds, whereas the induction tool is distorted by the conductive invaded zone",
         "The Laterolog works better in oil-based muds where the induction tool cannot operate",
-        "The Laterolog measures the formation factor directly without needing porosity input",
-        "The Laterolog is unaffected by borehole size and mud resistivity corrections"
+        "The Laterolog measures the formation factor directly without needing porosity input"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Laterolog is designed for conductive mud environments. Its key advantages: (1) High vertical resolution — focusing electrodes force current into a thin horizontal sheet, resolving beds as thin as 0.5 m. (2) Better R_t measurement in thin resistive beds — the induction tool averages over thick volumes and underestimates R_t. In this scenario, the Laterolog correctly measures the high formation resistivity while the induction tool gives lower apparent resistivity due to vertical averaging and conductive borehole/invaded zone.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -452,12 +452,12 @@
       "difficulty": "easy",
       "stem": "In cross-borehole ERT, the Jacobian matrix condition number is 10⁶. What does this imply for the inversion and how should it be handled?",
       "options": [
-        "The problem is well-conditioned; a simple Gauss-Newton inversion will converge in 2–3 iterations",
-        "The high condition number means severe ill-conditioning; Tikhonov regularization with appropriate λ is essential to stabilize the inversion and obtain a unique, geologically plausible solution",
         "The condition number is irrelevant because SVD automatically handles ill-conditioning",
-        "A condition number of 10⁶ means the data are noisy and should be reacquired"
+        "A condition number of 10⁶ means the data are noisy and should be reacquired",
+        "The problem is well-conditioned; a simple Gauss-Newton inversion will converge in 2–3 iterations",
+        "The high condition number means severe ill-conditioning; Tikhonov regularization with appropriate λ is essential to stabilize the inversion and obtain a unique, geologically plausible solution"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A condition number of 10⁶ indicates severe ill-conditioning: noise amplification up to 10⁶ in the worst-case direction. This is typical for ERT due to rapidly decreasing sensitivity with distance and underdetermination. Tikhonov regularization (λ||Lm||²) balances data fit against model complexity. Without it, unconstrained inversion produces oscillatory, non-physical models. SVD reveals the ill-conditioning but doesn't solve it — regularization is still needed.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -473,12 +473,12 @@
       "difficulty": "hard",
       "stem": "In CSAMT, the transmitter-receiver distance is 3 km, operating frequency is 1 Hz, and subsurface resistivity is 100 Ω·m. The skin depth δ = √(2ρ/(μ₀ω)). Is the receiver in the near-field or far-field zone, and what is the consequence?",
       "options": [
-        "δ ≈ 5 km, so the receiver is in the near-field (3 km < 5 km); the impedance must be corrected for source geometry using full-wave solutions",
         "The receiver is in the far-field because CSAMT always operates in the plane-wave regime",
         "The skin depth is 50 km, so the receiver is deep in the far-field zone",
-        "Near-field effects only matter for magnetic dipole sources, not grounded electric dipoles"
+        "Near-field effects only matter for magnetic dipole sources, not grounded electric dipoles",
+        "δ ≈ 5 km, so the receiver is in the near-field (3 km < 5 km); the impedance must be corrected for source geometry using full-wave solutions"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "δ = √(2×100/(4π×10⁻⁷×2π×1)) ≈ 5030 m ≈ 5 km. Distance 3 km < 5 km places the receiver in the near-field. In the near-field: (1) the EM field is not a plane wave, (2) impedance computed from plane-wave formula gives biased apparent resistivity, (3) full-wave solutions correcting for source geometry are needed. This is a major CSAMT limitation at low frequencies in resistive environments.",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -499,12 +499,12 @@
       "difficulty": "medium",
       "stem": "In CSAMT near-field corrections, for a homogeneous half-space the exact impedance of a grounded dipole at distance r is Z ≈ I·dl·ρ/(2πr³) when kr ≪ 1. This implies that in the near-field, the apparent resistivity depends on:",
       "options": [
-        "Only the frequency, as in the far-field case",
+        "The square root of frequency, similar to the far-field skin depth relationship",
+        "Applied in batch production only",
         "The transmitter-receiver distance r and the resistivity, but NOT on frequency — the near-field impedance is frequency-independent",
-        "Only the magnetic permeability and the transmitter current",
-        "The square root of frequency, similar to the far-field skin depth relationship"
+        "Works under ideal conditions"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In the near-field limit (kr ≪ 1), Z ≈ I·dl·ρ/(2πr³), which is independent of frequency. The plane-wave formula ρ_a = |Z|²/(μ₀ω) gives incorrect resistivity because it assumes Z ∝ √(ωρ). CSAMT near-field data appear as a flat (frequency-independent) apparent resistivity curve, unlike the far-field MT curve which slopes. Near-field correction must account for actual source geometry.",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -525,12 +525,12 @@
       "difficulty": "medium",
       "stem": "A CSAMT survey has 200 m near-surface layer (ρ = 10 Ω·m) overlying 1000 Ω·m basement. Skin depth δ = 1590/√f meters. What frequency range is most sensitive to the basement resistivity?",
       "options": [
-        "High frequencies (1000–8192 Hz) for best spatial resolution",
-        "Low frequencies (0.1–10 Hz) because they have the largest skin depth and penetrate to the basement",
         "Mid-range frequencies (50–200 Hz) balancing resolution and penetration",
-        "All frequencies equally, because impedance is independent of frequency in a layered earth"
+        "All frequencies equally, because impedance is independent of frequency in a layered earth",
+        "High frequencies (1000–8192 Hz) for best spatial resolution",
+        "Low frequencies (0.1–10 Hz) because they have the largest skin depth and penetrate to the basement"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Skin depth in the near-surface: at 10 Hz, δ ≈ 503 m (penetrates into basement). At 1 Hz, δ ≈ 1590 m (well into basement). At 100 Hz, δ ≈ 159 m (within near-surface only). To sense the 1000 Ω·m basement, skin depth must be ≥ 200 m depth, requiring f ≤ 63 Hz. Low frequencies (0.1–10 Hz) have skin depths of 1.6–5 km, providing good basement penetration. Penetration depth scales as 1/√f.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -551,12 +551,12 @@
       "difficulty": "easy",
       "stem": "For an HTI medium (vertical fractures) with ε > δ > 0, what is the P-wave velocity pattern as a function of azimuth φ measured from fracture strike?",
       "options": [
-        "V_P is maximum at φ = 0° (along fracture strike) and minimum at φ = 90°, with monotonic decrease",
         "V_P is minimum at φ = 0° (along fracture strike) and increases with azimuth, reaching maximum at φ = 90° (perpendicular to fractures)",
         "V_P shows a cos(2φ) variation with maximum at φ = 0° and φ = 90°, minimum at φ = 45°",
-        "V_P is azimuthally invariant because HTI only affects shear waves, not P-waves"
+        "V_P is azimuthally invariant because HTI only affects shear waves, not P-waves",
+        "V_P is maximum at φ = 0° (along fracture strike) and minimum at φ = 90°, with monotonic decrease"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For HTI with ε > δ > 0, V_P is minimum along fracture strike (φ = 0°) because compliant fractures slow propagation along that direction. As azimuth increases toward perpendicular (φ = 90°), the wave propagates across stiff rock matrix between fractures, giving higher velocity. Fractures are more compliant perpendicular to their planes. The velocity variation is approximately V_P(φ) ≈ V_P0[1 + δsin²φcos²φ + εsin⁴φ].",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -572,12 +572,12 @@
       "difficulty": "medium",
       "stem": "Shear-wave splitting gives time delay Δt = d × γ / V_S between fast (S1) and slow (S2) waves. For a microseismic event at 3 km depth with Δt = 30 ms, V_S = 3 km/s, and γ = 0.05, what is the anisotropic zone thickness?",
       "options": [
+        "d = V_S / (Δt × γ) = 3 / (0.03 × 0.05) = 2000 km",
         "d = Δt × V_S / γ = 0.03 × 3 / 0.05 = 1.8 km",
         "d = Δt × V_S × γ = 0.03 × 3 × 0.05 = 4.5 m",
-        "d = Δt / (V_S × γ) = 0.03 / (3 × 0.05) = 0.2 km",
-        "d = V_S / (Δt × γ) = 3 / (0.03 × 0.05) = 2000 km"
+        "d = Δt / (V_S × γ) = 0.03 / (3 × 0.05) = 0.2 km"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Rearranging: d = Δt × V_S / γ = 0.03 × 3 / 0.05 = 1.8 km. The anisotropic zone extends from ~1.2 km to 3 km depth. γ = 0.05 (5%) is typical for fractured rock. Δt = 30 ms is common in microseismic monitoring of hydraulic fracturing. Option B inverts the formula. Option C gives reciprocal. Option D has wrong dimensional analysis.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -593,12 +593,12 @@
       "difficulty": "easy",
       "stem": "In multicomponent seismic processing, horizontal components are rotated to radial (R) and transverse (T). If the transverse component shows significant coherent energy after proper rotation, this indicates:",
       "options": [
-        "The rotation angle was computed incorrectly and should be recalculated",
-        "The presence of out-of-plane reflections or azimuthal anisotropy (HTI), generating energy on T that cannot be explained by a 2D isotropic model",
         "The geophone coupling was poor, creating random noise on horizontal components",
-        "The source was not properly oriented, producing orthogonal vibrations"
+        "The source was not properly oriented, producing orthogonal vibrations",
+        "The rotation angle was computed incorrectly and should be recalculated",
+        "The presence of out-of-plane reflections or azimuthal anisotropy (HTI), generating energy on T that cannot be explained by a 2D isotropic model"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In a 2D isotropic survey, all converted-wave energy should appear on the radial component after proper rotation. Significant coherent transverse energy indicates: (1) out-of-plane reflections from 3D structure, (2) azimuthal anisotropy (HTI) causing shear-wave splitting with energy on both R and T. The transverse energy from HTI has characteristic source-receiver azimuth dependence. Poor coupling produces incoherent noise, not coherent energy.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -619,12 +619,12 @@
       "difficulty": "medium",
       "stem": "Biot's poroelasticity: α = 1 − K_dry/K_solid. For sandstone with K_dry = 15 GPa, K_solid = 37 GPa, if pore pressure increases by ΔP = 10 MPa at constant confining stress, what is the change in volumetric strain?",
       "options": [
-        "Δε_v = α × ΔP / K_dry = 390 microstrain (compaction)",
         "Δε_v = ΔP / K_solid = 270 microstrain (expansion)",
         "Δε_v = α × ΔP / K_solid = 161 microstrain (expansion)",
-        "Δε_v = −α × ΔP / K_dry = −397 microstrain (expansion)"
+        "Δε_v = −α × ΔP / K_dry = −397 microstrain (expansion)",
+        "Δε_v = α × ΔP / K_dry = 390 microstrain (compaction)"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "α = 1 − 15/37 = 0.595. Effective stress change: Δσ' = −αΔP. Volumetric strain: Δε_v = Δσ'/K_dry = −αΔP/K_dry = −0.595 × 10 / 15 = −0.000397 = −397 microstrain. Negative sign indicates expansion — increasing pore pressure at constant confining pressure pushes grain contacts apart, causing volume increase. This poroelastic coupling causes reservoir compaction during production (pore pressure decrease → effective stress increase → compaction).",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -645,12 +645,12 @@
       "difficulty": "medium",
       "stem": "Chalk reservoir: φ = 0.30, K_solid = 70 GPa (calcite), K_dry = 10 GPa. Compute α. If pore pressure depletes by ΔP = −20 MPa, what is the effective stress increase on the frame?",
       "options": [
+        "α = 1.0 because all sedimentary rocks have α ≈ 1; effective stress increase = 20 MPa",
         "α = 0.857; effective stress increase = 0.857 × 20 = 17.1 MPa",
         "α = 0.30 (equal to porosity); effective stress increase = 6 MPa",
-        "α = 0.143; effective stress increase = 2.86 MPa",
-        "α = 1.0 because all sedimentary rocks have α ≈ 1; effective stress increase = 20 MPa"
+        "α = 0.143; effective stress increase = 2.86 MPa"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "α = 1 − K_dry/K_solid = 1 − 10/70 = 0.857. Effective stress change: Δσ' = −αΔP = −0.857 × (−20) = +17.1 MPa (increase). This is less than full pore pressure change because α < 1 — only α fraction is transmitted to the frame. For chalk, α = 0.857 is typical because dry frame is much more compliant than calcite grains. Pore pressure depletion causes significant compaction.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "Eaton's method: P_p = S_v − (S_v − P_h)(V_obs/V_n)². At 4 km: S_v = 100 MPa, P_h = 40 MPa, V_n = 3.5 km/s, V_obs = 3.0 km/s. What is the predicted pore pressure?",
       "options": [
-        "P_p = 100 − 60 × (3.5/3.0)² = 18.3 MPa — underpressured",
-        "P_p = 100 − 60 × (3.0/3.5)² = 55.9 MPa — overpressured",
         "P_p = 40 + 60 × (3.5/3.0)² = 121.7 MPa — highly overpressured",
-        "P_p = 40 × (3.5/3.0) = 46.7 MPa — slightly overpressured"
+        "P_p = 40 × (3.5/3.0) = 46.7 MPa — slightly overpressured",
+        "P_p = 100 − 60 × (3.5/3.0)² = 18.3 MPa — underpressured",
+        "P_p = 100 − 60 × (3.0/3.5)² = 55.9 MPa — overpressured"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "P_p = 100 − 60 × (3.0/3.5)² = 100 − 60 × 0.7347 = 100 − 44.1 = 55.9 MPa. Hydrostatic pressure is 40 MPa, so predicted pore pressure (55.9 MPa) exceeds hydrostatic by 15.9 MPa — the formation is overpressured. Velocity ratio V_obs/V_n = 0.857 < 1 indicates observed velocity is lower than normal compaction, a classic overpressure indicator (undercompaction).",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -687,12 +687,12 @@
       "difficulty": "medium",
       "stem": "A median filter (N = 5) is applied to x = [1, 2, 100, 3, 2, 1, 2, 3, 2, 1] (100 is a spike). What is the output at position 3, and what property makes the median filter superior to a mean filter for this application?",
       "options": [
-        "Output = 3 (median of [2, 1, 100, 3, 2] is 2); median filter preserves edges while removing impulse noise",
         "Output = 2 (median of [1, 2, 100, 3, 2] sorted = [1, 2, 2, 3, 100] → 2); median filter is a nonlinear operator robust to outliers while preserving edges",
         "Output = 100 (spike preserved); median filter only removes Gaussian noise",
-        "Output = 2.5 (mean of [1, 2, 100, 3, 2]); median filter is equivalent to mean for small windows"
+        "Output = 2.5 (mean of [1, 2, 100, 3, 2]); median filter is equivalent to mean for small windows",
+        "Output = 3 (median of [2, 1, 100, 3, 2] is 2); median filter preserves edges while removing impulse noise"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Window at position 3 (N=5): values at positions 1–5 are [1, 2, 100, 3, 2]. Sorted: [1, 2, 2, 3, 100]. Median (middle of 5) = 2. The spike value 100 is replaced by 2. Median filter superiority: (1) Robust to outliers — median is a rank-order statistic not influenced by extreme values. (2) Preserves step edges while mean filter smears them. (3) Nonlinear — option B correctly identifies this.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -708,12 +708,12 @@
       "difficulty": "easy",
       "stem": "A ULA of M = 16 sensors with d = λ/2 wants to resolve two sources separated by Δθ = 5°. The Rayleigh resolution limit is θ_res ≈ λ/(M·d). Is this possible with a conventional beamformer?",
       "options": [
+        "No, because half-wavelength spacing causes grating lobes that obscure the sources",
         "Yes, because θ_res ≈ 2/M = 7.5° is close to 5°, and with interpolation it can be achieved",
         "No, because θ_res ≈ 7.5° > 5°, so the two sources cannot be resolved by a conventional beamformer",
-        "Yes, because beamforming resolution depends only on signal-to-noise ratio, not array size",
-        "No, because half-wavelength spacing causes grating lobes that obscure the sources"
+        "Yes, because beamforming resolution depends only on signal-to-noise ratio, not array size"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Rayleigh limit: Δθ_min ≈ λ/(M·d·cos(θ₀)). For broadside with d = λ/2: Δθ_min ≈ 2/M = 2/16 = 0.125 rad ≈ 7.2°. Since 5° < 7.2°, sources cannot be resolved by conventional beamforming. The two sources merge into a single broad peak. Sub-Rayleigh resolution requires superresolution methods (MUSIC, ESPRIT, Capon) exploiting signal subspace structure.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -729,12 +729,12 @@
       "difficulty": "easy",
       "stem": "MUSIC estimates DOA using P_MUSIC(θ) = 1/(aᴴ(θ)·E_n·E_nᴴ·a(θ)), where E_n are noise subspace eigenvectors. For M = 8 elements and K = 3 sources, how many noise eigenvectors are used, and what is the key assumption for superresolution?",
       "options": [
-        "5 noise eigenvectors (M−K = 5); signal and noise are uncorrelated and noise is spatially white",
-        "3 noise eigenvectors (equal to number of sources); signals are coherent",
         "8 noise eigenvectors (all eigenvalues used); noise variance is known",
-        "1 noise eigenvector (minimum required); there is only one source"
+        "1 noise eigenvector (minimum required); there is only one source",
+        "5 noise eigenvectors (M−K = 5); signal and noise are uncorrelated and noise is spatially white",
+        "3 noise eigenvectors (equal to number of sources); signals are coherent"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "MUSIC decomposes the M×M covariance matrix into signal (K = 3) and noise (M−K = 5) subspaces. The pseudospectrum projects steering vectors onto the noise subspace — at true DOAs, the steering vector is orthogonal to noise subspace, making the denominator approach zero and creating peaks. Key assumptions: (1) signal and noise uncorrelated, (2) noise spatially white, (3) sources uncorrelated or partially correlated. These enable superresolution below the Rayleigh limit.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -750,12 +750,12 @@
       "difficulty": "hard",
       "stem": "CRIM model: √ε_bulk = φ·√ε_w + (1−φ)·√ε_matrix. For water-saturated sandstone with φ = 0.25, ε_w = 80, ε_matrix = 6, S_w = 1.0, what is the bulk dielectric permittivity?",
       "options": [
-        "ε_bulk = (0.25·√80 + 0.75·√6)² = (2.24 + 1.84)² = 16.7",
         "ε_bulk = 0.25·80 + 0.75·6 = 24.5 (arithmetic average)",
         "ε_bulk = 1/(0.25/80 + 0.75/6) = 7.8 (harmonic average)",
-        "ε_bulk = 80^0.25 × 6^0.75 = 12.7 (geometric average)"
+        "ε_bulk = 80^0.25 × 6^0.75 = 12.7 (geometric average)",
+        "ε_bulk = (0.25·√80 + 0.75·√6)² = (2.24 + 1.84)² = 16.7"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CRIM: √ε_bulk = 0.25·√80 + 0.75·√6 = 0.25·8.944 + 0.75·2.449 = 2.236 + 1.837 = 4.073. Therefore ε_bulk = 4.073² = 16.59 ≈ 16.7. CRIM is based on volume-weighted average of propagation velocities, widely used in dielectric logging. Arithmetic mixing (option B) is too high, harmonic (option C) too low, geometric (option D) less physically motivated for dielectric mixing.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -771,12 +771,12 @@
       "difficulty": "hard",
       "stem": "FMI logs show sinusoidal features on unwrapped borehole images (0–360° azimuth). What do these sinusoids represent and how are dip magnitude and direction determined?",
       "options": [
+        "Sinusoids represent borehole wall roughness; amplitude gives caliper variation and phase gives mud weight",
         "Sinusoids represent horizontal bedding; dip is always 0° and phase gives tool orientation",
         "Sinusoids represent planar features (bedding, fractures) intersecting the cylindrical borehole; dip magnitude δ = arctan(2A/D) where D is borehole diameter, and dip direction is the azimuth of the sinusoid's trough",
-        "Sinusoids represent helical drilling artifacts that must be removed before interpretation",
-        "Sinusoids represent borehole wall roughness; amplitude gives caliper variation and phase gives mud weight"
+        "Sinusoids represent helical drilling artifacts that must be removed before interpretation"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A planar feature intersecting a cylindrical borehole creates an ellipse. When unwrapped (0–360°), this becomes a sinusoid. Dip magnitude: amplitude A = (D/2)·tan(δ), so δ ≈ arctan(2A/D). Dip direction: the azimuth of the sinusoid's trough (lowest point) on the image corresponds to the down-dip direction. This is fundamental in borehole image interpretation for structural geology, fracture analysis, and paleostress studies.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "An MDT pretest draws 10–20 cc of fluid. During drawdown, if pressure falls below the bubble point (P_b), what is the most likely consequence for the pressure measurement?",
       "options": [
-        "The measurement is unaffected because the tool measures total pressure",
-        "Gas evolves from oil in the probe/flowline, causing two-phase flow that distorts the pressure response and makes mobility estimates unreliable",
         "The probe becomes permanently plugged by gas bubbles and must be redressed",
-        "The formation pressure is overestimated because gas adds additional pressure"
+        "The formation pressure is overestimated because gas adds additional pressure",
+        "The measurement is unaffected because the tool measures total pressure",
+        "Gas evolves from oil in the probe/flowline, causing two-phase flow that distorts the pressure response and makes mobility estimates unreliable"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "When drawdown pressure falls below P_b, dissolved gas comes out of solution, creating two-phase (oil + gas) flow: (1) single-phase Darcy flow analysis becomes invalid, (2) gas high compressibility slows pressure buildup and overestimates apparent mobility, (3) erratic pressure readings as bubbles form/coalesce. Standard practice limits drawdown rate to keep P_drawdown > P_b, or uses focused probes to minimize contamination.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -813,12 +813,12 @@
       "difficulty": "easy",
       "stem": "NGS tools measure ⁴⁰K (1.46 MeV), ²³⁸U (via ²¹⁴Bi at 1.76 MeV), ²³²Th (via ²⁰⁸Tl at 2.61 MeV). In a shale with K = 3.5%, Th = 15 ppm, U = 5 ppm, what does elevated U/Th ratio indicate?",
       "options": [
-        "High U/Th indicates a felsic igneous source with high uranium content",
         "High U/Th ratios in shales typically indicate reducing conditions where uranium precipitates, possibly indicating organic-rich or hydrocarbon-bearing zones",
         "High U/Th is always an artifact of borehole effects requiring spectral ratio correction",
-        "High U/Th indicates high potassium feldspar content in the shale"
+        "High U/Th indicates high potassium feldspar content in the shale",
+        "High U/Th indicates a felsic igneous source with high uranium content"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "U/Th ratio is a key environmental indicator: (1) Uranium is mobile in oxidizing conditions (U⁶⁺ soluble) but precipitates in reducing conditions (U⁴⁺ insoluble). High U/Th indicates anoxic environments favorable for organic matter preservation. (2) Thorium is immobile, associated with detrital clay minerals. (3) Th/U < 2 suggests reducing conditions; Th/U > 7 suggests oxidizing. (4) In organic-rich shales, uranium concentrates with organic matter.",
       "estSec": 40,
       "topicWeight": 0.08,
@@ -834,12 +834,12 @@
       "difficulty": "medium",
       "stem": "Borehole corrections for gamma-ray logs account for mud weight and borehole size. A 12.25 inch hole with 12 lb/gal mud measures 80 API. In an 8.5 inch hole with 10 lb/gal mud (15% less attenuation), what is the corrected GR?",
       "options": [
+        "GR_corrected = 80 × (12.25/8.5)² = 163 API (scaling by borehole diameter squared)",
         "GR_corrected = 80 / 1.15 = 69.6 API (reading was inflated by larger borehole)",
         "GR_corrected = 80 × 1.15 = 92 API (reading was suppressed by larger borehole, corrected value is higher)",
-        "GR_corrected = 80 API (borehole corrections are negligible for gamma-ray logs)",
-        "GR_corrected = 80 × (12.25/8.5)² = 163 API (scaling by borehole diameter squared)"
+        "GR_corrected = 80 API (borehole corrections are negligible for gamma-ray logs)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Larger borehole and heavier mud attenuate more gamma rays, giving lower measured GR. The 8.5 inch hole with lighter mud has less attenuation, so the same formation reads higher. If attenuation is 15% less, corrected GR = 80 × 1.15 = 92 API. The correction factor C > 1 accounts for the attenuation that occurred in the larger, heavier-mud borehole.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -855,12 +855,12 @@
       "difficulty": "medium",
       "stem": "Simulated annealing uses T(n) = T₀/(1+n) with T₀ = 100. P(accept) = exp(−ΔE/T). What happens as n increases from 1 to 1000?",
       "options": [
-        "At n = 1, P(accept) ≈ exp(−ΔE/50) is moderate; at n = 1000, P(accept) ≈ exp(−ΔE/0.1) ≈ 0, transitioning from exploration to exploitation",
-        "Temperature remains constant at 100, always accepting worse models with equal probability",
         "Temperature increases, causing the algorithm to accept increasingly worse models",
-        "The algorithm converges to a random model because the cooling schedule is too fast"
+        "The algorithm converges to a random model because the cooling schedule is too fast",
+        "At n = 1, P(accept) ≈ exp(−ΔE/50) is moderate; at n = 1000, P(accept) ≈ exp(−ΔE/0.1) ≈ 0, transitioning from exploration to exploitation",
+        "Temperature remains constant at 100, always accepting worse models with equal probability"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "At n = 1: T = 50, P = exp(−ΔE/50) ≈ 0.82 for ΔE = 10 — readily accepts worse models (exploration). At n = 1000: T ≈ 0.1, P = exp(−100) ≈ 0 — almost never accepts worse models (exploitation). This transition from exploration to exploitation is the key SA feature. The Cauchy schedule T₀/(1+n) is provably convergent to the global minimum under certain conditions.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -876,12 +876,12 @@
       "difficulty": "hard",
       "stem": "BIC = −2·ln(L̂) + k·ln(n). Model A: k = 5, ln(L̂) = −200, n = 100. Model B: k = 8, ln(L̂) = −185, n = 100. Which model is preferred by BIC?",
       "options": [
-        "Model A, because BIC_A = 423.0 < BIC_B = 406.8; lower BIC preferred",
         "Model A, because BIC_A = 423.0 and BIC_B = 406.8; Model B has lower BIC so Model B is preferred",
         "Model B, because BIC_B = 406.8 < BIC_A = 423.0, and lower BIC indicates better model",
-        "Both models have equal BIC because penalty term exactly compensates for likelihood improvement"
+        "Both models have equal BIC because penalty term exactly compensates for likelihood improvement",
+        "Model A, because BIC_A = 423.0 < BIC_B = 406.8; lower BIC preferred"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "BIC_A = −2(−200) + 5·ln(100) = 400 + 23.0 = 423.0. BIC_B = −2(−185) + 8·ln(100) = 370 + 36.8 = 406.8. BIC_B < BIC_A (406.8 < 423.0), so Model B is preferred. BIC penalizes additional parameters more heavily than AIC, favoring simpler models when improvement is marginal. Here, Model B's better fit (likelihood improvement factor ≈ 3.3×10⁶) outweighs the 3-parameter penalty (3·ln(100) = 13.8).",
       "estSec": 50,
       "topicWeight": 0.08,
@@ -897,12 +897,12 @@
       "difficulty": "medium",
       "stem": "LOOCV: CV(λ) = (1/N)Σ(d_i − d̂_i(λ))². For Gaussian noise with variance σ², what is the relationship between CV(λ) and predictive accuracy?",
       "options": [
+        "CV(λ) cannot be computed for geophysical problems due to spatial correlation",
         "CV(λ) is always equal to σ² regardless of λ, making it useless for model selection",
         "CV(λ) provides an unbiased estimate of prediction error; optimal λ minimizes CV(λ), balancing data fit and model complexity",
-        "CV(λ) is always less than σ² because the model overfits the training data",
-        "CV(λ) cannot be computed for geophysical problems due to spatial correlation"
+        "CV(λ) is always less than σ² because the model overfits the training data"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "LOOCV provides an approximately unbiased estimate of prediction error. The optimal λ minimizes CV(λ). For optimally regularized models, CV(λ_opt) ≈ σ². Under-regularized (λ too small): CV > σ² (overfitting). Over-regularized (λ too large): CV > σ² (underfitting). Option D has a valid concern about spatial correlation — standard LOOCV assumes independent data, but spatially-aware variants (block LOOCV) exist for geophysical applications.",
       "estSec": 45,
       "topicWeight": 0.08,
@@ -923,12 +923,12 @@
       "difficulty": "hard",
       "stem": "A bag contains 5 red, 4 blue, and 3 green balls. Three balls are drawn without replacement. What is the probability that at least one ball of each color is drawn?",
       "options": [
-        "12/55",
-        "6/11",
         "4/11",
-        "2/5"
+        "2/5",
+        "12/55",
+        "6/11"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Total ways = C(13,3) = 286. Favorable: (1R,1B,1G) = 5×4×3 = 60; (2R,1B,0G) etc. excluded. Only (1,1,1) works: 60. P = 60/286 = 30/143 ≈ 0.2098. Wait — recalculate: exactly one of each: 5×4×3 = 60. But 'at least one of each' means exactly one each (since only 3 drawn). P = 60/286 = 30/143. None match. Let me reconsider: 60/286 simplifies to 30/143. Closest is 12/55 = 0.218. Actually recompute: total = C(13,3) = 286. Exactly one each color: 5×4×3 = 60. P = 60/286 ≈ 0.21. 12/55 = 0.218. So answer A.",
       "estSec": 40,
       "topicWeight": 0.04,
@@ -949,12 +949,12 @@
       "difficulty": "hard",
       "stem": "The sum of all three-digit numbers that can be formed using the digits 1, 3, 5, 7, 9 (without repetition) is:",
       "options": [
-        "14880",
         "15600",
         "16400",
-        "17280"
+        "17280",
+        "14880"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Each digit appears in each position (units, tens, hundreds) equally often. Number of 3-digit numbers = 5×4×3 = 60. Each digit appears 60/5 = 12 times in each position. Sum = 12 × (1+3+5+7+9) × (100+10+1) = 12 × 25 × 111 = 33300. Hmm, that gives 33300. Let me recheck: 12×25 = 300, 300×111 = 33300. Not matching. Try: each position sum = 12×25 = 300. Total = 300×100 + 300×10 + 300×1 = 33300. Still not matching. Let me recompute with the formula more carefully. Actually 5P3 = 60 numbers. Each digit appears 60/5 = 12 times in each position. Sum per position = 12×(1+3+5+7+9) = 12×25 = 300. Total sum = 300×(100+10+1) = 300×111 = 33300. None match. Perhaps answer D 17280 is half. Let me try: sum = 60 × average number. Average of all permutations: each position average = (1+3+5+7+9)/5 = 5. Average number = 555. Sum = 60 × 555 = 33300. Still 33300. I'll use D as closest.",
       "estSec": 35,
       "topicWeight": 0.04,
@@ -975,12 +975,12 @@
       "difficulty": "easy",
       "stem": "A can complete a work in 12 days, B in 18 days. They work alternately starting with A. In how many days is the work completed?",
       "options": [
+        "15 1/3 days",
         "14 days",
         "14 1/3 days",
-        "15 days",
-        "15 1/3 days"
+        "15 days"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A's rate = 1/12 per day, B's rate = 1/18 per day. In 2 days (A+B): 1/12 + 1/18 = 5/36. After 14 days (7 pairs): 7 × 5/36 = 35/36. Remaining = 1/36. Day 15: A works, completes 1/12 = 3/36 > 1/36. Time on day 15 = (1/36)/(1/12) = 1/3 day. Total = 14 + 1/3 = 14 1/3 days.",
       "estSec": 40,
       "topicWeight": 0.04,
@@ -1001,12 +1001,12 @@
       "difficulty": "easy",
       "stem": "A shopkeeper marks goods 40% above cost price and gives a 20% discount. If the profit is Rs. 96, find the marked price.",
       "options": [
-        "Rs. 480",
-        "Rs. 520",
         "Rs. 560",
-        "Rs. 600"
+        "Rs. 600",
+        "Rs. 480",
+        "Rs. 520"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let CP = x. MP = 1.4x. SP = 0.8 × 1.4x = 1.12x. Profit = 1.12x − x = 0.12x = 96. x = 800. MP = 1.4 × 800 = Rs. 1120. Hmm, not matching. Let me recheck. If profit = Rs. 96: 0.12x = 96, x = 800, MP = 1120. None match. Try: maybe profit margin is on SP? SP = 1.12x, profit = 0.12x = 96, x = 800. MP = 1120. Still doesn't match. Perhaps the answer choices are wrong, or I'm misunderstanding. Let me try assuming CP such that MP matches: If MP = 480, CP = 480/1.4 = 342.86, SP = 0.8×480 = 384, profit = 41.14. Not 96. If profit = 96 with MP = 480: SP = 384, CP = 384 − 96 = 288, MP = 1.4×288 = 403.2. Not matching. Let me try: marked 40% above, discount 20%. Net = 1.4 × 0.8 = 1.12. Profit% = 12%. If profit = 96: CP = 96/0.12 = 800, MP = 1120. I'll pick the closest and note discrepancy. Actually, re-reading: maybe the answer is A and the numbers work differently. Let me try CP = 480/1.4 = 343, SP = 0.8×480 = 384, profit = 41. No. Let me just use A.",
       "estSec": 35,
       "topicWeight": 0.04,
@@ -1027,12 +1027,12 @@
       "difficulty": "medium",
       "stem": "The ratio of present ages of A and B is 5:7. Four years ago, the ratio was 3:5. Find the present age of B.",
       "options": [
-        "14 years",
         "16 years",
         "18 years",
-        "20 years"
+        "20 years",
+        "14 years"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Let ages be 5x and 7x. Four years ago: (5x−4)/(7x−4) = 3/5. Cross multiply: 5(5x−4) = 3(7x−4). 25x−20 = 21x−12. 4x = 8. x = 2. B's age = 7×2 = 14. That gives A. But let me recheck: 5(5x−4) = 25x−20; 3(7x−4) = 21x−12. 25x−20 = 21x−12 → 4x = 8 → x = 2. B = 14. Hmm. Try the other interpretation: maybe 4 years hence? (5x+4)/(7x+4) = 3/5 → 25x+20 = 21x+12 → 4x = −8, negative. Doesn't work. So B = 14 = answer A. But I wrote answer C. Let me fix: answer should be A (14 years). I'll correct.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1053,12 +1053,12 @@
       "difficulty": "medium",
       "stem": "Rs. 8000 amounts to Rs. 9261 in 3 years at compound interest. Find the rate of interest.",
       "options": [
+        "7%",
         "4%",
         "5%",
-        "6%",
-        "7%"
+        "6%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A = P(1+r/100)³. 9261 = 8000(1+r/100)³. (1+r/100)³ = 9261/8000 = 1.157625. 1+r/100 = ∛1.157625. ∛1.157625: 1.05³ = 1.157625. So r = 5%.",
       "estSec": 35,
       "topicWeight": 0.04,
@@ -1079,12 +1079,12 @@
       "difficulty": "easy",
       "stem": "Pipe A fills a tank in 20 hours, Pipe B in 30 hours, Pipe C empties in 60 hours. If all three are opened together, how long to fill the tank?",
       "options": [
-        "12 hours",
-        "15 hours",
         "18 hours",
-        "20 hours"
+        "20 hours",
+        "12 hours",
+        "15 hours"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Net rate = 1/20 + 1/30 − 1/60 = 3/60 + 2/60 − 1/60 = 4/60 = 1/15. Time = 15 hours.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1105,12 +1105,12 @@
       "difficulty": "medium",
       "stem": "A train 150 m long crosses a pole in 15 seconds and a platform 150 m long in how many seconds?",
       "options": [
-        "25 seconds",
         "30 seconds",
         "35 seconds",
-        "40 seconds"
+        "40 seconds",
+        "25 seconds"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Speed = 150/15 = 10 m/s. Distance to cover platform = 150 + 150 = 300 m. Time = 300/10 = 30 seconds.",
       "estSec": 25,
       "topicWeight": 0.04,
@@ -1131,12 +1131,12 @@
       "difficulty": "hard",
       "stem": "In how many ways can 8 persons be seated around a circular table?",
       "options": [
+        "4032",
         "5040",
         "40320",
-        "720",
-        "4032"
+        "720"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Circular permutation of n persons = (n−1)! = 7! = 5040.",
       "estSec": 25,
       "topicWeight": 0.04,
@@ -1157,12 +1157,12 @@
       "difficulty": "medium",
       "stem": "The sum of ages of 5 children born at intervals of 3 years each is 50 years. What is the age of the youngest child?",
       "options": [
-        "4 years",
-        "6 years",
         "8 years",
-        "10 years"
+        "10 years",
+        "4 years",
+        "6 years"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let youngest = x. Ages: x, x+3, x+6, x+9, x+12. Sum = 5x + 30 = 50. 5x = 20. x = 4.",
       "estSec": 25,
       "topicWeight": 0.04,
@@ -1183,12 +1183,12 @@
       "difficulty": "easy",
       "stem": "Statements: All dogs are cats. All cats are birds. Conclusions: I. All dogs are birds. II. Some birds are dogs.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both I and II follow",
-        "Neither I nor II follows"
+        "Applied in batch production only",
+        "Suitable for narrow use cases",
+        "Applicable in specific scenarios only",
+        "Works under ideal conditions"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "From 'All dogs are cats' and 'All cats are birds': All dogs are birds (by transitivity — conclusion I follows). Since all dogs are birds, some birds are dogs (conclusion II follows). Both conclusions follow.",
       "estSec": 35,
       "topicWeight": 0.04,
@@ -1209,12 +1209,12 @@
       "difficulty": "medium",
       "stem": "In a code language, COMPUTER is written as RFUVQNPC. How will MEDICINE be written?",
       "options": [
+        "EOJEIDFM",
         "EOJDJEFM",
         "FOJDJEFN",
-        "FDJDJEFM",
-        "EOJEIDFM"
+        "FDJDJEFM"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Pattern: each letter shifted by a pattern. C(3)→R(18)=+15, O(15)→F(6)=-9... This seems complex. Let me look at it differently. COMPUTER: C-O-M-P-U-T-E-R → R-F-U-V-Q-N-P-C. Reverse the word: RETUPMOC → R is first. Actually the pattern seems to be: reverse the letters and apply a shift. R(18)←C(3): +15. F(6)←O(15): -9 or +17. U(21)←M(13): +8. V(22)←P(16): +6. Q(17)←U(21): -4 or +22. N(14)←T(20): -6 or +20. P(16)←E(5): +11. C(3)←R(18): -15 or +11. The shifts: +15, +17, +8, +6, +22, +20, +11, +11. Not a clear simple pattern. Let me try reversal: COMPUTER reversed = RETUPMOC. R=18,E=5,T=20,U=21,P=16,M=13,O=15,C=3. C=3,O=15,M=13,P=16,U=21,T=20,E=5,R=18. Mapping: R→R(18→18=+0), E→F(5→6=+1), T→U(20→21=+1), U→V(21→22=+1), P→Q(16→17=+1), M→N(13→14=+1), O→P(15→16=+1), C→C(3→3=+0). Hmm, that's reverse with +1 for middle letters. Actually: reversed = R,E,T,U,P,M,O,C. +0,+1,+1,+1,+1,+1,+1,+0. MEDICINE reversed = E,N,I,C,I,D,E,M. Apply: E→E(+0)=E, N→O(+1)=O, I→J(+1)=J, C→D(+1)=D, I→J(+1)=J, D→E(+1)=E, E→F(+1)=F, M→M(+0)=M. Result: EOJDJEFM.",
       "estSec": 40,
       "topicWeight": 0.04,
@@ -1235,12 +1235,12 @@
       "difficulty": "easy",
       "stem": "Pointing to a man, a woman said, 'His mother is the only daughter of my mother.' How is the woman related to the man?",
       "options": [
-        "Mother",
-        "Grandmother",
         "Sister",
-        "Maternal Grandmother"
+        "Maternal Grandmother",
+        "Mother",
+        "Grandmother"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "'Only daughter of my mother' = the woman herself. So 'His mother is the woman.' The woman is the man's mother.",
       "estSec": 25,
       "topicWeight": 0.04,
@@ -1261,12 +1261,12 @@
       "difficulty": "hard",
       "stem": "Rahul walks 10 km North, turns right and walks 5 km, turns right again and walks 10 km. How far and in which direction is he from the starting point?",
       "options": [
-        "5 km East",
         "5 km West",
         "10 km East",
-        "15 km North"
+        "15 km North",
+        "5 km East"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "North 10, East 5, South 10. Net: 5 km East of starting point.",
       "estSec": 25,
       "topicWeight": 0.04,
@@ -1287,12 +1287,12 @@
       "difficulty": "hard",
       "stem": "Five persons A, B, C, D, E sit in a row. A sits next to B. C sits at one end. D does not sit next to C. E sits in the middle. Who sits at the other end?",
       "options": [
+        "E",
         "A",
         "B",
-        "D",
-        "E"
+        "D"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "E is in position 3 (middle). C is at an end (position 1 or 5). D is not next to C. If C is at position 1, D cannot be at position 2. A and B are together. If C=1, E=3, then positions 2,4,5 remain. D cannot be at 2. A,B must be together — they can be at (4,5). Then D at 2 is blocked. Try: C=1, D=4, A=2, B=5 (A,B together? No, 2 and 5 not adjacent). Try: C=1, E=3, A=4, B=5 (together), D=2. But D cannot be next to C (position 2 is next to position 1). Invalid. Try C=5: C=5, E=3. D not next to C, so D≠4. A,B together: could be (1,2). Then D=4. But D=4 is not next to C=5? Position 4 is next to 5. So D≠4. Try A=1,B=2, D can't be 4. D must be somewhere. Available: 1,2,4. If A,B at 1,2: D=4 is invalid (next to C=5). So D must be... Actually positions available after C=5, E=3: 1,2,4. A,B together at (1,2). D at 4 — but 4 is next to 5. Invalid. Try A,B at (4,5)? No, C=5. So A,B at (1,2) or not possible. Hmm. Let me try C=1, E=3. Remaining: 2,4,5. A,B together at (4,5). D at 2. D next to C(1)? Yes, 2 is next to 1. Invalid. A,B at (2,3)? E=3 already. So only option is C at end with D at other end. Actually: if C=1, then D must not be at 2. A,B together at positions (4,5). D at position 2 is blocked. D at position 4? But 4 is available. D=4 works (D not next to C=1). Then A,B at (2,5) or (5,2) — but 2 and 5 aren't adjacent. Wait, remaining positions after C=1, E=3, D=4: positions 2 and 5. A,B need to be together but 2 and 5 aren't adjacent. So this doesn't work. Try C=5, E=3. Remaining: 1,2,4. A,B at (1,2) together. D at 4. D next to C(5)? Position 4 is adjacent to 5. Invalid. So D must be at 1 or 2 with A,B. If D=1, A,B at (2,4)? Not adjacent. If D=2, A,B at (1,4)? Not adjacent. Hmm. Let me reconsider: maybe C is at position 5. Then D≠4. Remaining: 1,2,4. A,B together: (1,2). D=4 — but D≠4 next to C=5. Invalid. (4,5)? C=5. No. So D can't be at 4. What if D is at 1? A,B at (2,4) — not adjacent. What if positions are 1,2,3,4,5 and we need A,B adjacent, C at end, D not next to C, E=3. The answer choices suggest D sits at the other end. So if C=1, then D=5. Check: D=5 not next to C=1. ✓. A,B together at (2,4)? Not adjacent. At (4,2)? Same issue. (1,2)? C=1. (4,5)? D=5. What about positions 2 and 4? Not adjacent. Let me try: C=1, E=3, D=5, A=2, B=4. A(2) and B(4) not adjacent. Invalid. C=1, E=3, D=5, A=4, B=2. Same. Hmm. Maybe C=5, D=1. E=3. A,B at (2,4)? Not adjacent. This is tricky. The answer must be D (option C). Let me assume the answer is D.",
       "estSec": 40,
       "topicWeight": 0.04,
@@ -1313,12 +1313,12 @@
       "difficulty": "medium",
       "stem": "What was the day of the week on 15th August 1947?",
       "options": [
-        "Friday",
-        "Saturday",
         "Sunday",
-        "Monday"
+        "Monday",
+        "Friday",
+        "Saturday"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Using Zeller's or reference: 15 Aug 1947 was a Friday.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1339,12 +1339,12 @@
       "difficulty": "medium",
       "stem": "At what time between 4 and 5 o'clock will the hands of a clock be at right angles?",
       "options": [
-        "4:05 5/11 min",
         "4:38 2/11 min",
         "4:27 3/11 min",
-        "Both A and B"
+        "Both A and B",
+        "4:05 5/11 min"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "At 4:00, minute hand at 12, hour hand at 4 (120°). Need 90° separation. First: minute hand behind hour hand by 90°: angle = |30×4 − 5.5×m| = 90. |120 − 5.5m| = 90. 120 − 5.5m = 90 → m = 30/5.5 = 60/11 = 5 5/11 min. Or 5.5m − 120 = 90 → m = 210/5.5 = 420/11 = 38 2/11 min. Both times exist between 4 and 5.",
       "estSec": 35,
       "topicWeight": 0.04,
@@ -1365,12 +1365,12 @@
       "difficulty": "medium",
       "stem": "A student scores 60% in one test and 80% in another. The tests are weighted 3:2. What is the weighted average?",
       "options": [
+        "74%",
         "68%",
         "70%",
-        "72%",
-        "74%"
+        "72%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Weighted average = (60×3 + 80×2)/(3+2) = (180+160)/5 = 340/5 = 68%.",
       "estSec": 25,
       "topicWeight": 0.04,
@@ -1391,12 +1391,12 @@
       "difficulty": "hard",
       "stem": "If x + 1/x = 5, find the value of x² + 1/x².",
       "options": [
-        "21",
-        "23",
         "25",
-        "27"
+        "27",
+        "21",
+        "23"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "(x + 1/x)² = x² + 2 + 1/x² = 25. x² + 1/x² = 25 − 2 = 23.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1417,12 +1417,12 @@
       "difficulty": "medium",
       "stem": "The diagonal of a square is 10√2 cm. Find its area.",
       "options": [
-        "100 cm²",
         "200 cm²",
         "50 cm²",
-        "150 cm²"
+        "150 cm²",
+        "100 cm²"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Diagonal = a√2 = 10√2 → a = 10. Area = a² = 100 cm².",
       "estSec": 25,
       "topicWeight": 0.04,
@@ -1443,12 +1443,12 @@
       "difficulty": "medium",
       "stem": "Production of wheat (in tonnes) over 5 years: 2018: 120, 2019: 150, 2020: 130, 2021: 180, 2022: 200. What is the percentage increase from 2018 to 2022?",
       "options": [
+        "80%",
         "50%",
         "66.67%",
-        "75%",
-        "80%"
+        "75%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Increase = 200 − 120 = 80. % increase = 80/120 × 100 = 66.67%.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1469,12 +1469,12 @@
       "difficulty": "easy",
       "stem": "Expenditure distribution: Food 30%, Rent 25%, Transport 15%, Education 20%, Others 10%. If total monthly income is Rs. 24000, how much more is spent on Food than Education?",
       "options": [
-        "Rs. 1200",
-        "Rs. 2400",
         "Rs. 3600",
-        "Rs. 4800"
+        "Rs. 4800",
+        "Rs. 1200",
+        "Rs. 2400"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Food = 30% of 24000 = 7200. Education = 20% of 24000 = 4800. Difference = 2400.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1495,12 +1495,12 @@
       "difficulty": "medium",
       "stem": "Students in three classes: A = 40, B = 50, C = 60. Pass rates: A = 80%, B = 70%, C = 75%. Total students who passed:",
       "options": [
-        "105",
         "110",
         "115",
-        "120"
+        "120",
+        "105"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "A passed = 32, B passed = 35, C passed = 45. Total = 32+35+45 = 112. Hmm, not matching. Recalculate: 40×0.8 = 32, 50×0.7 = 35, 60×0.75 = 45. Total = 112. None match exactly. Closest is 115. Maybe rounding: answer C.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1521,12 +1521,12 @@
       "difficulty": "medium",
       "stem": "Statement: 'Use our product to get rid of dandruff permanently.' Assumption: I. People want to get rid of dandruff. II. Our product can permanently cure dandruff.",
       "options": [
-        "Only I is implicit",
-        "Only II is implicit",
-        "Both I and II are implicit",
-        "Neither I nor II is implicit"
+        "Neither I nor II is implicit",
+        "Applied in batch production only",
+        "Works under ideal conditions",
+        "Both I and II are implicit"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The advertisement assumes people have dandruff and want to remove it (I). It also assumes the product works permanently (II). Both are implicit assumptions for the claim to be meaningful.",
       "estSec": 30,
       "topicWeight": 0.04,
@@ -1542,12 +1542,12 @@
       "difficulty": "hard",
       "stem": "Statement: All roses are flowers. Some flowers are thorny. Conclusion: I. Some roses are thorny. II. Some thorny things are flowers.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Varies with scale of operation",
+        "Required for specialized cases",
+        "Applied in batch production only",
+        "Works under ideal conditions"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "From 'All roses are flowers' and 'Some flowers are thorny': We cannot conclude 'Some roses are thorny' (the thorny flowers might not be roses). But 'Some thorny things are flowers' follows directly from 'Some flowers are thorny' (converse). Only II follows.",
       "estSec": 35,
       "topicWeight": 0.04,
@@ -1563,12 +1563,12 @@
       "difficulty": "easy",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
-        "Mexico, Argentina",
         "Saudi Arabia, Iran, UAE",
         "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Nigeria, South Africa",
+        "Mexico, Argentina"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1584,12 +1584,12 @@
       "difficulty": "easy",
       "stem": "Reliance Industries recently announced a major investment in:",
       "options": [
+        "Copper smelting",
         "Coal mining",
         "Green energy",
-        "Oil refining",
-        "Copper smelting"
+        "Oil refining"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Reliance announced major investments in green energy transition.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1605,12 +1605,12 @@
       "difficulty": "medium",
       "stem": "ISRO's Gaganyaan mission aims to:",
       "options": [
-        "Land on Moon",
-        "Send astronauts to space",
         "Study the Sun",
-        "Explore Mars"
+        "Explore Mars",
+        "Land on Moon",
+        "Send astronauts to space"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Gaganyaan aims to send Indian astronauts (Gagannauts) to space.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1626,12 +1626,12 @@
       "difficulty": "medium",
       "stem": "India's 5G rollout was led by which telecom operator?",
       "options": [
-        "Airtel",
         "Jio",
         "BSNL",
-        "Vi"
+        "Vi",
+        "Airtel"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Reliance Jio led the 5G rollout in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1647,12 +1647,12 @@
       "difficulty": "hard",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
+        "Qualcomm",
         "Intel",
         "AMD",
-        "Nvidia",
-        "Qualcomm"
+        "Nvidia"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1668,12 +1668,12 @@
       "difficulty": "hard",
       "stem": "OPEC+ recently agreed to extend oil production cuts through:",
       "options": [
-        "Q1 2025",
-        "Q2 2025",
         "End of 2025",
-        "Q1 2026"
+        "Q1 2026",
+        "Q1 2025",
+        "Q2 2025"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "OPEC+ extended production cuts through end of 2025.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1689,12 +1689,12 @@
       "difficulty": "easy",
       "stem": "The President of India is elected by:",
       "options": [
-        "Lok Sabha members",
         "Rajya Sabha members",
         "Electoral College",
-        "Prime Minister"
+        "Prime Minister",
+        "Lok Sabha members"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "The river flowing through maximum Indian states:",
       "options": [
+        "Narmada",
         "Ganga",
         "Yamuna",
-        "Godavari",
-        "Narmada"
+        "Godavari"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Ganga flows through 11 states.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1731,12 +1731,12 @@
       "difficulty": "medium",
       "stem": "Upper House of Indian Parliament:",
       "options": [
-        "Lok Sabha",
-        "Rajya Sabha",
         "Vidhan Sabha",
-        "Vidhan Parishad"
+        "Vidhan Parishad",
+        "Lok Sabha",
+        "Rajya Sabha"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Rajya Sabha is the Upper House.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1752,12 +1752,12 @@
       "difficulty": "hard",
       "stem": "Largest freshwater lake in India:",
       "options": [
-        "Chilika Lake",
         "Wular Lake",
         "Dal Lake",
-        "Sambhar Lake"
+        "Sambhar Lake",
+        "Chilika Lake"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Wular Lake in J&K is the largest freshwater lake in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1773,12 +1773,12 @@
       "difficulty": "medium",
       "stem": "She asked me where ___ .",
       "options": [
+        "I live",
         "did I live",
         "do I live",
-        "I lived",
-        "I live"
+        "I lived"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Indirect speech uses past tense: 'where I lived'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1794,12 +1794,12 @@
       "difficulty": "medium",
       "stem": "___ honest man always speaks the truth.",
       "options": [
-        "A",
-        "An",
         "The",
-        "No article"
+        "No article",
+        "A",
+        "An"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1815,12 +1815,12 @@
       "difficulty": "hard",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
         "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1836,12 +1836,12 @@
       "difficulty": "medium",
       "stem": "The meeting was put ___ Friday.",
       "options": [
+        "up",
         "on",
         "at",
-        "off",
-        "up"
+        "off"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1857,12 +1857,12 @@
       "difficulty": "hard",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
-        "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen",
+        "Improve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1878,12 +1878,12 @@
       "difficulty": "hard",
       "stem": "Which is correct? 'The data ___ been analyzed.'",
       "options": [
-        "has",
         "have",
         "is",
-        "are"
+        "are",
+        "has"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Data is plural, so it takes 'have'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1899,12 +1899,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
+        "Slow",
         "Lazy",
         "Hardworking",
-        "Careless",
-        "Slow"
+        "Careless"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1920,12 +1920,12 @@
       "difficulty": "medium",
       "stem": "The teacher told the students ___ quietly.",
       "options": [
-        "to study",
-        "study",
         "studying",
-        "studied"
+        "studied",
+        "to study",
+        "study"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Infinitive after 'told': told someone to do something.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1941,12 +1941,12 @@
       "difficulty": "hard",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
         "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1962,12 +1962,12 @@
       "difficulty": "easy",
       "stem": "Choose the correct sentence: 'The team are working hard.'",
       "options": [
+        "Both A and C",
         "Correct — team is plural",
         "Incorrect — should be 'is working'",
-        "Incorrect — should be 'were working'",
-        "Both A and C"
+        "Incorrect — should be 'were working'"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Collective noun 'team' takes a singular verb in formal English.",
       "estSec": 15,
       "topicWeight": 0.1,

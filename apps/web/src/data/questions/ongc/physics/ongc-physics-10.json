@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The Green's function G(x, x') for the one-dimensional Laplacian d²/dx² on [0, L] with Dirichlet boundary conditions satisfies which equation?",
       "options": [
-        "d²G/dx² = δ(x − x'), G(0) = G(L) = 0",
         "d²G/dx² = −δ(x − x'), G(0) = G(L) = 0",
         "d²G/dx² + G = δ(x − x'), G(0) = G(L) = 0",
-        "d²G/dx² = δ(x − x'), G'(0) = G'(L) = 0"
+        "d²G/dx² = δ(x − x'), G'(0) = G'(L) = 0",
+        "d²G/dx² = δ(x − x'), G(0) = G(L) = 0"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Green's function for L = d²/dx² satisfies LG(x,x') = δ(x−x'). With the standard convention, d²G/dx² = −δ(x−x') with Dirichlet BCs. The solution is G(x,x') = x(L−x')/L for x < x' and G = x'(L−x)/L for x > x'. The negative sign ensures G ≥ 0.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "easy",
       "stem": "The first Bianchi identity for the Riemann curvature tensor states:",
       "options": [
-        "R^ρ_{σ[μν;λ]} = 0 (cyclic sum vanishes)",
-        "R^ρ_{σμν} = R^ρ_{νμσ}",
         "R_{μν} = R^ρ_{μρν}",
-        "R_{μνρσ} = R_{ρσμν}"
+        "R_{μνρσ} = R_{ρσμν}",
+        "R^ρ_{σ[μν;λ]} = 0 (cyclic sum vanishes)",
+        "R^ρ_{σμν} = R^ρ_{νμσ}"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The first Bianchi identity: R^ρ_{σμν;λ} + R^ρ_{σνλ;μ} + R^ρ_{σλμ;ν} = 0. This cyclic sum of the covariant derivative over the last three indices vanishes identically, independent of field equations. It reflects the symmetry of the torsion-free Levi-Civita connection.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "medium",
       "stem": "The residue of f(z) = cot(z) at z = π is:",
       "options": [
+        "−1",
         "π",
         "−π",
-        "1",
-        "−1"
+        "1"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "cot(z) = cos(z)/sin(z). At z = π, sin(π) = 0 and cos(π) = −1 ≠ 0, so z = π is a simple pole. Residue = cos(π)/cos(π) = (−1)/(−1) = 1. More generally, Res(cot z, nπ) = 1 for all integers n.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "hard",
       "stem": "The Fourier series of a square wave f(x) = +1 for 0 < x < π and f(x) = −1 for π < x < 2π contains:",
       "options": [
-        "Only cosine terms",
-        "Only sine terms",
+        "Depends on operating conditions",
         "Both sine and cosine terms",
-        "Only odd harmonics of sine"
+        "Works for low-speed applications",
+        "Used in single-phase systems"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "The square wave (extended as an odd function) has only sine terms. It also has half-wave symmetry f(x+π) = −f(x), eliminating even harmonics. The series is (4/π)[sin x + sin 3x/3 + sin 5x/5 + ...] — only odd sine harmonics.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "hard",
       "stem": "A rotation matrix in 3D for rotation about the z-axis by angle θ has eigenvalues:",
       "options": [
-        "1, cos θ + i sin θ, cos θ − i sin θ",
-        "e^(iθ), e^(−iθ), 0",
         "1, 1, 1",
-        "cos θ, sin θ, 1"
+        "cos θ, sin θ, 1",
+        "1, cos θ + i sin θ, cos θ − i sin θ",
+        "e^(iθ), e^(−iθ), 0"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "R_z(θ) = [[cosθ,−sinθ,0],[sinθ,cosθ,0],[0,0,1]]. Eigenvalue 1 corresponds to the z-axis (invariant). The 2×2 block gives e^(±iθ) = cos θ ± i sin θ. These three eigenvalues fully characterize the rotation.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "easy",
       "stem": "A bead of mass m slides without friction on a wire shaped as z = kr² in cylindrical coordinates. The Lagrangian for motion in the r-z plane (θ̇ = 0) is:",
       "options": [
+        "L = ½m(1 + k²r²)ṙ² − mgkr²",
         "L = ½m(1 + 4k²r²)ṙ² − mgkr²",
         "L = ½m(1 + 2k²r²)ṙ² − mgkr²",
-        "L = ½mṙ² − mgkr²",
-        "L = ½m(1 + k²r²)ṙ² − mgkr²"
+        "L = ½mṙ² − mgkr²"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "With z = kr², ż = 2krṙ. v² = ṙ² + ż² = ṙ²(1 + 4k²r²). L = T − V = ½m(1+4k²r²)ṙ² − mgkr². The factor (1+4k²r²) modifies the effective mass as the bead moves along the parabola.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "hard",
       "stem": "For a charged particle (mass m, charge q) in electromagnetic fields E and B, with canonical momentum p, the Hamiltonian is:",
       "options": [
-        "H = p²/(2m) + qφ",
         "H = (p − qA)²/(2m) + qφ",
         "H = (p + qA)²/(2m) + qφ",
-        "H = (p − qA)²/(2m) − qφ"
+        "H = (p − qA)²/(2m) − qφ",
+        "H = p²/(2m) + qφ"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "With L = ½mṙ² + qṙ·A − qφ, the canonical momentum is p = ∂L/∂ṙ = mv + qA. The Hamiltonian H = p·ṙ − L = (p−qA)²/(2m) + qφ. However, with the alternative sign convention where L = ½mṙ² − qṙ·A + qφ, we get p = mv − qA and H = (p+qA)²/(2m) − qφ. The standard physics convention uses H = (p−qA)²/(2m) + qφ. Option B is the standard answer.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "medium",
       "stem": "For a particle in an attractive inverse-square force field, the orbit is an ellipse with semi-major axis a. The total energy E is:",
       "options": [
-        "E = −k/(2a), independent of eccentricity",
-        "E = −k/a, independent of eccentricity",
         "E = −k/(2a), dependent on eccentricity",
-        "E = k/(2a)"
+        "E = k/(2a)",
+        "E = −k/(2a), independent of eccentricity",
+        "E = −k/a, independent of eccentricity"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For the Kepler problem, E = −k/(2a). The energy depends only on the semi-major axis, not on eccentricity. Two orbits with the same a but different eccentricities have identical energy — a remarkable property of the inverse-square law.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "medium",
       "stem": "A uniform solid sphere of mass M and radius R rolls without slipping down an incline at angle θ. The acceleration of the center of mass is:",
       "options": [
+        "(3/5) g sin θ",
         "g sin θ",
         "(5/7) g sin θ",
-        "(2/3) g sin θ",
-        "(3/5) g sin θ"
+        "(2/3) g sin θ"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Rolling without slipping: Ma = Mg sin θ − f, fR = Iα. For solid sphere I = (2/5)MR², so f = (2/5)Ma. Substituting: a(1+2/5) = g sin θ → a = (5/7)g sin θ. The factor 5/7 reflects rotational inertia coupling.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "easy",
       "stem": "A particle has kinetic energy equal to its rest energy. Its speed as a fraction of c is:",
       "options": [
-        "0.5c",
-        "0.707c",
         "0.866c",
-        "0.6c"
+        "0.6c",
+        "0.5c",
+        "0.707c"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "KE = (γ−1)mc². Setting KE = mc²: γ−1 = 1 → γ = 2. Since γ = 1/√(1−v²/c²) = 2, we get 1−v²/c² = 1/4 → v²/c² = 3/4 → v = (√3/2)c ≈ 0.866c.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "hard",
       "stem": "A double pendulum has how many normal modes of small oscillation?",
       "options": [
-        "1",
         "2",
         "3",
-        "4"
+        "4",
+        "1"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A double pendulum has 2 degrees of freedom (two angles). Therefore it has exactly 2 normal modes: symmetric (in-phase) and antisymmetric (out-of-phase). The number of normal modes equals the number of degrees of freedom.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "medium",
       "stem": "From Maxwell's equations in free space, the speed of electromagnetic waves is:",
       "options": [
+        "ε₀μ₀",
         "1/√(ε₀μ₀)",
         "√(ε₀/μ₀)",
-        "√(μ₀/ε₀)",
-        "ε₀μ₀"
+        "√(μ₀/ε₀)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The wave equation gives ∇²E = μ₀ε₀ ∂²E/∂t². Comparing with ∇²f = (1/v²)∂²f/∂t², v = 1/√(μ₀ε₀) = c ≈ 3×10⁸ m/s. This was Maxwell's triumph — predicting light is an EM wave.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "easy",
       "stem": "At the Brewster angle, a p-polarized electromagnetic wave incident from air onto glass is:",
       "options": [
-        "Fully reflected",
-        "Partially reflected and partially refracted",
         "Completely transmitted (no reflection)",
-        "Absorbed by the surface"
+        "Absorbed by the surface",
+        "Fully reflected",
+        "Partially reflected and partially refracted"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "At the Brewster angle θ_B = tan⁻¹(n₂/n₁), the reflection coefficient for p-polarized light is exactly zero. All the p-polarized light is transmitted. This is used in polarizing filters and Brewster windows in lasers.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "A right-hand circularly polarized wave traveling in +z direction has electric field:",
       "options": [
-        "E = E₀(x̂ cos(kz−ωt) + ŷ sin(kz−ωt))",
         "E = E₀(x̂ cos(kz−ωt) − ŷ sin(kz−ωt))",
         "E = E₀ x̂ cos(kz−ωt)",
-        "E = E₀(x̂ + ŷ) cos(kz−ωt)"
+        "E = E₀(x̂ + ŷ) cos(kz−ωt)",
+        "E = E₀(x̂ cos(kz−ωt) + ŷ sin(kz−ωt))"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Right-hand circular polarization: E rotates from x̂ toward ŷ as t increases at fixed z (clockwise when viewed from +z looking back toward source). The + sign between components gives RHCP by the physics convention.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "hard",
       "stem": "The time-averaged power radiated by an oscillating electric dipole p = p₀ cos(ωt) ẑ is proportional to:",
       "options": [
+        "ω⁶ p₀²",
         "ω² p₀²",
         "ω⁴ p₀²",
-        "ω p₀²",
-        "ω⁶ p₀²"
+        "ω p₀²"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The radiated power ∝ ω⁴p₀². This ω⁴ dependence explains Rayleigh scattering (blue sky: scattering ∝ 1/λ⁴ ∝ ω⁴) and why short-wavelength radiation is scattered more efficiently.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "easy",
       "stem": "The number of bound states in a finite square well of depth V₀ and half-width a depends on the dimensionless parameter:",
       "options": [
-        "V₀a² only",
-        "√(2mV₀)a/ℏ",
         "The ratio V₀/m",
-        "V₀ and a independently"
+        "V₀ and a independently",
+        "V₀a² only",
+        "√(2mV₀)a/ℏ"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The parameter ξ₀ = √(2mV₀)a/ℏ determines the number of bound states. For ξ₀ < π/2, exactly 1 bound state exists (always at least one in 1D symmetric well). For larger ξ₀, more states appear.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "hard",
       "stem": "The total degeneracy (including spin) of the n = 3 level of hydrogen is:",
       "options": [
-        "9",
         "18",
         "27",
-        "6"
+        "6",
+        "9"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Without spin: n² = 9 states. With electron spin (s = 1/2), each orbital has 2 spin states. Total = 2n² = 2 × 9 = 18. This degeneracy is lifted by spin-orbit coupling and external fields.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "easy",
       "stem": "Two spin-½ particles are in the singlet state. The probability of measuring total spin S = 0 is:",
       "options": [
+        "3/4",
         "0",
         "1/2",
-        "1",
-        "3/4"
+        "1"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The singlet state |ψ⟩ = (|↑↓⟩ − |↓↑⟩)/√2 IS the S = 0, m_s = 0 eigenstate. It is an eigenstate of S² with eigenvalue 0. The probability of measuring S = 0 is exactly 1 (certainty).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "medium",
       "stem": "In the linear Stark effect for hydrogen at n = 2, the first-order energy splitting in a field E is:",
       "options": [
-        "±3ea₀E",
-        "±ea₀E",
         "Zero for all states",
-        "−ea₀E for 2p only"
+        "−ea₀E for 2p only",
+        "±3ea₀E",
+        "±ea₀E"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The 2s and 2p₀ states mix under H' = eEz. The off-diagonal matrix element ⟨2s|eEz|2p₀⟩ = 3ea₀. Diagonalizing gives eigenvalues ±3ea₀E. The 2p₊₁ and 2p₋₁ states are unaffected to first order.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "hard",
       "stem": "In low-energy (ka ≪ 1) s-wave scattering from a hard sphere of radius a, the total cross section is:",
       "options": [
-        "πa²",
         "4πa²",
         "2πa²",
-        "πa²/4"
+        "πa²/4",
+        "πa²"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a hard sphere, δ₀ = −ka. σ = (4π/k²)sin²(ka) ≈ (4π/k²)(ka)² = 4πa². This is four times the geometric cross section — a purely quantum result with no classical analogue.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "medium",
       "stem": "The Clausius inequality for any cyclic process states:",
       "options": [
+        "∮ δQ = 0",
         "∮ δQ/T ≥ 0",
         "∮ δQ/T ≤ 0",
-        "∮ δQ/T = 0",
-        "∮ δQ = 0"
+        "∮ δQ/T = 0"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "∮ δQ/T ≤ 0 for any cycle. Equality holds only for reversible (Carnot) cycles. This embodies the second law — heat cannot spontaneously flow from cold to hot without external work.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "easy",
       "stem": "In the grand canonical ensemble, the grand potential Φ is related to the grand partition function Ξ by:",
       "options": [
-        "Φ = −kT ln Ξ",
-        "Φ = kT ln Ξ",
         "Φ = −kT Ξ",
-        "Φ = −kT ln Z"
+        "Φ = −kT ln Z",
+        "Φ = −kT ln Ξ",
+        "Φ = kT ln Ξ"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Φ = −PV = −kT ln Ξ, analogous to F = −kT ln Z in the canonical ensemble. The grand canonical ensemble allows fluctuation in both energy and particle number, ideal for systems in contact with a particle reservoir.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "The electronic specific heat of a Fermi gas at low temperatures (T ≪ T_F) is proportional to:",
       "options": [
-        "T",
         "T²",
         "T³",
-        "Constant"
+        "Constant",
+        "T"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Only electrons within ~kT of the Fermi surface contribute. The number ∝ T/T_F, giving C_V = (π²/2)Nk(T/T_F) ∝ T. This linear-T dependence distinguishes metals from insulators.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "easy",
       "stem": "The order parameter for the ferromagnetic-to-paramagnetic transition is:",
       "options": [
+        "Correlation length",
         "Specific heat",
         "Magnetization",
-        "Susceptibility",
-        "Correlation length"
+        "Susceptibility"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Magnetization M is zero in the disordered (paramagnetic) phase and nonzero in the ordered (ferromagnetic) phase below T_c. It serves as the order parameter characterizing the phase transition.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "The Balmer series of hydrogen corresponds to transitions ending at:",
       "options": [
-        "n = 1",
-        "n = 2",
         "n = 3",
-        "n = 4"
+        "n = 4",
+        "n = 1",
+        "n = 2"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Balmer series: transitions from n ≥ 3 to n = 2, producing visible light. Hα (656.3 nm): 3→2, Hβ (486.1 nm): 4→2, Hγ (434.0 nm): 5→2.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "hard",
       "stem": "In the anomalous Zeeman effect, the sodium D₂ line (²P₃/₂ → ²S₁/₂) in a weak magnetic field splits into how many components?",
       "options": [
-        "4",
         "6",
         "8",
-        "10"
+        "10",
+        "4"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Upper ²P₃/₂ has 4 sublevels (m_j = ±3/2, ±1/2), lower ²S₁/₂ has 2 (m_j = ±1/2). Selection rule Δm_j = 0, ±1 gives 8 allowed transitions: from m_j=−3/2→−1/2 (1), −1/2→−3/2,−1/2,+1/2 (3), +1/2→−1/2,+1/2,+3/2 (3), +3/2→+1/2 (1) = 8 total.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "medium",
       "stem": "The bond order of N₂ according to molecular orbital theory is:",
       "options": [
+        "1.5",
         "1",
         "2",
-        "3",
-        "1.5"
+        "3"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "N₂ (14e⁻): (σ1s)²(σ*1s)²(σ2s)²(σ*2s)²(π2p)⁴(σ2p)². Bonding = 10, antibonding = 4. Bond order = (10−4)/2 = 3. The triple bond explains N₂'s exceptional stability (945 kJ/mol dissociation energy).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "hard",
       "stem": "A He-Ne laser operates at 632.8 nm. The photon energy is approximately:",
       "options": [
-        "0.5 eV",
-        "1.0 eV",
         "1.5 eV",
-        "2.0 eV"
+        "2.0 eV",
+        "0.5 eV",
+        "1.0 eV"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "E = hc/λ = (6.63×10⁻³⁴ × 3×10⁸)/(632.8×10⁻⁹) = 3.14×10⁻¹⁹ J ≈ 1.96 eV ≈ 2.0 eV.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "hard",
       "stem": "In the vibration-rotation spectrum of a diatomic molecule, the 'missing Q branch' (ΔJ = 0) occurs because:",
       "options": [
-        "Nuclear spin statistics forbid ΔJ = 0",
         "The selection rule for Σ ground states is ΔJ = ±1",
         "The Q branch is too weak to observe",
-        "Rotational constant B = 0"
+        "Rotational constant B = 0",
+        "Nuclear spin statistics forbid ΔJ = 0"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For heteronuclear diatomics with Σ electronic ground states, the selection rule is ΔJ = ±1 (no Q branch). The angular momentum selection rules from the dipole matrix elements give zero for ΔJ = 0 transitions in this case.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "easy",
       "stem": "Moseley's law gives the Kα X-ray frequency as ∝ (Z − 1)². The screening constant is 1 because:",
       "options": [
+        "The nucleus has finite size",
         "One electron is lost during emission",
         "The remaining 1s electron screens the nuclear charge",
-        "Relativistic effects reduce effective charge",
-        "The nucleus has finite size"
+        "Relativistic effects reduce effective charge"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For Kα (2p → 1s), one 1s electron remains, partially screening the nucleus. The effective charge for the 2p electron is (Z − 1)e, giving ν ∝ (Z − 1)².",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "medium",
       "stem": "The structure factor F(hkl) for a BCC lattice vanishes unless:",
       "options": [
-        "h+k+l is even",
-        "h+k+l is odd",
         "h,k,l are all even",
-        "h,k,l are all odd"
+        "h,k,l are all odd",
+        "h+k+l is even",
+        "h+k+l is odd"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "BCC basis: atoms at (0,0,0) and (½,½,½). F = f[1 + e^(iπ(h+k+l))]. When h+k+l is odd: F = 0. When even: F = 2f. This is why BCC shows (110), (200) but not (100) or (111).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "medium",
       "stem": "In the nearly-free electron model, the energy gap at the Brillouin zone boundary arises from:",
       "options": [
-        "Electron-electron interactions",
         "Periodic potential causing Bragg reflection of electron waves",
         "Spin-orbit coupling",
-        "Phonon scattering"
+        "Phonon scattering",
+        "Electron-electron interactions"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "At k = π/a, the electron wavelength satisfies the Bragg condition. The periodic potential scatters forward waves into backward waves, creating standing states with different energies → band gap ΔE = 2|V_G|.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "hard",
       "stem": "The BCS theory prediction for the ratio 2Δ(0)/k_BT_c in weak-coupling superconductors is:",
       "options": [
+        "4.28",
         "1.76",
         "2.14",
-        "3.52",
-        "4.28"
+        "3.52"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "BCS predicts 2Δ(0) = 3.52 k_BT_c (or Δ(0) = 1.76 k_BT_c). This universal ratio holds for weak-coupling superconductors. Strong-coupling materials (Pb, Hg) have larger ratios.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "easy",
       "stem": "A crystal with p atoms per primitive cell has how many acoustic phonon branches?",
       "options": [
-        "p",
-        "3p",
         "3",
-        "3(p−1)"
+        "3(p−1)",
+        "p",
+        "3p"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Always exactly 3 acoustic branches (1 longitudinal + 2 transverse) regardless of p. The remaining 3(p−1) branches are optical. Acoustic branches go to zero frequency at k = 0.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "The Curie-Weiss law χ = C/(T − T_C) describes the susceptibility of which material above T_C?",
       "options": [
-        "Diamagnets",
         "Paramagnets",
         "Ferromagnets",
-        "Antiferromagnets"
+        "Antiferromagnets",
+        "Diamagnets"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Ferromagnets above T_C follow χ = C/(T − T_C). The susceptibility diverges as T → T_C⁺. For antiferromagnets, the analogous form is χ = C/(T + θ) with θ > 0.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "medium",
       "stem": "A MOSFET in saturation has drain current I_D ∝:",
       "options": [
+        "V_DS²",
         "(V_GS − V_th)",
         "(V_GS − V_th)²",
-        "V_DS",
-        "V_DS²"
+        "V_DS"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In saturation (V_DS ≥ V_GS − V_th): I_D = (μ_nC_oxW/2L)(V_GS − V_th)². This square-law behavior is fundamental to MOSFET amplifier design.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "easy",
       "stem": "A common-emitter amplifier with voltage gain −100 shows the negative sign indicates:",
       "options": [
-        "Power loss",
-        "180° phase shift",
         "Negative feedback",
-        "Signal attenuation"
+        "Signal attenuation",
+        "Power loss",
+        "180° phase shift"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The negative gain indicates 180° phase inversion between input and output. When base voltage rises, collector voltage falls (transistor conducts more, pulling collector toward ground).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "medium",
       "stem": "A 4-to-1 multiplexer requires how many select lines?",
       "options": [
-        "1",
         "2",
         "3",
-        "4"
+        "4",
+        "1"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "With 4 inputs, we need log₂(4) = 2 select lines (S₁, S₀) to choose one of the four inputs.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "hard",
       "stem": "The Shannon-Hartley channel capacity theorem states C =:",
       "options": [
+        "B(1 + S/N)",
         "B log₂(1 + S/N)",
         "2B log₂(1 + S/N)",
-        "B log₂(S/N)",
-        "B(1 + S/N)"
+        "B log₂(S/N)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "C = B log₂(1 + S/N) bits/s. This is the theoretical maximum reliable data rate over a noisy Gaussian channel. Capacity increases logarithmically with SNR and linearly with bandwidth.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "hard",
       "stem": "The semi-empirical mass formula for nuclear binding energy includes all EXCEPT:",
       "options": [
-        "Volume term",
-        "Surface term",
         "Strong force term",
-        "Pairing term"
+        "Pairing term",
+        "Volume term",
+        "Surface term"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The five terms: volume (a_V A), surface (−a_S A^{2/3}), Coulomb (−a_C Z(Z−1)/A^{1/3}), asymmetry (−a_A(A−2Z)²/A), and pairing (±a_P/A^{3/2}). There is no separate 'strong force term' — it's captured by the volume term.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "easy",
       "stem": "A population increases by 10% in year 1 and decreases by 10% in year 2. Starting from 10,000, the population after 2 years is:",
       "options": [
-        "10,000",
         "9,900",
         "10,100",
-        "9,800"
+        "9,800",
+        "10,000"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "After +10%: 10,000 × 1.1 = 11,000. After −10%: 11,000 × 0.9 = 9,900. Net change is −1%, not 0%. The decrease applies to the larger base.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -933,12 +933,12 @@
       "difficulty": "medium",
       "stem": "A can do a job in 10 days, B in 15 days. They work together for 4 days, then A leaves. B finishes the remaining work alone in how many days?",
       "options": [
+        "5",
         "2",
         "3",
-        "4",
-        "5"
+        "4"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "A+B rate = 1/10 + 1/15 = 5/30 = 1/6 per day. In 4 days: 4/6 = 2/3 done. Remaining: 1/3. B alone: (1/3)/(1/15) = 5 days. Answer is D (5 days). Wait, but I listed answer as 2 (option C = 4 days). Let me fix: (1/3)/(1/15) = 15/3 = 5. So answer should be 3 (index for '5 days'). Let me correct.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -959,12 +959,12 @@
       "difficulty": "medium",
       "stem": "Goods marked 40% above CP are sold at 20% discount. Profit percentage is:",
       "options": [
-        "10%",
-        "12%",
         "15%",
-        "20%"
+        "20%",
+        "10%",
+        "12%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let CP = 100. MP = 140. SP = 140 × 0.8 = 112. Profit = 12%. Profit% = 12/100 × 100 = 12%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -985,12 +985,12 @@
       "difficulty": "hard",
       "stem": "Average of 30 students is 12 years. Including the teacher, average becomes 13. Teacher's age is:",
       "options": [
-        "41",
         "42",
         "43",
-        "44"
+        "44",
+        "41"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Students' total: 30 × 12 = 360. With teacher: 31 × 13 = 403. Teacher = 403 − 360 = 43.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1011,12 +1011,12 @@
       "difficulty": "medium",
       "stem": "From 3 red, 4 blue, 5 green balls, 3 drawn at random. Probability all three are green:",
       "options": [
+        "1/11",
         "1/22",
         "5/44",
-        "3/44",
-        "1/11"
+        "3/44"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Total = C(12,3) = 220. Green = C(5,3) = 10. P = 10/220 = 1/22.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1037,12 +1037,12 @@
       "difficulty": "medium",
       "stem": "Three numbers are in ratio 2:3:4. Sum of squares is 362. Find the largest number.",
       "options": [
-        "10",
-        "12",
         "14",
-        "16"
+        "16",
+        "10",
+        "12"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let numbers be 2x, 3x, 4x. Sum of squares: 4x²+9x²+16x² = 29x² = 362. x² = 362/29 = 12.48... Not clean. Let me fix: use ratio 1:2:3. Sum: 1+4+9 = 14. 14x² = 362, x² = 362/14 = 25.86. Not clean. Use ratio 3:4:5. Sum: 9+16+25 = 50. 50x² = 362, x² = 7.24. Not clean. Use sum = 148. 29x² = 148, x² = 148/29 ≈ 5.1. Not clean. Use sum = 58: 29x² = 58, x² = 2. x = √2. Not clean. Use ratio 2:3:4, sum = 232: 29x² = 232, x² = 8. x = 2√2. Not clean. Use ratio 1:3:4: sum = 1+9+16 = 26. 26x² = 362, x² = 362/26 = 13.92. Not clean. I'll change the problem: ratio 3:4:5, sum of squares = 500. 50x²=500, x²=10, x=√10. Not clean. Sum=1250: 50x²=1250, x²=25, x=5. Numbers: 15,20,25. Largest = 25. Not in options. Let me use: ratio 2:3:4, sum of squares = 232. 29x²=232, x²=8. x=2√2. Not clean. OK I'll use a completely different approach. Ratio 1:2:3, sum = 14x². Let x=5: sum=350, largest=15. Options include 15? No. Let me just change the problem entirely. Numbers in ratio 1:2:3. Product is 48. Find largest. 1x×2x×3x=6x³=48, x³=8, x=2. Numbers: 2,4,6. Largest = 6. That's too easy. Let me try: ratio 3:4:5, product = 720. 60x³=720, x³=12, x=∛12. Not clean. This is taking too long. I'll just write a clean problem from scratch.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1063,12 +1063,12 @@
       "difficulty": "medium",
       "stem": "Cities A and B are 300 km apart. Cars start at 60 km/h and 40 km/h toward each other. They meet after:",
       "options": [
-        "2 hours",
         "2.5 hours",
         "3 hours",
-        "3.5 hours"
+        "3.5 hours",
+        "2 hours"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Relative speed = 60 + 40 = 100 km/h. Time = 300/100 = 3 hours.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1089,12 +1089,12 @@
       "difficulty": "medium",
       "stem": "Money doubles in 5 years at compound interest. It becomes 8 times in how many years?",
       "options": [
+        "20",
         "10",
         "12",
-        "15",
-        "20"
+        "15"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "(1+r)⁵ = 2. For 8×: (1+r)ⁿ = 8 = 2³. So n = 3 × 5 = 15 years.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1115,12 +1115,12 @@
       "difficulty": "hard",
       "stem": "7 people seated around a circular table. Number of arrangements:",
       "options": [
-        "7!",
-        "6!",
         "5!",
-        "7!/2"
+        "7!/2",
+        "7!",
+        "6!"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Circular permutations of n = (n−1)! = 6! = 720. Fix one person, arrange the remaining 6.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1141,12 +1141,12 @@
       "difficulty": "medium",
       "stem": "Remainder when 2¹⁰⁰ is divided by 7:",
       "options": [
-        "1",
         "2",
         "3",
-        "4"
+        "4",
+        "1"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "2³ = 8 ≡ 1 (mod 7). 100 = 33×3 + 1. So 2¹⁰⁰ = (2³)³³ × 2 ≡ 1³³ × 2 = 2 (mod 7).",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1167,12 +1167,12 @@
       "difficulty": "hard",
       "stem": "Still water speed 12 km/h, current 4 km/h. Round trip to a place takes 3 hours. Distance to place:",
       "options": [
+        "20 km",
         "14 km",
         "16 km",
-        "18 km",
-        "20 km"
+        "18 km"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Downstream = 16, upstream = 8. d/16 + d/8 = 3 → d/16 + 2d/16 = 3 → 3d/16 = 3 → d = 16 km.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1193,12 +1193,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills in 6 hours, Pipe B in 8 hours. Both open for 2 hours, then B is closed. A alone fills the rest in:",
       "options": [
-        "2 hours",
-        "2.5 hours",
         "3 hours",
-        "3.5 hours"
+        "3.5 hours",
+        "2 hours",
+        "2.5 hours"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A+B rate = 1/6 + 1/8 = 7/24 per hour. In 2 hours: 14/24 = 7/12. Remaining: 5/12. A alone: (5/12)/(1/6) = 30/12 = 2.5 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1219,12 +1219,12 @@
       "difficulty": "medium",
       "stem": "Present ages of A, B, C are in ratio 4:5:6. Eight years ago, sum was 66. B's present age is:",
       "options": [
-        "20",
         "24",
         "28",
-        "30"
+        "30",
+        "20"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Ages: 4x, 5x, 6x. Eight years ago: (4x−8)+(5x−8)+(6x−8) = 66 → 15x−24=66 → 15x=90 → x=6. B = 5×6 = 30.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1245,12 +1245,12 @@
       "difficulty": "hard",
       "stem": "Next in series: 3, 7, 15, 31, 63, ?",
       "options": [
+        "120",
         "95",
         "127",
-        "125",
-        "120"
+        "125"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Each term = 2×previous + 1: 3→7→15→31→63→127. Alternatively, 2^(n+1)−1: 127 = 2⁷−1.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1271,12 +1271,12 @@
       "difficulty": "easy",
       "stem": "If DELHI = 73541 and CALCUTTA = 82589662, then CALICUT = ?",
       "options": [
-        "8251896",
-        "8251836",
         "8251386",
-        "8258136"
+        "8258136",
+        "8251896",
+        "8251836"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "From given: D=7, E=3, L=5, H=4, I=1, C=8, A=2, U=9, T=6. CALICUT: C=8, A=2, L=5, I=1, C=8, U=9, T=6 → 8251896.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a man, a woman says 'His mother is the only daughter of my mother.' The woman is the man's:",
       "options": [
-        "Mother",
         "Sister",
         "Grandmother",
-        "Aunt"
+        "Aunt",
+        "Mother"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The only daughter of the woman's mother is the woman herself. So 'his mother' = the woman. She is his mother.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1323,12 +1323,12 @@
       "difficulty": "medium",
       "stem": "Ravi walks 10 km N, turns right walks 5 km, turns right walks 10 km. He is:",
       "options": [
+        "5 km W of start",
         "5 km N of start",
         "5 km E of start",
-        "10 km E of start",
-        "5 km W of start"
+        "10 km E of start"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "(0,10)→(5,10)→(5,0). Distance from origin = 5 km East.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1349,12 +1349,12 @@
       "difficulty": "hard",
       "stem": "Statements: All cats are dogs. All dogs are birds. Some birds are insects. Conclusions: I. All cats are birds. II. Some cats are insects.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Depends on operating conditions",
+        "Works under ideal conditions",
+        "Applies to low-voltage systems",
+        "Used in single-phase systems"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "From chain: All cats → dogs → birds, so all cats are birds (I follows). 'Some birds are insects' doesn't connect to cats (II doesn't follow).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1375,12 +1375,12 @@
       "difficulty": "hard",
       "stem": "Mix rice at Rs.30/kg and Rs.45/kg to get Rs.36/kg. Ratio is:",
       "options": [
-        "3:2",
         "2:3",
         "3:4",
-        "4:3"
+        "4:3",
+        "3:2"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Alligation: (45−36):(36−30) = 9:6 = 3:2.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1401,12 +1401,12 @@
       "difficulty": "medium",
       "stem": "Six people A-F sit in two rows of three. A faces north with B to the right. C is opposite B. D is to the left of C. E is between D and F. Who sits behind A?",
       "options": [
+        "F",
         "C",
         "D",
-        "E",
-        "F"
+        "E"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Working through the constraints: Row 1 (N): A, B, _. Row 2 (S): _, C, _. D left of C. E between D and F. The arrangement puts F directly behind A.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1427,12 +1427,12 @@
       "difficulty": "medium",
       "stem": "A student scored 45% in an exam with 200 maximum marks. How many marks did the student score?",
       "options": [
-        "90",
-        "100",
         "110",
-        "80"
+        "80",
+        "90",
+        "100"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "45% of 200 = 0.45 × 200 = 90 marks.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "A can do a piece of work in 15 days and B can do it in 20 days. Working together, they finish the work. B's share of the payment is Rs.1,200. Total payment is:",
       "options": [
-        "Rs.2,800",
         "Rs.3,000",
         "Rs.2,600",
-        "Rs.2,400"
+        "Rs.2,400",
+        "Rs.2,800"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A's rate = 1/15, B's rate = 1/20. Ratio of work = 4:3. Total parts = 7. B's share = 3/7 of total. If 3/7 = Rs.1,200, total = Rs.2,800.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1479,12 +1479,12 @@
       "difficulty": "easy",
       "stem": "In a certain code language, COMPUTER is written as DNPQVUFS. How is SCIENCE written in that code?",
       "options": [
+        "TDJFOEE",
         "TDJFODF",
         "TDJFODG",
-        "SEJHPGE",
-        "TDJFOEE"
+        "SEJHPGE"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Each letter is shifted by +1 in the alphabet: C→D, O→P, M→N, P→Q, U→V, T→U, E→F, R→S. So COMPUTER→DNPQVUFS. Similarly S(+1)=T, C(+1)=D, I(+1)=J, E(+1)=F, N(+1)=O, C(+1)=D, E(+1)=F. SCIENCE→TDJFODF.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1505,12 +1505,12 @@
       "difficulty": "medium",
       "stem": "The compound interest on Rs.16,000 at 10% per annum for 2 years compounded annually is:",
       "options": [
-        "Rs.3,360",
-        "Rs.3,200",
         "Rs.3,400",
-        "Rs.3,600"
+        "Rs.3,600",
+        "Rs.3,360",
+        "Rs.3,200"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "CI = P(1+r)ⁿ − P = 16000(1.10)² − 16000 = 16000(1.21) − 16000 = 19360 − 16000 = Rs.3,360.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1531,12 +1531,12 @@
       "difficulty": "medium",
       "stem": "The ratio of boys to girls in a class is 3:2. If there are 30 girls, the total number of students is:",
       "options": [
-        "75",
         "50",
         "55",
-        "60"
+        "60",
+        "75"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Boys:Girls = 3:2. Girls = 30, so 2 parts = 30, 1 part = 15. Boys = 45. Total = 45 + 30 = 75.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1557,12 +1557,12 @@
       "difficulty": "easy",
       "stem": "The G20 summit under India's presidency was held in:",
       "options": [
+        "Chennai",
         "Mumbai",
         "New Delhi",
-        "Bengaluru",
-        "Chennai"
+        "Bengaluru"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The G20 summit was held in New Delhi.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1578,12 +1578,12 @@
       "difficulty": "easy",
       "stem": "Which PSU recently achieved the milestone of 1 billion tonnes of crude oil production?",
       "options": [
-        "BPCL",
-        "HPCL",
         "ONGC",
-        "IOCL"
+        "IOCL",
+        "BPCL",
+        "HPCL"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "ONGC achieved this milestone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1599,12 +1599,12 @@
       "difficulty": "medium",
       "stem": "India's GDP growth rate for FY2025-26 is estimated at approximately:",
       "options": [
-        "5.5%",
         "6.5%",
         "7.5%",
-        "8.5%"
+        "8.5%",
+        "5.5%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "India's GDP growth for FY2025-26 is estimated at around 6.5%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
+        "Qualcomm",
         "Intel",
         "AMD",
-        "Nvidia",
-        "Qualcomm"
+        "Nvidia"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1641,12 +1641,12 @@
       "difficulty": "hard",
       "stem": "India's 5G rollout was led by which telecom operator?",
       "options": [
-        "Airtel",
-        "Jio",
         "BSNL",
-        "Vi"
+        "Vi",
+        "Airtel",
+        "Jio"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Reliance Jio led the 5G rollout in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1662,12 +1662,12 @@
       "difficulty": "hard",
       "stem": "The PLI scheme for semiconductor manufacturing was approved with an outlay of:",
       "options": [
-        "₹10,000 crore",
         "₹25,000 crore",
         "₹76,000 crore",
-        "₹1,00,000 crore"
+        "₹1,00,000 crore",
+        "₹10,000 crore"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The PLI scheme for semiconductors has an outlay of ₹76,000 crore.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1683,12 +1683,12 @@
       "difficulty": "easy",
       "stem": "Upper House of Indian Parliament:",
       "options": [
+        "Vidhan Parishad",
         "Lok Sabha",
         "Rajya Sabha",
-        "Vidhan Sabha",
-        "Vidhan Parishad"
+        "Vidhan Sabha"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Rajya Sabha is the Upper House.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1704,12 +1704,12 @@
       "difficulty": "medium",
       "stem": "Largest freshwater lake in India:",
       "options": [
-        "Chilika Lake",
-        "Wular Lake",
         "Dal Lake",
-        "Sambhar Lake"
+        "Sambhar Lake",
+        "Chilika Lake",
+        "Wular Lake"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Wular Lake in J&K is the largest freshwater lake in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1725,12 +1725,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
-        "Quartz",
         "Topaz",
         "Diamond",
-        "Corundum"
+        "Corundum",
+        "Quartz"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1746,12 +1746,12 @@
       "difficulty": "hard",
       "stem": "India gained independence on:",
       "options": [
+        "January 26, 1947",
         "January 26, 1950",
         "August 15, 1947",
-        "August 15, 1950",
-        "January 26, 1947"
+        "August 15, 1950"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India gained independence on August 15, 1947.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1767,12 +1767,12 @@
       "difficulty": "hard",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
-        "at",
         "off",
-        "up"
+        "up",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1788,12 +1788,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
-        "Kind",
         "Malevolent",
         "Generous",
-        "Charitable"
+        "Charitable",
+        "Kind"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1809,12 +1809,12 @@
       "difficulty": "hard",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
+        "have been",
         "were",
         "are",
-        "was",
-        "have been"
+        "was"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1830,12 +1830,12 @@
       "difficulty": "easy",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
-        "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen",
+        "Improve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1851,12 +1851,12 @@
       "difficulty": "medium",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
         "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1872,12 +1872,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
+        "No article",
         "A",
         "An",
-        "The",
-        "No article"
+        "The"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1893,12 +1893,12 @@
       "difficulty": "easy",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
-        "Clear",
-        "Vague",
         "Definite",
-        "Obvious"
+        "Obvious",
+        "Clear",
+        "Vague"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1914,12 +1914,12 @@
       "difficulty": "easy",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
         "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1935,12 +1935,12 @@
       "difficulty": "hard",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
+        "Slow",
         "Lazy",
         "Hardworking",
-        "Careless",
-        "Slow"
+        "Careless"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1956,12 +1956,12 @@
       "difficulty": "medium",
       "stem": "What does 'resilient' mean?",
       "options": [
-        "Fragile",
-        "Able to recover quickly",
         "Slow",
-        "Weak"
+        "Weak",
+        "Fragile",
+        "Able to recover quickly"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Resilient means able to recover quickly from difficulties.",
       "estSec": 15,
       "topicWeight": 0.1,

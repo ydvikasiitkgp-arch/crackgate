@@ -410,7 +410,7 @@
       "type": "MCQ",
       "stem": "In percussive drilling, the drill steel (rod) transmits",
       "options": [
-        "only flushing air",
+        "Works for short-span bridges",
         "rotation and percussion (impact) energy from the drill to the bit",
         "electric current to the bit",
         "explosive to the bottom of the hole"
@@ -872,7 +872,7 @@
         "cannot be detonated at all",
         "can be reliably initiated by a standard No. 8 blasting detonator without a booster",
         "requires a 100 g booster to fire",
-        "only burns and never detonates"
+        "Works for short-span bridges"
       ],
       "answer": 1,
       "solution": "**Concept.** Cap sensitivity is the ease of initiation.\n\n**Reasoning.** A cap-sensitive explosive (e.g. many cartridged NG/emulsion products) detonates directly from a No. 8 cap; insensitive blasting agents (ANFO) are not cap-sensitive and need a booster.\n\n**Answer.** Initiated directly by a No. 8 detonator.",
@@ -1332,7 +1332,11 @@
         "Choosing a spacing-to-burden ratio in the range 1.1–1.5",
         "Using an excessively large burden"
       ],
-      "answer": [0, 1, 2],
+      "answer": [
+        0,
+        1,
+        2
+      ],
       "solution": "**Concept.** Fragmentation depends on relief, energy and geometry.\n\n**Reasoning.** Correct delays provide free faces for breakage; an adequate powder factor supplies enough energy; a sound S/B ratio (1.1–1.5) gives uniform breakage. An excessive burden over-confines the charge and worsens fragmentation, so it is not beneficial.\n\n**Answer.** Options 1, 2 and 3.",
       "archetype": "A",
       "marks": 1
@@ -1380,7 +1384,7 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Using a presplit hole spacing of 10 × hole diameter, the spacing for 100 mm presplit holes, in m, is ____ (one decimal).",
-      "answer": 1.0,
+      "answer": 1,
       "tolerance": 0.05,
       "solution": "**Concept.** Presplit spacing is much smaller than production spacing.\n\n**Working.**\n$$S=10\\times0.10=1.0\\ \\text{m}$$\n\n**Answer.** 1.0 m.",
       "archetype": "A",
@@ -1750,7 +1754,11 @@
         "Firing all holes simultaneously on a single delay",
         "Increasing the distance between the blast and the structure"
       ],
-      "answer": [0, 1, 3],
+      "answer": [
+        0,
+        1,
+        3
+      ],
       "solution": "**Concept.** PPV falls with smaller charge per delay and larger scaled distance.\n\n**Reasoning.** Limiting the charge per delay and sequencing with delays both lower the instantaneous charge, while greater distance increases the scaled distance — all reduce PPV. Firing everything on one delay maximises the instantaneous charge and worsens vibration.\n\n**Answer.** Options 1, 2 and 4.",
       "archetype": "A",
       "marks": 1
@@ -1874,7 +1882,13 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "For the bench pattern shown (burden 3 m, spacing 4 m, bench height 10 m) with 30 kg of explosive per hole, compute the powder factor (kg/m³).",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 4, "holes": 3},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 4,
+        "holes": 3
+      },
       "options": [],
       "answer": 0.25,
       "tolerance": 0.005,
@@ -1889,7 +1903,13 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "Using the rule-of-thumb $B = K_b \\, d$ with burden ratio $K_b = 30$ and hole diameter $d = 0.1$ m (bench as shown), compute the burden (m).",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 4, "holes": 3},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 4,
+        "holes": 3
+      },
       "options": [],
       "answer": 3,
       "tolerance": 0.05,
@@ -1904,7 +1924,13 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "For the bench shown with a burden of 3 m, compute the stemming length (m) using the common rule stemming = 0.7 × burden.",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 4, "holes": 3},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 4,
+        "holes": 3
+      },
       "options": [],
       "answer": 2.1,
       "tolerance": 0.05,
@@ -1919,7 +1945,13 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "For the bench shown with a burden of 3 m, compute the subdrill depth (m) using subdrill = 0.3 × burden.",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 4, "holes": 3},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 4,
+        "holes": 3
+      },
       "options": [],
       "answer": 0.9,
       "tolerance": 0.05,
@@ -1934,7 +1966,13 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The bench shown is 10 m high and requires 0.9 m of subdrill. Compute the total drilled hole depth (m).",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 4, "holes": 3},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 4,
+        "holes": 3
+      },
       "options": [],
       "answer": 10.9,
       "tolerance": 0.05,
@@ -1949,7 +1987,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "A blasthole is charged over an 8 m explosive column with a linear loading density of 5 kg/m (as shown). Compute the charge per hole (kg).",
-      "figure": {"kind": "svg", "caption": "Charged blasthole", "markup": "<svg viewBox='0 0 150 200' xmlns='http://www.w3.org/2000/svg'><rect x='55' y='20' width='30' height='160' fill='#e5e7eb' stroke='#475569'/><rect x='55' y='40' width='30' height='40' fill='#cbd5e1'/><text x='90' y='62' font-size='8'>stemming</text><rect x='55' y='80' width='30' height='100' fill='#f59e0b'/><text x='90' y='128' font-size='8'>charge 8 m</text><text x='90' y='143' font-size='8'>5 kg/m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Charged blasthole",
+        "markup": "<svg viewBox='0 0 150 200' xmlns='http://www.w3.org/2000/svg'><rect x='55' y='20' width='30' height='160' fill='#e5e7eb' stroke='#475569'/><rect x='55' y='40' width='30' height='40' fill='#cbd5e1'/><text x='90' y='62' font-size='8'>stemming</text><rect x='55' y='80' width='30' height='100' fill='#f59e0b'/><text x='90' y='128' font-size='8'>charge 8 m</text><text x='90' y='143' font-size='8'>5 kg/m</text></svg>"
+      },
       "options": [],
       "answer": 40,
       "tolerance": 0.5,
@@ -1964,7 +2006,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "A structure is 100 m from a blast where 25 kg of explosive detonates per delay (as shown). Compute the square-root scaled distance (m/kg^0.5).",
-      "figure": {"kind": "svg", "caption": "Blast and structure", "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='90' r='10' fill='#dc2626'/><text x='20' y='115' font-size='8'>blast W=25 kg</text><rect x='190' y='70' width='30' height='40' fill='#94a3b8' stroke='#475569'/><text x='176' y='125' font-size='8'>structure</text><line x1='52' y1='90' x2='188' y2='90' stroke='#475569' stroke-dasharray='4 3' marker-end='url(#sd)'/><defs><marker id='sd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='95' y='84' font-size='8'>R=100 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Blast and structure",
+        "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='90' r='10' fill='#dc2626'/><text x='20' y='115' font-size='8'>blast W=25 kg</text><rect x='190' y='70' width='30' height='40' fill='#94a3b8' stroke='#475569'/><text x='176' y='125' font-size='8'>structure</text><line x1='52' y1='90' x2='188' y2='90' stroke='#475569' stroke-dasharray='4 3' marker-end='url(#sd)'/><defs><marker id='sd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='95' y='84' font-size='8'>R=100 m</text></svg>"
+      },
       "options": [],
       "answer": 20,
       "tolerance": 0.2,
@@ -1979,7 +2025,11 @@
       "difficulty": "hard",
       "marks": 2,
       "stem": "Using the USBM relation $PPV = K\\,SD^{-1.6}$ with $K = 1140$ and the scaled distance of 20 (from the blast shown), compute the peak particle velocity (mm/s).",
-      "figure": {"kind": "svg", "caption": "Blast and structure", "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='90' r='10' fill='#dc2626'/><text x='20' y='115' font-size='8'>blast W=25 kg</text><rect x='190' y='70' width='30' height='40' fill='#94a3b8' stroke='#475569'/><text x='176' y='125' font-size='8'>structure</text><line x1='52' y1='90' x2='188' y2='90' stroke='#475569' stroke-dasharray='4 3' marker-end='url(#sd)'/><defs><marker id='sd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='95' y='84' font-size='8'>R=100 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Blast and structure",
+        "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='90' r='10' fill='#dc2626'/><text x='20' y='115' font-size='8'>blast W=25 kg</text><rect x='190' y='70' width='30' height='40' fill='#94a3b8' stroke='#475569'/><text x='176' y='125' font-size='8'>structure</text><line x1='52' y1='90' x2='188' y2='90' stroke='#475569' stroke-dasharray='4 3' marker-end='url(#sd)'/><defs><marker id='sd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='95' y='84' font-size='8'>R=100 m</text></svg>"
+      },
       "options": [],
       "answer": 9.45,
       "tolerance": 0.3,
@@ -1994,7 +2044,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "To keep vibration within limits a minimum scaled distance of 25 must be maintained. For a structure 50 m away (as shown), compute the maximum allowable charge per delay (kg).",
-      "figure": {"kind": "svg", "caption": "Charge limit by distance", "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='90' r='10' fill='#dc2626'/><text x='22' y='115' font-size='8'>blast</text><rect x='190' y='70' width='30' height='40' fill='#94a3b8' stroke='#475569'/><text x='176' y='125' font-size='8'>structure</text><line x1='52' y1='90' x2='188' y2='90' stroke='#475569' stroke-dasharray='4 3' marker-end='url(#sd)'/><defs><marker id='sd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='100' y='84' font-size='8'>R=50 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Charge limit by distance",
+        "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><circle cx='40' cy='90' r='10' fill='#dc2626'/><text x='22' y='115' font-size='8'>blast</text><rect x='190' y='70' width='30' height='40' fill='#94a3b8' stroke='#475569'/><text x='176' y='125' font-size='8'>structure</text><line x1='52' y1='90' x2='188' y2='90' stroke='#475569' stroke-dasharray='4 3' marker-end='url(#sd)'/><defs><marker id='sd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='100' y='84' font-size='8'>R=50 m</text></svg>"
+      },
       "options": [],
       "answer": 4,
       "tolerance": 0.1,
@@ -2009,7 +2063,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A row of the pattern shown is 40 m long with holes at 4 m spacing. How many holes are in the row?",
-      "figure": {"kind": "svg", "caption": "Blast pattern", "markup": "<svg viewBox='0 0 240 140' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='40' r='4'/><circle cx='75' cy='40' r='4'/><circle cx='110' cy='40' r='4'/><circle cx='145' cy='40' r='4'/><circle cx='180' cy='40' r='4'/><circle cx='40' cy='75' r='4'/><circle cx='75' cy='75' r='4'/><circle cx='110' cy='75' r='4'/><circle cx='145' cy='75' r='4'/><circle cx='180' cy='75' r='4'/><circle cx='40' cy='110' r='4'/><circle cx='75' cy='110' r='4'/><circle cx='110' cy='110' r='4'/><circle cx='145' cy='110' r='4'/><circle cx='180' cy='110' r='4'/></g><text x='40' y='132' font-size='8'>B=3 m, S=4 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Blast pattern",
+        "markup": "<svg viewBox='0 0 240 140' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='40' r='4'/><circle cx='75' cy='40' r='4'/><circle cx='110' cy='40' r='4'/><circle cx='145' cy='40' r='4'/><circle cx='180' cy='40' r='4'/><circle cx='40' cy='75' r='4'/><circle cx='75' cy='75' r='4'/><circle cx='110' cy='75' r='4'/><circle cx='145' cy='75' r='4'/><circle cx='180' cy='75' r='4'/><circle cx='40' cy='110' r='4'/><circle cx='75' cy='110' r='4'/><circle cx='110' cy='110' r='4'/><circle cx='145' cy='110' r='4'/><circle cx='180' cy='110' r='4'/></g><text x='40' y='132' font-size='8'>B=3 m, S=4 m</text></svg>"
+      },
       "options": [],
       "answer": 11,
       "tolerance": 0.1,
@@ -2024,7 +2082,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The blast pattern shown has 3 rows of 11 holes each. How many blastholes are there in total?",
-      "figure": {"kind": "svg", "caption": "Multi-row pattern", "markup": "<svg viewBox='0 0 240 140' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='40' r='4'/><circle cx='75' cy='40' r='4'/><circle cx='110' cy='40' r='4'/><circle cx='145' cy='40' r='4'/><circle cx='180' cy='40' r='4'/><circle cx='40' cy='75' r='4'/><circle cx='75' cy='75' r='4'/><circle cx='110' cy='75' r='4'/><circle cx='145' cy='75' r='4'/><circle cx='180' cy='75' r='4'/><circle cx='40' cy='110' r='4'/><circle cx='75' cy='110' r='4'/><circle cx='110' cy='110' r='4'/><circle cx='145' cy='110' r='4'/><circle cx='180' cy='110' r='4'/></g><text x='40' y='132' font-size='8'>3 rows x 11 holes</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Multi-row pattern",
+        "markup": "<svg viewBox='0 0 240 140' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='40' r='4'/><circle cx='75' cy='40' r='4'/><circle cx='110' cy='40' r='4'/><circle cx='145' cy='40' r='4'/><circle cx='180' cy='40' r='4'/><circle cx='40' cy='75' r='4'/><circle cx='75' cy='75' r='4'/><circle cx='110' cy='75' r='4'/><circle cx='145' cy='75' r='4'/><circle cx='180' cy='75' r='4'/><circle cx='40' cy='110' r='4'/><circle cx='75' cy='110' r='4'/><circle cx='110' cy='110' r='4'/><circle cx='145' cy='110' r='4'/><circle cx='180' cy='110' r='4'/></g><text x='40' y='132' font-size='8'>3 rows x 11 holes</text></svg>"
+      },
       "options": [],
       "answer": 33,
       "tolerance": 0.1,
@@ -2039,7 +2101,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "For the 33-hole pattern shown (burden 3 m, spacing 4 m, bench height 10 m), compute the total in-situ rock volume broken (m³).",
-      "figure": {"kind": "svg", "caption": "Blast block", "markup": "<svg viewBox='0 0 240 140' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='40' r='4'/><circle cx='75' cy='40' r='4'/><circle cx='110' cy='40' r='4'/><circle cx='145' cy='40' r='4'/><circle cx='180' cy='40' r='4'/><circle cx='40' cy='75' r='4'/><circle cx='75' cy='75' r='4'/><circle cx='110' cy='75' r='4'/><circle cx='145' cy='75' r='4'/><circle cx='180' cy='75' r='4'/><circle cx='40' cy='110' r='4'/><circle cx='75' cy='110' r='4'/><circle cx='110' cy='110' r='4'/><circle cx='145' cy='110' r='4'/><circle cx='180' cy='110' r='4'/></g><text x='30' y='132' font-size='8'>33 holes, B=3, S=4, H=10 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Blast block",
+        "markup": "<svg viewBox='0 0 240 140' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='40' r='4'/><circle cx='75' cy='40' r='4'/><circle cx='110' cy='40' r='4'/><circle cx='145' cy='40' r='4'/><circle cx='180' cy='40' r='4'/><circle cx='40' cy='75' r='4'/><circle cx='75' cy='75' r='4'/><circle cx='110' cy='75' r='4'/><circle cx='145' cy='75' r='4'/><circle cx='180' cy='75' r='4'/><circle cx='40' cy='110' r='4'/><circle cx='75' cy='110' r='4'/><circle cx='110' cy='110' r='4'/><circle cx='145' cy='110' r='4'/><circle cx='180' cy='110' r='4'/></g><text x='30' y='132' font-size='8'>33 holes, B=3, S=4, H=10 m</text></svg>"
+      },
       "options": [],
       "answer": 39600,
       "tolerance": 1,
@@ -2054,7 +2120,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The blast shown breaks 39600 m³ of rock of density 2.5 t/m³. Compute the tonnage produced (t).",
-      "figure": {"kind": "svg", "caption": "Broken volume", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='35' width='140' height='60' fill='#d6d3d1' stroke='#475569'/><text x='100' y='70' font-size='9' text-anchor='middle'>39600 m^3</text><text x='40' y='110' font-size='8'>density 2.5 t/m^3</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Broken volume",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='35' width='140' height='60' fill='#d6d3d1' stroke='#475569'/><text x='100' y='70' font-size='9' text-anchor='middle'>39600 m^3</text><text x='40' y='110' font-size='8'>density 2.5 t/m^3</text></svg>"
+      },
       "options": [],
       "answer": 99000,
       "tolerance": 10,
@@ -2069,7 +2139,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The holes in the row shown are fired with the millisecond delays marked. The main reason for delay blasting is to:",
-      "figure": {"kind": "svg", "caption": "Delay sequence", "markup": "<svg viewBox='0 0 240 110' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='50' r='5'/><circle cx='90' cy='50' r='5'/><circle cx='140' cy='50' r='5'/><circle cx='190' cy='50' r='5'/></g><g font-size='8' fill='#dc2626'><text x='34' y='75'>0</text><text x='80' y='75'>25</text><text x='128' y='75'>50</text><text x='176' y='75'>75 ms</text></g></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Delay sequence",
+        "markup": "<svg viewBox='0 0 240 110' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='50' r='5'/><circle cx='90' cy='50' r='5'/><circle cx='140' cy='50' r='5'/><circle cx='190' cy='50' r='5'/></g><g font-size='8' fill='#dc2626'><text x='34' y='75'>0</text><text x='80' y='75'>25</text><text x='128' y='75'>50</text><text x='176' y='75'>75 ms</text></g></svg>"
+      },
       "options": [
         "provide relief and improve fragmentation while lowering ground vibration",
         "increase the total charge per delay",
@@ -2088,7 +2162,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The drill-round cut shown uses angled holes that converge to a wedge at the centre of the face. This is a:",
-      "figure": {"kind": "svg", "caption": "Face cut", "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='20' width='160' height='120' fill='#e5e7eb' stroke='#475569'/><line x1='100' y1='80' x2='50' y2='30' stroke='#1f2937' stroke-width='2'/><line x1='100' y1='80' x2='150' y2='30' stroke='#1f2937' stroke-width='2'/><line x1='100' y1='80' x2='50' y2='130' stroke='#1f2937' stroke-width='2'/><line x1='100' y1='80' x2='150' y2='130' stroke='#1f2937' stroke-width='2'/><text x='52' y='152' font-size='8'>angled holes meet at centre</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Face cut",
+        "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='20' width='160' height='120' fill='#e5e7eb' stroke='#475569'/><line x1='100' y1='80' x2='50' y2='30' stroke='#1f2937' stroke-width='2'/><line x1='100' y1='80' x2='150' y2='30' stroke='#1f2937' stroke-width='2'/><line x1='100' y1='80' x2='50' y2='130' stroke='#1f2937' stroke-width='2'/><line x1='100' y1='80' x2='150' y2='130' stroke='#1f2937' stroke-width='2'/><text x='52' y='152' font-size='8'>angled holes meet at centre</text></svg>"
+      },
       "options": [
         "wedge (V) cut",
         "burn cut",
@@ -2107,7 +2185,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The cut shown uses parallel holes drilled perpendicular to the face, with one or more uncharged large-diameter relief holes at the centre. This is a:",
-      "figure": {"kind": "svg", "caption": "Parallel-hole cut", "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='20' width='160' height='120' fill='#e5e7eb' stroke='#475569'/><g fill='#1f2937'><circle cx='80' cy='70' r='4'/><circle cx='110' cy='70' r='4'/><circle cx='80' cy='100' r='4'/><circle cx='110' cy='100' r='4'/></g><circle cx='95' cy='85' r='8' fill='none' stroke='#475569'/><text x='40' y='152' font-size='8'>parallel holes + uncharged reliever</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Parallel-hole cut",
+        "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='20' width='160' height='120' fill='#e5e7eb' stroke='#475569'/><g fill='#1f2937'><circle cx='80' cy='70' r='4'/><circle cx='110' cy='70' r='4'/><circle cx='80' cy='100' r='4'/><circle cx='110' cy='100' r='4'/></g><circle cx='95' cy='85' r='8' fill='none' stroke='#475569'/><text x='40' y='152' font-size='8'>parallel holes + uncharged reliever</text></svg>"
+      },
       "options": [
         "burn cut",
         "wedge cut",
@@ -2126,7 +2208,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "For the presplit line shown, hole spacing is taken as 12 times the hole diameter. With a hole diameter of 0.05 m, compute the presplit hole spacing (m).",
-      "figure": {"kind": "svg", "caption": "Presplit line", "markup": "<svg viewBox='0 0 240 120' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='50' r='3'/><circle cx='60' cy='50' r='3'/><circle cx='80' cy='50' r='3'/><circle cx='100' cy='50' r='3'/><circle cx='120' cy='50' r='3'/><circle cx='140' cy='50' r='3'/><circle cx='160' cy='50' r='3'/><circle cx='180' cy='50' r='3'/></g><line x1='40' y1='65' x2='180' y2='65' stroke='#dc2626'/><text x='50' y='90' font-size='8'>presplit line, d=0.05 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Presplit line",
+        "markup": "<svg viewBox='0 0 240 120' xmlns='http://www.w3.org/2000/svg'><g fill='#1f2937'><circle cx='40' cy='50' r='3'/><circle cx='60' cy='50' r='3'/><circle cx='80' cy='50' r='3'/><circle cx='100' cy='50' r='3'/><circle cx='120' cy='50' r='3'/><circle cx='140' cy='50' r='3'/><circle cx='160' cy='50' r='3'/><circle cx='180' cy='50' r='3'/></g><line x1='40' y1='65' x2='180' y2='65' stroke='#dc2626'/><text x='50' y='90' font-size='8'>presplit line, d=0.05 m</text></svg>"
+      },
       "options": [],
       "answer": 0.6,
       "tolerance": 0.02,
@@ -2141,7 +2227,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The detonation front travels along the explosive column as shown. The speed of this front is the explosive's:",
-      "figure": {"kind": "svg", "caption": "Detonation along column", "markup": "<svg viewBox='0 0 240 110' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='45' width='180' height='20' fill='#f59e0b' stroke='#92400e'/><circle cx='40' cy='55' r='8' fill='#dc2626'/><line x1='50' y1='55' x2='120' y2='55' stroke='#fff' stroke-dasharray='4 3' marker-end='url(#vd)'/><defs><marker id='vd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#fff'/></marker></defs><text x='60' y='90' font-size='8'>detonation front along column</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Detonation along column",
+        "markup": "<svg viewBox='0 0 240 110' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='45' width='180' height='20' fill='#f59e0b' stroke='#92400e'/><circle cx='40' cy='55' r='8' fill='#dc2626'/><line x1='50' y1='55' x2='120' y2='55' stroke='#fff' stroke-dasharray='4 3' marker-end='url(#vd)'/><defs><marker id='vd' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#fff'/></marker></defs><text x='60' y='90' font-size='8'>detonation front along column</text></svg>"
+      },
       "options": [
         "velocity of detonation (VOD)",
         "powder factor",
@@ -2160,7 +2250,11 @@
       "difficulty": "medium",
       "marks": 1,
       "stem": "If the muckpile shown is too coarse, the most direct design change to produce finer fragmentation is to:",
-      "figure": {"kind": "svg", "caption": "Muckpile fragments", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><g fill='#a16207' stroke='#92400e'><polygon points='30,90 55,80 70,100 45,110'/><polygon points='80,85 110,75 120,100 90,108'/><polygon points='130,90 150,82 162,102 138,110'/><polygon points='170,88 195,80 200,104 175,108'/></g><text x='40' y='125' font-size='8'>muckpile fragment sizes</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Muckpile fragments",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><g fill='#a16207' stroke='#92400e'><polygon points='30,90 55,80 70,100 45,110'/><polygon points='80,85 110,75 120,100 90,108'/><polygon points='130,90 150,82 162,102 138,110'/><polygon points='170,88 195,80 200,104 175,108'/></g><text x='40' y='125' font-size='8'>muckpile fragment sizes</text></svg>"
+      },
       "options": [
         "increase the powder factor (tighter pattern / more charge)",
         "increase the burden and spacing",
@@ -2179,7 +2273,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The rock fragments thrown well beyond the muckpile in the figure are flyrock. The most common cause is:",
-      "figure": {"kind": "svg", "caption": "Flyrock from a blast", "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='80' width='90' height='40' fill='#fde9c8' stroke='#92400e'/><circle cx='40' cy='90' r='8' fill='#dc2626'/><g fill='#475569'><circle cx='150' cy='40' r='3'/><circle cx='180' cy='55' r='3'/><circle cx='200' cy='35' r='3'/></g><path d='M48 84 Q120 10 200 35' fill='none' stroke='#94a3b8' stroke-dasharray='3 2'/><text x='110' y='120' font-size='8'>ejected fragments (flyrock)</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Flyrock from a blast",
+        "markup": "<svg viewBox='0 0 240 130' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='80' width='90' height='40' fill='#fde9c8' stroke='#92400e'/><circle cx='40' cy='90' r='8' fill='#dc2626'/><g fill='#475569'><circle cx='150' cy='40' r='3'/><circle cx='180' cy='55' r='3'/><circle cx='200' cy='35' r='3'/></g><path d='M48 84 Q120 10 200 35' fill='none' stroke='#94a3b8' stroke-dasharray='3 2'/><text x='110' y='120' font-size='8'>ejected fragments (flyrock)</text></svg>"
+      },
       "options": [
         "insufficient burden or stemming (overconfinement breakout)",
         "too much stemming",
@@ -2198,7 +2296,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A blasthole is advanced $12\\ \\text{m}$ in $4\\ \\text{min}$ (figure). Compute the average penetration rate (m/min).",
-      "figure": {"kind": "svg", "caption": "Drilling penetration", "markup": "<svg viewBox='0 0 160 170' xmlns='http://www.w3.org/2000/svg'><rect x='60' y='20' width='16' height='40' fill='#94a3b8' stroke='#475569'/><rect x='64' y='60' width='8' height='80' fill='#6b7280'/><rect x='30' y='140' width='100' height='20' fill='#a8a29e' stroke='#475569'/><line x1='100' y1='60' x2='100' y2='140' stroke='#dc2626' stroke-width='2' marker-end='url(#dr)'/><defs><marker id='dr' markerWidth='8' markerHeight='8' refX='4' refY='6' orient='auto'><path d='M0 0 L3 6 L6 0 Z' fill='#dc2626'/></marker></defs><text x='14' y='130' font-size='8'>12 m in 4 min</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Drilling penetration",
+        "markup": "<svg viewBox='0 0 160 170' xmlns='http://www.w3.org/2000/svg'><rect x='60' y='20' width='16' height='40' fill='#94a3b8' stroke='#475569'/><rect x='64' y='60' width='8' height='80' fill='#6b7280'/><rect x='30' y='140' width='100' height='20' fill='#a8a29e' stroke='#475569'/><line x1='100' y1='60' x2='100' y2='140' stroke='#dc2626' stroke-width='2' marker-end='url(#dr)'/><defs><marker id='dr' markerWidth='8' markerHeight='8' refX='4' refY='6' orient='auto'><path d='M0 0 L3 6 L6 0 Z' fill='#dc2626'/></marker></defs><text x='14' y='130' font-size='8'>12 m in 4 min</text></svg>"
+      },
       "options": [],
       "answer": 3,
       "tolerance": 0.05,
@@ -2213,7 +2315,12 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "Using the rule of thumb $B\\approx25\\,d$ (with $d$ the hole diameter), compute the burden for a $0.1\\ \\text{m}$ diameter blasthole (m).",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 2.5, "spacing": 3},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 2.5,
+        "spacing": 3
+      },
       "options": [],
       "answer": 2.5,
       "tolerance": 0.05,
@@ -2228,7 +2335,12 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "For a staggered pattern with spacing-to-burden ratio $1.25$ and burden $B=3\\ \\text{m}$, compute the spacing (m).",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 3.75},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 3.75
+      },
       "options": [],
       "answer": 3.75,
       "tolerance": 0.05,
@@ -2243,7 +2355,12 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "A blast uses $200\\ \\text{kg}$ of explosive to break $1000\\ \\mathrm{m^3}$ of rock (figure). Compute the powder factor ($\\mathrm{kg/m^3}$).",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 4},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 4
+      },
       "options": [],
       "answer": 0.2,
       "tolerance": 0.01,
@@ -2258,7 +2375,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A blasthole has a charge column of $6\\ \\text{m}$ with a linear charge density of $8\\ \\text{kg/m}$ (figure). Compute the explosive charge per hole (kg).",
-      "figure": {"kind": "svg", "caption": "Charged blasthole", "markup": "<svg viewBox='0 0 130 180' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='20' width='24' height='150' fill='#e5e7eb' stroke='#475569'/><rect x='52' y='30' width='20' height='40' fill='#cbd5e1'/><rect x='52' y='70' width='20' height='90' fill='#f59e0b'/><text x='80' y='55' font-size='8'>stemming</text><text x='80' y='120' font-size='8'>charge 6 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Charged blasthole",
+        "markup": "<svg viewBox='0 0 130 180' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='20' width='24' height='150' fill='#e5e7eb' stroke='#475569'/><rect x='52' y='30' width='20' height='40' fill='#cbd5e1'/><rect x='52' y='70' width='20' height='90' fill='#f59e0b'/><text x='80' y='55' font-size='8'>stemming</text><text x='80' y='120' font-size='8'>charge 6 m</text></svg>"
+      },
       "options": [],
       "answer": 48,
       "tolerance": 0.2,
@@ -2273,7 +2394,13 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "A bench blasthole has burden $B=3\\ \\text{m}$, spacing $S=4\\ \\text{m}$ and bench height $H=10\\ \\text{m}$ (figure). Compute the rock volume broken per hole ($\\mathrm{m^3}$).",
-      "figure": {"kind": "bench", "benchHeight": 10, "burden": 3, "spacing": 4, "holes": 5},
+      "figure": {
+        "kind": "bench",
+        "benchHeight": 10,
+        "burden": 3,
+        "spacing": 4,
+        "holes": 5
+      },
       "options": [],
       "answer": 120,
       "tolerance": 1,
@@ -2288,7 +2415,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A blast block plan of area $600\\ \\mathrm{m^2}$ is drilled on a pattern with $B\\times S=12\\ \\mathrm{m^2}$ per hole (figure). Compute the number of holes.",
-      "figure": {"kind": "svg", "caption": "Drill pattern plan", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><g fill='#475569'><circle cx='40' cy='40' r='4'/><circle cx='90' cy='40' r='4'/><circle cx='140' cy='40' r='4'/><circle cx='40' cy='90' r='4'/><circle cx='90' cy='90' r='4'/><circle cx='140' cy='90' r='4'/></g><line x1='40' y1='115' x2='90' y2='115' stroke='#2563eb' marker-end='url(#p)' marker-start='url(#p)'/><line x1='165' y1='40' x2='165' y2='90' stroke='#16a34a' marker-end='url(#p)' marker-start='url(#p)'/><defs><marker id='p' markerWidth='8' markerHeight='8' refX='3' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='58' y='128' font-size='8'>S</text><text x='170' y='70' font-size='8'>B</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Drill pattern plan",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><g fill='#475569'><circle cx='40' cy='40' r='4'/><circle cx='90' cy='40' r='4'/><circle cx='140' cy='40' r='4'/><circle cx='40' cy='90' r='4'/><circle cx='90' cy='90' r='4'/><circle cx='140' cy='90' r='4'/></g><line x1='40' y1='115' x2='90' y2='115' stroke='#2563eb' marker-end='url(#p)' marker-start='url(#p)'/><line x1='165' y1='40' x2='165' y2='90' stroke='#16a34a' marker-end='url(#p)' marker-start='url(#p)'/><defs><marker id='p' markerWidth='8' markerHeight='8' refX='3' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='58' y='128' font-size='8'>S</text><text x='170' y='70' font-size='8'>B</text></svg>"
+      },
       "options": [],
       "answer": 50,
       "tolerance": 0.5,
@@ -2303,7 +2434,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A blast round of $20$ holes each carries $40\\ \\text{kg}$ of explosive (figure). Compute the total explosive used (kg).",
-      "figure": {"kind": "svg", "caption": "Round of charged holes", "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><g fill='#f59e0b' stroke='#b45309'><rect x='30' y='40' width='10' height='60'/><rect x='60' y='40' width='10' height='60'/><rect x='90' y='40' width='10' height='60'/><rect x='120' y='40' width='10' height='60'/><rect x='150' y='40' width='10' height='60'/></g><text x='30' y='120' font-size='8'>20 holes x 40 kg each</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Round of charged holes",
+        "markup": "<svg viewBox='0 0 200 130' xmlns='http://www.w3.org/2000/svg'><g fill='#f59e0b' stroke='#b45309'><rect x='30' y='40' width='10' height='60'/><rect x='60' y='40' width='10' height='60'/><rect x='90' y='40' width='10' height='60'/><rect x='120' y='40' width='10' height='60'/><rect x='150' y='40' width='10' height='60'/></g><text x='30' y='120' font-size='8'>20 holes x 40 kg each</text></svg>"
+      },
       "options": [],
       "answer": 800,
       "tolerance": 1,
@@ -2318,7 +2453,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A detonation front travels $6\\ \\text{m}$ along a charge in $1\\ \\text{ms}$ (figure). Compute the velocity of detonation (m/s).",
-      "figure": {"kind": "svg", "caption": "Velocity of detonation", "markup": "<svg viewBox='0 0 220 100' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='45' width='180' height='16' fill='#f59e0b' stroke='#475569'/><line x1='20' y1='53' x2='180' y2='53' stroke='#dc2626' stroke-width='2' marker-end='url(#vo)'/><defs><marker id='vo' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#dc2626'/></marker></defs><text x='40' y='85' font-size='8'>detonation: 6 m in 1 ms</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Velocity of detonation",
+        "markup": "<svg viewBox='0 0 220 100' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='45' width='180' height='16' fill='#f59e0b' stroke='#475569'/><line x1='20' y1='53' x2='180' y2='53' stroke='#dc2626' stroke-width='2' marker-end='url(#vo)'/><defs><marker id='vo' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#dc2626'/></marker></defs><text x='40' y='85' font-size='8'>detonation: 6 m in 1 ms</text></svg>"
+      },
       "options": [],
       "answer": 6000,
       "tolerance": 10,
@@ -2333,7 +2472,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "Using the rule $T\\approx20\\,d$, compute the stemming length for a $0.1\\ \\text{m}$ diameter blasthole (m).",
-      "figure": {"kind": "svg", "caption": "Stemming length", "markup": "<svg viewBox='0 0 130 180' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='20' width='24' height='150' fill='#e5e7eb' stroke='#475569'/><rect x='52' y='22' width='20' height='40' fill='#cbd5e1'/><rect x='52' y='62' width='20' height='98' fill='#f59e0b'/><line x1='80' y1='22' x2='80' y2='62' stroke='#2563eb' marker-end='url(#sm)' marker-start='url(#sm)'/><defs><marker id='sm' markerWidth='8' markerHeight='8' refX='3' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='86' y='45' font-size='8'>stemming</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Stemming length",
+        "markup": "<svg viewBox='0 0 130 180' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='20' width='24' height='150' fill='#e5e7eb' stroke='#475569'/><rect x='52' y='22' width='20' height='40' fill='#cbd5e1'/><rect x='52' y='62' width='20' height='98' fill='#f59e0b'/><line x1='80' y1='22' x2='80' y2='62' stroke='#2563eb' marker-end='url(#sm)' marker-start='url(#sm)'/><defs><marker id='sm' markerWidth='8' markerHeight='8' refX='3' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='86' y='45' font-size='8'>stemming</text></svg>"
+      },
       "options": [],
       "answer": 2,
       "tolerance": 0.05,
@@ -2348,7 +2491,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "A blast drills $100\\ \\text{m}$ of hole to break $1200\\ \\mathrm{m^3}$ of rock (figure). Compute the specific drilling ($\\mathrm{m/m^3}$, three decimals).",
-      "figure": {"kind": "svg", "caption": "Drilled metres per volume broken", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='40' width='140' height='80' fill='#a8a29e' stroke='#475569'/><g stroke='#475569'><line x1='60' y1='40' x2='60' y2='120'/><line x1='100' y1='40' x2='100' y2='120'/><line x1='140' y1='40' x2='140' y2='120'/></g><text x='32' y='135' font-size='8'>100 m drilled / 1200 m^3 broken</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Drilled metres per volume broken",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='40' width='140' height='80' fill='#a8a29e' stroke='#475569'/><g stroke='#475569'><line x1='60' y1='40' x2='60' y2='120'/><line x1='100' y1='40' x2='100' y2='120'/><line x1='140' y1='40' x2='140' y2='120'/></g><text x='32' y='135' font-size='8'>100 m drilled / 1200 m^3 broken</text></svg>"
+      },
       "options": [],
       "answer": 0.083,
       "tolerance": 0.002,
@@ -2363,7 +2510,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "Using the rule $J=0.3\\,B$, compute the subdrill (drilled below grade) for a burden $B=3\\ \\text{m}$ (m).",
-      "figure": {"kind": "svg", "caption": "Subdrill below the bench floor", "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><polygon points='20,40 120,40 120,120 20,120' fill='#d6d3d1' stroke='#475569'/><line x1='70' y1='30' x2='70' y2='140' stroke='#6b7280' stroke-width='3'/><line x1='20' y1='120' x2='180' y2='120' stroke='#475569' stroke-dasharray='4 2'/><text x='75' y='150' font-size='8'>subdrill below grade</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Subdrill below the bench floor",
+        "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><polygon points='20,40 120,40 120,120 20,120' fill='#d6d3d1' stroke='#475569'/><line x1='70' y1='30' x2='70' y2='140' stroke='#6b7280' stroke-width='3'/><line x1='20' y1='120' x2='180' y2='120' stroke='#475569' stroke-dasharray='4 2'/><text x='75' y='150' font-size='8'>subdrill below grade</text></svg>"
+      },
       "options": [],
       "answer": 0.9,
       "tolerance": 0.02,
@@ -2378,7 +2529,11 @@
       "difficulty": "hard",
       "marks": 2,
       "stem": "A cylindrical explosive column of diameter $0.1\\ \\text{m}$ and length $6\\ \\text{m}$ has a density of $900\\ \\mathrm{kg/m^3}$ (figure). Compute the charge mass (kg, two decimals).",
-      "figure": {"kind": "svg", "caption": "Cylindrical charge", "markup": "<svg viewBox='0 0 130 180' xmlns='http://www.w3.org/2000/svg'><rect x='52' y='30' width='22' height='120' rx='4' fill='#f59e0b' stroke='#b45309'/><line x1='52' y1='160' x2='74' y2='160' stroke='#2563eb' marker-end='url(#cd)' marker-start='url(#cd)'/><defs><marker id='cd' markerWidth='8' markerHeight='8' refX='3' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='80' y='95' font-size='8'>d=0.1 m</text><text x='8' y='100' font-size='8'>L=6 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Cylindrical charge",
+        "markup": "<svg viewBox='0 0 130 180' xmlns='http://www.w3.org/2000/svg'><rect x='52' y='30' width='22' height='120' rx='4' fill='#f59e0b' stroke='#b45309'/><line x1='52' y1='160' x2='74' y2='160' stroke='#2563eb' marker-end='url(#cd)' marker-start='url(#cd)'/><defs><marker id='cd' markerWidth='8' markerHeight='8' refX='3' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='80' y='95' font-size='8'>d=0.1 m</text><text x='8' y='100' font-size='8'>L=6 m</text></svg>"
+      },
       "options": [],
       "answer": 42.41,
       "tolerance": 0.2,
@@ -2393,7 +2548,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The numbers in the firing pattern shown are millisecond delays between holes. Such delay initiation is used mainly to:",
-      "figure": {"kind": "svg", "caption": "Delay sequence between holes", "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><g fill='#475569'><circle cx='40' cy='60' r='4'/><circle cx='90' cy='60' r='4'/><circle cx='140' cy='60' r='4'/><circle cx='190' cy='60' r='4'/></g><text x='32' y='85' font-size='8'>0</text><text x='80' y='85' font-size='8'>25</text><text x='126' y='85' font-size='8'>50</text><text x='176' y='85' font-size='8'>75 ms</text><text x='40' y='40' font-size='8'>delay sequence</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Delay sequence between holes",
+        "markup": "<svg viewBox='0 0 220 120' xmlns='http://www.w3.org/2000/svg'><g fill='#475569'><circle cx='40' cy='60' r='4'/><circle cx='90' cy='60' r='4'/><circle cx='140' cy='60' r='4'/><circle cx='190' cy='60' r='4'/></g><text x='32' y='85' font-size='8'>0</text><text x='80' y='85' font-size='8'>25</text><text x='126' y='85' font-size='8'>50</text><text x='176' y='85' font-size='8'>75 ms</text><text x='40' y='40' font-size='8'>delay sequence</text></svg>"
+      },
       "options": [
         "improve fragmentation and reduce ground vibration by sequencing the holes",
         "make all holes detonate at exactly the same instant",
@@ -2412,7 +2571,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A bench blast uses $200\\ \\text{kg}$ of explosive to break $500\\ \\mathrm{m^3}$ of rock (figure). Compute the powder factor ($\\mathrm{kg/m^3}$).",
-      "figure": {"kind": "svg", "caption": "Bench blast block", "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='30' width='140' height='80' fill='#d6d3d1' stroke='#475569'/><line x1='70' y1='30' x2='70' y2='110' stroke='#475569' stroke-dasharray='3 3'/><text x='52' y='128' font-size='8'>200 kg breaks 500 m^3</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Bench blast block",
+        "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='30' width='140' height='80' fill='#d6d3d1' stroke='#475569'/><line x1='70' y1='30' x2='70' y2='110' stroke='#475569' stroke-dasharray='3 3'/><text x='52' y='128' font-size='8'>200 kg breaks 500 m^3</text></svg>"
+      },
       "options": [],
       "answer": 0.4,
       "tolerance": 0.01,
@@ -2427,7 +2590,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "A blasthole has a charged column length of $6\\ \\text{m}$ and a linear charge density of $8\\ \\mathrm{kg/m}$ (figure). Compute the explosive charge per hole (kg).",
-      "figure": {"kind": "svg", "caption": "Charged column", "markup": "<svg viewBox='0 0 120 160' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='20' width='20' height='120' fill='#e5e7eb' stroke='#475569'/><rect x='50' y='70' width='20' height='70' fill='#fca5a5' stroke='#475569'/><text x='8' y='150' font-size='8'>column 6 m, 8 kg/m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Charged column",
+        "markup": "<svg viewBox='0 0 120 160' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='20' width='20' height='120' fill='#e5e7eb' stroke='#475569'/><rect x='50' y='70' width='20' height='70' fill='#fca5a5' stroke='#475569'/><text x='8' y='150' font-size='8'>column 6 m, 8 kg/m</text></svg>"
+      },
       "options": [],
       "answer": 48,
       "tolerance": 0.5,
@@ -2442,7 +2609,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "A structure is $100\\ \\text{m}$ from a blast that detonates a maximum charge of $25\\ \\text{kg}$ per delay (figure). Compute the square-root scaled distance ($\\mathrm{m/kg^{1/2}}$).",
-      "figure": {"kind": "svg", "caption": "Distance from blast", "markup": "<svg viewBox='0 0 240 110' xmlns='http://www.w3.org/2000/svg'><circle cx='30' cy='70' r='6' fill='#dc2626'/><rect x='190' y='45' width='30' height='30' fill='#94a3b8' stroke='#475569'/><line x1='36' y1='70' x2='190' y2='62' stroke='#475569' stroke-dasharray='4 3'/><text x='60' y='55' font-size='8'>D=100 m</text><text x='14' y='95' font-size='8'>W=25 kg/delay</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Distance from blast",
+        "markup": "<svg viewBox='0 0 240 110' xmlns='http://www.w3.org/2000/svg'><circle cx='30' cy='70' r='6' fill='#dc2626'/><rect x='190' y='45' width='30' height='30' fill='#94a3b8' stroke='#475569'/><line x1='36' y1='70' x2='190' y2='62' stroke='#475569' stroke-dasharray='4 3'/><text x='60' y='55' font-size='8'>D=100 m</text><text x='14' y='95' font-size='8'>W=25 kg/delay</text></svg>"
+      },
       "options": [],
       "answer": 20,
       "tolerance": 0.1,
@@ -2457,7 +2628,11 @@
       "difficulty": "medium",
       "marks": 2,
       "stem": "A production hole has burden $3\\ \\text{m}$, spacing $3.5\\ \\text{m}$ and bench height $10\\ \\text{m}$ (figure). Compute the rock volume broken per hole ($\\mathrm{m^3}$).",
-      "figure": {"kind": "svg", "caption": "Bench geometry per hole", "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='20' width='140' height='100' fill='#d6d3d1' stroke='#475569'/><line x1='110' y1='20' x2='110' y2='120' stroke='#475569' stroke-dasharray='3 3'/><text x='44' y='140' font-size='8'>B=3, S=3.5, H=10 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Bench geometry per hole",
+        "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='20' width='140' height='100' fill='#d6d3d1' stroke='#475569'/><line x1='110' y1='20' x2='110' y2='120' stroke='#475569' stroke-dasharray='3 3'/><text x='44' y='140' font-size='8'>B=3, S=3.5, H=10 m</text></svg>"
+      },
       "options": [],
       "answer": 105,
       "tolerance": 0.5,
@@ -2472,7 +2647,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "For a bench blast the burden is $3\\ \\text{m}$ and the subdrilling is taken as $0.3\\,B$ (figure). Compute the subdrill length (m).",
-      "figure": {"kind": "svg", "caption": "Subdrill below grade", "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='20' width='120' height='90' fill='#d6d3d1' stroke='#475569'/><line x1='40' y1='110' x2='160' y2='110' stroke='#1f2937'/><rect x='95' y='110' width='10' height='25' fill='#fca5a5' stroke='#475569'/><text x='44' y='150' font-size='8'>subdrill = 0.3 x B, B=3 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Subdrill below grade",
+        "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='20' width='120' height='90' fill='#d6d3d1' stroke='#475569'/><line x1='40' y1='110' x2='160' y2='110' stroke='#1f2937'/><rect x='95' y='110' width='10' height='25' fill='#fca5a5' stroke='#475569'/><text x='44' y='150' font-size='8'>subdrill = 0.3 x B, B=3 m</text></svg>"
+      },
       "options": [],
       "answer": 0.9,
       "tolerance": 0.02,
@@ -2487,7 +2666,11 @@
       "difficulty": "easy",
       "marks": 1,
       "stem": "The figure shows a row of holes fired with increasing inter-hole delay along the row. The main purpose of using delays between holes is to:",
-      "figure": {"kind": "svg", "caption": "Delayed initiation sequence", "markup": "<svg viewBox='0 0 240 90' xmlns='http://www.w3.org/2000/svg'><g fill='#dc2626'><circle cx='30' cy='50' r='6'/><circle cx='80' cy='50' r='6'/><circle cx='130' cy='50' r='6'/><circle cx='180' cy='50' r='6'/></g><text x='20' y='30' font-size='8'>0 ms</text><text x='68' y='30' font-size='8'>25 ms</text><text x='118' y='30' font-size='8'>50 ms</text><text x='168' y='30' font-size='8'>75 ms</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Delayed initiation sequence",
+        "markup": "<svg viewBox='0 0 240 90' xmlns='http://www.w3.org/2000/svg'><g fill='#dc2626'><circle cx='30' cy='50' r='6'/><circle cx='80' cy='50' r='6'/><circle cx='130' cy='50' r='6'/><circle cx='180' cy='50' r='6'/></g><text x='20' y='30' font-size='8'>0 ms</text><text x='68' y='30' font-size='8'>25 ms</text><text x='118' y='30' font-size='8'>50 ms</text><text x='168' y='30' font-size='8'>75 ms</text></svg>"
+      },
       "options": [
         "provide free faces for later holes and reduce ground vibration",
         "increase the total charge detonating per instant",

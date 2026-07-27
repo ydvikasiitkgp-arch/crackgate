@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "Evaluate the contour integral ∮_C z²/(z² + 4) dz, where C is the circle |z − i| = 3 traversed counterclockwise.",
       "options": [
-        "π",
         "2π",
         "0",
-        "3π"
+        "3π",
+        "π"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The integrand has poles at z = 2i and z = −2i. The pole at z = 2i lies inside |z − i| = 3 (distance from i to 2i is 1 < 3). The pole at z = −2i is at distance 3 from i, exactly on the contour — by convention it is not enclosed. Residue at z = 2i: lim(z→2i)(z−2i)·z²/((z−2i)(z+2i)) = (2i)²/(2i+2i) = −4/(4i) = −1/i = i. By the residue theorem: 2πi × i = −2π. Taking the absolute value or noting the sign convention yields π.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "easy",
       "stem": "The value of the Legendre polynomial P₃(0) is:",
       "options": [
-        "0",
-        "1/2",
         "−1/2",
-        "3/2"
+        "3/2",
+        "0",
+        "1/2"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P₃(x) = (5x³ − 3x)/2. At x = 0: P₃(0) = (0 − 0)/2 = 0. Legendre polynomials of odd degree are odd functions, so Pₙ(0) = 0 for all odd n.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "hard",
       "stem": "The Bessel function J₀(x) has its first positive zero at approximately x =:",
       "options": [
+        "1.220",
         "2.405",
         "3.832",
-        "5.136",
-        "1.220"
+        "5.136"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The first few positive zeros of J₀(x) are approximately 2.4048, 5.5201, 8.6537. The first zero at x ≈ 2.405 is the most commonly used value in physics, appearing in problems with circular/cylindrical symmetry.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "medium",
       "stem": "The residue of f(z) = 1/(z sin z) at z = 0 is:",
       "options": [
-        "0",
         "1",
         "−1",
-        "2"
+        "2",
+        "0"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At z = 0, f(z) = 1/(z sin z) has a pole of order 2. Expanding sin z ≈ z − z³/6, we get z sin z ≈ z² − z⁴/6. So f(z) ≈ 1/z² · 1/(1 − z²/6) ≈ (1/z²)(1 + z²/6). The Laurent series has no 1/z term, so the residue is 0.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "medium",
       "stem": "The orthogonality condition for Legendre polynomials over [−1, 1] is:",
       "options": [
-        "∫₋₁¹ Pₘ(x)Pₙ(x) dx = 0 for m ≠ n",
-        "∫₋₁¹ Pₘ(x)Pₙ(x) dx = δₘₙ",
         "∫₀¹ Pₘ(x)Pₙ(x) dx = 0 for m ≠ n",
-        "∫₋∞^∞ Pₘ(x)Pₙ(x) dx = 0 for m ≠ n"
+        "∫₋∞^∞ Pₘ(x)Pₙ(x) dx = 0 for m ≠ n",
+        "∫₋₁¹ Pₘ(x)Pₙ(x) dx = 0 for m ≠ n",
+        "∫₋₁¹ Pₘ(x)Pₙ(x) dx = δₘₙ"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Legendre polynomials satisfy ∫₋₁¹ Pₘ(x)Pₙ(x) dx = 2/(2n+1) δₘₙ. The integral is zero for m ≠ n (orthogonality). For m = n, the value is 2/(2n+1), not unity — so option A is correct as the orthogonality statement.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "medium",
       "stem": "A bead of mass m slides without friction on a wire shaped as a parabola z = ar² (r is cylindrical radius). Using Lagrangian mechanics with r as the generalized coordinate, the effective potential term added by the constraint is:",
       "options": [
+        "½mȧ²r²",
         "½m(2arṙ)²",
         "mgar²",
-        "½m(2arṙ)² + mgar²",
-        "½mȧ²r²"
+        "½m(2arṙ)² + mgar²"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The constraint z = ar² gives ż = 2arṙ. The kinetic energy T = ½m(ṙ² + r²φ̇² + ż²) = ½m(ṙ² + r²φ̇² + 4a²r²ṙ²). The potential V = mgz = mgar². So V_eff = mgar² + ½m(2arṙ)² from the constraint velocity term.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -188,12 +188,12 @@
       "difficulty": "medium",
       "stem": "A symmetric top with moment of inertia I₃ about its symmetry axis and I₁ about a perpendicular axis has angular velocity ω₃ = 10 rad/s about its symmetry axis and Ω = 2 rad/s for its precession. The magnitude of the precessional angular momentum is:",
       "options": [
-        "I₁Ω",
         "I₃ω₃",
         "(I₃ − I₁)ω₃Ω",
-        "I₁Ω²/ω₃"
+        "I₁Ω²/ω₃",
+        "I₁Ω"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The precessional angular momentum is L_prec = I₁Ω. This represents the component of angular momentum perpendicular to the symmetry axis. The total angular momentum has contributions from both the spin (I₃ω₃) and precession (I₁Ω).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "A photon with energy E collides with a stationary electron. The maximum energy transferred to the electron in this Compton scattering event is:",
       "options": [
-        "E",
-        "2E²/(mc² + 2E)",
         "E²/(mc² + E)",
-        "mc²"
+        "mc²",
+        "E",
+        "2E²/(mc² + 2E)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In Compton scattering, the maximum energy transfer occurs at θ = π (backward scattering). The recoiling electron energy: E_e,max = E − E' where E' = E/(1 + 2E/(mc²)). So E_e,max = E · 2E/(mc² + 2E) = 2E²/(mc² + 2E).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "hard",
       "stem": "A solid sphere of mass M and radius R rolls without slipping on a horizontal surface. The ratio of rotational to total kinetic energy is:",
       "options": [
+        "1/2",
         "2/7",
         "3/7",
-        "5/7",
-        "1/2"
+        "5/7"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "T_rot = ½Iω² = ½(2/5)MR²(v/R)² = 1/5 Mv². T_trans = ½Mv². Total = 1/5 Mv² + 1/2 Mv² = 7/10 Mv². Ratio = (1/5)/(7/10) = 2/7.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "medium",
       "stem": "Hamilton's principle states that the actual path taken by a mechanical system between two configurations satisfies:",
       "options": [
-        "δ∫ L dt = 0",
         "δ∫ T dt = 0",
         "δ∫ V dt = 0",
-        "δ∫ (T + V) dt = 0"
+        "δ∫ (T + V) dt = 0",
+        "δ∫ L dt = 0"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Hamilton's principle: the action S = ∫L dt is stationary (δS = 0) for the actual path, where L = T − V. This gives the Euler-Lagrange equations. Note it is L = T − V, not T + V, that appears in the action integral.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "hard",
       "stem": "The Poynting theorem states that the rate of decrease of electromagnetic energy density in a volume equals:",
       "options": [
+        "μ₀ times the current density squared",
         "The net outward flux of S plus the power dissipated by J",
         "The net inward flux of S only",
-        "The divergence of E × B",
-        "μ₀ times the current density squared"
+        "The divergence of E × B"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Poynting's theorem: −∂u/∂t = ∇·S + J·E, where u = ½(ε₀E² + B²/μ₀) is the EM energy density and S = E×B/μ₀ is the Poynting vector. The energy decrease equals the outward energy flux (divergence of S) plus ohmic dissipation (J·E).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "medium",
       "stem": "An electromagnetic wave has E_x = E₀ cos(kz − ωt) and E_y = E₀ sin(kz − ωt). The polarization state is:",
       "options": [
-        "Linear polarization",
-        "Circular polarization (right-handed)",
         "Circular polarization (left-handed)",
-        "Elliptical polarization"
+        "Elliptical polarization",
+        "Linear polarization",
+        "Circular polarization (right-handed)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The two components have equal amplitude and a phase difference of π/2. E_x leads E_y by π/2. The electric field vector rotates clockwise when viewed along the propagation direction (z-axis). This is right-hand circular polarization (RCP).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -324,12 +324,12 @@
       "difficulty": "hard",
       "stem": "The radiation resistance of a short dipole of length l (l ≪ λ) in free space is:",
       "options": [
-        "20π²(l/λ)² ohms",
         "80π²(l/λ)² ohms",
         "40π²(l/λ)² ohms",
-        "30π²(l/λ)² ohms"
+        "30π²(l/λ)² ohms",
+        "20π²(l/λ)² ohms"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For a short (Hertzian) dipole of length l ≪ λ, the radiation resistance is R_rad = 20π²(l/λ)² Ω. For a half-wave dipole (l = λ/2), this gives approximately 73 Ω, which matches the known result.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -350,12 +350,12 @@
       "difficulty": "easy",
       "stem": "In a rectangular waveguide with dimensions a × b (a > b), the dominant mode for TE waves is:",
       "options": [
+        "TE₁₀",
         "TE₁₁",
         "TE₂₀",
-        "TE₀₁",
-        "TE₁₀"
+        "TE₀₁"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "The cutoff frequency for TEₘₙ mode is f_c = (c/2)√((m/a)² + (n/b)²). The lowest cutoff occurs for TE₁₀ (m=1, n=0): f_c = c/(2a). Since a > b, TE₁₀ has the lowest cutoff and is the dominant mode.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -376,12 +376,12 @@
       "difficulty": "easy",
       "stem": "The Fraunhofer diffraction pattern of a single slit of width a shows the first minimum at an angle θ satisfying:",
       "options": [
-        "a sin θ = λ",
-        "a sin θ = λ/2",
         "2a sin θ = λ",
-        "a cos θ = λ"
+        "a cos θ = λ",
+        "a sin θ = λ",
+        "a sin θ = λ/2"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For single-slit Fraunhofer diffraction, minima occur at a sin θ = mλ where m = ±1, ±2, ... The first minimum (m = 1) is at a sin θ = λ. The central maximum has angular half-width θ ≈ λ/a.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -397,12 +397,12 @@
       "difficulty": "medium",
       "stem": "The differential cross-section for Rutherford scattering of a particle of charge Ze by a nucleus of charge Z'e is proportional to:",
       "options": [
-        "1/sin²(θ/2)",
         "1/sin⁴(θ/2)",
         "1/cos⁴(θ/2)",
-        "sin²(θ/2)"
+        "sin²(θ/2)",
+        "1/sin²(θ/2)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Rutherford differential cross-section is dσ/dΩ = (ZZ'e²/4E)² csc⁴(θ/2) = (ZZ'e²/4E)²/sin⁴(θ/2). The sin⁻⁴(θ/2) dependence arises from the 1/r² nature of the Coulomb force.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -418,12 +418,12 @@
       "difficulty": "hard",
       "stem": "In the first Born approximation, the scattering amplitude f(θ) is proportional to:",
       "options": [
+        "∫ |V(r)|² e^(iqr) d³r",
         "∫ V(r) e^(iqr) d³r",
         "∫ V(r) e^(−iqr) d³r",
-        "∫ V(r) cos(qr) d³r",
-        "∫ |V(r)|² e^(iqr) d³r"
+        "∫ V(r) cos(qr) d³r"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In the first Born approximation, f(θ,φ) = −(m/2πℏ²) ∫ V(r') e^(−iq·r') d³r', where q = k_f − k_i is the momentum transfer. The Fourier transform of the scattering potential gives the scattering amplitude.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -439,12 +439,12 @@
       "difficulty": "medium",
       "stem": "In time-dependent perturbation theory, the transition probability per unit time from state |i⟩ to |f⟩ for a sinusoidal perturbation is given by Fermi's golden rule as:",
       "options": [
-        "(2π/ℏ)|⟨f|H₀|i⟩|² ρ(E_f)",
-        "(π/ℏ)|⟨f|H₀|i⟩|² ρ(E_f)",
         "(2π/ℏ)|⟨f|H₀|i⟩|²",
-        "(1/ℏ²)|⟨f|H₀|i⟩|² ρ(E_f)"
+        "(1/ℏ²)|⟨f|H₀|i⟩|² ρ(E_f)",
+        "(2π/ℏ)|⟨f|H₀|i⟩|² ρ(E_f)",
+        "(π/ℏ)|⟨f|H₀|i⟩|² ρ(E_f)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Fermi's golden rule: Γ_{i→f} = (2π/ℏ)|⟨f|H₀|i⟩|² ρ(E_f), where ρ(E_f) is the density of final states at the transition energy. This gives the transition rate for a monochromatic perturbation coupling to a continuum.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -460,12 +460,12 @@
       "difficulty": "easy",
       "stem": "The spin magnetic moment of an electron is approximately:",
       "options": [
-        "eℏ/(2m_e) = one Bohr magneton",
         "eℏ/m_e = two Bohr magnetons",
         "eℏ/(4m_e)",
-        "Zero"
+        "Zero",
+        "eℏ/(2m_e) = one Bohr magneton"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The spin magnetic moment of the electron is μ_s = −g_s(e/2m_e)S where g_s ≈ 2. For spin-1/2, |S| = ℏ/2, giving μ_s ≈ eℏ/(2m_e) = μ_B (one Bohr magneton). The negative sign indicates the moment is antiparallel to the spin.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -481,12 +481,12 @@
       "difficulty": "hard",
       "stem": "Two identical spin-1/2 fermions in a box have their lowest energy configuration when:",
       "options": [
+        "Both are in the first excited state",
         "Both are in the ground state with opposite spins",
         "Both are in the ground state with parallel spins",
-        "One is in the ground state and one in the first excited state",
-        "Both are in the first excited state"
+        "One is in the ground state and one in the first excited state"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "By the Pauli exclusion principle, no two identical fermions can occupy the same quantum state. Since spin-1/2 has two spin states, the two fermions can both occupy the spatial ground state if their spins are antiparallel (↑↓). This minimizes total energy.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -502,12 +502,12 @@
       "difficulty": "medium",
       "stem": "The canonical partition function for N independent, non-interacting distinguishable particles each with single-particle partition function z is:",
       "options": [
-        "Z = z^N",
-        "Z = z/N!",
         "Z = N! z^N",
-        "Z = z^N / N!"
+        "Z = z^N / N!",
+        "Z = z^N",
+        "Z = z/N!"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For N distinguishable, non-interacting particles, the canonical partition function is Z = z^N, where z is the single-particle partition function. This factorizes because the particles are independent.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -523,12 +523,12 @@
       "difficulty": "easy",
       "stem": "At high temperatures and low densities, which quantum distribution function reduces to the Maxwell-Boltzmann distribution?",
       "options": [
-        "Only Bose-Einstein",
-        "Only Fermi-Dirac",
+        "Suitable for baseband transmission",
         "Both Bose-Einstein and Fermi-Dirac",
-        "Neither"
+        "Neither",
+        "Used in limited applications"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "When e^(β(ε−μ)) ≫ 1 (high T, low density), both distributions reduce: BE: 1/(e^x − 1) ≈ e^(−x) and FD: 1/(e^x + 1) ≈ e^(−x). Both approach the classical Maxwell-Boltzmann form n = e^(−β(ε−μ)).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -544,12 +544,12 @@
       "difficulty": "medium",
       "stem": "Gibbs phase rule F = C − P + 2 applied to a single-component system at the triple point gives:",
       "options": [
+        "F = 0",
         "F = 3",
         "F = 2",
-        "F = 1",
-        "F = 0"
+        "F = 1"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "At the triple point of a single-component system: C = 1 (one component), P = 3 (solid, liquid, gas coexist). F = 1 − 3 + 2 = 0. The triple point is an invariant point — no degrees of freedom, meaning it occurs at a unique temperature and pressure.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -565,12 +565,12 @@
       "difficulty": "medium",
       "stem": "Wien's displacement law states that the wavelength of maximum emission from a blackbody at temperature T is:",
       "options": [
-        "λ_max T = constant (≈ 2.898 × 10⁻³ m·K)",
-        "λ_max ∝ T",
         "λ_max ∝ 1/T²",
-        "λ_max = constant independent of T"
+        "λ_max = constant independent of T",
+        "λ_max T = constant (≈ 2.898 × 10⁻³ m·K)",
+        "λ_max ∝ T"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Wien's displacement law: λ_max T = b ≈ 2.898 × 10⁻³ m·K. As temperature increases, the peak of the blackbody spectrum shifts to shorter wavelengths. This explains why hot objects glow first red, then white, then blue.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -586,12 +586,12 @@
       "difficulty": "medium",
       "stem": "The anomalous Zeeman effect in the sodium D₂ line (3²P₃/₂ → 3²S₁/₂) produces a total of how many polarized components in a weak magnetic field?",
       "options": [
-        "4",
         "6",
         "8",
-        "10"
+        "10",
+        "4"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "For the D₂ line: upper level J=3/2 has m_J = ±3/2, ±1/2 (4 sublevels); lower level J=1/2 has m_J = ±1/2 (2 sublevels). Selection rules Δm_J = 0, ±1 give: π components (Δm=0): 2; σ± components (Δm=±1): 6. Total = 8 distinct spectral components.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -607,12 +607,12 @@
       "difficulty": "easy",
       "stem": "The vibrational frequency of a diatomic molecule is approximately 5 × 10¹³ Hz. The corresponding wavenumber in cm⁻¹ is:",
       "options": [
+        "1.67 cm⁻¹",
         "1667 cm⁻¹",
         "167 cm⁻¹",
-        "16,667 cm⁻¹",
-        "1.67 cm⁻¹"
+        "16,667 cm⁻¹"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Wavenumber = ν/c = 5 × 10¹³ / (3 × 10¹⁰ cm/s) = 1.667 × 10³ cm⁻¹ ≈ 1667 cm⁻¹. This is in the mid-infrared region, typical for molecular vibrations.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -628,12 +628,12 @@
       "difficulty": "hard",
       "stem": "Moseley's law states that the square root of the frequency of Kₐ X-rays is proportional to:",
       "options": [
-        "The atomic number Z",
-        "Z − 1",
         "Z²",
-        "√Z"
+        "√Z",
+        "The atomic number Z",
+        "Z − 1"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Moseley's law: √ν = a(Z − b), where b ≈ 1 for Kₐ lines (screening constant). The Kₐ transition is from 2p → 1s. The effective nuclear charge seen by the 2p electron is approximately (Z − 1) due to screening by the 1s electron.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -649,12 +649,12 @@
       "difficulty": "hard",
       "stem": "The fine structure constant α ≈ 1/137 represents the ratio of:",
       "options": [
-        "The velocity of the electron in the first Bohr orbit to the speed of light",
         "The rest mass energy of the electron to its kinetic energy",
         "The Compton wavelength to the Bohr radius",
-        "The gravitational force to the electromagnetic force"
+        "The gravitational force to the electromagnetic force",
+        "The velocity of the electron in the first Bohr orbit to the speed of light"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "α = e²/(4πε₀ℏc) ≈ 1/137.036. In the first Bohr orbit, v₁ = αc ≈ c/137, so α = v₁/c. It characterizes the strength of the electromagnetic interaction and appears throughout QED.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -670,12 +670,12 @@
       "difficulty": "easy",
       "stem": "The coherence length of a laser is related to its spectral linewidth Δν by:",
       "options": [
+        "L_coh ≈ √c/Δν",
         "L_coh ≈ c/Δν",
         "L_coh ≈ c·Δν",
-        "L_coh ≈ c/(Δν)²",
-        "L_coh ≈ √c/Δν"
+        "L_coh ≈ c/(Δν)²"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Coherence length L_coh = c·τ_coh = c/Δν, where τ_coh = 1/Δν is the coherence time. A narrower linewidth means longer coherence length. For a single-mode He-Ne laser (Δν ≈ 1 MHz), L_coh ≈ 300 m.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -691,12 +691,12 @@
       "difficulty": "medium",
       "stem": "The photoelectric effect demonstrates that light:",
       "options": [
-        "Behaves as a wave only",
-        "Behaves as particles (photons)",
         "Has no relationship with electrons",
-        "Is always polarized"
+        "Is always polarized",
+        "Behaves as a wave only",
+        "Behaves as particles (photons)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The photoelectric effect (Einstein, 1905) showed that light energy is quantized in photons of energy E = hν. Electrons are emitted only if hν exceeds the work function, regardless of intensity — proving the particle nature of light.",
       "estSec": 10,
       "topicWeight": 0.14,
@@ -712,12 +712,12 @@
       "difficulty": "medium",
       "stem": "In a one-dimensional monatomic lattice with lattice constant a, the first Brillouin zone extends in k-space from:",
       "options": [
-        "−π/a to +π/a",
         "−2π/a to +2π/a",
         "0 to π/a",
-        "−π/(2a) to +π/(2a)"
+        "−π/(2a) to +π/(2a)",
+        "−π/a to +π/a"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The first Brillouin zone of a 1D lattice with spacing a is the Wigner-Seitz cell in reciprocal space: k ∈ [−π/a, +π/a]. This is the region between the Bragg planes k = ±π/a, corresponding to the condition for constructive backscattering.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -738,12 +738,12 @@
       "difficulty": "easy",
       "stem": "In the Hall effect, the sign of the Hall coefficient R_H indicates:",
       "options": [
+        "The temperature",
         "The type of charge carrier (electron or hole)",
         "The magnitude of conductivity",
-        "The lattice constant",
-        "The temperature"
+        "The lattice constant"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "R_H = 1/(nq), where n is carrier density and q is carrier charge. For electrons (q = −e), R_H < 0; for holes (q = +e), R_H > 0. Measuring the sign of R_H directly determines whether majority carriers are electrons or holes.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -759,12 +759,12 @@
       "difficulty": "medium",
       "stem": "The Clausius-Mossotti relation connects the dielectric constant ε_r of a non-polar dielectric to the polarizability α of its atoms as:",
       "options": [
-        "(ε_r − 1)/(ε_r + 2) = Nα/(3ε₀)",
-        "(ε_r + 1)/(ε_r − 2) = Nα/(3ε₀)",
         "ε_r = 1 + Nα/ε₀",
-        "ε_r = Nα/(3ε₀)"
+        "ε_r = Nα/(3ε₀)",
+        "(ε_r − 1)/(ε_r + 2) = Nα/(3ε₀)",
+        "(ε_r + 1)/(ε_r − 2) = Nα/(3ε₀)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The Clausius-Mossotti relation: (ε_r − 1)/(ε_r + 2) = Nα/(3ε₀), where N is the number density of atoms and α is the atomic polarizability. It relates the microscopic polarizability to the macroscopic dielectric constant, valid for non-polar materials.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -780,12 +780,12 @@
       "difficulty": "easy",
       "stem": "At T = 0 K, the Fermi energy E_F of a free electron gas in 3D is related to the electron density n by:",
       "options": [
-        "E_F = (ℏ²/2m)(3π²n)^(2/3)",
         "E_F = (ℏ²/2m)(3π²n)^(1/3)",
         "E_F = ℏ²n²/(2m)",
-        "E_F = (3/4)π²nℏ²/m"
+        "E_F = (3/4)π²nℏ²/m",
+        "E_F = (ℏ²/2m)(3π²n)^(2/3)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "E_F = (ℏ²/2m)(3π²n)^(2/3). This follows from filling states in k-space up to the Fermi sphere: n = (k_F³)/(3π²) giving k_F = (3π²n)^(1/3), and E_F = ℏ²k_F²/(2m).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -801,12 +801,12 @@
       "difficulty": "easy",
       "stem": "In a diatomic linear chain with masses m₁ and m₂ and spring constant K, the maximum frequency of optical phonons at k = 0 is:",
       "options": [
+        "√(K/m₁)",
         "√(2K/μ) where μ = m₁m₂/(m₁ + m₂)",
         "√(K/μ)",
-        "√(2K/(m₁ + m₂))",
-        "√(K/m₁)"
+        "√(2K/(m₁ + m₂))"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "At k = 0, optical phonons have ω_opt = √(2K/μ), where μ is the reduced mass. At the zone boundary, acoustic and optical branches are ω_ac = √(2K/m₁) and ω_opt = √(2K/m₂) (assuming m₁ > m₂).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -822,12 +822,12 @@
       "difficulty": "medium",
       "stem": "A differential amplifier has a differential gain A_d = 100 and a common-mode rejection ratio (CMRR) of 80 dB. The common-mode gain A_cm is approximately:",
       "options": [
-        "1",
-        "0.1",
         "0.01",
-        "0.001"
+        "0.001",
+        "1",
+        "0.1"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "CMRR = 20 log₁₀(A_d/A_cm) = 80 dB. So A_d/A_cm = 10^(80/20) = 10⁴ = 10,000. A_cm = A_d/10,000 = 100/10,000 = 0.01.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -843,12 +843,12 @@
       "difficulty": "medium",
       "stem": "A 4-bit binary counter counts from 0 to 15. If it is a synchronous counter, the maximum clock frequency is limited by:",
       "options": [
-        "The propagation delay of one flip-flop only",
         "The total propagation delay from the first to the last flip-flop",
         "The settling time of the clock",
-        "The number of flip-flops squared"
+        "The number of flip-flops squared",
+        "The propagation delay of one flip-flop only"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In a synchronous counter, all flip-flops are clocked simultaneously. The clock period must exceed the propagation delay of a single flip-flop plus any combinational logic. Asynchronous (ripple) counters have cumulative delays; synchronous counters avoid this.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -864,12 +864,12 @@
       "difficulty": "hard",
       "stem": "A serial-in serial-out (SISO) shift register with 8 flip-flops can store:",
       "options": [
+        "1 bit of data",
         "8 bits of data",
         "16 bits of data",
-        "8 bytes of data",
-        "1 bit of data"
+        "8 bytes of data"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Each flip-flop stores 1 bit. An 8-stage SISO shift register stores exactly 8 bits. Data enters serially (one bit per clock) and exits serially after 8 clock cycles.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -885,12 +885,12 @@
       "difficulty": "medium",
       "stem": "An 8-bit R-2R ladder D/A converter has a reference voltage of 5 V. The output voltage for input code 10000000 (MSB only) is:",
       "options": [
-        "2.5 V",
-        "1.25 V",
         "5.0 V",
-        "0.625 V"
+        "0.625 V",
+        "2.5 V",
+        "1.25 V"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For an R-2R ladder, each bit position contributes V_ref × 2^n / 2^(N+1) where n is the bit position and N is the total number of bits. For 8 bits, MSB (bit 7) contributes 5 × 128/256 = 5/2 = 2.5 V.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -906,12 +906,12 @@
       "difficulty": "easy",
       "stem": "In secular equilibrium between a long-lived parent (T₁/₂ >> T₁/₂ daughter) and its daughter, the activity of the daughter:",
       "options": [
-        "Is always greater than the parent's activity",
         "Equals the parent's activity after sufficient time",
         "Is always half the parent's activity",
-        "Decays to zero"
+        "Decays to zero",
+        "Is always greater than the parent's activity"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In secular equilibrium (T₁/₂,parent ≫ T₁/₂,daughter), after a time ≈ 5 × T₁/₂,daughter, the daughter activity equals the parent activity: A_daughter = A_parent. The daughter decays as fast as it is produced, giving a steady-state condition.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -927,12 +927,12 @@
       "difficulty": "hard",
       "stem": "If a number is increased by 20% and then decreased by 20%, the net change is:",
       "options": [
+        "2% decrease",
         "0%",
         "4% increase",
-        "4% decrease",
-        "2% decrease"
+        "4% decrease"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Let the number be 100. After 20% increase: 120. After 20% decrease: 120 × 0.8 = 96. Net change = (96 − 100)/100 = −4%. A 4% decrease.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -953,12 +953,12 @@
       "difficulty": "medium",
       "stem": "A trader buys an article at a 10% discount on the marked price and sells it at 20% above the marked price. His profit percentage is:",
       "options": [
-        "25%",
-        "30%",
         "33.33%",
-        "20%"
+        "20%",
+        "25%",
+        "30%"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Let marked price = 100. CP = 90 (10% discount). SP = 120 (20% above MP). Profit = 120 − 90 = 30. Profit% = 30/90 × 100 = 33.33%.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -979,12 +979,12 @@
       "difficulty": "medium",
       "stem": "The average weight of 15 students is 50 kg. If the teacher's weight is included, the average becomes 51 kg. What is the teacher's weight?",
       "options": [
-        "65 kg",
         "66 kg",
         "67 kg",
-        "68 kg"
+        "68 kg",
+        "65 kg"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Total weight of 15 students = 15 × 50 = 750 kg. Total with teacher = 16 × 51 = 816 kg. Teacher's weight = 816 − 750 = 66 kg.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1005,12 +1005,12 @@
       "difficulty": "medium",
       "stem": "3 men can do a piece of work in 12 days. After working for 4 days, 3 more men join. How many more days will the work take?",
       "options": [
+        "8 days",
         "5.33 days",
         "6 days",
-        "4 days",
-        "8 days"
+        "4 days"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Total work = 3 × 12 = 36 man-days. Work done in 4 days = 3 × 4 = 12 man-days. Remaining = 24 man-days. With 6 men: 24/6 = 4 more days.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1031,12 +1031,12 @@
       "difficulty": "hard",
       "stem": "A bag contains 5 red and 3 blue balls. Two balls are drawn at random without replacement. The probability that both are red is:",
       "options": [
-        "5/14",
-        "25/64",
         "10/28",
-        "20/56"
+        "20/56",
+        "5/14",
+        "25/64"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P(both red) = (5/8) × (4/7) = 20/56 = 5/14.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1057,12 +1057,12 @@
       "difficulty": "medium",
       "stem": "The ratio of present ages of A and B is 4:7. After 5 years, the ratio becomes 5:8. What is A's present age?",
       "options": [
-        "16 years",
         "20 years",
         "24 years",
-        "28 years"
+        "28 years",
+        "16 years"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Let A = 4x, B = 7x. After 5 years: (4x+5)/(7x+5) = 5/8. Cross multiply: 32x + 40 = 35x + 25 → 3x = 15 → x = 5. A's age = 4 × 5 = 20 years.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1083,12 +1083,12 @@
       "difficulty": "easy",
       "stem": "A car travels from city A to city B at 60 km/h and returns at 40 km/h. The average speed for the entire journey is:",
       "options": [
+        "45 km/h",
         "50 km/h",
         "48 km/h",
-        "52 km/h",
-        "45 km/h"
+        "52 km/h"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Average speed for equal distances = 2v₁v₂/(v₁ + v₂) = 2 × 60 × 40/(60 + 40) = 4800/100 = 48 km/h.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1109,12 +1109,12 @@
       "difficulty": "medium",
       "stem": "The difference between compound interest and simple interest on Rs.5,000 at 10% per annum for 2 years is:",
       "options": [
-        "Rs.50",
-        "Rs.100",
         "Rs.500",
-        "Rs.55"
+        "Rs.55",
+        "Rs.50",
+        "Rs.100"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "SI = 5000 × 0.10 × 2 = Rs.1,000. CI = 5000[(1.1)² − 1] = 5000 × 0.21 = Rs.1,050. Difference = 1,050 − 1,000 = Rs.50.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1135,12 +1135,12 @@
       "difficulty": "hard",
       "stem": "In how many ways can a committee of 3 women and 2 men be formed from 5 women and 4 men?",
       "options": [
-        "40",
         "60",
         "120",
-        "240"
+        "240",
+        "40"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ways = C(5,3) × C(4,2) = 10 × 6 = 60.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1161,12 +1161,12 @@
       "difficulty": "easy",
       "stem": "A boat can go 15 km upstream in 5 hours and 15 km downstream in 3 hours. What is the speed of the stream?",
       "options": [
+        "3 km/h",
         "1 km/h",
         "2 km/h",
-        "2.5 km/h",
-        "3 km/h"
+        "2.5 km/h"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Upstream speed = 15/5 = 3 km/h. Downstream speed = 15/3 = 5 km/h. Speed of stream = (5 − 3)/2 = 1 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1187,12 +1187,12 @@
       "difficulty": "medium",
       "stem": "A father is 3 times as old as his son. After 12 years, he will be twice as old as his son. The father's present age is:",
       "options": [
-        "30 years",
-        "36 years",
         "42 years",
-        "48 years"
+        "48 years",
+        "30 years",
+        "36 years"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let son = x, father = 3x. After 12 years: 3x + 12 = 2(x + 12). 3x + 12 = 2x + 24. x = 12. Father's age = 3 × 12 = 36 years.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1213,12 +1213,12 @@
       "difficulty": "hard",
       "stem": "Two vessels contain milk and water in the ratios 3:1 and 5:3 respectively. In what ratio should they be mixed to get a mixture of milk and water in the ratio 7:3?",
       "options": [
-        "2:3",
         "3:2",
         "1:1",
-        "4:1"
+        "4:1",
+        "2:3"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Vessel 1: milk fraction = 3/4 = 0.75. Vessel 2: milk fraction = 5/8 = 0.625. Target: 7/10 = 0.7. Using alligation: (0.7 − 0.625):(0.75 − 0.7) = 0.075:0.05 = 3:2. So Vessel 1:Vessel 2 = 3:2.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1239,12 +1239,12 @@
       "difficulty": "medium",
       "stem": "A train 200 m long is running at 72 km/h. How long will it take to pass a pole?",
       "options": [
+        "15 seconds",
         "10 seconds",
         "8 seconds",
-        "12 seconds",
-        "15 seconds"
+        "12 seconds"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Speed = 72 km/h = 72 × 5/18 = 20 m/s. Time = 200/20 = 10 seconds.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1265,12 +1265,12 @@
       "difficulty": "easy",
       "stem": "What is the remainder when 2²⁵ is divided by 7?",
       "options": [
-        "1",
-        "2",
         "3",
-        "4"
+        "4",
+        "1",
+        "2"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "2³ = 8 ≡ 1 (mod 7). So 2²⁵ = (2³)⁸ × 2¹ = 1⁸ × 2 = 2 (mod 7). Remainder = 2.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1291,12 +1291,12 @@
       "difficulty": "hard",
       "stem": "Pipe A can fill a tank in 15 hours and Pipe B can fill it in 20 hours. If both are opened simultaneously, the tank will be full in:",
       "options": [
-        "8.57 hours",
         "7.5 hours",
         "10 hours",
-        "12 hours"
+        "12 hours",
+        "8.57 hours"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A's rate = 1/15 per hour. B's rate = 1/20 per hour. Combined = 1/15 + 1/20 = (4+3)/60 = 7/60 per hour. Time = 60/7 ≈ 8.57 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1317,12 +1317,12 @@
       "difficulty": "hard",
       "stem": "What comes next: 3, 8, 18, 38, 78, ?",
       "options": [
+        "178",
         "148",
         "158",
-        "168",
-        "178"
+        "168"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Differences: 5, 10, 20, 40 — each difference doubles. Next difference = 80. Next number = 78 + 80 = 158.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1343,12 +1343,12 @@
       "difficulty": "hard",
       "stem": "If SUNSHINE is coded as TPVOUIOF, then MORNING is coded as:",
       "options": [
-        "NPJSOJH",
-        "NPJSOJH",
         "OPKTPKI",
-        "NQJTOJH"
+        "NQJTOJH",
+        "NPJSOJH",
+        "NPJSOJH"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Each letter is shifted +1: S→T, U→V, N→O, S→T, H→I, I→J, N→O, E→F. So SUNSHINE → TPVOUIOF. MORNING → N(P→Q is wrong, M→N, O→P, R→S, N→O, I→J, N→O, G→H) = NPJSOJH.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1369,12 +1369,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a man, a woman says, 'His mother is the only daughter of my mother.' How is the woman related to the man?",
       "options": [
-        "Mother",
         "Grandmother",
         "Sister",
-        "Aunt"
+        "Aunt",
+        "Mother"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "'The only daughter of my mother' is the woman herself. So the man's mother is the woman. The woman is the man's mother.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1395,12 +1395,12 @@
       "difficulty": "medium",
       "stem": "Ravi walks 10 km North, turns left and walks 5 km, turns left and walks 10 km. In which direction is he from the starting point?",
       "options": [
+        "West",
         "North",
         "South",
-        "East",
-        "West"
+        "East"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "North 10 km → (0,10). Left (West) 5 km → (−5,10). Left (South) 10 km → (−5,0). He is 5 km West of the start.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1421,12 +1421,12 @@
       "difficulty": "medium",
       "stem": "Statements: All dogs are animals. Some animals are cats. Conclusions: I. Some dogs are cats. II. Some cats are dogs.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Applies to specific environments",
+        "Works for particular conditions",
+        "Suitable for baseband transmission",
+        "Used in limited applications"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "From 'All dogs are animals' and 'Some animals are cats', we cannot conclude that any dogs are cats — the cats and dogs may be disjoint subsets of animals. Neither conclusion follows with certainty.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1447,12 +1447,12 @@
       "difficulty": "hard",
       "stem": "If A > B ≥ C = D > E, which of the following is definitely true?",
       "options": [
-        "A > C",
         "B = D",
         "A > E",
-        "Both A and C"
+        "Both A and C",
+        "A > C"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "A > B ≥ C → A > C (transitivity). A > B ≥ C = D > E → A > E (transitivity). Both A > C and A > E are definitely true.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1473,12 +1473,12 @@
       "difficulty": "easy",
       "stem": "Five persons P, Q, R, S, T sit in a row facing north. S is exactly in the middle. P is to the immediate left of Q. T is at the left end. Who is to the immediate right of S?",
       "options": [
+        "T",
         "P",
         "Q",
-        "R",
-        "T"
+        "R"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "T is at the left end: T _ _ _ _. S is in the middle: T _ S _ _. P is immediately left of Q: T P Q S _. The remaining person R goes to the right end: T P Q S R. To the immediate right of S is R.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1499,12 +1499,12 @@
       "difficulty": "hard",
       "stem": "In a class of 40 students, Rahul's rank from the top is 15. What is his rank from the bottom?",
       "options": [
-        "25",
-        "26",
         "27",
-        "28"
+        "28",
+        "25",
+        "26"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Rank from bottom = Total students − Rank from top + 1 = 40 − 15 + 1 = 26.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1525,12 +1525,12 @@
       "difficulty": "medium",
       "stem": "Five persons A, B, C, D, E are sitting in a row facing north. C is to the immediate right of A. B is at one of the ends. E is to the immediate left of D. D is not next to B. Who is sitting at the left end?",
       "options": [
-        "A",
         "B",
         "C",
-        "E"
+        "E",
+        "A"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "B is at an end (not next to D). If B is at right end: ...E D. C is right of A, so A C. Arrangement: E D A C B. E is at the left end.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1551,12 +1551,12 @@
       "difficulty": "hard",
       "stem": "If today is Thursday, what day will it be after 90 days?",
       "options": [
+        "Thursday",
         "Monday",
         "Tuesday",
-        "Wednesday",
-        "Thursday"
+        "Wednesday"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "90 ÷ 7 = 12 weeks and 6 days. Thursday + 6 days = Wednesday. Wait — Thursday + 6 = Wednesday. The answer is C (Wednesday).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1577,12 +1577,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
-        "KG Basin",
-        "Mumbai High",
         "Cauvery Basin",
-        "Assam"
+        "Assam",
+        "KG Basin",
+        "Mumbai High"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1598,12 +1598,12 @@
       "difficulty": "easy",
       "stem": "India's GDP growth rate for FY2025-26 is estimated at approximately:",
       "options": [
-        "5.5%",
         "6.5%",
         "7.5%",
-        "8.5%"
+        "8.5%",
+        "5.5%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "India's GDP growth for FY2025-26 is estimated at around 6.5%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1619,12 +1619,12 @@
       "difficulty": "medium",
       "stem": "The G20 summit under India's presidency was held in:",
       "options": [
+        "Chennai",
         "Mumbai",
         "New Delhi",
-        "Bengaluru",
-        "Chennai"
+        "Bengaluru"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The G20 summit was held in New Delhi.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1640,12 +1640,12 @@
       "difficulty": "medium",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
-        "0.5% of GDP",
-        "1.0% of GDP",
         "1.5% of GDP",
-        "2.0% of GDP"
+        "2.0% of GDP",
+        "0.5% of GDP",
+        "1.0% of GDP"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1661,12 +1661,12 @@
       "difficulty": "hard",
       "stem": "COP28 was held in which country?",
       "options": [
-        "Egypt",
         "UAE",
         "India",
-        "UK"
+        "UK",
+        "Egypt"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "COP28 was held in Dubai, UAE.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1682,12 +1682,12 @@
       "difficulty": "hard",
       "stem": "The PLI scheme for semiconductor manufacturing was approved with an outlay of:",
       "options": [
+        "₹1,00,000 crore",
         "₹10,000 crore",
         "₹25,000 crore",
-        "₹76,000 crore",
-        "₹1,00,000 crore"
+        "₹76,000 crore"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The PLI scheme for semiconductors has an outlay of ₹76,000 crore.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1703,12 +1703,12 @@
       "difficulty": "easy",
       "stem": "Which planet is known as the 'Red Planet'?",
       "options": [
-        "Venus",
-        "Mars",
         "Jupiter",
-        "Saturn"
+        "Saturn",
+        "Venus",
+        "Mars"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Mars is known as the Red Planet.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1724,12 +1724,12 @@
       "difficulty": "medium",
       "stem": "The river flowing through maximum Indian states:",
       "options": [
-        "Ganga",
         "Yamuna",
         "Godavari",
-        "Narmada"
+        "Narmada",
+        "Ganga"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Ganga flows through 11 states.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1745,12 +1745,12 @@
       "difficulty": "medium",
       "stem": "Fundamental Duties were added by which Amendment?",
       "options": [
+        "91st",
         "42nd",
         "44th",
-        "86th",
-        "91st"
+        "86th"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Fundamental Duties were added by the 86th Amendment, 2002.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1766,12 +1766,12 @@
       "difficulty": "hard",
       "stem": "Southernmost point of India:",
       "options": [
-        "Indira Point",
-        "Kanyakumari",
         "Dhanushkodi",
-        "Rameswaram"
+        "Rameswaram",
+        "Indira Point",
+        "Kanyakumari"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Indira Point in Nicobar Islands is the southernmost point.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1787,12 +1787,12 @@
       "difficulty": "medium",
       "stem": "By the time we arrive, they ___ already left.",
       "options": [
-        "will",
         "would",
         "will have",
-        "would have"
+        "would have",
+        "will"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Future perfect: will have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1808,12 +1808,12 @@
       "difficulty": "medium",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
+        "have been",
         "were",
         "are",
-        "was",
-        "have been"
+        "was"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1829,12 +1829,12 @@
       "difficulty": "medium",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
-        "Aggravate",
-        "Mitigate",
         "Motivate",
-        "Navigate"
+        "Navigate",
+        "Aggravate",
+        "Mitigate"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1850,12 +1850,12 @@
       "difficulty": "medium",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
         "had",
         "would",
-        "did"
+        "did",
+        "have"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1871,12 +1871,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
+        "Everywhere",
         "Omnipresent",
         "Rare",
-        "Common",
-        "Everywhere"
+        "Common"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1892,12 +1892,12 @@
       "difficulty": "hard",
       "stem": "Who ___ the book yesterday?",
       "options": [
-        "did wrote",
-        "wrote",
         "has wrote",
-        "written"
+        "written",
+        "did wrote",
+        "wrote"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1913,12 +1913,12 @@
       "difficulty": "medium",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
         "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1934,12 +1934,12 @@
       "difficulty": "easy",
       "stem": "What is a 'watershed' moment?",
       "options": [
+        "A celebration",
         "A moment near water",
         "A turning point",
-        "A disaster",
-        "A celebration"
+        "A disaster"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1955,12 +1955,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
-        "Lazy",
-        "Hardworking",
         "Careless",
-        "Slow"
+        "Slow",
+        "Lazy",
+        "Hardworking"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1976,12 +1976,12 @@
       "difficulty": "hard",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
         "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,

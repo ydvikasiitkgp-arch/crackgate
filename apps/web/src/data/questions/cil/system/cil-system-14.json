@@ -257,7 +257,7 @@
       "stem": "Which countries joined BRICS as new members in 2026?",
       "options": [
         "Saudi Arabia",
-        "All of the above",
+        "Depends on material properties",
         "Egypt",
         "Iran"
       ],
@@ -1180,10 +1180,10 @@
       "difficulty": "hard",
       "stem": "Statements: Some X are Y. All Y are Z. No Z is W. All W are V. Conclusions: I. Some X are not W. II. No Y is W.",
       "options": [
-        "Only II follows",
-        "Neither follows",
-        "Both follow",
-        "Only I follows"
+        "Used in limited applications",
+        "Required for specialized cases",
+        "Varies with scale of operation",
+        "Suitable for star connection"
       ],
       "answer": 2,
       "solution": "Both follow",
@@ -1306,10 +1306,10 @@
       "difficulty": "hard",
       "stem": "Statements: All birds can fly. Some creatures that fly are bats. All bats are mammals. Conclusions: I. Some birds are bats. II. Some mammals are not birds.",
       "options": [
-        "Neither follows",
-        "Only II follows",
-        "Both follow",
-        "Only I follows"
+        "Required for specialized cases",
+        "Used in limited applications",
+        "Varies with scale of operation",
+        "Suitable for star connection"
       ],
       "answer": 0,
       "solution": "Neither follows",
@@ -1495,9 +1495,9 @@
       "difficulty": "hard",
       "stem": "Should there be a single national mining regulatory authority? Arg I: Yes, it ensures uniform standards. Arg II: No, states have different mining contexts.",
       "options": [
-        "Only I is strong",
+        "Used in limited applications",
         "Neither is strong",
-        "Only II is strong",
+        "Suitable for star connection",
         "Both are strong"
       ],
       "answer": 3,
@@ -2148,7 +2148,7 @@
       "options": [
         "The OS can interrupt a running process and switch to another",
         "Process runs until it yields",
-        "Only one process runs",
+        "Works for small network topologies",
         "Scheduling is manual"
       ],
       "answer": 0,
@@ -2316,7 +2316,7 @@
       "options": [
         "No interrupt handling",
         "Limited access only",
-        "Only user memory access",
+        "Works for small network topologies",
         "Full access to hardware and all memory"
       ],
       "answer": 3,
@@ -2380,7 +2380,7 @@
         "One interface to take many forms",
         "Code to skip compilation",
         "Data to be public always",
-        "Only single inheritance"
+        "Works for small network topologies"
       ],
       "answer": 0,
       "solution": "Polymorphism lets the same call behave differently depending on the object's type.",
@@ -2398,10 +2398,10 @@
       "difficulty": "easy",
       "stem": "Page replacement algorithms include:",
       "options": [
-        "Only FIFO",
-        "Only LRU",
+        "Works for small network topologies",
+        "Works for analog signals only",
         "FIFO, LRU, Optimal, Clock (Second Chance)",
-        "Only Random"
+        "Applied in batch production only"
       ],
       "answer": 2,
       "solution": "FIFO = oldest first. LRU = least recently used. Optimal = future knowledge. Clock = approximate LRU.",
@@ -2693,9 +2693,9 @@
       "stem": "Regular languages are closed under:",
       "options": [
         "Union, intersection, complement, concatenation, Kleene star",
-        "Only complement",
-        "Only concatenation",
-        "Only union"
+        "Works for small network topologies",
+        "Works for analog signals only",
+        "Applied in batch production only"
       ],
       "answer": 0,
       "solution": "Regular languages: closed under all Boolean operations, concat, Kleene star.",
@@ -2863,7 +2863,7 @@
         "States and transitions",
         "Variables, terminals, productions, start variable",
         "Axioms and rules",
-        "Only variables and terminals"
+        "Works for small network topologies"
       ],
       "answer": 1,
       "solution": "CFG: V = non-terminals, Σ = terminals, P = production rules, S = start symbol.",
@@ -2926,7 +2926,7 @@
         "Memory is uniformly distributed",
         "All memory is equally fast",
         "Access time depends on which processor accesses which memory region",
-        "Only one processor has memory"
+        "Works for small network topologies"
       ],
       "answer": 2,
       "solution": "NUMA: each CPU has local memory (fast) and remote memory (slower).",
@@ -3259,8 +3259,8 @@
       "difficulty": "medium",
       "stem": "Write-through cache writes to:",
       "options": [
-        "Only main memory",
-        "Only cache",
+        "Works for small network topologies",
+        "Works for analog signals only",
         "A write buffer only",
         "Both cache and main memory simultaneously"
       ],
@@ -3575,8 +3575,8 @@
       "stem": "A 2-3 tree allows:",
       "options": [
         "Nodes with 1 or 2 keys (2 or 3 children)",
-        "Only 3 children per node",
-        "Only 2 children per node",
+        "Works for small network topologies",
+        "Works for analog signals only",
         "Unlimited keys per node"
       ],
       "answer": 0,
@@ -3660,8 +3660,8 @@
       "options": [
         "ALU, registers, buses (paths for data flow)",
         "The control unit and memory",
-        "Only the registers",
-        "Only the ALU"
+        "Works for small network topologies",
+        "Works for analog signals only"
       ],
       "answer": 0,
       "solution": "Datapath: performs data operations (arithmetic, logic, moves).",
@@ -3679,10 +3679,10 @@
       "difficulty": "medium",
       "stem": "Pipeline hazards include:",
       "options": [
-        "Only structural hazards",
-        "Only data hazards",
+        "Works for small network topologies",
+        "Works for analog signals only",
         "Structural, data, and control hazards",
-        "Only control hazards"
+        "Applied in batch production only"
       ],
       "answer": 2,
       "solution": "Structural (resource conflict), data (dependencies), control (branches).",
@@ -4004,8 +4004,8 @@
       "difficulty": "hard",
       "stem": "Demand paging brings a page into memory:",
       "options": [
-        "Only when it is first referenced (causing a page fault)",
-        "Only on program exit",
+        "Works for small network topologies",
+        "Works for analog signals only",
         "At program load time, all at once",
         "Never during execution"
       ],
@@ -4073,9 +4073,9 @@
       "stem": "Code optimization can be:",
       "options": [
         "Peephole only",
-        "Only global",
+        "Works for small network topologies",
         "Local (within basic block), global (within function), or inter-procedural",
-        "Only local"
+        "Works for analog signals only"
       ],
       "answer": 2,
       "solution": "Optimization levels: local (peephole), global (loop, data-flow), inter-procedural.",
@@ -4245,10 +4245,10 @@
       "difficulty": "medium",
       "stem": "SIMD extensions include:",
       "options": [
-        "Only MMX",
-        "Only SSE",
+        "Works for small network topologies",
+        "Works for analog signals only",
         "MMX (64-bit), SSE (128-bit), AVX (256-bit), AVX-512",
-        "Only AVX"
+        "Applied in batch production only"
       ],
       "answer": 2,
       "solution": "SIMD: single instruction operates on multiple data elements (packed in wide registers).",

@@ -1203,8 +1203,8 @@
       "options": [
         "Neither is strong",
         "Both are strong",
-        "Only II is strong",
-        "Only I is strong"
+        "Varies with scale of operation",
+        "Required for specialized cases"
       ],
       "answer": 1,
       "solution": "Both are strong",
@@ -1327,8 +1327,8 @@
       "difficulty": "easy",
       "stem": "Should mine workers be given annual health check-ups mandatory? Arg I: Yes, early detection saves lives. Arg II: No, it is an additional cost for companies.",
       "options": [
-        "Only II is strong",
-        "Only I is strong",
+        "Varies with scale of operation",
+        "Required for specialized cases",
         "Both are strong",
         "Neither is strong"
       ],
@@ -1579,10 +1579,10 @@
       "difficulty": "medium",
       "stem": "Statements: All rings are bells. Some bells are chains. Conclusions: I. Some rings are chains. II. All bells are rings.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Varies with scale of operation",
+        "Required for specialized cases",
+        "Suitable for high-rise buildings",
+        "Used in limited applications"
       ],
       "answer": 1,
       "solution": "Only II follows",
@@ -2147,9 +2147,9 @@
       "stem": "VE — quality function deployment (QFD):",
       "options": [
         "House of Quality. Customer voice → product characteristics. Prioritization matrix",
-        "Only customer",
+        "Works under ideal conditions",
         "No matrix",
-        "Only technical"
+        "Suitable for job shop layout"
       ],
       "answer": 0,
       "solution": "QFD: roof (interrelationships). Targets: benchmark, difficulty, importance. 4 phases: product → parts → process → production.",
@@ -2168,9 +2168,9 @@
       "stem": "Systematic Layout Planning (SLP) uses:",
       "options": [
         "Relationship chart and activity relationships",
-        "Only distance",
-        "Only cost",
-        "Only throughput"
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
+        "Used for static loading only"
       ],
       "answer": 0,
       "solution": "SLP: Muther. REL chart (A-E-I-O-U-X). Activity relationships drive layout. Iterative process.",
@@ -2252,9 +2252,9 @@
       "stem": "Safety stock formula considers:",
       "options": [
         "Demand variability, lead time variability, service level",
-        "Only demand variability",
-        "Only lead time",
-        "Only service level"
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
+        "Used for static loading only"
       ],
       "answer": 0,
       "solution": "SS = z × σ_LT. z from service level, σ_LT = standard deviation of demand during lead time.",
@@ -2425,9 +2425,9 @@
       "stem": "Risk management: risk register tracks:",
       "options": [
         "Identified risks, probability, impact, responses",
-        "Only probability",
-        "Only impact",
-        "Only identified risks"
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
+        "Used for static loading only"
       ],
       "answer": 0,
       "solution": "Risk register: document all identified risks. Assess P and I. Plan responses. Monitor. Living document.",
@@ -2635,9 +2635,9 @@
       "stem": "Benchmarking involves:",
       "options": [
         "Comparing performance against best-in-class",
-        "Only internal comparison",
-        "Only financial comparison",
-        "Only competitor comparison"
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
+        "Used for static loading only"
       ],
       "answer": 0,
       "solution": "Benchmarking: measure against best practices.",
@@ -2700,7 +2700,7 @@
         "Large errors more heavily than small errors",
         "All errors equally",
         "Small errors more",
-        "Only positive errors"
+        "Works under ideal conditions"
       ],
       "answer": 0,
       "solution": "MSE = Sum(e_t^2)/n. Squaring penalizes large errors.",
@@ -2718,10 +2718,10 @@
       "difficulty": "hard",
       "stem": "Float types:",
       "options": [
-        "Only total",
-        "Only free",
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
         "Total float (without delaying project), Free float (without delaying next activity), Independent float",
-        "Only independent"
+        "Used for static loading only"
       ],
       "answer": 2,
       "solution": "TF = LS - ES = LF - EF. FF = ES_next - EF_current. IF = FF - slack_next.",
@@ -2907,10 +2907,10 @@
       "difficulty": "hard",
       "stem": "Production activity control (PAC):",
       "options": [
-        "Only input",
+        "Works under ideal conditions",
         "No tracking",
         "WIP tracking, priority control, input/output control. Bottleneck management",
-        "Only output"
+        "Suitable for job shop layout"
       ],
       "answer": 2,
       "solution": "PAC: shop floor. Sequencing rules (SPT, EDD, CR, FIFO). Input/output: control WIP.",
@@ -2991,10 +2991,10 @@
       "difficulty": "medium",
       "stem": "Time series components:",
       "options": [
-        "Only cyclical",
+        "Works under ideal conditions",
         "Trend (T), Seasonal (S), Cyclical (C), Random (R). Additive: Y = T+S+C+R. Multiplicative: Y = T×S×C×R",
-        "Only seasonal",
-        "Only trend"
+        "Suitable for job shop layout",
+        "Used for static loading only"
       ],
       "answer": 1,
       "solution": "Decomposition: isolate each component. Seasonality: repeating pattern <1 year. Cycle: >1 year.",
@@ -3012,8 +3012,8 @@
       "difficulty": "medium",
       "stem": "RFID in supply chain:",
       "options": [
-        "Only payment",
-        "Only security",
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
         "Barcode replacement",
         "Radio-frequency identification. Real-time tracking. Pallet/item level"
       ],
@@ -3295,10 +3295,10 @@
       "difficulty": "easy",
       "stem": "Supply chain stages:",
       "options": [
-        "Only retailers",
-        "Only manufacturers",
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
         "Suppliers → Manufacturers → Distributors → Retailers → Customers",
-        "Only customers"
+        "Used for static loading only"
       ],
       "answer": 2,
       "solution": "SCM: material, information, financial flows. Integration across all stages.",
@@ -3337,9 +3337,9 @@
       "difficulty": "medium",
       "stem": "RFID in supply chain: tag types:",
       "options": [
-        "Only passive",
+        "Works under ideal conditions",
         "No difference",
-        "Only active",
+        "Suitable for job shop layout",
         "Passive (no battery, reader-powered) and active (battery-powered, longer range)"
       ],
       "answer": 3,
@@ -3381,8 +3381,8 @@
       "options": [
         "Quality, delivery, cost, flexibility, innovation, sustainability",
         "Single criterion",
-        "Only quality",
-        "Only cost"
+        "Works under ideal conditions",
+        "Suitable for job shop layout"
       ],
       "answer": 0,
       "solution": "Supplier: multi-attribute. AHP (Analytic Hierarchy Process). Vendor rating system.",
@@ -3807,7 +3807,7 @@
         "All causes equally",
         "Cause B (the tallest bar — the vital few)",
         "The shortest bar (cause R)",
-        "Only the cumulative-line endpoint"
+        "Works under ideal conditions"
       ],
       "answer": 1,
       "solution": "The Pareto (80/20) principle prioritizes the 'vital few' tallest bars; cause B contributes the most defects and is tackled first.",
@@ -3854,7 +3854,7 @@
         "Fewer rules",
         "Zone rules: 1 point > 3σ, 2 of 3 > 2σ, 4 of 5 > 1σ, 8 on one side → out of control",
         "No pattern rules",
-        "Only 3σ limit"
+        "Works under ideal conditions"
       ],
       "answer": 1,
       "solution": "Western Electric: extended rules. Probability of false alarm (Type I) higher than 3σ alone.",
@@ -3998,10 +3998,10 @@
       "difficulty": "medium",
       "stem": "Performance rating: Westinghouse system rates:",
       "options": [
-        "Only quality",
+        "Works under ideal conditions",
         "Skill, effort, conditions, consistency (each rated A,B,C,D)",
-        "Only speed",
-        "Only time"
+        "Suitable for job shop layout",
+        "Used for static loading only"
       ],
       "answer": 1,
       "solution": "Westinghouse: 4 factors. Each A (best) to D (worst). Rating factor = average of 4 ratings.",
@@ -4126,8 +4126,8 @@
       "options": [
         "Metaheuristics (tabu search, neural networks, scatter search)",
         "Exhaustive search",
-        "Only random search",
-        "Only gradient descent"
+        "Works under ideal conditions",
+        "Suitable for job shop layout"
       ],
       "answer": 0,
       "solution": "OptQuest: commercial optimization tool. Combines tabu, neural nets, scatter search. Finds near-optimal settings.",
@@ -4208,9 +4208,9 @@
       "difficulty": "easy",
       "stem": "Warehousing functions:",
       "options": [
-        "Only storage",
-        "Only shipping",
-        "Only receiving",
+        "Works under ideal conditions",
+        "Suitable for job shop layout",
+        "Used for static loading only",
         "Receiving, put-away, storage, order picking, packing, shipping"
       ],
       "answer": 3,
