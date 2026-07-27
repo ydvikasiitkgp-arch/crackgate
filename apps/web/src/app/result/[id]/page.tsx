@@ -21,6 +21,23 @@ function loadBank(kind: string, refId: string): unknown[] | null {
   return null;
 }
 
+function getNextMockId(refId: string): string | null {
+  const match = refId.match(/^(.+)-(\d{2})$/);
+  if (!match) return null;
+  const prefix = match[1];
+  const num = parseInt(match[2]);
+  if (num >= 20) return null;
+  return `${prefix}-${String(num + 1).padStart(2, "0")}`;
+}
+
+function getListUrl(refId: string): string {
+  if (refId.startsWith("diploma-wcl-sirdar")) return "/diploma/wcl/mining-sirdar";
+  if (refId.startsWith("diploma-wcl-foreman")) return "/diploma/wcl/assistant-foreman-electrical";
+  if (refId.startsWith("diploma-ncl-sirdar")) return "/diploma/ncl/mining-sirdar";
+  if (refId.startsWith("diploma-ncl-surveyor")) return "/diploma/ncl/surveyor";
+  return "/mocks";
+}
+
 export default async function ResultPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
   const session = await auth();
@@ -39,6 +56,9 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
   const cilData = isCil && bank
     ? await buildCilResultData(att, bank as never)
     : null;
+
+  const listUrl = getListUrl(att.refId);
+  const nextMockId = getNextMockId(att.refId);
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-5 py-8 sm:py-12">
@@ -78,8 +98,13 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
         </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link href="/dashboard" className="btn btn-primary">📊 Dashboard</Link>
-          <Link href="/mocks" className="btn btn-ghost">↻ Try another</Link>
+          {nextMockId && (
+            <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">
+              Try Next Mock →
+            </Link>
+          )}
+          <Link href={listUrl} className="btn btn-ghost">View All Mocks</Link>
+          <Link href="/dashboard" className="btn btn-ghost">Dashboard</Link>
         </div>
       </div>
 
