@@ -15,7 +15,7 @@ function getListUrl(refId: string): string {
     return `/psu/cil/${slug}`;
   }
   if (refId.startsWith("ongc-")) {
-    const slug = refId.replace(/^ongc-/, "").replace(/-\d+$/, "");
+    const slug = refId.replace(/-\d+$/, "");
     return `/psu/ongc/${slug}`;
   }
   if (refId.startsWith("diploma-wcl-sirdar-")) return "/diploma/wcl/mining-sirdar";
