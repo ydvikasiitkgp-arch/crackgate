@@ -15,7 +15,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "A step-by-step strategy to crack GATE Mining Engineering 2027. Covers syllabus breakdown, subject weightage, recommended books, mock test strategy, and a 12-month study plan.",
     date: "2026-07-01",
-    author: "Vikas Yadav",
+    author: "CrackGate Team",
     tags: ["GATE Mining", "GATE MN", "Study Plan", "Exam Strategy"],
     body: `GATE Mining Engineering (MN) is one of the most scoring papers in GATE — but only if you know where to focus. With a well-defined syllabus and predictable weightage pattern, a smart strategy matters more than sheer hours.
 
@@ -73,7 +73,7 @@ Every mock and practice question on CrackGate is authored specifically for GATE 
     description:
       "Everything you need to know about the Coal India Limited Management Trainee exam: selection process, exam pattern, syllabus, discipline-wise vacancies, and preparation strategy.",
     date: "2026-06-15",
-    author: "Vikas Yadav",
+    author: "CrackGate Team",
     tags: ["CIL", "Coal India", "PSU", "Management Trainee"],
     body: `Coal India Limited (CIL) recruits Management Trainees through a Computer-Based Test (CBT) conducted via TCS iON. With over 650 vacancies across 7 disciplines, it's one of the most sought-after PSU exams for engineering graduates.
 
@@ -127,7 +127,7 @@ The CIL mock series on CrackGate is designed to match the actual TCS iON exam pa
     description:
       "Confused between GATE and PSU exams for your mining engineering career? Compare scope, salary, exam pattern, preparation strategy, and which path aligns with your goals.",
     date: "2026-05-20",
-    author: "Vikas Yadav",
+    author: "CrackGate Team",
     tags: ["GATE", "PSU", "Career", "Mining Engineering"],
     body: `Every mining engineering graduate faces this dilemma: should I focus on GATE for MTech or a PSU job? Should I prepare for both? Here's a no-nonsense breakdown.
 

@@ -114,13 +114,14 @@ export default function About() {
         </div>
         <div className="mt-10 space-y-5 text-ink/80 leading-relaxed">
           <p>
-            Vikas Yadav and Vishal Kumar — both alumni of the Indian Institute of Technology
-            Kharagpur — share a common belief: that the quality of practice material determines
-            the quality of preparation. After experiencing firsthand how subpar questions can
-            derail even the most dedicated students, they set out to create something different.
+            The CrackGate team — engineers and educators with deep roots in India's
+            mining and public-sector exam ecosystem — share a common belief: that the
+            quality of practice material determines the quality of preparation.
+            After experiencing firsthand how subpar questions can derail even the most
+            dedicated students, they set out to create something different.
           </p>
           <p>
-            As engineers trained at one of India's premier institutions, they bring a
+            With a methodical, precision-driven approach to question design, the team brings
             methodical, precision-driven approach to question design. Every problem on CrackGate
             is original, hand-crafted, and meticulously reviewed to ensure it aligns with the
             latest GATE and PSU examination standards.
