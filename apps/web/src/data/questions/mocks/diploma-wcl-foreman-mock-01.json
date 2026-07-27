@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "A 10 ohm and 20 ohm resistor are connected in series across 30V. Current is:",
       "options": [
-        "1.5A",
         "2A",
         "3A",
-        "1A"
+        "1A",
+        "1.5A"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "I=30/(10+20)=1A"
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "Two resistors 6 ohm and 3 ohm are in parallel. Equivalent resistance:",
       "options": [
+        "4.5 ohm",
         "9 ohm",
         "2 ohm",
-        "1.5 ohm",
-        "4.5 ohm"
+        "1.5 ohm"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "R=6x3/(6+3)=2 ohm"
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "If voltage doubles and R is constant, current becomes:",
       "options": [
-        "Double",
-        "Half",
         "Quadruple",
-        "Same"
+        "Same",
+        "Double",
+        "Half"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "I=V/R, V doubles -> I doubles"
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "A conductor length doubled, area halved. New resistance is:",
       "options": [
-        "R",
         "R/2",
         "2R",
-        "4R"
+        "4R",
+        "R"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "R proportional to L/A, so 4R"
     },
     {
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "KVL states that algebraic sum of voltages in a loop is:",
       "options": [
+        "Infinite",
         "Maximum",
         "Equal to current",
-        "Zero",
-        "Infinite"
+        "Zero"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "KVL: sum of voltages = 0"
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "In a parallel circuit, voltage across each branch is:",
       "options": [
-        "Zero",
-        "Same",
         "Proportional to R",
-        "Different"
+        "Different",
+        "Zero",
+        "Same"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Parallel elements share same voltage"
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "A 100W 200V lamp on 100V supply. Power consumed:",
       "options": [
-        "25W",
         "200W",
         "100W",
-        "50W"
+        "50W",
+        "25W"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "R=400 ohm; P=100^2/400=25W"
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "Thevenin voltage is the:",
       "options": [
+        "Average voltage",
         "Short circuit current",
         "Open circuit voltage at terminals",
-        "Maximum current",
-        "Average voltage"
+        "Maximum current"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Vth = open circuit voltage"
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "Maximum power transfer occurs when:",
       "options": [
-        "RL = Rs",
-        "RL is maximum",
         "Rs is zero",
-        "RL is minimum"
+        "RL is minimum",
+        "RL = Rs",
+        "RL is maximum"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "RL = Rs for maximum power"
     },
     {
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "Superposition theorem applies to:",
       "options": [
-        "Power circuits",
         "Digital circuits",
         "Linear circuits",
-        "Non-linear circuits"
+        "Non-linear circuits",
+        "Power circuits"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Superposition: linear bilateral networks"
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "Three 9 ohm resistors in parallel. Equivalent resistance:",
       "options": [
+        "1 ohm",
         "9 ohm",
         "3 ohm",
-        "27 ohm",
-        "1 ohm"
+        "27 ohm"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "R=9/3=3 ohm"
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "5A through 4 ohm resistor. Voltage drop is:",
       "options": [
-        "1.25V",
-        "0.8V",
         "20V",
-        "9V"
+        "9V",
+        "1.25V",
+        "0.8V"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "V=IR=5x4=20V"
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "Power in 10 ohm resistor carrying 2A:",
       "options": [
-        "5W",
         "20W",
         "100W",
-        "40W"
+        "40W",
+        "5W"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "P=I^2R=4x10=40W"
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "220V bulb draws 0.5A. Resistance is:",
       "options": [
+        "220 ohm",
         "0.002 ohm",
         "440 ohm",
-        "110 ohm",
-        "220 ohm"
+        "110 ohm"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "R=V/I=220/0.5=440 ohm"
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "Norton equivalent is a:",
       "options": [
-        "Voltage source in parallel",
-        "Current source in series",
         "Current source in parallel with R",
-        "Voltage source in series with R"
+        "Voltage source in series with R",
+        "Voltage source in parallel",
+        "Current source in series"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Norton = current source parallel R"
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "At Wheatstone bridge balance, galvanometer current is:",
       "options": [
-        "Minimum",
         "Half",
         "Maximum",
-        "Zero"
+        "Zero",
+        "Minimum"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Balance: no galvanometer current"
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "KCL at a node states:",
       "options": [
+        "Power in = Power out",
         "Sum V = 0",
         "Sum in = Sum out",
-        "R is constant",
-        "Power in = Power out"
+        "R is constant"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "KCL: currents entering = currents leaving"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "100W 220V bulb resistance and 50W 220V bulb in series across 220V. Total power:",
       "options": [
-        "50W",
-        "67W",
         "33W",
-        "150W"
+        "150W",
+        "50W",
+        "67W"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "R1=484, R2=968, total=1452, I=0.151A, P=33W... approx"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "Thevenin resistance found by:",
       "options": [
-        "Measuring live",
         "Deactivating sources, looking into terminals",
         "Shorting all sources",
-        "Opening all sources"
+        "Opening all sources",
+        "Measuring live"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Turn off sources to find Rth"
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "In a series RC circuit, frequency increases, voltage across C:",
       "options": [
+        "Decreases",
         "Zero",
         "Same",
-        "Increases",
-        "Decreases"
+        "Increases"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Xc=1/2pi*f*C decreases"
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "Power factor of pure resistive circuit:",
       "options": [
-        "0.5",
-        "Unity",
         "Zero",
-        "0.707"
+        "0.707",
+        "0.5",
+        "Unity"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Resistive: pf=cos(0)=1"
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "Energy stored in a capacitor is:",
       "options": [
-        "I^2R",
         "0.5CV^2",
         "CV^2",
-        "0.5LI^2"
+        "0.5LI^2",
+        "I^2R"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "E=0.5CV^2"
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "Wire R stretched to double length. New R is:",
       "options": [
+        "2R",
         "R/2",
         "4R",
-        "R",
-        "2R"
+        "R"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "L doubles, A halves -> R becomes 4R"
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "Delta to star of equal R. Each star R equals:",
       "options": [
-        "2R/3",
-        "R",
         "3R",
-        "R/3"
+        "R/3",
+        "2R/3",
+        "R"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Ry=Rd/3 for equal resistors"
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "At 50Hz, 100uF capacitor reactance is:",
       "options": [
-        "3183 ohm",
         "318.3 ohm",
         "31.83 ohm",
-        "0.0318 ohm"
+        "0.0318 ohm",
+        "3183 ohm"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Xc=1/(2pi*50*0.0001)=31.83 ohm"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "Internal resistance of ideal voltage source:",
       "options": [
+        "Depends on load",
         "Zero",
         "1 ohm",
-        "Infinite",
-        "Depends on load"
+        "Infinite"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Ideal: zero internal R"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "Energy of 2kW heater for 3 hours:",
       "options": [
-        "0.67 kWh",
-        "2 kWh",
         "6 kWh",
-        "3 kWh"
+        "3 kWh",
+        "0.67 kWh",
+        "2 kWh"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "E=P*t=2*3=6 kWh"
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "Current leads voltage by 90 degrees. Load is:",
       "options": [
-        "Resistive",
         "RL load",
         "Purely inductive",
-        "Purely capacitive"
+        "Purely capacitive",
+        "Resistive"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "I leads V in pure capacitor"
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "RMS of sinusoidal voltage with peak 311V:",
       "options": [
+        "311V",
         "220V",
         "440V",
-        "155V",
-        "311V"
+        "155V"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Vrms=311/1.414=220V"
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "Ideal voltage source has internal resistance of:",
       "options": [
-        "Zero",
-        "Five ohm",
         "One ohm",
-        "Infinite"
+        "Infinite",
+        "Zero",
+        "Five ohm"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ideal voltage source: R_internal = 0"
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "In a series circuit with R=10, Xl=20, Xc=5. Impedance:",
       "options": [
-        "25 ohm",
         "35 ohm",
         "18.03 ohm",
-        "15 ohm"
+        "15 ohm",
+        "25 ohm"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Z=sqrt(10^2+(20-5)^2)=18.03 ohm"
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "Kirchhoff's current law means:",
       "options": [
+        "Energy is conserved",
         "Charge is conserved at a node",
         "Power is zero",
-        "Voltage is constant",
-        "Energy is conserved"
+        "Voltage is constant"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "KCL reflects charge conservation"
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "A 220V source with 10 ohm internal resistance connected to 10 ohm load. Load voltage:",
       "options": [
-        "55V",
-        "110V",
         "165V",
-        "220V"
+        "220V",
+        "55V",
+        "110V"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "V=220*10/(10+10)=110V"
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "An inductor stores energy in:",
       "options": [
-        "Electric field",
         "Magnetic field",
         "Gravitational field",
-        "Chemical field"
+        "Chemical field",
+        "Electric field"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Inductor: energy in magnetic field"
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "A capacitor blocks:",
       "options": [
+        "DC",
         "AC",
         "Both",
-        "Neither",
-        "DC"
+        "Applicable in limited scenarios"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Capacitor: blocks DC, passes AC"
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "In series RLC at resonance, impedance is:",
       "options": [
-        "Zero",
-        "Infinite",
         "Maximum",
-        "Minimum (equal to R)"
+        "Minimum (equal to R)",
+        "Zero",
+        "Infinite"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "At resonance: Z=R (minimum)"
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "Quality factor of series RLC is:",
       "options": [
-        "(1/R)sqrt(L/C)",
         "sqrt(L/C)",
         "R/L",
-        "R*sqrt(C/L)"
+        "R*sqrt(C/L)",
+        "(1/R)sqrt(L/C)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Q=(1/R)*sqrt(L/C) for series RLC"
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "Power dissipated in reactive component is:",
       "options": [
+        "Equal to resistive",
         "Maximum",
         "Zero",
-        "Half of resistive",
-        "Equal to resistive"
+        "Half of resistive"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Reactive: energy stored/returned, average P=0"
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "If R doubles in series RC circuit at constant V, current:",
       "options": [
-        "Halves",
-        "Doubles",
         "Quadruples",
-        "Same"
+        "Same",
+        "Halves",
+        "Doubles"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "I=V/Z; R doubles -> Z increases -> I decreases"
     },
     {
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "A 100 ohm resistor in parallel with 100 ohm. Equivalent:",
       "options": [
-        "25 ohm",
         "200 ohm",
         "100 ohm",
-        "50 ohm"
+        "50 ohm",
+        "25 ohm"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "100||100 = 50 ohm"
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "Conductance is the reciprocal of:",
       "options": [
+        "Impedance",
         "Reactance",
         "Capacitance",
-        "Resistance",
-        "Impedance"
+        "Resistance"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "G = 1/R"
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "In a series circuit, the current through each component is:",
       "options": [
-        "Different",
-        "Same",
         "Proportional to R",
-        "Zero"
+        "Zero",
+        "Different",
+        "Same"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Series: same current everywhere"
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "Power factor of pure inductor is:",
       "options": [
-        "Unity",
         "0.707",
         "0.5",
-        "Zero"
+        "Zero",
+        "Unity"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Pure L: pf=cos(90)=0"
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "If 5A flows through 2 ohm and 3 ohm in parallel, voltage across is:",
       "options": [
+        "10V",
         "25V",
         "6V",
-        "15V",
-        "10V"
+        "15V"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "R=2||3=1.2, V=5*1.2=6V"
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "Mesh analysis is based on:",
       "options": [
-        "KCL",
-        "Ohm's law",
         "KVL",
-        "Thevenin's theorem"
+        "Thevenin's theorem",
+        "KCL",
+        "Ohm's law"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Mesh: applies KVL to each loop"
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "Nodal analysis is based on:",
       "options": [
-        "KVL",
         "Superposition",
         "Ohm's law",
-        "KCL"
+        "KCL",
+        "KVL"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Nodal: applies KCL at each node"
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "A current source of 2A in parallel with 10 ohm. Thevenin equivalent V is:",
       "options": [
+        "10V",
         "20V",
         "0.2V",
-        "2V",
-        "10V"
+        "2V"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Vth=I*R=2*10=20V"
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "Power consumed by a circuit with PF=0.6, V=100V, I=10A:",
       "options": [
-        "1000W",
-        "800W",
         "400W",
-        "600W"
+        "600W",
+        "1000W",
+        "800W"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "P=VIcos(phi)=100*10*0.6=600W"
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "Capacitive reactance increases when frequency:",
       "options": [
-        "Doubles",
         "Triples",
         "Increases",
-        "Decreases"
+        "Decreases",
+        "Doubles"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Xc=1/(2pi*f*C), f decreases -> Xc increases"
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "In star connection, phase voltage = 230V. Line voltage:",
       "options": [
+        "690V",
         "230V",
         "400V",
-        "115V",
-        "690V"
+        "115V"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "VL=sqrt(3)*230=400V"
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "A 3-phase balanced load has P=10kW, PF=0.8. Apparent power:",
       "options": [
-        "16 kVA",
-        "10 kVA",
         "12.5 kVA",
-        "8 kVA"
+        "8 kVA",
+        "16 kVA",
+        "10 kVA"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "S=P/PF=10/0.8=12.5 kVA"
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "Power in pure inductor per cycle is:",
       "options": [
-        "Positive",
         "Negative",
         "Zero",
-        "Maximum"
+        "Maximum",
+        "Positive"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Average power in pure L = 0"
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "Damping ratio zeta > 1 means system is:",
       "options": [
+        "Critically damped",
         "Undamped",
         "Underdamped",
-        "Overdamped",
-        "Critically damped"
+        "Overdamped"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Zeta>1: overdamped"
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "At cutoff frequency in RC low pass, output is:",
       "options": [
-        "70.7% of input",
-        "50% of input",
         "0% of input",
-        "100% of input"
+        "100% of input",
+        "70.7% of input",
+        "50% of input"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "At fc: Vout=Vin/sqrt(2)=70.7%"
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "In a delta load with Z=30 ohm per phase, equivalent star Z is:",
       "options": [
-        "10 ohm",
         "90 ohm",
         "15 ohm",
-        "30 ohm"
+        "30 ohm",
+        "10 ohm"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Ry=30/3=10 ohm"
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "Star-connected system, line voltage is __ times phase voltage:",
       "options": [
+        "1/3",
         "sqrt(3)",
         "1/sqrt(3)",
-        "3",
-        "1/3"
+        "3"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "VL=sqrt(3)*Vph in star"
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "Delta-connected system, line current is __ times phase current:",
       "options": [
-        "sqrt(3)",
-        "1",
         "3",
-        "1/sqrt(3)"
+        "1/sqrt(3)",
+        "sqrt(3)",
+        "1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "IL=sqrt(3)*Iph in delta"
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "Total 3-phase power formula:",
       "options": [
-        "VL*IL*cos(phi)",
         "sqrt(3)*VL*IL",
         "sqrt(3)*VL*IL*cos(phi)",
-        "3*VL*IL*cos(phi)"
+        "3*VL*IL*cos(phi)",
+        "VL*IL*cos(phi)"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "P=sqrt(3)*VL*IL*cos(phi)"
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "15A at 400V, PF=0.8 motor power:",
       "options": [
+        "6.93 kW",
         "10.39 kW",
         "8.31 kW",
-        "5.19 kW",
-        "6.93 kW"
+        "5.19 kW"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "P=sqrt(3)*400*15*0.8=8314W"
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "Reactive power unit is:",
       "options": [
-        "VA",
-        "kWh",
         "VAR",
-        "Watt"
+        "Watt",
+        "VA",
+        "kWh"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "VAR=Volt Ampere Reactive"
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "Delta load Z=10 ohm at 400V. Phase current:",
       "options": [
-        "69.3A",
         "40A",
         "4A",
-        "23.1A"
+        "23.1A",
+        "69.3A"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Iph=400/10=40A"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "Star system, 400V line. Phase voltage:",
       "options": [
+        "400V",
         "693V",
         "230V",
-        "115V",
-        "400V"
+        "115V"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Vph=400/sqrt(3)=230V"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Power factor improvement results in:",
       "options": [
-        "Same current",
-        "Reduced current for same power",
         "Increased current",
-        "Voltage increase"
+        "Voltage increase",
+        "Same current",
+        "Reduced current for same power"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Higher pf -> lower I"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Power triangle shows relationship between:",
       "options": [
-        "P, Q, and S",
         "f, lambda, and v",
         "V, I, and R",
-        "Z, R, and X"
+        "Z, R, and X",
+        "P, Q, and S"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "P^2+Q^2=S^2"
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "Unbalanced 3-phase load causes:",
       "options": [
+        "Applicable in limited scenarios",
         "Zero line current",
         "Neutral current",
-        "No neutral current",
-        "Both the first and second options"
+        "No neutral current"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Unbalance -> neutral carries current"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "4-pole motor at 50Hz, synchronous speed:",
       "options": [
-        "750 rpm",
-        "3000 rpm",
         "1000 rpm",
-        "1500 rpm"
+        "1500 rpm",
+        "750 rpm",
+        "3000 rpm"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Ns=120*50/4=1500 rpm"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "PF=0.8 lagging, reactive factor is:",
       "options": [
-        "0.6",
         "1.0",
         "0.2",
-        "0.8"
+        "0.8",
+        "0.6"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "rf=sin(acos(0.8))=0.6"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "Capacitor bank for pf improvement supplies:",
       "options": [
+        "DC current",
         "Active power",
         "Apparent power",
-        "Reactive power (VARs)",
-        "DC current"
+        "Reactive power (VARs)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Capacitors: supply leading VARs"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "3-phase 4-wire system used for:",
       "options": [
-        "Power only",
-        "Transmission only",
         "Lighting and power",
-        "DC supply"
+        "DC supply",
+        "Power only",
+        "Transmission only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "4-wire: mixed single-phase and three-phase loads"
     },
     {
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "W1=5kW, W2=1kW two-wattmeter method. Total power:",
       "options": [
-        "6kW",
         "2.5kW",
         "4kW",
-        "5kW"
+        "5kW",
+        "6kW"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "P=W1+W2=6kW"
     },
     {
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "Both wattmeter readings equal means PF:",
       "options": [
+        "0.707",
         "Zero",
         "0.5",
-        "Unity",
-        "0.707"
+        "Unity"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "W1=W2 -> phi=0 -> pf=1"
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "Balanced star load, phase current 10A. Line current:",
       "options": [
-        "17.32A",
-        "5.77A",
         "10A",
-        "30A"
+        "30A",
+        "17.32A",
+        "5.77A"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Star: IL=Iph=10A"
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "50kW motor at PF=0.8 draws how many kVA?",
       "options": [
-        "62.5 kVA",
         "80 kVA",
         "50 kVA",
-        "40 kVA"
+        "40 kVA",
+        "62.5 kVA"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "S=P/PF=50/0.8=62.5 kVA"
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "Wattmeter reads active power which depends on:",
       "options": [
+        "f only",
         "I only",
         "V, I, and cos(phi)",
-        "V only",
-        "f only"
+        "V only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "P=VIcos(phi)"
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "One phase fails, 3-phase motor:",
       "options": [
-        "Stops immediately",
-        "Reverses",
         "Runs single-phased and overheats",
-        "Runs at double speed"
+        "Runs at double speed",
+        "Stops immediately",
+        "Reverses"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Single phasing -> 2-phase operation, overheating"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "3-phase system, balanced load, neutral current is:",
       "options": [
-        "Zero",
         "3x line current",
         "Half line current",
-        "Full current"
+        "Full current",
+        "Zero"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Balanced: IN=0"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Sequence determines:",
       "options": [
+        "Voltage magnitude",
         "Current magnitude",
         "Frequency",
-        "Motor rotation direction",
-        "Voltage magnitude"
+        "Motor rotation direction"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Phase sequence affects rotation"
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "Reactive power of inductive load when frequency increases:",
       "options": [
-        "Decreases",
-        "Zero",
         "Same",
-        "Increases"
+        "Increases",
+        "Decreases",
+        "Zero"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "XL=2*pi*f*L increases -> Q increases"
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Capacitor bank rated 100 kVAR at 400V. At 200V:",
       "options": [
-        "200 kVAR",
         "50 kVAR",
         "25 kVAR",
-        "100 kVAR"
+        "100 kVAR",
+        "200 kVAR"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Q proportional to V^2; quarter V -> quarter Q"
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "Star load Z=30 ohm. Equivalent delta Z is:",
       "options": [
+        "90 ohm",
         "15 ohm",
         "30 ohm",
-        "10 ohm",
-        "90 ohm"
+        "10 ohm"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Rd=3*Ry=90 ohm"
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "NCL was incorporated in:",
       "options": [
+        "1990",
         "1985",
         "2000",
-        "1975",
-        "1990"
+        "1975"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "NCL: incorporated 1985"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "WCL headquarter is at:",
       "options": [
-        "New Delhi",
-        "Kolkata",
         "Mumbai",
-        "Nagpur"
+        "Nagpur",
+        "New Delhi",
+        "Kolkata"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "WCL HQ: Nagpur"
     },
     {
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "NCL headquarter is at:",
       "options": [
-        "Singrauli",
         "Nagpur",
         "Kolkata",
-        "New Delhi"
+        "New Delhi",
+        "Singrauli"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "NCL HQ: Singrauli"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "CCL stands for:",
       "options": [
+        "Central Cement Limited",
         "Central Coalfields Limited",
         "Coal Chemical Limited",
-        "Coal Corporation Limited",
-        "Central Cement Limited"
+        "Coal Corporation Limited"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "CCL = Central Coalfields Limited"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "BCCL stands for:",
       "options": [
-        "Bombay Coal Company Limited",
-        "Bihar Coal Company Limited",
         "Bengal Coal Corporation Limited",
-        "Bharat Coking Coal Limited"
+        "Bharat Coking Coal Limited",
+        "Bombay Coal Company Limited",
+        "Bihar Coal Company Limited"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "BCCL = Bharat Coking Coal Limited"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "NEEPCO stands for:",
       "options": [
-        "New Energy Corporation",
         "None",
         "North Eastern Electric Power Corporation",
-        "National Energy and Environment Policy Council"
+        "National Energy and Environment Policy Council",
+        "New Energy Corporation"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "NEEPCO: North Eastern Electric Power Corporation"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Damodar Valley Corporation (DVC) was established in:",
       "options": [
+        "1948",
         "1975",
         "1991",
-        "2000",
-        "1948"
+        "2000"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "DVC: 1948, India's first multipurpose river valley project"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "BHEL stands for:",
       "options": [
-        "Bharat Hydro Electric Limited",
-        "Bihar Heavy Engineering Limited",
         "Bharat Heavy Electricals Limited",
-        "Basic Heavy Equipment Limited"
+        "Basic Heavy Equipment Limited",
+        "Bharat Hydro Electric Limited",
+        "Bihar Heavy Engineering Limited"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "BHEL: Bharat Heavy Electricals Limited"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "NALCO stands for:",
       "options": [
-        "North Assam Limited",
         "National Atomic Limited",
         "New Alloys Limited",
-        "National Aluminium Company Limited"
+        "National Aluminium Company Limited",
+        "North Assam Limited"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "NALCO: National Aluminium Company Limited"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "NMDC stands for:",
       "options": [
+        "National Mineral Development Corporation",
         "None",
         "New Mining Corporation",
-        "Northern Mineral Company",
-        "National Mineral Development Corporation"
+        "Northern Mineral Company"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "NMDC: National Mineral Development Corporation"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Rashtriya Ispat Nigam Limited (RINL) operates:",
       "options": [
-        "Rourkela Steel Plant",
-        "Durgapur Steel Plant",
         "Bhilai Steel Plant",
-        "Vizag Steel Plant"
+        "Vizag Steel Plant",
+        "Rourkela Steel Plant",
+        "Durgapur Steel Plant"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "RINL: Vizag Steel Plant"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Which coalfield is the largest in India by reserves?",
       "options": [
-        "Talcher",
         "Raniganj",
         "Jharia",
-        "Singrauli"
+        "Singrauli",
+        "Talcher"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Jharia: largest coal reserves in India"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "How many CIL subsidiaries are there?",
       "options": [
+        "12",
         "5",
         "8",
-        "10",
-        "12"
+        "10"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "CIL has 8 subsidiaries"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "Which is NOT a coalfield?",
       "options": [
-        "Chilka",
-        "Raniganj",
         "Jharia",
-        "Talcher"
+        "Talcher",
+        "Chilka",
+        "Raniganj"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Chilka is a lake in Odisha, not a coalfield"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "Coal India's annual production is approximately:",
       "options": [
-        "100 MT",
         "700-800 million tonnes",
         "1 billion tonnes",
-        "200 MT"
+        "200 MT",
+        "100 MT"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CIL: ~700-800 MT (2023-24)"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "Singrauli Super Thermal Power Station is operated by:",
       "options": [
+        "CIL",
         "NTPC",
         "NLC",
-        "WCL",
-        "CIL"
+        "WCL"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Singrauli STPP: NTPC"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "Mahanadi Coalfields Limited (MCL) is headquartered at:",
       "options": [
-        "Bhubaneswar",
-        "Raipur",
         "Sambalpur",
-        "Kolkata"
+        "Kolkata",
+        "Bhubaneswar",
+        "Raipur"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "MCL: Sambalpur, Odisha"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "Bharat Coking Coal Limited (BCCL) is headquartered at:",
       "options": [
-        "Kolkata",
         "Ranchi",
         "Dhanbad",
-        "Patna"
+        "Patna",
+        "Kolkata"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "BCCL: Dhanbad, Jharkhand"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Northern Coalfields Limited (NCL) mines are primarily in:",
       "options": [
+        "Jharkhand",
         "West Bengal",
         "Odisha",
-        "Singrauli (MP/UP)",
-        "Jharkhand"
+        "Singrauli (MP/UP)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "NCL: Singrauli region, MP and UP"
     },
     {
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "Which state produces the most coal in India?",
       "options": [
-        "Odisha",
-        "Jharkhand",
         "West Bengal",
-        "Chhattisgarh"
+        "Chhattisgarh",
+        "Odisha",
+        "Jharkhand"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Jharkhand leads coal production in India"
     },
     {
@@ -1836,12 +1836,12 @@
       "difficulty": "medium",
       "stem": "The average weight of 8 persons increases by 2.5 kg when a new person comes in. What is the weight of the new person?",
       "options": [
-        "25 kg",
         "22 kg",
         "30 kg",
-        "20 kg"
+        "20 kg",
+        "25 kg"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Total increase = 8 × 2.5 = 20 kg. But the new person replaces... Actually, if average increases by 2.5 for 9 persons (8 original + 1 new), total increase = 9 × 2.5 = 22.5... This question is poorly constructed. Let me reconsider: If average of 8 increases by 2.5 when new person joins (total 9), new total = old total + 20 (increase of 2.5 for 8 people)... Actually: If average increases from x to x+2.5 with 9 people: (8x + new)/9 = x+2.5 → 8x + new = 9x + 22.5 → new = x + 22.5. Without knowing x this can't be solved. This is a poorly formed question."
     },
     {
@@ -1854,12 +1854,12 @@
       "difficulty": "medium",
       "stem": "A trader marks goods 40% above cost price and gives 20% discount. What is the profit percentage?",
       "options": [
+        "10%",
         "15%",
         "8%",
-        "12%",
-        "10%"
+        "12%"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "MP = 1.40 × CP, SP = 0.80 × 1.40 × CP = 1.12 × CP → 12% profit"
     },
     {
@@ -1872,12 +1872,12 @@
       "difficulty": "medium",
       "stem": "How many odd days are there in a leap year?",
       "options": [
-        "3",
-        "0",
         "2",
-        "1"
+        "1",
+        "3",
+        "0"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "366 days = 52 weeks + 2 odd days"
     },
     {
@@ -1890,12 +1890,12 @@
       "difficulty": "medium",
       "stem": "The cost price of 20 articles equals the selling price of 15 articles. What is the profit percentage?",
       "options": [
-        "33.33%",
         "15%",
         "20%",
-        "25%"
+        "25%",
+        "33.33%"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "20CP = 15SP → SP/CP = 20/15 = 4/3. Profit = SP - CP = CP/3. Profit% = (1/3) × 100 = 33.33%"
     }
   ]

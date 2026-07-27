@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "SF6 gas decomposition products are:",
       "options": [
+        "Toxic and corrosive (SOF2, SO2F2, HF)",
         "Odourless only",
         "Flammable",
-        "Harmless",
-        "Toxic and corrosive (SOF2, SO2F2, HF)"
+        "Harmless"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Decomposition: toxic gases, requires safety precautions"
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "Vibration analysis of transformer detects:",
       "options": [
-        "Phase shift measurement",
-        "Magnetic circuit analysis",
         "Loose parts, winding deformation, core issues",
-        "Neither the first nor the second option"
+        "Applicable in limited scenarios",
+        "Phase shift measurement",
+        "Magnetic circuit analysis"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Vibration: mechanical integrity assessment"
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "Frequency Response Analysis (FRA) of transformer is done to:",
       "options": [
-        "Check connections",
         "Measure oil quality",
         "Detect winding deformation or displacement",
-        "Test insulation"
+        "Test insulation",
+        "Check connections"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "FRA: compares frequency fingerprint to detect mechanical changes"
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "Transformer thermal model predicts:",
       "options": [
+        "Sound level",
         "Oil colour",
         "Winding hot spot temperature based on load and ambient",
-        "Vibration level",
-        "Sound level"
+        "Vibration level"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Thermal model: top oil + hot spot temperature prediction"
     },
     {
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "Dissolved Gas Analysis pattern of CH4 + C2H4 + C2H2 indicates:",
       "options": [
-        "Low energy discharge",
-        "Normal aging",
         "High energy arcing",
-        "Thermal decomposition"
+        "Thermal decomposition",
+        "Low energy discharge",
+        "Normal aging"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "C2H2 (acetylene): high energy arcing signature"
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "DGA pattern of H2 + CH4 + C2H4 indicates:",
       "options": [
-        "Thermal fault (overheating)",
         "Normal",
         "Arcing",
-        "Electrical discharge"
+        "Electrical discharge",
+        "Thermal fault (overheating)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Thermal: methane + ethylene dominant"
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "DGA pattern of H2 + CH4 + C2H2 indicates:",
       "options": [
+        "High energy arcing",
         "Thermal fault",
         "Low energy electrical discharge (partial discharge)",
-        "Normal",
-        "High energy arcing"
+        "Normal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "PD: hydrogen + methane dominant"
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "Substation SCADA system uses:",
       "options": [
-        "Local control only",
-        "Master station + RTUs + communication links",
         "Manual operation only",
-        "No technology"
+        "No technology",
+        "Local control only",
+        "Master station + RTUs + communication links"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "SCADA: master (control center) + RTU (substation) + telecom"
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "Substation automation level 3 (IEC 62264) is:",
       "options": [
-        "Field devices",
         "Process level",
         "Control level",
-        "Plant management and optimization"
+        "Plant management and optimization",
+        "Field devices"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Level 3: plant-wide management (MES/ERP integration)"
     },
     {
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "Substation automation level 1 (IEC 62264) is:",
       "options": [
+        "Plant management",
         "Supervisory control (SCADA/HMI)",
         "Enterprise level",
-        "Field instruments",
-        "Plant management"
+        "Field instruments"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Level 1: supervision and control"
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "Protection class CT secondary burden includes:",
       "options": [
-        "Distance protection",
-        "Over frequency protection",
         "Relay resistance, cable resistance, and connections",
-        "Neither the first nor the second option"
+        "Applicable in limited scenarios",
+        "Distance protection",
+        "Over frequency protection"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Burden = Zrelay + Zcable + Zconnections"
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "CT knee point voltage is important for:",
       "options": [
-        "Cable sizing",
         "Transformer rating",
         "Determining saturation point for protection CT",
-        "Metering CT only"
+        "Metering CT only",
+        "Cable sizing"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Knee point: voltage where CT saturates (10% definition)"
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "PT secondary voltage in India is typically:",
       "options": [
+        "440V",
         "230V",
         "400V",
-        "110V line-to-line",
-        "440V"
+        "110V line-to-line"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Standard PT secondary: 110V for metering and protection"
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "The purpose of a marshalling kiosk is to:",
       "options": [
-        "Terminate and organize control cables from switchyard",
-        "Store oil",
         "Cool transformer",
-        "Generate power"
+        "Generate power",
+        "Terminate and organize control cables from switchyard",
+        "Store oil"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Marshalling: junction box for control cable termination"
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "Bus bar sectionalizer has which interlock?",
       "options": [
-        "Cannot open when CB is closed",
         "Manual only",
         "No interlock",
-        "Can open anytime"
+        "Can open anytime",
+        "Cannot open when CB is closed"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Interlock: isolator cannot operate under load"
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "Substation fire protection system for transformer includes:",
       "options": [
+        "Water hose only",
         "No protection needed",
         "Fixed spray/deluge system, fire wall, oil containment",
-        "Current transformation only",
-        "Water hose only"
+        "Current transformation only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Deluge system + fire wall + oil sump for fire safety"
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "The function of a surge capacitor in transformer protection is to:",
       "options": [
-        "Divert fast front transients to earth",
-        "Measure current",
         "Correct power factor",
-        "Store energy"
+        "Store energy",
+        "Divert fast front transients to earth",
+        "Measure current"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Surge cap: provides low impedance path for fast transients"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "SF6 gas is classified as:",
       "options": [
-        "Ozone friendly",
         "Beneficial to environment",
         "Harmless",
-        "Potent greenhouse gas (high GWP)"
+        "Potent greenhouse gas (high GWP)",
+        "Ozone friendly"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "SF6: GWP 23,500 times CO2, must be handled carefully"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "SF6 gas handling during GIS maintenance requires:",
       "options": [
+        "Water washing only",
         "No special handling",
         "Open air release",
-        "Gas recovery and recycling equipment",
-        "Water washing only"
+        "Gas recovery and recycling equipment"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Gas recovery: prevent atmospheric release, recycle"
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "GIS maintenance interval is typically:",
       "options": [
-        "Monthly",
-        "5-10 years (much longer than AIS)",
         "1 year",
-        "Weekly"
+        "Weekly",
+        "Monthly",
+        "5-10 years (much longer than AIS)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "GIS: minimal maintenance due to sealed environment"
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "Substation lighting for indoor switchgear room minimum lux level is:",
       "options": [
-        "200 lux",
         "1000 lux",
         "50 lux",
-        "10 lux"
+        "10 lux",
+        "200 lux"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Indoor switchgear: 200 lux for safe operation"
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "Cable termination in GIS is done using:",
       "options": [
+        "Direct connection",
         "Bushing type or plug-in type terminations",
         "No termination needed",
-        "Any method",
-        "Direct connection"
+        "Any method"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "GIS cable: special sealed termination to maintain SF6"
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "VFD (Variable Frequency Drive) varies motor speed by:",
       "options": [
-        "Changing supply frequency and voltage",
-        "Speed regulation only",
         "Changing poles only",
-        "Torque measurement"
+        "Torque measurement",
+        "Changing supply frequency and voltage",
+        "Speed regulation only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "VFD: varies f and V to control speed"
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "V/f control in VFD maintains:",
       "options": [
-        "Constant power",
         "Constant flux by keeping V/f ratio constant",
         "Constant speed only",
-        "Constant current"
+        "Constant current",
+        "Constant power"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "V/f = const maintains constant flux, avoids saturation"
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "Vector control (FOC) in VFD provides:",
       "options": [
-        "Both the first and second options",
+        "Required only for specific cases",
+        "Applicable in limited scenarios",
         "Independent control of torque and flux",
-        "The statement is partially correct but incomplete",
-        "Neither the first nor the second option"
+        "Works under ideal conditions only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "FOC: Field Oriented Control, decouples torque and flux"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "Direct Torque Control (DTC) in VFD:",
       "options": [
-        "Directly controls torque and flux without current regulator",
-        "No feedback needed",
         "Uses V/f only",
-        "Uses PWM only"
+        "Uses PWM only",
+        "Directly controls torque and flux without current regulator",
+        "No feedback needed"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "DTC: direct torque estimation, fast dynamic response"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "Regenerative braking in VFD returns energy to:",
       "options": [
-        "Battery only",
         "Supply grid via regenerative converter",
         "Nowhere, wasted",
-        "Resistor as heat"
+        "Resistor as heat",
+        "Battery only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Regen: feeds power back to supply during braking"
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "Dynamic braking in VFD dissipates energy in:",
       "options": [
+        "Capacitor",
         "Braking resistor (as heat)",
         "Battery",
-        "Supply grid",
-        "Capacitor"
+        "Supply grid"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Dynamic brake: resistor converts braking energy to heat"
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "PLC (Programmable Logic Controller) uses:",
       "options": [
-        "Both the first and second options",
-        "No programming",
-        "This assumes incorrect boundary conditions",
-        "Ladder logic or function block programming"
+        "Applicable in limited scenarios",
+        "Ladder logic or function block programming",
+        "Works under ideal conditions only",
+        "No programming"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "PLC: ladder diagram, function block, structured text"
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "SCADA system provides:",
       "options": [
-        "Supervisory control and data acquisition across plant",
-        "The statement is partially correct but incomplete",
-        "Neither the first nor the second option",
-        "This is outdated information"
+        "Applicable in limited scenarios",
+        "Required only for specific cases",
+        "Works under ideal conditions only",
+        "Supervisory control and data acquisition across plant"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SCADA: monitoring + control + data logging + alarms"
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "HMI (Human Machine Interface) displays:",
       "options": [
+        "Required only for specific cases",
         "Process variables and operator controls on screen",
-        "This is true only for a different scenario",
-        "This assumes incorrect boundary conditions",
-        "Neither the first nor the second option"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "HMI: visual process display for operator interaction"
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "DCS (Distributed Control System) differs from PLC by:",
       "options": [
-        "Both the first and second options",
-        "This ignores the practical considerations",
         "No networking",
-        "Continuous process control with analog I/O"
+        "Continuous process control with analog I/O",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "DCS: designed for continuous processes, analog-heavy"
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "Motor insulation class F allows maximum temperature of:",
       "options": [
-        "130°C",
         "155°C",
         "120°C",
-        "180°C"
+        "180°C",
+        "130°C"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Class F: 155°C max winding temperature"
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "Motor insulation class H allows maximum temperature of:",
       "options": [
+        "130°C",
         "180°C",
         "155°C",
-        "120°C",
-        "130°C"
+        "120°C"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Class H: 180°C max winding temperature"
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "IE3 motor efficiency is classified as:",
       "options": [
-        "Premium efficiency",
-        "Standard efficiency",
         "High efficiency",
-        "Super premium"
+        "Super premium",
+        "Premium efficiency",
+        "Standard efficiency"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "IE3: premium efficiency (IS 12615)"
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "IE4 motor efficiency is classified as:",
       "options": [
-        "High",
         "Super premium efficiency",
         "Premium",
-        "Standard"
+        "Standard",
+        "High"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "IE4: super premium (highest efficiency class)"
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "Motor vibration analysis detects:",
       "options": [
+        "Bearing faults, imbalance, misalignment, looseness",
         "Insulation testing",
         "Torque measurement",
-        "Both the first and second options",
-        "Bearing faults, imbalance, misalignment, looseness"
+        "Applicable in limited scenarios"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Vibration: mechanical condition monitoring"
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "Motor current signature analysis (MCSA) detects:",
       "options": [
+        "Applicable in limited scenarios",
+        "Rotor bar faults, bearing issues, eccentricity from current spectrum",
         "Speed regulation only",
-        "Torque measurement",
-        "Both the first and second options",
-        "Rotor bar faults, bearing issues, eccentricity from current spectrum"
+        "Torque measurement"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "MCSA: analyzes current harmonics for motor faults"
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "VFD input harmonic filters are needed because:",
       "options": [
-        "For power factor",
         "No reason",
         "For voltage control",
-        "VFD draws non-sinusoidal current causing harmonics"
+        "VFD draws non-sinusoidal current causing harmonics",
+        "For power factor"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "VFD rectifier: draws harmonic-rich current, needs filtering"
     },
     {
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "Line reactor on VFD input reduces:",
       "options": [
+        "Applicable in limited scenarios",
         "Motor speed",
         "Output voltage",
-        "Input current harmonics and improves waveform",
-        "Neither the first nor the second option"
+        "Input current harmonics and improves waveform"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Input reactor: reduces harmonic distortion on supply side"
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "DC link capacitor in VFD stores:",
       "options": [
+        "Applicable in limited scenarios",
+        "No energy",
         "AC energy only",
-        "Energy for smooth DC bus voltage",
-        "This assumes incorrect boundary conditions",
-        "No energy"
+        "Energy for smooth DC bus voltage"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "DC link: energy buffer between rectifier and inverter"
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "IGBT in VFD inverter switches:",
       "options": [
-        "This ignores the practical considerations",
-        "Both the first and second options",
-        "This reverses the cause and effect",
-        "DC bus voltage to produce variable frequency AC"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "DC bus voltage to produce variable frequency AC",
+        "Required only for specific cases"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "IGBT: fast switching of DC to create PWM AC output"
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "PWM (Pulse Width Modulation) in VFD controls:",
       "options": [
+        "Applicable in limited scenarios",
         "Output voltage and frequency to motor",
-        "Both the first and second options",
-        "Input current",
-        "This contradicts the established principle"
+        "Works under ideal conditions only",
+        "Input current"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "PWM: varies pulse width to control V and f output"
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "Motor bearing current from VFD is caused by:",
       "options": [
-        "Common mode voltage from PWM switching",
-        "Overload",
         "Overvoltage",
-        "Underfrequency"
+        "Underfrequency",
+        "Common mode voltage from PWM switching",
+        "Overload"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "CM voltage: PWM creates shaft voltage -> bearing current"
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "Bearing insulation on VFD-driven motors prevents:",
       "options": [
-        "Bearing current damage (fluting/pitting)",
         "Overload",
         "Overvoltage",
-        "Overheating"
+        "Overheating",
+        "Bearing current damage (fluting/pitting)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Insulated bearing: breaks shaft current path"
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "Encoder feedback in VFD provides:",
       "options": [
+        "Voltage feedback",
         "Speed and position feedback for closed-loop control",
         "Temperature feedback",
-        "Current feedback only",
-        "Voltage feedback"
+        "Current feedback only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Encoder: precise speed/position for vector control"
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "PLC scan cycle consists of:",
       "options": [
-        "Both the first and second options",
-        "This is true only for a different scenario",
         "Input scan, program execution, output scan, housekeeping",
-        "Neither the first nor the second option"
+        "Required only for specific cases",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Scan: read inputs → execute program → write outputs → housekeeping"
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "PLC digital input typically accepts:",
       "options": [
-        "Neither the first nor the second option",
-        "Both the first and second options",
+        "Applicable in limited scenarios",
         "24V DC or 230V AC signals",
-        "This reverses the cause and effect"
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Digital input: 24VDC or 230VAC for discrete signals"
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "PLC analog input typically accepts:",
       "options": [
+        "Applicable in limited scenarios",
         "4-20mA or 0-10V signals",
-        "This applies only in specific conditions",
-        "Both the first and second options",
-        "This contradicts the established principle"
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Analog input: 4-20mA (current loop) or 0-10V"
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "4-20mA signal is preferred over 0-20mA because:",
       "options": [
-        "4mA zero allows wire-break detection",
-        "Lower cost",
         "Simpler design",
-        "Higher accuracy"
+        "Higher accuracy",
+        "4mA zero allows wire-break detection",
+        "Lower cost"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "4mA zero: wire break detected as 0mA (<4mA)"
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "HART protocol superimposes:",
       "options": [
-        "Neither the first nor the second option",
-        "Both the first and second options",
+        "Applicable in limited scenarios",
         "Digital signal on 4-20mA analog signal",
-        "No signal"
+        "No signal",
+        "Works under ideal conditions only"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "HART: Frequency Shift Keying on 4-20mA loop"
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "Fieldbus (Foundation Fieldbus) is a:",
       "options": [
+        "Analog only",
         "Digital communication protocol for process instruments",
         "No communication",
-        "Power cable",
-        "Analog only"
+        "Power cable"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "FF: digital, multi-drop, replaces 4-20mA point-to-point"
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "Profibus is used for:",
       "options": [
-        "No purpose",
-        "This is theoretically possible but impractical",
         "Factory automation communication",
-        "Neither the first nor the second option"
+        "Works under ideal conditions only",
+        "No purpose",
+        "Applicable in limited scenarios"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Profibus: industrial fieldbus for factory/process automation"
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Modbus RTU communication uses:",
       "options": [
-        "Ethernet only",
         "RS-485 serial interface",
         "USB only",
-        "Bluetooth"
+        "Bluetooth",
+        "Ethernet only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Modbus RTU: RS-485, master-slave protocol"
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "Modbus TCP uses:",
       "options": [
+        "RS-485 only",
         "USB only",
         "Ethernet TCP/IP for communication",
-        "Serial only",
-        "RS-485 only"
+        "Serial only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Modbus TCP: Ethernet-based Modbus protocol"
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "OPC UA is a standard for:",
       "options": [
-        "Industrial communication interoperability",
-        "This contradicts the established principle",
         "No standard",
-        "Both the first and second options"
+        "Applicable in limited scenarios",
+        "Industrial communication interoperability",
+        "Works under ideal conditions only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "OPC UA: platform-independent industrial communication"
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "Motor thermal overload relay protects against:",
       "options": [
-        "Underfrequency",
         "Short circuit only",
         "Sustained overload causing winding overheating",
-        "Earth fault only"
+        "Earth fault only",
+        "Underfrequency"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Thermal: I²t model, protects motor from overheating"
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "Electronic motor protection relay provides:",
       "options": [
+        "Overload, short circuit, earth fault, unbalance, underload, temp",
         "Efficiency calculation",
-        "Neither the first nor the second option",
-        "Speed regulation only",
-        "Overload, short circuit, earth fault, unbalance, underload, temp"
+        "Applicable in limited scenarios",
+        "Speed regulation only"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Electronic: multiple protection functions in one device"
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "Motor differential protection detects:",
       "options": [
-        "Insulation testing",
-        "Phase-to-phase and phase-to-ground faults inside motor",
         "Vibration monitoring only",
-        "Speed regulation only"
+        "Speed regulation only",
+        "Insulation testing",
+        "Phase-to-phase and phase-to-ground faults inside motor"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Differential: compares entering and leaving current"
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "Motor interlock prevents:",
       "options": [
-        "Simultaneous forward and reverse operation",
         "Speed change",
         "Starting",
-        "Stopping"
+        "Stopping",
+        "Simultaneous forward and reverse operation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Interlock: prevents dangerous simultaneous forward/reverse"
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "Star-delta starter transition from star to delta causes:",
       "options": [
+        "Voltage drop only",
         "No effect",
         "Smooth transition",
-        "Brief interruption and current spike",
-        "Voltage drop only"
+        "Brief interruption and current spike"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Open transition: momentary interruption causes current spike"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "Closed transition star-delta uses:",
       "options": [
-        "Resistance during transition to limit current spike",
-        "Inductor",
         "No resistance",
-        "Capacitor"
+        "Capacitor",
+        "Resistance during transition to limit current spike",
+        "Inductor"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Closed transition: resistors limit inrush during switching"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Motor soft starter bypass contactor is used to:",
       "options": [
-        "Bypass starter after motor reaches full speed",
         "Start motor",
         "Stop motor",
-        "Reverse motor"
+        "Reverse motor",
+        "Bypass starter after motor reaches full speed"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Bypass: eliminates thyristor losses at full speed"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "VFD skip frequencies avoid:",
       "options": [
+        "Mechanical resonance of motor/load system",
         "Electrical resonance only",
-        "This applies to a different field entirely",
-        "Voltage spikes only",
-        "Mechanical resonance of motor/load system"
+        "Applicable in limited scenarios",
+        "Voltage spikes only"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Skip: avoids frequencies causing mechanical resonance"
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "VFD acceleration ramp time affects:",
       "options": [
-        "Both the first and second options",
-        "This ignores the practical considerations",
-        "Neither the first nor the second option",
-        "How quickly motor reaches target speed"
+        "Required only for specific cases",
+        "How quickly motor reaches target speed",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Accel ramp: time to go from 0 to rated speed"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "VFD deceleration ramp time affects:",
       "options": [
-        "Neither the first nor the second option",
         "How quickly motor stops from full speed",
-        "Both the first and second options",
-        "This contradicts the established principle"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Decel ramp: time to go from rated speed to 0"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "Motor runaway prevention in VFD uses:",
       "options": [
+        "Applicable in limited scenarios",
         "Speed regulation only",
         "Overfrequency detection and torque limiting",
-        "Torque measurement",
-        "Both the first and second options"
+        "Torque measurement"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Overfrequency: detects and limits motor overspeed"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "Synchronous motor VFD starting uses:",
       "options": [
-        "Direct on line only",
-        "Open loop V/f to bring to near sync speed, then DC excitation",
         "Resistance only",
-        "Star-delta only"
+        "Star-delta only",
+        "Direct on line only",
+        "Open loop V/f to bring to near sync speed, then DC excitation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "VFD: soft start to sync speed, then field applied"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "Motor power factor correction capacitor should be rated for:",
       "options": [
-        "Normal voltage only",
         "Lower voltage",
         "Higher voltage due to harmonics from VFD",
-        "Same as motor"
+        "Same as motor",
+        "Normal voltage only"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "VFD harmonics: capacitor must handle harmonic voltages"
     },
     {
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "Input filter for VFD in hospital/lab application:",
       "options": [
+        "No filter needed",
         "EMC filter to prevent conducted emissions",
-        "This is outdated information",
-        "Neither the first nor the second option",
-        "No filter needed"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "EMC: prevents VFD switching noise from affecting sensitive loads"
     },
     {
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "Motor insulation stress from VFD is caused by:",
       "options": [
+        "Applicable in limited scenarios",
+        "Speed regulation only",
         "dv/dt of PWM pulses and reflected wave phenomenon",
-        "Torque measurement",
-        "This assumes incorrect boundary conditions",
-        "Speed regulation only"
+        "Torque measurement"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "High dv/dt + cable reflection -> voltage spikes at motor terminals"
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "Cable fault location by TDR (Time Domain Reflectometer) works by:",
       "options": [
-        "Visual inspection",
         "Measuring resistance only",
         "Sending pulse and measuring reflection time",
-        "Thermal imaging"
+        "Thermal imaging",
+        "Visual inspection"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "TDR: pulse echo timing determines fault distance"
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "Thump test for cable fault uses:",
       "options": [
+        "Low voltage only",
         "High voltage surge to create audible/visible fault location",
         "Current measurement only",
-        "No equipment",
-        "Low voltage only"
+        "No equipment"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Thump: HV surge arcs at fault, creates sound/flash"
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "Cable ampacity calculation per IEC 60502 considers:",
       "options": [
-        "This applies only in specific conditions",
-        "Both the first and second options",
         "Conductor size, insulation, ambient temp, soil resistivity",
-        "This contradicts the established principle"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "IEC 60502: thermal analysis with derating factors"
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "XLPE cable maximum operating temperature is:",
       "options": [
-        "90°C continuous, 250°C short circuit",
         "120°C",
         "50°C",
-        "70°C"
+        "70°C",
+        "90°C continuous, 250°C short circuit"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "XLPE: 90°C continuous, 250°C for 5 seconds (SC)"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "PVC cable maximum operating temperature is:",
       "options": [
+        "50°C",
         "120°C",
         "90°C",
-        "70°C",
-        "50°C"
+        "70°C"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "PVC: 70°C continuous operating temperature"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Flexible trailing cable in mines has:",
       "options": [
-        "Rigid construction",
-        "Extra flexibility, flame retardant, mechanical protection",
         "No armour",
-        "Neither the first nor the second option"
+        "Applicable in limited scenarios",
+        "Rigid construction",
+        "Extra flexibility, flame retardant, mechanical protection"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Mining trailing cable: flexible, FR, steel wire armour"
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "Cable sheath insulation test is done at:",
       "options": [
-        "230V AC",
         "Low voltage",
         "No test needed",
-        "10kV DC for 1 minute (typical)"
+        "10kV DC for 1 minute (typical)",
+        "230V AC"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Sheath test: HV DC to verify sheath integrity"
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Cable high voltage test (hipot) tests:",
       "options": [
+        "Insulation integrity between conductor and earth",
         "Sheath only",
         "Conductor resistance",
-        "Contact resistance",
-        "Insulation integrity between conductor and earth"
+        "Contact resistance"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Hipot: conductor-to-earth insulation withstand"
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "OHL conductor sag calculation formula uses:",
       "options": [
-        "Neither the first nor the second option",
-        "This requires additional verification",
-        "Both the first and second options",
-        "Catenary equation or parabolic approximation"
+        "Applicable in limited scenarios",
+        "Catenary equation or parabolic approximation",
+        "Required only for specific cases",
+        "Works under ideal conditions only"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Sag = wL²/8T (parabolic approximation for small sag/span)"
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Which country hosted FIFA World Cup 2022?",
       "options": [
-        "France",
         "Qatar",
         "Brazil",
-        "Russia"
+        "Russia",
+        "France"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "FIFA 2022: Qatar"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "One word substitution for one who hates marriage:",
       "options": [
-        "Celibate",
-        "Misanthropist",
         "Misogynist",
-        "Misanthrope"
+        "Misanthrope",
+        "Celibate",
+        "Misanthropist"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Misogynist: hates women; Misanthropist: hates mankind; Celibate: unmarried by choice"
     },
     {
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Idiom 'To burn the midnight oil' means:",
       "options": [
+        "To burn something",
         "To cook at night",
         "To waste oil",
-        "To work late at night",
-        "To burn something"
+        "To work late at night"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Burn midnight oil: to work/study late"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "Fill in blank: The book is ___ the table.",
       "options": [
-        "at",
         "in",
         "on",
-        "by"
+        "by",
+        "at"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "On the table (surface)"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "Identify error: Each of the boys have completed his work.",
       "options": [
-        "Each of the",
-        "completed",
         "Each of the boys have",
-        "his work"
+        "his work",
+        "Each of the",
+        "completed"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "'Each' takes singular verb: has"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Identify error: The informations are useful.",
       "options": [
+        "informations",
         "useful",
         "The",
-        "are",
-        "informations"
+        "are"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "'Information' is uncountable, takes singular verb"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Correct form: If I __ (be) rich, I would buy a car.",
       "options": [
-        "was",
         "am",
         "will be",
-        "were"
+        "were",
+        "was"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Second conditional: if I were (subjunctive)"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "Fill in blank: She insisted ___ going alone.",
       "options": [
-        "by",
-        "on",
         "in",
-        "at"
+        "at",
+        "by",
+        "on"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Insist on (preposition)"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Fill in blank: This is the place ___ I was born.",
       "options": [
+        "what",
         "which",
         "where",
-        "when",
-        "what"
+        "when"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Where = relative adverb for place"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Average of 5, 10, 15, 20, 25 is:",
       "options": [
-        "10",
         "15",
         "25",
-        "20"
+        "20",
+        "10"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Sum=75; Avg=75/5=15"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Ratio of 45 min to 1 hour is:",
       "options": [
-        "3:1",
-        "1:4",
         "4:3",
-        "3:4"
+        "3:4",
+        "3:1",
+        "1:4"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "45:60 = 3:4"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "If 3x+5=20, x equals:",
       "options": [
+        "10",
         "25",
         "15",
-        "5",
-        "10"
+        "5"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "3x=15; x=5"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "Number series: 2, 6, 12, 20, 30, ?:",
       "options": [
-        "50",
         "48",
         "36",
-        "42"
+        "42",
+        "50"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Differences: 4,6,8,10,12; next=30+12=42"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "If A's income is 20% more than B's, B's income is what % less than A's?",
       "options": [
-        "25%",
-        "20%",
         "15%",
-        "16.67%"
+        "16.67%",
+        "25%",
+        "20%"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "B is 100/120-1 = -16.67% of A"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "Time to compound 8000 at 10% to 8820:",
       "options": [
+        "1 year",
         "2 years",
         "3 years",
-        "4 years",
-        "1 year"
+        "4 years"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "8000*1.1=8800 approx; 8000*1.21=9680; closest 1 year for 8820"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "Probability of getting a head in one coin toss:",
       "options": [
-        "0.25",
         "0.5",
         "1",
-        "0.75"
+        "0.75",
+        "0.25"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "P(head)=1/2=0.5"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "A man walks 5 km north, turns right, walks 3 km. Distance from start:",
       "options": [
-        "5.83 km",
-        "2 km",
         "5 km",
-        "8 km"
+        "8 km",
+        "5.83 km",
+        "2 km"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "D=sqrt(5^2+3^2)=sqrt(34)=5.83"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "If the sum of digits of a two digit number is 9 and difference is 3, the number is:",
       "options": [
+        "72",
         "54",
         "63",
-        "45",
-        "72"
+        "45"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "x+y=9, x-y=3; x=6, y=3; number=63"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Speed of boat in still water 10 km/h, stream 2 km/h. Downstream speed:",
       "options": [
-        "12 km/h",
         "8 km/h",
         "20 km/h",
-        "10 km/h"
+        "10 km/h",
+        "12 km/h"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Downstream=10+2=12"
     },
     {
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "If x:y = 2:3 and y:z = 4:5, then x:z:",
       "options": [
-        "8:5",
-        "8:15",
         "4:15",
-        "2:5"
+        "2:5",
+        "8:5",
+        "8:15"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "x=2*4=8, z=3*5=15; x:z=8:15"
     }
   ]

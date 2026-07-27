@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "The back EMF in a DC motor opposes:",
       "options": [
-        "Field current",
-        "Supply voltage",
         "Armature current",
-        "Both A and B"
+        "Both A and B",
+        "Field current",
+        "Supply voltage"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Back EMF opposes the armature current, limiting it to (V − Eb)/Ra."
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "The commutating poles (interpoles) carry current from:",
       "options": [
-        "Armature circuit",
         "Field circuit",
         "Supply",
-        "None of these"
+        "Applicable in limited scenarios",
+        "Armature circuit"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Interpoles are connected in series with armature, carrying full armature current."
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "In a DC compound motor, the series field is connected:",
       "options": [
+        "Across armature",
         "In series with armature",
         "In series with field",
-        "Across supply",
-        "Across armature"
+        "Across supply"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Series field winding is connected in series with the armature."
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "The efficiency of a DC motor at light load is:",
       "options": [
-        "Medium",
-        "High",
         "Same as full load",
-        "Low"
+        "Low",
+        "Medium",
+        "High"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "At light load, fixed losses (iron + friction) dominate, reducing efficiency."
     },
     {
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "The condition for maximum efficiency in a DC motor is:",
       "options": [
-        "Variable losses = Constant losses",
         "Copper losses = Iron losses",
-        "Neither",
-        "Both A and B"
+        "Applicable in limited scenarios",
+        "Both A and B",
+        "Variable losses = Constant losses"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Variable losses (copper) = Constant losses (iron + friction) at max efficiency."
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "Sparking at the commutator is primarily due to:",
       "options": [
+        "High speed",
         "Low current",
         "Poor commutation (armature reaction)",
-        "High voltage",
-        "High speed"
+        "High voltage"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Armature reaction distorts flux in neutral zone, causing delayed commutation and sparking."
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "The equalizer rings in a DC generator are used to:",
       "options": [
-        "Equalize current in parallel armature paths",
-        "Equalize speed",
         "Reduce sparking",
-        "Increase voltage"
+        "Increase voltage",
+        "Equalize current in parallel armature paths",
+        "Equalize speed"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Equalizer rings connect corresponding points of parallel armature paths to equalize circulating currents."
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "The Lap winding in a DC machine is used for:",
       "options": [
-        "High voltage, low current",
         "Both",
-        "Neither",
-        "Low voltage, high current"
+        "Applicable in limited scenarios",
+        "Low voltage, high current",
+        "High voltage, low current"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Lap winding has more parallel paths (A = P), suitable for low voltage, high current."
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "The Wave winding in a DC machine is used for:",
       "options": [
+        "Low voltage, high current",
         "Both",
-        "Neither",
-        "High voltage, low current",
-        "Low voltage, high current"
+        "Applicable in limited scenarios",
+        "High voltage, low current"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Wave winding has 2 parallel paths, suitable for high voltage, low current."
     },
     {
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "A DC motor's torque-speed characteristic in shunt configuration is:",
       "options": [
-        "Zero speed",
-        "Constant speed",
         "Drooping speed",
-        "Rising speed"
+        "Rising speed",
+        "Zero speed",
+        "Constant speed"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Shunt motor has slightly drooping speed characteristic with load."
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "The speed regulation of a DC shunt motor is typically:",
       "options": [
-        "10–15%",
         "0%",
         "25–30%",
-        "40–50%"
+        "40–50%",
+        "10–15%"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "DC shunt motor has good speed regulation (10–15% drop from no-load to full-load)."
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "The braking torque in regenerative braking is limited by:",
       "options": [
-        "All of these",
+        "Field circuit resistance",
+        "Applicable in limited scenarios",
         "Armature resistance",
-        "Supply voltage",
-        "Field circuit resistance"
+        "Supply voltage"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Back EMF cannot exceed supply voltage significantly, limiting regenerative braking torque."
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "A Ward-Leonard speed control system uses:",
       "options": [
-        "One motor-generator set",
-        "Multiple resistors",
         "Semiconductors only",
-        "VFD"
+        "VFD",
+        "One motor-generator set",
+        "Multiple resistors"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ward-Leonard uses a DC generator driven by AC motor to supply variable DC voltage to DC motor armature."
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "In a DC series motor, the torque is proportional to armature current squared when:",
       "options": [
-        "Motor is on no-load",
         "Core is unsaturated",
         "Speed is high",
-        "Core is saturated"
+        "Core is saturated",
+        "Motor is on no-load"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "When unsaturated, Φ ∝ Ia, so T ∝ ΦIa ∝ Ia²."
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "The type of starter used for a DC series motor is:",
       "options": [
+        "4-point starter",
         "2-point starter",
         "3-point starter",
-        "No-volt starter",
-        "4-point starter"
+        "No-volt starter"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Series motor requires a 2-point starter because the holding coil is in series with the field."
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "The 4-point starter differs from 3-point starter in that:",
       "options": [
-        "Overload release is different",
-        "Holding coil is connected across supply, not field",
         "It is used for series motors only",
-        "It uses 4 resistances"
+        "It uses 4 resistances",
+        "Overload release is different",
+        "Holding coil is connected across supply, not field"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In 4-point starter, no-volt coil is connected across supply through a separate resistance."
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "The braking torque in plugging is higher than dynamic braking because:",
       "options": [
-        "Both supply and back EMF oppose rotation",
         "None",
-        "This reverses the cause and effect",
-        "Supply voltage aids braking"
+        "Applicable in limited scenarios",
+        "Supply voltage aids braking",
+        "Both supply and back EMF oppose rotation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In plugging, supply voltage reverses and adds to back EMF, creating high braking current/torque."
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "The armature current in a DC motor at starting is limited by:",
       "options": [
+        "Field resistance",
         "Back EMF",
         "Supply voltage",
-        "Armature resistance (starter resistors)",
-        "Field resistance"
+        "Armature resistance (starter resistors)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "At start, Eb = 0, so starter resistance limits starting current."
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "If the field winding of a DC shunt motor is open-circuited while running:",
       "options": [
-        "Speed tends to infinity (dangerous)",
-        "Current increases",
         "Speed decreases",
-        "Motor stops"
+        "Motor stops",
+        "Speed tends to infinity (dangerous)",
+        "Current increases"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "No flux → no torque at finite speed, but residual flux causes speed to increase uncontrollably."
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "The hum in a transformer is caused by:",
       "options": [
-        "Oil circulation",
         "Brush sparking",
         "Wind noise",
-        "Magnetostriction of core laminations"
+        "Magnetostriction of core laminations",
+        "Oil circulation"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Magnetostriction causes core laminations to vibrate at twice supply frequency."
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "Which DC motor is used in elevators?",
       "options": [
+        "Series motor",
         "Shunt motor",
         "Cumulative compound motor",
-        "Differential compound motor",
-        "Series motor"
+        "Differential compound motor"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Cumulative compound motor provides high starting torque and good speed regulation for elevators."
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "The synchronous speed of an induction motor is given by:",
       "options": [
-        "Ns = 60f / P",
-        "Ns = 120f / P",
         "Ns = 60P / f",
-        "Ns = 120P / f"
+        "Ns = 120P / f",
+        "Ns = 60f / P",
+        "Ns = 120f / P"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ns = 120f/P where f is supply frequency and P is number of poles."
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "The slip of an induction motor is defined as:",
       "options": [
-        "(Ns − Nr) / Ns",
         "(Ns − Nr) / Nr",
         "Ns / Nr",
-        "(Nr − Ns) / Ns"
+        "(Nr − Ns) / Ns",
+        "(Ns − Nr) / Ns"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Slip s = (Ns − Nr)/Ns, where Nr is rotor speed."
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "At standstill (locked rotor), the slip of an induction motor is:",
       "options": [
+        "0.5",
         "Infinity",
         "1",
-        "0",
-        "0.5"
+        "0"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At standstill, Nr = 0, so s = (Ns − 0)/Ns = 1."
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "The rotor frequency of an induction motor is:",
       "options": [
-        "Equal to stator frequency",
-        "sf (slip times stator frequency)",
         "f × s²",
-        "f/s"
+        "f/s",
+        "Equal to stator frequency",
+        "sf (slip times stator frequency)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Rotor frequency fr = s × f, where s is slip."
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "The rotating magnetic field in an induction motor is produced by:",
       "options": [
-        "Both stator and rotor",
         "External supply",
         "Stator only",
-        "Rotor only"
+        "Rotor only",
+        "Both stator and rotor"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Stator windings fed with 3-phase supply produce rotating magnetic field."
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "The direction of rotating magnetic field can be reversed by:",
       "options": [
+        "Changing supply frequency",
         "Reversing any two stator phases",
         "Reversing all three phases",
-        "Reversing rotor connections",
-        "Changing supply frequency"
+        "Reversing rotor connections"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Reversing any two phases reverses the direction of rotating field."
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "The torque-slip characteristic of an induction motor shows:",
       "options": [
-        "Linear relationship throughout",
-        "Zero torque at all slips",
         "Torque independent of slip",
-        "Maximum torque at a specific slip"
+        "Maximum torque at a specific slip",
+        "Linear relationship throughout",
+        "Zero torque at all slips"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Torque increases with slip up to maximum (breakdown) torque, then decreases."
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "The starting torque of a squirrel cage induction motor is typically:",
       "options": [
-        "Zero",
         "Very low",
         "Moderate (1.5–2 times full load)",
-        "Very high"
+        "Very high",
+        "Zero"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "DOL starting torque is typically 1.5–2 times full load torque."
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "The star-delta starter reduces starting current by:",
       "options": [
+        "Half",
         "Two-thirds",
         "One-third",
-        "One-fourth",
-        "Half"
+        "One-fourth"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In star, line voltage is reduced by 1/√3, so current is reduced by 1/3 compared to delta."
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "An autotransformer starter reduces starting voltage, and starting current reduces by:",
       "options": [
-        "k²",
-        "k",
         "k³",
-        "1/k"
+        "1/k",
+        "k²",
+        "k"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Starting current is proportional to k (autotransformer ratio), so it reduces by k² compared to DOL."
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "The VFD (Variable Frequency Drive) controls induction motor speed by:",
       "options": [
-        "Varying both voltage and frequency (V/f)",
         "Varying frequency only",
         "Varying rotor resistance",
-        "Varying voltage only"
+        "Varying voltage only",
+        "Varying both voltage and frequency (V/f)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "V/f control maintains constant flux by varying both V and f proportionally."
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "Crawling in an induction motor is caused by:",
       "options": [
+        "Space harmonics in air gap flux",
         "Supply voltage imbalance",
         "Rotor bar harmonics",
-        "All of these",
-        "Space harmonics in air gap flux"
+        "Applicable in limited scenarios"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Harmonics (5th, 7th) create parasitic torques causing motor to run at sub-synchronous speed."
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "Cogging (magnetic locking) in an induction motor occurs when:",
       "options": [
-        "Supply voltage is low",
-        "Number of stator slots equals number of rotor slots",
         "Slip is zero",
-        "Motor is overloaded"
+        "Motor is overloaded",
+        "Supply voltage is low",
+        "Number of stator slots equals number of rotor slots"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "When stator and rotor slot numbers are equal or have common factor, magnetic locking prevents starting."
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "The double cage induction motor has:",
       "options": [
-        "Two stators",
         "Two shafts",
         "Two rotors",
-        "Two cages with different resistance and reactance"
+        "Two cages with different resistance and reactance",
+        "Two stators"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Outer cage has high resistance (high starting torque), inner cage has low resistance (high efficiency)."
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "Plugging in an induction motor involves:",
       "options": [
+        "Reversing any two stator phases while running",
         "Disconnecting supply",
         "Reducing voltage",
-        "Adding rotor resistance",
-        "Reversing any two stator phases while running"
+        "Adding rotor resistance"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Reversing two phases reverses rotating field, creating braking torque."
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "The rotor resistance starting method is applicable to:",
       "options": [
-        "Squirrel cage motor",
-        "Double cage motor",
         "Slip ring motor",
-        "All motors"
+        "All motors",
+        "Squirrel cage motor",
+        "Double cage motor"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "External resistance is added to rotor circuit through slip rings."
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "The maximum torque of an induction motor is independent of:",
       "options": [
-        "Stator resistance",
         "Leakage reactance",
         "Supply voltage",
-        "Rotor resistance"
+        "Rotor resistance",
+        "Stator resistance"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Maximum torque depends on V, X2, and stator impedance but not on R2."
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "The pull-out (breakdown) torque of a standard induction motor is typically:",
       "options": [
+        "Equal to full load torque",
         "5–6 times full load torque",
         "10 times full load torque",
-        "2–3 times full load torque",
-        "Equal to full load torque"
+        "2–3 times full load torque"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Breakdown torque is typically 2–3 times full load torque for standard motors."
     },
     {
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "The no-load current of an induction motor is typically what percentage of rated current?",
       "options": [
-        "30–40%",
-        "10–15%",
         "2–5%",
-        "50%"
+        "50%",
+        "30–40%",
+        "10–15%"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "No-load current is high (30–40%) because of magnetizing requirement of air gap."
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "The power factor of an induction motor at no load is:",
       "options": [
-        "Low (0.1–0.3 lagging)",
         "Zero",
         "Leading",
-        "High (near unity)"
+        "High (near unity)",
+        "Low (0.1–0.3 lagging)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At no load, current is mostly magnetizing (reactive), so power factor is low."
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "The air gap in an induction motor is kept small to:",
       "options": [
+        "Increase flux density",
         "Reduce weight",
         "Increase cost",
-        "Reduce magnetizing current",
-        "Increase flux density"
+        "Reduce magnetizing current"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Small air gap reduces reluctance, reducing magnetizing current and improving power factor."
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "The rotor bars of a squirrel cage motor are made of:",
       "options": [
-        "Copper or aluminum",
-        "Steel",
         "Brass",
-        "Iron"
+        "Iron",
+        "Copper or aluminum",
+        "Steel"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Rotor bars are typically copper or aluminum (die-cast) for good conductivity."
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "The skewed rotor slots in an induction motor help to:",
       "options": [
-        "Increase torque",
         "Reduce cogging and crawling",
         "Increase speed",
-        "Reduce weight"
+        "Reduce weight",
+        "Increase torque"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Skewing reduces harmonics, noise, cogging, and provides smoother torque."
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "An induction motor operates on the principle of:",
       "options": [
+        "Faraday's law",
         "Electromagnetic induction",
         "Mutual induction",
-        "Self induction",
-        "Faraday's law"
+        "Self induction"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Rotating stator field induces EMF in rotor by electromagnetic induction."
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "The slip at maximum torque for a squirrel cage motor is typically:",
       "options": [
-        "Moderate (0.1–0.2)",
-        "Zero",
         "Very low (0.01–0.05)",
-        "High (0.5–1.0)"
+        "High (0.5–1.0)",
+        "Moderate (0.1–0.2)",
+        "Zero"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Slip at maximum torque is around 0.1–0.2 for standard motors."
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "The speed of an induction motor can be controlled by:",
       "options": [
-        "Varying rotor resistance (slip ring motor)",
-        "All of these",
+        "Applicable in limited scenarios",
         "Varying supply frequency",
-        "Pole changing"
+        "Pole changing",
+        "Varying rotor resistance (slip ring motor)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "All methods are used: V/f control, rotor resistance, pole changing, and rotor voltage control."
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "Pole changing (Dahlander) method gives speed ratio of:",
       "options": [
+        "1:4",
         "1:3",
         "2:3",
-        "1:2",
-        "1:4"
+        "1:2"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Dahlander connection gives two speeds in ratio 1:2 (e.g., 4-pole and 8-pole)."
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "The equivalent circuit of an induction motor at standstill is similar to:",
       "options": [
-        "DC motor",
-        "Transformer secondary short-circuited",
         "Transformer on no-load",
-        "Synchronous motor"
+        "Synchronous motor",
+        "DC motor",
+        "Transformer secondary short-circuited"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "At standstill, rotor frequency equals stator frequency, making it equivalent to a transformer with short-circuited secondary."
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "The magnetizing branch in an induction motor equivalent circuit represents:",
       "options": [
-        "Stator copper loss",
         "Rotor resistance",
         "Air gap flux",
-        "Mechanical loss"
+        "Mechanical loss",
+        "Stator copper loss"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Magnetizing branch (Rc || Xm) represents air gap flux and core losses."
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "The rotor copper loss in an induction motor is:",
       "options": [
+        "s² × air gap power",
         "s × rotor input",
         "(1−s) × air gap power",
-        "s × air gap power",
-        "s² × air gap power"
+        "s × air gap power"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Rotor copper loss = s × Pag (air gap power)."
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "The mechanical power developed in an induction motor is:",
       "options": [
-        "s × air gap power",
-        "s² × air gap power",
         "Air gap power",
-        "(1−s) × air gap power"
+        "(1−s) × air gap power",
+        "s × air gap power",
+        "s² × air gap power"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Pmech = (1−s) × Pag."
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "If the supply voltage of an induction motor is reduced by half, the torque:",
       "options": [
-        "Remains same",
         "Doubles",
         "Reduces to half",
-        "Reduces to one-fourth"
+        "Reduces to one-fourth",
+        "Remains same"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Torque ∝ V², so halving voltage reduces torque to one-fourth."
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "The locked rotor test on an induction motor is similar to:",
       "options": [
+        "DC resistance test",
         "Load test",
         "Transformer SC test",
-        "Transformer OC test",
-        "DC resistance test"
+        "Transformer OC test"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Locked rotor test gives parameters of equivalent circuit, similar to SC test on transformer."
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "The no-load test on an induction motor is similar to:",
       "options": [
-        "Short-circuit test",
-        "Transformer OC test",
         "Blocked rotor test",
-        "Transformer SC test"
+        "Transformer SC test",
+        "Short-circuit test",
+        "Transformer OC test"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "No-load test gives core loss and magnetizing branch parameters."
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "The circle diagram of an induction motor is drawn from:",
       "options": [
-        "DC test data",
-        "All of these",
+        "Applicable in limited scenarios",
         "Load test data only",
-        "OC and SC test data"
+        "OC and SC test data",
+        "DC test data"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Circle diagram is constructed from no-load and blocked rotor test data."
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "The V/f control of induction motor maintains:",
       "options": [
+        "Constant power",
         "Constant flux",
         "Constant torque",
-        "Constant slip",
-        "Constant power"
+        "Constant slip"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "V/f ratio is kept constant to maintain constant air gap flux (avoiding saturation)."
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "At very high frequencies, the V/f control of induction motor is limited by:",
       "options": [
-        "Rotor resistance",
-        "Stator resistance",
         "Insulation voltage rating",
-        "Core saturation"
+        "Core saturation",
+        "Rotor resistance",
+        "Stator resistance"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "At high speeds, V cannot increase further due to supply/insulation voltage limit."
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "In field weakening mode of an induction motor (above base speed):",
       "options": [
-        "Voltage increases, flux is constant",
         "Flux increases",
         "Both V and f reduce",
-        "Voltage is constant, flux reduces"
+        "Voltage is constant, flux reduces",
+        "Voltage increases, flux is constant"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Above base speed, V is held constant while f increases, causing flux to reduce."
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "The skin effect in induction motor rotor bars causes:",
       "options": [
+        "Decreased rotor resistance",
         "Increased rotor resistance at starting",
         "No effect",
-        "Increased reactance only",
-        "Decreased rotor resistance"
+        "Increased reactance only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "At starting (high rotor frequency), skin effect increases effective rotor resistance."
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "The bar-end ring in a squirrel cage motor connects:",
       "options": [
-        "Brushes",
-        "Rotor bars at both ends",
         "Stator bars",
-        "Slip rings"
+        "Slip rings",
+        "Brushes",
+        "Rotor bars at both ends"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "End rings short-circuit all rotor bars at both ends of the rotor."
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "The slip ring in an induction motor is used to:",
       "options": [
-        "Measure speed",
         "Provide cooling",
         "Supply stator",
-        "Connect external resistance to rotor"
+        "Connect external resistance to rotor",
+        "Measure speed"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Slip rings allow external resistance to be added to rotor circuit for starting/control."
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "The air gap power in an induction motor is the power:",
       "options": [
+        "Transferred across air gap from stator to rotor",
         "Lost in rotor",
         "Lost in stator",
-        "Developed mechanically",
-        "Transferred across air gap from stator to rotor"
+        "Developed mechanically"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Air gap power is the power crossing the air gap from stator to rotor."
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "The efficiency of a standard induction motor at full load is typically:",
       "options": [
-        "50%",
-        "70–75%",
         "99%",
-        "85–95%"
+        "85–95%",
+        "50%",
+        "70–75%"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Modern induction motors achieve 85–95% efficiency at full load."
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "The power flow in an induction motor is:",
       "options": [
-        "None of these",
         "Input → Output directly",
         "Input → Stator loss → Air gap → Rotor loss → Mechanical output",
-        "Input → Rotor → Air gap → Stator → Output"
+        "Input → Rotor → Air gap → Stator → Output",
+        "Applicable in limited scenarios"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Power flows: Pin → Stator copper/core loss → Pag → Rotor copper loss → Pmech − windage/friction."
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "The torque developed by an induction motor is proportional to:",
       "options": [
+        "Rotor resistance only",
         "Frequency only",
         "Supply voltage only",
-        "Air gap flux × Rotor current",
-        "Rotor resistance only"
+        "Air gap flux × Rotor current"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "T ∝ Φ × I2 × cos(φ2), where Φ is air gap flux and I2 is rotor current."
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "In an induction motor, the power factor can be improved by:",
       "options": [
-        "Adding capacitors",
-        "Increasing voltage",
         "Both A and B",
-        "Reducing air gap"
+        "Reducing air gap",
+        "Adding capacitors",
+        "Increasing voltage"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Power factor capacitors and reduced air gap (lower magnetizing current) both improve PF."
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "The blocked rotor test on an induction motor is conducted at:",
       "options": [
-        "Rated voltage",
         "Zero voltage",
         "Reduced voltage (15–25% of rated)",
-        "Double rated voltage"
+        "Double rated voltage",
+        "Rated voltage"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Reduced voltage is applied to circulate rated current without overheating."
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "The torque equation of a 3-phase induction motor is:",
       "options": [
+        "T = (3E2²X2) / (2πNsR2)",
         "T = (3sE2²R2) / (2πNs(R2² + s²X2²))",
         "T = (3E2R2) / (2πfNs)",
-        "T = (E2²R2) / (2πNs(R2² + X2²))",
-        "T = (3E2²X2) / (2πNsR2)"
+        "T = (E2²R2) / (2πNs(R2² + X2²))"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Full torque equation considering slip, rotor resistance, and leakage reactance."
     },
     {
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "The condition for maximum torque in an induction motor is:",
       "options": [
-        "s = R2/X2",
-        "R2 = s²X2",
         "R2 = sX2",
-        "R2 = X2"
+        "R2 = X2",
+        "s = R2/X2",
+        "R2 = s²X2"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Maximum torque occurs when R2 = sX2, i.e., slip at maximum torque sm = R2/X2."
     },
     {
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "In an induction motor, if rotor resistance is doubled, the slip at maximum torque:",
       "options": [
-        "Remains same",
         "Halves",
         "Doubles",
-        "Quadruples"
+        "Quadruples",
+        "Remains same"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "sm = R2/X2, so doubling R2 doubles the slip at maximum torque."
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "The magnetizing current in an induction motor is higher than in a transformer because:",
       "options": [
+        "Frequency is higher",
         "Voltage is higher",
         "Rotor resistance is higher",
-        "Air gap reluctance is higher",
-        "Frequency is higher"
+        "Air gap reluctance is higher"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Air gap increases reluctance, requiring more magnetizing current."
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "A synchronous motor runs at:",
       "options": [
-        "Below synchronous speed",
-        "Any speed",
         "Above synchronous speed",
-        "Synchronous speed (Ns = 120f/P)"
+        "Synchronous speed (Ns = 120f/P)",
+        "Below synchronous speed",
+        "Any speed"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Synchronous motor always runs at synchronous speed regardless of load."
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "A synchronous motor is not self-starting because:",
       "options": [
-        "Average torque on rotor is zero with rotating field",
         "Rotor is too heavy",
         "Rotor has no winding",
-        "Stator field is weak"
+        "Stator field is weak",
+        "Average torque on rotor is zero with rotating field"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Rotor inertia prevents it from catching synchronous speed of rotating field."
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "V-curves of a synchronous motor show the relationship between:",
       "options": [
+        "Torque and slip",
         "Voltage and current",
         "Armature current and field excitation",
-        "Speed and voltage",
-        "Torque and slip"
+        "Speed and voltage"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "V-curves plot armature current vs. field excitation at constant load."
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "At normal excitation of a synchronous motor, the power factor is:",
       "options": [
-        "Unity",
-        "Zero",
         "Lagging",
-        "Leading"
+        "Leading",
+        "Unity",
+        "Zero"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "At normal excitation, synchronous motor operates at unity power factor."
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "An over-excited synchronous motor operates at:",
       "options": [
-        "Leading power factor",
         "Unity power factor",
         "Lagging power factor",
-        "Zero power factor"
+        "Zero power factor",
+        "Leading power factor"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Over-excited synchronous motor draws leading current (acts like a capacitor)."
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "An under-excited synchronous motor operates at:",
       "options": [
+        "Zero power factor",
         "Unity power factor",
         "Lagging power factor",
-        "Leading power factor",
-        "Zero power factor"
+        "Leading power factor"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Under-excited motor draws lagging current (like an inductor)."
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "A synchronous condenser is:",
       "options": [
-        "A synchronous motor running at no load, over-excited",
-        "An induction motor",
         "A capacitor bank",
-        "A DC motor"
+        "A DC motor",
+        "A synchronous motor running at no load, over-excited",
+        "An induction motor"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Synchronous condenser is an over-excited synchronous motor used for power factor correction."
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "Hunting in a synchronous motor is:",
       "options": [
-        "Starting difficulty",
         "Loss of synchronism",
         "Continuous rotation",
-        "Oscillation of rotor about synchronous speed"
+        "Oscillation of rotor about synchronous speed",
+        "Starting difficulty"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Hunting is periodic oscillation of rotor due to sudden load changes."
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Make in India initiative was launched in:",
       "options": [
-        "2010",
         "2000",
         "2020",
-        "2014"
+        "2014",
+        "2010"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Make in India: launched September 2014"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "India's first bullet train project connects:",
       "options": [
-        "Kolkata to Delhi",
-        "Mumbai to Ahmedabad",
         "Delhi to Mumbai",
-        "Chennai to Bengaluru"
+        "Chennai to Bengaluru",
+        "Kolkata to Delhi",
+        "Mumbai to Ahmedabad"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Mumbai-Ahmedabad: India's first bullet train corridor"
     },
     {
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Digital India initiative aims at:",
       "options": [
-        "Neither the first nor the second option",
+        "Applicable in limited scenarios",
+        "Required only for specific cases",
         "Digital literacy and e-governance for all",
-        "This is true only for a different scenario",
-        "Both the first and second options"
+        "Works under ideal conditions only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Digital India: digital infrastructure, governance, literacy"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "Startup India was launched in:",
       "options": [
-        "2014",
         "2020",
         "2018",
-        "2016"
+        "2016",
+        "2014"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Startup India: January 2016"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "One Nation One Ration Card scheme ensures:",
       "options": [
-        "Free food for all",
-        "This is theoretically possible but impractical",
         "Portable food security across states",
-        "Neither the first nor the second option"
+        "Works under ideal conditions only",
+        "Free food for all",
+        "Applicable in limited scenarios"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "ONORC: portability of PDS benefits nationwide"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Gaganyaan is India's:",
       "options": [
+        "Manned space mission",
         "Mars mission",
         "Moon mission",
-        "Satellite launch",
-        "Manned space mission"
+        "Satellite launch"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Gaganyaan: India's first human spaceflight mission"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Chandrayaan-3 landed on Moon's:",
       "options": [
-        "Far side",
         "Equator",
         "North pole",
-        "South pole"
+        "South pole",
+        "Far side"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Chandrayaan-3: south polar region of Moon"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "ISRO's LVM3 is used for:",
       "options": [
+        "Applicable in limited scenarios",
+        "Moon mission only",
         "Heavy payload launch to GTO",
-        "Small satellite only",
-        "This reverses the cause and effect",
-        "Moon mission only"
+        "Small satellite only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "LVM3: Launch Vehicle Mark-3, heavy lift capability"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Aditya-L1 is India's:",
       "options": [
+        "Mars mission",
         "Satellite",
         "Moon mission",
-        "Solar observatory mission at L1 point",
-        "Mars mission"
+        "Solar observatory mission at L1 point"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Aditya-L1: first Indian solar observation mission"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Semiconductor Mission of India aims at:",
       "options": [
-        "Export only",
         "Building chip manufacturing ecosystem in India",
-        "Neither the first nor the second option",
-        "This reverses the cause and effect"
+        "Works under ideal conditions only",
+        "Applicable in limited scenarios",
+        "Export only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "ISM: develop semiconductor design and manufacturing"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "PM-KISAN provides:",
       "options": [
-        "₹10000",
-        "Free seeds only",
         "₹6000 per year to farmer families in 3 installments",
-        "₹2000"
+        "₹2000",
+        "₹10000",
+        "Free seeds only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "PM-KISAN: ₹2000 per installment × 3 = ₹6000/year"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Ayushman Bharat provides:",
       "options": [
-        "This is a common misconception",
+        "Doctor visits only",
+        "Applicable in limited scenarios",
         "Health insurance up to ₹5 lakh per family",
-        "Free medicine only",
-        "Doctor visits only"
+        "Free medicine only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ayushman Bharat: ₹5 lakh health cover for poor families"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "National Education Policy (NEP) 2020 was drafted by:",
       "options": [
-        "None",
         "Kelkar Committee",
         "Kasturirangan Committee",
-        "Rangarajan Committee"
+        "Rangarajan Committee",
+        "None"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "NEP 2020: Dr. Kasturirangan Committee"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "India became member of which group recently?",
       "options": [
-        "None",
-        "EU",
         "NATO",
-        "SCO, G20 Presidency"
+        "SCO, G20 Presidency",
+        "None",
+        "EU"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "India: SCO member, G20 President 2023"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "IRCTC is a subsidiary of:",
       "options": [
+        "None",
         "ISRO",
         "Private company",
-        "Indian Railways",
-        "None"
+        "Indian Railways"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "IRCTC: Indian Railway Catering and Tourism Corporation"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "Synonym of ABANDON:",
       "options": [
-        "Hold",
         "Keep",
         "Desert",
-        "Maintain"
+        "Maintain",
+        "Hold"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Abandon = desert, forsake"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "Antonym of ABUNDANT:",
       "options": [
-        "Sufficient",
-        "Plentiful",
         "Scarce",
-        "Ample"
+        "Ample",
+        "Sufficient",
+        "Plentiful"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Abundant: plentiful; antonym: scarce"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "Synonym of BENEVOLENT:",
       "options": [
+        "Harsh",
         "Kind",
         "Mean",
-        "Cruel",
-        "Harsh"
+        "Cruel"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Benevolent: kind, generous"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Antonym of CANDID:",
       "options": [
-        "Dishonest",
         "Open",
         "Frank",
-        "Sincere"
+        "Sincere",
+        "Dishonest"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Candid: honest, frank; antonym: dishonest"
     },
     {
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "Synonym of DILIGENT:",
       "options": [
-        "Hardworking",
-        "Lazy",
         "Careless",
-        "Idle"
+        "Idle",
+        "Hardworking",
+        "Lazy"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Diligent: hardworking, industrious"
     },
     {
@@ -1836,12 +1836,12 @@
       "difficulty": "medium",
       "stem": "The calendar for 2006 is the same as which year?",
       "options": [
-        "2017",
         "2011",
         "2015",
-        "2012"
+        "2012",
+        "2017"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "2006 is not a leap year. After 2006, the next year with same calendar is 2017 (after 11 years since 2008 and 2012 are leap years)"
     },
     {
@@ -1854,12 +1854,12 @@
       "difficulty": "medium",
       "stem": "If A:B = 2:3 and B:C = 4:5, what is A:B:C?",
       "options": [
-        "6:9:12",
-        "10:15:12",
         "4:6:5",
-        "8:12:15"
+        "8:12:15",
+        "6:9:12",
+        "10:15:12"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "A:B = 2:3 = 8:12. B:C = 4:5 = 12:15. So A:B:C = 8:12:15"
     },
     {
@@ -1872,12 +1872,12 @@
       "difficulty": "medium",
       "stem": "The price of sugar increases by 25%. By how much percent should a family reduce consumption so that expenditure remains same?",
       "options": [
+        "20%",
         "25%",
         "15%",
-        "30%",
-        "20%"
+        "30%"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "New consumption = (100/125) × old = 80% of old. Reduction = 20%"
     },
     {
@@ -1890,12 +1890,12 @@
       "difficulty": "medium",
       "stem": "If the numerator of a fraction is increased by 200% and denominator by 300%, the fraction becomes 2/5. What is the original fraction?",
       "options": [
-        "2/3",
         "4/7",
         "5/8",
-        "3/5"
+        "3/5",
+        "2/3"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Let fraction = a/b. (3a)/(4b) = 2/5 → a/b = 8/15. Hmm, that doesn't match... 3a/(4b) = 2/5 → 15a = 8b → a/b = 8/15. Not in options."
     }
   ]

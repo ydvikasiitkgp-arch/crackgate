@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "An oscilloscope probe with 10x attenuation:",
       "options": [
+        "No effect",
         "Changes frequency",
         "Increases signal",
-        "Reduces signal to 1/10th for high voltage measurement",
-        "No effect"
+        "Reduces signal to 1/10th for high voltage measurement"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "10x probe: reduces signal by factor of 10 for safe measurement"
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "Strain gauge works on principle of:",
       "options": [
-        "Thermoelectric effect",
-        "Change in inductance",
         "Change in resistance with deformation",
-        "Change in capacitance"
+        "Change in capacitance",
+        "Thermoelectric effect",
+        "Change in inductance"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Strain gauge: dR/R proportional to strain (gauge factor)"
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "Thermocouple works on:",
       "options": [
-        "Piezoelectric effect",
         "Seebeck effect (temperature generates EMF)",
         "Peltier effect only",
-        "Hall effect"
+        "Hall effect",
+        "Piezoelectric effect"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Seebeck: temperature difference between junctions generates voltage"
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "RTD (Resistance Temperature Detector) uses:",
       "options": [
+        "Semiconductor junction",
         "Bimetallic strip",
         "Platinum or copper element with known TCR",
-        "Thermocouple",
-        "Semiconductor junction"
+        "Thermocouple"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "RTD: Pt100 (platinum 100 ohm at 0°C)"
     },
     {
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "Thermistor temperature sensor has:",
       "options": [
-        "Positive TCR only",
-        "High negative temperature coefficient (NTC)",
         "Zero TCR",
-        "Low TCR"
+        "Low TCR",
+        "Positive TCR only",
+        "High negative temperature coefficient (NTC)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "NTC thermistor: resistance decreases sharply with temperature"
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "Current transformer secondary should be shorted when:",
       "options": [
-        "Not connected to meter/relay",
         "Always",
         "During measurement only",
-        "Never"
+        "Never",
+        "Not connected to meter/relay"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CT secondary: always shorted when not in use (prevents HV)"
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "Alternator cooling hydrogen is preferred over air because:",
       "options": [
+        "Higher heat transfer and lower windage loss",
         "More available",
         "Cheaper",
-        "Lighter",
-        "Higher heat transfer and lower windage loss"
+        "Lighter"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "H2: 7x less density, 50x better heat transfer than air"
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "Cooling tower function is to:",
       "options": [
-        "Generate electricity",
-        "Heat water",
         "Store water",
-        "Cool warm cooling water by evaporation for reuse"
+        "Cool warm cooling water by evaporation for reuse",
+        "Generate electricity",
+        "Heat water"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Cooling tower: cool warm water from condenser"
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "ESP (Electrostatic Precipitator) efficiency is typically:",
       "options": [
-        "100% for all pollutants",
         "10%",
         "99% or more for fly ash removal",
-        "50%"
+        "50%",
+        "100% for all pollutants"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "ESP: >99% particulate removal"
     },
     {
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "Coal consumption of a modern thermal plant is approximately:",
       "options": [
+        "1 kg/kWh",
         "0.35-0.45 kg/kWh",
         "2 kg/kWh",
-        "0.1 kg/kWh",
-        "1 kg/kWh"
+        "0.1 kg/kWh"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Modern plant: 0.35-0.45 kg coal per kWh"
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "Drum level in boiler is critical because:",
       "options": [
-        "Low level causes tube overheating, high level causes water carryover to turbine",
-        "No importance",
         "For aesthetics",
-        "Monitor gas concentrations"
+        "Monitor gas concentrations",
+        "Low level causes tube overheating, high level causes water carryover to turbine",
+        "No importance"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Drum level: safety critical for turbine protection"
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "Feedwater heaters improve efficiency by:",
       "options": [
-        "Preheating boiler feedwater using extraction steam",
         "Storing water",
         "Generating power",
-        "Cooling steam"
+        "Cooling steam",
+        "Preheating boiler feedwater using extraction steam"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "FWH: raises feedwater temperature, reduces heat input"
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "Deaerator removes which gases from feedwater?",
       "options": [
+        "Affects only intake shafts",
         "Oxygen and carbon dioxide",
         "No gases",
-        "Neither the first nor the second option",
-        "This is an oversimplification"
+        "Works only in surface mines"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Deaerator: removes O2 and CO2 to prevent corrosion"
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "The condenser vacuum is typically:",
       "options": [
-        "-2 bar",
-        "-0.9 to -0.97 bar (gauge)",
         "0 bar",
-        "+0.5 bar"
+        "+0.5 bar",
+        "-2 bar",
+        "-0.9 to -0.97 bar (gauge)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Condenser: deep vacuum ~0.05-0.1 bar absolute"
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "Steam reheating in large thermal plants:",
       "options": [
-        "Cools steam",
         "Heats water",
         "Stores steam",
-        "Reheats steam after HP turbine expansion for higher efficiency"
+        "Reheats steam after HP turbine expansion for higher efficiency",
+        "Cools steam"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Reheat: steam returned to boiler, reheated, sent to IP/LP"
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "Cooling tower with mechanical draft uses:",
       "options": [
+        "Pumps only",
         "No fans",
         "Natural convection only",
-        "Fans to force/draw air through tower",
-        "Pumps only"
+        "Fans to force/draw air through tower"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Mechanical: fans provide controlled airflow"
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "Natural draft cooling tower uses:",
       "options": [
-        "Pumps",
-        "Fans",
         "Chimney effect of warm air rising through tower",
-        "Compressors"
+        "Compressors",
+        "Pumps",
+        "Fans"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Natural: tall hyperbolic tower, warm air rises naturally"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "Solar PV inverter function is to:",
       "options": [
-        "Generate DC",
         "Store energy",
         "Convert DC from panels to AC for grid/local use",
-        "Convert AC to DC"
+        "Convert AC to DC",
+        "Generate DC"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Inverter: DC to AC conversion"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "MPPT (Maximum Power Point Tracking) in solar inverter:",
       "options": [
+        "Tracks sun position",
         "Optimizes power extraction from PV array",
         "Controls voltage only",
-        "Measures temperature",
-        "Tracks sun position"
+        "Measures temperature"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "MPPT: adjusts operating point for max power"
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "Wind turbine gearbox increases:",
       "options": [
-        "Torque only",
-        "Rotor speed to match generator requirement",
         "Wind speed",
-        "Generator speed"
+        "Generator speed",
+        "Torque only",
+        "Rotor speed to match generator requirement"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Gearbox: step-up from ~15rpm rotor to ~1500rpm generator"
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "Diesel generator governor controls:",
       "options": [
-        "Frequency directly",
         "Current",
         "Voltage",
-        "Fuel injection to maintain constant speed"
+        "Fuel injection to maintain constant speed",
+        "Frequency directly"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Governor: regulates fuel for speed/frequency control"
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "Emergency diesel generator starting method is typically:",
       "options": [
+        "Wind powered",
         "Solar powered",
         "Battery-powered electric starter or compressed air",
-        "Manual only",
-        "Wind powered"
+        "Manual only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "EDG: battery start or compressed air for rapid start"
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "Gas turbine (Brayton cycle) efficiency is improved by:",
       "options": [
-        "Regeneration and intercooling",
-        "Reducing pressure",
         "Adding water",
-        "Lowering temperature"
+        "Lowering temperature",
+        "Regeneration and intercooling",
+        "Reducing pressure"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Regenerator: uses exhaust heat; intercooler: reduces compression work"
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "Combined cycle plant has gas turbine plus:",
       "options": [
-        "Hydro turbine",
         "Steam turbine using waste heat HRSG",
         "Second gas turbine",
-        "Diesel engine"
+        "Diesel engine",
+        "Hydro turbine"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CCGT: GT exhaust → HRSG → ST → combined output"
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "HRSG (Heat Recovery Steam Generator) is:",
       "options": [
+        "Gas turbine",
         "Boiler using GT exhaust to generate steam for ST",
         "Steam turbine",
-        "Condenser",
-        "Gas turbine"
+        "Condenser"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "HRSG: recovers GT exhaust heat to make steam"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "Geothermal power plant uses:",
       "options": [
-        "Coal",
-        "Solar energy",
         "Wind energy",
-        "Earth's internal heat to generate steam"
+        "Earth's internal heat to generate steam",
+        "Coal",
+        "Solar energy"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Geothermal: steam from underground heat source"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "Tidal power generation uses:",
       "options": [
-        "Wind",
         "Rise and fall of tides to generate electricity",
         "Coal",
-        "Solar"
+        "Solar",
+        "Wind"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Tidal: kinetic energy of tidal water movement"
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "Biomass power plant uses:",
       "options": [
+        "Organic waste/wood to generate electricity",
         "Nuclear",
         "Natural gas",
-        "Coal",
-        "Organic waste/wood to generate electricity"
+        "Coal"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Biomass: combustion or gasification of organic matter"
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "Hydrogen cell (fuel cell) generates electricity by:",
       "options": [
-        "Burning hydrogen",
-        "Nuclear reaction",
         "Combustion",
-        "Electrochemical reaction of H2 and O2"
+        "Electrochemical reaction of H2 and O2",
+        "Burning hydrogen",
+        "Nuclear reaction"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Fuel cell: H2 + O2 → H2O + electricity (electrochemical)"
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "SMR (Small Modular Reactor) is:",
       "options": [
-        "Large reactor",
         "Small diesel generator",
         "Solar module",
-        "Factory-built nuclear reactor under 300MWe"
+        "Factory-built nuclear reactor under 300MWe",
+        "Large reactor"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "SMR: compact, factory-assembled nuclear reactor"
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "Solar thermal power plant uses:",
       "options": [
+        "Wind turbines",
         "Mirrors to concentrate sunlight for steam generation",
         "PV panels",
-        "Coal boilers",
-        "Wind turbines"
+        "Coal boilers"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Solar thermal: concentrated solar power (CSP) for steam turbine"
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "Concentrated Solar Power (CSP) types include:",
       "options": [
-        "This confuses two different concepts",
-        "Both the first and second options",
         "No types",
-        "Parabolic trough, solar tower, dish/Stirling"
+        "Parabolic trough, solar tower, dish/Stirling",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "CSP: trough, tower, dish/Stirling for utility-scale"
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "Load following power plant operation means:",
       "options": [
-        "Adjusting output to match varying demand",
         "Never changing output",
         "Shutting down at night",
-        "Running at full capacity always"
+        "Running at full capacity always",
+        "Adjusting output to match varying demand"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Load following: varies output with demand pattern"
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "Spinning reserve in power system is:",
       "options": [
+        "Not synchronized capacity",
         "Offline generators only",
         "Battery storage only",
-        "Extra generation capacity synchronized and ready",
-        "Not synchronized capacity"
+        "Extra generation capacity synchronized and ready"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Spinning: online, synchronized, available immediately"
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "Non-spinning reserve is:",
       "options": [
-        "Neither the first nor the second option",
-        "Capacity that can be started and synchronized within 10-30 min",
         "Same as spinning",
-        "Not available"
+        "Not available",
+        "Applicable in limited scenarios",
+        "Capacity that can be started and synchronized within 10-30 min"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Non-spinning: offline but can start quickly"
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "Ancillary services in power system include:",
       "options": [
-        "This confuses two different concepts",
         "Frequency regulation, voltage support, black start",
-        "Neither the first nor the second option",
-        "Both the first and second options"
+        "Required only for specific cases",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ancillary: support services for grid stability"
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "Black start capability means:",
       "options": [
+        "Starting with solar",
         "No start capability",
         "Restarting power system without external supply",
-        "Starting with diesel only",
-        "Starting with solar"
+        "Starting with diesel only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Black start: self-starting after total blackout"
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "Grid code defines:",
       "options": [
-        "Both the first and second options",
-        "Neither the first nor the second option",
         "Technical requirements for connecting to grid",
-        "This is a common misconception"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Grid code: voltage, frequency, fault ride-through requirements"
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "Fault ride-through (FRT) for wind turbines means:",
       "options": [
-        "Disconnects immediately",
         "Never connected",
         "No fault ever",
-        "Turbine stays connected during grid faults"
+        "Turbine stays connected during grid faults",
+        "Disconnects immediately"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "FRT: wind turbine remains connected during voltage dips"
     },
     {
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "Power plant availability factor of 95% means:",
       "options": [
+        "95% efficiency",
         "Plant available 95% of total time",
         "95% load factor",
-        "Plant generates 95% of capacity",
-        "95% efficiency"
+        "Plant generates 95% of capacity"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Availability: 95% of time ready to generate"
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "Capacity factor of solar PV in India is approximately:",
       "options": [
-        "5-10%",
-        "15-20%",
         "50-60%",
-        "80-90%"
+        "80-90%",
+        "5-10%",
+        "15-20%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Solar PV capacity factor: ~15-20% in India"
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "Capacity factor of wind farm in India is approximately:",
       "options": [
-        "80-90%",
         "50-60%",
         "20-30%",
-        "5-10%"
+        "5-10%",
+        "80-90%"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Wind CF: ~20-30% depending on site"
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "Capacity factor of thermal plant is approximately:",
       "options": [
+        "20-30%",
         "60-80%",
         "15-20%",
-        "5-10%",
-        "20-30%"
+        "5-10%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Thermal: 60-80% (baseload operation)"
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "Specific energy consumption of LED lighting vs incandescent:",
       "options": [
-        "Same",
-        "LED uses ~80% less energy",
         "2x more",
-        "More"
+        "More",
+        "Same",
+        "LED uses ~80% less energy"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "LED: ~10W vs 60W incandescent for same light"
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "Power factor correction using capacitor bank at industrial plant:",
       "options": [
-        "Increases current",
         "No benefit",
         "Increases losses",
-        "Reduces reactive power, lowers current, saves losses"
+        "Reduces reactive power, lowers current, saves losses",
+        "Increases current"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "PFC: supplies VARs locally, reduces line current"
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "Harmonic distortion in power system is caused by:",
       "options": [
+        "Cables",
         "Non-linear loads (VFDs, rectifiers, computers)",
         "Linear loads",
-        "Transformers",
-        "Cables"
+        "Transformers"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Non-linear: draw non-sinusoidal current → harmonics"
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "Total Harmonic Distortion (THD) for voltage should be:",
       "options": [
-        "Less than 5% for LV systems",
-        "50%",
         "100%",
-        "No limit"
+        "No limit",
+        "Less than 5% for LV systems",
+        "50%"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "THD: <5% per IEEE 519 for LV"
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "Active power filter in power system:",
       "options": [
-        "Ignores harmonics",
         "Injects compensating harmonic currents to cancel harmonics",
         "Shorts harmonics",
-        "Blocks harmonics"
+        "Blocks harmonics",
+        "Ignores harmonics"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "APF: measures and injects opposite harmonics"
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "Reactive power compensation using capacitor bank is important because:",
       "options": [
+        "Increases losses",
         "Worsens voltage",
         "No benefit",
-        "Improves voltage, reduces losses, increases capacity",
-        "Increases losses"
+        "Improves voltage, reduces losses, increases capacity"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "VAR compensation: better voltage, lower losses"
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "Static VAR Compensator (SVC) response time is:",
       "options": [
-        "1 minute",
-        "1 hour",
         "One to two cycles (20-40ms)",
-        "1 second"
+        "1 second",
+        "1 minute",
+        "1 hour"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "SVC: fast reactive compensation in 1-2 cycles"
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "STATCOM compared to SVC has:",
       "options": [
-        "Worse performance",
         "Slower",
         "Faster response, smaller footprint, better performance at low V",
-        "Larger"
+        "Larger",
+        "Worse performance"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "STATCOM: VSC-based, faster, more compact"
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "Series capacitor compensation in transmission line:",
       "options": [
+        "No benefit",
         "Increases reactance",
         "Reduces effective line reactance, increases transfer capacity",
-        "Reduces current",
-        "No benefit"
+        "Reduces current"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Series cap: X_L reduced → more power transfer"
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "Shunt reactor in EHV line compensates:",
       "options": [
-        "Inductive load",
-        "Frequency",
         "Capacitive charging current of long lines",
-        "Active power"
+        "Active power",
+        "Inductive load",
+        "Frequency"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Shunt reactor: absorbs VAR from line capacitance"
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Shunt capacitor in distribution feeder:",
       "options": [
-        "Improves voltage and power factor at load end",
         "Worsens voltage",
         "No benefit",
-        "Increases current"
+        "Increases current",
+        "Improves voltage and power factor at load end"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Shunt cap: supplies local VARs → improves voltage/pf"
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "Substation bus bar material is typically:",
       "options": [
+        "Iron only",
         "Brass only",
         "Steel only",
-        "Copper or aluminium strips/tubes",
-        "Iron only"
+        "Copper or aluminium strips/tubes"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Cu or Al: high conductivity, corrosion resistance"
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "Substation battery type is typically:",
       "options": [
-        "Lithium-ion only",
-        "Lead-acid (VRLA) or Nickel-Cadmium",
         "Alkaline",
-        "Zinc-carbon"
+        "Zinc-carbon",
+        "Lithium-ion only",
+        "Lead-acid (VRLA) or Nickel-Cadmium"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Lead-acid (VRLA) or NiCd for substations"
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "Battery cell voltage for lead-acid is:",
       "options": [
-        "1.5V",
         "3.6V",
         "2V per cell (12V for 6-cell battery)",
-        "4.2V"
+        "4.2V",
+        "1.5V"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Lead-acid: 2V/cell, 12V battery = 6 cells"
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "Substation control battery backup requirement:",
       "options": [
+        "5 minutes",
         "10 seconds",
         "24 hours",
-        "Minimum 1 hour full load discharge",
-        "5 minutes"
+        "Minimum 1 hour full load discharge"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Backup: minimum 1 hour at full discharge rate"
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "SF6 circuit breaker gas pressure is typically:",
       "options": [
-        "0.1 bar",
-        "100 bar",
         "3-6 bar at 20°C",
-        "1 bar"
+        "1 bar",
+        "0.1 bar",
+        "100 bar"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "SF6 CB: 3-6 bar (varies by manufacturer)"
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "Circuit breaker operating mechanism types include:",
       "options": [
-        "Spring, hydraulic, pneumatic",
         "Transient response testing",
-        "Neither the first nor the second option",
-        "Voltage regulation only"
+        "Applicable in limited scenarios",
+        "Voltage regulation only",
+        "Spring, hydraulic, pneumatic"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Multiple: spring (most common), hydraulic, pneumatic"
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "Spring charging motor in CB charges:",
       "options": [
+        "Battery",
         "Speed regulation only",
         "Closing spring for next operation",
-        "Trip spring only",
-        "Battery"
+        "Trip spring only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Motor: stores energy in closing spring"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "CB contact resistance should be:",
       "options": [
-        "Very low (<100 microohm)",
-        "Infinite",
         "High",
-        "Medium"
+        "Medium",
+        "Very low (<100 microohm)",
+        "Infinite"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Low contact R: minimize heating at rated current"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "CB making capacity is typically:",
       "options": [
-        "Half of breaking",
         "2.5x breaking capacity (peak)",
         "Same as breaking",
-        "10x breaking"
+        "10x breaking",
+        "Half of breaking"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Making: peak current = 2.5 × rms breaking capacity"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Substation transformer oil conservator level indicator shows:",
       "options": [
+        "Oil temperature",
         "Winding temperature",
         "Oil level in conservator",
-        "Voltage level",
-        "Oil temperature"
+        "Voltage level"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Oil level: visual indicator on conservator"
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "Substation transformer Buchholz relay is located between:",
       "options": [
-        "On HV bushing",
-        "On LV bushing",
         "On cooling fins",
-        "Main tank and conservator"
+        "Main tank and conservator",
+        "On HV bushing",
+        "On LV bushing"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Buchholz: in pipe between tank and conservator"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "Substation transformer tap changer oil is tested separately because:",
       "options": [
-        "No reason",
         "Carbon from arcing degrades oil quality",
         "Different oil type",
-        "Cost saving"
+        "Cost saving",
+        "No reason"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "OLTC oil: carbon contamination from tap switching arcing"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "Substation fire extinguisher type for electrical equipment:",
       "options": [
+        "Foam only",
         "Sand only",
         "CO2 or DCP (dry chemical powder)",
-        "Water only",
-        "Foam only"
+        "Water only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "CO2/DCP: non-conductive, safe for live equipment"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "Substation oil spill containment includes:",
       "options": [
-        "No containment",
-        "Ignore spill",
         "Oil sump/pit under transformer with oil barrier",
-        "Drain to river"
+        "Drain to river",
+        "No containment",
+        "Ignore spill"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Oil containment: sump captures spilled oil for environmental protection"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "Substation switchyard minimum height of fencing:",
       "options": [
-        "2.4m with barbed wire on top",
         "1m",
         "5m",
-        "No fence needed"
+        "No fence needed",
+        "2.4m with barbed wire on top"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Fence: 2.4m + barbed wire for safety"
     },
     {
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "CT secondary rated current is typically:",
       "options": [
+        "10A",
         "100A",
         "5A or 1A",
-        "50A",
-        "10A"
+        "50A"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "CT secondary: 5A (standard) or 1A (EHV)"
     },
     {
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "PT secondary rated voltage is typically:",
       "options": [
-        "110V",
-        "440V",
         "400V",
-        "230V"
+        "230V",
+        "110V",
+        "440V"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "PT secondary: 110V for metering/protection"
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "Substation earthing pit depth should be minimum:",
       "options": [
-        "1m",
         "0.5m",
         "10m",
-        "3m for plate electrode"
+        "3m for plate electrode",
+        "1m"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Plate electrode: min 3m depth"
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "Substation earthing resistance should be:",
       "options": [
+        "100 ohm",
         "10 ohm",
         "Less than 1 ohm",
-        "Any value",
-        "100 ohm"
+        "Any value"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Substation: Re < 1 ohm"
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "GIS substation occupies approximately what fraction of AIS space:",
       "options": [
-        "200%",
-        "Same",
         "10-20%",
-        "50%"
+        "50%",
+        "200%",
+        "Same"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "GIS: ~10-15% of AIS footprint"
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "GIS substation maintenance interval is:",
       "options": [
-        "5-10 years",
         "Weekly",
         "1 year",
-        "Monthly"
+        "Monthly",
+        "5-10 years"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "GIS: minimal maintenance, 5-10 year intervals"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "SF6 gas decomposition products during fault are:",
       "options": [
+        "Harmless",
         "Toxic: SOF2, SO2F2, HF",
         "Flammable",
-        "Odourless only",
-        "Harmless"
+        "Odourless only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Decomposition: toxic, corrosive gases"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Substation SCADA RTU collects:",
       "options": [
-        "This is theoretically possible but impractical",
-        "Neither the first nor the second option",
         "Measurement data and status from IEDs",
-        "Both the first and second options"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "RTU: aggregates data from bay-level IEDs"
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "IEC 61850 GOOSE message timing requirement is:",
       "options": [
-        "1 hour",
         "1 second",
         "4ms for trip signals",
-        "1 minute"
+        "1 minute",
+        "1 hour"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "GOOSE: <4ms for protection tripping"
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Substation marshalling box is located:",
       "options": [
+        "At entry point of control cables from switchyard",
         "On bus bar",
         "Inside control room only",
-        "On transformer",
-        "At entry point of control cables from switchyard"
+        "On transformer"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Marshalling: switchyard boundary cable termination"
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "Substation battery room ventilation is needed because:",
       "options": [
-        "No reason",
-        "Temperature only",
         "Hydrogen gas evolved during charging is explosive",
-        "Dust only"
+        "Dust only",
+        "No reason",
+        "Temperature only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Ventilation: removes H2 gas from lead-acid battery charging"
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "NCL was incorporated in:",
       "options": [
+        "2000",
         "1975",
         "1985",
-        "1990",
-        "2000"
+        "1990"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "NCL: incorporated 1985"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "WCL headquarter is at:",
       "options": [
-        "Nagpur",
-        "New Delhi",
         "Mumbai",
-        "Kolkata"
+        "Kolkata",
+        "Nagpur",
+        "New Delhi"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "WCL HQ: Nagpur"
     },
     {
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "NCL headquarter is at:",
       "options": [
-        "New Delhi",
         "Nagpur",
         "Singrauli",
-        "Kolkata"
+        "Kolkata",
+        "New Delhi"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "NCL HQ: Singrauli"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "CCL stands for:",
       "options": [
+        "Coal Chemical Limited",
         "Coal Corporation Limited",
         "Central Cement Limited",
-        "Central Coalfields Limited",
-        "Coal Chemical Limited"
+        "Central Coalfields Limited"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "CCL = Central Coalfields Limited"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "BCCL stands for:",
       "options": [
-        "Bengal Coal Corporation Limited",
-        "Bihar Coal Company Limited",
         "Bombay Coal Company Limited",
-        "Bharat Coking Coal Limited"
+        "Bharat Coking Coal Limited",
+        "Bengal Coal Corporation Limited",
+        "Bihar Coal Company Limited"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "BCCL = Bharat Coking Coal Limited"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "NEEPCO stands for:",
       "options": [
-        "New Energy Corporation",
         "National Energy and Environment Policy Council",
         "None",
-        "North Eastern Electric Power Corporation"
+        "North Eastern Electric Power Corporation",
+        "New Energy Corporation"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "NEEPCO: North Eastern Electric Power Corporation"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Damodar Valley Corporation (DVC) was established in:",
       "options": [
+        "1948",
         "2000",
         "1975",
-        "1991",
-        "1948"
+        "1991"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "DVC: 1948, India's first multipurpose river valley project"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "BHEL stands for:",
       "options": [
-        "Bharat Hydro Electric Limited",
-        "Bihar Heavy Engineering Limited",
         "Bharat Heavy Electricals Limited",
-        "Basic Heavy Equipment Limited"
+        "Basic Heavy Equipment Limited",
+        "Bharat Hydro Electric Limited",
+        "Bihar Heavy Engineering Limited"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "BHEL: Bharat Heavy Electricals Limited"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "NALCO stands for:",
       "options": [
-        "North Assam Limited",
         "National Aluminium Company Limited",
         "New Alloys Limited",
-        "National Atomic Limited"
+        "National Atomic Limited",
+        "North Assam Limited"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "NALCO: National Aluminium Company Limited"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "NMDC stands for:",
       "options": [
+        "Northern Mineral Company",
         "New Mining Corporation",
         "National Mineral Development Corporation",
-        "None",
-        "Northern Mineral Company"
+        "None"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "NMDC: National Mineral Development Corporation"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Rashtriya Ispat Nigam Limited (RINL) operates:",
       "options": [
-        "Bhilai Steel Plant",
-        "Rourkela Steel Plant",
         "Durgapur Steel Plant",
-        "Vizag Steel Plant"
+        "Vizag Steel Plant",
+        "Bhilai Steel Plant",
+        "Rourkela Steel Plant"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "RINL: Vizag Steel Plant"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Which coalfield is the largest in India by reserves?",
       "options": [
-        "Jharia",
         "Raniganj",
         "Singrauli",
-        "Talcher"
+        "Talcher",
+        "Jharia"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Jharia: largest coal reserves in India"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "How many CIL subsidiaries are there?",
       "options": [
+        "12",
         "5",
         "10",
-        "8",
-        "12"
+        "8"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "CIL has 8 subsidiaries"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "Which is NOT a coalfield?",
       "options": [
-        "Jharia",
-        "Chilka",
         "Raniganj",
-        "Talcher"
+        "Talcher",
+        "Jharia",
+        "Chilka"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Chilka is a lake in Odisha, not a coalfield"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "Coal India's annual production is approximately:",
       "options": [
-        "100 MT",
         "700-800 million tonnes",
         "1 billion tonnes",
-        "200 MT"
+        "200 MT",
+        "100 MT"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CIL: ~700-800 MT (2023-24)"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "Singrauli Super Thermal Power Station is operated by:",
       "options": [
+        "WCL",
         "NLC",
         "NTPC",
-        "CIL",
-        "WCL"
+        "CIL"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Singrauli STPP: NTPC"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "Mahanadi Coalfields Limited (MCL) is headquartered at:",
       "options": [
-        "Kolkata",
-        "Sambalpur",
         "Bhubaneswar",
-        "Raipur"
+        "Raipur",
+        "Kolkata",
+        "Sambalpur"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "MCL: Sambalpur, Odisha"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "Bharat Coking Coal Limited (BCCL) is headquartered at:",
       "options": [
-        "Kolkata",
         "Patna",
         "Ranchi",
-        "Dhanbad"
+        "Dhanbad",
+        "Kolkata"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "BCCL: Dhanbad, Jharkhand"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Northern Coalfields Limited (NCL) mines are primarily in:",
       "options": [
+        "Singrauli (MP/UP)",
         "West Bengal",
         "Jharkhand",
-        "Odisha",
-        "Singrauli (MP/UP)"
+        "Odisha"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "NCL: Singrauli region, MP and UP"
     },
     {
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "Which state produces the most coal in India?",
       "options": [
-        "Chhattisgarh",
-        "Jharkhand",
         "West Bengal",
-        "Odisha"
+        "Odisha",
+        "Chhattisgarh",
+        "Jharkhand"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Jharkhand leads coal production in India"
     },
     {
@@ -1836,12 +1836,12 @@
       "difficulty": "medium",
       "stem": "A person covers a distance at 20 km/h and returns at 30 km/h. What is the average speed for the whole journey?",
       "options": [
-        "25 km/h",
-        "26 km/h",
         "22 km/h",
-        "24 km/h"
+        "24 km/h",
+        "25 km/h",
+        "26 km/h"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Average speed = 2×20×30/(20+30) = 1200/50 = 24 km/h"
     },
     {
@@ -1854,12 +1854,12 @@
       "difficulty": "medium",
       "stem": "A man sells two watches at ₹990 each. One at 10% gain and other at 10% loss. What is his overall gain or loss?",
       "options": [
+        "₹10 gain",
         "No gain no loss",
         "₹11 loss",
-        "₹20 loss",
-        "₹10 gain"
+        "₹20 loss"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "CP1 = 990/1.10 = 900, CP2 = 990/0.90 = 1100. Total CP = 2000, Total SP = 1980. Loss = ₹20. Hmm wait, 20 is in the options... actually: loss% = x²/100 = 1%. 1% of avg CP 1000 = ₹10. But exact: Total loss = ₹20. Option ₹20 loss should be there... Let me recalculate: the answer should be ₹20 loss."
     },
     {
@@ -1872,12 +1872,12 @@
       "difficulty": "medium",
       "stem": "Two articles are sold at ₹1200 each. One at 20% profit and other at 20% loss. What is the net result?",
       "options": [
-        "₹48 profit",
         "₹100 loss",
         "₹48 loss",
-        "No profit no loss"
+        "No profit no loss",
+        "₹48 profit"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "CP1 = 1200/1.20 = 1000, CP2 = 1200/0.80 = 1500. Total CP = 2500, Total SP = 2400. Loss = ₹100... Actually: loss% on whole = (20/100)² = 4%. 4% of 2500 = ₹100. But wait, let me recalculate: Net loss = 200²/100 = 400/100... Actually for equal SP with x% profit and x% loss: loss = x²/100 % = 400/100 = 4%. On average CP of 1250, loss = ₹50. Hmm, let me recheck: Total CP = 1000 + 1500 = 2500. Total SP = 2400. Loss = ₹100. Loss% = 100/2500 × 100 = 4%. The options should reflect ₹100 loss."
     }
   ]

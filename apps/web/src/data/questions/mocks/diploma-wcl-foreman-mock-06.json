@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "A VFD trip on overcurrent can be caused by:",
       "options": [
-        "Motor overload",
         "Short circuit in motor cable",
-        "All of these",
-        "Load jam"
+        "Applicable in limited scenarios",
+        "Load jam",
+        "Motor overload"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Overcurrent trip can result from overload, insulation failure, or mechanical jam."
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "The ramp time in a VFD refers to:",
       "options": [
-        "Time to accelerate from 0 to base speed",
-        "This ignores the practical considerations",
         "Time to decelerate to stop",
-        "Both acceleration and deceleration ramp times"
+        "Both acceleration and deceleration ramp times",
+        "Time to accelerate from 0 to base speed",
+        "Applicable in limited scenarios"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Ramp time is the time for speed to change from 0 to maximum (acceleration) or reverse."
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "DC injection braking in a VFD is used to:",
       "options": [
+        "Control torque",
         "Start the motor",
         "Run the motor at low speed",
-        "Stop the motor by injecting DC into stator",
-        "Control torque"
+        "Stop the motor by injecting DC into stator"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "DC injection braking stops motor by creating a stationary magnetic field."
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "The flyback (freewheeling) diode in a DC drive protects against:",
       "options": [
-        "Short circuit",
         "Overcurrent",
         "Voltage spikes from inductive load (motor) when switching",
-        "Overvoltage from supply"
+        "Overvoltage from supply",
+        "Short circuit"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Flyback diodes provide path for inductive current when transistors turn off."
     },
     {
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "The torque ripple in a VFD-fed motor can be reduced by:",
       "options": [
-        "Increasing PWM switching frequency",
-        "None",
         "Reducing motor size",
-        "Increasing cable length"
+        "Increasing cable length",
+        "Increasing PWM switching frequency",
+        "None"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Higher PWM frequency smooths current waveform, reducing torque ripple."
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "The common mode voltage in a VFD can cause:",
       "options": [
+        "Both A and B",
         "None",
         "Electromagnetic interference",
-        "Motor bearing damage",
-        "Both A and B"
+        "Motor bearing damage"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Common mode voltage causes bearing currents (damage) and EMI."
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "An insulated motor bearing or shaft grounding ring is used to prevent:",
       "options": [
-        "Overheating",
         "Overvoltage",
         "Insulation breakdown",
-        "Bearing damage from VFD-induced currents"
+        "Bearing damage from VFD-induced currents",
+        "Overheating"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Shaft grounding rings provide path for bearing currents to ground."
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "The encoder feedback in a VFD is used for:",
       "options": [
-        "Closed-loop speed control (vector control)",
-        "Open-loop speed control",
         "None",
-        "Power measurement"
+        "Power measurement",
+        "Closed-loop speed control (vector control)",
+        "Open-loop speed control"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Encoder provides speed/position feedback for precise closed-loop control."
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "A sensorless vector VFD determines motor speed by:",
       "options": [
+        "None",
         "Encoder",
         "Tachometer",
-        "Estimating from voltage and current (motor model)",
-        "None"
+        "Estimating from voltage and current (motor model)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Sensorless vector control estimates speed from electrical measurements using motor parameters."
     },
     {
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "The DC link capacitor in a VFD is used for:",
       "options": [
-        "Speed control",
         "Motor starting",
         "Filtering rectified DC voltage",
-        "None of these"
+        "Applicable in limited scenarios",
+        "Speed control"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "DC link capacitors smooth the rectified DC voltage before inversion."
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "A VFD for a conveyor application typically uses:",
       "options": [
-        "Variable torque mode",
-        "Constant torque mode",
         "Sensorless mode only",
-        "None"
+        "None",
+        "Variable torque mode",
+        "Constant torque mode"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Conveyors require constant torque regardless of speed."
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "A VFD for a centrifugal fan typically uses:",
       "options": [
+        "None",
         "Variable torque mode",
         "Position control",
-        "Constant torque mode",
-        "None"
+        "Constant torque mode"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Fans and pumps follow variable torque (torque ∝ speed²)."
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "The EMC (Electromagnetic Compatibility) filter in a VFD is used to:",
       "options": [
-        "Reduce conducted and radiated EMI",
         "None",
         "Reduce motor noise",
-        "Increase efficiency"
+        "Increase efficiency",
+        "Reduce conducted and radiated EMI"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "EMC filters reduce electromagnetic interference from VFD switching."
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "A VFD trip on overvoltage during deceleration can be prevented by:",
       "options": [
-        "Increasing deceleration ramp time",
-        "Both A and B",
         "Adding braking resistor",
-        "Reducing motor size"
+        "Reducing motor size",
+        "Increasing deceleration ramp time",
+        "Both A and B"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Longer ramp time or braking resistor prevents DC bus overvoltage during regenerative braking."
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "The motor thermal model in a VFD is used for:",
       "options": [
+        "Speed control",
         "Motor overload protection",
         "Torque control",
-        "None",
-        "Speed control"
+        "None"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Thermal model estimates motor temperature to prevent overheating."
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "The auto-tuning function in a VFD is used to:",
       "options": [
-        "None",
         "Stop motor automatically",
         "Set motor parameters automatically",
-        "Start motor automatically"
+        "Start motor automatically",
+        "None"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Auto-tuning measures motor parameters (R, L, etc.) for accurate control."
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "ACB stands for:",
       "options": [
-        "Auxiliary Circuit Breaker",
-        "Air Circuit Breaker",
         "Automatic Circuit Breaker",
-        "Alternating Current Breaker"
+        "Alternating Current Breaker",
+        "Auxiliary Circuit Breaker",
+        "Air Circuit Breaker"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "ACB = Air Circuit Breaker"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "VCB stands for:",
       "options": [
+        "Very Current Breaker",
         "Voltage Controlled Breaker",
         "Variable Circuit Breaker",
-        "Vacuum Circuit Breaker",
-        "Very Current Breaker"
+        "Vacuum Circuit Breaker"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "VCB = Vacuum Circuit Breaker"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "SF6 circuit breaker uses which gas?",
       "options": [
-        "Sulphur hexafluoride",
         "Hydrogen",
         "Nitrogen",
-        "Oxygen"
+        "Oxygen",
+        "Sulphur hexafluoride"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SF6 = Sulphur hexafluoride gas"
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "The main function of a circuit breaker is to:",
       "options": [
-        "Make and break circuit under normal and fault conditions",
-        "Step up voltage",
         "Power factor correction",
-        "This is valid only under special circumstances"
+        "Applicable in limited scenarios",
+        "Make and break circuit under normal and fault conditions",
+        "Step up voltage"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "CB: switches under load and fault conditions"
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "An isolator is operated:",
       "options": [
+        "Under fault",
         "No load only",
         "Under full load",
-        "Any condition",
-        "Under fault"
+        "Any condition"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Isolator: operated only on no load"
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "HRC fuse stands for:",
       "options": [
-        "High Rating Current",
         "High Rated Capacity",
         "High Resistance Circuit",
-        "High Rupturing Capacity"
+        "High Rupturing Capacity",
+        "High Rating Current"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "HRC = High Rupturing Capacity"
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "Relay is a device which:",
       "options": [
-        "Stores energy",
-        "Carries fault current",
         "Detects fault and sends signal to trip CB",
-        "Measures voltage"
+        "Measures voltage",
+        "Stores energy",
+        "Carries fault current"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Relay: detects fault, sends trip signal"
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "IDMT in relays means:",
       "options": [
+        "Inverse Distance Maximum Time",
         "Instantaneous Direct Minimum Time",
         "Instantaneous Definite Maximum Time",
-        "Inverse Definite Minimum Time",
-        "Inverse Distance Maximum Time"
+        "Inverse Definite Minimum Time"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "IDMT: Inverse Definite Minimum Time"
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "Discrimination in protection means:",
       "options": [
-        "All sections trip",
         "No section trips",
         "Full system trips",
-        "Overcurrent protection only"
+        "Overcurrent protection only",
+        "All sections trip"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Discrimination: only faulted zone trips"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "Bus bar protection scheme operates for:",
       "options": [
-        "Line faults",
-        "Motor faults only",
         "Faults on bus zone",
-        "Transformer faults"
+        "Transformer faults",
+        "Line faults",
+        "Motor faults only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Bus protection: isolates bus zone faults"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "The purpose of a circuit breaker is to:",
       "options": [
+        "Increase voltage",
         "Reduce frequency",
         "Generate current",
-        "Interrupt fault current safely",
-        "Increase voltage"
+        "Interrupt fault current safely"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "CB: safely interrupts fault current"
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "Oil circuit breaker uses oil for:",
       "options": [
-        "Arc extinction and insulation",
         "Cooling only",
         "Lubrication",
-        "Voltage regulation"
+        "Voltage regulation",
+        "Arc extinction and insulation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Oil: arc quenching and insulation"
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "Air blast circuit breaker uses:",
       "options": [
-        "Compressed air for arc extinction",
-        "Oil",
         "SF6 gas",
-        "Vacuum"
+        "Vacuum",
+        "Compressed air for arc extinction",
+        "Oil"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Air blast: compressed air blows out arc"
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "Distance relay operates based on:",
       "options": [
+        "Impedance seen from relay point",
         "Current magnitude only",
         "Temperature",
-        "Voltage magnitude only",
-        "Impedance seen from relay point"
+        "Voltage magnitude only"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Distance relay: measures Z = V/I"
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "Differential relay compares:",
       "options": [
-        "Current entering and leaving protected zone",
         "Power on two sides",
         "Frequency on two sides",
-        "Voltage on two sides"
+        "Voltage on two sides",
+        "Current entering and leaving protected zone"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Diff relay: I_in vs I_out, operates on difference"
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "Overcurrent relay setting is based on:",
       "options": [
-        "Overcurrent protection only",
-        "Full load current and fault level",
         "Ambient temperature",
-        "Surge protection devices"
+        "Surge protection devices",
+        "Overcurrent protection only",
+        "Full load current and fault level"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Setting: pickup above max load, below min fault"
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "A fuse melts when current exceeds:",
       "options": [
+        "Zero current",
         "Rated voltage",
         "Any current",
-        "Rated current for specified time",
-        "Zero current"
+        "Rated current for specified time"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Fuse: I^2*t determines melting time"
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "The arc in a CB is extinguished by:",
       "options": [
-        "Reducing contact gap",
         "Cooling and deionizing the arc path",
         "Heating",
-        "Increasing current"
+        "Increasing current",
+        "Reducing contact gap"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Arc extinction: cooling, deionization, lengthening"
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "A relay has a plug setting of 50% and CT ratio 200/5A. Pickup current:",
       "options": [
-        "50A",
-        "25A",
         "200A",
-        "100A"
+        "100A",
+        "50A",
+        "25A"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Pickup = 200*50% = 100A"
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "Time multiplier setting (TMS) of IDMT relay affects:",
       "options": [
+        "Pickup current",
         "CT ratio",
         "Operating time of relay",
-        "Fault level",
-        "Pickup current"
+        "Fault level"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "TMS: scales the operating time curve"
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "A CB is rated as 1250A, 25kA. 25kA refers to:",
       "options": [
-        "Rated voltage",
         "Short circuit breaking capacity",
         "Normal current",
-        "Rated power"
+        "Rated power",
+        "Rated voltage"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "25kA: maximum fault current it can interrupt"
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "The purpose of a shunt trip coil in a CB is:",
       "options": [
-        "Prevent closing",
-        "Manual closing",
         "Voltage regulation",
-        "Remote tripping of CB"
+        "Remote tripping of CB",
+        "Prevent closing",
+        "Manual closing"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Shunt trip: remote electrical tripping"
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "Spring charging motor in a CB is used for:",
       "options": [
+        "Charging closing spring after operation",
         "Cooling transformer",
         "Charging battery",
-        "Operating isolator",
-        "Charging closing spring after operation"
+        "Operating isolator"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Spring motor: stores energy for next closing"
     },
     {
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "Circuit breaker contact resistance should be:",
       "options": [
-        "Medium",
         "Infinite",
         "Very high",
-        "Very low"
+        "Very low",
+        "Medium"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Low contact R minimizes heating"
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "A current limiting reactor is used to:",
       "options": [
-        "Limit fault current magnitude",
-        "Increase impedance",
         "Increase fault current",
-        "Reduce voltage"
+        "Reduce voltage",
+        "Limit fault current magnitude",
+        "Increase impedance"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Reactor: limits fault current to protect equipment"
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "Which is fastest in operation?",
       "options": [
+        "Mechanical fuse",
         "Electromechanical relay",
         "Thermal relay",
-        "Static relay",
-        "Mechanical fuse"
+        "Static relay"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Static/electronic: fastest response"
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "A Buchholz relay is used for:",
       "options": [
-        "Motor protection",
         "Transformer internal fault protection",
         "Bus protection",
-        "Line protection"
+        "Line protection",
+        "Motor protection"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Buchholz: gas-actuated relay for transformer faults"
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "Earth fault relay operates when:",
       "options": [
-        "Frequency changes",
-        "Residual current exceeds setting",
         "Voltage drops",
-        "Phase current exceeds setting"
+        "Phase current exceeds setting",
+        "Frequency changes",
+        "Residual current exceeds setting"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "EFR: detects earth fault current"
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "Circuit breaker operating mechanism can be:",
       "options": [
+        "Voltage regulation only",
         "Harmonic distortion analysis",
         "Spring, hydraulic, pneumatic, or magnetic",
-        "Power factor correction",
-        "Voltage regulation only"
+        "Power factor correction"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Multiple mechanisms: spring, hydraulic, pneumatic, magnetic"
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "A surge diverter protects against:",
       "options": [
-        "Lightning and switching surges",
         "Overcurrent",
         "Overload",
-        "Underfrequency"
+        "Underfrequency",
+        "Lightning and switching surges"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Surge diverter: diverts surge to earth"
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "Protective relays are classified by:",
       "options": [
-        "Weight only",
-        "Size only",
         "Operating principle and characteristic",
-        "Colour only"
+        "Colour only",
+        "Weight only",
+        "Size only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Classification: type, characteristic, application"
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "Graded time lag in overcurrent protection means:",
       "options": [
+        "Same TMS for all",
         "Different TMS for different sections",
         "Instantaneous only",
-        "No TMS",
-        "Same TMS for all"
+        "No TMS"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Grading: TMS increases towards source for discrimination"
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "A CB closing spring is charged by:",
       "options": [
-        "Electric motor or manual handle",
         "Battery directly",
         "Solar panel",
-        "Hydraulic pressure only"
+        "Hydraulic pressure only",
+        "Electric motor or manual handle"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Motor or manual charging"
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "The arc voltage in a CB is typically:",
       "options": [
-        "Kilovolts",
-        "Tens to hundreds of volts",
         "Megavolts",
-        "Milli-volts"
+        "Milli-volts",
+        "Kilovolts",
+        "Tens to hundreds of volts"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Arc voltage: typically 20-200V depending on CB type"
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "A relay contact when energized moves from:",
       "options": [
+        "Applicable in limited scenarios",
         "Remains same",
         "Closed to open",
-        "Normally open to closed position",
-        "Neither"
+        "Normally open to closed position"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "NO contact closes when relay operates"
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "Which CB type has lowest maintenance?",
       "options": [
-        "Oil CB",
         "SF6 circuit breaker",
         "Air blast CB",
-        "ACB"
+        "ACB",
+        "Oil CB"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "SF6: minimal maintenance, long life"
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "A breaker failure relay operates when:",
       "options": [
-        "Primary CB fails to clear fault",
-        "Voltage is normal",
         "Frequency is stable",
-        "Current is zero"
+        "Current is zero",
+        "Primary CB fails to clear fault",
+        "Voltage is normal"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Breaker failure: backup if primary CB fails"
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Main contacts of a CB are designed to:",
       "options": [
+        "Applicable in limited scenarios",
         "Generate voltage",
-        "This assumes incorrect boundary conditions",
-        "Carry rated current and interrupt fault",
-        "Both the first and second options"
+        "Works under ideal conditions only",
+        "Carry rated current and interrupt fault"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Main contacts: carry load, interrupt faults"
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "An anti-pumping relay prevents:",
       "options": [
-        "Overheating",
         "Multiple opening",
         "Multiple closing of CB",
-        "Overloading"
+        "Overloading",
+        "Overheating"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Anti-pump: prevents CB from re-closing if close signal persists"
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "The duty cycle of a CB is specified as:",
       "options": [
-        "Both the first and second options",
-        "Continuous",
         "O-CO or O-t-CO (open, close-open)",
-        "This requires additional verification"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Continuous"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Duty: Open, or Open-close-open with time interval"
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "Trip circuit supervision relay checks:",
       "options": [
+        "Applicable in limited scenarios",
         "Healthiness of trip circuit and battery",
         "Power factor correction",
-        "Load current",
-        "This is true only for a different scenario"
+        "Load current"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "TCS relay: monitors trip circuit continuity"
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "A circuit breaker at 11kV, 25kA. The making capacity is typically:",
       "options": [
-        "12.5kA",
         "2.5 x 25kA = 62.5kA",
         "25kA",
-        "50kA"
+        "50kA",
+        "12.5kA"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Making capacity: ~2.5x breaking capacity (peak)"
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "The arc restriking voltage is the:",
       "options": [
-        "Fault voltage",
-        "Transient voltage across CB contacts after arc extinction",
         "Steady state voltage",
-        "Supply voltage"
+        "Supply voltage",
+        "Fault voltage",
+        "Transient voltage across CB contacts after arc extinction"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Transient voltage that appears across open contacts"
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "A CB operating time typically for EHV is:",
       "options": [
+        "2-3 cycles (40-60ms)",
         "10 seconds",
         "1 second",
-        "1 minute",
-        "2-3 cycles (40-60ms)"
+        "1 minute"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "EHV CB: 2-3 cycles for fault clearance"
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "The purpose of an RC snubber across CB contacts is to:",
       "options": [
-        "Increase arc",
         "Reduce resistance",
         "Increase current",
-        "Suppress voltage spikes/transients"
+        "Suppress voltage spikes/transients",
+        "Increase arc"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "RC snubber: suppresses switching transients"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "A static relay uses:",
       "options": [
-        "Electromechanical contacts only",
-        "Hydraulic mechanism",
         "Electronic components (no moving parts)",
-        "Pneumatic mechanism"
+        "Pneumatic mechanism",
+        "Electromechanical contacts only",
+        "Hydraulic mechanism"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Static relay: solid-state electronics"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Numerical relay uses:",
       "options": [
+        "No electronics",
         "Microprocessor and software algorithms",
         "Electromechanical parts",
-        "Pneumatic parts only",
-        "No electronics"
+        "Pneumatic parts only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Numerical relay: DSP/microprocessor based"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Primary protection is the:",
       "options": [
-        "First line of defense for faults",
         "Last resort",
         "Manual only",
-        "Backup only"
+        "Backup only",
+        "First line of defense for faults"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Primary: operates first for faults in its zone"
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "Backup protection operates when:",
       "options": [
-        "Light load",
-        "Normal conditions",
         "Primary protection fails to operate",
-        "No fault"
+        "No fault",
+        "Light load",
+        "Normal conditions"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Backup: operates if primary fails (with time delay)"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "The function of an interposing CT is to:",
       "options": [
+        "Increase current",
         "Reduce voltage",
         "Match CT ratios and phase angles for protection",
-        "Store energy",
-        "Increase current"
+        "Store energy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "ICT: matches ratio/phase for differential protection"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "A relay with definite time characteristic operates:",
       "options": [
-        "Instantaneously",
         "After a fixed time regardless of fault magnitude",
         "Inversely with current",
-        "Never"
+        "Never",
+        "Instantaneously"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Definite time: fixed operating time, no inverse curve"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "A latching relay is one which:",
       "options": [
-        "Resets automatically",
-        "Operates continuously",
         "Never operates",
-        "Remains in operated position after fault clears"
+        "Remains in operated position after fault clears",
+        "Resets automatically",
+        "Operates continuously"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Latch: stays operated until manually reset"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "IS 3043 is the Indian standard for:",
       "options": [
+        "Transformer design",
         "Earthing practices",
         "Motor design",
-        "Cable sizing",
-        "Transformer design"
+        "Cable sizing"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "IS 3043: Code of practice for earthing"
     },
     {
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "Step potential is the voltage between:",
       "options": [
-        "Two hands",
         "Two feet on ground surface",
         "Body and earth",
-        "Hand and foot"
+        "Hand and foot",
+        "Two hands"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Step: voltage between two feet during fault"
     },
     {
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "Touch potential is the voltage between:",
       "options": [
-        "Hand touching equipment and feet on ground",
-        "Two hands",
         "Two feet",
-        "Head and feet"
+        "Head and feet",
+        "Hand touching equipment and feet on ground",
+        "Two hands"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Touch: voltage between hand on metallic part and feet"
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "Solid earthing is preferred for:",
       "options": [
+        "Below 415V only",
         "Underground cables only",
         "Systems above 11kV",
-        "Distribution only",
-        "Below 415V only"
+        "Distribution only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Solid earthing: systems > 11kV (low fault level)"
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "Resistance earthing uses a resistor to:",
       "options": [
-        "Limit earth fault current",
         "Eliminate fault current",
         "Increase earth fault current",
-        "Measure fault current"
+        "Measure fault current",
+        "Limit earth fault current"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Resistor: limits fault current to safe level"
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "Earthing resistance for a substation should be:",
       "options": [
-        "100 ohm",
-        "10 ohm",
         "Any value",
-        "Less than 1 ohm"
+        "Less than 1 ohm",
+        "100 ohm",
+        "10 ohm"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Substation: < 1 ohm ideal"
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "Plate earthing uses a copper plate of size:",
       "options": [
+        "1m x 1m x 1cm",
         "30cm x 30cm x 5mm",
         "10cm x 10cm x 1mm",
-        "60cm x 60cm x 3mm",
-        "1m x 1m x 1cm"
+        "60cm x 60cm x 3mm"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Standard: 60cm x 60cm x 3.15mm copper plate"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "Pipe earthing uses GI pipe of diameter:",
       "options": [
-        "100mm",
         "38mm to 50mm",
         "10mm",
-        "200mm"
+        "200mm",
+        "100mm"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "GI pipe: 38-50mm diameter, 2.4m length"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Chemical earthing uses:",
       "options": [
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
         "Backfill compound around electrode",
-        "Neither the first nor the second option",
-        "This ignores the practical considerations",
-        "Both the first and second options"
+        "Required only for specific cases"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Chemical: Bentonite/Graphite compound reduces R"
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "The purpose of earthing is to:",
       "options": [
+        "Store charge",
         "Generate power",
         "Increase voltage",
-        "Protect personnel and equipment from fault current",
-        "Store charge"
+        "Protect personnel and equipment from fault current"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Earthing: safety from electric shock and equipment protection"
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Lightning arrestor (LA) on a substation is connected between:",
       "options": [
-        "Line and line",
         "Bus and bus",
         "Neutral and phase",
-        "Line and earth"
+        "Line and earth",
+        "Line and line"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "LA: line to earth path for surge protection"
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "LA uses a non-linear resistor material of:",
       "options": [
-        "Aluminium oxide",
-        "Copper oxide",
         "Iron oxide",
-        "Zinc oxide (ZnO)"
+        "Zinc oxide (ZnO)",
+        "Aluminium oxide",
+        "Copper oxide"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "ZnO: highly non-linear V-I characteristic"
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Area of circle with radius 7 cm:",
       "options": [
-        "200 sq cm",
-        "100 sq cm",
         "154 sq cm",
-        "144 sq cm"
+        "144 sq cm",
+        "200 sq cm",
+        "100 sq cm"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "A=pi*r^2=22/7*49=154"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "35% of 400 is:",
       "options": [
-        "125",
         "140",
         "145",
-        "135"
+        "135",
+        "125"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "35/100*400=140"
     },
     {
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Probability of getting head in one coin toss:",
       "options": [
+        "0.75",
         "0.25",
         "1",
-        "0.5",
-        "0.75"
+        "0.5"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "P(head)=1/2=0.5"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "Speed of boat in still water 10 km/h, stream 2 km/h. Downstream:",
       "options": [
-        "20 km/h",
-        "8 km/h",
         "10 km/h",
-        "12 km/h"
+        "12 km/h",
+        "20 km/h",
+        "8 km/h"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Downstream=10+2=12"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "A sum doubles in 5 years at simple interest. Rate is:",
       "options": [
-        "10%",
         "15%",
         "20%",
-        "25%"
+        "25%",
+        "10%"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "SI=P; P=P*R*5/100; R=20%"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Volume of cube with side 4 cm:",
       "options": [
+        "64 cubic cm",
         "32 cubic cm",
         "16 cubic cm",
-        "48 cubic cm",
-        "64 cubic cm"
+        "48 cubic cm"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "V=4^3=64"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "If x:y = 2:3 and y:z = 4:5, x:z:",
       "options": [
-        "2:5",
-        "4:15",
         "8:15",
-        "8:5"
+        "8:5",
+        "2:5",
+        "4:15"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "x=8, z=15; x:z=8:15"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "Profit of 20% on CP of 500. SP is:",
       "options": [
-        "650",
         "520",
         "600",
-        "550"
+        "550",
+        "650"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "SP=500*1.2=600"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "The average of first 10 natural numbers:",
       "options": [
+        "5.5",
         "10",
         "50",
-        "11",
-        "5.5"
+        "11"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Avg=55/10=5.5"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "If selling price = 720, loss = 10%, cost price:",
       "options": [
-        "700",
-        "750",
         "900",
-        "800"
+        "800",
+        "700",
+        "750"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "CP=720/0.9=800"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Compound interest on 1000 at 10% for 2 years:",
       "options": [
-        "210",
         "100",
         "200",
-        "110"
+        "110",
+        "210"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A=1000*1.1^2=1210; CI=210"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Two pipes fill a tank in 10 and 15 min. Together:",
       "options": [
+        "5 min",
         "25 min",
         "6 min",
-        "12 min",
-        "5 min"
+        "12 min"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "1/10+1/15=5/30=1/6; 6 min"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "A train 100m long passes a pole in 10s. Speed:",
       "options": [
-        "36 km/h",
-        "72 km/h",
         "100 km/h",
-        "10 km/h"
+        "10 km/h",
+        "36 km/h",
+        "72 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "V=100/10=10m/s=36km/h"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "A shopkeeper gives 2 successive discounts of 10% and 20%. Net discount:",
       "options": [
-        "27%",
         "30%",
         "25%",
-        "28%"
+        "28%",
+        "27%"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Net=1-(0.9*0.8)=28%"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "HCF of 24 and 36 is:",
       "options": [
+        "8",
         "4",
         "6",
-        "12",
-        "8"
+        "12"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "HCF(24,36)=12"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "If cost price = 400, selling price = 500, profit% is:",
       "options": [
-        "30%",
-        "15%",
         "25%",
-        "20%"
+        "20%",
+        "30%",
+        "15%"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Profit=100; 100/400*100=25%"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "30% of 300 is:",
       "options": [
-        "30",
         "90",
         "60",
-        "120"
+        "120",
+        "30"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "30/100*300=90"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "A can complete work in 20 days. In how many days with B (30 days)?",
       "options": [
+        "25 days",
         "12 days",
         "10 days",
-        "50 days",
-        "25 days"
+        "50 days"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "1/20+1/30=5/60=1/12; 12 days"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "What is 15% of 200?",
       "options": [
-        "200",
-        "15",
         "45",
-        "30"
+        "30",
+        "200",
+        "15"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "15/100*200=30"
     },
     {
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "Simple interest on 2000 at 8% for 2 years:",
       "options": [
-        "800",
         "320",
         "160",
-        "640"
+        "640",
+        "800"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "SI=2000*8*2/100=320"
     }
   ]
