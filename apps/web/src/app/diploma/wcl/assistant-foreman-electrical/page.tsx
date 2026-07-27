@@ -55,11 +55,11 @@ export default async function WCLAFElectricalPage() {
   const attempts = userId
     ? await db.attempt.findMany({
         where: { userId, kind: "mock" },
-        select: { refId: true, takenAt: true },
+        select: { id: true, refId: true, takenAt: true },
       })
     : [];
   const completedIds = new Set(attempts.filter(a => a.refId.startsWith("diploma-wcl-foreman-mock-")).map(a => a.refId));
-  const attemptMap = new Map(attempts.map(a => [a.refId, a.takenAt]));
+  const attemptMap = new Map(attempts.map(a => [a.refId, { id: a.id, takenAt: a.takenAt }]));
 
   const liveCount = WCL_AF_MOCKS.length;
   const payHref = "/pay/upi?plan=pro&exam=DIPLOMA&subject=wcl-af-electrical";
@@ -187,7 +187,7 @@ export default async function WCLAFElectricalPage() {
           {WCL_AF_MOCKS.map((m) => {
             const done = completedIds.has(m.id);
             return (
-              <div key={m.id} className={`card relative flex flex-col p-5${done ? " opacity-60" : ""}`}>
+              <div key={m.id} className="card relative flex flex-col p-5">
                 <span className={`badge absolute right-4 top-4 ${done ? "bg-ok/10 text-ok" : unlocked ? "bg-brand/10 text-brand" : "badge-pro"}`}>
                   {done ? "✓ Completed" : unlocked ? "Ready" : "Locked"}
                 </span>
@@ -198,11 +198,9 @@ export default async function WCLAFElectricalPage() {
                   <span className="rounded-md bg-canvas px-2 py-1">{m.totalMarks} marks</span>
                 </div>
                 {done ? (
-                  <div className="mt-4 pt-4 border-t border-line text-sm text-center">
-                    <span className="text-muted">
-                      Taken {new Date(attemptMap.get(m.id)!).toLocaleDateString("en-IN", { day: "numeric", month: "short" })}
-                    </span>
-                  </div>
+                  <Link href={`/result/${attemptMap.get(m.id)!.id}`} className="btn btn-ghost mt-4 w-full justify-center">
+                    Review Answers →
+                  </Link>
                 ) : unlocked ? (
                   <Link href={`/mocks/${m.id}`} className="btn btn-primary mt-4 w-full justify-center">
                     Start Mock
