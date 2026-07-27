@@ -60,6 +60,18 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
   const listUrl = getListUrl(att.refId);
   const nextMockId = getNextMockId(att.refId);
 
+  const navButtons = (
+    <div className="flex flex-wrap justify-center gap-3">
+      {nextMockId && (
+        <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">
+          Try Next Mock →
+        </Link>
+      )}
+      <Link href={listUrl} className="btn btn-ghost">View All Mocks</Link>
+      <Link href="/dashboard" className="btn btn-ghost">Dashboard</Link>
+    </div>
+  );
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-5 py-8 sm:py-12">
       <div className="card p-6 sm:p-10 text-center">
@@ -97,20 +109,14 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          {nextMockId && (
-            <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">
-              Try Next Mock →
-            </Link>
-          )}
-          <Link href={listUrl} className="btn btn-ghost">View All Mocks</Link>
-          <Link href="/dashboard" className="btn btn-ghost">Dashboard</Link>
-        </div>
+        <div className="mt-8">{navButtons}</div>
       </div>
 
       {cilData && <CilResultAnalytics data={cilData} />}
 
       {bank && <ResultReview questions={bank as never} answers={answers} itemStats={cilData?.itemStats ?? null} mockRefId={att.refId} />}
+
+      <div className="mt-10">{navButtons}</div>
     </div>
   );
 }
