@@ -36,7 +36,7 @@
         "1 : f / H",
         "1 : (H + h) / f"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Photo scale 1/s = f / (H - h); for example, if f=152mm and (H-h)=3040m, scale is 1:20,000."
     },
     {
@@ -54,7 +54,7 @@
         "A horizontal line",
         "The nadir line"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The axis of tilt is the line of greatest slope, passing through the principal point and nadir."
     },
     {
@@ -72,7 +72,7 @@
         "Bottom of the photo",
         "Horizon"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "For a truly vertical photo, the nadir and principal point coincide."
     },
     {
@@ -90,8 +90,8 @@
         "Just the focal length",
         "Only the ground distance"
       ],
-      "answer": "B",
-      "solution": "Height h = B \u00d7 f / p where B is the air base (or ground base for a single photo) and p is parallax."
+      "answer": 1,
+      "solution": "Height h = B × f / p where B is the air base (or ground base for a single photo) and p is parallax."
     },
     {
       "id": "ncl-surveyor-15-005",
@@ -108,7 +108,7 @@
         "GPS coordinates",
         "The camera"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The model (or relative) coordinate system is arbitrary, usually with origin at the left exposure station."
     },
     {
@@ -126,7 +126,7 @@
         "A flight path",
         "A software tool"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Bridging links adjacent flight strips via tie points for overall network strength."
     },
     {
@@ -144,7 +144,7 @@
         "Ground points are at the same elevation",
         "Photos overlap 100%"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "The radiation (collinearity) condition ensures each ray passes through the exposure station."
     },
     {
@@ -162,7 +162,7 @@
         "A map",
         "A satellite image"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Monoplotting drapes a single oblique or vertical photo over a DEM for pseudo-3D visualisation."
     },
     {
@@ -180,7 +180,7 @@
         "Base length",
         "Photo diagonal"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Principal distance = calibrated focal length = distance from perspective centre to image plane."
     },
     {
@@ -198,7 +198,7 @@
         "50-60%",
         "90%"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Standard side overlap for drone mapping is 20-30%; more may be needed in terrain with steep slopes."
     },
     {
@@ -216,7 +216,7 @@
         "Left from right photos",
         "GPS from GLONASS"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Classification filters ground returns from vegetation, buildings, and other objects."
     },
     {
@@ -231,10 +231,10 @@
       "options": [
         "DSM - DTM",
         "DSM + DTM",
-        "DSM \u00d7 DTM",
+        "DSM × DTM",
         "DSM / DTM"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "nDSM (also called CHM - canopy height model) = DSM - DTM, giving the height of objects above ground."
     },
     {
@@ -252,7 +252,7 @@
         "Top-left corner",
         "Camera lens"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Photo coordinates (x, y) are measured from the principal point, defined by fiducial marks."
     },
     {
@@ -270,7 +270,7 @@
         "Orthorectification",
         "DEM extraction"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Camera calibration determines interior orientation parameters (focal length, principal point, distortions)."
     },
     {
@@ -288,7 +288,7 @@
         "Focal length changes",
         "No effect"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Radial and tangential lens distortions displace points from their true geometric positions."
     },
     {
@@ -306,7 +306,7 @@
         "A GPS point",
         "A benchmark"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tie points link adjacent photos (and strips) but don't necessarily have known ground coordinates."
     },
     {
@@ -324,7 +324,7 @@
         "Only one strip",
         "Only control points"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Block adjustment handles all photos in a block together, improving overall accuracy."
     },
     {
@@ -342,7 +342,7 @@
         "The photo border",
         "The principal axis"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Given two photos, a point in one photo must lie on the corresponding epipolar line in the other."
     },
     {
@@ -360,8 +360,8 @@
         "Ground coordinates",
         "DEM information"
       ],
-      "answer": "B",
-      "solution": "The fundamental matrix F relates corresponding points across two views via x'\u1d40Fx = 0."
+      "answer": 1,
+      "solution": "The fundamental matrix F relates corresponding points across two views via x'ᵀFx = 0."
     },
     {
       "id": "ncl-surveyor-15-020",
@@ -378,7 +378,7 @@
         "All surface features",
         "Underground features"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "DTM (or DEM) shows the ground surface with vegetation and buildings removed."
     },
     {
@@ -396,7 +396,7 @@
         "Aerial photograph",
         "Underground photo"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A section is a vertical slice showing the vertical extent of workings along a specified line."
     },
     {
@@ -414,7 +414,7 @@
         "1:2500",
         "1:500"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "Large-scale mine plans (e.g., 1:500 or 1:1000) show detail of active working areas."
     },
     {
@@ -432,7 +432,7 @@
         "Only geological features",
         "Only surface features"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Progress plans record the state of workings at specific dates, showing advance over time."
     },
     {
@@ -450,7 +450,7 @@
         "Only geological faults",
         "Only borehole locations"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Contour plans depict terrain or seam elevation through contour lines."
     },
     {
@@ -468,7 +468,7 @@
         "Mine equipment",
         "Surface buildings"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Geological sections illustrate the vertical succession of strata, faults, and seams."
     },
     {
@@ -486,7 +486,7 @@
         "Underground water",
         "Ventilation circuit"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Seam plans depict the outline, outcrop, and workings within a particular coal seam."
     },
     {
@@ -504,7 +504,7 @@
         "Only underground workings",
         "Only geological features"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Subsidence monitoring plans show measurement points and contours of surface movement."
     },
     {
@@ -522,7 +522,7 @@
         "Improve ventilation",
         "Store explosives"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Pillars are left to support the overlying strata and prevent roof collapse."
     },
     {
@@ -540,7 +540,7 @@
         "Measure distances",
         "Ventilate the mine"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Roof bolts bind together weak immediate roof layers, creating a competent beam."
     },
     {
@@ -558,7 +558,7 @@
         "The haul road",
         "The boundary of the mine lease"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The line of goaf marks the limit of where coal has been extracted and the roof has been allowed to collapse."
     },
     {
@@ -576,7 +576,7 @@
         "A type of explosive",
         "A survey instrument"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Benches are horizontal levels stepped into the pit wall for safe working and stability."
     },
     {
@@ -594,7 +594,7 @@
         "A safety wall",
         "A retaining wall"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The highwall is the exposed vertical face at the working edge of an opencast mine."
     },
     {
@@ -612,7 +612,7 @@
         "A type of geological formation",
         "A survey marker"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Dumps (overburden dumps) are designated areas where waste rock is deposited."
     },
     {
@@ -630,7 +630,7 @@
         "Ventilation",
         "Water drainage"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Haul roads are engineered routes for heavy mining vehicles."
     },
     {
@@ -648,7 +648,7 @@
         "Be zero",
         "Exceed 20%"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Haul road gradients are typically 8-12% to balance haul efficiency and safety."
     },
     {
@@ -666,7 +666,7 @@
         "A type of drill",
         "A measuring instrument"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The batter angle is the angle of the bench face from the horizontal."
     },
     {
@@ -684,7 +684,7 @@
         "The angle of the haul road",
         "90 degrees"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Overall slope angle considers all benches and berms from top to bottom of the pit."
     },
     {
@@ -702,7 +702,7 @@
         "A drilling tool",
         "A type of explosive"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Berms are safety benches between main benches to catch falling rocks."
     },
     {
@@ -720,7 +720,7 @@
         "Foreman",
         "Operator"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The mine surveyor is responsible for preparing and maintaining accurate mine plans."
     },
     {
@@ -738,7 +738,7 @@
         "The ventilation system",
         "The explosives magazine"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Safety (barrier) pillars protect surface features and prevent water ingress."
     },
     {
@@ -756,7 +756,7 @@
         "Improves ventilation",
         "Increases visibility"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Coal dust mixed with air can cause devastating explosions if ignited."
     },
     {
@@ -774,7 +774,7 @@
         "Mark survey stations",
         "Cool the workings"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Stone dust (limestone) is spread to inertize coal dust and prevent explosion propagation."
     },
     {
@@ -792,7 +792,7 @@
         "Operating the ventilation fan",
         "Surveying the mine"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Shot firers are trained and licensed personnel who handle blasting operations."
     },
     {
@@ -810,7 +810,7 @@
         "Coal Mining Rules",
         "Certificate of Mine Register"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Coal Mines Regulations 2017 (CMR 2017) govern safety and operational requirements in Indian coal mines."
     },
     {
@@ -828,7 +828,7 @@
         "Mineral taxation",
         "Mine auctioning"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The Mines Act 1952 comprehensively covers safety, working hours, health, and welfare provisions."
     },
     {
@@ -846,7 +846,7 @@
         "Only production data",
         "Only geological information"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Statutory records include survey books, plans, sections, and all measurement data."
     },
     {
@@ -864,7 +864,7 @@
         "Filling it with water",
         "Building on it immediately"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Reclamation includes backfilling, grading, topsoiling, and revegetation."
     },
     {
@@ -882,7 +882,7 @@
         "No reclamation",
         "Reclaiming only the surface"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Progressive reclamation restores land in stages as mining advances."
     },
     {
@@ -900,7 +900,7 @@
         "Depth of the seam",
         "Thickness of the seam"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Strike is the bearing of the line formed by the intersection of the seam plane with a horizontal plane."
     },
     {
@@ -918,7 +918,7 @@
         "Thickness of coal",
         "Depth below surface"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Dip is the angle of steepest descent of the seam plane, measured from horizontal."
     },
     {
@@ -936,7 +936,7 @@
         "A survey instrument",
         "A type of mining method"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A fault is a fracture along which the rock on one side has moved relative to the other."
     },
     {
@@ -954,7 +954,7 @@
         "Surface exploration only",
         "Storage"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Shafts serve multiple purposes: hoisting, ventilation, escape, and drainage."
     },
     {
@@ -972,7 +972,7 @@
         "1 in 3",
         "1 in 1"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Underground haulage roads typically have gradients of 1:10 to 1:8."
     },
     {
@@ -990,7 +990,7 @@
         "Measuring distances",
         "Ventilation"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Man-riding systems (personnel conveyors, rail-mounted vehicles) transport workers."
     },
     {
@@ -1008,7 +1008,7 @@
         "Coal is transported",
         "Explosives are stored"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Proper ventilation provides fresh air, dilutes gases, and removes dust and heat."
     },
     {
@@ -1026,7 +1026,7 @@
         "Block light",
         "Store equipment"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Ventilation doors/stoppings control the direction and quantity of airflow."
     },
     {
@@ -1044,7 +1044,7 @@
         "Toward the ventilation shaft",
         "Along the surface"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Inbye = toward the working face; outbye = toward the shaft/surface."
     },
     {
@@ -1062,7 +1062,7 @@
         "Replace the main survey",
         "Only for training"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Check (verification) measurements independently verify results for quality assurance."
     },
     {
@@ -1080,7 +1080,7 @@
         "It is the most accurate method",
         "It requires only one person"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Traverse methods are well-suited to the linear, constrained geometry of underground workings."
     },
     {
@@ -1094,11 +1094,11 @@
       "stem": "The 'setting out' of a pillar involves:",
       "options": [
         "Measuring its height",
-        "Marking the pillar boundaries on the floor for extraction or\u7559\u8bbe",
+        "Marking the pillar boundaries on the floor for extraction or留设",
         "Counting the coal",
         "Measuring temperature"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Setting out defines the pillar dimensions and position on the mine floor."
     },
     {
@@ -1116,7 +1116,7 @@
         "GPS",
         "Satellite imagery"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Seam height (thickness) is measured directly with a tape or staff."
     },
     {
@@ -1134,7 +1134,7 @@
         "Only the entrance",
         "Only near explosives"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Roof-to-floor measurements at specified intervals monitor seam thickness and support adequacy."
     },
     {
@@ -1152,7 +1152,7 @@
         "Diagonal plane",
         "Curved surface"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Cross-sections show vertical profiles through the mine along a defined section line."
     },
     {
@@ -1170,7 +1170,7 @@
         "Only employee details",
         "Only geological data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The plan book is a legal document containing survey records, plans, and sections."
     },
     {
@@ -1188,7 +1188,7 @@
         "The surface only",
         "All elevations in one view"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A level plan depicts workings at one particular elevation or seam horizon."
     },
     {
@@ -1206,7 +1206,7 @@
         "Only the mining method",
         "Only the equipment used"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Pillar design considers depth, pillar dimensions, material properties, and safety factors."
     },
     {
@@ -1224,7 +1224,7 @@
         "The shaft from the surface",
         "Two mines"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Barrier pillars isolate panels to prevent fire, flooding, or explosion spread."
     },
     {
@@ -1242,7 +1242,7 @@
         "Only depth",
         "Only coal quality"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Pillar strength is a function of width-to-height ratio and material properties."
     },
     {
@@ -1260,7 +1260,7 @@
         "Number of pillars / total pillars",
         "Both A and B"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "Extraction ratio can be expressed by area or volume; it indicates what fraction of coal is removed."
     },
     {
@@ -1278,7 +1278,7 @@
         "Only mine workings",
         "Only vegetation"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A geological map shows rock units, faults, folds, and other features mapped at the surface."
     },
     {
@@ -1296,7 +1296,7 @@
         "The contour line",
         "The fault line"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Strike lines show where a bed intersects a horizontal plane at a given elevation."
     },
     {
@@ -1314,7 +1314,7 @@
         "A triangle",
         "A square"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The dip symbol is an arrow pointing down-dip with the angle of dip annotated."
     },
     {
@@ -1332,7 +1332,7 @@
         "Always downstream",
         "Across the valley"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The V points upstream if dip < valley gradient, downstream if dip > valley gradient, and along the valley if dip = valley gradient."
     },
     {
@@ -1350,7 +1350,7 @@
         "The beds are faulted",
         "The beds are metamorphosed"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Conformable beds are parallel; there is no erosion surface or angular discordance between them."
     },
     {
@@ -1368,7 +1368,7 @@
         "A conformable contact",
         "A metamorphic boundary"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "An unconformity is an erosion surface or non-depositional break between older and younger rocks."
     },
     {
@@ -1386,7 +1386,7 @@
         "A fault contact",
         "Intrusive rocks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Angular unconformity: lower beds are tilted/folded, upper beds are deposited at a different angle."
     },
     {
@@ -1404,7 +1404,7 @@
         "No age relationship",
         "Only one limb"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "In an anticline, the oldest rocks are in the core and youngest on the limbs."
     },
     {
@@ -1422,7 +1422,7 @@
         "The strike direction",
         "The dip direction"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Plunge is the angle between the fold axis and the horizontal."
     },
     {
@@ -1440,7 +1440,7 @@
         "A colour change only",
         "A contour line"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Faults are marked with thick lines and symbols indicating the type and direction of movement."
     },
     {
@@ -1458,7 +1458,7 @@
         "Movement is purely horizontal",
         "There is no movement"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Normal fault: hanging wall drops relative to footwall (extensional regime)."
     },
     {
@@ -1476,7 +1476,7 @@
         "F",
         "G"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Arrangement: _,_,A,E,_,B,C with D at right end. B is right of E."
     },
     {
@@ -1494,7 +1494,7 @@
         "C. Gandak",
         "D. Son"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Kosi river is known as the Sorrow of Bihar due to frequent floods."
     },
     {
@@ -1512,7 +1512,7 @@
         "C. Lakshadweep",
         "D. Andaman & Nicobar Islands"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "Indira Point in Great Nicobar is the southernmost point of India."
     },
     {
@@ -1530,7 +1530,7 @@
         "C. Banihal Pass",
         "D. Khardung La"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Zoji La connects Srinagar with Leh in Jammu & Kashmir."
     },
     {
@@ -1548,8 +1548,8 @@
         "C. Odisha",
         "D. West Bengal"
       ],
-      "answer": "C",
-      "solution": "Tropic of Cancer passes through Rajasthan, MP, Gujarat, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram \u2014 but not Odisha."
+      "answer": 2,
+      "solution": "Tropic of Cancer passes through Rajasthan, MP, Gujarat, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram — but not Odisha."
     },
     {
       "id": "ncl-surveyor-15-g006",
@@ -1566,7 +1566,7 @@
         "C. Sambhar Lake",
         "D. Wular Lake"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Chilika Lake in Odisha is the largest saltwater lake in India."
     },
     {
@@ -1584,7 +1584,7 @@
         "C. Tamil Nadu",
         "D. Andhra Pradesh"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Gujarat has the longest coastline among Indian states."
     },
     {
@@ -1602,7 +1602,7 @@
         "C. Sharavathi",
         "D. Tungabhadra"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Jog Falls is formed by the Sharavathi River in Karnataka."
     },
     {
@@ -1620,7 +1620,7 @@
         "C. Mahendragiri",
         "D. Kudremukh"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Anamudi (2,695 m) in Kerala is the highest peak in South India."
     },
     {
@@ -1638,7 +1638,7 @@
         "C. Grand Anicut Canal",
         "D. Narmada Canal"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Indira Gandhi Canal is the longest canal in India."
     },
     {
@@ -1656,7 +1656,7 @@
         "C. Brahmaputra and Meghna",
         "D. Ganga and Son"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Sundarbans delta is formed by the Ganga and Brahmaputra rivers."
     },
     {
@@ -1674,7 +1674,7 @@
         "C. Red soil",
         "D. Laterite soil"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Black (regur) soil is ideal for cotton cultivation."
     },
     {
@@ -1692,7 +1692,7 @@
         "C. Myanmar",
         "D. Bangladesh"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Palk Strait separates India (Tamil Nadu) from Sri Lanka."
     },
     {
@@ -1710,7 +1710,7 @@
         "C. Siliguri Corridor",
         "D. Banihal Pass"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Siliguri Corridor (Chicken's Neck) connects mainland India to the North-East."
     },
     {
@@ -1728,7 +1728,7 @@
         "C. Karnataka",
         "D. Rajasthan"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tamil Nadu receives rainfall from both Southwest (partial) and Northeast monsoons."
     },
     {
@@ -1746,7 +1746,7 @@
         "C. Maharashtra",
         "D. Chhattisgarh"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Madhya Pradesh has the largest forest cover in India by area."
     },
     {
@@ -1764,7 +1764,7 @@
         "C. S. Radhakrishnan",
         "D. Zakir Husain"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Dr. Rajendra Prasad was the first President of India (1950-1962)."
     },
     {
@@ -1782,7 +1782,7 @@
         "C. Part IV",
         "D. Part V"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Fundamental Rights are in Part III (Articles 12-35) of the Indian Constitution."
     },
     {
@@ -1800,7 +1800,7 @@
         "C. 11",
         "D. 12"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "There are 11 fundamental duties under Article 51A."
     },
     {
@@ -1818,7 +1818,7 @@
         "C. Article 17",
         "D. Article 19"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Article 17 abolishes untouchability in all forms."
     }
   ]

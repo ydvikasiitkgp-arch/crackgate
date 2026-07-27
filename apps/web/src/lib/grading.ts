@@ -5,6 +5,14 @@
 
 import { natMatches } from "@/lib/nat";
 
+// ponytail: tolerate legacy letter answers ("A"-"D") in addition to numeric indices.
+// Prevents silent grading failures if new questions are added with the wrong format.
+const LETTER_IDX: Record<string, number> = { A: 0, B: 1, C: 2, D: 3 };
+function normalizeAnswer(a: unknown): number | number[] | string | null | undefined {
+  if (typeof a === "string" && a.length === 1 && LETTER_IDX[a] !== undefined) return LETTER_IDX[a];
+  return a as number | number[] | string | null | undefined;
+}
+
 export type Question =
   | {
       type: "MCQ";
@@ -50,7 +58,7 @@ export function isQuestionCorrect(q: Question, a: AnswerMap[number]): boolean {
     const got = Array.isArray(a) ? [...a].sort() : [];
     return exp.length === got.length && exp.every((v, k) => v === got[k]);
   }
-  return a === q.answer;
+  return normalizeAnswer(a) === q.answer;
 }
 
 export function grade(
@@ -87,7 +95,7 @@ export function grade(
       const got = Array.isArray(a) ? [...a].sort() : [];
       ok = exp.length === got.length && exp.every((v, k) => v === got[k]);
     } else {
-      ok = a === q.answer;
+      ok = normalizeAnswer(a) === q.answer;
     }
 
     if (ok) {

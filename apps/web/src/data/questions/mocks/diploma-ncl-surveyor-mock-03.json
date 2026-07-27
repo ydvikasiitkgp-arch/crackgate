@@ -36,7 +36,7 @@
         "Only short distances need measuring",
         "Only horizontal angles are needed"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tachometry is ideal for rough, undulating, or obstructed terrain where direct chaining is difficult or inaccurate."
     },
     {
@@ -54,7 +54,7 @@
         "1 in 10,000",
         "1 in 100,000"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Stadia tachometry typically achieves accuracy of 1 in 500 to 1 in 1000, suitable for preliminary surveys."
     },
     {
@@ -72,7 +72,7 @@
         "Shorter than the true distance",
         "Unaffected"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A tilted staff gives a larger stadia interval, making the computed distance longer than the true distance."
     },
     {
@@ -90,7 +90,7 @@
         "5 m long",
         "10 m long"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A standard subtense bar is 2 m long, precisely calibrated and mounted horizontally."
     },
     {
@@ -103,13 +103,13 @@
       "difficulty": "medium",
       "stem": "In the subtense bar method, the distance is calculated as:",
       "options": [
-        "D = b / (2 tan(\u03b8/2))",
+        "D = b / (2 tan(θ/2))",
         "D = KS",
-        "D = C \u00d7 s",
-        "D = b \u00d7 sin \u03b8"
+        "D = C × s",
+        "D = b × sin θ"
       ],
-      "answer": "A",
-      "solution": "D = b / (2 tan(\u03b8/2)), where b is the bar length (2 m) and \u03b8 is the measured horizontal angle."
+      "answer": 0,
+      "solution": "D = b / (2 tan(θ/2)), where b is the bar length (2 m) and θ is the measured horizontal angle."
     },
     {
       "id": "ncl-surveyor-03-006",
@@ -126,7 +126,7 @@
         "Measuring vertical angles",
         "Levelling"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Subtense bar is useful for short to medium distances (up to ~200 m) with high accuracy."
     },
     {
@@ -144,7 +144,7 @@
         "Setting out buildings",
         "GPS base station surveys"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tachometry is widely used in mines for rapid profiling of benches, dumps, high walls, and underground openings."
     },
     {
@@ -159,10 +159,10 @@
       "options": [
         "f/i, where f = focal length of objective and i = stadia hair interval",
         "i/f",
-        "f \u00d7 i",
+        "f × i",
         "f + i"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "K = f/i, where f is the focal length of the objective and i is the distance between stadia hairs at the focal plane."
     },
     {
@@ -180,7 +180,7 @@
         "200",
         "150"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "When f/i = 100, the stadia interval factor K equals exactly 100."
     },
     {
@@ -198,7 +198,7 @@
         "The stadia interval",
         "The staff readings"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The vertical angle is used both to compute the height difference and to reduce the slope distance to horizontal distance."
     },
     {
@@ -216,7 +216,7 @@
         "Requires no staff",
         "No vertical angle measurement needed"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The tangential method offers higher accuracy than stadia at shorter distances because it uses direct angular measurements."
     },
     {
@@ -234,7 +234,7 @@
         "Horizontal",
         "At any angle"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The staff must be held perfectly vertical for accurate stadia readings; otherwise, the distance will be in error."
     },
     {
@@ -252,7 +252,7 @@
         "Staff readings",
         "Benchmarks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tachometry replaces direct distance measurement by chaining/taping with optical distance determination."
     },
     {
@@ -270,7 +270,7 @@
         "Measure horizontal angles",
         "Determine the instrument height"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The stadia diaphragm has upper, middle, and lower hairs; the difference between upper and lower readings gives the stadia interval."
     },
     {
@@ -283,12 +283,12 @@
       "difficulty": "medium",
       "stem": "The 'tachometric constant' is the product of:",
       "options": [
-        "Focal length \u00d7 stadia interval",
+        "Focal length × stadia interval",
         "Focal length / stadia interval",
         "Stadia interval / focal length",
         "Focal length + stadia interval"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The tachometric constant K = f/i (focal length of objective divided by stadia hair interval)."
     },
     {
@@ -306,7 +306,7 @@
         "Contour lines only",
         "Building foundation details"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Control surveys establish a network of accurately located horizontal and vertical control points."
     },
     {
@@ -324,7 +324,7 @@
         "GPS only",
         "Taping"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Triangulation determines positions by measuring angles in a network of interconnected triangles."
     },
     {
@@ -342,7 +342,7 @@
         "Any random line",
         "The line connecting two benchmarks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The base line is measured with the highest precision and serves as the scale reference for the entire triangulation network."
     },
     {
@@ -360,7 +360,7 @@
         "The number of surveyors",
         "The weight of the instrument"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Strength of figure describes the geometric quality of triangle shapes; well-conditioned triangles give better accuracy."
     },
     {
@@ -373,13 +373,13 @@
       "difficulty": "medium",
       "stem": "A well-conditioned triangle in triangulation has angles between:",
       "options": [
-        "0\u00b0 and 90\u00b0",
-        "30\u00b0 and 120\u00b0",
-        "45\u00b0 and 135\u00b0",
-        "60\u00b0 and 90\u00b0"
+        "0° and 90°",
+        "30° and 120°",
+        "45° and 135°",
+        "60° and 90°"
       ],
-      "answer": "B",
-      "solution": "Well-conditioned triangles have all angles between 30\u00b0 and 120\u00b0 for optimal geometric strength."
+      "answer": 1,
+      "solution": "Well-conditioned triangles have all angles between 30° and 120° for optimal geometric strength."
     },
     {
       "id": "ncl-surveyor-03-021",
@@ -392,12 +392,12 @@
       "stem": "The 'strength of figure' factor R is given by:",
       "options": [
         "R = D + C",
-        "R = \u03b4\u2081\u00b2 + \u03b4\u2081\u03b4\u2082 + \u03b4\u2082\u00b2 (where \u03b4 are the factors from the triangle)",
+        "R = δ₁² + δ₁δ₂ + δ₂² (where δ are the factors from the triangle)",
         "R = 1/R",
         "R = A + B"
       ],
-      "answer": "B",
-      "solution": "R = D + C where D = \u03b4\u2081\u00b2 + \u03b4\u2081\u03b4\u2082 + \u03b4\u2082\u00b2 and C depends on the number of stations; smaller R means stronger figure."
+      "answer": 1,
+      "solution": "R = D + C where D = δ₁² + δ₁δ₂ + δ₂² and C depends on the number of stations; smaller R means stronger figure."
     },
     {
       "id": "ncl-surveyor-03-022",
@@ -410,12 +410,12 @@
       "stem": "In triangulation, 'station adjustment' ensures:",
       "options": [
         "All distances are equal",
-        "The sum of angles around a station equals 360\u00b0",
+        "The sum of angles around a station equals 360°",
         "All triangles are equilateral",
         "The base line is correct"
       ],
-      "answer": "B",
-      "solution": "Station adjustment distributes angular misclosure so the sum of angles meeting at a station equals exactly 360\u00b0."
+      "answer": 1,
+      "solution": "Station adjustment distributes angular misclosure so the sum of angles meeting at a station equals exactly 360°."
     },
     {
       "id": "ncl-surveyor-03-023",
@@ -427,13 +427,13 @@
       "difficulty": "medium",
       "stem": "A 'geodetic triangle' on the earth's surface has angles that sum to:",
       "options": [
-        "Exactly 180\u00b0",
-        "Slightly more than 180\u00b0 (spherical excess)",
-        "Slightly less than 180\u00b0",
-        "Exactly 360\u00b0"
+        "Exactly 180°",
+        "Slightly more than 180° (spherical excess)",
+        "Slightly less than 180°",
+        "Exactly 360°"
       ],
-      "answer": "B",
-      "solution": "On a curved earth, triangle angles sum to 180\u00b0 + spherical excess; the excess depends on the triangle area."
+      "answer": 1,
+      "solution": "On a curved earth, triangle angles sum to 180° + spherical excess; the excess depends on the triangle area."
     },
     {
       "id": "ncl-surveyor-03-024",
@@ -446,12 +446,12 @@
       "stem": "Spherical excess is:",
       "options": [
         "Always negative",
-        "The amount by which the sum of geodetic triangle angles exceeds 180\u00b0",
+        "The amount by which the sum of geodetic triangle angles exceeds 180°",
         "Always ignored",
         "Equal to the base line error"
       ],
-      "answer": "B",
-      "solution": "Spherical excess E = (A \u00d7 180\u00b0) / (R\u00b2 \u00d7 sin 1\"), where A is the triangle area on the ellipsoid."
+      "answer": 1,
+      "solution": "Spherical excess E = (A × 180°) / (R² × sin 1\"), where A is the triangle area on the ellipsoid."
     },
     {
       "id": "ncl-surveyor-03-025",
@@ -468,7 +468,7 @@
         "Is occupied by a satellite",
         "Is on a hilltop"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A satellite station is a supplementary station observed from the main network but not forming part of the primary triangle chain."
     },
     {
@@ -486,7 +486,7 @@
         "The elevation",
         "The area"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "At satellite stations, angles are observed to surrounding main network points, and the station position is computed by intersection."
     },
     {
@@ -504,7 +504,7 @@
         "GPS only",
         "levelling"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Trilateration determines positions by measuring distances (typically with EDM) between control stations."
     },
     {
@@ -522,7 +522,7 @@
         "Higher angular accuracy",
         "Simpler computation"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Trilateration does not require angle measurement, so stations need not be mutually visible (only line of sight for EDM)."
     },
     {
@@ -540,7 +540,7 @@
         "Measuring vertical angles only",
         "Underground levelling"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GPS is used for establishing primary horizontal control, densification, and surveying accessible surface areas."
     },
     {
@@ -558,7 +558,7 @@
         "It is too accurate",
         "It requires too many satellites"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GPS requires clear sky visibility; it cannot work in deep pits, underground mines, or dense forest cover."
     },
     {
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "Differential GPS (DGPS) improves accuracy by:",
       "options": [
-        "Using two GPS receivers \u2014 one as base and one as rover",
+        "Using two GPS receivers — one as base and one as rover",
         "Using more satellites",
         "Using a longer antenna",
         "Measuring at night"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "DGPS uses a base station at a known position to compute corrections applied to the rover, improving accuracy."
     },
     {
@@ -594,7 +594,7 @@
         "Only post-processed results",
         "Only vertical measurements"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "RTK GPS uses carrier-phase measurements with a base station to provide centimetre-level accuracy in real time."
     },
     {
@@ -612,7 +612,7 @@
         "The magnetic meridian",
         "A levelling line"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A GPS baseline is the three-dimensional vector between two points observed simultaneously."
     },
     {
@@ -630,7 +630,7 @@
         "Observations are taken at night",
         "Only one receiver is used"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Static GPS involves long-duration observations (1-24 hours) at fixed points for the highest accuracy."
     },
     {
@@ -643,13 +643,13 @@
       "difficulty": "medium",
       "stem": "A 'strong triangle figure' in triangulation is one in which:",
       "options": [
-        "All angles are equal to 60\u00b0",
-        "Angles are well-distributed between 30\u00b0 and 120\u00b0 with good geometry",
-        "One angle is 0\u00b0",
+        "All angles are equal to 60°",
+        "Angles are well-distributed between 30° and 120° with good geometry",
+        "One angle is 0°",
         "The triangle is very elongated"
       ],
-      "answer": "B",
-      "solution": "Strong triangle figures have well-conditioned angles (30\u00b0-120\u00b0) that minimize error propagation."
+      "answer": 1,
+      "solution": "Strong triangle figures have well-conditioned angles (30°-120°) that minimize error propagation."
     },
     {
       "id": "ncl-surveyor-03-036",
@@ -666,7 +666,7 @@
         "Using a compass",
         "GPS only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Forward direction involves measuring angles from a known station to determine the direction to the next unknown station."
     },
     {
@@ -684,7 +684,7 @@
         "A single triangle",
         "A circle"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A braced quadrilateral has both diagonals observed, providing redundancy and strong geometric strength."
     },
     {
@@ -698,11 +698,11 @@
       "stem": "The 'base line measurement' in old triangulation surveys was done using:",
       "options": [
         "EDM only",
-        "Precision\u4e08\u91cf (taping) with steel bands or invar wires",
+        "Precision丈量 (taping) with steel bands or invar wires",
         "GPS",
         "Stadia method"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Historically, base lines were measured with invar tapes/wires under precise tension and temperature conditions."
     },
     {
@@ -720,7 +720,7 @@
         "Stadia method",
         "Subtense bar"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "EDM is now the standard for precise base line measurement in control surveys."
     },
     {
@@ -738,7 +738,7 @@
         "The base line is correct",
         "All angles are equal"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Side equations verify that distances computed through different chains of triangles yield consistent results."
     },
     {
@@ -756,7 +756,7 @@
         "Is used only for contouring",
         "Has the lowest accuracy"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Primary control is the highest-accuracy network from which secondary and tertiary surveys are derived."
     },
     {
@@ -774,7 +774,7 @@
         "Underground surveying",
         "Shaft plumbing only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GPS enables rapid topographic surveys, volume calculations, and real-time equipment tracking in open-pit mines."
     },
     {
@@ -792,7 +792,7 @@
         "An old survey datum",
         "A contour system"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "WGS 84 (World Geodetic System 1984) is the global reference coordinate system used by GPS."
     },
     {
@@ -810,7 +810,7 @@
         "Only a rotation",
         "Only a scale factor"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GPS geodetic coordinates must be transformed using a map projection (e.g., UTM) and datum conversion to local grid."
     },
     {
@@ -828,7 +828,7 @@
         "Transit rule",
         "Ignoring it"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Angular misclosure is distributed equally (simple) or by least squares adjustment (rigorous) for high-accuracy surveys."
     },
     {
@@ -846,7 +846,7 @@
         "From the pole",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Angular distance above or below the horizon."
     },
     {
@@ -864,7 +864,7 @@
         "The zenith",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Measured from north or south point along the horizon."
     },
     {
@@ -882,7 +882,7 @@
         "The angle at the pole",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Angle measured westward from the observer's meridian."
     },
     {
@@ -900,7 +900,7 @@
         "Altitude",
         "Azimuth"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Analogous to latitude on Earth."
     },
     {
@@ -918,7 +918,7 @@
         "The same as azimuth",
         "Nothing"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Zenith distance = 90 - altitude."
     },
     {
@@ -936,7 +936,7 @@
         "Two poles and zenith",
         "Nothing"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Formed by zenith, celestial pole, and star."
     },
     {
@@ -954,7 +954,7 @@
         "Moon's motion",
         "Planet's motion"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Based on stars' apparent motion."
     },
     {
@@ -972,7 +972,7 @@
         "Moon's motion",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Based on Sun's apparent motion."
     },
     {
@@ -990,7 +990,7 @@
         "12 minutes",
         "24 minutes"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Shorter by approximately 4 minutes."
     },
     {
@@ -1008,7 +1008,7 @@
         "The prime meridian",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Based on the observer's longitude."
     },
     {
@@ -1026,7 +1026,7 @@
         "Altitude of the sun",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Hour angle of the vernal equinox."
     },
     {
@@ -1044,7 +1044,7 @@
         "Measuring solar altitude only",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Observing star at equal altitudes east and west."
     },
     {
@@ -1062,7 +1062,7 @@
         "Magnetic declination",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Determines true north direction."
     },
     {
@@ -1080,7 +1080,7 @@
         "Star observation only",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "By free gyroscope precession."
     },
     {
@@ -1098,7 +1098,7 @@
         "Magnetic north",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Maintains axis in the same plane in space."
     },
     {
@@ -1116,7 +1116,7 @@
         "Only vibration",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Slow rotation of spin axis about vertical axis."
     },
     {
@@ -1134,7 +1134,7 @@
         "At the pole",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "When on the observer's meridian."
     },
     {
@@ -1152,7 +1152,7 @@
         "At the horizon",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Directly above the observer on celestial sphere."
     },
     {
@@ -1170,7 +1170,7 @@
         "The meridian",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Projection of Earth's equator onto celestial sphere."
     },
     {
@@ -1188,7 +1188,7 @@
         "Moon",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Apparent path of the Sun on celestial sphere."
     },
     {
@@ -1206,7 +1206,7 @@
         "Standard time zones",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Based on the prime meridian."
     },
     {
@@ -1224,7 +1224,7 @@
         "Local time",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Essentially the same as GMT."
     },
     {
@@ -1242,7 +1242,7 @@
         "Magnetic declination",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The observer's longitude."
     },
     {
@@ -1260,7 +1260,7 @@
         "It moves fast",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Very close to the north celestial pole."
     },
     {
@@ -1278,7 +1278,7 @@
         "Equal to latitude",
         "Nothing"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Co-latitude = 90 - latitude."
     },
     {
@@ -1296,7 +1296,7 @@
         "Three stars",
         "Nothing"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Zenith, north celestial pole, and star."
     },
     {
@@ -1314,7 +1314,7 @@
         "Sidereal and solar time",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Between apparent solar time and mean solar time."
     },
     {
@@ -1332,7 +1332,7 @@
         "Gravity only",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Conservation of angular momentum of spinning rotor."
     },
     {
@@ -1350,7 +1350,7 @@
         "Sets",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Crosses the observer's meridian."
     },
     {
@@ -1368,7 +1368,7 @@
         "The poles",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Through zenith and east-west points."
     },
     {
@@ -1386,7 +1386,7 @@
         "Earth's revolution",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Caused by Earth's rotation."
     },
     {
@@ -1404,7 +1404,7 @@
         "Earth's rotation",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Caused by Earth's revolution."
     },
     {
@@ -1422,7 +1422,7 @@
         "Cassiopeia",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "In Ursa Minor."
     },
     {
@@ -1440,7 +1440,7 @@
         "Declination",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Equal to latitude of the observer."
     },
     {
@@ -1458,7 +1458,7 @@
         "Same point",
         "Nothing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Diametrically opposite on celestial sphere."
     },
     {
@@ -1476,7 +1476,7 @@
         "C. Law of reaction",
         "D. Law of gravity"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Newton's first law is the law of inertia."
     },
     {
@@ -1494,7 +1494,7 @@
         "C. Uranus",
         "D. Neptune"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Saturn has over 140 confirmed moons, the most in the solar system."
     },
     {
@@ -1512,7 +1512,7 @@
         "C. Gold",
         "D. Copper"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Gold (Au) has atomic number 79."
     },
     {
@@ -1530,8 +1530,8 @@
         "C. Vacuum",
         "D. Diamond"
       ],
-      "answer": "C",
-      "solution": "Light travels fastest in vacuum at approximately 3\u00d710\u2078 m/s."
+      "answer": 2,
+      "solution": "Light travels fastest in vacuum at approximately 3×10⁸ m/s."
     },
     {
       "id": "ncl-surveyor-03-g005",
@@ -1548,7 +1548,7 @@
         "C. Amartya Sen",
         "D. Har Gobind Khorana"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Rabindranath Tagore received the Nobel Prize in Literature in 1913."
     },
     {
@@ -1566,7 +1566,7 @@
         "C. 1954",
         "D. 1960"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Bharat Ratna was first awarded in 1954 to C. Rajagopalachari, S. Radhakrishnan, and C.V. Raman."
     },
     {
@@ -1584,7 +1584,7 @@
         "C. PV Sindhu",
         "D. Mirabai Chanu"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Neeraj Chopra received the Major Dhyan Chand Khel Ratna for javelin throw."
     },
     {
@@ -1602,7 +1602,7 @@
         "C. New York",
         "D. London"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "UN headquarters is in New York City."
     },
     {
@@ -1620,7 +1620,7 @@
         "C. Brazil, Romania, Indonesia, Canada, Saudi Arabia",
         "D. Brazil, Russia, Ireland, China, South Africa"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "BRICS originally included Brazil, Russia, India, China, and South Africa."
     },
     {
@@ -1638,7 +1638,7 @@
         "C. Dr. B.R. Ambedkar",
         "D. Bankim Chandra Chatterjee"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Jawaharlal Nehru wrote 'Discovery of India' during his imprisonment."
     },
     {
@@ -1656,7 +1656,7 @@
         "C. Sports",
         "D. Social work"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Arjuna Award is given for outstanding sports performance."
     },
     {
@@ -1674,7 +1674,7 @@
         "C. BARC",
         "D. DAE"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "ISRO (Indian Space Research Organisation) manages India's space programme."
     },
     {
@@ -1692,7 +1692,7 @@
         "C. WHO",
         "D. UNICEF"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Narges Mohammadi received the 2023 Nobel Peace Prize for her fight against oppression of women in Iran."
     },
     {
@@ -1710,7 +1710,7 @@
         "C. Vikram Sarabhai",
         "D. Homi Bhabha"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "APJ Abdul Kalam wrote his autobiography 'Wings of Fire'."
     },
     {
@@ -1728,7 +1728,7 @@
         "C. Paris",
         "D. London"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "WHO headquarters is in Geneva, Switzerland."
     },
     {
@@ -1746,7 +1746,7 @@
         "C. Mahatma Gandhi",
         "D. B.R. Ambedkar"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Mahatma Gandhi wrote the autobiography 'My Experiments with Truth'."
     },
     {
@@ -1764,7 +1764,7 @@
         "C. Fourth",
         "D. First"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Padma Vibhushan is the second-highest civilian award after Bharat Ratna."
     },
     {
@@ -1782,7 +1782,7 @@
         "C. Geneva",
         "D. Vienna"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "ICJ is headquartered in The Hague, Netherlands."
     },
     {
@@ -1800,7 +1800,7 @@
         "C. Har Gobind Khorana",
         "D. Venki Ramakrishnan"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Amartya Sen won the Nobel Prize in Economics in 1998."
     },
     {
@@ -1818,7 +1818,7 @@
         "C. Qatar",
         "D. Brazil"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Qatar hosted the FIFA World Cup 2022."
     }
   ]

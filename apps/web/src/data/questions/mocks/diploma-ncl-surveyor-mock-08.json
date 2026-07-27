@@ -36,7 +36,7 @@
         "Only deleting data",
         "Only changing colors"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "XREF allows referencing external drawings in a master drawing without embedding, enabling collaborative work and easy updates."
     },
     {
@@ -54,7 +54,7 @@
         "Only manual measurement",
         "Only counting grid squares"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Liscad computes areas using coordinate geometry methods (like the shoelace formula) from boundary coordinates."
     },
     {
@@ -72,7 +72,7 @@
         "Measuring gravitational variations",
         "Recording sound waves"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "3D laser scanners emit laser pulses and measure the time of flight or phase shift of the reflected light to calculate distance."
     },
     {
@@ -90,7 +90,7 @@
         "Increasing the receiver weight",
         "Using a different frequency only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "DGPS uses a base station at a known position to calculate corrections for satellite and atmospheric errors, improving accuracy."
     },
     {
@@ -108,7 +108,7 @@
         "Only measuring temperature",
         "Only spraying chemicals"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "UAV photogrammetry captures overlapping aerial photographs processed to create orthophotos, DEMs, and 3D models of mine areas."
     },
     {
@@ -126,8 +126,8 @@
         "The size of the scanner",
         "The battery life"
       ],
-      "answer": "B",
-      "solution": "Point density is the number of 3D points captured per unit area (points/m\u00b2), determining the detail level of the scan."
+      "answer": 1,
+      "solution": "Point density is the number of 3D points captured per unit area (points/m²), determining the detail level of the scan."
     },
     {
       "id": "ncl-surveyor-08-007",
@@ -144,7 +144,7 @@
         "Taking only one reading",
         "Using only one satellite"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Static GPS surveys occupy fixed points for extended periods, allowing long observation times for highest accuracy."
     },
     {
@@ -162,7 +162,7 @@
         "Only counting vehicles",
         "Only measuring rainfall"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Repeated laser scanning detects surface movements and deformations by comparing successive point clouds, enabling early warning of instability."
     },
     {
@@ -180,7 +180,7 @@
         "Only temperature data",
         "Only wind speed data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Airborne LiDAR provides dense 3D point cloud data that can penetrate vegetation canopy to map the bare ground surface."
     },
     {
@@ -198,7 +198,7 @@
         "The battery capacity",
         "The size of the carrying case"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Range is the maximum distance at which the scanner can accurately measure, typically 100 m to several hundred metres for mine surveying."
     },
     {
@@ -216,7 +216,7 @@
         "5 or more",
         "12"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "RTK GPS requires 5 or more satellites for reliable centimetre-level accuracy and integer ambiguity resolution."
     },
     {
@@ -234,7 +234,7 @@
         "Only mark boundaries",
         "Only take off"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GCPs are ground features with known coordinates used to georeferenced aerial photographs and assess the accuracy of photogrammetric products."
     },
     {
@@ -252,7 +252,7 @@
         "Only photographs",
         "Only temperature sensors"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Continuous monitoring uses automated sensors with data loggers and communication systems to provide real-time data on slope movement."
     },
     {
@@ -266,12 +266,12 @@
       "stem": "The 'accuracy' of a 3D laser scanner is typically expressed as:",
       "options": [
         "Only in metres",
-        "As a function of distance (e.g., \u00b15 mm at 100 m)",
+        "As a function of distance (e.g., ±5 mm at 100 m)",
         "Only as a percentage",
         "Only in degrees"
       ],
-      "answer": "B",
-      "solution": "Scanner accuracy is specified as a function of distance, e.g., \u00b15 mm at 100 m, combining ranging error and angular error."
+      "answer": 1,
+      "solution": "Scanner accuracy is specified as a function of distance, e.g., ±5 mm at 100 m, combining ranging error and angular error."
     },
     {
       "id": "ncl-surveyor-08-015",
@@ -288,7 +288,7 @@
         "10-50 cm",
         "1-5 cm"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "DGPS typically provides accuracy in the range of 10-50 cm, suitable for general mine surveying but not for high-precision work."
     },
     {
@@ -306,7 +306,7 @@
         "Drones are manually controlled only",
         "Drones can only fly short distances"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Drones with automated flight planning can cover large areas efficiently with programmed routes and required overlap for photogrammetry."
     },
     {
@@ -324,8 +324,8 @@
         "The size of the scanner",
         "The battery life"
       ],
-      "answer": "B",
-      "solution": "The scan angle defines the angular range (e.g., 360\u00b0 horizontal, 300\u00b0 vertical) over which the scanner can capture points."
+      "answer": 1,
+      "solution": "The scan angle defines the angular range (e.g., 360° horizontal, 300° vertical) over which the scanner can capture points."
     },
     {
       "id": "ncl-surveyor-08-018",
@@ -342,7 +342,7 @@
         "Only manual measurements",
         "Only temperature sensors"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Prism-based systems use automated total stations or scanners to repeatedly measure positions of prisms installed on the slope surface."
     },
     {
@@ -360,7 +360,7 @@
         "Only at the mine entrance",
         "Only at the highest point"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The base station is set up at a point with precisely known coordinates, or connected to a CORS network, to provide corrections."
     },
     {
@@ -378,7 +378,7 @@
         "2-5 cm (with GCPs)",
         "1-2 mm"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "UAV photogrammetry with ground control points typically achieves horizontal accuracy of 2-5 cm, suitable for mine surveying."
     },
     {
@@ -396,7 +396,7 @@
         "The weight of the point",
         "The colour of the surface"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Return intensity indicates the strength of the reflected laser signal, which depends on surface reflectivity, colour, and angle of incidence."
     },
     {
@@ -414,7 +414,7 @@
         "Multiple office computers",
         "Multiple printing stations"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Multi-stations are automated robotic total stations that operate continuously, measuring prism positions at regular intervals without operator."
     },
     {
@@ -432,7 +432,7 @@
         "LiDAR produces better photographs",
         "LiDAR is lighter"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "LiDAR works in any lighting (including night), can penetrate vegetation, and provides direct 3D measurements without needing image matching."
     },
     {
@@ -450,7 +450,7 @@
         "It only makes the flight longer",
         "It only increases file size"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Sufficient image overlap (typically 70-80% forward, 60-70% side) ensures photogrammetric software can match features and reconstruct 3D geometry."
     },
     {
@@ -468,7 +468,7 @@
         "Only taking photographs",
         "Only manual recording"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Deformation monitoring involves repeated measurements of the same points at regular intervals to detect and quantify movements."
     },
     {
@@ -486,7 +486,7 @@
         "The weight of the scanner",
         "The battery charging speed"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Scanning speed is the rate at which points are captured, measured in points per second (e.g., 1 million pts/sec for modern scanners)."
     },
     {
@@ -504,7 +504,7 @@
         "Too many satellites are visible",
         "The receiver battery is low"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Multipath error occurs when GPS signals reflect off nearby surfaces (buildings, ground) before reaching the receiver, causing position errors."
     },
     {
@@ -522,7 +522,7 @@
         "Only the borehole depth",
         "Only the temperature"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A digital zenith camera images stars near the zenith to determine precise astronomical position and azimuth for high-accuracy orientation."
     },
     {
@@ -540,7 +540,7 @@
         "Only deleting photographs",
         "Only viewing photographs"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Georeferencing assigns real-world coordinates to photographs using ground control points or on-board GPS data for spatial accuracy."
     },
     {
@@ -553,13 +553,13 @@
       "difficulty": "medium",
       "stem": "A 'total station' used in monitoring for dump stability typically has an angular accuracy of:",
       "options": [
-        "\u00b11\u00b0",
-        "\u00b110\u00b0",
-        "\u00b11\" to \u00b15\" (arc-seconds)",
-        "\u00b1100\u00b0"
+        "±1°",
+        "±10°",
+        "±1\" to ±5\" (arc-seconds)",
+        "±100°"
       ],
-      "answer": "C",
-      "solution": "Monitoring total stations typically have angular accuracy of \u00b11\" to \u00b15\" (arc-seconds) for precise position measurement."
+      "answer": 2,
+      "solution": "Monitoring total stations typically have angular accuracy of ±1\" to ±5\" (arc-seconds) for precise position measurement."
     },
     {
       "id": "ncl-surveyor-08-031",
@@ -576,7 +576,7 @@
         "Intersection",
         "Traversing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Repetition stacks the angle on the horizontal circle; accumulated reading / repetitions = mean angle."
     },
     {
@@ -594,7 +594,7 @@
         "Two stations simultaneously",
         "Only one observation per station"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "All directions from a single instrument station are observed; angles = difference of directions."
     },
     {
@@ -612,7 +612,7 @@
         "Elimination of collimation error",
         "Focusing eyepiece"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Collimation error elimination is a permanent (periodic) adjustment, not a field temporary adjustment."
     },
     {
@@ -630,7 +630,7 @@
         "Plate bubble",
         "Tangent screw"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Optical plummet or plumb bob positions the vertical axis over the ground mark."
     },
     {
@@ -648,7 +648,7 @@
         "The ground",
         "The cross-hair"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Focused at infinity, emerging rays are parallel, defining the line of sight."
     },
     {
@@ -666,7 +666,7 @@
         "Graduated circle",
         "Eyepiece"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "The line of collimation must be perpendicular to the trunnion (horizontal) axis."
     },
     {
@@ -684,7 +684,7 @@
         "Graduated circle",
         "Plate bubble"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "The horizontal axis must be perpendicular to the vertical axis for the telescope to sweep a vertical plane."
     },
     {
@@ -702,7 +702,7 @@
         "Both collimation and horizontal axis errors",
         "Eccentricity only"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Both errors reverse sign on plunge; averaging cancels them."
     },
     {
@@ -720,7 +720,7 @@
         "Latitude and departure",
         "Angle size"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Bowditch (compass) rule: correction is proportional to square root of length, assuming comparable angular and linear precision."
     },
     {
@@ -738,7 +738,7 @@
         "Square of length",
         "Angle at each station"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Transit rule: correction to latitude proportional to leg's latitude / total latitude; same for departure."
     },
     {
@@ -756,7 +756,7 @@
         "A and B plates",
         "Instrument and target"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "It is the horizontal displacement of the plumb bob from the true instrument axis."
     },
     {
@@ -774,7 +774,7 @@
         "Using only B plate",
         "Repeating the angle"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Mean of A and B plate readings cancels eccentricity of the graduated circle."
     },
     {
@@ -792,7 +792,7 @@
         "A mirror",
         "The level bubble"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Built into the tribrach, it lets the operator verify centering directly."
     },
     {
@@ -810,7 +810,7 @@
         "Once per day",
         "Only when levelling is needed"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Centering, levelling, and focusing are repeated at every instrument station."
     },
     {
@@ -828,7 +828,7 @@
         "Perpendicular to the line of sight",
         "Parallel to the ground"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Foot screws tilt the tribrach until the plate bubble is centred, making the vertical axis vertical."
     },
     {
@@ -846,7 +846,7 @@
         "Checking collimation",
         "Measuring vertical angles"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Plate bubble gives rough levelling; the tubular bubble gives precise levelling."
     },
     {
@@ -864,7 +864,7 @@
         "Different liquid",
         "Mounted horizontally"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Sensitivity = 206265 / R; larger R means smaller division value = higher sensitivity."
     },
     {
@@ -882,7 +882,7 @@
         "tau = 1 / R",
         "tau = R x 206265"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "tau = rho / R where rho = 206265 and R is radius of curvature in mm."
     },
     {
@@ -900,7 +900,7 @@
         "Using one reading only",
         "Eliminating collimation automatically"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Accumulation on the circle divides random reading/graduation errors by the repetition count."
     },
     {
@@ -918,7 +918,7 @@
         "Any number",
         "Exactly 2"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Even repetitions balance Face Left/Face Right use, cancelling instrumental errors."
     },
     {
@@ -936,7 +936,7 @@
         "Taking the last reading only",
         "Averaging directions"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Total accumulated circle reading divided by repetitions = mean angle."
     },
     {
@@ -954,7 +954,7 @@
         "20 degrees",
         "20 radians"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Least count = smallest angular value reliably readable on the instrument."
     },
     {
@@ -972,7 +972,7 @@
         "Main scale range / 360",
         "Circle diameter / 100"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "LC = (value of 1 MSD) / (number of VSD)."
     },
     {
@@ -990,7 +990,7 @@
         "1 to 5 degrees",
         "5 to 30 seconds"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Modern microptic theodolites read to 1-5 seconds."
     },
     {
@@ -1008,7 +1008,7 @@
         "Only the offset direction",
         "Nothing"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Angular error depends on the geometry: offset magnitude and angle between sight lines."
     },
     {
@@ -1026,7 +1026,7 @@
         "Offset is zero",
         "Telescope is levelled"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Error is proportional to offset x sin(theta); maximum at 90 degrees."
     },
     {
@@ -1044,7 +1044,7 @@
         "At eye level",
         "At target height"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Lower trunnion height reduces the angular effect of any plumb offset."
     },
     {
@@ -1062,7 +1062,7 @@
         "Tilting vertically",
         "Clamping horizontal motion"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Plunging flips the telescope end-over-end about the trunnion axis."
     },
     {
@@ -1080,7 +1080,7 @@
         "A conical surface",
         "An inclined plane"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "With no collimation error, plunging keeps the line of sight in the same vertical plane."
     },
     {
@@ -1098,7 +1098,7 @@
         "Nadir",
         "Any arbitrary point"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Zenith distance = 0 degrees when telescope points straight up."
     },
     {
@@ -1116,7 +1116,7 @@
         "Using only Face Left",
         "Adjusting the foot screws"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Index error reverses sign between faces; averaging cancels it."
     },
     {
@@ -1134,7 +1134,7 @@
         "Half the actual error",
         "Three times the error"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Displacement after plunge = 2 x collimation error."
     },
     {
@@ -1152,7 +1152,7 @@
         "The graduated circle centre",
         "The eyepiece focal point"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Collimation adjustment aligns line of sight with the intersection of the trunnion and vertical axes."
     },
     {
@@ -1170,7 +1170,7 @@
         "A horizontal plane",
         "A cylindrical surface"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Non-perpendicular trunnion axis to vertical axis = inclined sweep plane."
     },
     {
@@ -1188,7 +1188,7 @@
         "Distances are known precisely",
         "The traverse is open"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Equal-weight angles get equal correction shares."
     },
     {
@@ -1206,7 +1206,7 @@
         "plus or minus 1 degree root n",
         "plus or minus 30 arcsec per angle"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Mine survey traverse precision is typically plus or minus 10 arcsec root n for moderate-class work."
     },
     {
@@ -1224,7 +1224,7 @@
         "Upside down",
         "Any position"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Transport with telescope vertical and clamped prevents damage to delicate parts."
     },
     {
@@ -1242,7 +1242,7 @@
         "120 degrees apart",
         "180 degrees apart"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Three screws at 120 degrees provide stable three-point support for levelling."
     },
     {
@@ -1260,7 +1260,7 @@
         "High accuracy needed for single angle",
         "Distances are also measured"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Reiteration is efficient when multiple directions radiate from one station."
     },
     {
@@ -1278,7 +1278,7 @@
         "Multiplying directions",
         "Taking the mean of directions"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Included angle = forward direction minus back direction (reduced to same face)."
     },
     {
@@ -1296,7 +1296,7 @@
         "20 minutes",
         "10 minutes"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Main scale divisions of 1 degree subdivided by micrometer to read 1 arcsec."
     },
     {
@@ -1314,7 +1314,7 @@
         "Levelling adjustment",
         "Focus control"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Tangent screw moves the telescope slowly for precise pointing after the clamp is engaged."
     },
     {
@@ -1332,7 +1332,7 @@
         "At the eyepiece",
         "At the centre of the telescope tube"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Cross-hairs are placed at the focal plane so both target image and cross-hair are in focus together."
     },
     {
@@ -1350,7 +1350,7 @@
         "Infinity",
         "The cross-hair plane only if adjusted"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Parallel rays from infinity converge at the focal plane of the objective."
     },
     {
@@ -1368,7 +1368,7 @@
         "Moving freely",
         "Not visible"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Bubble must be central when the plate tube is viewed parallel and perpendicular to a pair of foot screws."
     },
     {
@@ -1386,7 +1386,7 @@
         "Using a plumb bob only",
         "Checking the level bubble"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Rotate the optical plummet 180 degrees; if the mark shifts, the plummet needs adjustment."
     },
     {
@@ -1404,7 +1404,7 @@
         "Top",
         "Bottom"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Face Left = vertical circle on the left (observer's left when viewing through telescope)."
     },
     {
@@ -1422,7 +1422,7 @@
         "Top",
         "Bottom"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Face Right = vertical circle on the right, achieved by plunging and rotating 180 degrees."
     },
     {
@@ -1440,7 +1440,7 @@
         "GPS and theodolite",
         "Camera and theodolite"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "A total station integrates an electronic theodolite, EDM, and on-board computer."
     },
     {
@@ -1458,7 +1458,7 @@
         "Only vertical angle",
         "Slope distance only"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Coordinate mode uses measured angle, distance, and known station data to compute 3D coordinates."
     },
     {
@@ -1476,7 +1476,7 @@
         "C. June 5",
         "D. September 21"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "World Water Day is observed on 22 March."
     },
     {
@@ -1494,7 +1494,7 @@
         "C. Goa",
         "D. Tripura"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Kerala has the highest literacy rate (96.2%) in India."
     },
     {
@@ -1512,7 +1512,7 @@
         "C. MCX",
         "D. NCDEX"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Nifty 50 is the benchmark index of the National Stock Exchange (NSE)."
     },
     {
@@ -1530,7 +1530,7 @@
         "C. Chennai",
         "D. Surat"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Ahmedabad is known as the Manchester of India due to its textile industry."
     },
     {
@@ -1548,7 +1548,7 @@
         "C. October 1, 2017",
         "D. January 1, 2018"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GST was implemented on 1 July 2017."
     },
     {
@@ -1566,7 +1566,7 @@
         "C. Shaktikanta Das",
         "D. Ravi Shankar Prasad"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Shaktikanta Das is the Governor of RBI."
     },
     {
@@ -1584,7 +1584,7 @@
         "C. Education loans",
         "D. Housing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "PMJDY aims at financial inclusion by providing bank accounts to unbanked populations."
     },
     {
@@ -1602,7 +1602,7 @@
         "C. Silver",
         "D. Platinum"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Copper is considered a barometer of economic/industrial health."
     },
     {
@@ -1620,7 +1620,7 @@
         "C. Russia",
         "D. France"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "LEMOA (Logistics Exchange Memorandum of Agreement) was signed with the USA."
     },
     {
@@ -1638,7 +1638,7 @@
         "C. 1957",
         "D. 1992"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "BSE was established in 1875, making it the oldest stock exchange in Asia."
     },
     {
@@ -1656,7 +1656,7 @@
         "C. Petroleum products",
         "D. Aluminium"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Petroleum products are India's largest export by value."
     },
     {
@@ -1674,7 +1674,7 @@
         "C. Chennai and Bengaluru",
         "D. Kolkata and Bhubaneswar"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "India's first bullet train project connects Mumbai and Ahmedabad."
     },
     {
@@ -1692,7 +1692,7 @@
         "C. Indira Gandhi",
         "D. Kiran Bedi"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Kalpana Chawla was the first Indian-born woman in space (1997)."
     },
     {
@@ -1710,7 +1710,7 @@
         "C. 1998",
         "D. 2000"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "NSE was established in 1992 and commenced operations in 1994."
     },
     {
@@ -1728,7 +1728,7 @@
         "C. State Bank of India",
         "D. HDFC Bank"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "SBI is India's largest commercial bank by assets."
     },
     {
@@ -1746,7 +1746,7 @@
         "C. GDP Deflator",
         "D. PPI"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "WPI (Wholesale Price Index) measures wholesale price inflation."
     },
     {
@@ -1764,7 +1764,7 @@
         "C. Cruel",
         "D. Hostile"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Benevolent means kind and generous."
     },
     {
@@ -1782,7 +1782,7 @@
         "C. Translucent",
         "D. Visible"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Opaque is the antonym of transparent."
     },
     {
@@ -1800,7 +1800,7 @@
         "C. Hardworking",
         "D. Indolent"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Diligent means showing care and effort (hardworking)."
     },
     {
@@ -1818,7 +1818,7 @@
         "C. Ample",
         "D. Copious"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Scarce is the antonym of abundant."
     }
   ]

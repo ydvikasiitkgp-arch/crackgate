@@ -36,7 +36,7 @@
         "Equal to the true dip",
         "May be greater or lesser"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The apparent dip in any direction other than the true dip direction is always less than the true dip."
     },
     {
@@ -54,7 +54,7 @@
         "A fault",
         "An unconformity"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Consistently increasing dip angles in one direction indicate a uniformly dipping bed or one limb of a fold."
     },
     {
@@ -72,7 +72,7 @@
         "The entrance to the mine",
         "The boundary of the mining lease"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A contact is the surface or boundary where two different rock types or formations meet."
     },
     {
@@ -90,7 +90,7 @@
         "Too many flat areas",
         "Excessive vegetation only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Steep topography creates large elevation differences between stations, making direct sighting and measurement challenging."
     },
     {
@@ -108,7 +108,7 @@
         "Measure only horizontal angles",
         "Take temperature readings"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "An auxiliary telescope (subtense bar or auxiliary instrument) provides intermediate sighting points to overcome obstacles in steep terrain."
     },
     {
@@ -121,13 +121,13 @@
       "difficulty": "medium",
       "stem": "The curvature and refraction correction for a vertical distance is given by the formula (approximately):",
       "options": [
-        "C = 0.0673 \u00d7 D\u00b2 metres",
-        "C = 0.0673 \u00d7 D kilometres",
-        "C = 6.73 \u00d7 D\u00b2 kilometres",
-        "C = 0.673 \u00d7 D\u00b2 metres"
+        "C = 0.0673 × D² metres",
+        "C = 0.0673 × D kilometres",
+        "C = 6.73 × D² kilometres",
+        "C = 0.673 × D² metres"
       ],
-      "answer": "A",
-      "solution": "The curvature and refraction correction in metres is approximately 0.0673D\u00b2 where D is the distance in kilometres."
+      "answer": 0,
+      "solution": "The curvature and refraction correction in metres is approximately 0.0673D² where D is the distance in kilometres."
     },
     {
       "id": "ncl-surveyor-07-007",
@@ -144,7 +144,7 @@
         "Taking only one reading",
         "Using a single backsight"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Reciprocal levelling eliminates errors due to curvature, refraction, and collimation error by averaging readings from two instrument positions."
     },
     {
@@ -162,7 +162,7 @@
         "Using only horizontal distances",
         "Taking fewer observations to save time"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Reduced observations involve converting slope measurements to horizontal and vertical components using trigonometric reductions."
     },
     {
@@ -180,7 +180,7 @@
         "At their true position",
         "To the left of their true position"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Earth's curvature causes distant objects to appear lower than their actual position when viewed from a level line."
     },
     {
@@ -198,7 +198,7 @@
         "It requires no instrument",
         "It is cheaper than chaining"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Stadia tachymetry allows simultaneous measurement of horizontal distance and elevation difference from a single instrument setup, useful in difficult terrain."
     },
     {
@@ -216,7 +216,7 @@
         "Using three staff holders",
         "Taking readings at three different times"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Three-wire levelling uses upper, middle, and lower stadia wire readings; averaging the upper and lower readings provides a check on the middle wire reading."
     },
     {
@@ -229,13 +229,13 @@
       "difficulty": "medium",
       "stem": "When the line of sight is inclined upwards in tachymetry, the horizontal distance is:",
       "options": [
-        "Stadia interval \u00d7 stadia constant \u00d7 cos\u00b2(vertical angle)",
-        "Stadia interval \u00d7 stadia constant \u00d7 sin(vertical angle)",
-        "Stadia interval \u00d7 stadia constant \u00d7 tan(vertical angle)",
+        "Stadia interval × stadia constant × cos²(vertical angle)",
+        "Stadia interval × stadia constant × sin(vertical angle)",
+        "Stadia interval × stadia constant × tan(vertical angle)",
         "Same as on level ground"
       ],
-      "answer": "A",
-      "solution": "For an inclined line of sight, horizontal distance = KS cos\u00b2\u03b1 where K is the stadia constant, S is the stadia interval, and \u03b1 is the vertical angle."
+      "answer": 0,
+      "solution": "For an inclined line of sight, horizontal distance = KS cos²α where K is the stadia constant, S is the stadia interval, and α is the vertical angle."
     },
     {
       "id": "ncl-surveyor-07-013",
@@ -252,7 +252,7 @@
         "150",
         "200"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The standard stadia multiplying constant for a tachymeter with the stadia hairs equally spaced is 100."
     },
     {
@@ -270,7 +270,7 @@
         "It only affects temperature readings",
         "It has no effect on survey measurements"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Vertical curvature (combined with refraction) causes systematic errors in elevation that increase with the square of the distance."
     },
     {
@@ -288,7 +288,7 @@
         "The geological map",
         "The borehole data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Profile levelling determines the vertical cross-section of the ground along a specified route, showing elevation changes."
     },
     {
@@ -304,9 +304,9 @@
         "Positive (elevation angle)",
         "Negative (depression angle)",
         "Zero",
-        "90\u00b0"
+        "90°"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "When the staff is at a lower level, the line of sight is inclined downward, giving a negative (depression) vertical angle."
     },
     {
@@ -324,7 +324,7 @@
         "It is cheaper than EDM",
         "It does not require an instrument"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The subtense bar method determines horizontal distance by measuring the horizontal angle subtended by a bar of fixed length (usually 2 m), independent of slope."
     },
     {
@@ -342,7 +342,7 @@
         "Drilling boreholes",
         "Measuring only horizontal distances"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Contouring represents the three-dimensional terrain surface on a two-dimensional map using lines of equal elevation."
     },
     {
@@ -360,8 +360,8 @@
         "3.37 m",
         "6.73 m"
       ],
-      "answer": "B",
-      "solution": "Curvature correction = 0.0673 \u00d7 D\u00b2 = 0.0673 \u00d7 5\u00b2 = 0.0673 \u00d7 25 \u2248 1.68 m."
+      "answer": 1,
+      "solution": "Curvature correction = 0.0673 × D² = 0.0673 × 5² = 0.0673 × 25 ≈ 1.68 m."
     },
     {
       "id": "ncl-surveyor-07-020",
@@ -378,8 +378,8 @@
         "Multiplying the slope distance by the tangent of the slope angle",
         "Adding the slope distance to the vertical distance"
       ],
-      "answer": "B",
-      "solution": "Horizontal distance = slope distance \u00d7 cos(slope angle). This reduces the slope measurement to its horizontal component."
+      "answer": 1,
+      "solution": "Horizontal distance = slope distance × cos(slope angle). This reduces the slope measurement to its horizontal component."
     },
     {
       "id": "ncl-surveyor-07-021",
@@ -396,7 +396,7 @@
         "Take only temperature readings",
         "Measure only the borehole depth"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Auxiliary stations provide intermediate sighting points when the direct line of sight between main stations is obstructed by terrain."
     },
     {
@@ -414,7 +414,7 @@
         "0.20",
         "0.50"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The average refraction coefficient for ordinary conditions is approximately 0.13, meaning refraction bends the line of sight toward the earth."
     },
     {
@@ -432,7 +432,7 @@
         "It is cheaper",
         "It requires less skill"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Trigonometric levelling can measure large elevation differences in a single observation, making it efficient for steep terrain where spirit levelling would require many setups."
     },
     {
@@ -443,15 +443,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "When the staff is vertical but the line of sight is inclined at angle \u03b1 to the horizontal, the correct horizontal distance is:",
+      "stem": "When the staff is vertical but the line of sight is inclined at angle α to the horizontal, the correct horizontal distance is:",
       "options": [
-        "L \u00d7 cos \u03b1",
-        "L \u00d7 cos\u00b2 \u03b1",
-        "L \u00d7 sin \u03b1",
-        "L \u00d7 tan \u03b1"
+        "L × cos α",
+        "L × cos² α",
+        "L × sin α",
+        "L × tan α"
       ],
-      "answer": "B",
-      "solution": "For a vertical staff with an inclined line of sight, horizontal distance = L \u00d7 cos\u00b2\u03b1, where L is the stadia reading."
+      "answer": 1,
+      "solution": "For a vertical staff with an inclined line of sight, horizontal distance = L × cos²α, where L is the stadia reading."
     },
     {
       "id": "ncl-surveyor-07-025",
@@ -463,12 +463,12 @@
       "difficulty": "medium",
       "stem": "A 'traverse in steep terrain' should be plotted using:",
       "options": [
-        "\u5e73\u9762 coordinates only",
+        "平面 coordinates only",
         "Both horizontal coordinates (northing, easting) and reduced levels",
         "Only reduced levels",
         "Only magnetic bearings"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A traverse in steep terrain should include both horizontal coordinates and reduced levels for complete three-dimensional positioning."
     },
     {
@@ -486,7 +486,7 @@
         "Observations at different times of day",
         "Observations by different surveyors"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Reciprocal observations are made simultaneously from both ends of the line to cancel out curvature and refraction effects."
     },
     {
@@ -504,7 +504,7 @@
         "Measuring only vertical angles",
         "Drilling boreholes along the traverse"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Offsets are perpendicular measurements taken from a main survey line (chain line or traverse line) to locate features on either side."
     },
     {
@@ -522,7 +522,7 @@
         "Calculating employee salaries",
         "Monitoring air quality"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "CAD (Computer-Aided Design) software is the primary tool for digital preparation, editing, and maintenance of mine plans and sections."
     },
     {
@@ -540,7 +540,7 @@
         "Only the underground workings",
         "Only the haul roads"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A DTM is a digital representation of the ground surface, created from survey data points, showing the three-dimensional terrain."
     },
     {
@@ -558,7 +558,7 @@
         "Using only GPS for measurement",
         "Manual measurement with a tape"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "3D laser profiling uses laser scanning technology to capture high-density three-dimensional point data of mine surfaces."
     },
     {
@@ -576,7 +576,7 @@
         "Only playing videos",
         "Only word processing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GIS integrates multiple spatial datasets, enabling complex analysis, overlay operations, and visualization for mine planning and management."
     },
     {
@@ -594,7 +594,7 @@
         "It requires no training",
         "It eliminates the need for surveyors"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer-based methods offer faster data processing, easy editing/modifications, accurate calculations, and efficient storage and retrieval."
     },
     {
@@ -612,7 +612,7 @@
         "Drawing only contour lines",
         "Using only cross-sections"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A grid model divides the terrain into a regular grid, with elevation values assigned to each grid intersection point."
     },
     {
@@ -630,7 +630,7 @@
         "Counting the number of dumpers",
         "Estimating by visual inspection"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer methods compare DTMs from different dates or use grid/prism methods to calculate volumes of excavation or dumping accurately."
     },
     {
@@ -648,7 +648,7 @@
         "Only contour lines",
         "Only cross-sections"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "TIN represents terrain as a network of non-overlapping triangles connecting survey data points, adapting to terrain complexity."
     },
     {
@@ -666,7 +666,7 @@
         "Print the plan faster",
         "Make the plan heavier"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Layers in CAD allow different types of information (geological features, workings, contours, text) to be organized and managed separately."
     },
     {
@@ -684,7 +684,7 @@
         "A DEM is always more accurate",
         "A DTM cannot represent terrain"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A DEM represents the bare earth surface without features, while a DTM may include above-ground features like buildings and vegetation."
     },
     {
@@ -702,7 +702,7 @@
         "Only recording employee data",
         "Only printing reports"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer-based bench profiling enables monitoring of bench geometry, slope stability assessment, and tracking volumetric changes over time."
     },
     {
@@ -720,7 +720,7 @@
         "Increasing data size",
         "Only storing data on hard drives"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Data reduction involves converting raw field measurements (angles, distances, stadia readings) into coordinates, elevations, and other useful information."
     },
     {
@@ -738,7 +738,7 @@
         "Only taking photographs",
         "Only measuring temperature"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer-based highwall mapping involves digital capture and analysis of highwall geometry, geological features, and stability parameters."
     },
     {
@@ -756,7 +756,7 @@
         "Using only GPS data",
         "Measuring each contour physically"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer algorithms interpolate elevation values between survey data points and generate contour lines using methods like linear interpolation or kriging."
     },
     {
@@ -774,7 +774,7 @@
         "Only planning haul roads",
         "Only environmental monitoring"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer-based volumetric analysis calculates quantities of overburden removed, material dumped, coal produced, and remaining reserves."
     },
     {
@@ -792,7 +792,7 @@
         "Only taking photographs",
         "Only measuring rainfall"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer-based slope stability analysis uses mathematical models (limit equilibrium, finite element) to assess slope safety factors."
     },
     {
@@ -810,7 +810,7 @@
         "GIS cannot create maps",
         "GIS is only for underground mines"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GIS offers spatial analysis capabilities, attribute data integration, and complex querying that basic CAD cannot provide."
     },
     {
@@ -828,7 +828,7 @@
         "Only display coordinates",
         "Only print coordinates"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Coordinate transformation converts data between different reference systems (e.g., WGS84 to local grid) or map projections."
     },
     {
@@ -846,7 +846,7 @@
         "Only the height of the dump",
         "Only the colour of the dump material"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "3D laser scanning of dumps provides detailed geometry including precise volume calculation, slope angles, surface features, and changes over time."
     },
     {
@@ -864,7 +864,7 @@
         "Only taking field measurements",
         "Only printing existing sections"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer software can automatically generate cross-sections along any specified line by extracting and interpolating elevation data from the DTM."
     },
     {
@@ -882,7 +882,7 @@
         "Only word processing",
         "Only sending emails"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Surface modeling creates 3D terrain representations for volume calculations, design optimization, and visualization of mine surfaces."
     },
     {
@@ -900,7 +900,7 @@
         "Only photographs",
         "Only audio recordings"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Survey databases store all field observations, computed coordinates, levels, and related data for easy retrieval and analysis."
     },
     {
@@ -918,7 +918,7 @@
         "Only for decoration",
         "Only for printing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Symbol libraries provide standardized symbols for consistent representation of geological features, workings, and other mining elements."
     },
     {
@@ -936,7 +936,7 @@
         "Only taking photographs",
         "Only recording temperatures"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer-based monitoring systems automate data collection from sensors, process data in real-time, and generate alerts when movement thresholds are exceeded."
     },
     {
@@ -954,7 +954,7 @@
         "Only visual estimation",
         "Only counting grid squares"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer software calculates area using coordinate geometry methods (like the shoelace formula) or numerical integration from boundary coordinates."
     },
     {
@@ -972,7 +972,7 @@
         "Only paper-based records",
         "Only visual inspection"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer software can automatically detect blunders, check misclosures, flag out-of-range values, and identify other survey errors."
     },
     {
@@ -990,7 +990,7 @@
         "Only photographs",
         "Only audio files"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Report generation produces formatted documents containing survey data, calculations, maps, and analysis results for various purposes."
     },
     {
@@ -1008,7 +1008,7 @@
         "Only printing",
         "Only storing data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Import/export capabilities enable data exchange between different software platforms and file formats, facilitating workflow integration."
     },
     {
@@ -1026,7 +1026,7 @@
         "Only visual inspection",
         "Only manual verification"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Computer-based quality control includes automated checks at each stage of data processing to ensure accuracy, completeness, and consistency."
     },
     {
@@ -1044,7 +1044,7 @@
         "Only historical records",
         "Only future prediction"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Time-series analysis compares surface data from different dates to track changes, monitor stability, and assess production progress."
     },
     {
@@ -1062,7 +1062,7 @@
         "Playing music",
         "Sending emails"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Surpac is a comprehensive mine planning software used for geological modeling, resource estimation, mine design, and survey data management."
     },
     {
@@ -1080,7 +1080,7 @@
         "Only data entry",
         "Only printing photographs"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "AutoCAD is extensively used for 2D drafting and design of mine plans, sections, profiles, and other engineering drawings."
     },
     {
@@ -1098,7 +1098,7 @@
         "Only video editing",
         "Only music composition"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Liscad is specialized for land surveying computations including coordinate geometry, traversing, levelling, and area calculations."
     },
     {
@@ -1116,7 +1116,7 @@
         "Only video editing",
         "Only playing games"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Autoplotter is used for DTM creation, contour generation, volume calculations, and profile plotting from survey data."
     },
     {
@@ -1134,7 +1134,7 @@
         "Only total stations",
         "Only levels"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "RiScan Pro is Riegl's software for processing point cloud data from their 3D terrestrial laser scanners."
     },
     {
@@ -1152,7 +1152,7 @@
         "Using only photographs",
         "Only printing maps"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Surpac creates DTM by triangulating survey data points into a Triangulated Irregular Network (TIN) surface."
     },
     {
@@ -1170,7 +1170,7 @@
         "Only measure distances",
         "Only change colors"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "AutoCAD blocks allow creation of reusable symbols for standard mining features (boreholes, workings, symbols) for consistency."
     },
     {
@@ -1188,7 +1188,7 @@
         "Only temperature recording",
         "Only distance measurement"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Liscad's traverse module performs observation adjustment, coordinate computation, and error analysis for survey traverses."
     },
     {
@@ -1206,7 +1206,7 @@
         "Only deleting data",
         "Only taking photographs"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Registration in RiScan Pro aligns multiple scans from different scanner positions into a unified coordinate system."
     },
     {
@@ -1224,7 +1224,7 @@
         "Only printing reports",
         "Only sending emails"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Surpac's geological modeling creates 3D models of ore bodies, coal seams, and geological structures for resource estimation."
     },
     {
@@ -1242,7 +1242,7 @@
         "Only change colors",
         "Only print documents"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Layer management organizes different information types (contours, workings, text, symbols) for selective display, editing, and plotting."
     },
     {
@@ -1260,7 +1260,7 @@
         "Only counting points",
         "Only visual inspection"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Autoplotter calculates volumes by comparing two DTM surfaces (between two dates) or using grid-based methods for accurate volume computation."
     },
     {
@@ -1278,7 +1278,7 @@
         "Only delete all data",
         "Only take photographs"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Point cloud filtering removes noise, vegetation, and unwanted points, and classifies points into different surface types (ground, buildings, etc.)."
     },
     {
@@ -1296,7 +1296,7 @@
         "Only word processing",
         "Only game playing"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Surpac manages survey data through import, storage, processing, and export of field observations, coordinates, and computed results."
     },
     {
@@ -1314,7 +1314,7 @@
         "Only delete objects",
         "Only measure distances"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The hatch command fills enclosed areas with patterns to represent different rock types, workings, or other features on mine plans."
     },
     {
@@ -1332,7 +1332,7 @@
         "Only angle measurement",
         "Only temperature recording"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Liscad's levelling module handles booking of field observations, reduction of levels, and adjustment for misclosure."
     },
     {
@@ -1350,7 +1350,7 @@
         "Only photographs",
         "Only audio files"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Autoplotter imports data from various formats including CSV, DXF, and raw data from total stations and GPS receivers."
     },
     {
@@ -1368,7 +1368,7 @@
         "Only deleting points",
         "Only printing data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Classification assigns each point in the cloud to categories like ground, vegetation, buildings, or other features for analysis."
     },
     {
@@ -1386,7 +1386,7 @@
         "Only printing photographs",
         "Only sending emails"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Surpac's mine design module designs pit layouts, haul roads, bench configurations, dump locations, and other mine infrastructure."
     },
     {
@@ -1404,7 +1404,7 @@
         "Only delete objects",
         "Only change colors"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The dimension tool adds measurement annotations showing distances, angles, coordinates, and other dimensions on mine plans."
     },
     {
@@ -1422,7 +1422,7 @@
         "Only printing",
         "Only deleting data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "COGO functions include intersection calculations, bearing/distance computations, coordinate transformations, and area calculations."
     },
     {
@@ -1440,7 +1440,7 @@
         "Only photographs",
         "Only audio files"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "RiScan Pro exports point cloud data to various industry-standard formats (LAS, LAZ, E57, ASCII) for use in other software."
     },
     {
@@ -1458,7 +1458,7 @@
         "Only printing maps",
         "Only sending emails"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Resource estimation uses geological models, geostatistical methods (kriging, inverse distance) to estimate ore body quantities and grades."
     },
     {
@@ -1476,7 +1476,7 @@
         "C. Irrigation",
         "D. Food storage"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "PM Fasal Bima Yojana provides crop insurance to farmers."
     },
     {
@@ -1489,13 +1489,13 @@
       "difficulty": "medium",
       "stem": "The National Infrastructure Pipeline (NIP) envisages investment of how much?",
       "options": [
-        "A. \u20b950 lakh crore",
-        "B. \u20b9111 lakh crore",
-        "C. \u20b975 lakh crore",
-        "D. \u20b9200 lakh crore"
+        "A. ₹50 lakh crore",
+        "B. ₹111 lakh crore",
+        "C. ₹75 lakh crore",
+        "D. ₹200 lakh crore"
       ],
-      "answer": "B",
-      "solution": "NIP envisages infrastructure investment of \u20b9111 lakh crore during 2020-2025."
+      "answer": 1,
+      "solution": "NIP envisages infrastructure investment of ₹111 lakh crore during 2020-2025."
     },
     {
       "id": "ncl-surveyor-07-g003",
@@ -1512,7 +1512,7 @@
         "C. National Water Policy",
         "D. Namami Gange"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Jal Jeevan Mission aims to provide piped water supply to every rural household."
     },
     {
@@ -1530,7 +1530,7 @@
         "C. New Delhi",
         "D. All of the above"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "The 2017 FIFA U-17 World Cup was held in Mumbai, Kolkata, New Delhi, and other cities."
     },
     {
@@ -1548,7 +1548,7 @@
         "C. Virat Kohli",
         "D. Sunil Gavaskar"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Virender Sehwag scored India's first triple century (309) in Test cricket."
     },
     {
@@ -1566,7 +1566,7 @@
         "C. Ballistic missile",
         "D. Cruise missile"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Agni is a series of medium to intercontinental range ballistic missiles."
     },
     {
@@ -1584,7 +1584,7 @@
         "C. Mary Kom",
         "D. Saina Nehwal"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Mirabai Chanu won gold in weightlifting at the 2022 Commonwealth Games."
     },
     {
@@ -1602,7 +1602,7 @@
         "C. Bharat Electronics",
         "D. DRDO"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tejas (LCA) is manufactured by HAL."
     },
     {
@@ -1620,7 +1620,7 @@
         "C. Brisbane",
         "D. Tokyo"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Los Angeles will host the 2028 Summer Olympics."
     },
     {
@@ -1638,7 +1638,7 @@
         "C. 2022",
         "D. 1971"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "INS Vikrant (IAC-1) was commissioned on 2 September 2022."
     },
     {
@@ -1656,7 +1656,7 @@
         "C. Javelin throw",
         "D. Hammer throw"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Neeraj Chopra won gold in javelin throw at Tokyo 2020 Olympics."
     },
     {
@@ -1674,7 +1674,7 @@
         "C. Nagaland",
         "D. Mizoram"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Assam has the Garud Commando Force under Assam Police."
     },
     {
@@ -1692,7 +1692,7 @@
         "C. Arunima Sinha",
         "D. Malavath Purna"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Bachendri Pal was the first Indian woman to summit Everest in 1984."
     },
     {
@@ -1710,7 +1710,7 @@
         "C. Mission Shakti (ASAT)",
         "D. Prithvi"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Mission Shakti (ASAT) demonstrated India's anti-satellite capability in 2019."
     },
     {
@@ -1728,7 +1728,7 @@
         "C. Road Transport",
         "D. External Affairs"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "BRO works under the Ministry of Defence."
     },
     {
@@ -1746,7 +1746,7 @@
         "C. Prakash Padukone",
         "D. Kidambi Srikanth"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Saina Nehwal won a bronze medal at London 2012 Olympics."
     },
     {
@@ -1764,7 +1764,7 @@
         "C. France",
         "D. USA"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "BrahMos is a joint venture between India (DRDO) and Russia (NPO Mashinostroyeniya)."
     },
     {
@@ -1782,7 +1782,7 @@
         "C. 6",
         "D. 7"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "India won 7 medals (1 gold, 2 silver, 4 bronze) at Tokyo 2020."
     },
     {
@@ -1800,7 +1800,7 @@
         "C. Jaipur",
         "D. Bikaner"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Jaipur is known as the Pink City."
     },
     {
@@ -1818,7 +1818,7 @@
         "C. 7.2%",
         "D. 8.2%"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "India's GDP growth was approximately 7.2% in FY 2023-24."
     }
   ]
