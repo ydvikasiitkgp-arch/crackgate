@@ -129,7 +129,7 @@ function MockCard({
   const live = mock.status === "live";
   const canStart = unlocked && live;
   return (
-    <div className="card relative flex flex-col p-5 opacity-90">
+    <div className={`card relative flex flex-col p-5 ${attempt ? "opacity-60" : "opacity-90"}`}>
       <span className="badge badge-pro absolute right-4 top-4">
         {attempt ? "✓ Completed" : live ? (unlocked ? "Ready" : "Locked") : "Coming soon"}
       </span>
