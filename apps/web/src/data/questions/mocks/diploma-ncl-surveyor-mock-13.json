@@ -36,7 +36,7 @@
         "Weather predictions",
         "Magnetic field data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The Nautical Almanac tabulates the Greenwich hour angle and declination of the Sun, Moon, planets, and navigational stars."
     },
     {
@@ -54,7 +54,7 @@
         "No correction needed",
         "Only parallax"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "For precise work, altitude must be corrected for refraction, parallax (Moon and planets), and semi-diameter (Sun and Moon)."
     },
     {
@@ -72,7 +72,7 @@
         "Polaris",
         "Any star"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "LAT = 12h + hour angle of the Sun (expressed in time); it is the time indicated by a sundial."
     },
     {
@@ -90,7 +90,7 @@
         "A theodolite reading",
         "A magnetic compass"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GHA is tabulated in the almanac for selected stars and the Sun at specific Universal Times."
     },
     {
@@ -108,7 +108,7 @@
         "The star's right ascension",
         "The magnetic declination"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Longitude = GHA - LHA (or LHA - GHA depending on convention); comparing local observations with Greenwich time yields longitude."
     },
     {
@@ -126,8 +126,8 @@
         "Moving rapidly",
         "Above the atmosphere"
       ],
-      "answer": "B",
-      "solution": "Parallax is the difference in apparent position due to observing from Earth's surface vs. its centre; it is largest for the Moon (~1\u00b0)."
+      "answer": 1,
+      "solution": "Parallax is the difference in apparent position due to observing from Earth's surface vs. its centre; it is largest for the Moon (~1°)."
     },
     {
       "id": "ncl-surveyor-13-007",
@@ -137,15 +137,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Mean Right Ascension of Aries (\u03bd) is used to convert between:",
+      "stem": "Mean Right Ascension of Aries (ν) is used to convert between:",
       "options": [
         "Local and Greenwich time",
         "Right ascension and hour angle",
         "Altitude and azimuth",
         "Latitude and longitude"
       ],
-      "answer": "B",
-      "solution": "\u03bd (or GHA Aries) bridges the equatorial and horizontal coordinate systems; LHA = GHA + local longitude."
+      "answer": 1,
+      "solution": "ν (or GHA Aries) bridges the equatorial and horizontal coordinate systems; LHA = GHA + local longitude."
     },
     {
       "id": "ncl-surveyor-13-008",
@@ -162,7 +162,7 @@
         "0h or 12h",
         "24h"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Upper culmination: LHA = 0h; lower culmination: LHA = 12h."
     },
     {
@@ -180,7 +180,7 @@
         "34 arc-minutes",
         "5 degrees"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "At the geometric horizon, standard refraction is about 34 arc-minutes (nearly the Sun's diameter)."
     },
     {
@@ -198,8 +198,8 @@
         "Horizon",
         "Ecliptic"
       ],
-      "answer": "B",
-      "solution": "Meridian altitude gives the simplest relation: latitude = 90\u00b0 - observed altitude + declination (with appropriate sign conventions)."
+      "answer": 1,
+      "solution": "Meridian altitude gives the simplest relation: latitude = 90° - observed altitude + declination (with appropriate sign conventions)."
     },
     {
       "id": "ncl-surveyor-13-011",
@@ -216,7 +216,7 @@
         "Any star observed at equal altitudes east and west of meridian",
         "Moon"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "When a star reaches the same altitude on both sides of the meridian, the mean of the two times gives local mean time."
     },
     {
@@ -234,7 +234,7 @@
         "36 seconds of time",
         "360 seconds of time"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "General precession in RA is about 3.07s per year (approx 46 arcsec per year)."
     },
     {
@@ -252,7 +252,7 @@
         "Greenwich Mean Time (GMT/UTC)",
         "Daylight saving time"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "A marine/survey chronometer is set to GMT (UTC) so that local observations can be compared with almanac data."
     },
     {
@@ -270,8 +270,8 @@
         "A simple multiplication by 24",
         "The barometric pressure"
       ],
-      "answer": "B",
-      "solution": "Sidereal-to-solar conversion tables (or the formula LST = 1.0027379 \u00d7 LMT + \u03bd) are used."
+      "answer": 1,
+      "solution": "Sidereal-to-solar conversion tables (or the formula LST = 1.0027379 × LMT + ν) are used."
     },
     {
       "id": "ncl-surveyor-13-015",
@@ -288,7 +288,7 @@
         "The Sun has no surface",
         "Refraction affects it"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The observed altitude is to the upper or lower limb; the semi-diameter (~16') must be applied to get the centre."
     },
     {
@@ -306,7 +306,7 @@
         "Atmospheric effects",
         "Precession"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Proper motion is the star's actual movement across the sky over years, distinct from apparent diurnal motion."
     },
     {
@@ -324,8 +324,8 @@
         "1 arc-minute",
         "34 arc-minutes at horizon"
       ],
-      "answer": "D",
-      "solution": "At the horizon, standard refraction is ~34'; at 45\u00b0 altitude it is about 1'; the constant varies with altitude."
+      "answer": 3,
+      "solution": "At the horizon, standard refraction is ~34'; at 45° altitude it is about 1'; the constant varies with altitude."
     },
     {
       "id": "ncl-surveyor-13-018",
@@ -342,7 +342,7 @@
         "Declination only",
         "Right ascension only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Both the altitude (or azimuth) and the precise time are needed to compute the Sun's position and hence the line's azimuth."
     },
     {
@@ -360,7 +360,7 @@
         "Its orbital period",
         "Its magnitude"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Position angle is measured from north through east to the secondary star as seen from the primary."
     },
     {
@@ -378,7 +378,7 @@
         "Atomic clocks were invented",
         "Stars stopped moving"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "ET (now TT) was based on planetary motions and free from the irregularities of Earth's rotation that affect UT."
     },
     {
@@ -396,7 +396,7 @@
         "Longitude only",
         "Magnetic declination"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A transit telescope observes stars crossing the meridian, providing precise time and RA."
     },
     {
@@ -414,7 +414,7 @@
         "50 arc-seconds",
         "1 arc-minute"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The constant of aberration kappa is approximately 20.5 arcseconds due to Earth mean orbital velocity."
     },
     {
@@ -432,7 +432,7 @@
         "Only at exact transit",
         "At any time"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Circummeridian observations within ~10 minutes of transit are reduced using the formula involving the hour angle squared."
     },
     {
@@ -450,8 +450,8 @@
         "Altitude to the fourth power",
         "Latitude linearly"
       ],
-      "answer": "A",
-      "solution": "The correction to meridian altitude for small hour angles is proportional to cos\u00b2(\u03b4) \u00d7 sin\u00b2(H) / sin(1\"), i.e., H\u00b2 term."
+      "answer": 0,
+      "solution": "The correction to meridian altitude for small hour angles is proportional to cos²(δ) × sin²(H) / sin(1\"), i.e., H² term."
     },
     {
       "id": "ncl-surveyor-13-025",
@@ -464,11 +464,11 @@
       "stem": "The 'latitude by Polaris' method gives latitude directly from the altitude because Polaris is:",
       "options": [
         "Exactly at the north celestial pole",
-        "Within ~0.7\u00b0 of the pole, with tabulated corrections",
+        "Within ~0.7° of the pole, with tabulated corrections",
         "Always on the meridian",
         "A circumpolar star"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Polaris is close to but not exactly at the pole; tables give corrections based on LHA of Aries."
     },
     {
@@ -486,7 +486,7 @@
         "Magnetic declination",
         "Altitude of Polaris"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Azimuth of Polaris is computed from its hour angle and the observer's latitude."
     },
     {
@@ -504,7 +504,7 @@
         "North to south",
         "In random directions"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Earth rotates eastward, so stars appear to move east to west across the sky."
     },
     {
@@ -517,13 +517,13 @@
       "difficulty": "medium",
       "stem": "The 'zenith distance' of a star is:",
       "options": [
-        "90\u00b0 minus altitude",
+        "90° minus altitude",
         "Equal to altitude",
-        "90\u00b0 plus altitude",
+        "90° plus altitude",
         "Equal to azimuth"
       ],
-      "answer": "A",
-      "solution": "Zenith distance z = 90\u00b0 - altitude (h); it is the angular distance from the zenith."
+      "answer": 0,
+      "solution": "Zenith distance z = 90° - altitude (h); it is the angular distance from the zenith."
     },
     {
       "id": "ncl-surveyor-13-029",
@@ -540,7 +540,7 @@
         "Compass readings",
         "Temperature changes"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "A chronograph registers the instant a star crosses the transit wire, compared with chronometer time."
     },
     {
@@ -553,13 +553,13 @@
       "difficulty": "medium",
       "stem": "The 'colatitude' of a place is:",
       "options": [
-        "90\u00b0 + latitude",
-        "90\u00b0 - latitude",
+        "90° + latitude",
+        "90° - latitude",
         "Equal to latitude",
-        "180\u00b0 - latitude"
+        "180° - latitude"
       ],
-      "answer": "B",
-      "solution": "Colatitude = 90\u00b0 - \u03c6; it is the zenith distance of the celestial pole."
+      "answer": 1,
+      "solution": "Colatitude = 90° - φ; it is the zenith distance of the celestial pole."
     },
     {
       "id": "ncl-surveyor-13-031",
@@ -576,7 +576,7 @@
         "Tidal effects",
         "Magnetic field"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Deflection of the vertical (difference between plumb line and ellipsoid normal) causes astronomical and geodetic latitudes to differ."
     },
     {
@@ -594,7 +594,7 @@
         "Latitude to longitude",
         "Elevation to distance"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Projections convert 3D (lat, lon, height) to 2D (E, N) on a map plane."
     },
     {
@@ -612,7 +612,7 @@
         "Mercator, Lambert, and UTM",
         "Flat, curved, and folded"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Conformal, equal-area, and equidistant projections are developed on cylindrical, conical, and azimuthal (planar) surfaces."
     },
     {
@@ -630,7 +630,7 @@
         "Distance",
         "Volume"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Conformal projections preserve local angles; small shapes are maintained."
     },
     {
@@ -648,7 +648,7 @@
         "Distance",
         "Direction"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Equal-area (equivalent) projections maintain proportional areas across the map."
     },
     {
@@ -666,8 +666,8 @@
         "120",
         "180"
       ],
-      "answer": "B",
-      "solution": "UTM has 60 longitudinal zones, each 6\u00b0 wide."
+      "answer": 1,
+      "solution": "UTM has 60 longitudinal zones, each 6° wide."
     },
     {
       "id": "ncl-surveyor-13-037",
@@ -679,13 +679,13 @@
       "difficulty": "medium",
       "stem": "Each UTM zone spans how many degrees of longitude?",
       "options": [
-        "3\u00b0",
-        "6\u00b0",
-        "9\u00b0",
-        "12\u00b0"
+        "3°",
+        "6°",
+        "9°",
+        "12°"
       ],
-      "answer": "B",
-      "solution": "UTM zones are 6\u00b0 wide, numbered 1 to 60 east from 180\u00b0W."
+      "answer": 1,
+      "solution": "UTM zones are 6° wide, numbered 1 to 60 east from 180°W."
     },
     {
       "id": "ncl-surveyor-13-038",
@@ -702,7 +702,7 @@
         "500,000 m",
         "1,000,000 m"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "The central meridian is assigned a false easting of 500,000 m to avoid negative coordinates."
     },
     {
@@ -720,7 +720,7 @@
         "1.000400",
         "0.999900"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "UTM uses a scale factor of 0.9996 at the central meridian, giving two lines of true scale at ~180 km either side."
     },
     {
@@ -738,7 +738,7 @@
         "5,000,000 m",
         "100,000 m"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "In the southern hemisphere, a false northing of 10,000,000 m is applied so that all northing values are positive."
     },
     {
@@ -756,7 +756,7 @@
         "Polar only",
         "Near the equator"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Lambert conformal conic is ideal for mid-latitude regions with greater east-west than north-south extent."
     },
     {
@@ -774,7 +774,7 @@
         "Distortion is maximum",
         "The projection surface is tangent"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Standard parallels are the lines where the projection surface intersects the ellipsoid, giving scale factor = 1."
     },
     {
@@ -792,7 +792,7 @@
         "The standard parallels or central meridian",
         "The north pole"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Distortion grows as you move away from the lines (or point) of true scale."
     },
     {
@@ -810,7 +810,7 @@
         "Equal-area",
         "Perspective"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Cassini is a transverse cylindrical projection that is equidistant along the central meridian and perpendicular lines."
     },
     {
@@ -828,7 +828,7 @@
         "Population density",
         "Vegetation"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tissot ellipses show local distortion; circles on the sphere appear as ellipses on the projection."
     },
     {
@@ -846,7 +846,7 @@
         "Areas are preserved",
         "Angles are preserved"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "On a gnomonic projection, every great circle projects as a straight line, useful for navigation."
     },
     {
@@ -864,7 +864,7 @@
         "Equidistant",
         "Perspective from the centre of the Earth"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Stereographic is a conformal azimuthal projection; circles on the sphere map to circles on the plane."
     },
     {
@@ -882,7 +882,7 @@
         "The central meridian itself",
         "All meridians"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "In TM the central meridian has scale factor < 1; two lines at ~180 km have true scale."
     },
     {
@@ -900,7 +900,7 @@
         "Navigation charts",
         "Globe construction"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Equal-area projections are preferred for statistical maps where area comparisons must be accurate."
     },
     {
@@ -918,7 +918,7 @@
         "Equidistant",
         "Azimuthal"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Mollweide is a pseudocylindrical equal-area projection used for world maps."
     },
     {
@@ -936,7 +936,7 @@
         "Equidistant",
         "Azimuthal"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Mercator is conformal; rhumb lines are straight but it severely distorts area near poles."
     },
     {
@@ -954,7 +954,7 @@
         "Increases toward the poles",
         "Is zero at equator"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Parallels are spaced increasingly apart toward the poles to maintain conformality."
     },
     {
@@ -972,7 +972,7 @@
         "The coordinate system only",
         "The map scale"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A datum specifies the ellipsoid (shape) and its spatial relationship (position and orientation) to the Earth."
     },
     {
@@ -990,7 +990,7 @@
         "Clarke 1880",
         "Bessel 1841"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "WGS 84 uses a = 6,378,137 m and 1/f = 298.257223563, essentially identical to GRS 80."
     },
     {
@@ -1008,7 +1008,7 @@
         "Metric and imperial units",
         "Latitude and longitude"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Coordinates on one datum (e.g., Everest 1830) must be transformed to another (e.g., WGS 84) using shift parameters."
     },
     {
@@ -1026,7 +1026,7 @@
         "Calculating area",
         "Measuring distances"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Molodensky formulas convert between datums using differences in ellipsoid parameters and datum shift (dX, dY, dZ)."
     },
     {
@@ -1044,7 +1044,7 @@
         "One rotation and one scale",
         "Seven translations"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "The Helmert (Bursa-Wolf) transformation uses 3 translations, 3 rotations, and 1 scale change."
     },
     {
@@ -1062,7 +1062,7 @@
         "The ground surface and sea level",
         "Two datums"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Geoid undulation N = h (ellipsoidal height) - H (orthometric height)."
     },
     {
@@ -1080,7 +1080,7 @@
         "The local datum",
         "A specified benchmark"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GPS gives ellipsoidal height h; geoid undulation must be subtracted to get orthometric height H."
     },
     {
@@ -1098,8 +1098,8 @@
         "Only elevation",
         "Only map distortion"
       ],
-      "answer": "B",
-      "solution": "CSF = map scale factor \u00d7 elevation (gravity) factor; it converts ground distances to grid distances."
+      "answer": 1,
+      "solution": "CSF = map scale factor × elevation (gravity) factor; it converts ground distances to grid distances."
     },
     {
       "id": "ncl-surveyor-13-061",
@@ -1116,7 +1116,7 @@
         "Both map and ground effects",
         "Angular to linear measurements"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Elevation factor = R / (R + H), where R is Earth's radius and H is mean elevation, converting MSL to ellipsoid distance."
     },
     {
@@ -1134,7 +1134,7 @@
         "Angular to linear",
         "Elevation to distance"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Grid factor accounts for the projection distortion at a point, converting ground (ellipsoid) to grid distance."
     },
     {
@@ -1152,7 +1152,7 @@
         "0.01%",
         "1.00%"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "UTM limits distortion to ~0.04% (factor 0.9996 at CM, ~1.0004 at zone edges)."
     },
     {
@@ -1170,7 +1170,7 @@
         "Navigation only",
         "Thematic maps"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Cassini was used for topographic mapping in the UK, India, and other countries before TM became standard."
     },
     {
@@ -1188,7 +1188,7 @@
         "Equatorial regions only",
         "Small islands"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Oblique Mercator is used for features (e.g., Malaysia, Borneo) that trend oblique to meridians."
     },
     {
@@ -1206,7 +1206,7 @@
         "GRS 80 ellipsoid",
         "International 1924 ellipsoid"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Indian datum 1975 uses the Everest 1830 ellipsoid with a defined origin at Kandla."
     },
     {
@@ -1224,7 +1224,7 @@
         "Polyconic",
         "Cassini"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Historically, Survey of India 1:50,000 and 1:250,000 maps use the Polyconic projection."
     },
     {
@@ -1242,7 +1242,7 @@
         "Equal-area",
         "Perspective"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Polyconic is neither conformal nor equivalent but has very small distortion for narrow strips along the central meridian."
     },
     {
@@ -1253,15 +1253,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'Transverse Mercator' zone width can be reduced to 3\u00b0 (Modified TM) to:",
+      "stem": "The 'Transverse Mercator' zone width can be reduced to 3° (Modified TM) to:",
       "options": [
         "Increase distortion",
         "Reduce distortion for higher accuracy",
         "Save computation",
         "Make maps larger"
       ],
-      "answer": "B",
-      "solution": "Narrower zones (e.g., 3\u00b0) reduce maximum scale distortion, improving accuracy."
+      "answer": 1,
+      "solution": "Narrower zones (e.g., 3°) reduce maximum scale distortion, improving accuracy."
     },
     {
       "id": "ncl-surveyor-13-070",
@@ -1278,7 +1278,7 @@
         "The equator",
         "All parallels"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Cassini preserves distances along the central meridian and along lines perpendicular (transverse) to it."
     },
     {
@@ -1296,8 +1296,8 @@
         "The scale factor only",
         "The elevation only"
       ],
-      "answer": "A",
-      "solution": "Grid bearing = geodetic bearing \u00b1 convergence angle \u03b3 (due to meridians converging toward the pole)."
+      "answer": 0,
+      "solution": "Grid bearing = geodetic bearing ± convergence angle γ (due to meridians converging toward the pole)."
     },
     {
       "id": "ncl-surveyor-13-072",
@@ -1307,14 +1307,14 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'meridian convergence' (\u03b3) is zero at:",
+      "stem": "The 'meridian convergence' (γ) is zero at:",
       "options": [
         "The poles",
         "The equator",
         "The standard parallels",
-        "45\u00b0 latitude"
+        "45° latitude"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "At the equator, meridians are parallel, so convergence is zero; it increases toward the poles."
     },
     {
@@ -1332,7 +1332,7 @@
         "Correct for distortion",
         "Align with GPS"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "False origins ensure all grid coordinates within a zone are positive, avoiding negative numbers."
     },
     {
@@ -1350,7 +1350,7 @@
         "1/298.3",
         "1/300"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The International ellipsoid: a = 6,378,388 m, 1/f = 297 (approximately)."
     },
     {
@@ -1368,7 +1368,7 @@
         "North only",
         "East only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Conformality means the scale factor is isotropic (same in all directions) at each point, though it may vary from point to point."
     },
     {
@@ -1386,7 +1386,7 @@
         "Perspective projection",
         "Interrupted projection"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "When the projection cone cuts through the ellipsoid (two standard parallels), it is a secant projection."
     },
     {
@@ -1404,8 +1404,8 @@
         "True north and magnetic north",
         "Two parallels"
       ],
-      "answer": "A",
-      "solution": "Grid convergence \u03b3 = angle between grid north (y-axis) and true (geodetic) north (meridian)."
+      "answer": 0,
+      "solution": "Grid convergence γ = angle between grid north (y-axis) and true (geodetic) north (meridian)."
     },
     {
       "id": "ncl-surveyor-13-078",
@@ -1422,7 +1422,7 @@
         "Temperature affects measurements",
         "Gravity varies"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The projection of a geodetic line onto the map is curved; the straight chord on the map differs from the projected arc."
     },
     {
@@ -1435,13 +1435,13 @@
       "difficulty": "medium",
       "stem": "The 'geodetic coordinate system' uses which axes?",
       "options": [
-        "X toward Greenwich, Y toward 90\u00b0E, Z toward North Pole",
-        "X toward North Pole, Y toward Greenwich, Z toward 90\u00b0E",
+        "X toward Greenwich, Y toward 90°E, Z toward North Pole",
+        "X toward North Pole, Y toward Greenwich, Z toward 90°E",
         "X east, Y north, Z up",
         "Any arbitrary axes"
       ],
-      "answer": "A",
-      "solution": "Geocentric: X through (\u03c6=0, \u03bb=0), Y through (\u03c6=0, \u03bb=90\u00b0E), Z through North Pole."
+      "answer": 0,
+      "solution": "Geocentric: X through (φ=0, λ=0), Y through (φ=0, λ=90°E), Z through North Pole."
     },
     {
       "id": "ncl-surveyor-13-080",
@@ -1458,7 +1458,7 @@
         "Grid north (the y-axis)",
         "The central meridian"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Grid azimuth is measured clockwise from the grid north direction (parallel to the y-axis of the projection)."
     },
     {
@@ -1476,7 +1476,7 @@
         "C. 45",
         "D. 50"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Sum = 120. Third = 120-30-45 = 45."
     },
     {
@@ -1494,7 +1494,7 @@
         "C. 6:8:20",
         "D. 3:2:5"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "B is common. LCM of 4 and 2 = 4. A:B = 3:4, B:C = 4:10. A:B:C = 3:4:10."
     },
     {
@@ -1505,15 +1505,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Divide \u20b91,200 in the ratio 3:5.",
+      "stem": "Divide ₹1,200 in the ratio 3:5.",
       "options": [
-        "A. \u20b9400, \u20b9800",
-        "B. \u20b9450, \u20b9750",
-        "C. \u20b9360, \u20b9840",
-        "D. \u20b9500, \u20b9700"
+        "A. ₹400, ₹800",
+        "B. ₹450, ₹750",
+        "C. ₹360, ₹840",
+        "D. ₹500, ₹700"
       ],
-      "answer": "B",
-      "solution": "3+5=8. First = 1200\u00d73/8=450. Second = 1200\u00d75/8=750."
+      "answer": 1,
+      "solution": "3+5=8. First = 1200×3/8=450. Second = 1200×5/8=750."
     },
     {
       "id": "ncl-surveyor-13-g004",
@@ -1523,15 +1523,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "If 40% of A = 0.25 \u00d7 B, then A:B = ?",
+      "stem": "If 40% of A = 0.25 × B, then A:B = ?",
       "options": [
         "A. 5:8",
         "B. 8:5",
         "C. 5:4",
         "D. 4:5"
       ],
-      "answer": "A",
-      "solution": "0.4A = 0.25B \u2192 A/B = 0.25/0.4 = 5/8 \u2192 A:B = 5:8."
+      "answer": 0,
+      "solution": "0.4A = 0.25B → A/B = 0.25/0.4 = 5/8 → A:B = 5:8."
     },
     {
       "id": "ncl-surveyor-13-g005",
@@ -1548,8 +1548,8 @@
         "C. 22",
         "D. 24"
       ],
-      "answer": "B",
-      "solution": "5/7 = A/28 \u2192 A = 20."
+      "answer": 1,
+      "solution": "5/7 = A/28 → A = 20."
     },
     {
       "id": "ncl-surveyor-13-g006",
@@ -1566,8 +1566,8 @@
         "C. 12",
         "D. 18"
       ],
-      "answer": "C",
-      "solution": "36=2\u00b2\u00d73\u00b2, 60=2\u00b2\u00d73\u00d75. HCF = 2\u00b2\u00d73 = 12."
+      "answer": 2,
+      "solution": "36=2²×3², 60=2²×3×5. HCF = 2²×3 = 12."
     },
     {
       "id": "ncl-surveyor-13-g007",
@@ -1584,8 +1584,8 @@
         "C. 72",
         "D. 96"
       ],
-      "answer": "C",
-      "solution": "12=2\u00b2\u00d73, 18=2\u00d73\u00b2, 24=2\u00b3\u00d73. LCM = 2\u00b3\u00d73\u00b2 = 72."
+      "answer": 2,
+      "solution": "12=2²×3, 18=2×3², 24=2³×3. LCM = 2³×3² = 72."
     },
     {
       "id": "ncl-surveyor-13-g008",
@@ -1602,8 +1602,8 @@
         "C. 97",
         "D. 99"
       ],
-      "answer": "C",
-      "solution": "97 is prime (not divisible by 2,3,5,7). 91=7\u00d713, 93=3\u00d731, 99=9\u00d711."
+      "answer": 2,
+      "solution": "97 is prime (not divisible by 2,3,5,7). 91=7×13, 93=3×31, 99=9×11."
     },
     {
       "id": "ncl-surveyor-13-g009",
@@ -1620,8 +1620,8 @@
         "C. 7",
         "D. 9"
       ],
-      "answer": "D",
-      "solution": "Unit digits cycle: 7,9,3,1. 2023 mod 4 = 3. So unit digit = 3. Wait: 7^1=7, 7^2=9, 7^3=3, 7^4=1. 2023\u00f74 = 505 remainder 3. So unit digit = 3. Answer should be B."
+      "answer": 3,
+      "solution": "Unit digits cycle: 7,9,3,1. 2023 mod 4 = 3. So unit digit = 3. Wait: 7^1=7, 7^2=9, 7^3=3, 7^4=1. 2023÷4 = 505 remainder 3. So unit digit = 3. Answer should be B."
     },
     {
       "id": "ncl-surveyor-13-g010",
@@ -1638,8 +1638,8 @@
         "C. 1250",
         "D. 1275"
       ],
-      "answer": "D",
-      "solution": "Sum = n(n+1)/2 = 50\u00d751/2 = 1275."
+      "answer": 3,
+      "solution": "Sum = n(n+1)/2 = 50×51/2 = 1275."
     },
     {
       "id": "ncl-surveyor-13-g011",
@@ -1651,13 +1651,13 @@
       "difficulty": "medium",
       "stem": "What is the area of a rectangle with length 12 cm and breadth 8 cm?",
       "options": [
-        "A. 80 cm\u00b2",
-        "B. 96 cm\u00b2",
-        "C. 100 cm\u00b2",
-        "D. 110 cm\u00b2"
+        "A. 80 cm²",
+        "B. 96 cm²",
+        "C. 100 cm²",
+        "D. 110 cm²"
       ],
-      "answer": "B",
-      "solution": "Area = 12\u00d78 = 96 cm\u00b2."
+      "answer": 1,
+      "solution": "Area = 12×8 = 96 cm²."
     },
     {
       "id": "ncl-surveyor-13-g012",
@@ -1667,15 +1667,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "What is the circumference of a circle with radius 7 cm? (Take \u03c0 = 22/7)",
+      "stem": "What is the circumference of a circle with radius 7 cm? (Take π = 22/7)",
       "options": [
         "A. 33 cm",
         "B. 44 cm",
         "C. 22 cm",
         "D. 30 cm"
       ],
-      "answer": "B",
-      "solution": "Circumference = 2\u03c0r = 2\u00d722/7\u00d77 = 44 cm."
+      "answer": 1,
+      "solution": "Circumference = 2πr = 2×22/7×7 = 44 cm."
     },
     {
       "id": "ncl-surveyor-13-g013",
@@ -1685,15 +1685,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The diagonal of a square is 10\u221a2 cm. What is its area?",
+      "stem": "The diagonal of a square is 10√2 cm. What is its area?",
       "options": [
-        "A. 100 cm\u00b2",
-        "B. 200 cm\u00b2",
-        "C. 50 cm\u00b2",
-        "D. 150 cm\u00b2"
+        "A. 100 cm²",
+        "B. 200 cm²",
+        "C. 50 cm²",
+        "D. 150 cm²"
       ],
-      "answer": "A",
-      "solution": "Diagonal = a\u221a2 = 10\u221a2 \u2192 a=10. Area = a\u00b2 = 100 cm\u00b2."
+      "answer": 0,
+      "solution": "Diagonal = a√2 = 10√2 → a=10. Area = a² = 100 cm²."
     },
     {
       "id": "ncl-surveyor-13-g014",
@@ -1710,8 +1710,8 @@
         "C. 14 cm",
         "D. 9 cm"
       ],
-      "answer": "A",
-      "solution": "Hypotenuse = \u221a(6\u00b2+8\u00b2) = \u221a(36+64) = \u221a100 = 10 cm."
+      "answer": 0,
+      "solution": "Hypotenuse = √(6²+8²) = √(36+64) = √100 = 10 cm."
     },
     {
       "id": "ncl-surveyor-13-g015",
@@ -1721,15 +1721,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The volume of a cube is 64 cm\u00b3. What is its surface area?",
+      "stem": "The volume of a cube is 64 cm³. What is its surface area?",
       "options": [
-        "A. 64 cm\u00b2",
-        "B. 96 cm\u00b2",
-        "C. 128 cm\u00b2",
-        "D. 150 cm\u00b2"
+        "A. 64 cm²",
+        "B. 96 cm²",
+        "C. 128 cm²",
+        "D. 150 cm²"
       ],
-      "answer": "B",
-      "solution": "Side = \u221b64 = 4 cm. Surface area = 6\u00d74\u00b2 = 96 cm\u00b2."
+      "answer": 1,
+      "solution": "Side = ∛64 = 4 cm. Surface area = 6×4² = 96 cm²."
     },
     {
       "id": "ncl-surveyor-13-g016",
@@ -1746,7 +1746,7 @@
         "C. 60",
         "D. 65"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Average = (40+50+60+70+80)/5 = 300/5 = 60."
     },
     {
@@ -1764,7 +1764,7 @@
         "C. 80",
         "D. 100"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Girls = 40% of 200 = 80."
     },
     {
@@ -1782,8 +1782,8 @@
         "C. 4,500",
         "D. 5,000"
       ],
-      "answer": "B",
-      "solution": "Let year 1 = x. x + 1.2x + 1.44x + 1.728x + 2.0736x = 25000. 7.4416x = 25000. x \u2248 3360. Closest: 4000. This is approximate."
+      "answer": 1,
+      "solution": "Let year 1 = x. x + 1.2x + 1.44x + 1.728x + 2.0736x = 25000. 7.4416x = 25000. x ≈ 3360. Closest: 4000. This is approximate."
     },
     {
       "id": "ncl-surveyor-13-g019",
@@ -1793,15 +1793,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A pie chart shows expenses: Food 30%, Rent 25%, Transport 15%, Education 20%, Others 10%. If total monthly expense is \u20b924,000, how much is spent on Education?",
+      "stem": "A pie chart shows expenses: Food 30%, Rent 25%, Transport 15%, Education 20%, Others 10%. If total monthly expense is ₹24,000, how much is spent on Education?",
       "options": [
-        "A. \u20b93,600",
-        "B. \u20b94,800",
-        "C. \u20b96,000",
-        "D. \u20b95,400"
+        "A. ₹3,600",
+        "B. ₹4,800",
+        "C. ₹6,000",
+        "D. ₹5,400"
       ],
-      "answer": "B",
-      "solution": "Education = 20% of 24000 = \u20b94,800."
+      "answer": 1,
+      "solution": "Education = 20% of 24000 = ₹4,800."
     },
     {
       "id": "ncl-surveyor-13-g020",
@@ -1811,15 +1811,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The sales of a company in 4 quarters are \u20b950 lakh, \u20b960 lakh, \u20b945 lakh, and \u20b965 lakh. What is the average quarterly sales?",
+      "stem": "The sales of a company in 4 quarters are ₹50 lakh, ₹60 lakh, ₹45 lakh, and ₹65 lakh. What is the average quarterly sales?",
       "options": [
-        "A. \u20b952.5 lakh",
-        "B. \u20b955 lakh",
-        "C. \u20b950 lakh",
-        "D. \u20b957.5 lakh"
+        "A. ₹52.5 lakh",
+        "B. ₹55 lakh",
+        "C. ₹50 lakh",
+        "D. ₹57.5 lakh"
       ],
-      "answer": "A",
-      "solution": "Average = (50+60+45+65)/4 = 220/4 = \u20b955 lakh. Answer should be B."
+      "answer": 0,
+      "solution": "Average = (50+60+45+65)/4 = 220/4 = ₹55 lakh. Answer should be B."
     }
   ]
 }

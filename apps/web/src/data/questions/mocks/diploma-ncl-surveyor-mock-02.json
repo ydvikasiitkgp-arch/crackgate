@@ -36,7 +36,7 @@
         "Planimeter only",
         "Manual calculation"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Total stations use the coordinate (shoelace) method to compute area from the N, E coordinates of boundary vertices."
     },
     {
@@ -54,7 +54,7 @@
         "A random error",
         "An angular error"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Omitting the prism constant introduces a constant additive error equal to the prism offset."
     },
     {
@@ -72,7 +72,7 @@
         "Only distance measurement",
         "Weather forecasting"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Built-in software handles data logging, coordinate computation, area/volume calculation, and export to external software."
     },
     {
@@ -90,7 +90,7 @@
         "Only measures angles",
         "Only measures distances"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Traverse computation software calculates station coordinates from measured angles and distances using latitude/departure."
     },
     {
@@ -108,7 +108,7 @@
         "It has no display",
         "It cannot measure angles"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Electronic theodolites use photoelectric angle encoders and digital displays instead of optical vernier reading."
     },
     {
@@ -126,7 +126,7 @@
         "Only measure distances",
         "Only store data"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Robotic total stations have motorized drives and automatic target recognition (ATR) for one-person operation."
     },
     {
@@ -144,7 +144,7 @@
         "Magnetic detection",
         "Visual alignment only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "ATR uses an infrared/laser beam to automatically detect and align with the prism reflector."
     },
     {
@@ -162,7 +162,7 @@
         "The wind speed",
         "The colour of the instrument"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Trigonometric heighting accuracy is primarily governed by vertical angle accuracy and the horizontal distance."
     },
     {
@@ -180,7 +180,7 @@
         "Measures existing points",
         "Performs levelling"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Set-out mode computes the difference between current position and design coordinates, displaying the required angle and distance."
     },
     {
@@ -198,7 +198,7 @@
         "GPS only",
         "Levelling only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Polar layout sets out a point by turning a horizontal angle and measuring a distance from a known station."
     },
     {
@@ -216,7 +216,7 @@
         "Horizontal angles",
         "Areas of plots"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Levelling determines the difference in elevation (height) between points on the earth's surface."
     },
     {
@@ -234,7 +234,7 @@
         "Mounted on a gimbal",
         "Detachable from the tribrach"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "In a dumpy level, the telescope is rigidly fixed to the vertical spindle and cannot be rotated in the horizontal plane independently."
     },
     {
@@ -249,10 +249,10 @@
       "options": [
         "Fixed rigidly to the frame",
         "Tilted slightly in the vertical plane while keeping the bubble central",
-        "Rotated 360\u00b0 in the horizontal plane",
+        "Rotated 360° in the horizontal plane",
         "Used only for angles"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A tilting level allows fine adjustment of the line of sight by tilting the telescope without disturbing the bubble."
     },
     {
@@ -270,7 +270,7 @@
         "A theodolite telescope",
         "Digital sensors only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "An auto level has a compensator (prism system) that automatically maintains the line of sight horizontal after rough levelling."
     },
     {
@@ -288,7 +288,7 @@
         "The vertical axis of the instrument",
         "The line joining two benchmarks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The line of collimation is the horizontal line of sight passing through the crosshair intersection and the optical centre of the objective."
     },
     {
@@ -306,7 +306,7 @@
         "The next turning point",
         "The benchmark"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "The BS is taken to a point of known elevation (benchmark or previous TP) to establish the height of instrument."
     },
     {
@@ -324,7 +324,7 @@
         "The same point as the BS",
         "Only the benchmark"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The FS is taken to a new point (turning point or change point) whose elevation is being determined."
     },
     {
@@ -342,7 +342,7 @@
         "The last reading before moving",
         "A reading to a benchmark only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Intermediate sights are readings taken to intermediate points between BS and FS at a single instrument position."
     },
     {
@@ -360,7 +360,7 @@
         "BS - FS",
         "RL + BS"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "RL = HOC - FS (or IS), where HOC = RL of BS point + BS reading."
     },
     {
@@ -378,7 +378,7 @@
         "RL of FS point + FS reading",
         "BS reading - FS reading"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "HOC = RL of benchmark/back sight point + BS reading."
     },
     {
@@ -394,9 +394,9 @@
         "BS + FS",
         "Previous reading - Current reading",
         "Current reading - Previous reading",
-        "BS \u00d7 FS"
+        "BS × FS"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Rise/Fall = Previous reading - Current reading. Positive = rise, negative = fall."
     },
     {
@@ -414,7 +414,7 @@
         "4.200 m",
         "0.250 m rise"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Rise = 2.350 - 1.850 = 0.500 m (positive indicates rise)."
     },
     {
@@ -432,7 +432,7 @@
         "3.600 m",
         "1.500 m"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Fall = FS - BS = 2.100 - 1.500 = 0.600 m fall (FS > BS means the point is lower)."
     },
     {
@@ -450,7 +450,7 @@
         "A benchmark",
         "Any intermediate point"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A turning point is a stable point where both a FS (from previous setup) and a BS (from new setup) are taken."
     },
     {
@@ -468,7 +468,7 @@
         "The instrument station",
         "A temporary point"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A benchmark is a permanent point of known elevation established by previous surveys or government agencies."
     },
     {
@@ -481,13 +481,13 @@
       "difficulty": "medium",
       "stem": "The arithmetic check in the HOC method is:",
       "options": [
-        "\u03a3BS - \u03a3FS = Last RL - First RL",
-        "\u03a3BS = \u03a3FS",
-        "\u03a3IS = \u03a3TP",
-        "\u03a3BS + \u03a3FS = 0"
+        "ΣBS - ΣFS = Last RL - First RL",
+        "ΣBS = ΣFS",
+        "ΣIS = ΣTP",
+        "ΣBS + ΣFS = 0"
       ],
-      "answer": "A",
-      "solution": "The check: \u03a3BS - \u03a3FS = Last RL - First RL (difference of RLs). If not equal, there is a computational error."
+      "answer": 0,
+      "solution": "The check: ΣBS - ΣFS = Last RL - First RL (difference of RLs). If not equal, there is a computational error."
     },
     {
       "id": "ncl-surveyor-02-027",
@@ -499,13 +499,13 @@
       "difficulty": "medium",
       "stem": "The arithmetic check in the Rise and Fall method is:",
       "options": [
-        "\u03a3BS - \u03a3FS = \u03a3Rise - \u03a3Fall = Last RL - First RL",
-        "\u03a3BS = \u03a3FS",
-        "\u03a3Rise = \u03a3Fall",
-        "\u03a3IS = \u03a3TP"
+        "ΣBS - ΣFS = ΣRise - ΣFall = Last RL - First RL",
+        "ΣBS = ΣFS",
+        "ΣRise = ΣFall",
+        "ΣIS = ΣTP"
       ],
-      "answer": "A",
-      "solution": "In Rise/Fall: \u03a3BS - \u03a3FS = \u03a3Rise - \u03a3Fall = Last RL - First RL. All three must be equal."
+      "answer": 0,
+      "solution": "In Rise/Fall: ΣBS - ΣFS = ΣRise - ΣFall = Last RL - First RL. All three must be equal."
     },
     {
       "id": "ncl-surveyor-02-028",
@@ -522,7 +522,7 @@
         "Staff reading errors",
         "Instrumental collimation errors only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Reciprocal levelling eliminates errors from earth curvature and refraction by taking readings from both ends."
     },
     {
@@ -536,12 +536,12 @@
       "stem": "In reciprocal levelling, the true difference in elevation between two points is:",
       "options": [
         "The average of the two differences",
-        "(h\u2081 + h\u2082)/2 where h\u2081 and h\u2082 are the differences from each setup",
+        "(h₁ + h₂)/2 where h₁ and h₂ are the differences from each setup",
         "The sum of the two differences",
         "The larger of the two differences"
       ],
-      "answer": "B",
-      "solution": "True difference = (h\u2081 + h\u2082)/2, which eliminates curvature and refraction effects."
+      "answer": 1,
+      "solution": "True difference = (h₁ + h₂)/2, which eliminates curvature and refraction effects."
     },
     {
       "id": "ncl-surveyor-02-030",
@@ -558,7 +558,7 @@
         "Unaffected",
         "Exactly correct"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Earth curvature makes the line of sight (horizontal) pass above the curved earth, causing the staff reading to appear higher."
     },
     {
@@ -576,8 +576,8 @@
         "0.574 m",
         "7.85 m"
       ],
-      "answer": "B",
-      "solution": "Curvature correction \u2248 0.0785 \u00d7 D\u00b2 km, where D is the distance in km."
+      "answer": 1,
+      "solution": "Curvature correction ≈ 0.0785 × D² km, where D is the distance in km."
     },
     {
       "id": "ncl-surveyor-02-032",
@@ -594,7 +594,7 @@
         "Travel in a perfectly straight line",
         "Bend sideways"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Atmospheric refraction bends the line of sight slightly upward, partially counteracting earth curvature."
     },
     {
@@ -612,8 +612,8 @@
         "0.0785 m",
         "7.85 m"
       ],
-      "answer": "A",
-      "solution": "Combined correction \u2248 0.0673 \u00d7 D\u00b2 km, which is about 7/8 of curvature alone (refraction cancels about 1/7 of curvature)."
+      "answer": 0,
+      "solution": "Combined correction ≈ 0.0673 × D² km, which is about 7/8 of curvature alone (refraction cancels about 1/7 of curvature)."
     },
     {
       "id": "ncl-surveyor-02-034",
@@ -630,8 +630,8 @@
         "Using a plane table",
         "Taping vertically"
       ],
-      "answer": "B",
-      "solution": "Trigonometric levelling uses H.D. \u00d7 tan(\u03b1) (+ curvature and refraction correction) to find height difference."
+      "answer": 1,
+      "solution": "Trigonometric levelling uses H.D. × tan(α) (+ curvature and refraction correction) to find height difference."
     },
     {
       "id": "ncl-surveyor-02-035",
@@ -648,7 +648,7 @@
         "Zero",
         "Only applied at night"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The combined curvature and refraction correction is subtracted because both effects make the target appear higher than it is."
     },
     {
@@ -666,7 +666,7 @@
         "Equal slope",
         "Equal area"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A contour is an imaginary line on the ground joining points of equal elevation above a datum."
     },
     {
@@ -684,7 +684,7 @@
         "The total height of the area",
         "The spacing of benchmarks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Contour interval is the fixed vertical difference in elevation between two consecutive contour lines."
     },
     {
@@ -702,7 +702,7 @@
         "Uniform slope",
         "Water body"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Closely spaced contours represent steep slopes; widely spaced contours represent gentle slopes."
     },
     {
@@ -720,7 +720,7 @@
         "Cliff",
         "Ridge only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Widely spaced contours indicate gentle slopes or nearly flat ground."
     },
     {
@@ -738,7 +738,7 @@
         "A ridge",
         "A valley"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Closed contours with values decreasing inward represent a depression; values increasing inward represent a hill."
     },
     {
@@ -756,7 +756,7 @@
         "The map scale is 1:5",
         "The area is 5 sq.m"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A 5 m contour interval means successive contour lines represent elevations 5 m apart vertically."
     },
     {
@@ -774,7 +774,7 @@
         "Surveying is inaccurate",
         "The contour interval is constant"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A point cannot have two elevations simultaneously, so contours never cross (except in rare overhang cases)."
     },
     {
@@ -792,7 +792,7 @@
         "A red line",
         "A double line"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Depression contours are shown with hachures (short ticks) pointing inward toward the lower elevation."
     },
     {
@@ -810,7 +810,7 @@
         "Test the EDM",
         "Calibrate the compass"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The two-peg test checks and adjusts the line of collimation of a dumpy or tilting level."
     },
     {
@@ -828,7 +828,7 @@
         "0.400 m",
         "Zero"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "True diff A-B from peg 1 = 1.500-1.700 = -0.200. From peg 2 = 2.300-2.100 = +0.200. Error per 2 m = 0.200; with equal distances, error is distributed."
     },
     {
@@ -846,7 +846,7 @@
         "Measure horizontal angles",
         "Establish benchmarks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Cross-section levelling determines the transverse ground profile at regular intervals along a centre line."
     },
     {
@@ -864,7 +864,7 @@
         "Only on benchmarks",
         "Only on turning points"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The instrument is set up at intermediate positions to take BS, IS, and FS along the centre line and cross-sections."
     },
     {
@@ -882,7 +882,7 @@
         "Geodetic BM",
         "Fundamental BM"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A TBM is a temporary benchmark of convenience established at a local point for short-term reference."
     },
     {
@@ -900,7 +900,7 @@
         "Arbitrary benchmark",
         "Temporary benchmark"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GTS benchmarks are permanently established by the Survey of India with highly accurate elevations referred to Mean Sea Level."
     },
     {
@@ -918,7 +918,7 @@
         "Tachometric method",
         "Trigonometric method"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The HI method is also known as the Height of Collimation (HOC) method."
     },
     {
@@ -936,7 +936,7 @@
         "Uses fewer readings",
         "Requires no benchmarks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Rise/Fall provides a check at every staff reading (difference of consecutive readings), while HOC only checks at the end."
     },
     {
@@ -954,8 +954,8 @@
         "Intermediate sight",
         "Back sight"
       ],
-      "answer": "B",
-      "solution": "A change point (CP) is synonymous with a turning point (TP) \u2014 a point where both FS and BS are taken."
+      "answer": 1,
+      "solution": "A change point (CP) is synonymous with a turning point (TP) — a point where both FS and BS are taken."
     },
     {
       "id": "ncl-surveyor-02-053",
@@ -972,7 +972,7 @@
         "Plumb line",
         "Magnetic meridian"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The line of collimation must be parallel to the bubble tube axis so that when the bubble is centred, the line of sight is horizontal."
     },
     {
@@ -983,15 +983,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "If the bubble tube axis is inclined by an angle \u03b1 from the horizontal, the line of sight will be inclined by:",
+      "stem": "If the bubble tube axis is inclined by an angle α from the horizontal, the line of sight will be inclined by:",
       "options": [
-        "2\u03b1",
-        "\u03b1",
-        "\u03b1/2",
+        "2α",
+        "α",
+        "α/2",
         "Zero"
       ],
-      "answer": "B",
-      "solution": "The line of sight tilts by the same angle \u03b1 as the bubble tube axis, introducing an error."
+      "answer": 1,
+      "solution": "The line of sight tilts by the same angle α as the bubble tube axis, introducing an error."
     },
     {
       "id": "ncl-surveyor-02-055",
@@ -1008,7 +1008,7 @@
         "Ignored",
         "Multiplied by 2"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Curvature makes the staff reading appear too high, so the correction is subtracted from the reading (or equivalently added as a negative correction to RL)."
     },
     {
@@ -1026,8 +1026,8 @@
         "About twice the curvature correction",
         "Always zero"
       ],
-      "answer": "B",
-      "solution": "Atmospheric refraction bends the\u89c6\u7ebf slightly upward, cancelling about 1/7 of the curvature effect."
+      "answer": 1,
+      "solution": "Atmospheric refraction bends the视线 slightly upward, cancelling about 1/7 of the curvature effect."
     },
     {
       "id": "ncl-surveyor-02-057",
@@ -1044,7 +1044,7 @@
         "Using a shorter sight distance",
         "Ignoring it"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "When BS and FS distances are equal, the curvature and refraction errors cancel out."
     },
     {
@@ -1062,7 +1062,7 @@
         "Setting out building foundations only",
         "Determining the strike of coal seams only"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Levelling in mines determines shaft depths, haul road gradients, bench levels, and bench-to-bench elevations."
     },
     {
@@ -1080,7 +1080,7 @@
         "A line parallel to the axis of the earth",
         "A line joining two benchmarks"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A level line is a curved line lying on a level surface (equipotential surface of gravity)."
     },
     {
@@ -1098,7 +1098,7 @@
         "The bubble tube axis",
         "The plumb line"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The datum is the reference surface (e.g., MSL) from which all elevations are measured."
     },
     {
@@ -1116,7 +1116,7 @@
         "Angle measurement only",
         "Curve setting only"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tachometry is a rapid optical surveying method using a theodolite with stadia hairs to determine distances and elevations."
     },
     {
@@ -1134,7 +1134,7 @@
         "On the horizontal crosshair only",
         "At the top of the telescope"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Two additional horizontal crosshairs (stadia hairs) are placed symmetrically above and below the central crosshair."
     },
     {
@@ -1152,7 +1152,7 @@
         "Two consecutive benchmarks",
         "The instrument height and staff reading"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Stadia interval (s) = Upper stadia reading - Lower stadia reading on the staff."
     },
     {
@@ -1170,7 +1170,7 @@
         "D = K/S",
         "D = C + S/K"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Horizontal distance D = Ks + C, where K is the stadia interval factor and C is the additive constant."
     },
     {
@@ -1188,8 +1188,8 @@
         "150",
         "200"
       ],
-      "answer": "B",
-      "solution": "For a standard tacheometer with internal focusing, K \u2248 100 and C \u2248 0."
+      "answer": 1,
+      "solution": "For a standard tacheometer with internal focusing, K ≈ 100 and C ≈ 0."
     },
     {
       "id": "ncl-surveyor-02-066",
@@ -1206,7 +1206,7 @@
         "Zero (approximately)",
         "50"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "For internal focusing telescopes, the additive constant C is approximately zero."
     },
     {
@@ -1224,7 +1224,7 @@
         "1.500 m",
         "3.000 m"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "s = Upper - Lower = 1.800 - 1.200 = 0.600 m."
     },
     {
@@ -1242,8 +1242,8 @@
         "5 m",
         "5000 m"
       ],
-      "answer": "A",
-      "solution": "D = KS + C = 100 \u00d7 0.500 + 0 = 50 m."
+      "answer": 0,
+      "solution": "D = KS + C = 100 × 0.500 + 0 = 50 m."
     },
     {
       "id": "ncl-surveyor-02-069",
@@ -1255,13 +1255,13 @@
       "difficulty": "medium",
       "stem": "In stadia tachometry, the vertical component is given by:",
       "options": [
-        "D \u00d7 sin \u03b1",
-        "D \u00d7 tan \u03b1",
-        "KS \u00d7 cos \u03b1",
-        "D \u00d7 cos \u03b1"
+        "D × sin α",
+        "D × tan α",
+        "KS × cos α",
+        "D × cos α"
       ],
-      "answer": "B",
-      "solution": "Vertical component = D \u00d7 tan \u03b1, where \u03b1 is the vertical angle of the line of sight."
+      "answer": 1,
+      "solution": "Vertical component = D × tan α, where α is the vertical angle of the line of sight."
     },
     {
       "id": "ncl-surveyor-02-070",
@@ -1271,15 +1271,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "If the horizontal distance is 150 m and the vertical angle is +3\u00b0, the height difference is approximately:",
+      "stem": "If the horizontal distance is 150 m and the vertical angle is +3°, the height difference is approximately:",
       "options": [
         "7.87 m",
         "150 m",
         "1.5 m",
         "0.15 m"
       ],
-      "answer": "A",
-      "solution": "VD = D \u00d7 tan \u03b1 = 150 \u00d7 tan(3\u00b0) \u2248 150 \u00d7 0.0524 = 7.87 m."
+      "answer": 0,
+      "solution": "VD = D × tan α = 150 × tan(3°) ≈ 150 × 0.0524 = 7.87 m."
     },
     {
       "id": "ncl-surveyor-02-071",
@@ -1296,8 +1296,8 @@
         "A subtense bar",
         "Only horizontal angles"
       ],
-      "answer": "B",
-      "solution": "The tangential method uses two vertical angle readings (e.g., 15\u00b0 and 30\u00b0) with staff readings to compute distance."
+      "answer": 1,
+      "solution": "The tangential method uses two vertical angle readings (e.g., 15° and 30°) with staff readings to compute distance."
     },
     {
       "id": "ncl-surveyor-02-072",
@@ -1314,7 +1314,7 @@
         "Taping",
         "EDM"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A subtense bar of known length (usually 2 m) is subtended at the instrument, and the horizontal angle is measured to compute distance."
     },
     {
@@ -1332,7 +1332,7 @@
         "200 m",
         "1 km"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "The subtense bar is most accurate for short distances up to about 200 m; accuracy decreases at longer distances."
     },
     {
@@ -1350,7 +1350,7 @@
         "HI + FS",
         "RL + BS"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "RL = HI - VD - FS, where HI = RL of instrument station + IS, and VD = vertical component."
     },
     {
@@ -1368,7 +1368,7 @@
         "No vertical circle",
         "A shorter focal length"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A tacheometer has stadia hairs and an anallactic (stadia) lens to make C = 0 and K = 100."
     },
     {
@@ -1386,7 +1386,7 @@
         "Measure vertical angles",
         "Eliminate parallax"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The anallactic lens is placed inside the telescope to make the additive constant C equal to zero."
     },
     {
@@ -1404,7 +1404,7 @@
         "Measures distances only",
         "Replaces the need for a staff"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A self-reducing tacheometer has specially graduated stadia hairs that directly give reduced horizontal distance and height difference."
     },
     {
@@ -1422,7 +1422,7 @@
         "The staff is tilted",
         "The staff is not vertical"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The basic formula D = KS + C applies when the line of sight is horizontal. For inclined sights, modified formulas are used."
     },
     {
@@ -1433,15 +1433,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "When the line of sight is inclined at angle \u03b1 to the horizontal, the horizontal distance is:",
+      "stem": "When the line of sight is inclined at angle α to the horizontal, the horizontal distance is:",
       "options": [
-        "KS cos\u00b2\u03b1 + C cos \u03b1",
+        "KS cos²α + C cos α",
         "KS + C",
-        "KS sin \u03b1 + C",
-        "KS / cos \u03b1"
+        "KS sin α + C",
+        "KS / cos α"
       ],
-      "answer": "A",
-      "solution": "For inclined sights, HD = KS cos\u00b2\u03b1 + C cos \u03b1 (approximate), where \u03b1 is the vertical angle."
+      "answer": 0,
+      "solution": "For inclined sights, HD = KS cos²α + C cos α (approximate), where α is the vertical angle."
     },
     {
       "id": "ncl-surveyor-02-080",
@@ -1451,15 +1451,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The height difference when the line of sight is inclined at angle \u03b1 is approximately:",
+      "stem": "The height difference when the line of sight is inclined at angle α is approximately:",
       "options": [
-        "(KS/2) sin 2\u03b1 + C sin \u03b1",
-        "KS cos \u03b1",
-        "KS tan \u03b1",
-        "C cos \u03b1"
+        "(KS/2) sin 2α + C sin α",
+        "KS cos α",
+        "KS tan α",
+        "C cos α"
       ],
-      "answer": "A",
-      "solution": "VD = (KS/2) sin 2\u03b1 + C sin \u03b1 for an inclined line of sight."
+      "answer": 0,
+      "solution": "VD = (KS/2) sin 2α + C sin α for an inclined line of sight."
     },
     {
       "id": "ncl-surveyor-02-g001",
@@ -1476,7 +1476,7 @@
         "C. 1857",
         "D. 1942"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Battle of Plassey was fought in 1757 between Siraj-ud-Daulah and the British."
     },
     {
@@ -1494,7 +1494,7 @@
         "C. Bal Gangadhar Tilak",
         "D. Gopal Krishna Gokhale"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Allan Octavian Hume founded the Indian National Congress in 1885."
     },
     {
@@ -1512,7 +1512,7 @@
         "C. Shah Jahan",
         "D. Aurangzeb"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Shah Jahan built the Red Fort in Delhi, completed in 1648."
     },
     {
@@ -1530,7 +1530,7 @@
         "C. 1930",
         "D. 1935"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Simon Commission visited India in 1928 to review constitutional reforms."
     },
     {
@@ -1548,7 +1548,7 @@
         "C. Sucheta Kriplani",
         "D. Mother Teresa"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Indira Gandhi was the first woman PM of India (1966-1977, 1980-1984)."
     },
     {
@@ -1566,7 +1566,7 @@
         "C. We the nation",
         "D. We the republic"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The Preamble begins with 'We the people of India'."
     },
     {
@@ -1584,7 +1584,7 @@
         "C. Eighth",
         "D. Ninth"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "The Eighth Schedule lists recognized languages of India."
     },
     {
@@ -1602,7 +1602,7 @@
         "C. 260",
         "D. 245"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Rajya Sabha can have a maximum of 250 members (238 elected + 12 nominated)."
     },
     {
@@ -1620,7 +1620,7 @@
         "C. Dr. B.R. Ambedkar",
         "D. Sardar Vallabhbhai Patel"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Dr. B.R. Ambedkar is known as the Father of the Indian Constitution."
     },
     {
@@ -1638,7 +1638,7 @@
         "C. Lahore",
         "D. Kolkata"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Jallianwala Bagh massacre occurred on 13 April 1919 in Amritsar, Punjab."
     },
     {
@@ -1656,7 +1656,7 @@
         "C. KCl",
         "D. CaCl2"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Common salt is sodium chloride (NaCl)."
     },
     {
@@ -1674,7 +1674,7 @@
         "C. Carbon dioxide",
         "D. Hydrogen"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Plants use CO2 during photosynthesis to produce glucose and oxygen."
     },
     {
@@ -1692,7 +1692,7 @@
         "C. Newton",
         "D. Pascal"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Newton (N) is the SI unit of force."
     },
     {
@@ -1710,7 +1710,7 @@
         "C. Vitamin C",
         "D. Vitamin D"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "Vitamin D is synthesized when skin is exposed to UV-B radiation from sunlight."
     },
     {
@@ -1728,7 +1728,7 @@
         "C. Venus",
         "D. Asteroid"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Chandrayaan-3 successfully landed on the Moon's south pole on 23 August 2023."
     },
     {
@@ -1746,7 +1746,7 @@
         "C. APJ Abdul Kalam",
         "D. Ramanujan"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Dr. APJ Abdul Kalam is known as the Missile Man of India."
     },
     {
@@ -1764,7 +1764,7 @@
         "C. 1972",
         "D. 1975"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "ISRO was established on 15 August 1969."
     },
     {
@@ -1782,7 +1782,7 @@
         "C. Study the Sun",
         "D. Explore Mars"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Gaganyaan is India's human spaceflight programme to send astronauts to low Earth orbit."
     },
     {
@@ -1800,8 +1800,8 @@
         "C. Magnesium",
         "D. Aluminium"
       ],
-      "answer": "A",
-      "solution": "Lithium is the lightest metal with a density of 0.534 g/cm\u00b3."
+      "answer": 0,
+      "solution": "Lithium is the lightest metal with a density of 0.534 g/cm³."
     },
     {
       "id": "ncl-surveyor-02-g020",
@@ -1818,7 +1818,7 @@
         "C. 9",
         "D. 0"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Pure water has a pH of 7 (neutral)."
     }
   ]

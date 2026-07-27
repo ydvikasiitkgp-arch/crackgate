@@ -36,8 +36,8 @@
         "Magnetic variation",
         "Instrumental errors"
       ],
-      "answer": "A",
-      "solution": "G2G = grid factor \u00d7 combined factor; it converts measured ground distance/bearing to grid values."
+      "answer": 0,
+      "solution": "G2G = grid factor × combined factor; it converts measured ground distance/bearing to grid values."
     },
     {
       "id": "ncl-surveyor-14-002",
@@ -54,7 +54,7 @@
         "Gross error",
         "Blunder"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Systematic errors follow a physical law and can be corrected (e.g., collimation error)."
     },
     {
@@ -72,7 +72,7 @@
         "Systematic errors",
         "Blunders"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Random (accidental) errors arise from unpredictable fluctuations and follow the normal distribution."
     },
     {
@@ -90,7 +90,7 @@
         "A systematic error",
         "An unavoidable error"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Blunders (gross errors) are mistakes from human carelessness and should be detected and removed."
     },
     {
@@ -108,7 +108,7 @@
         "The mean",
         "All of these (for normal distribution)"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "For a perfectly normal distribution, mean = median = mode, and the curve is symmetric about this central value."
     },
     {
@@ -126,8 +126,8 @@
         "The systematic error",
         "The maximum error"
       ],
-      "answer": "B",
-      "solution": "Standard deviation \u03c3 quantifies the scatter of observations; smaller \u03c3 means more precise measurements."
+      "answer": 1,
+      "solution": "Standard deviation σ quantifies the scatter of observations; smaller σ means more precise measurements."
     },
     {
       "id": "ncl-surveyor-14-007",
@@ -144,7 +144,7 @@
         "n + 1",
         "n / 2"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Using n-1 (Bessel's correction) gives an unbiased estimate of the population variance from a sample."
     },
     {
@@ -162,7 +162,7 @@
         "Arithmetic mean",
         "Geometric mean"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "For equal-weight observations, the arithmetic mean minimises the sum of squared residuals."
     },
     {
@@ -180,8 +180,8 @@
         "The mean minus the true value",
         "The standard deviation"
       ],
-      "answer": "A",
-      "solution": "Residual v\u1d62 = l\u1d62 - x\u0304 (observation minus the computed value); residuals replace true errors since the true value is unknown."
+      "answer": 0,
+      "solution": "Residual vᵢ = lᵢ - x̄ (observation minus the computed value); residuals replace true errors since the true value is unknown."
     },
     {
       "id": "ncl-surveyor-14-010",
@@ -198,8 +198,8 @@
         "Zero",
         "Equal to the mean"
       ],
-      "answer": "C",
-      "solution": "By definition, \u03a3v = \u03a3(l\u1d62 - x\u0304) = 0 when x\u0304 is the arithmetic mean."
+      "answer": 2,
+      "solution": "By definition, Σv = Σ(lᵢ - x̄) = 0 when x̄ is the arithmetic mean."
     },
     {
       "id": "ncl-surveyor-14-011",
@@ -216,8 +216,8 @@
         "Residual",
         "Median"
       ],
-      "answer": "B",
-      "solution": "Variance \u03c3\u00b2 = (\u03a3v\u00b2)/(n-1); standard deviation \u03c3 = \u221a(variance)."
+      "answer": 1,
+      "solution": "Variance σ² = (Σv²)/(n-1); standard deviation σ = √(variance)."
     },
     {
       "id": "ncl-surveyor-14-012",
@@ -229,13 +229,13 @@
       "difficulty": "medium",
       "stem": "The 'standard error of the mean' is:",
       "options": [
-        "\u03c3",
-        "\u03c3/\u221an",
-        "\u03c3 \u00d7 \u221an",
-        "\u03c3/n"
+        "σ",
+        "σ/√n",
+        "σ × √n",
+        "σ/n"
       ],
-      "answer": "B",
-      "solution": "Standard error of the mean = \u03c3/\u221an; it decreases as more observations are taken."
+      "answer": 1,
+      "solution": "Standard error of the mean = σ/√n; it decreases as more observations are taken."
     },
     {
       "id": "ncl-surveyor-14-013",
@@ -247,13 +247,13 @@
       "difficulty": "medium",
       "stem": "According to the '68-95-99.7 rule', approximately 95% of observations lie within:",
       "options": [
-        "\u00b11\u03c3 of the mean",
-        "\u00b12\u03c3 of the mean",
-        "\u00b13\u03c3 of the mean",
-        "\u00b10.5\u03c3 of the mean"
+        "±1σ of the mean",
+        "±2σ of the mean",
+        "±3σ of the mean",
+        "±0.5σ of the mean"
       ],
-      "answer": "B",
-      "solution": "About 95.4% of normally distributed data falls within \u00b12\u03c3 of the mean."
+      "answer": 1,
+      "solution": "About 95.4% of normally distributed data falls within ±2σ of the mean."
     },
     {
       "id": "ncl-surveyor-14-014",
@@ -265,13 +265,13 @@
       "difficulty": "medium",
       "stem": "The 'probable error' of a single observation is approximately:",
       "options": [
-        "0.5\u03c3",
-        "0.6745\u03c3",
-        "1.0\u03c3",
-        "2.0\u03c3"
+        "0.5σ",
+        "0.6745σ",
+        "1.0σ",
+        "2.0σ"
       ],
-      "answer": "B",
-      "solution": "Probable error = 0.6745\u03c3; it divides the distribution into equal halves."
+      "answer": 1,
+      "solution": "Probable error = 0.6745σ; it divides the distribution into equal halves."
     },
     {
       "id": "ncl-surveyor-14-015",
@@ -288,7 +288,7 @@
         "The interval covers 95% of the area under the normal curve",
         "All of the above in the frequentist sense"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "A 95% CI means that if we repeated the procedure many times, ~95% of such intervals would contain the true value."
     },
     {
@@ -306,8 +306,8 @@
         "Sum of residuals",
         "Maximum residual"
       ],
-      "answer": "B",
-      "solution": "Least squares minimises \u03a3v\u00b2, giving the best-fit solution in the minimum squares sense."
+      "answer": 1,
+      "solution": "Least squares minimises Σv², giving the best-fit solution in the minimum squares sense."
     },
     {
       "id": "ncl-surveyor-14-017",
@@ -324,7 +324,7 @@
         "Whether variance differs from a hypothesised value",
         "All of the above"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "Chi-square tests can assess normality, goodness of fit, and variance hypotheses."
     },
     {
@@ -342,8 +342,8 @@
         "The data is skewed",
         "There is no random error"
       ],
-      "answer": "B",
-      "solution": "The t-distribution accounts for the additional uncertainty when \u03c3 is estimated from a small sample."
+      "answer": 1,
+      "solution": "The t-distribution accounts for the additional uncertainty when σ is estimated from a small sample."
     },
     {
       "id": "ncl-surveyor-14-019",
@@ -360,7 +360,7 @@
         "A binomial distribution",
         "An exponential distribution"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "With increasing degrees of freedom, the t-distribution converges to the standard normal."
     },
     {
@@ -378,8 +378,8 @@
         "Number of observations minus number of unknowns",
         "Number of observations plus number of unknowns"
       ],
-      "answer": "C",
-      "solution": "DOF = n - u; redundancy (DOF) must be \u2265 1 for adjustment."
+      "answer": 2,
+      "solution": "DOF = n - u; redundancy (DOF) must be ≥ 1 for adjustment."
     },
     {
       "id": "ncl-surveyor-14-021",
@@ -396,7 +396,7 @@
         "Average angle",
         "Sum of interior angles"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Misclosure = difference between computed and known end position; it quantifies the traverse error."
     },
     {
@@ -414,7 +414,7 @@
         "Correctness of the result",
         "Absence of systematic error"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Precision is the reproducibility of measurements; accuracy is closeness to truth."
     },
     {
@@ -432,7 +432,7 @@
         "The sample size is small",
         "The mean is correct"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Systematic errors cause biased (inaccurate) results even when random scatter is small (high precision)."
     },
     {
@@ -450,7 +450,7 @@
         "Take the mean",
         "Ignore outliers"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Calibration, independent checks, and different methods reveal systematic errors that averaging cannot eliminate."
     },
     {
@@ -468,7 +468,7 @@
         "Has zero residual",
         "Is the mean value"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "An outlier is a value that deviates markedly from the majority, suggesting a possible blunder."
     },
     {
@@ -486,7 +486,7 @@
         "Apply least squares",
         "Compute confidence intervals"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Chauvenet's criterion provides a probabilistic threshold for rejecting suspected outliers."
     },
     {
@@ -499,13 +499,13 @@
       "difficulty": "medium",
       "stem": "The 'propagation of errors' law states that for z = f(x, y), the variance of z is:",
       "options": [
-        "\u03c3\u00b2_z = \u03c3\u00b2_x + \u03c3\u00b2_y",
-        "\u03c3\u00b2_z = (\u2202f/\u2202x)\u00b2\u03c3\u00b2_x + (\u2202f/\u2202y)\u00b2\u03c3\u00b2_y",
-        "\u03c3\u00b2_z = \u03c3_x \u00d7 \u03c3_y",
-        "\u03c3\u00b2_z = \u03c3_x / \u03c3_y"
+        "σ²_z = σ²_x + σ²_y",
+        "σ²_z = (∂f/∂x)²σ²_x + (∂f/∂y)²σ²_y",
+        "σ²_z = σ_x × σ_y",
+        "σ²_z = σ_x / σ_y"
       ],
-      "answer": "B",
-      "solution": "The general law of propagation of variances: \u03c3\u00b2_z = \u03a3(\u2202f/\u2202x\u1d62)\u00b2\u03c3\u00b2_x\u1d62 for independent variables."
+      "answer": 1,
+      "solution": "The general law of propagation of variances: σ²_z = Σ(∂f/∂xᵢ)²σ²_xᵢ for independent variables."
     },
     {
       "id": "ncl-surveyor-14-028",
@@ -522,8 +522,8 @@
         "Can be ignored",
         "Is always positive"
       ],
-      "answer": "B",
-      "solution": "For correlated observations: \u03c3\u00b2_z = \u03a3(\u2202f/\u2202x\u1d62)\u00b2\u03c3\u00b2_x\u1d62 + 2\u03a3(\u2202f/\u2202x\u1d62)(\u2202f/\u2202x\u2c7c)Cov(x\u1d62,x\u2c7c)."
+      "answer": 1,
+      "solution": "For correlated observations: σ²_z = Σ(∂f/∂xᵢ)²σ²_xᵢ + 2Σ(∂f/∂xᵢ)(∂f/∂xⱼ)Cov(xᵢ,xⱼ)."
     },
     {
       "id": "ncl-surveyor-14-029",
@@ -540,8 +540,8 @@
         "Directly proportional to its variance",
         "Equal to its residual"
       ],
-      "answer": "B",
-      "solution": "Weight p\u1d62 \u221d 1/\u03c3\u00b2_i; more precise observations receive higher weights."
+      "answer": 1,
+      "solution": "Weight pᵢ ∝ 1/σ²_i; more precise observations receive higher weights."
     },
     {
       "id": "ncl-surveyor-14-030",
@@ -554,12 +554,12 @@
       "stem": "In weighted least squares, the weighted mean is:",
       "options": [
         "Simple arithmetic mean",
-        "\u03a3(p\u1d62 \u00d7 l\u1d62) / \u03a3p\u1d62",
-        "\u03a3l\u1d62 / n",
-        "\u03a3(p\u1d62 \u00d7 l\u1d62) / n"
+        "Σ(pᵢ × lᵢ) / Σpᵢ",
+        "Σlᵢ / n",
+        "Σ(pᵢ × lᵢ) / n"
       ],
-      "answer": "B",
-      "solution": "Weighted mean x\u0304 = \u03a3(p\u1d62l\u1d62)/\u03a3p\u1d62; observations with higher weight contribute more."
+      "answer": 1,
+      "solution": "Weighted mean x̄ = Σ(pᵢlᵢ)/Σpᵢ; observations with higher weight contribute more."
     },
     {
       "id": "ncl-surveyor-14-031",
@@ -576,7 +576,7 @@
         "The total number of observations",
         "The number of stations"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Redundancy = DOF = n - u; it allows error detection and adjustment."
     },
     {
@@ -594,7 +594,7 @@
         "Being less accurate",
         "Not using least squares"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "In a free (inner-condition) network, no points are held fixed; the datum is defined by minimising the trace of the covariance matrix."
     },
     {
@@ -612,8 +612,8 @@
         "The true standard deviation",
         "Always 1.0"
       ],
-      "answer": "B",
-      "solution": "A priori \u03c3\u2080 is estimated from expected instrument accuracy before the adjustment."
+      "answer": 1,
+      "solution": "A priori σ₀ is estimated from expected instrument accuracy before the adjustment."
     },
     {
       "id": "ncl-surveyor-14-034",
@@ -630,8 +630,8 @@
         "The instrument accuracy",
         "Always equal to the a priori value"
       ],
-      "answer": "B",
-      "solution": "A posteriori \u03c3\u2080 = \u221a(v\u0302\u1d40Pv\u0302/DOF); it reflects the actual residuals from the adjustment."
+      "answer": 1,
+      "solution": "A posteriori σ₀ = √(v̂ᵀPv̂/DOF); it reflects the actual residuals from the adjustment."
     },
     {
       "id": "ncl-surveyor-14-035",
@@ -641,15 +641,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'reference variance factor' (\u03c3\u00b2\u2080) in least squares is estimated as:",
+      "stem": "The 'reference variance factor' (σ²₀) in least squares is estimated as:",
       "options": [
-        "v\u0302\u1d40Pv\u0302 / n",
-        "v\u0302\u1d40Pv\u0302 / (n - u)",
-        "v\u0302\u1d40Pv\u0302 \u00d7 (n - u)",
-        "\u03a3v / n"
+        "v̂ᵀPv̂ / n",
+        "v̂ᵀPv̂ / (n - u)",
+        "v̂ᵀPv̂ × (n - u)",
+        "Σv / n"
       ],
-      "answer": "B",
-      "solution": "\u03c3\u0302\u00b2\u2080 = v\u0302\u1d40Pv\u0302 / DOF, where DOF = n - u."
+      "answer": 1,
+      "solution": "σ̂²₀ = v̂ᵀPv̂ / DOF, where DOF = n - u."
     },
     {
       "id": "ncl-surveyor-14-036",
@@ -666,7 +666,7 @@
         "Standard deviation check",
         "Range check"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Baarda's data snooping tests each residual against a threshold to detect gross errors."
     },
     {
@@ -684,7 +684,7 @@
         "Its redundancy",
         "Its scale"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Internal reliability is the network's ability to detect its own gross errors through redundancy."
     },
     {
@@ -702,7 +702,7 @@
         "Its precision",
         "Its scale accuracy"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "External reliability quantifies how much an undetected blunder would distort the final result."
     },
     {
@@ -713,15 +713,15 @@
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "In error propagation, if z = 2x + 3y and x, y are independent with \u03c3_x = 1, \u03c3_y = 2, then \u03c3_z =:",
+      "stem": "In error propagation, if z = 2x + 3y and x, y are independent with σ_x = 1, σ_y = 2, then σ_z =:",
       "options": [
-        "\u221a(4 + 36)",
-        "\u221a(2 + 6)",
-        "\u221a(4 + 12)",
-        "\u221a(4 + 6)"
+        "√(4 + 36)",
+        "√(2 + 6)",
+        "√(4 + 12)",
+        "√(4 + 6)"
       ],
-      "answer": "C",
-      "solution": "\u03c3\u00b2_z = (2)\u00b2\u03c3\u00b2_x + (3)\u00b2\u03c3\u00b2_y = 4(1) + 9(4) = 4 + 36 = 40; \u03c3_z = \u221a40. Wait: (2)\u00b2(1)\u00b2 + (3)\u00b2(2)\u00b2 = 4 + 36 = 40. Actually: \u03c3_z\u00b2 = 4(1) + 9(4) = 40. Correct answer is \u221a40. Let me recheck: option A = \u221a40. Hmm."
+      "answer": 2,
+      "solution": "σ²_z = (2)²σ²_x + (3)²σ²_y = 4(1) + 9(4) = 4 + 36 = 40; σ_z = √40. Wait: (2)²(1)² + (3)²(2)² = 4 + 36 = 40. Actually: σ_z² = 4(1) + 9(4) = 40. Correct answer is √40. Let me recheck: option A = √40. Hmm."
     },
     {
       "id": "ncl-surveyor-14-040",
@@ -733,13 +733,13 @@
       "difficulty": "medium",
       "stem": "The 'law of propagation of covariances' in matrix form is:",
       "options": [
-        "Cov(Z) = J \u00d7 Cov(X) \u00d7 J\u1d40",
-        "Cov(Z) = Cov(X) \u00d7 J",
-        "Cov(Z) = J \u00d7 Cov(X)",
+        "Cov(Z) = J × Cov(X) × Jᵀ",
+        "Cov(Z) = Cov(X) × J",
+        "Cov(Z) = J × Cov(X)",
         "Cov(Z) = Cov(X) / J"
       ],
-      "answer": "A",
-      "solution": "Where J is the Jacobian matrix of partial derivatives \u2202f/\u2202x."
+      "answer": 0,
+      "solution": "Where J is the Jacobian matrix of partial derivatives ∂f/∂x."
     },
     {
       "id": "ncl-surveyor-14-041",
@@ -751,13 +751,13 @@
       "difficulty": "medium",
       "stem": "A 'weighted residual' is:",
       "options": [
-        "v \u00d7 \u221ap",
-        "v \u00d7 p",
+        "v × √p",
+        "v × p",
         "v / p",
-        "v\u00b2 \u00d7 p"
+        "v² × p"
       ],
-      "answer": "B",
-      "solution": "Weighted residual = v\u1d62 \u00d7 p\u1d62; in data snooping, the normalised residual is v\u1d62\u221ap\u1d62 / \u03c3\u2080."
+      "answer": 1,
+      "solution": "Weighted residual = vᵢ × pᵢ; in data snooping, the normalised residual is vᵢ√pᵢ / σ₀."
     },
     {
       "id": "ncl-surveyor-14-042",
@@ -769,13 +769,13 @@
       "difficulty": "medium",
       "stem": "The 'Baarda data snooping' test statistic is:",
       "options": [
-        "w_i = v_i\u221ap_i / \u03c3\u2080",
-        "w_i = v_i \u00d7 p_i",
-        "w_i = v_i / \u03c3",
-        "w_i = v_i\u00b2 \u00d7 p_i"
+        "w_i = v_i√p_i / σ₀",
+        "w_i = v_i × p_i",
+        "w_i = v_i / σ",
+        "w_i = v_i² × p_i"
       ],
-      "answer": "A",
-      "solution": "w_i = v\u0302_i\u221ap_i / \u03c3\u0302\u2080 is compared against a critical value from the normal distribution."
+      "answer": 0,
+      "solution": "w_i = v̂_i√p_i / σ̂₀ is compared against a critical value from the normal distribution."
     },
     {
       "id": "ncl-surveyor-14-043",
@@ -792,8 +792,8 @@
         "More observations are needed",
         "The datum is wrong"
       ],
-      "answer": "B",
-      "solution": "A significant discrepancy indicates the assumed \u03c3\u2080 or the weight matrix P may be incorrect."
+      "answer": 1,
+      "solution": "A significant discrepancy indicates the assumed σ₀ or the weight matrix P may be incorrect."
     },
     {
       "id": "ncl-surveyor-14-044",
@@ -810,7 +810,7 @@
         "Detect outliers",
         "Compute confidence intervals"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "The F-test compares two variance ratios; it is used to test if two populations have equal variances."
     },
     {
@@ -828,7 +828,7 @@
         "Ignoring it",
         "Only to the longest side"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Angular misclosure is typically distributed equally among all measured angles."
     },
     {
@@ -846,8 +846,8 @@
         "Coordinates equally",
         "Errors randomly"
       ],
-      "answer": "B",
-      "solution": "Bowditch: correction to latitude/proportion of a side = (side length / total perimeter) \u00d7 total misclosure."
+      "answer": 1,
+      "solution": "Bowditch: correction to latitude/proportion of a side = (side length / total perimeter) × total misclosure."
     },
     {
       "id": "ncl-surveyor-14-047",
@@ -864,8 +864,8 @@
         "Equally",
         "To the last side only"
       ],
-      "answer": "B",
-      "solution": "Transit rule: correction \u221d latitude (or departure) of each side, rather than its length."
+      "answer": 1,
+      "solution": "Transit rule: correction ∝ latitude (or departure) of each side, rather than its length."
     },
     {
       "id": "ncl-surveyor-14-048",
@@ -882,7 +882,7 @@
         "Adjusting EDM distance measurements",
         "Computing areas"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Crandall's method adjusts measured distances by applying corrections for slope, temperature, pressure, etc."
     },
     {
@@ -900,8 +900,8 @@
         "Standard deviation",
         "Weight"
       ],
-      "answer": "A",
-      "solution": "True error = correction + residual (in practice, correction \u2248 -residual for small errors)."
+      "answer": 0,
+      "solution": "True error = correction + residual (in practice, correction ≈ -residual for small errors)."
     },
     {
       "id": "ncl-surveyor-14-050",
@@ -918,7 +918,7 @@
         "Field notes only",
         "Satellite signals"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Photogrammetry extracts 3D information from 2D images."
     },
     {
@@ -936,7 +936,7 @@
         "No lens",
         "Automatic focus"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Metric cameras have precisely known focal length, principal point, and lens distortion parameters."
     },
     {
@@ -954,7 +954,7 @@
         "Camera body to the ground",
         "Two nodal points of the lens"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Focal length f is the distance from the optical centre to the image plane when focused at infinity."
     },
     {
@@ -972,7 +972,7 @@
         "The corner of the photo",
         "The nadir point"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The principal point is where the optical axis intersects the image plane."
     },
     {
@@ -990,7 +990,7 @@
         "Measure distances",
         "Focus the lens"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Fiducial marks (typically 4 or 8) define the photo coordinate system."
     },
     {
@@ -1008,7 +1008,7 @@
         "At the horizon",
         "At the principal point"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "The nadir is the ground point vertically below the camera; on an tilted photo it differs from the principal point."
     },
     {
@@ -1022,12 +1022,12 @@
       "stem": "A 'vertical photograph' has the camera axis:",
       "options": [
         "Perfectly vertical",
-        "As nearly vertical as possible, within ~3\u00b0 of plumb",
+        "As nearly vertical as possible, within ~3° of plumb",
         "Horizontal",
-        "At 45\u00b0"
+        "At 45°"
       ],
-      "answer": "B",
-      "solution": "A 'vertical' photo is nominally vertical but may have a slight tilt (typically < 3\u00b0)."
+      "answer": 1,
+      "solution": "A 'vertical' photo is nominally vertical but may have a slight tilt (typically < 3°)."
     },
     {
       "id": "ncl-surveyor-14-057",
@@ -1044,7 +1044,7 @@
         "No distortion",
         "Only color distortion"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tilt introduces scale variations and displacements proportional to the tilt angle and distance from the axis."
     },
     {
@@ -1062,7 +1062,7 @@
         "H / f",
         "(H - h) / f"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Scale s = f / (H - h), where f = focal length, H = flying height above datum, h = ground elevation."
     },
     {
@@ -1080,7 +1080,7 @@
         "The camera to the ground vertically",
         "Sea level to the aircraft"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "H is the height of the exposure station above the datum (usually MSL)."
     },
     {
@@ -1098,7 +1098,7 @@
         "Color difference",
         "Focus difference"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Parallax p = x_left - x_right; it is used to determine height (relative elevation)."
     },
     {
@@ -1111,12 +1111,12 @@
       "difficulty": "medium",
       "stem": "The 'parallax formula' for elevation is:",
       "options": [
-        "h = H \u00d7 p / B",
+        "h = H × p / B",
         "h = H - Bf / p",
-        "h = B \u00d7 p / f",
-        "h = f / B \u00d7 p"
+        "h = B × p / f",
+        "h = f / B × p"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Elevation h = H - Bf/p, where B = air base, f = focal length, p = parallax."
     },
     {
@@ -1134,7 +1134,7 @@
         "Width of the photograph",
         "Height of the aircraft"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Air base B is the horizontal distance between consecutive camera stations."
     },
     {
@@ -1152,7 +1152,7 @@
         "90%",
         "10%"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "60% forward overlap (and 30% side overlap) is standard for aerial photography."
     },
     {
@@ -1170,7 +1170,7 @@
         "Develop photographs",
         "Print maps"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A stereoscope creates a 3D perception from a stereo pair of overlapping photographs."
     },
     {
@@ -1188,7 +1188,7 @@
         "Naked eye",
         "Magnifying glasses"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Anaglyphs use colour-filtered glasses (typically red/cyan) to separate left and right images."
     },
     {
@@ -1206,7 +1206,7 @@
         "The ground must be flat",
         "The camera must be vertical"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "The collinearity equations: the exposure station, image point, and ground point all lie on a straight line."
     },
     {
@@ -1224,7 +1224,7 @@
         "A photograph",
         "A satellite image"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "A DEM is a raster (grid) of elevation values representing the terrain surface."
     },
     {
@@ -1242,7 +1242,7 @@
         "Water bodies only",
         "Underground features"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "DSM captures the top of all features (roofs, trees), unlike DTM which is bare earth only."
     },
     {
@@ -1260,7 +1260,7 @@
         "A satellite image",
         "A scanned map"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Orthorectification removes terrain and tilt distortions, creating a photo with map-like geometry."
     },
     {
@@ -1278,7 +1278,7 @@
         "Light Data And Recording",
         "Laser Direction And Range"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "LiDAR = Light Detection And Ranging; uses laser pulses to measure distances."
     },
     {
@@ -1296,7 +1296,7 @@
         "A 2D image",
         "A vector map"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "LiDAR produces dense 3D point clouds with x, y, z and intensity values."
     },
     {
@@ -1314,7 +1314,7 @@
         "The photo overlap",
         "The focal length"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GSD is the ground distance between pixel centres; smaller GSD = higher resolution."
     },
     {
@@ -1332,8 +1332,8 @@
         "Weather only",
         "Ground features"
       ],
-      "answer": "B",
-      "solution": "GSD = (pixel size \u00d7 flying height) / focal length."
+      "answer": 1,
+      "solution": "GSD = (pixel size × flying height) / focal length."
     },
     {
       "id": "ncl-surveyor-14-074",
@@ -1350,7 +1350,7 @@
         "Only the ground control points",
         "Only the DEM"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Bundle adjustment is a rigorous simultaneous adjustment of all parameters using the collinearity condition."
     },
     {
@@ -1368,7 +1368,7 @@
         "Flying height and speed",
         "Ground control coordinates"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Interior orientation defines the internal geometry of the camera."
     },
     {
@@ -1386,8 +1386,8 @@
         "Ground coordinates",
         "Photo scale"
       ],
-      "answer": "B",
-      "solution": "Exterior orientation = 3 position (X\u2080, Y\u2080, Z\u2080) and 3 rotation (\u03c9, \u03c6, \u03ba) parameters."
+      "answer": 1,
+      "solution": "Exterior orientation = 3 position (X₀, Y₀, Z₀) and 3 rotation (ω, φ, κ) parameters."
     },
     {
       "id": "ncl-surveyor-14-077",
@@ -1404,8 +1404,8 @@
         "Three focal lengths and three distortions",
         "Three latitudes and three longitudes"
       ],
-      "answer": "A",
-      "solution": "X\u2080, Y\u2080, Z\u2080 (position) and \u03c9, \u03c6, \u03ba (rotation angles about the axes)."
+      "answer": 0,
+      "solution": "X₀, Y₀, Z₀ (position) and ω, φ, κ (rotation angles about the axes)."
     },
     {
       "id": "ncl-surveyor-14-078",
@@ -1422,8 +1422,8 @@
         "The ground axes",
         "An arbitrary axis"
       ],
-      "answer": "A",
-      "solution": "\u03c9 (roll) about X-axis, \u03c6 (pitch) about Y-axis, \u03ba (yaw) about Z-axis."
+      "answer": 0,
+      "solution": "ω (roll) about X-axis, φ (pitch) about Y-axis, κ (yaw) about Z-axis."
     },
     {
       "id": "ncl-surveyor-14-079",
@@ -1440,7 +1440,7 @@
         "A random point",
         "A point on the camera"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "GCPs have precisely known ground coordinates and are identified on photos for georeferencing."
     },
     {
@@ -1458,7 +1458,7 @@
         "A type of camera",
         "A GPS technique"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "SfM automatically matches features across images to build 3D point clouds and camera positions."
     },
     {
@@ -1476,7 +1476,7 @@
         "F",
         "G"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Arrangement: _,_,A,E,_,B,C with D at right end. B is right of E."
     },
     {
@@ -1494,7 +1494,7 @@
         "C. Gandak",
         "D. Son"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Kosi river is known as the Sorrow of Bihar due to frequent floods."
     },
     {
@@ -1512,7 +1512,7 @@
         "C. Lakshadweep",
         "D. Andaman & Nicobar Islands"
       ],
-      "answer": "D",
+      "answer": 3,
       "solution": "Indira Point in Great Nicobar is the southernmost point of India."
     },
     {
@@ -1530,7 +1530,7 @@
         "C. Banihal Pass",
         "D. Khardung La"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Zoji La connects Srinagar with Leh in Jammu & Kashmir."
     },
     {
@@ -1548,8 +1548,8 @@
         "C. Odisha",
         "D. West Bengal"
       ],
-      "answer": "C",
-      "solution": "Tropic of Cancer passes through Rajasthan, MP, Gujarat, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram \u2014 but not Odisha."
+      "answer": 2,
+      "solution": "Tropic of Cancer passes through Rajasthan, MP, Gujarat, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram — but not Odisha."
     },
     {
       "id": "ncl-surveyor-14-g006",
@@ -1566,7 +1566,7 @@
         "C. Sambhar Lake",
         "D. Wular Lake"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Chilika Lake in Odisha is the largest saltwater lake in India."
     },
     {
@@ -1584,7 +1584,7 @@
         "C. Tamil Nadu",
         "D. Andhra Pradesh"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Gujarat has the longest coastline among Indian states."
     },
     {
@@ -1602,7 +1602,7 @@
         "C. Sharavathi",
         "D. Tungabhadra"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Jog Falls is formed by the Sharavathi River in Karnataka."
     },
     {
@@ -1620,7 +1620,7 @@
         "C. Mahendragiri",
         "D. Kudremukh"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Anamudi (2,695 m) in Kerala is the highest peak in South India."
     },
     {
@@ -1638,7 +1638,7 @@
         "C. Grand Anicut Canal",
         "D. Narmada Canal"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Indira Gandhi Canal is the longest canal in India."
     },
     {
@@ -1656,7 +1656,7 @@
         "C. Brahmaputra and Meghna",
         "D. Ganga and Son"
       ],
-      "answer": "A",
+      "answer": 0,
       "solution": "Sundarbans delta is formed by the Ganga and Brahmaputra rivers."
     },
     {
@@ -1674,7 +1674,7 @@
         "C. Red soil",
         "D. Laterite soil"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Black (regur) soil is ideal for cotton cultivation."
     },
     {
@@ -1692,7 +1692,7 @@
         "C. Myanmar",
         "D. Bangladesh"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Palk Strait separates India (Tamil Nadu) from Sri Lanka."
     },
     {
@@ -1710,7 +1710,7 @@
         "C. Siliguri Corridor",
         "D. Banihal Pass"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Siliguri Corridor (Chicken's Neck) connects mainland India to the North-East."
     },
     {
@@ -1728,7 +1728,7 @@
         "C. Karnataka",
         "D. Rajasthan"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Tamil Nadu receives rainfall from both Southwest (partial) and Northeast monsoons."
     },
     {
@@ -1746,7 +1746,7 @@
         "C. Maharashtra",
         "D. Chhattisgarh"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Madhya Pradesh has the largest forest cover in India by area."
     },
     {
@@ -1764,7 +1764,7 @@
         "C. S. Radhakrishnan",
         "D. Zakir Husain"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Dr. Rajendra Prasad was the first President of India (1950-1962)."
     },
     {
@@ -1782,7 +1782,7 @@
         "C. Part IV",
         "D. Part V"
       ],
-      "answer": "B",
+      "answer": 1,
       "solution": "Fundamental Rights are in Part III (Articles 12-35) of the Indian Constitution."
     },
     {
@@ -1800,7 +1800,7 @@
         "C. 11",
         "D. 12"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "There are 11 fundamental duties under Article 51A."
     },
     {
@@ -1818,7 +1818,7 @@
         "C. Article 17",
         "D. Article 19"
       ],
-      "answer": "C",
+      "answer": 2,
       "solution": "Article 17 abolishes untouchability in all forms."
     }
   ]

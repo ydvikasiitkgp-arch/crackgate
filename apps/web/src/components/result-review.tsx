@@ -16,6 +16,13 @@ type ReviewQuestion =
 
 type Answer = number | number[] | string | null | undefined;
 
+// ponytail: tolerate legacy letter answers ("A"-"D") in addition to numeric indices.
+const LETTER_IDX: Record<string, number> = { A: 0, B: 1, C: 2, D: 3 };
+function normalizeAnswer(a: Answer): Answer {
+  if (typeof a === "string" && a.length === 1 && LETTER_IDX[a] !== undefined) return LETTER_IDX[a];
+  return a;
+}
+
 function isAnswered(a: Answer) {
   if (a === undefined || a === null || a === "") return false;
   if (Array.isArray(a) && a.length === 0) return false;
@@ -33,7 +40,7 @@ function isCorrect(q: ReviewQuestion, a: Answer): boolean {
     const got = Array.isArray(a) ? [...a].sort() : [];
     return exp.length === got.length && exp.every((v, k) => v === got[k]);
   }
-  return a === q.answer;
+  return normalizeAnswer(a) === q.answer;
 }
 
 function deltaFor(q: ReviewQuestion, a: Answer): number {
@@ -128,7 +135,7 @@ export function ResultReview({
                     const right = q.type === "MSQ" ? q.answer.includes(oi) : q.answer === oi;
                     const picked = q.type === "MSQ"
                       ? Array.isArray(a) && a.includes(oi)
-                      : a === oi;
+                      : normalizeAnswer(a) === oi;
                     const wrongPick = picked && !right;
                     return (
                       <div
