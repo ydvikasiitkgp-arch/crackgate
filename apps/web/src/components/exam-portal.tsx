@@ -312,7 +312,7 @@ export function ExamPortal({
       const data = await res.json();
       if (!res.ok) throw new Error(JSON.stringify(data?.error));
       try { localStorage.removeItem(storageKey); } catch { /* ignore */ }
-      router.push(`/result/${data.attempt.id}`);
+      router.replace(`/result/${data.attempt.id}`);
     } catch (e) {
       alert((e as Error).message);
       setSubmitting(false);
