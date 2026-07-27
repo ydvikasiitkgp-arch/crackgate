@@ -3,6 +3,8 @@ import { CIL_PATTERN, buildCilMockPlan, type CilMock } from "@/data/cil-mocks";
 import { cilLiveSetNos } from "@/data/cil-mock-bank";
 import { CIL_PRICE_RUPEES } from "@/data/cil";
 import { AddToCartBtn } from "@/components/add-to-cart-btn";
+import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
 
 /**
  * Renders the full-length CIL Management Trainee mock series for a discipline
@@ -13,7 +15,7 @@ import { AddToCartBtn } from "@/components/add-to-cart-btn";
  * cards. Once unlocked, any set that has shipped (status "live") gets an
  * enabled Start Mock control.
  */
-export function CilMockPlan({
+export async function CilMockPlan({
   discipline,
   slug,
   unlocked,
@@ -25,6 +27,23 @@ export function CilMockPlan({
   const payHref = `/pay/upi?plan=pro&exam=PSU&subject=${slug}`;
   const plan = buildCilMockPlan(cilLiveSetNos(slug));
   const liveCount = plan.filter((m) => m.status === "live").length;
+
+  const session = await auth();
+  const userId = (session?.user as { id?: string } | undefined)?.id;
+  const attempts = userId
+    ? await db.attempt.findMany({
+        where: { userId, kind: "mock", refId: { startsWith: `cil-${slug}-` } },
+        select: { refId: true, id: true, score: true, total: true, takenAt: true },
+        orderBy: { takenAt: "desc" },
+      })
+    : [];
+  const attemptByNo = new Map<string, { id: string; score: number; total: number; takenAt: Date }>();
+  for (const a of attempts) {
+    const noStr = a.refId.replace(`cil-${slug}-`, "");
+    if (!attemptByNo.has(noStr)) {
+      attemptByNo.set(noStr, { id: a.id, score: a.score, total: a.total, takenAt: a.takenAt });
+    }
+  }
   return (
     <section className="max-w-7xl mx-auto px-5 py-14">
       <div className="flex flex-wrap items-end justify-between gap-4">
@@ -58,9 +77,12 @@ export function CilMockPlan({
       )}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {plan.map((m) => (
-          <MockCard key={m.no} mock={m} slug={slug} unlocked={unlocked} payHref={payHref} />
-        ))}
+        {plan.map((m) => {
+          const attempt = attemptByNo.get(String(m.no).padStart(2, "0"));
+          return (
+            <MockCard key={m.no} mock={m} slug={slug} unlocked={unlocked} payHref={payHref} attempt={attempt ?? null} />
+          );
+        })}
       </div>
     </section>
   );
@@ -107,18 +129,21 @@ function MockCard({
   slug,
   unlocked,
   payHref,
+  attempt,
 }: {
   mock: CilMock;
   slug: string;
   unlocked: boolean;
   payHref: string;
+  attempt: { id: string; score: number; total: number; takenAt: Date } | null;
 }) {
   const live = mock.status === "live";
   const canStart = unlocked && live;
+  const refId = `cil-${slug}-${String(mock.no).padStart(2, "0")}`;
   return (
     <div className="card relative flex flex-col p-5 opacity-90">
       <span className="badge badge-pro absolute right-4 top-4">
-        {live ? (unlocked ? "Ready" : "Locked") : "Coming soon"}
+        {attempt ? "✓ Completed" : live ? (unlocked ? "Ready" : "Locked") : "Coming soon"}
       </span>
       <div className="text-xs font-mono text-brand">Mock {String(mock.no).padStart(2, "0")}</div>
       <h4 className="mt-1 pr-20 font-bold text-ink leading-snug">{mock.title}</h4>
@@ -134,9 +159,22 @@ function MockCard({
         ))}
       </ul>
 
-      {canStart ? (
+      {attempt ? (
+        <div className="mt-4 space-y-2">
+          <div className="text-xs text-muted">
+            Score: <b className="text-ink">{attempt.score} / {attempt.total}</b>
+            · {attempt.takenAt.toLocaleDateString("en-IN", { day: "numeric", month: "short" })}
+          </div>
+          <Link
+            href={`/result/${attempt.id}`}
+            className="btn btn-ghost mt-1 w-full justify-center"
+          >
+            Review Answers →
+          </Link>
+        </div>
+      ) : canStart ? (
         <Link
-          href={`/mocks/cil-${slug}-${String(mock.no).padStart(2, "0")}`}
+          href={`/mocks/${refId}`}
           className="btn btn-primary mt-4 w-full justify-center"
         >
           Start Mock
