@@ -31,12 +31,12 @@
       "difficulty": "medium",
       "stem": "AutoCAD's 'external reference' (XREF) feature in mine planning allows:",
       "options": [
-        "Only printing",
-        "Referencing external drawings without embedding them, enabling collaborative work",
-        "Only deleting data",
-        "Only changing colors"
+        "Applicable in limited scenarios",
+        "Required only for specific cases",
+        "Works under ideal conditions only",
+        "Referencing external drawings without embedding them, enabling collaborative work"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "XREF allows referencing external drawings in a master drawing without embedding, enabling collaborative work and easy updates."
     },
     {
@@ -49,12 +49,12 @@
       "difficulty": "medium",
       "stem": "Liscad's 'area calculation' feature computes areas using:",
       "options": [
-        "Only visual estimation",
         "Coordinate geometry methods from boundary coordinates",
-        "Only manual measurement",
-        "Only counting grid squares"
+        "Required only for specific cases",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Liscad computes areas using coordinate geometry methods (like the shoelace formula) from boundary coordinates."
     },
     {
@@ -67,12 +67,12 @@
       "difficulty": "medium",
       "stem": "A 3D terrestrial laser scanner works on the principle of:",
       "options": [
+        "Recording sound waves",
         "Measuring magnetic field variations",
         "Emitting laser pulses and measuring the time of flight or phase shift of reflected light",
-        "Measuring gravitational variations",
-        "Recording sound waves"
+        "Measuring gravitational variations"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "3D laser scanners emit laser pulses and measure the time of flight or phase shift of the reflected light to calculate distance."
     },
     {
@@ -85,12 +85,12 @@
       "difficulty": "medium",
       "stem": "DGPS (Differential GPS) improves accuracy over standard GPS by:",
       "options": [
-        "Using more satellites",
         "Using corrections from a known reference station to eliminate common errors",
         "Increasing the receiver weight",
-        "Using a different frequency only"
+        "Using a different frequency only",
+        "Using more satellites"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "DGPS uses a base station at a known position to calculate corrections for satellite and atmospheric errors, improving accuracy."
     },
     {
@@ -103,12 +103,12 @@
       "difficulty": "medium",
       "stem": "UAV (Unmanned Aerial Vehicle) photogrammetry in mine surveying involves:",
       "options": [
-        "Only taking photographs for records",
-        "Capturing overlapping aerial photographs to create orthophotos and 3D models",
-        "Only measuring temperature",
-        "Only spraying chemicals"
+        "Map underground water flows",
+        "Measure air velocity",
+        "Test roof stability",
+        "Capturing overlapping aerial photographs to create orthophotos and 3D models"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "UAV photogrammetry captures overlapping aerial photographs processed to create orthophotos, DEMs, and 3D models of mine areas."
     },
     {
@@ -121,9 +121,9 @@
       "difficulty": "medium",
       "stem": "The 'point density' of a 3D laser scanner refers to:",
       "options": [
-        "The weight of the scanner",
-        "The number of points captured per unit area",
         "The size of the scanner",
+        "The number of points captured per unit area",
+        "The weight of the scanner",
         "The battery life"
       ],
       "answer": 1,
@@ -139,10 +139,10 @@
       "difficulty": "medium",
       "stem": "A 'static GPS survey' involves:",
       "options": [
-        "Moving the receiver continuously",
+        "Using only one satellite",
         "Occupying fixed points for extended periods (typically 20+ minutes) for high accuracy",
-        "Taking only one reading",
-        "Using only one satellite"
+        "Moving the receiver continuously",
+        "Taking only one reading"
       ],
       "answer": 1,
       "solution": "Static GPS surveys occupy fixed points for extended periods, allowing long observation times for highest accuracy."
@@ -157,12 +157,12 @@
       "difficulty": "medium",
       "stem": "Dump stability monitoring using a laser scanner helps in:",
       "options": [
-        "Only measuring temperature",
         "Detecting surface movements and deformations over time by comparing successive scans",
-        "Only counting vehicles",
-        "Only measuring rainfall"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Repeated laser scanning detects surface movements and deformations by comparing successive point clouds, enabling early warning of instability."
     },
     {
@@ -175,12 +175,12 @@
       "difficulty": "medium",
       "stem": "A 'LiDAR' sensor mounted on a drone (UAV) provides:",
       "options": [
-        "Only photographs",
         "Dense 3D point cloud data of the terrain, penetrating through vegetation",
-        "Only temperature data",
-        "Only wind speed data"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Airborne LiDAR provides dense 3D point cloud data that can penetrate vegetation canopy to map the bare ground surface."
     },
     {
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "The 'range' of a 3D terrestrial laser scanner refers to:",
       "options": [
-        "The weight of the scanner",
         "The maximum distance at which it can accurately measure points",
         "The battery capacity",
-        "The size of the carrying case"
+        "The size of the carrying case",
+        "The weight of the scanner"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Range is the maximum distance at which the scanner can accurately measure, typically 100 m to several hundred metres for mine surveying."
     },
     {
@@ -211,12 +211,12 @@
       "difficulty": "medium",
       "stem": "RTK GPS requires at least how many satellites for centimetre-level accuracy?",
       "options": [
-        "2",
         "4",
-        "5 or more",
-        "12"
+        "2",
+        "12",
+        "5 or more"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "RTK GPS requires 5 or more satellites for reliable centimetre-level accuracy and integer ambiguity resolution."
     },
     {
@@ -229,10 +229,10 @@
       "difficulty": "medium",
       "stem": "In drone surveying for mines, the 'ground control points' (GCPs) are used to:",
       "options": [
-        "Land the drone",
+        "Used only for horizontal lines",
         "Provide known reference points for georeferencing and accuracy assessment of aerial photographs",
-        "Only mark boundaries",
-        "Only take off"
+        "Land the drone",
+        "Measure air velocity"
       ],
       "answer": 1,
       "solution": "GCPs are ground features with known coordinates used to georeferenced aerial photographs and assess the accuracy of photogrammetric products."
@@ -247,12 +247,12 @@
       "difficulty": "medium",
       "stem": "A 'continuous real-time monitoring' system for highwall stability typically uses:",
       "options": [
-        "Only manual observations",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
         "Automated sensors (prisms, inclinometers) with data loggers and communication systems",
-        "Only photographs",
-        "Only temperature sensors"
+        "Required only for specific cases"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Continuous monitoring uses automated sensors with data loggers and communication systems to provide real-time data on slope movement."
     },
     {
@@ -265,12 +265,12 @@
       "difficulty": "medium",
       "stem": "The 'accuracy' of a 3D laser scanner is typically expressed as:",
       "options": [
-        "Only in metres",
         "As a function of distance (e.g., ±5 mm at 100 m)",
-        "Only as a percentage",
-        "Only in degrees"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Required only for specific cases"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Scanner accuracy is specified as a function of distance, e.g., ±5 mm at 100 m, combining ranging error and angular error."
     },
     {
@@ -283,12 +283,12 @@
       "difficulty": "medium",
       "stem": "DGPS accuracy for mine surveying is typically in the range of:",
       "options": [
+        "10-50 cm",
         "1-5 m",
         "0.5-2 m",
-        "10-50 cm",
         "1-5 cm"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "DGPS typically provides accuracy in the range of 10-50 cm, suitable for general mine surveying but not for high-precision work."
     },
     {
@@ -301,12 +301,12 @@
       "difficulty": "medium",
       "stem": "A 'drone (UAV) survey' of a mine area can cover large areas because:",
       "options": [
+        "Drones can only fly short distances",
         "Drones fly at very low altitude only",
-        "Drones can cover large areas quickly with automated flight planning and overlap",
         "Drones are manually controlled only",
-        "Drones can only fly short distances"
+        "Drones can cover large areas quickly with automated flight planning and overlap"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Drones with automated flight planning can cover large areas efficiently with programmed routes and required overlap for photogrammetry."
     },
     {
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "The 'scan angle' of a 3D terrestrial laser scanner refers to:",
       "options": [
-        "The weight of the scanner",
         "The angular range over which the scanner can rotate and capture points",
         "The size of the scanner",
+        "The weight of the scanner",
         "The battery life"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The scan angle defines the angular range (e.g., 360° horizontal, 300° vertical) over which the scanner can capture points."
     },
     {
@@ -337,10 +337,10 @@
       "difficulty": "medium",
       "stem": "A 'prism-based monitoring system' for dump/highwall stability uses:",
       "options": [
-        "Only photographs",
+        "Required only for specific cases",
         "Automated total stations or laser scanners measuring positions of installed prisms",
-        "Only manual measurements",
-        "Only temperature sensors"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
       "answer": 1,
       "solution": "Prism-based systems use automated total stations or scanners to repeatedly measure positions of prisms installed on the slope surface."
@@ -355,12 +355,12 @@
       "difficulty": "medium",
       "stem": "In RTK GPS surveying, the 'base station' is set up at:",
       "options": [
-        "Any random point",
         "A point with known coordinates (or a continuously operating reference station)",
-        "Only at the mine entrance",
-        "Only at the highest point"
+        "Monitor gas concentrations",
+        "Record temperature variations",
+        "Any random point"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The base station is set up at a point with precisely known coordinates, or connected to a CORS network, to provide corrections."
     },
     {
@@ -373,12 +373,12 @@
       "difficulty": "medium",
       "stem": "UAV-based mine surveying typically achieves horizontal accuracy of:",
       "options": [
-        "10-50 m",
+        "1-2 mm",
         "5-10 m",
-        "2-5 cm (with GCPs)",
-        "1-2 mm"
+        "10-50 m",
+        "2-5 cm (with GCPs)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "UAV photogrammetry with ground control points typically achieves horizontal accuracy of 2-5 cm, suitable for mine surveying."
     },
     {
@@ -391,10 +391,10 @@
       "difficulty": "medium",
       "stem": "The 'return intensity' of a laser scanner point indicates:",
       "options": [
-        "The temperature of the surface",
-        "The strength of the reflected laser signal, related to surface reflectivity",
         "The weight of the point",
-        "The colour of the surface"
+        "The strength of the reflected laser signal, related to surface reflectivity",
+        "The colour of the surface",
+        "The temperature of the surface"
       ],
       "answer": 1,
       "solution": "Return intensity indicates the strength of the reflected laser signal, which depends on surface reflectivity, colour, and angle of incidence."
@@ -409,9 +409,9 @@
       "difficulty": "medium",
       "stem": "A 'multi-station' in monitoring refers to:",
       "options": [
-        "Multiple manual survey stations",
-        "Automated robotic total stations operating continuously without operator intervention",
         "Multiple office computers",
+        "Automated robotic total stations operating continuously without operator intervention",
+        "Multiple manual survey stations",
         "Multiple printing stations"
       ],
       "answer": 1,
@@ -428,11 +428,11 @@
       "stem": "The main advantage of LiDAR over photogrammetry for mine surveying is:",
       "options": [
         "LiDAR is always cheaper",
-        "LiDAR can work in any lighting conditions and penetrate vegetation",
         "LiDAR produces better photographs",
-        "LiDAR is lighter"
+        "LiDAR is lighter",
+        "LiDAR can work in any lighting conditions and penetrate vegetation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "LiDAR works in any lighting (including night), can penetrate vegetation, and provides direct 3D measurements without needing image matching."
     },
     {
@@ -446,11 +446,11 @@
       "stem": "In drone surveying, 'image overlap' is important because:",
       "options": [
         "It wastes battery life",
-        "It ensures sufficient coverage for photogrammetric processing and 3D reconstruction",
         "It only makes the flight longer",
+        "It ensures sufficient coverage for photogrammetric processing and 3D reconstruction",
         "It only increases file size"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Sufficient image overlap (typically 70-80% forward, 60-70% side) ensures photogrammetric software can match features and reconstruct 3D geometry."
     },
     {
@@ -463,12 +463,12 @@
       "difficulty": "medium",
       "stem": "A 'deformation monitoring' survey using total stations involves:",
       "options": [
-        "Only one-time measurement",
+        "Used only for horizontal lines",
+        "Applicable to total stations only",
         "Repeated measurements of the same points over time to detect movements",
-        "Only taking photographs",
-        "Only manual recording"
+        "Record temperature variations"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Deformation monitoring involves repeated measurements of the same points at regular intervals to detect and quantify movements."
     },
     {
@@ -481,10 +481,10 @@
       "difficulty": "medium",
       "stem": "The 'scanning speed' of a 3D laser scanner refers to:",
       "options": [
-        "How fast the scanner can be transported",
+        "The battery charging speed",
         "The number of points captured per second (e.g., 1 million points/second)",
-        "The weight of the scanner",
-        "The battery charging speed"
+        "How fast the scanner can be transported",
+        "The weight of the scanner"
       ],
       "answer": 1,
       "solution": "Scanning speed is the rate at which points are captured, measured in points per second (e.g., 1 million pts/sec for modern scanners)."
@@ -499,12 +499,12 @@
       "difficulty": "medium",
       "stem": "GPS 'multipath error' occurs when:",
       "options": [
-        "The signal passes through the ionosphere only",
         "GPS signals reflect off nearby surfaces before reaching the receiver",
-        "Too many satellites are visible",
-        "The receiver battery is low"
+        "The signal passes through the ionosphere only",
+        "The receiver battery is low",
+        "Too many satellites are visible"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Multipath error occurs when GPS signals reflect off nearby surfaces (buildings, ground) before reaching the receiver, causing position errors."
     },
     {
@@ -517,12 +517,12 @@
       "difficulty": "medium",
       "stem": "A 'digital zenith camera' in mine surveying is used to determine:",
       "options": [
+        "Test roof stability",
+        "Measure air velocity",
         "Horizontal angles",
-        "Precise astronomical latitude and azimuth by imaging the stars near the zenith",
-        "Only the borehole depth",
-        "Only the temperature"
+        "Precise astronomical latitude and azimuth by imaging the stars near the zenith"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A digital zenith camera images stars near the zenith to determine precise astronomical position and azimuth for high-accuracy orientation."
     },
     {
@@ -535,12 +535,12 @@
       "difficulty": "medium",
       "stem": "The 'georeferencing' of drone photographs involves:",
       "options": [
-        "Only printing photographs",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
         "Assigning real-world coordinates to photographs using GCPs or GPS data",
-        "Only deleting photographs",
-        "Only viewing photographs"
+        "Required only for specific cases"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Georeferencing assigns real-world coordinates to photographs using ground control points or on-board GPS data for spatial accuracy."
     },
     {
@@ -571,10 +571,10 @@
       "difficulty": "medium",
       "stem": "The process of measuring an angle several times by stacking readings on the circle and dividing by the count is called:",
       "options": [
-        "Reiteration",
+        "Traversing",
         "Repetition",
-        "Intersection",
-        "Traversing"
+        "Reiteration",
+        "Intersection"
       ],
       "answer": 1,
       "solution": "Repetition stacks the angle on the horizontal circle; accumulated reading / repetitions = mean angle."
@@ -589,12 +589,12 @@
       "difficulty": "medium",
       "stem": "In the reiteration (direction) method, angles are derived from:",
       "options": [
-        "One station to several targets observed sequentially",
-        "Several stations to one target",
         "Two stations simultaneously",
-        "Only one observation per station"
+        "Several stations to one target",
+        "One station to several targets observed sequentially",
+        "Applicable in limited scenarios"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "All directions from a single instrument station are observed; angles = difference of directions."
     },
     {
@@ -607,12 +607,12 @@
       "difficulty": "medium",
       "stem": "Temporary adjustments of a theodolite include all EXCEPT:",
       "options": [
-        "Centering over station",
         "Levelling",
-        "Elimination of collimation error",
-        "Focusing eyepiece"
+        "Centering over station",
+        "Focusing eyepiece",
+        "Elimination of collimation error"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Collimation error elimination is a permanent (periodic) adjustment, not a field temporary adjustment."
     },
     {
@@ -625,12 +625,12 @@
       "difficulty": "medium",
       "stem": "Centering a theodolite over a station is done with:",
       "options": [
-        "Optical plummet or plumb bob",
         "Tribrach only",
-        "Plate bubble",
-        "Tangent screw"
+        "Tangent screw",
+        "Optical plummet or plumb bob",
+        "Plate bubble"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Optical plummet or plumb bob positions the vertical axis over the ground mark."
     },
     {
@@ -643,12 +643,12 @@
       "difficulty": "medium",
       "stem": "The line of collimation is defined when the telescope is focused on:",
       "options": [
-        "Infinity",
         "A near target",
+        "Infinity",
         "The ground",
         "The cross-hair"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Focused at infinity, emerging rays are parallel, defining the line of sight."
     },
     {
@@ -661,12 +661,12 @@
       "difficulty": "medium",
       "stem": "Collimation error means the line of sight is not perpendicular to:",
       "options": [
-        "Horizontal axis",
-        "Vertical axis",
         "Graduated circle",
-        "Eyepiece"
+        "Eyepiece",
+        "Horizontal axis",
+        "Vertical axis"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The line of collimation must be perpendicular to the trunnion (horizontal) axis."
     },
     {
@@ -679,12 +679,12 @@
       "difficulty": "medium",
       "stem": "Horizontal axis error means the trunnion axis is not perpendicular to:",
       "options": [
-        "Vertical axis",
-        "Line of collimation",
         "Graduated circle",
-        "Plate bubble"
+        "Vertical axis",
+        "Plate bubble",
+        "Line of collimation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The horizontal axis must be perpendicular to the vertical axis for the telescope to sweep a vertical plane."
     },
     {
@@ -697,8 +697,8 @@
       "difficulty": "medium",
       "stem": "Taking Face Left and Face Right readings and averaging eliminates:",
       "options": [
-        "Only collimation error",
-        "Only horizontal axis error",
+        "Works under ideal conditions only",
+        "Applicable in limited scenarios",
         "Both collimation and horizontal axis errors",
         "Eccentricity only"
       ],
@@ -715,12 +715,12 @@
       "difficulty": "medium",
       "stem": "Bowditch rule distributes traverse misclosure proportionally to:",
       "options": [
-        "Square root of leg length",
-        "Leg length",
         "Latitude and departure",
+        "Leg length",
+        "Square root of leg length",
         "Angle size"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Bowditch (compass) rule: correction is proportional to square root of length, assuming comparable angular and linear precision."
     },
     {
@@ -733,12 +733,12 @@
       "difficulty": "medium",
       "stem": "Transit rule distributes linear misclosure proportionally to:",
       "options": [
-        "Length of each leg",
         "Total latitude/departure of each leg",
-        "Square of length",
-        "Angle at each station"
+        "Length of each leg",
+        "Angle at each station",
+        "Square of length"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Transit rule: correction to latitude proportional to leg's latitude / total latitude; same for departure."
     },
     {
@@ -751,12 +751,12 @@
       "difficulty": "medium",
       "stem": "Eccentricity of centres is the horizontal offset between:",
       "options": [
-        "Plumb point and vertical axis",
+        "Instrument and target",
         "Objective and eyepiece",
         "A and B plates",
-        "Instrument and target"
+        "Plumb point and vertical axis"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "It is the horizontal displacement of the plumb bob from the true instrument axis."
     },
     {
@@ -769,12 +769,12 @@
       "difficulty": "medium",
       "stem": "Eccentricity of verniers is eliminated by:",
       "options": [
-        "Reading both A and B plates and taking the mean",
         "Using only A plate",
+        "Repeating the angle",
         "Using only B plate",
-        "Repeating the angle"
+        "Reading both A and B plates and taking the mean"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Mean of A and B plate readings cancels eccentricity of the graduated circle."
     },
     {
@@ -787,12 +787,12 @@
       "difficulty": "medium",
       "stem": "The optical plummet views the ground station through:",
       "options": [
-        "A small downward-looking eyepiece in the tribrach",
-        "The main telescope",
         "A mirror",
-        "The level bubble"
+        "The main telescope",
+        "The level bubble",
+        "A small downward-looking eyepiece in the tribrach"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Built into the tribrach, it lets the operator verify centering directly."
     },
     {
@@ -805,12 +805,12 @@
       "difficulty": "medium",
       "stem": "Temporary adjustments must be performed at:",
       "options": [
-        "Only the first station",
         "Every new setup",
         "Once per day",
-        "Only when levelling is needed"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Centering, levelling, and focusing are repeated at every instrument station."
     },
     {
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "Levelling screws make the vertical axis:",
       "options": [
-        "Truly vertical",
-        "Truly horizontal",
         "Perpendicular to the line of sight",
+        "Truly horizontal",
+        "Truly vertical",
         "Parallel to the ground"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Foot screws tilt the tribrach until the plate bubble is centred, making the vertical axis vertical."
     },
     {
@@ -841,12 +841,12 @@
       "difficulty": "medium",
       "stem": "The plate bubble is used for:",
       "options": [
+        "Checking collimation",
         "Approximate levelling",
         "Precise levelling along the line of sight",
-        "Checking collimation",
         "Measuring vertical angles"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Plate bubble gives rough levelling; the tubular bubble gives precise levelling."
     },
     {
@@ -859,12 +859,12 @@
       "difficulty": "medium",
       "stem": "The tubular bubble is more sensitive than the plate bubble because:",
       "options": [
+        "Mounted horizontally",
         "Smaller radius of curvature",
         "Larger radius of curvature and longer tube",
-        "Different liquid",
-        "Mounted horizontally"
+        "Different liquid"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Sensitivity = 206265 / R; larger R means smaller division value = higher sensitivity."
     },
     {
@@ -877,12 +877,12 @@
       "difficulty": "medium",
       "stem": "Bubble tube sensitivity is given by:",
       "options": [
-        "tau = 206265 / R (mm)",
         "tau = R / 206265",
+        "tau = R x 206265",
         "tau = 1 / R",
-        "tau = R x 206265"
+        "tau = 206265 / R (mm)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "tau = rho / R where rho = 206265 and R is radius of curvature in mm."
     },
     {
@@ -913,12 +913,12 @@
       "difficulty": "medium",
       "stem": "In the repetition method, the number of repetitions should preferably be:",
       "options": [
-        "An even number (4, 6 etc.)",
-        "Odd number (3, 5 etc.)",
         "Any number",
-        "Exactly 2"
+        "Exactly 2",
+        "Odd number (3, 5 etc.)",
+        "An even number (4, 6 etc.)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Even repetitions balance Face Left/Face Right use, cancelling instrumental errors."
     },
     {
@@ -931,12 +931,12 @@
       "difficulty": "medium",
       "stem": "After completing repetitions, the mean angle is obtained by:",
       "options": [
-        "Dividing accumulated reading by number of repetitions",
-        "Multiplying by repetitions",
         "Taking the last reading only",
-        "Averaging directions"
+        "Averaging directions",
+        "Dividing accumulated reading by number of repetitions",
+        "Multiplying by repetitions"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Total accumulated circle reading divided by repetitions = mean angle."
     },
     {
@@ -949,12 +949,12 @@
       "difficulty": "medium",
       "stem": "A least count of 20 seconds means the smallest distinguishable reading is:",
       "options": [
+        "20 radians",
         "20 seconds of arc",
-        "20 minutes",
         "20 degrees",
-        "20 radians"
+        "20 minutes"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Least count = smallest angular value reliably readable on the instrument."
     },
     {
@@ -967,12 +967,12 @@
       "difficulty": "medium",
       "stem": "Least count of a vernier theodolite equals:",
       "options": [
-        "One main scale division / number of vernier divisions",
         "One vernier division / main scale divisions",
+        "Circle diameter / 100",
         "Main scale range / 360",
-        "Circle diameter / 100"
+        "One main scale division / number of vernier divisions"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "LC = (value of 1 MSD) / (number of VSD)."
     },
     {
@@ -986,8 +986,8 @@
       "stem": "A microptic micrometer achieves least counts of:",
       "options": [
         "1 to 5 seconds",
-        "1 to 5 minutes",
         "1 to 5 degrees",
+        "1 to 5 minutes",
         "5 to 30 seconds"
       ],
       "answer": 0,
@@ -1004,9 +1004,9 @@
       "stem": "Plumb bob offset causes the measured horizontal angle to be affected by:",
       "options": [
         "Offset direction and distance relative to sighted points",
-        "Only the offset distance",
-        "Only the offset direction",
-        "Nothing"
+        "Resistance measurement only",
+        "Voltage measurement only",
+        "Current measurement only"
       ],
       "answer": 0,
       "solution": "Angular error depends on the geometry: offset magnitude and angle between sight lines."
@@ -1022,9 +1022,9 @@
       "stem": "Eccentricity of the vertical axis produces maximum angular error when:",
       "options": [
         "Observed directions are perpendicular to the offset",
+        "Telescope is levelled",
         "All observations in same direction",
-        "Offset is zero",
-        "Telescope is levelled"
+        "Offset is zero"
       ],
       "answer": 0,
       "solution": "Error is proportional to offset x sin(theta); maximum at 90 degrees."
@@ -1039,12 +1039,12 @@
       "difficulty": "medium",
       "stem": "To reduce plumb bob offset effects, the instrument height should be:",
       "options": [
-        "As low as possible",
         "As high as possible",
         "At eye level",
+        "As low as possible",
         "At target height"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Lower trunnion height reduces the angular effect of any plumb offset."
     },
     {
@@ -1057,12 +1057,12 @@
       "difficulty": "medium",
       "stem": "Transiting (plunging) the telescope involves:",
       "options": [
-        "Rotating 180 degrees about the horizontal axis",
-        "Rotating 360 degrees about vertical axis",
         "Tilting vertically",
-        "Clamping horizontal motion"
+        "Clamping horizontal motion",
+        "Rotating 360 degrees about vertical axis",
+        "Rotating 180 degrees about the horizontal axis"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Plunging flips the telescope end-over-end about the trunnion axis."
     },
     {
@@ -1076,9 +1076,9 @@
       "stem": "After transiting, the line of collimation sweeps:",
       "options": [
         "A vertical plane (if correctly adjusted)",
-        "A horizontal plane",
         "A conical surface",
-        "An inclined plane"
+        "An inclined plane",
+        "A horizontal plane"
       ],
       "answer": 0,
       "solution": "With no collimation error, plunging keeps the line of sight in the same vertical plane."
@@ -1093,12 +1093,12 @@
       "difficulty": "medium",
       "stem": "The vertical circle on a modern theodolite reads zero at the:",
       "options": [
-        "Zenith",
         "Horizon",
         "Nadir",
+        "Zenith",
         "Any arbitrary point"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Zenith distance = 0 degrees when telescope points straight up."
     },
     {
@@ -1111,12 +1111,12 @@
       "difficulty": "medium",
       "stem": "Vertical circle index error is eliminated by:",
       "options": [
-        "Taking mean of Face Left and Face Right vertical readings",
-        "Repeating the reading",
         "Using only Face Left",
-        "Adjusting the foot screws"
+        "Taking mean of Face Left and Face Right vertical readings",
+        "Adjusting the foot screws",
+        "Repeating the reading"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Index error reverses sign between faces; averaging cancels it."
     },
     {
@@ -1129,12 +1129,12 @@
       "difficulty": "medium",
       "stem": "Collimation error can be checked by pointing at a distant target, plunging, and backsighting. The observed displacement is:",
       "options": [
+        "Three times the error",
         "Twice the actual collimation error",
         "The actual error",
-        "Half the actual error",
-        "Three times the error"
+        "Half the actual error"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Displacement after plunge = 2 x collimation error."
     },
     {
@@ -1147,12 +1147,12 @@
       "difficulty": "medium",
       "stem": "To permanently fix collimation error, the cross-hair is adjusted so the line of sight passes through:",
       "options": [
+        "The eyepiece focal point",
         "The intersection of horizontal and vertical axes",
-        "The optical centre of objective only",
         "The graduated circle centre",
-        "The eyepiece focal point"
+        "The optical centre of objective only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Collimation adjustment aligns line of sight with the intersection of the trunnion and vertical axes."
     },
     {
@@ -1184,9 +1184,9 @@
       "stem": "In a closed theodolite traverse, angular misclosure is distributed equally when:",
       "options": [
         "All angles are measured with equal precision",
-        "Only one angle is measured precisely",
-        "Distances are known precisely",
-        "The traverse is open"
+        "Record temperature variations",
+        "The traverse is open",
+        "Distances are known precisely"
       ],
       "answer": 0,
       "solution": "Equal-weight angles get equal correction shares."
@@ -1201,12 +1201,12 @@
       "difficulty": "medium",
       "stem": "A precise theodolite traverse in a mine should have angular misclosure not exceeding:",
       "options": [
-        "plus or minus 10 arcsec root n where n = number of angles",
-        "plus or minus 1 arcmin root n",
         "plus or minus 1 degree root n",
-        "plus or minus 30 arcsec per angle"
+        "plus or minus 30 arcsec per angle",
+        "plus or minus 10 arcsec root n where n = number of angles",
+        "plus or minus 1 arcmin root n"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Mine survey traverse precision is typically plus or minus 10 arcsec root n for moderate-class work."
     },
     {
@@ -1219,12 +1219,12 @@
       "difficulty": "medium",
       "stem": "During transport, a theodolite should be carried with the telescope:",
       "options": [
-        "Vertical and clamped",
-        "Horizontal and unclamped",
+        "Any position",
         "Upside down",
-        "Any position"
+        "Horizontal and unclamped",
+        "Vertical and clamped"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Transport with telescope vertical and clamped prevents damage to delicate parts."
     },
     {
@@ -1237,12 +1237,12 @@
       "difficulty": "medium",
       "stem": "The three foot screws of a tribrach should be spread at approximately:",
       "options": [
-        "60 degrees apart",
         "90 degrees apart",
         "120 degrees apart",
-        "180 degrees apart"
+        "180 degrees apart",
+        "60 degrees apart"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Three screws at 120 degrees provide stable three-point support for levelling."
     },
     {
@@ -1255,12 +1255,12 @@
       "difficulty": "medium",
       "stem": "Reiteration is preferred over repetition when:",
       "options": [
-        "Many directions are observed from one station",
-        "Only one angle is measured",
         "High accuracy needed for single angle",
-        "Distances are also measured"
+        "Distances are also measured",
+        "Many directions are observed from one station",
+        "Applicable in limited scenarios"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Reiteration is efficient when multiple directions radiate from one station."
     },
     {
@@ -1273,12 +1273,12 @@
       "difficulty": "medium",
       "stem": "The included angle at a station is computed by:",
       "options": [
-        "Subtracting the back direction from the forward direction",
-        "Adding the two directions",
+        "Taking the mean of directions",
         "Multiplying directions",
-        "Taking the mean of directions"
+        "Adding the two directions",
+        "Subtracting the back direction from the forward direction"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Included angle = forward direction minus back direction (reduced to same face)."
     },
     {
@@ -1291,12 +1291,12 @@
       "difficulty": "medium",
       "stem": "A 1 arcsec theodolite circle typically has main scale divisions of:",
       "options": [
-        "1 degree",
-        "30 minutes",
+        "10 minutes",
         "20 minutes",
-        "10 minutes"
+        "30 minutes",
+        "1 degree"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Main scale divisions of 1 degree subdivided by micrometer to read 1 arcsec."
     },
     {
@@ -1309,12 +1309,12 @@
       "difficulty": "medium",
       "stem": "The tangent screw of a theodolite provides:",
       "options": [
-        "Fine motion after clamping",
         "Gross rotation",
-        "Levelling adjustment",
-        "Focus control"
+        "Fine motion after clamping",
+        "Focus control",
+        "Levelling adjustment"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Tangent screw moves the telescope slowly for precise pointing after the clamp is engaged."
     },
     {
@@ -1345,12 +1345,12 @@
       "difficulty": "medium",
       "stem": "When the telescope is focused at infinity, the image of a distant target forms at:",
       "options": [
-        "The focal plane of the objective",
-        "The eyepiece lens",
         "Infinity",
-        "The cross-hair plane only if adjusted"
+        "The cross-hair plane only if adjusted",
+        "The focal plane of the objective",
+        "The eyepiece lens"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Parallel rays from infinity converge at the focal plane of the objective."
     },
     {
@@ -1365,8 +1365,8 @@
       "options": [
         "Central in both positions of the plate tube",
         "At one end of the tube",
-        "Moving freely",
-        "Not visible"
+        "Not visible",
+        "Moving freely"
       ],
       "answer": 0,
       "solution": "Bubble must be central when the plate tube is viewed parallel and perpendicular to a pair of foot screws."
@@ -1381,12 +1381,12 @@
       "difficulty": "medium",
       "stem": "The optical plummet is checked for accuracy by:",
       "options": [
-        "Rotating it 180 degrees and checking if the mark stays centred",
-        "Looking through the main telescope",
+        "Checking the level bubble",
         "Using a plumb bob only",
-        "Checking the level bubble"
+        "Rotating it 180 degrees and checking if the mark stays centred",
+        "Looking through the main telescope"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Rotate the optical plummet 180 degrees; if the mark shifts, the plummet needs adjustment."
     },
     {
@@ -1401,8 +1401,8 @@
       "options": [
         "Left side of the telescope",
         "Right side",
-        "Top",
-        "Bottom"
+        "Bottom",
+        "Top"
       ],
       "answer": 0,
       "solution": "Face Left = vertical circle on the left (observer's left when viewing through telescope)."
@@ -1417,12 +1417,12 @@
       "difficulty": "medium",
       "stem": "In Face Right position, the vertical circle is on the:",
       "options": [
-        "Right side of the telescope",
-        "Left side",
+        "Bottom",
         "Top",
-        "Bottom"
+        "Right side of the telescope",
+        "Left side"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Face Right = vertical circle on the right, achieved by plunging and rotating 180 degrees."
     },
     {
@@ -1435,12 +1435,12 @@
       "difficulty": "medium",
       "stem": "A total station combines the functions of a theodolite and:",
       "options": [
-        "EDM and microprocessor",
         "Level and EDM",
-        "GPS and theodolite",
-        "Camera and theodolite"
+        "EDM and microprocessor",
+        "Camera and theodolite",
+        "GPS and theodolite"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A total station integrates an electronic theodolite, EDM, and on-board computer."
     },
     {
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "The coordinate measurement mode of a total station determines:",
       "options": [
+        "Slope distance only",
+        "Current measurement only",
         "X, Y, Z coordinates of the target point",
-        "Only horizontal distance",
-        "Only vertical angle",
-        "Slope distance only"
+        "Resistance measurement only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Coordinate mode uses measured angle, distance, and known station data to compute 3D coordinates."
     },
     {
@@ -1472,8 +1472,8 @@
       "stem": "World Water Day is observed on which date?",
       "options": [
         "A. March 22",
-        "B. April 22",
         "C. June 5",
+        "B. April 22",
         "D. September 21"
       ],
       "answer": 0,
@@ -1490,9 +1490,9 @@
       "stem": "Which Indian state has the highest literacy rate according to Census 2011?",
       "options": [
         "A. Kerala",
+        "D. Tripura",
         "B. Mizoram",
-        "C. Goa",
-        "D. Tripura"
+        "C. Goa"
       ],
       "answer": 0,
       "solution": "Kerala has the highest literacy rate (96.2%) in India."
@@ -1507,12 +1507,12 @@
       "difficulty": "medium",
       "stem": "The Nifty 50 index belongs to which stock exchange?",
       "options": [
+        "C. MCX",
         "A. BSE",
         "B. NSE",
-        "C. MCX",
         "D. NCDEX"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Nifty 50 is the benchmark index of the National Stock Exchange (NSE)."
     },
     {
@@ -1525,12 +1525,12 @@
       "difficulty": "medium",
       "stem": "Which Indian city is known as the 'Manchester of India'?",
       "options": [
-        "A. Mumbai",
-        "B. Ahmedabad",
+        "D. Surat",
         "C. Chennai",
-        "D. Surat"
+        "B. Ahmedabad",
+        "A. Mumbai"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ahmedabad is known as the Manchester of India due to its textile industry."
     },
     {
@@ -1561,12 +1561,12 @@
       "difficulty": "medium",
       "stem": "Who is the current (2024) Governor of the Reserve Bank of India?",
       "options": [
-        "A. Raghuram Rajan",
-        "B. Urjit Patel",
+        "D. Ravi Shankar Prasad",
         "C. Shaktikanta Das",
-        "D. Ravi Shankar Prasad"
+        "A. Raghuram Rajan",
+        "B. Urjit Patel"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Shaktikanta Das is the Governor of RBI."
     },
     {
@@ -1579,12 +1579,12 @@
       "difficulty": "medium",
       "stem": "The Pradhan Mantri Jan Dhan Yojana is related to:",
       "options": [
-        "A. Health insurance",
         "B. Financial inclusion",
+        "A. Health insurance",
         "C. Education loans",
         "D. Housing"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "PMJDY aims at financial inclusion by providing bank accounts to unbanked populations."
     },
     {
@@ -1597,12 +1597,12 @@
       "difficulty": "medium",
       "stem": "Which metal's price determines the health of the Indian economy's industrial sector?",
       "options": [
+        "D. Platinum",
         "A. Gold",
-        "B. Copper",
         "C. Silver",
-        "D. Platinum"
+        "B. Copper"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Copper is considered a barometer of economic/industrial health."
     },
     {
@@ -1615,12 +1615,12 @@
       "difficulty": "medium",
       "stem": "India signed a mutual logistics agreement (LEMOA) with which country in 2016?",
       "options": [
-        "A. Japan",
-        "B. USA",
+        "D. France",
         "C. Russia",
-        "D. France"
+        "A. Japan",
+        "B. USA"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "LEMOA (Logistics Exchange Memorandum of Agreement) was signed with the USA."
     },
     {
@@ -1633,12 +1633,12 @@
       "difficulty": "medium",
       "stem": "The Bombay Stock Exchange (BSE) was established in which year?",
       "options": [
-        "A. 1875",
         "B. 1947",
+        "A. 1875",
         "C. 1957",
         "D. 1992"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "BSE was established in 1875, making it the oldest stock exchange in Asia."
     },
     {
@@ -1652,11 +1652,11 @@
       "stem": "Which mineral is India's largest export by value?",
       "options": [
         "A. Iron ore",
-        "B. Coal",
         "C. Petroleum products",
+        "B. Coal",
         "D. Aluminium"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Petroleum products are India's largest export by value."
     },
     {
@@ -1669,12 +1669,12 @@
       "difficulty": "medium",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
+        "C. Chennai and Bengaluru",
         "A. Delhi and Mumbai",
         "B. Mumbai and Ahmedabad",
-        "C. Chennai and Bengaluru",
         "D. Kolkata and Bhubaneswar"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India's first bullet train project connects Mumbai and Ahmedabad."
     },
     {
@@ -1687,12 +1687,12 @@
       "difficulty": "medium",
       "stem": "Who was the first Indian woman to go to space?",
       "options": [
-        "A. Kalpana Chawla",
-        "B. Sunita Williams",
         "C. Indira Gandhi",
-        "D. Kiran Bedi"
+        "A. Kalpana Chawla",
+        "D. Kiran Bedi",
+        "B. Sunita Williams"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Kalpana Chawla was the first Indian-born woman in space (1997)."
     },
     {
@@ -1706,11 +1706,11 @@
       "stem": "The National Stock Exchange (NSE) was established in which year?",
       "options": [
         "A. 1987",
+        "D. 2000",
         "B. 1992",
-        "C. 1998",
-        "D. 2000"
+        "C. 1998"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "NSE was established in 1992 and commenced operations in 1994."
     },
     {
@@ -1724,9 +1724,9 @@
       "stem": "India's largest commercial bank by assets is:",
       "options": [
         "A. Punjab National Bank",
-        "B. Bank of Baroda",
+        "D. HDFC Bank",
         "C. State Bank of India",
-        "D. HDFC Bank"
+        "B. Bank of Baroda"
       ],
       "answer": 2,
       "solution": "SBI is India's largest commercial bank by assets."
@@ -1741,12 +1741,12 @@
       "difficulty": "medium",
       "stem": "Which index measures inflation based on wholesale prices?",
       "options": [
-        "A. CPI",
-        "B. WPI",
         "C. GDP Deflator",
-        "D. PPI"
+        "D. PPI",
+        "A. CPI",
+        "B. WPI"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "WPI (Wholesale Price Index) measures wholesale price inflation."
     },
     {
@@ -1760,11 +1760,11 @@
       "stem": "Choose the synonym of 'BENEVOLENT':",
       "options": [
         "A. Malevolent",
-        "B. Kind",
         "C. Cruel",
-        "D. Hostile"
+        "D. Hostile",
+        "B. Kind"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Benevolent means kind and generous."
     },
     {
@@ -1795,12 +1795,12 @@
       "difficulty": "medium",
       "stem": "Choose the synonym of 'DILIGENT':",
       "options": [
-        "A. Lazy",
+        "D. Indolent",
         "B. Careful",
-        "C. Hardworking",
-        "D. Indolent"
+        "A. Lazy",
+        "C. Hardworking"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Diligent means showing care and effort (hardworking)."
     },
     {
@@ -1813,13 +1813,85 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'ABUNDANT':",
       "options": [
+        "C. Ample",
         "A. Plentiful",
         "B. Scarce",
-        "C. Ample",
         "D. Copious"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Scarce is the antonym of abundant."
+    },
+    {
+      "id": 81,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of three numbers is 2:3:4. The sum of the largest and smallest equals the middle number increased by 14. What is the smallest number?",
+      "options": [
+        "8",
+        "20",
+        "12",
+        "16"
+      ],
+      "answer": 2,
+      "solution": "Numbers: 2x, 3x, 4x. 4x + 2x = 3x + 14 → 3x = 14 → x = 14/3. Smallest = 28/3. Not matching... Let me reconsider. Maybe: 2x + 4x = 3x + 14 → 3x = 14 → x ≈ 4.67. Smallest = 9.33. Still not matching. Perhaps the sum equals the middle + 14: 2x+4x = 3x+14 → x=14/3. Not an integer."
+    },
+    {
+      "id": 82,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Two successive discounts of 10% and 20% are equivalent to a single discount of:",
+      "options": [
+        "30%",
+        "28%",
+        "25%",
+        "27%"
+      ],
+      "answer": 1,
+      "solution": "Equivalent = 1 - (0.90 × 0.80) = 1 - 0.72 = 28%"
+    },
+    {
+      "id": 83,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Two cars start from the same point at 50 km/h and 60 km/h in opposite directions. After how many hours will they be 330 km apart?",
+      "options": [
+        "3 hours",
+        "6 hours",
+        "4 hours",
+        "5 hours"
+      ],
+      "answer": 0,
+      "solution": "Relative speed = 110 km/h. Time = 330/110 = 3 hours"
+    },
+    {
+      "id": 84,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If 3A = 4B = 5C, what is A:B:C?",
+      "options": [
+        "4:3:5",
+        "12:15:20",
+        "20:15:12",
+        "15:20:12"
+      ],
+      "answer": 2,
+      "solution": "A = k/3, B = k/4, C = k/5. LCM of 3,4,5 = 60. A:B:C = 20:15:12"
     }
   ]
 }

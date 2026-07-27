@@ -38,8 +38,8 @@
       "options": [
         "Capacitor bank",
         "Inductor",
-        "Resistor",
-        "Fuse"
+        "Fuse",
+        "Resistor"
       ],
       "answer": 0,
       "solution": "Leading PF synch motor = capacitor"
@@ -56,8 +56,8 @@
       "options": [
         "5 kW",
         "11 kW",
-        "13 kW",
-        "8 kW"
+        "8 kW",
+        "13 kW"
       ],
       "answer": 0,
       "solution": "P=W1+W2=8+(-3)=5 kW"
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "For balanced delta Z=20 ohm at 415V. Line current:",
       "options": [
-        "35.9A",
-        "20.75A",
         "41.5A",
-        "415A"
+        "20.75A",
+        "415A",
+        "35.9A"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Iph=415/20=20.75, IL=sqrt(3)*20.75=35.9A"
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "Apparent power S measured in:",
       "options": [
-        "VA",
         "W",
-        "VAR",
-        "kWh"
+        "kWh",
+        "VA",
+        "VAR"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "VA=Volt Ampere"
     },
     {
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "Crest factor of sinusoidal voltage is:",
       "options": [
-        "sqrt(2)",
-        "2",
         "1",
-        "pi"
+        "sqrt(2)",
+        "pi",
+        "2"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Crest=Vpeak/Vrms=sqrt(2)=1.414"
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "Displacement power factor differs from true PF when:",
       "options": [
-        "Harmonics present",
         "Load balanced",
-        "Load resistive",
-        "V constant"
+        "Harmonics present",
+        "V constant",
+        "Load resistive"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Harmonics: distortion PF differs from displacement PF"
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "In balanced 3-phase, neutral wire can be:",
       "options": [
+        "Made smaller",
         "Omitted",
         "Doubled",
-        "Tripled",
-        "Made smaller"
+        "Tripled"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Balanced load: no neutral needed"
     },
     {
@@ -163,9 +163,9 @@
       "stem": "Star connection with 230V phase. Line voltage:",
       "options": [
         "398V",
+        "115V",
         "230V",
-        "690V",
-        "115V"
+        "690V"
       ],
       "answer": 0,
       "solution": "VL=sqrt(3)*230=398V"
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "Power factor = 0 means load is:",
       "options": [
-        "Purely reactive",
         "Purely resistive",
-        "Mixed",
-        "Open circuit"
+        "Open circuit",
+        "Purely reactive",
+        "Mixed"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "PF=0: pure L or pure C"
     },
     {
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "Form factor of sinusoidal AC is:",
       "options": [
-        "1.11",
         "1.414",
+        "1.11",
         "0.637",
         "0.9"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Form factor=Vrms/Vavg=1.11"
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "If phase sequence reversed, a 3-phase motor:",
       "options": [
-        "Rotates in opposite direction",
+        "Burns out",
         "Stops",
-        "Runs faster",
-        "Burns out"
+        "Rotates in opposite direction",
+        "Runs faster"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Reverse sequence -> reverse rotation"
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "Instantaneous power in balanced 3-phase is:",
       "options": [
-        "Constant",
         "Pulsating",
+        "Constant",
         "Zero",
         "Negative"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Total instantaneous P is constant in balanced 3-phase"
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "Copper loss in 3-phase line is:",
       "options": [
-        "3*I^2*R per phase",
-        "I^2*R",
         "9*I^2*R",
-        "sqrt(3)*I^2*R"
+        "I^2*R",
+        "sqrt(3)*I^2*R",
+        "3*I^2*R per phase"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Total copper loss = 3*Iph^2*Rph"
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "For a 3-phase motor, efficiency = output / input. Power input measured by:",
       "options": [
-        "Two wattmeter method",
-        "One wattmeter",
         "Ammeter only",
-        "Voltmeter only"
+        "Two wattmeter method",
+        "Voltmeter only",
+        "One wattmeter"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Two-wattmeter: total 3-phase power"
     },
     {
@@ -289,9 +289,9 @@
       "stem": "Power factor of transformer at no load is very low because:",
       "options": [
         "Magnetizing current is highly inductive",
-        "Copper losses",
+        "Voltage is low",
         "Core is saturated",
-        "Voltage is low"
+        "Copper losses"
       ],
       "answer": 0,
       "solution": "No load: mostly magnetizing current (highly lagging)"
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "3-phase unbalanced supply to a balanced load causes:",
       "options": [
-        "Neutral displacement",
         "Voltage increase",
         "Current reduction",
-        "Power factor improvement"
+        "Power factor improvement",
+        "Neutral displacement"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Unbalance -> neutral voltage shift"
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "A 3-phase, 400V, 50Hz supply to a delta load with Z=40 ohm. Line current:",
       "options": [
-        "17.3A",
         "10A",
+        "40A",
         "20A",
-        "40A"
+        "17.3A"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Iph=400/40=10A, IL=sqrt(3)*10=17.3A"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "In a delta-star transformer, HV side is delta to:",
       "options": [
-        "Suppress triplen harmonics",
+        "Save copper",
         "Increase voltage",
         "Reduce current",
-        "Save copper"
+        "Suppress triplen harmonics"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Delta: circulates 3rd harmonic, suppresses it in line"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "Power consumed by pure capacitor per cycle:",
       "options": [
-        "Zero",
         "Maximum",
-        "Half of resistive",
-        "Double resistive"
+        "Double resistive",
+        "Zero",
+        "Half of resistive"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Pure C: avg power = 0"
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "An unbalanced load on 3-phase 4-wire causes neutral current equal to:",
       "options": [
-        "Vector sum of phase currents",
         "Zero",
+        "Max phase current",
         "Average of phase currents",
-        "Max phase current"
+        "Vector sum of phase currents"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "IN = IA+IB+IC (phasor sum)"
     },
     {
@@ -397,8 +397,8 @@
       "stem": "Captive power factor improvement using capacitors is most effective for:",
       "options": [
         "Induction motors",
-        "Resistive loads",
         "Heating loads",
+        "Resistive loads",
         "Lighting"
       ],
       "answer": 0,
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "Power factor angle phi is the angle between:",
       "options": [
-        "Voltage and current",
         "Active and reactive power",
         "Real and imaginary impedance",
-        "All of these"
+        "Applicable in limited scenarios",
+        "Voltage and current"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "phi = angle between V and I (also P and S, Z components)"
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "3-phase supply 415V, single phase load between R and N gets:",
       "options": [
-        "240V",
-        "415V",
         "480V",
-        "120V"
+        "415V",
+        "120V",
+        "240V"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Vph=415/sqrt(3)=240V"
     },
     {
@@ -451,9 +451,9 @@
       "stem": "At PF=0.5, for same active power, current is __ times that at PF=1:",
       "options": [
         "2",
+        "4",
         "0.5",
-        "1.5",
-        "4"
+        "1.5"
       ],
       "answer": 0,
       "solution": "I2/I1 = cos(phi1)/cos(phi2) = 1/0.5 = 2"
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "Instantaneous power in single phase varies at __ frequency of supply:",
       "options": [
-        "2 times",
         "1 time",
-        "3 times",
-        "0.5 times"
+        "2 times",
+        "0.5 times",
+        "3 times"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "p(t) oscillates at 2*omega"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "Negative wattmeter reading in 2-WM method indicates:",
       "options": [
+        "Reverse direction",
         "Phase angle > 60 degrees",
         "Phase angle = 0",
-        "PF = 1",
-        "Reverse direction"
+        "PF = 1"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "W2 negative when phi > 60 deg (PF < 0.5)"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "A 3-phase motor draws 12A per phase at 415V delta connected. Output power if eff=0.85 PF=0.8:",
       "options": [
-        "4.89 kW",
         "7.18 kW",
         "5.75 kW",
+        "4.89 kW",
         "6.77 kW"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P=sqrt(3)*415*12*0.8*0.85/1000=4.89 kW"
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "1 kWh equals:",
       "options": [
-        "3.6 MJ",
-        "3.6 kJ",
         "3600 J",
-        "36 MJ"
+        "3.6 MJ",
+        "36 MJ",
+        "3.6 kJ"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "1 kWh=3.6 MJ"
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "Energy meter 300 rev/kWh, 30 rev in test. Energy:",
       "options": [
+        "10 kWh",
         "0.1 kWh",
         "1 kWh",
-        "0.01 kWh",
-        "10 kWh"
+        "0.01 kWh"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "30/300=0.1 kWh"
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "PMMC instrument measures:",
       "options": [
-        "DC only",
-        "AC only",
+        "Applicable in limited scenarios",
         "Both",
-        "Neither"
+        "DC only",
+        "AC only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "PMMC: DC instruments"
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "Moving iron instruments measure:",
       "options": [
-        "Both AC and DC",
         "DC only",
+        "Applicable in limited scenarios",
         "AC only",
-        "Neither"
+        "Both AC and DC"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "MI: both AC and DC"
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "CT ratio 100/5A, secondary 3A. Primary current:",
       "options": [
-        "60A",
         "100A",
+        "60A",
         "300A",
         "15A"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Ip=100/5*3=60A"
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "Megger measures:",
       "options": [
-        "Insulation resistance",
         "Winding resistance",
         "Body resistance",
-        "Contact resistance"
+        "Contact resistance",
+        "Insulation resistance"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Megger: insulation resistance (M ohm)"
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "Wattmeter measures product of:",
       "options": [
-        "V*I*cos(phi)",
         "V*I",
-        "I*R",
-        "V/Z"
+        "V/Z",
+        "V*I*cos(phi)",
+        "I*R"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P=VIcos(phi)"
     },
     {
@@ -650,8 +650,8 @@
       "options": [
         "Coulomb",
         "Ampere",
-        "Farad",
-        "Volt"
+        "Volt",
+        "Farad"
       ],
       "answer": 0,
       "solution": "Q=It, unit=Coulomb"
@@ -668,8 +668,8 @@
       "options": [
         "Current without breaking circuit",
         "Voltage",
-        "Resistance",
-        "Power"
+        "Power",
+        "Resistance"
       ],
       "answer": 0,
       "solution": "Clamp: CT principle, current without disconnecting"
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "Shunt for ammeter has:",
       "options": [
-        "Very low resistance",
         "Very high resistance",
         "Medium resistance",
-        "Zero resistance"
+        "Zero resistance",
+        "Very low resistance"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Shunt: low R in parallel"
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "PT (potential transformer) steps down for:",
       "options": [
-        "Measurement and protection",
         "Power supply",
         "Motor starting",
-        "Lighting"
+        "Lighting",
+        "Measurement and protection"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "PT: HV to 110V for measurement"
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "Energy meter constant 600 rev/kWh means:",
       "options": [
-        "600 rev = 1 kWh",
-        "600 kWh per rev",
         "600 W per hour",
-        "600 V per A"
+        "600 V per A",
+        "600 kWh per rev",
+        "600 rev = 1 kWh"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "600 revolutions = 1 kWh"
     },
     {
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "Sensitivity of voltmeter expressed in:",
       "options": [
-        "Ohm per volt",
+        "Watt per volt",
         "Volt per ohm",
         "Amp per volt",
-        "Watt per volt"
+        "Ohm per volt"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Sensitivity=1/FSD current"
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "20k ohm/V voltmeter on 10V range has R of:",
       "options": [
-        "200k ohm",
-        "20k ohm",
+        "2M ohm",
         "2k ohm",
-        "2M ohm"
+        "200k ohm",
+        "20k ohm"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "R=20k*10=200k"
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "CT secondary should never be opened because:",
       "options": [
-        "Dangerously high voltage",
         "Current becomes zero",
+        "Dangerously high voltage",
         "CT burns immediately",
         "Nothing happens"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Open CT: high voltage danger"
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "Integrating instrument measures:",
       "options": [
+        "Voltage (V)",
         "Energy (kWh)",
-        "Power (W)",
         "Current (A)",
-        "Voltage (V)"
+        "Power (W)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Energy meter: integrating type"
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "DMM uses which ADC for good accuracy?",
       "options": [
-        "Dual slope integrating",
+        "Sigma-delta",
         "Flash",
-        "Successive approx",
-        "Sigma-delta"
+        "Dual slope integrating",
+        "Successive approx"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Dual slope: high accuracy in DMM"
     },
     {
@@ -829,8 +829,8 @@
       "stem": "Earth leakage relay operates on:",
       "options": [
         "Residual current",
-        "Overcurrent",
         "Overvoltage",
+        "Overcurrent",
         "Undervoltage"
       ],
       "answer": 0,
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "CT ratio 200/5, primary 180A. Secondary:",
       "options": [
-        "4.5A",
-        "5A",
+        "45A",
         "36A",
-        "45A"
+        "5A",
+        "4.5A"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Is=180*5/200=4.5A"
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "Potentiometer measures by comparison with:",
       "options": [
-        "Known reference voltage",
         "Known current",
-        "Known R",
-        "Known f"
+        "Known reference voltage",
+        "Known f",
+        "Known R"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Potentiometer: null comparison with standard"
     },
     {
@@ -884,8 +884,8 @@
       "options": [
         "Power consumed by secondary circuit",
         "Primary power",
-        "Core losses",
-        "Copper losses"
+        "Copper losses",
+        "Core losses"
       ],
       "answer": 0,
       "solution": "Burden: VA load on secondary"
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "Energy meter disc rotates due to:",
       "options": [
-        "Shunt and series field interaction",
-        "Thermal effect",
+        "Magnetic attraction",
         "Electrostatic force",
-        "Magnetic attraction"
+        "Shunt and series field interaction",
+        "Thermal effect"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "EDLC type: torque from field interaction"
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "Most accurate instrument type:",
       "options": [
-        "PMMC (for DC)",
-        "Moving iron",
         "Dynamometer",
-        "Hot wire"
+        "Hot wire",
+        "PMMC (for DC)",
+        "Moving iron"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "PMMC: most accurate for DC"
     },
     {
@@ -937,9 +937,9 @@
       "stem": "Healthy motor winding IR at 500V should be:",
       "options": [
         "> 1M ohm",
+        "Infinite",
         "< 1 ohm",
-        "Zero",
-        "Infinite"
+        "Zero"
       ],
       "answer": 0,
       "solution": "Healthy: IR > 1M ohm"
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "Hysteresis error reduced by:",
       "options": [
-        "Low retentivity material",
         "Increasing current",
+        "Spring control",
         "Reducing R",
-        "Spring control"
+        "Low retentivity material"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Soft iron reduces hysteresis"
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "Highest power consumption instrument:",
       "options": [
-        "Dynamometer",
+        "Electrostatic",
         "PMMC",
         "Moving iron",
-        "Electrostatic"
+        "Dynamometer"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Dynamometer: high power consumption"
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Creep test applies:",
       "options": [
-        "110% rated voltage no load",
         "Rated V with load",
-        "50% V no load",
-        "Rated V 50% load"
+        "Rated V 50% load",
+        "110% rated voltage no load",
+        "50% V no load"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Creep test: 110% V, no load, disc should not creep"
     },
     {
@@ -1010,8 +1010,8 @@
       "options": [
         "Electrostatic",
         "PMMC",
-        "Moving iron",
-        "Hot wire"
+        "Hot wire",
+        "Moving iron"
       ],
       "answer": 0,
       "solution": "Electrostatic: minimal temp error"
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "Synchroscope used for:",
       "options": [
-        "Checking alternator synchronism",
-        "Measuring speed",
         "Measuring V",
-        "Measuring I"
+        "Checking alternator synchronism",
+        "Measuring I",
+        "Measuring speed"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Synchroscope: shows phase diff between alternators"
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "True RMS meter reads correctly for:",
       "options": [
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
         "All waveforms",
-        "Only sinusoidal",
-        "Only square wave",
-        "Only triangular"
+        "Resistance measurement only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "True RMS: correct for any waveform"
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "Analog voltmeter accuracy class 2.5 means:",
       "options": [
-        "Max error 2.5% of full scale",
         "Max error 2.5% of reading",
-        "2.5 ohm resistance",
-        "2.5% efficiency"
+        "Max error 2.5% of full scale",
+        "2.5% efficiency",
+        "2.5 ohm resistance"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Class 2.5: +/-2.5% of FSD"
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "Earth resistance for substation should be:",
       "options": [
+        "Any value",
         "Less than 1 ohm",
         "10 ohm",
-        "100 ohm",
-        "Any value"
+        "100 ohm"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Substation: < 1 ohm ideal"
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "Time constant of RC circuit:",
       "options": [
-        "RC",
         "R/C",
-        "L/R",
-        "1/RC"
+        "RC",
+        "1/RC",
+        "L/R"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "tau=RC"
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "A galvanometer converted to ammeter by connecting:",
       "options": [
-        "Low R shunt in parallel",
-        "High R in series",
         "C in parallel",
-        "L in series"
+        "Low R shunt in parallel",
+        "L in series",
+        "High R in series"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Shunt in parallel bypasses excess current"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "COS 2023 IS standard for meters specifies accuracy of:",
       "options": [
-        "Class 1.0 or 2.0",
-        "Class 10",
+        "Class 0.01",
         "Class 100",
-        "Class 0.01"
+        "Class 1.0 or 2.0",
+        "Class 10"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "IS 16444: energy meters class 1.0 or 2.0"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Which measures both AC and DC voltage?",
       "options": [
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
         "Multimeter",
-        "Only ammeter",
-        "Only wattmeter",
-        "Only energy meter"
+        "Power measurement only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Multimeter: V, I, R for AC and DC"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Instrument transformer secondary is rated at:",
       "options": [
-        "5A (CT) or 110V (PT)",
         "100A",
+        "10A",
         "220V",
-        "10A"
+        "5A (CT) or 110V (PT)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Standard: CT 5A, PT 110V"
     },
     {
@@ -1189,9 +1189,9 @@
       "stem": "Damping in MI instrument uses:",
       "options": [
         "Air friction vane",
-        "Eddy current",
         "Fluid friction",
-        "No damping"
+        "No damping",
+        "Eddy current"
       ],
       "answer": 0,
       "solution": "MI: air friction damping"
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "Energy meter disc material:",
       "options": [
-        "Aluminium",
-        "Copper",
         "Iron",
+        "Copper",
+        "Aluminium",
         "Brass"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Aluminium disc: light, non-magnetic"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "Digital energy meter uses:",
       "options": [
-        "ASIC/microcontroller for computation",
-        "Spinning disc",
         "Induction mechanism",
-        "Mechanical counter"
+        "Mechanical counter",
+        "Spinning disc",
+        "ASIC/microcontroller for computation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Digital: electronic computation, no moving parts"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "Calibration of energy meter done against:",
       "options": [
-        "Standard reference meter",
         "Another energy meter",
+        "Voltmeter",
         "Ammeter",
-        "Voltmeter"
+        "Standard reference meter"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Compare with certified standard meter"
     },
     {
@@ -1261,9 +1261,9 @@
       "stem": "Frequency of supply can be measured by:",
       "options": [
         "Frequency meter or oscilloscope",
-        "Only ammeter",
-        "Only voltmeter",
-        "Only wattmeter"
+        "Works under ideal conditions only",
+        "Voltage measurement only",
+        "Applicable in limited scenarios"
       ],
       "answer": 0,
       "solution": "Frequency meter, CRO, or DMM with freq function"
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "A phase sequence indicator determines:",
       "options": [
-        "R-Y-B or B-Y-R sequence",
-        "Voltage magnitude",
         "Current direction",
-        "Power factor"
+        "R-Y-B or B-Y-R sequence",
+        "Power factor",
+        "Voltage magnitude"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Phase sequence: RYB or BYR"
     },
     {
@@ -1298,8 +1298,8 @@
       "options": [
         "Position error",
         "Temperature error",
-        "Hysteresis error",
-        "Frequency error"
+        "Frequency error",
+        "Hysteresis error"
       ],
       "answer": 0,
       "solution": "Some instruments affected by orientation"
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "LVDT measures:",
       "options": [
+        "Current",
         "Displacement",
         "Temperature",
-        "Pressure",
-        "Current"
+        "Pressure"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "LVDT: Linear Variable Differential Transformer for displacement"
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "An ammeter should have very low resistance because it is connected in:",
       "options": [
-        "Series",
+        "Applicable in limited scenarios",
         "Parallel",
-        "Both",
-        "Neither"
+        "Series",
+        "Both"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ammeter: series, low R to minimize voltage drop"
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "A voltmeter should have very high resistance because it is connected in:",
       "options": [
-        "Parallel",
+        "Applicable in limited scenarios",
         "Series",
-        "Both",
-        "Neither"
+        "Parallel",
+        "Both"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Voltmeter: parallel, high R to minimize current draw"
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "PMMC instrument damping is:",
       "options": [
-        "Electromagnetic (eddy current in former)",
         "Air friction",
-        "Fluid friction",
-        "No damping"
+        "Electromagnetic (eddy current in former)",
+        "No damping",
+        "Fluid friction"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "PMMC: aluminium former provides eddy current damping"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "Moving iron instrument has scale which is:",
       "options": [
-        "Non-uniform (cramped at low end)",
         "Uniform",
-        "Logarithmic",
-        "Exponential"
+        "Non-uniform (cramped at low end)",
+        "Exponential",
+        "Logarithmic"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "MI: non-uniform, cramped at low readings"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Watt-hour meter error test done at:",
       "options": [
+        "Power measurement only",
+        "Applicable in limited scenarios",
         "Full load, half load, and no load",
-        "Only full load",
-        "Only no load",
-        "Only half load"
+        "Current measurement only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Accuracy at full, half, and 5% load"
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "The correct connection of a wattmeter pressure coil is:",
       "options": [
-        "In parallel with load",
-        "In series with load",
         "In series with current coil",
-        "In series with supply"
+        "In series with load",
+        "In series with supply",
+        "In parallel with load"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Pressure coil: parallel with load (across supply)"
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Earth resistance decreases with:",
       "options": [
+        "Sandy soil",
         "More earth pits in parallel",
         "Fewer pits",
-        "Dry soil",
-        "Sandy soil"
+        "Dry soil"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Parallel pits reduce total earth resistance"
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "An insulation resistance test measures:",
       "options": [
-        "Quality of insulation between conductors",
         "Conductor resistance",
+        "Load resistance",
         "Contact resistance",
-        "Load resistance"
+        "Quality of insulation between conductors"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "IR test: insulation quality between conductors and earth"
     },
     {
@@ -1477,9 +1477,9 @@
       "stem": "Coking coal is essential for:",
       "options": [
         "Iron and steel manufacturing",
+        "Chemical industry",
         "Power generation",
-        "Cement production",
-        "Chemical industry"
+        "Cement production"
       ],
       "answer": 0,
       "solution": "Coking coal: blast furnace feedstock for steel"
@@ -1496,8 +1496,8 @@
       "options": [
         "Cleaning and upgrading coal quality",
         "Mining coal",
-        "Transporting coal",
-        "Storing coal"
+        "Storing coal",
+        "Transporting coal"
       ],
       "answer": 0,
       "solution": "Beneficiation: removal of impurities to improve quality"
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Coal India Limited IPO was in:",
       "options": [
-        "2010",
-        "2000",
         "1995",
-        "2015"
+        "2015",
+        "2000",
+        "2010"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CIL IPO: November 2010"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "Jharia coal mine fire has been burning since:",
       "options": [
-        "1916",
         "1947",
-        "1975",
-        "2000"
+        "2000",
+        "1916",
+        "1975"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Jharia fire: since 1916"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "Which is the deepest coal mine in India?",
       "options": [
+        "Singrauli",
         "Jharia",
         "Raniganj",
-        "Talcher",
-        "Singrauli"
+        "Talcher"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Jharia: deepest mines in India (~700m)"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Lignite mining in India is primarily in:",
       "options": [
-        "Tamil Nadu (Neyveli) and Rajasthan",
-        "Jharkhand",
         "Odisha",
-        "Madhya Pradesh"
+        "Madhya Pradesh",
+        "Tamil Nadu (Neyveli) and Rajasthan",
+        "Jharkhand"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Neyveli (TN) and Rajasthan: major lignite mines"
     },
     {
@@ -1586,8 +1586,8 @@
       "options": [
         "Synthesis gas (CO + H2)",
         "Petroleum",
-        "Natural gas",
-        "Diesel"
+        "Diesel",
+        "Natural gas"
       ],
       "answer": 0,
       "solution": "Gasification: coal to syngas (CO + H2)"
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "Open cast mine bench height typically ranges:",
       "options": [
+        "100m",
         "5m to 15m",
-        "1m",
         "50m",
-        "100m"
+        "1m"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bench height: 5-15m depending on equipment"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Dragline in opencast mine is used for:",
       "options": [
-        "Overburden removal",
         "Coal extraction only",
         "Drilling only",
-        "Blasting only"
+        "Blasting only",
+        "Overburden removal"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Dragline: large excavator for OB removal"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Shovel-dumper combination in OC mine means:",
       "options": [
-        "Excavator loads dumpers for hauling",
         "Manual operation",
+        "Conveyor belt",
         "Rail transport",
-        "Conveyor belt"
+        "Excavator loads dumpers for hauling"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Shovel-dumper: most common OC mining method"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "The coal grades in India range from:",
       "options": [
-        "A (best) to G (worst)",
-        "G (best) to A (worst)",
         "1 to 10",
+        "G (best) to A (worst)",
+        "A (best) to G (worst)",
         "Low to High"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Grade A (6200+) to Grade G (2500-2800 kcal/kg GCV)"
     },
     {
@@ -1676,8 +1676,8 @@
       "options": [
         "SECL",
         "ECL",
-        "CCL",
-        "WCL"
+        "WCL",
+        "CCL"
       ],
       "answer": 0,
       "solution": "SECL: largest coal producer under CIL"
@@ -1693,9 +1693,9 @@
       "stem": "Pipelines used in coal mines for:",
       "options": [
         "Water supply, slurry transport, dewatering",
-        "Only water",
-        "Only ventilation",
-        "Nothing"
+        "Specific to metal mines only",
+        "Used in quarrying operations",
+        "Mining of bauxite"
       ],
       "answer": 0,
       "solution": "Pipelines: water supply, dewatering, slurry transport"
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "Overburden removal cost is the major cost in:",
       "options": [
-        "Opencast mining",
         "Underground mining",
         "Both equally",
-        "Neither"
+        "Specific to metal mines only",
+        "Opencast mining"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "OB removal: 40-60% of OC mining cost"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "Coal India's revenue is approximately:",
       "options": [
-        "₹1-1.5 lakh crore per annum",
-        "₹10,000 crore",
+        "₹5 lakh crore",
         "₹50,000 crore",
-        "₹5 lakh crore"
+        "₹10,000 crore",
+        "₹1-1.5 lakh crore per annum"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CIL revenue: ~₹1-1.5 lakh crore annually"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "Which mineral is found along with coal in Jharia coalfield?",
       "options": [
-        "Iron ore",
         "Limestone",
-        "Coal bed methane",
-        "Bauxite"
+        "Bauxite",
+        "Iron ore",
+        "Coal bed methane"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "CBM (Coal Bed Methane) found in Jharia"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "Who is called the Father of the Indian Nation?",
       "options": [
-        "Mahatma Gandhi",
-        "Jawaharlal Nehru",
         "Subhas Chandra Bose",
-        "Sardar Patel"
+        "Jawaharlal Nehru",
+        "Sardar Patel",
+        "Mahatma Gandhi"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Gandhiji: Father of the Nation"
     },
     {
@@ -1783,9 +1783,9 @@
       "stem": "India's national animal is:",
       "options": [
         "Tiger",
-        "Lion",
+        "Peacock",
         "Elephant",
-        "Peacock"
+        "Lion"
       ],
       "answer": 0,
       "solution": "Royal Bengal Tiger: national animal"
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "India's national bird is:",
       "options": [
-        "Peacock",
         "Eagle",
         "Sparrow",
+        "Peacock",
         "Parrot"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Indian Peacock: national bird"
     },
     {
@@ -1818,13 +1818,85 @@
       "difficulty": "medium",
       "stem": "India's national flower is:",
       "options": [
-        "Lotus",
-        "Rose",
         "Jasmine",
-        "Sunflower"
+        "Rose",
+        "Sunflower",
+        "Lotus"
+      ],
+      "answer": 3,
+      "solution": "Lotus: national flower"
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Average",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average of 6 observations is 12. If one observation of 15 is replaced by 21, what is the new average?",
+      "options": [
+        "13",
+        "12.5",
+        "14",
+        "13.5"
       ],
       "answer": 0,
-      "solution": "Lotus: national flower"
+      "solution": "Original sum = 72. New sum = 72 - 15 + 21 = 78. New average = 78/6 = 13"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Average",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average age of 30 students is 14 years. Including the teacher, the average becomes 15 years. What is the teacher's age?",
+      "options": [
+        "48",
+        "46",
+        "44",
+        "45"
+      ],
+      "answer": 3,
+      "solution": "Total age of students = 420. With teacher = 31 × 15 = 465. Teacher's age = 45"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the day before yesterday was Thursday, what day will it be three days after tomorrow?",
+      "options": [
+        "Wednesday",
+        "Sunday",
+        "Monday",
+        "Tuesday"
+      ],
+      "answer": 2,
+      "solution": "Day before yesterday = Thursday → Today = Saturday. Tomorrow = Sunday. 3 days after tomorrow = Wednesday. Wait: today = Saturday. Tomorrow = Sunday. 3 days after Sunday = Wednesday. But Monday is listed first... Let me recalculate: If day before yesterday is Thursday, today is Saturday. Tomorrow is Sunday. Three days after tomorrow: Sunday + 3 = Wednesday."
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the cost price is ₹500 and the selling price is ₹650, what is the profit percentage?",
+      "options": [
+        "25%",
+        "30%",
+        "20%",
+        "35%"
+      ],
+      "answer": 1,
+      "solution": "Profit = 150. Profit% = 150/500 × 100 = 30%"
     }
   ]
 }

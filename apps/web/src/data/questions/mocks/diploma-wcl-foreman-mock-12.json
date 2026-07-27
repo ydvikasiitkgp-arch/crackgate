@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "A gas detector for methane (CH₄) in mines is calibrated to alarm at:",
       "options": [
-        "0.5% CH₄",
         "1% CH₄",
+        "0.5% CH₄",
         "5% CH₄",
         "10% CH₄"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CH₄ alarm is set at 1% (alert) and 2% (danger, power cut-off)."
     },
     {
@@ -56,8 +56,8 @@
       "options": [
         "It is visible",
         "It is odorless, colorless, and toxic — combines with hemoglobin",
-        "It is flammable only",
-        "It is heavier than air"
+        "It is heavier than air",
+        "It is flammable only"
       ],
       "answer": 1,
       "solution": "CO binds with hemoglobin 200–250× more strongly than O₂, causing asphyxiation."
@@ -74,8 +74,8 @@
       "options": [
         "21%",
         "19.5%",
-        "16%",
-        "10%"
+        "10%",
+        "16%"
       ],
       "answer": 1,
       "solution": "Below 19.5% O₂ is considered oxygen-deficient."
@@ -90,10 +90,10 @@
       "difficulty": "medium",
       "stem": "Electrical equipment in underground coal mines must be approved by:",
       "options": [
-        "BIS only",
+        "Equipment manufacturer",
         "DGMS-approved testing authority",
         "CEA directly",
-        "Equipment manufacturer"
+        "BIS only"
       ],
       "answer": 1,
       "solution": "Equipment must be tested and approved by DGMS-recognized testing laboratory."
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "The IS classification for electrical equipment in mines divides hazardous zones as:",
       "options": [
+        "Zone A, B, C",
         "Zone 0, 1, 2 for gas and Zone 20, 21, 22 for dust",
-        "Only Zone 1",
-        "No zone classification",
-        "Zone A, B, C"
+        "Thermal insulation properties",
+        "No zone classification"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "IS/IEC 60079 classifies gas hazardous areas as Zone 0, 1, 2. Dust: 20, 21, 22."
     },
     {
@@ -127,8 +127,8 @@
       "stem": "Zone 0 in a gassy mine is defined as:",
       "options": [
         "Area where explosive gas is present continuously or for long periods",
-        "Area with occasional gas presence",
         "Safe area",
+        "Area with occasional gas presence",
         "Area with no gas risk"
       ],
       "answer": 0,
@@ -147,7 +147,7 @@
         "Gas is always present",
         "Explosive gas atmosphere is likely to occur in normal operation",
         "No gas risk",
-        "Only dust is present"
+        "Affects only intake shafts"
       ],
       "answer": 1,
       "solution": "Zone 1: explosive atmosphere likely during normal operations."
@@ -163,11 +163,11 @@
       "stem": "Zone 2 in a gassy mine is where:",
       "options": [
         "Gas is always present",
+        "No electrical equipment allowed",
         "Gas is likely during normal operation",
-        "Explosive gas atmosphere is not likely or occurs only briefly",
-        "No electrical equipment allowed"
+        "Explosive gas atmosphere is not likely or occurs only briefly"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Zone 2: abnormal conditions only, brief duration."
     },
     {
@@ -182,8 +182,8 @@
       "options": [
         "Calibrated annually only",
         "Bump-tested daily and calibrated regularly",
-        "Used without calibration",
-        "Only used by officials"
+        "Affects only intake shafts",
+        "Used without calibration"
       ],
       "answer": 1,
       "solution": "Daily bump test and regular calibration ensure detector reliability."
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "The flameproof category for underground coal mine equipment is:",
       "options": [
-        "Category 1 (highest protection)",
         "Category 2",
+        "No category required",
         "Category 3",
-        "No category required"
+        "Category 1 (highest protection)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Mining equipment requires Category 1 protection for Zone 0/1."
     },
     {
@@ -218,10 +218,10 @@
       "options": [
         "Make current under load",
         "Break full load current safely",
-        "Only isolate under no-load condition",
-        "Interrupt fault current only"
+        "Interrupt fault current only",
+        "Acoustic properties of surfaces"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Isolators are off-load devices for visible isolation."
     },
     {
@@ -234,10 +234,10 @@
       "difficulty": "medium",
       "stem": "A circuit breaker in mine power system differs from an isolator because it can:",
       "options": [
-        "Only isolate",
+        "Transient response testing",
         "Make and break load and fault currents",
-        "Only make current",
-        "Only measure current"
+        "Voltage regulation only",
+        "Resonance condition analysis"
       ],
       "answer": 1,
       "solution": "CBs interrupt both normal load and fault currents."
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "The earth leakage relay (ELR) in mine electrical system detects:",
       "options": [
-        "Overcurrent",
         "Earth fault current by measuring CT residual current",
-        "Overvoltage",
-        "Under frequency"
+        "Under frequency",
+        "Overcurrent",
+        "Overvoltage"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "ELR uses CBCT to detect residual current indicating earth fault."
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "A CBCT (Core Balance CT) for earth leakage protection works by:",
       "options": [
-        "Measuring each phase current separately",
-        "Summing all phase and neutral currents — zero in healthy circuit",
+        "Measuring resistance",
         "Measuring voltage",
-        "Measuring resistance"
+        "Measuring each phase current separately",
+        "Summing all phase and neutral currents — zero in healthy circuit"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In healthy circuit, sum of all currents = 0. Earth fault causes imbalance."
     },
     {
@@ -288,10 +288,10 @@
       "difficulty": "medium",
       "stem": "The setting of earth leakage relay in coal mines is typically:",
       "options": [
-        "100 mA",
+        "10 A",
         "300–500 mA",
-        "1 A",
-        "10 A"
+        "100 mA",
+        "1 A"
       ],
       "answer": 1,
       "solution": "ELR in coal mines typically set at 300–500 mA."
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "The permissible touch voltage in mines under normal conditions is:",
       "options": [
+        "5 V AC",
         "100 V",
         "55 V AC",
-        "25 V AC",
-        "5 V AC"
+        "25 V AC"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Permissible touch voltage is generally 55V AC."
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "Enclosed (dead-front) switchgear is preferred in mines because:",
       "options": [
-        "It is cheaper",
-        "All live parts are enclosed, reducing accidental contact risk",
         "It is lighter",
-        "It has higher capacity"
+        "It has higher capacity",
+        "All live parts are enclosed, reducing accidental contact risk",
+        "It is cheaper"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Dead-front switchgear has no exposed live parts, reducing electrocution risk."
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "The main earthing conductor in a mine power system should have cross-section of:",
       "options": [
-        "Half of the phase conductor",
         "At least half of the largest phase conductor",
         "Same as smallest phase conductor",
-        "Any size is acceptable"
+        "Any size is acceptable",
+        "Half of the phase conductor"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Main earthing conductor should be at least 50% of largest phase conductor."
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "Supplementary earth electrodes in mines are provided to:",
       "options": [
-        "Increase system voltage",
         "Reduce earth electrode resistance for safety",
+        "Increase system voltage",
         "Improve power factor",
         "Increase current"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Additional earth electrodes reduce overall earth resistance."
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "A 1000V insulation tester (megger) is used for testing MV cable insulation in mines at:",
       "options": [
+        "100 V",
         "250 V",
         "500 V",
-        "1000 V DC",
-        "100 V"
+        "1000 V DC"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Megger applies 1000V DC to test MV cable insulation."
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "Barricading in mine electrical safety is done to:",
       "options": [
+        "Store equipment",
         "Improve aesthetics",
         "Prevent unauthorized access to live equipment and danger areas",
-        "Store equipment",
         "Block ventilation"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Physical barricades with danger signs prevent accidental entry to energized areas."
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "A 'Dead' certificate for electrical work in mines means:",
       "options": [
-        "Equipment is off",
         "Equipment is proven to be de-energized and earthed by authorized person",
-        "Switch is open",
-        "Fuse is removed"
+        "Equipment is off",
+        "Fuse is removed",
+        "Switch is open"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Dead certificate is formal declaration that circuit is proven dead and safely earthed."
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "Re-energization after maintenance in mines requires:",
       "options": [
-        "Any worker to switch on",
-        "Written authorization from the person who issued the permit to work",
+        "Just closing the isolator",
         "No procedure",
-        "Just closing the isolator"
+        "Any worker to switch on",
+        "Written authorization from the person who issued the permit to work"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Only authorized person who issued PTW can authorize re-energization."
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "The role of a mine electrical supervisor includes:",
       "options": [
-        "Only operating equipment",
         "Ensuring electrical safety, maintenance, and compliance with regulations",
-        "Only record keeping",
-        "Supervising blasting only"
+        "Acoustic properties of surfaces",
+        "Supervising blasting only",
+        "Chemical resistance of components"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Electrical supervisor responsible for safe operations, maintenance, and compliance."
     },
     {
@@ -486,10 +486,10 @@
       "difficulty": "medium",
       "stem": "A switchgear room in an underground mine should have:",
       "options": [
-        "No ventilation",
-        "Adequate ventilation, fire-fighting equipment, and restricted access",
         "Open windows",
-        "Storage of explosives"
+        "Adequate ventilation, fire-fighting equipment, and restricted access",
+        "Storage of explosives",
+        "No ventilation"
       ],
       "answer": 1,
       "solution": "Switchgear rooms need ventilation, fire protection, and access control."
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "Fire in a transformer oil can be extinguished by:",
       "options": [
-        "Water spray directly",
-        "CO₂ extinguisher or foam",
         "Sand only",
-        "Dry chemical powder only"
+        "Water spray directly",
+        "Dry chemical powder only",
+        "CO₂ extinguisher or foam"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "CO₂ and foam are effective for oil fires. Never use direct water on oil fires."
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "Emergency exit routes in underground mine electrical areas should be:",
       "options": [
+        "Optional",
         "Not required",
-        "Clearly marked and illuminated at all times",
-        "Only known to supervisor",
-        "Optional"
+        "Mechanical strength of materials",
+        "Clearly marked and illuminated at all times"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Emergency exits must be clearly signed, well-lit, and free of obstructions."
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "A portable CH₄ detector reading above 1% in a development face means:",
       "options": [
+        "Report next day",
         "Continue working",
         "Withdraw personnel and stop all electrical work",
-        "Increase ventilation only",
-        "Report next day"
+        "Increase ventilation only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At ≥1% CH₄, all persons must withdraw and power to non-IS equipment must be cut."
     },
     {
@@ -577,11 +577,11 @@
       "stem": "An electrical earth in mines should be tested for resistance at least:",
       "options": [
         "Once in 5 years",
+        "Mechanical strength of materials",
         "At least once a year",
-        "Never",
-        "Only after a fault"
+        "Never"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Earth electrode resistance should be tested at least annually."
     },
     {
@@ -596,8 +596,8 @@
       "options": [
         "Start motor only",
         "Start, stop, and protect motors while containing any internal explosion",
-        "Measure current",
-        "Regulate voltage"
+        "Regulate voltage",
+        "Measure current"
       ],
       "answer": 1,
       "solution": "Flameproof starter provides motor control with built-in protection in Ex d enclosure."
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "Pilot wire monitoring in mine electrical system ensures:",
       "options": [
-        "Voltage regulation",
         "Continuous checking of earth continuity conductor integrity",
-        "Power factor correction",
-        "Load balancing"
+        "Voltage regulation",
+        "Load balancing",
+        "Power factor correction"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Pilot wire continuously monitors earth continuity. Any break triggers shutdown."
     },
     {
@@ -631,11 +631,11 @@
       "stem": "An intrinsically safe circuit in mines means:",
       "options": [
         "High-power circuit",
-        "Circuit where energy stored is below the ignition threshold of surrounding gas",
         "Flameproof circuit",
+        "Circuit where energy stored is below the ignition threshold of surrounding gas",
         "Any circuit with fuses"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "IS circuits limit energy below minimum ignition energy."
     },
     {
@@ -649,11 +649,11 @@
       "stem": "The Zener barrier in an intrinsically safe circuit:",
       "options": [
         "Increases voltage",
-        "Limits voltage and current to safe levels using Zener diodes",
+        "Generates power",
         "Measures current",
-        "Generates power"
+        "Limits voltage and current to safe levels using Zener diodes"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Zener barrier clamps voltage and limits current to safe levels."
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "Galvanic isolation for IS circuits is provided by:",
       "options": [
+        "Fuses only",
         "Direct wiring",
         "Isolating transformers or optical isolators",
-        "Fuses only",
         "Resistors only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Isolating transformers and opto-couplers provide galvanic isolation."
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "A safety shutdown system in mines should operate within:",
       "options": [
-        "30 seconds",
-        "Within seconds of detecting dangerous condition",
+        "Next shift",
         "1 hour",
-        "Next shift"
+        "30 seconds",
+        "Within seconds of detecting dangerous condition"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Safety systems must actuate within seconds to prevent ignition."
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "The earthing system for mobile equipment in mines should be:",
       "options": [
-        "Optional",
         "A trailing earth conductor connected before power conductor engages",
+        "Not required for low voltage",
         "Connected after power",
-        "Not required for low voltage"
+        "Optional"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Trailing earth must make contact first and break last."
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "Cable couplers in underground mines are flameproof and should:",
       "options": [
-        "Be opened under load",
-        "Only be connected/disconnected when de-energized and gas-free",
+        "Control dust emissions",
         "Have exposed pins",
-        "Use any connector type"
+        "Use any connector type",
+        "Be opened under load"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Mine couplers are dead-break type — never operated under load."
     },
     {
@@ -740,8 +740,8 @@
       "options": [
         "Paper insulation",
         "XLPE insulation with overall screen and earth screen",
-        "No insulation required",
-        "PVC insulation only"
+        "PVC insulation only",
+        "No insulation required"
       ],
       "answer": 1,
       "solution": "MV cables use XLPE insulation with metallic screens."
@@ -756,10 +756,10 @@
       "difficulty": "medium",
       "stem": "Retained voltage on cables after isolation in mines should be:",
       "options": [
-        "Ignored",
+        "Measured with live-line tools",
         "Discharged through earth before earthing the cable",
-        "Stored for later use",
-        "Measured with live-line tools"
+        "Ignored",
+        "Stored for later use"
       ],
       "answer": 1,
       "solution": "Cable capacitance can retain charge. Discharge rod safely discharges stored energy."
@@ -775,11 +775,11 @@
       "stem": "The maximum temperature of flameproof surface in Group I equipment is:",
       "options": [
         "200°C",
-        "150°C",
         "450°C (gas auto-ignition temp dependent)",
-        "500°C"
+        "500°C",
+        "150°C"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Surface temperature must stay below auto-ignition temperature of the gas."
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "Earth resistance of a main earth electrode in a mine substation should be:",
       "options": [
-        "Less than 1 ohm",
         "Less than 5 ohms",
-        "Less than 10 ohms",
-        "No specification"
+        "No specification",
+        "Less than 1 ohm",
+        "Less than 10 ohms"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Main earth electrode at mine substations should have resistance ≤ 5 ohms."
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "A 200 m trailing cable for a continuous miner should have how many earth conductors?",
       "options": [
-        "No earth conductor",
-        "One earth conductor",
+        "Two earth conductors minimum",
         "One earth conductor per phase conductor",
-        "Two earth conductors minimum"
+        "One earth conductor",
+        "No earth conductor"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Trailing cables have at least 2 dedicated earth conductors for redundancy."
     },
     {
@@ -828,10 +828,10 @@
       "difficulty": "medium",
       "stem": "Insulation resistance test on 11 kV mining cable should show a minimum of:",
       "options": [
-        "1 MΩ",
+        "1 GΩ",
         "100 MΩ/km",
         "10 MΩ",
-        "1 GΩ"
+        "1 MΩ"
       ],
       "answer": 1,
       "solution": "Acceptable IR for MV cables is ≥100 MΩ per km at 1000V DC."
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "The purpose of a circuit interlock in flameproof equipment is to:",
       "options": [
-        "Improve efficiency",
-        "Prevent opening of enclosure while circuit is live or under load",
+        "Reduce current",
         "Increase voltage",
-        "Reduce current"
+        "Improve efficiency",
+        "Prevent opening of enclosure while circuit is live or under load"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Interlocks prevent opening enclosure under live conditions."
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "Gas-proof enclosure for electrical equipment in mines means:",
       "options": [
-        "Enclosure that allows gas entry",
         "Enclosure that prevents entry of methane/air mixture into the equipment",
-        "Flameproof enclosure",
-        "Open enclosure"
+        "Open enclosure",
+        "Enclosure that allows gas entry",
+        "Flameproof enclosure"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Gas-tight enclosures prevent entry of explosive gas atmosphere."
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "The inspection interval for flameproof equipment in mines is:",
       "options": [
+        "No inspection needed",
         "Monthly",
         "Quarterly or as specified by DGMS",
-        "Once in 5 years",
-        "No inspection needed"
+        "Once in 5 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Flameproof equipment requires periodic inspection (typically quarterly)."
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "A flame path is defined as a:",
       "options": [
+        "Cable route",
         "Conductor for earthing",
-        "Path through which gas from inside an enclosure can escape and be cooled",
         "Ventilation duct",
-        "Cable route"
+        "Path through which gas from inside an enclosure can escape and be cooled"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Flame path cools escaping hot gases below ignition temperature."
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "The maximum length of a flame path for Group IIA gas is:",
       "options": [
-        "5 mm",
-        "12.5 mm (for cylindrical joint)",
+        "50 mm",
         "25 mm",
-        "50 mm"
+        "12.5 mm (for cylindrical joint)",
+        "5 mm"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For Group IIA: minimum flame path length 12.5 mm."
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "Which type of fire extinguisher is NOT suitable for electrical fires?",
       "options": [
-        "CO₂",
-        "DCP",
         "Water jet type",
+        "DCP",
+        "CO₂",
         "All are suitable"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Water jet extinguishers are conductive and pose electrocution risk."
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "Emergency lighting in underground mine electrical installations should provide:",
       "options": [
-        "No lighting needed",
-        "Minimum 1 lux on escape routes for at least 3 hours",
         "100 lux for 1 hour",
-        "Fluorescent lights only"
+        "Fluorescent lights only",
+        "No lighting needed",
+        "Minimum 1 lux on escape routes for at least 3 hours"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Emergency lighting must illuminate escape routes at minimum 1 lux for 3 hours."
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "A rescue station in an underground mine should have:",
       "options": [
-        "Only first aid kits",
         "Breathing apparatus, gas detectors, rescue equipment, and trained personnel",
         "Fire extinguishers only",
+        "Optional in non-hazardous areas",
         "No special equipment"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Rescue station equipped with SBA/SCBA, gas detection, and trained teams."
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "The self-rescuer (SR) carried by every person in underground mine provides:",
       "options": [
-        "Oxygen from external source for ~60 minutes",
-        "Chemical oxygen generation for 30–60 minutes",
         "Compressed air only",
-        "No respiratory protection"
+        "No respiratory protection",
+        "Oxygen from external source for ~60 minutes",
+        "Chemical oxygen generation for 30–60 minutes"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Self-rescuers generate oxygen chemically providing 30–60 minutes of breathing air."
     },
     {
@@ -1008,10 +1008,10 @@
       "difficulty": "medium",
       "stem": "Electrical flash protection (arc flash) in mines can cause:",
       "options": [
-        "Only minor burn",
+        "Optional in non-hazardous areas",
         "Severe burns, blast injury, and potential fatality from arc energy",
-        "Only light flash",
-        "No injury"
+        "No injury",
+        "Distance protection"
       ],
       "answer": 1,
       "solution": "Arc flash produces intense heat, UV radiation, pressure wave, and toxic fumes."
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "Arc flash boundary is the distance at which:",
       "options": [
-        "No danger exists",
-        "Incident energy equals 1.2 cal/cm² (second-degree burn threshold)",
+        "Voltage drops to zero",
         "Visible arc ends",
-        "Voltage drops to zero"
+        "No danger exists",
+        "Incident energy equals 1.2 cal/cm² (second-degree burn threshold)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Arc flash boundary marks where incident energy equals second-degree burn threshold."
     },
     {
@@ -1044,10 +1044,10 @@
       "difficulty": "medium",
       "stem": "PPE for arc flash protection includes:",
       "options": [
-        "Regular cotton clothing",
+        "Earth fault protection",
         "Flame-resistant clothing, face shield, and insulated gloves",
-        "No PPE needed",
-        "Only safety shoes"
+        "Regular cotton clothing",
+        "No PPE needed"
       ],
       "answer": 1,
       "solution": "Arc-rated clothing, face shield, insulated gloves, and leather boots required."
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "Electrical safety audit in mines should be conducted:",
       "options": [
+        "Improve ventilation efficiency",
         "Never",
-        "At least once a year by competent authority",
-        "Only after accidents",
-        "Every 5 years"
+        "Every 5 years",
+        "At least once a year by competent authority"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Annual electrical safety audits by authorized inspectors ensure compliance."
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "Electrical safety signs in mines should comply with:",
       "options": [
-        "IS standards for color coding and symbols",
         "Any available signs",
-        "No standards required",
-        "Only red signs"
+        "IS standards for color coding and symbols",
+        "Enhance surveying accuracy",
+        "No standards required"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "IS 1653 specifies color coding and symbols for safety signs in mining installations."
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "The earthing continuity test in mines involves:",
       "options": [
-        "Visual inspection only",
-        "Measuring resistance between equipment frame and main earth electrode",
         "Measuring voltage",
-        "Testing insulation"
+        "Visual inspection only",
+        "Testing insulation",
+        "Measuring resistance between equipment frame and main earth electrode"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Continuity test ensures equipment frame is solidly connected to earth electrode with low resistance."
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "An electrical safety tag in mines is color-coded to indicate:",
       "options": [
-        "Equipment age",
-        "Danger level and status (red for danger, green for safe)",
         "Operator name",
-        "Voltage level"
+        "Equipment age",
+        "Voltage level",
+        "Danger level and status (red for danger, green for safe)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Color-coded tags indicate status: red=danger/do not operate, green=safe/cleared for work."
     },
     {
@@ -1134,10 +1134,10 @@
       "difficulty": "medium",
       "stem": "The main electrical system of a continuous miner includes:",
       "options": [
-        "Only cutting motor",
+        "Chemical resistance of components",
         "Cutting, gathering, tramming, and conveyor motors with hydraulic system",
         "Single motor for all functions",
-        "Only lighting system"
+        "Acoustic properties of surfaces"
       ],
       "answer": 1,
       "solution": "Continuous miner has multiple motors: cutting, gathering, tramming, conveyor, and hydraulic pump."
@@ -1152,10 +1152,10 @@
       "difficulty": "medium",
       "stem": "The cutting motor of a continuous miner typically operates at:",
       "options": [
-        "110 V DC",
+        "24 V DC",
         "415 V AC or 550 V DC",
         "11 kV AC",
-        "24 V DC"
+        "110 V DC"
       ],
       "answer": 1,
       "solution": "Cutting motors operate at 415V AC or 550V DC depending on design."
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "A continuous miner cutter head is driven by:",
       "options": [
-        "Hydraulic motor only",
-        "Electric motor (AC or DC) through gear reduction",
+        "Manual power",
         "Pneumatic motor",
-        "Manual power"
+        "Hydraulic motor only",
+        "Electric motor (AC or DC) through gear reduction"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Electric motor drives cutting drum through gear reducer."
     },
     {
@@ -1189,11 +1189,11 @@
       "stem": "The electrical supply to a continuous miner in underground coal mine is typically through:",
       "options": [
         "Overhead lines",
-        "Trailing cable from a continuous miner transformer/starter",
         "Battery only",
-        "Trolley wire"
+        "Trolley wire",
+        "Trailing cable from a continuous miner transformer/starter"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Power supplied through multi-core trailing cable from transformer and starter."
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "The trailing cable for a continuous miner has how many conductors?",
       "options": [
-        "2 conductors",
         "3 conductors",
-        "5–6 conductors (3 phase + earth + pilot + control)",
-        "12 conductors"
+        "2 conductors",
+        "12 conductors",
+        "5–6 conductors (3 phase + earth + pilot + control)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Typical trailing cable: 3 power + 1 earth + 1 pilot + control pairs."
     },
     {
@@ -1225,11 +1225,11 @@
       "stem": "The pilot conductor in a mining trailing cable is used for:",
       "options": [
         "Carrying load current",
-        "Monitoring earth continuity and providing interlock",
+        "Communication",
         "Lighting only",
-        "Communication"
+        "Monitoring earth continuity and providing interlock"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Pilot wire monitors earth continuity. If broken, starter trips."
     },
     {
@@ -1242,9 +1242,9 @@
       "difficulty": "medium",
       "stem": "A longwall shearer electrical system includes:",
       "options": [
-        "Only cutting motors",
+        "Applicable in limited scenarios",
         "Haulage motors, cutting motors, and ranging arm motors with shearer controller",
-        "Only haulage motor",
+        "Mechanical strength of materials",
         "Single motor"
       ],
       "answer": 1,
@@ -1262,8 +1262,8 @@
       "options": [
         "Hydraulic only",
         "Electric motor with variable frequency drive (VFD)",
-        "Pneumatic motor",
-        "Manual chain"
+        "Manual chain",
+        "Pneumatic motor"
       ],
       "answer": 1,
       "solution": "Modern shearers use VFD-controlled haulage motors."
@@ -1279,11 +1279,11 @@
       "stem": "The power rating of a longwall shearer cutting motor is typically:",
       "options": [
         "50 kW",
-        "200–500 kW",
         "1000 kW",
+        "200–500 kW",
         "5 kW"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Shearer cutting motors are typically 200–500 kW each."
     },
     {
@@ -1297,11 +1297,11 @@
       "stem": "SDL/LHD loaders in mines use which type of motor?",
       "options": [
         "Induction motor with DOL starter",
-        "DC motor with SCR control or AC VFD",
+        "Stepper motor",
         "Universal motor",
-        "Stepper motor"
+        "DC motor with SCR control or AC VFD"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "SDL/LHD use DC motors with SCR control or AC VFD in newer models."
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "The motor rating for an SDL (Side Dump Loader) is typically:",
       "options": [
-        "5 kW",
-        "30–100 kW",
+        "1000 kW",
         "500 kW",
-        "1000 kW"
+        "30–100 kW",
+        "5 kW"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SDL motors range from 30–100 kW."
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "An LHD (Load-Haul-Dump) machine is powered by:",
       "options": [
-        "Diesel engine only",
         "Electric motor through trailing cable or battery",
         "Pneumatic motor",
+        "Diesel engine only",
         "Steam engine"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Electric LHDs use trailing cable. Battery LHDs use rechargeable packs."
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "Shot-firing circuits in mines use:",
       "options": [
-        "Main power supply directly",
-        "Dedicated shot-firing panel with safety interlocks",
         "Any available voltage",
-        "Direct battery connection"
+        "Main power supply directly",
+        "Direct battery connection",
+        "Dedicated shot-firing panel with safety interlocks"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Shot-firing panels provide controlled, safe firing with safety interlocks."
     },
     {
@@ -1370,10 +1370,10 @@
       "options": [
         "440 V",
         "250 V",
-        "110 V",
-        "24 V DC"
+        "24 V DC",
+        "110 V"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Shot-firing circuits typically use ≤110V DC."
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "The blasting circuit in mines uses:",
       "options": [
-        "Series connection of detonators",
-        "Parallel connection of detonators",
+        "Any connection method",
         "Series-parallel combination only",
-        "Any connection method"
+        "Series connection of detonators",
+        "Parallel connection of detonators"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Series connection ensures uniform current through all detonators."
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "A galvanometer in shot-firing is used to:",
       "options": [
-        "Measure current during firing",
         "Test continuity of the blasting circuit before firing",
         "Measure voltage",
-        "Measure resistance"
+        "Measure resistance",
+        "Measure current during firing"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Exploder galvanometer tests circuit continuity using safe low current."
     },
     {
@@ -1422,10 +1422,10 @@
       "difficulty": "medium",
       "stem": "Cable management in mines requires cables to be:",
       "options": [
-        "Laid on floor randomly",
-        "Supported on insulators/hooks, away from water and traffic",
         "Buried underground",
-        "Hanging loosely"
+        "Supported on insulators/hooks, away from water and traffic",
+        "Hanging loosely",
+        "Laid on floor randomly"
       ],
       "answer": 1,
       "solution": "Cables must be properly supported and protected from damage."
@@ -1440,10 +1440,10 @@
       "difficulty": "medium",
       "stem": "The maximum permissible current density for cables in mines depends on:",
       "options": [
-        "Cable length only",
+        "Number of cores only",
         "Insulation type, ambient temperature, and installation method",
         "Cable color",
-        "Number of cores only"
+        "Cable length only"
       ],
       "answer": 1,
       "solution": "Current rating depends on insulation temperature limit, ambient, and grouping."
@@ -1458,10 +1458,10 @@
       "difficulty": "medium",
       "stem": "Underground mine lighting systems typically use:",
       "options": [
-        "Incandescent bulbs only",
+        "Halogen lamps only",
         "LED or flameproof fluorescent luminaires",
         "Candle light",
-        "Halogen lamps only"
+        "Incandescent bulbs only"
       ],
       "answer": 1,
       "solution": "Modern mine lighting uses LED or flameproof fluorescent luminaires."
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Statement: Some books are novels. All novels are interesting. Conclusion: Some books are interesting.",
       "options": [
-        "Definitely true",
-        "Probably true",
         "Probably false",
-        "Can't say"
+        "Probably true",
+        "Can't say",
+        "Definitely true"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Some books are novels, all novels are interesting, so some books are interesting"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "Number series: 5, 11, 17, 23, 29, ?:",
       "options": [
-        "35",
         "31",
+        "37",
         "33",
-        "37"
+        "35"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Each +6: 29+6=35"
     },
     {
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Statement: No fish is a bird. All birds can fly. Conclusion: No fish can fly.",
       "options": [
-        "Doesn't follow",
-        "Definitely true",
         "Probably true",
+        "Definitely true",
+        "Doesn't follow",
         "Can't say"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Not all birds can fly (penguins, ostriches), so conclusion doesn't follow from premise"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "If SUN is coded as RUM, then MOON is coded as:",
       "options": [
-        "LNNM",
         "LNNK",
         "LMMN",
-        "MMNK"
+        "MMNK",
+        "LNNM"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Each letter -1: S-1=R, U-1=T, N-1=M. M-1=L, O-1=N, O-1=N, N-1=M = LNNM"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "Odd one out: India, China, Japan, Europe",
       "options": [
-        "Europe",
-        "India",
         "China",
-        "Japan"
+        "Japan",
+        "Europe",
+        "India"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Europe is a continent; others are countries"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Clock: Angle between hands at 9:15:",
       "options": [
-        "157.5 degrees",
+        "45 degrees",
         "0 degrees",
-        "90 degrees",
-        "45 degrees"
+        "157.5 degrees",
+        "90 degrees"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "At 9:15: minute at 90°, hour at 277.5°, diff=157.5°"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Odd one out: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto",
       "options": [
-        "Pluto",
-        "Mercury",
+        "Mars",
         "Venus",
-        "Mars"
+        "Pluto",
+        "Mercury"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Pluto is dwarf planet; others are full planets"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Odd one out: Lion, Tiger, Leopard, Cheetah, Fox",
       "options": [
-        "Fox",
-        "Lion",
+        "Leopard",
         "Tiger",
-        "Leopard"
+        "Lion",
+        "Fox"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Fox is smaller and from different family; others are big cats"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Statement: All flowers bloom. Some blooming things are beautiful. Conclusion: Some flowers are beautiful.",
       "options": [
+        "Can't say",
         "Doesn't follow",
         "Definitely true",
-        "Probably true",
-        "Can't say"
+        "Probably true"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "No definite connection between flowers and beautiful things"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Water is related to ice in the same way as milk is related to:",
       "options": [
-        "Curd",
         "Cream",
-        "Butter",
-        "Yogurt"
+        "Yogurt",
+        "Curd",
+        "Butter"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Water freezes to ice; milk curdles to curd"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Find the odd one: 125, 64, 27, 8, 1",
       "options": [
+        "Applicable in limited scenarios",
         "All are perfect cubes",
         "Some are not",
-        "Only 1 is odd",
         "None match"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "All are perfect cubes: 5³,4³,3³,2³,1³"
     },
     {
@@ -1693,9 +1693,9 @@
       "stem": "CIL stands for:",
       "options": [
         "Coal India Limited",
+        "Commercial India Limited",
         "Central India Limited",
-        "Coal Institute Limited",
-        "Commercial India Limited"
+        "Coal Institute Limited"
       ],
       "answer": 0,
       "solution": "CIL = Coal India Limited"
@@ -1711,9 +1711,9 @@
       "stem": "WCL stands for:",
       "options": [
         "Western Coalfields Limited",
+        "Water Conservation Limited",
         "West Coast Limited",
-        "World Coal Limited",
-        "Water Conservation Limited"
+        "World Coal Limited"
       ],
       "answer": 0,
       "solution": "WCL = Western Coalfields Limited"
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "NCL stands for:",
       "options": [
-        "Northern Coalfields Limited",
-        "National Coal Limited",
         "New Coal Limited",
-        "Natural Coal Limited"
+        "National Coal Limited",
+        "Natural Coal Limited",
+        "Northern Coalfields Limited"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "NCL = Northern Coalfields Limited"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "CIL is a:",
       "options": [
-        "Miniratna Maharatna company",
-        "Private company",
         "Foreign company",
-        "State government company only"
+        "State government company only",
+        "Private company",
+        "Miniratna Maharatna company"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CIL: Miniratna (now Maharatna) PSU under Coal Ministry"
     },
     {
@@ -1765,8 +1765,8 @@
       "stem": "Headquarters of CIL is at:",
       "options": [
         "Kolkata",
-        "New Delhi",
         "Mumbai",
+        "New Delhi",
         "Chennai"
       ],
       "answer": 0,
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "India ranks __ in global coal production:",
       "options": [
-        "2nd",
-        "1st",
+        "5th",
         "3rd",
-        "5th"
+        "1st",
+        "2nd"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "India: 2nd largest coal producer (after China)"
     },
     {
@@ -1818,13 +1818,85 @@
       "difficulty": "medium",
       "stem": "Non-coking coal is primarily used in:",
       "options": [
-        "Thermal power generation",
+        "Chemical industry only",
         "Steel making",
-        "Aluminium smelting",
-        "Chemical industry only"
+        "Thermal power generation",
+        "Aluminium smelting"
+      ],
+      "answer": 2,
+      "solution": "Non-coking/thermal coal: power plants"
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In what ratio must water be added to milk costing ₹30 per litre to get a mixture worth ₹20 per litre?",
+      "options": [
+        "1:2",
+        "1:3",
+        "2:3",
+        "3:2"
       ],
       "answer": 0,
-      "solution": "Non-coking/thermal coal: power plants"
+      "solution": "Using allegation: (30-20):(20-0) = 10:20 = 1:2"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A train 150 m long passes a platform 100 m long in 15 seconds. What is the speed of the train?",
+      "options": [
+        "45 km/h",
+        "50 km/h",
+        "60 km/h",
+        "55 km/h"
+      ],
+      "answer": 2,
+      "solution": "Total distance = 250 m. Speed = 250/15 = 16.67 m/s = 60 km/h"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A boat goes 20 km upstream in 5 hours and 20 km downstream in 2 hours. What is the speed of the current?",
+      "options": [
+        "2 km/h",
+        "3 km/h",
+        "4 km/h",
+        "5 km/h"
+      ],
+      "answer": 1,
+      "solution": "Upstream = 4 km/h, Downstream = 10 km/h. Speed of current = (10-4)/2 = 3 km/h"
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A train 200 m long crosses a pole in 20 seconds. What is its speed in km/h?",
+      "options": [
+        "36 km/h",
+        "40 km/h",
+        "30 km/h",
+        "45 km/h"
+      ],
+      "answer": 0,
+      "solution": "Speed = 200/20 = 10 m/s = 10 × 18/5 = 36 km/h"
     }
   ]
 }

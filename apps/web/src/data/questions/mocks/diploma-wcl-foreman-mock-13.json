@@ -37,11 +37,11 @@
       "stem": "The minimum illumination level for main underground roadways in mines is:",
       "options": [
         "1 lux",
+        "50 lux",
         "5 lux",
-        "10 lux",
-        "50 lux"
+        "10 lux"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Main roadways require minimum 5 lux. Working faces ≥10 lux."
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "A flameproof luminaire in a gassy mine must have:",
       "options": [
-        "Any standard fitting",
-        "Ex d or Ex e certification with temperature classification",
         "Open lamp fitting",
-        "No special requirement"
+        "Any standard fitting",
+        "No special requirement",
+        "Ex d or Ex e certification with temperature classification"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "All luminaires in gassy mines must be certified flameproof or increased safety."
     },
     {
@@ -72,10 +72,10 @@
       "difficulty": "medium",
       "stem": "A mine sub-station transformer converts:",
       "options": [
-        "LT to HT voltage",
+        "DC to AC",
         "HT (11 kV or 33 kV) to LT (415 V or 660 V or 1100 V)",
-        "AC to DC only",
-        "DC to AC"
+        "LT to HT voltage",
+        "AC to DC only"
       ],
       "answer": 1,
       "solution": "Mine substations step down 11/33 kV to utilization voltages."
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "The typical secondary voltage of a mine distribution transformer for continuous miners is:",
       "options": [
-        "230 V",
-        "415 V or 660 V or 1100 V",
+        "110 V DC",
         "11 kV",
-        "110 V DC"
+        "415 V or 660 V or 1100 V",
+        "230 V"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Underground mining equipment commonly operates at 660V or 1100V."
     },
     {
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "A transformer in underground mine should be of:",
       "options": [
-        "Oil-immersed type only",
-        "Dry-type (cast resin) or SF₆ type for fire safety",
+        "Oil-immersed with conservator only",
         "Any type is acceptable",
-        "Oil-immersed with conservator only"
+        "Oil-immersed type only",
+        "Dry-type (cast resin) or SF₆ type for fire safety"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Underground mines prefer dry-type transformers to eliminate oil hazard."
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "The cooling class of a mine transformer is typically:",
       "options": [
-        "ONAN (Oil Natural Air Natural)",
         "AN (Air Natural) or AF (Air Forced) for dry type",
         "Water cooled only",
+        "ONAN (Oil Natural Air Natural)",
         "Oil forced"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Dry-type mine transformers use air natural or air forced cooling."
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "A TDR (Time Domain Reflectometer) for cable fault location works by:",
       "options": [
-        "Sending a voltage pulse and measuring reflection from fault",
-        "Sending current and measuring voltage",
         "Visual inspection",
-        "Thermal imaging"
+        "Thermal imaging",
+        "Sending current and measuring voltage",
+        "Sending a voltage pulse and measuring reflection from fault"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "TDR sends pulse and measures reflection from impedance discontinuity (fault)."
     },
     {
@@ -180,9 +180,9 @@
       "difficulty": "medium",
       "stem": "The 'thumper' method for cable fault location involves:",
       "options": [
-        "Hitting the cable",
-        "Sending high-voltage DC pulses and detecting the fault discharge sound",
         "Using ultrasound",
+        "Sending high-voltage DC pulses and detecting the fault discharge sound",
+        "Hitting the cable",
         "Manual digging"
       ],
       "answer": 1,
@@ -198,10 +198,10 @@
       "difficulty": "medium",
       "stem": "Pump station electrical in mines typically includes:",
       "options": [
-        "Only pump motor",
+        "Applicable in limited scenarios",
         "Pump motor, starter, protection relays, and local control panel",
-        "Only valve control",
-        "Only drainage pipe"
+        "Thermal insulation properties",
+        "Works at rated voltage only"
       ],
       "answer": 1,
       "solution": "Pump stations include motor, starter, protection, and auto control."
@@ -217,11 +217,11 @@
       "stem": "Belt conveyor drive in mines uses:",
       "options": [
         "Single-speed motor only",
-        "VFD-controlled motor for smooth start and variable speed",
         "DC motor with rheostat",
-        "Steam engine"
+        "Steam engine",
+        "VFD-controlled motor for smooth start and variable speed"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "VFD provides smooth acceleration and speed control."
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "The motor rating for a main belt conveyor in underground mine is typically:",
       "options": [
+        "1 kW",
         "10 kW",
         "50–500 kW",
-        "5000 kW",
-        "1 kW"
+        "5000 kW"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Main belt conveyor motors range from 50–500 kW."
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "A belt conveyor slip detection system uses:",
       "options": [
-        "Temperature sensor only",
-        "Speed sensors on drive and tail pulleys to detect slip",
+        "Gas detector",
         "Pressure sensor",
-        "Gas detector"
+        "Temperature sensor only",
+        "Speed sensors on drive and tail pulleys to detect slip"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Speed sensors compare drive pulley and belt speed to detect slip."
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "Ventilation fan motors in mines are typically:",
       "options": [
-        "Small fractional HP motors",
-        "High power (50–500 kW) squirrel cage induction motors",
         "DC motors only",
-        "Single-phase motors"
+        "Small fractional HP motors",
+        "Single-phase motors",
+        "High power (50–500 kW) squirrel cage induction motors"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Main ventilation fans require large 3-phase squirrel cage motors."
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "The starter for a ventilation fan motor in a gassy mine should be:",
       "options": [
-        "Any standard starter",
         "Flameproof or surface-mounted in safe area with remote control",
         "Open type starter",
-        "Manual starter only"
+        "Manual starter only",
+        "Any standard starter"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ventilation fan starters must be flameproof or located in safe area."
     },
     {
@@ -306,10 +306,10 @@
       "difficulty": "medium",
       "stem": "Shaft winder (hoist) electrical system uses:",
       "options": [
-        "Single-phase motor",
+        "Stepper motor",
         "Wound rotor induction motor or DC motor with Ward-Leonard control",
-        "Universal motor",
-        "Stepper motor"
+        "Single-phase motor",
+        "Universal motor"
       ],
       "answer": 1,
       "solution": "Shaft winders use wound rotor IM or DC motors with Ward-Leonard."
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "The braking system for a shaft winder includes:",
       "options": [
-        "Only mechanical brake",
         "Electromagnetic (fail-safe) spring-applied brake and dynamic braking",
-        "Hydraulic only",
-        "No brake needed"
+        "No brake needed",
+        "Applicable in limited scenarios",
+        "Hydraulic only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Safety brakes are spring-applied and electrically/hydraulically released."
     },
     {
@@ -343,11 +343,11 @@
       "stem": "Over-speed protection for a shaft winder is achieved by:",
       "options": [
         "Visual observation",
+        "Not required",
         "Centrifugal overspeed switch that trips the drive",
-        "Manual monitoring only",
-        "Not required"
+        "Manual monitoring only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Overspeed switch (115% rated speed) automatically trips the winder."
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "The interlock system for a shaft winder ensures:",
       "options": [
+        "Voltage regulation",
         "Automatic speed control",
         "Doors cannot open unless cage is at landing, and winder cannot start with doors open",
-        "Power factor correction",
-        "Voltage regulation"
+        "Power factor correction"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Interlocks prevent winder start with doors open and doors opening when cage not at landing."
     },
     {
@@ -379,11 +379,11 @@
       "stem": "A trolley wire system in mines is used for:",
       "options": [
         "Lighting",
+        "Pumping",
         "Supplying power to trolley locomotives for haulage",
-        "Communication",
-        "Pumping"
+        "Communication"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Trolley wire provides DC power to mine locomotives."
     },
     {
@@ -397,11 +397,11 @@
       "stem": "The voltage of trolley wire system in mines is typically:",
       "options": [
         "24 V DC",
+        "415 V AC",
         "120–250 V DC",
-        "11 kV AC",
-        "415 V AC"
+        "11 kV AC"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Trolley wire systems typically operate at 120–250V DC."
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "The pantograph on a mine locomotive collects current from:",
       "options": [
-        "Battery",
-        "Overhead trolley wire",
         "Third rail",
-        "Diesel generator"
+        "Diesel generator",
+        "Battery",
+        "Overhead trolley wire"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Pantograph maintains sliding contact with overhead trolley wire."
     },
     {
@@ -434,8 +434,8 @@
       "options": [
         "Any underground location",
         "Well-ventilated area with gas monitoring, away from face",
-        "At the working face",
-        "In sealed chamber"
+        "In sealed chamber",
+        "At the working face"
       ],
       "answer": 1,
       "solution": "Charging areas need good ventilation, gas monitoring, and fire protection."
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "The battery type used in mine LHDs is typically:",
       "options": [
+        "Applicable in limited scenarios",
         "Lead-acid battery",
-        "Lithium-ion battery (increasingly)",
         "Nickel-cadmium",
-        "All of the above depending on design"
+        "Lithium-ion battery (increasingly)"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "LHD batteries include lead-acid, NiCd, and Li-ion."
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "Hydrogen gas released during battery charging is explosive when mixed with air at concentration of:",
       "options": [
-        "0.1%",
-        "4–75% (by volume)",
         "10%",
-        "50%"
+        "0.1%",
+        "50%",
+        "4–75% (by volume)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Hydrogen is explosive in 4–75% concentration. Ventilation must keep H₂ below 1%."
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "A battery charger for mine LHD should have:",
       "options": [
-        "Manual control only",
-        "Automatic charging profile with temperature and voltage monitoring",
         "No protection",
-        "DC output only"
+        "DC output only",
+        "Automatic charging profile with temperature and voltage monitoring",
+        "Manual control only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Modern chargers use CC-CV profile with temperature compensation."
     },
     {
@@ -505,11 +505,11 @@
       "stem": "The electrical system of a shot-firing exploder includes:",
       "options": [
         "Direct connection to mains",
+        "No electrical system",
         "Capacitor-based energy storage with charging and discharge circuit",
-        "Battery with switch",
-        "No electrical system"
+        "Battery with switch"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Exploder charges capacitor from battery, then discharges through blasting circuit."
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "The energy stored in a shot-firing exploder capacitor is calculated by:",
       "options": [
-        "E = VI",
         "E = ½CV²",
-        "E = I²R",
-        "E = V²/R"
+        "E = V²/R",
+        "E = VI",
+        "E = I²R"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Energy stored: E = ½CV² where C is capacitance and V is charging voltage."
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "Continuous miner electrical system monitoring includes:",
       "options": [
-        "Only motor current",
-        "Motor temperature, insulation resistance, earth leakage, and gas detection",
-        "Only voltage monitoring",
-        "Only speed monitoring"
+        "Applicable in limited scenarios",
+        "Works at rated voltage only",
+        "Chemical resistance of components",
+        "Motor temperature, insulation resistance, earth leakage, and gas detection"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Comprehensive monitoring: temp, IR, ELR, pilot circuit, and gas detector."
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "The integral gas detector on a continuous miner is designed to:",
       "options": [
+        "Measure temperature only",
         "Detect CO only",
         "Detect CH₄ and automatically trip power if above safe level",
-        "Detect O₂ only",
-        "Measure temperature only"
+        "Detect O₂ only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Built-in CH₄ detector trips power if methane exceeds 1%."
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "A shearer in longwall mining is powered through:",
       "options": [
-        "Trailing cable only",
         "Armored festoon cable system on maingate side",
         "Trolley wire",
-        "Battery pack"
+        "Battery pack",
+        "Trailing cable only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Shearer power supplied via festoon cable system along maingate."
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "The festoon cable system for a shearer consists of:",
       "options": [
-        "Single cable",
         "Multi-core cable suspended from trolley wire with sliding contacts",
+        "No cable needed",
         "Underground cable",
-        "No cable needed"
+        "Single cable"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Festoon system: flat multi-core cable with C-shaped current collector shoes."
     },
     {
@@ -631,11 +631,11 @@
       "stem": "Soft starter for mining equipment provides:",
       "options": [
         "Full voltage start only",
-        "Gradual voltage ramp-up for reduced starting current and torque",
         "No starting assistance",
+        "Gradual voltage ramp-up for reduced starting current and torque",
         "DC injection braking only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Soft starter gradually increases voltage, reducing inrush current."
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "VFD (Variable Frequency Drive) in mining applications provides:",
       "options": [
-        "Fixed speed only",
         "Variable speed, soft start, and energy savings",
-        "No motor control benefit",
-        "Only voltage control"
+        "Fixed speed only",
+        "Quarrying of granite",
+        "No motor control benefit"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "VFD varies both frequency and voltage for precise speed control."
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "A VFD for a mine ventilation fan provides the benefit of:",
       "options": [
-        "Increased noise",
         "Energy savings through speed reduction during low-demand periods",
         "Higher maintenance",
+        "Increased noise",
         "Reduced motor life"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Fan power ∝ speed³. Small speed reduction gives significant energy savings."
     },
     {
@@ -684,10 +684,10 @@
       "difficulty": "medium",
       "stem": "The protection relays on a mine transformer include:",
       "options": [
-        "No protection needed",
+        "Core loss calculation",
         "Overcurrent, earth fault, Buchholz, and winding temperature relays",
-        "Only fuse protection",
-        "Only overload protection"
+        "No protection needed",
+        "Phase shift measurement"
       ],
       "answer": 1,
       "solution": "Comprehensive protection: overcurrent, earth fault, Buchholz, temperature."
@@ -702,9 +702,9 @@
       "difficulty": "medium",
       "stem": "The function of a Buchholz relay on a mine transformer is to:",
       "options": [
-        "Measure oil level",
-        "Detect internal faults by sensing gas from oil decomposition",
         "Measure temperature",
+        "Detect internal faults by sensing gas from oil decomposition",
+        "Measure oil level",
         "Control voltage"
       ],
       "answer": 1,
@@ -720,10 +720,10 @@
       "difficulty": "medium",
       "stem": "A pressure relief device on a mine transformer opens to:",
       "options": [
-        "Release oil",
+        "Seal the tank",
         "Relieve internal pressure during fault preventing tank rupture",
-        "Increase pressure",
-        "Seal the tank"
+        "Release oil",
+        "Increase pressure"
       ],
       "answer": 1,
       "solution": "PRD opens at set pressure to prevent catastrophic tank rupture."
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "The winding temperature indicator (WTI) on a transformer measures temperature by:",
       "options": [
-        "Direct thermocouple on winding",
         "Simulated winding temperature using oil temperature + hot-spot model",
         "Ambient temperature only",
-        "Infrared camera"
+        "Infrared camera",
+        "Direct thermocouple on winding"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "WTI combines oil temperature with modeled hot-spot rise."
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "Remote monitoring of mine electrical systems allows:",
       "options": [
+        "Manual reading only",
         "No benefit",
         "Real-time monitoring of equipment status, alarms, and energy from surface control room",
-        "Only historical data storage",
-        "Manual reading only"
+        "Chemical resistance of components"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SCADA/PLC systems enable real-time monitoring from surface."
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "A mine power monitoring system typically monitors:",
       "options": [
-        "Only total power",
+        "Applicable in limited scenarios",
+        "Works at rated voltage only",
         "Voltage, current, power, PF, energy, temperature, and fault status per equipment",
-        "Only kWh",
-        "Nothing"
+        "Specific to star connection"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Comprehensive monitoring: V, I, kW, kVA, kVAr, PF, kWh, temperatures, faults."
     },
     {
@@ -793,11 +793,11 @@
       "stem": "Energy monitoring in mines helps to:",
       "options": [
         "Increase consumption",
-        "Identify waste, optimize usage, and reduce electricity cost",
         "No benefit",
+        "Identify waste, optimize usage, and reduce electricity cost",
         "Increase tariff"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Energy monitoring identifies inefficient equipment and peak demand."
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "The main advantage of using 1100V supply (instead of 415V) for mining equipment is:",
       "options": [
-        "Lower insulation requirement",
         "Lower current for same power, enabling smaller cables and less voltage drop",
         "Safer voltage",
+        "Lower insulation requirement",
         "Higher speed"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Higher voltage → lower current → smaller cables and less losses."
     },
     {
@@ -829,11 +829,11 @@
       "stem": "Cable reel for mining equipment is used to:",
       "options": [
         "Store cable when not in use",
+        "Test cable insulation",
         "Automatically pay out and retract trailing cable during tramming",
-        "Measure cable length",
-        "Test cable insulation"
+        "Measure cable length"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Cable reel automatically winds/unwinds trailing cable as equipment moves."
     },
     {
@@ -846,9 +846,9 @@
       "difficulty": "medium",
       "stem": "A hydraulic pump motor on a continuous miner is typically:",
       "options": [
-        "Very small (1 kW)",
-        "50–150 kW squirrel cage induction motor",
         "1000 kW motor",
+        "50–150 kW squirrel cage induction motor",
+        "Very small (1 kW)",
         "DC motor only"
       ],
       "answer": 1,
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "The electrical control panel of a continuous miner includes:",
       "options": [
-        "Only on/off switch",
         "Contactors, overload relays, PLC/controller, gas detector interface, and displays",
-        "Manual switches only",
-        "No control panel needed"
+        "No control panel needed",
+        "Thermal insulation properties",
+        "Manual switches only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Control panel houses contactors, protections, PLC, and HMI."
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "The PLC (Programmable Logic Controller) in mining equipment controls:",
       "options": [
-        "Only lighting",
-        "Sequential operation of motors, safety interlocks, and monitoring functions",
-        "Nothing",
-        "Only temperature"
+        "Used in quarrying operations",
+        "Specific to metal mines only",
+        "Processing of limestone",
+        "Sequential operation of motors, safety interlocks, and monitoring functions"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "PLC manages start/stop sequences, interlocks, safety trips, and diagnostics."
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "Flash-proof barriers in mine electrical installations are used to:",
       "options": [
-        "Stop people",
-        "Contain arc flash energy and prevent propagation to adjacent equipment",
         "Improve aesthetics",
-        "Block ventilation"
+        "Block ventilation",
+        "Contain arc flash energy and prevent propagation to adjacent equipment",
+        "Stop people"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Arc flash barriers protect adjacent equipment and personnel."
     },
     {
@@ -921,7 +921,7 @@
         "Short-circuit protection only",
         "Overload, short-circuit, phase loss, and earth fault protection",
         "No protection",
-        "Only overload protection"
+        "Extraction of iron ore"
       ],
       "answer": 1,
       "solution": "MPCB combines overload, short-circuit, and phase-loss protection."
@@ -936,10 +936,10 @@
       "difficulty": "medium",
       "stem": "A phase sequence relay in mine power system protects against:",
       "options": [
-        "Overload",
+        "Earth fault",
         "Incorrect phase sequence which can cause reverse rotation of motors",
         "Overvoltage",
-        "Earth fault"
+        "Overload"
       ],
       "answer": 1,
       "solution": "Phase sequence relay detects wrong phase rotation."
@@ -955,11 +955,11 @@
       "stem": "Undervoltage protection in mine motor circuits prevents:",
       "options": [
         "Motor from starting",
+        "Overvoltage",
         "Motor from restarting automatically when voltage returns after a power failure",
-        "Overload",
-        "Overvoltage"
+        "Overload"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Undervoltage protection prevents automatic restart after power restoration."
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "Motor space heaters in mine installations are used to:",
       "options": [
+        "Generate power",
         "Heat the motor for better performance",
-        "Prevent moisture condensation in motor windings during idle periods",
         "Cool the motor",
-        "Generate power"
+        "Prevent moisture condensation in motor windings during idle periods"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Space heaters maintain winding temperature above dew point during shutdown."
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Insulation monitoring device (IMD) in mining IT system detects:",
       "options": [
-        "Overcurrent",
-        "First earth fault in unearthed (IT) system",
         "Overvoltage",
-        "Under frequency"
+        "Under frequency",
+        "Overcurrent",
+        "First earth fault in unearthed (IT) system"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "IMD continuously monitors insulation resistance and alarms on first earth fault."
     },
     {
@@ -1010,8 +1010,8 @@
       "options": [
         "It is cheaper",
         "First earth fault does not cause immediate tripping, allowing continued operation",
-        "It provides higher voltage",
-        "It is easier to maintain"
+        "It is easier to maintain",
+        "It provides higher voltage"
       ],
       "answer": 1,
       "solution": "IT system allows continued operation on first earth fault for enhanced availability."
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "The starting method for a continuous miner cutting motor is typically:",
       "options": [
-        "Direct On Line (DOL) only",
-        "Star-Delta or soft starter to reduce inrush current",
         "Manual starting only",
-        "Autotransformer only"
+        "Autotransformer only",
+        "Star-Delta or soft starter to reduce inrush current",
+        "Direct On Line (DOL) only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Star-Delta or soft starters reduce starting current for large cutting motors."
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "A mine substation step-down transformer protection includes:",
       "options": [
+        "Current transformation only",
         "No protection required",
-        "Overcurrent, earth fault, Buchholz, and winding temperature relays",
-        "Only fuses",
-        "Only earth leakage relay"
+        "Winding resistance testing",
+        "Overcurrent, earth fault, Buchholz, and winding temperature relays"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Comprehensive protection includes overcurrent, earth fault, Buchholz, and temperature relays."
     },
     {
@@ -1062,10 +1062,10 @@
       "difficulty": "medium",
       "stem": "The function of a brake resistor in a VFD-driven mining motor is to:",
       "options": [
-        "Provide starting torque",
+        "Reduce motor temperature",
         "Dissipate regenerative energy during braking to prevent DC bus overvoltage",
-        "Improve power factor",
-        "Reduce motor temperature"
+        "Provide starting torque",
+        "Improve power factor"
       ],
       "answer": 1,
       "solution": "Brake resistor dissipates energy from regenerative braking, protecting the DC bus capacitor."
@@ -1081,11 +1081,11 @@
       "stem": "The communication system in a modern longwall face includes:",
       "options": [
         "Telephone only",
-        "PLC-based communication with shearer, crusher, and belt interlock",
         "No communication needed",
+        "PLC-based communication with shearer, crusher, and belt interlock",
         "Radio only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "PLC communication network links shearer, crusher, belt, and face controls for coordinated operation."
     },
     {
@@ -1100,8 +1100,8 @@
       "options": [
         "Higher starting torque",
         "Reduced mechanical stress on pump and pipework during start",
-        "No benefit",
-        "Increased speed"
+        "Increased speed",
+        "No benefit"
       ],
       "answer": 1,
       "solution": "Soft starter reduces water hammer and mechanical shock in pumping systems."
@@ -1117,8 +1117,8 @@
       "stem": "Hydrogen cooling in alternators reduces:",
       "options": [
         "Windage loss and improves cooling",
-        "Only cost",
-        "Only weight",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
         "Frequency"
       ],
       "answer": 0,
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "Francis turbine is suitable for:",
       "options": [
-        "Medium head and medium flow",
         "High head low flow",
+        "Very high head only",
         "Low head high flow",
-        "Very high head only"
+        "Medium head and medium flow"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Francis: medium head 30-500m, most common type"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Kaplan turbine has:",
       "options": [
-        "Adjustable blades for varying flow",
         "Fixed blades only",
         "Pelton cups",
-        "No blades"
+        "No blades",
+        "Adjustable blades for varying flow"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Kaplan: adjustable runner blades for part-load efficiency"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Pelton wheel is used for:",
       "options": [
-        "High head low flow",
-        "Low head high flow",
+        "Sea water",
         "Medium head",
-        "Sea water"
+        "Low head high flow",
+        "High head low flow"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Pelton: impulse turbine, high head >300m"
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "Cooling tower in thermal power plant removes:",
       "options": [
-        "Waste heat from condenser cooling water",
-        "Coal ash",
         "Flue gas",
-        "Steam"
+        "Coal ash",
+        "Steam",
+        "Waste heat from condenser cooling water"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Cooling tower: cools warm cooling water by evaporation"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "ESP (Electrostatic Precipitator) removes:",
       "options": [
-        "Particulate matter from flue gas",
+        "CO2",
         "SOx only",
         "NOx only",
-        "CO2"
+        "Particulate matter from flue gas"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ESP: removes 99%+ fly ash from exhaust gas"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "Boiler drum level control maintains:",
       "options": [
-        "Water level within safe limits",
-        "Steam pressure only",
         "Temperature only",
-        "Fuel flow"
+        "Fuel flow",
+        "Steam pressure only",
+        "Water level within safe limits"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Drum level: critical safety parameter for steam generation"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "Economizer in a boiler preheats:",
       "options": [
-        "Feedwater using flue gas heat",
         "Air using steam",
+        "Feedwater using flue gas heat",
         "Fuel using exhaust",
         "Oil using electricity"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Economizer: recovers waste heat to preheat feedwater"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "Air preheater in thermal plant:",
       "options": [
-        "Preheats combustion air using flue gas",
         "Preheats fuel",
         "Cools the air",
-        "Filters air"
+        "Filters air",
+        "Preheats combustion air using flue gas"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "APH: improves combustion efficiency by preheating air"
     },
     {
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "Superheater in boiler:",
       "options": [
-        "Heats steam beyond saturation temperature",
-        "Cools steam",
         "Dries steam",
-        "Condenses steam"
+        "Condenses steam",
+        "Heats steam beyond saturation temperature",
+        "Cools steam"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Superheater: raises steam temperature for higher efficiency"
     },
     {
@@ -1298,8 +1298,8 @@
       "options": [
         "Steam after partial expansion in HP turbine",
         "Feedwater",
-        "Fuel",
-        "Condensate"
+        "Condensate",
+        "Fuel"
       ],
       "answer": 0,
       "solution": "Reheat: steam returned after HP stage, reheated, sent to IP/LP"
@@ -1315,8 +1315,8 @@
       "stem": "Condenser in steam power plant creates:",
       "options": [
         "Vacuum for turbine exhaust for maximum work extraction",
-        "Steam pressure",
         "Fuel flow",
+        "Steam pressure",
         "Cooling"
       ],
       "answer": 0,
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "Feedwater heater is used to:",
       "options": [
-        "Preheat water before entering boiler using extraction steam",
-        "Cool the boiler",
         "Generate steam",
-        "Store water"
+        "Store water",
+        "Preheat water before entering boiler using extraction steam",
+        "Cool the boiler"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "FWH: improves efficiency by preheating feedwater with bled steam"
     },
     {
@@ -1351,9 +1351,9 @@
       "stem": "Deaerator in thermal plant removes:",
       "options": [
         "Dissolved gases (oxygen, CO2) from feedwater",
-        "Only CO2",
-        "Only oxygen",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Required only for specific cases",
+        "Works under ideal conditions only"
       ],
       "answer": 0,
       "solution": "Deaerator: removes O2 and CO2 to prevent corrosion"
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "The Rankine cycle efficiency is improved by:",
       "options": [
-        "Higher steam temperature and pressure",
         "Lower temperature",
+        "Higher steam temperature and pressure",
         "Lower pressure",
         "More condenser cooling"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Higher T,P -> higher Carnot-like efficiency"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "Solar PV cell efficiency is typically:",
       "options": [
-        "15-22%",
+        "5-10%",
         "50-60%",
-        "80-90%",
-        "5-10%"
+        "15-22%",
+        "80-90%"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Commercial PV: 15-22% (mono-Si best)"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Wind turbine power is proportional to:",
       "options": [
-        "Cube of wind speed",
         "Square of wind speed",
         "Wind speed",
-        "Wind speed power 4"
+        "Wind speed power 4",
+        "Cube of wind speed"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "P ∝ v^3 (Betz limit 59.3%)"
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "Betz limit for wind turbines is:",
       "options": [
+        "75%",
         "59.3%",
-        "100%",
         "50%",
-        "75%"
+        "100%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Betz: max 16/27 ≈ 59.3% of kinetic energy extractable"
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Diesel generator set efficiency is typically:",
       "options": [
-        "30-45%",
         "60-70%",
         "80-90%",
+        "30-45%",
         "10-15%"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "DG set: 30-45% thermal efficiency"
     },
     {
@@ -1459,9 +1459,9 @@
       "stem": "PHWR nuclear reactor uses:",
       "options": [
         "Heavy water as moderator and coolant",
-        "Light water",
+        "Gas",
         "Graphite",
-        "Gas"
+        "Light water"
       ],
       "answer": 0,
       "solution": "PHWR: Pressurised Heavy Water Reactor (CANDU type)"
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Coal grade in India is determined by:",
       "options": [
-        "Gross Calorific Value (GCV)",
-        "Ash content only",
         "Moisture only",
-        "Sulphur content only"
+        "Sulphur content only",
+        "Ash content only",
+        "Gross Calorific Value (GCV)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Coal grading based on GCV (kcal/kg)"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "The largest coal producing subsidiary of CIL is:",
       "options": [
-        "CCL (Central Coalfields)",
         "ECL (Eastern Coalfields)",
         "SECL (South Eastern Coalfields)",
-        "MCL (Mahanadi Coalfields)"
+        "MCL (Mahanadi Coalfields)",
+        "CCL (Central Coalfields)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SECL is the largest coal producer under CIL"
     },
     {
@@ -1513,8 +1513,8 @@
       "stem": "Opencast mining accounts for approximately what percentage of India's coal production?",
       "options": [
         "90%",
-        "50%",
         "30%",
+        "50%",
         "10%"
       ],
       "answer": 0,
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "The Coal Mines (Nationalisation) Act was enacted in:",
       "options": [
-        "1973",
-        "1947",
+        "2015",
         "1991",
-        "2015"
+        "1947",
+        "1973"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Coal nationalisation: 1973"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "Singrauli region is known for:",
       "options": [
-        "Coal mining and power plants",
         "Oil refineries",
-        "Steel plants",
-        "Textile industry"
+        "Coal mining and power plants",
+        "Textile industry",
+        "Steel plants"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Singrauli: coal mines + thermal power stations"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Coal production target for India by 2026-27 is approximately:",
       "options": [
-        "1 billion tonnes",
-        "500 million tonnes",
         "200 million tonnes",
-        "50 million tonnes"
+        "50 million tonnes",
+        "500 million tonnes",
+        "1 billion tonnes"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Target: ~1 billion tonnes by 2025-26"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Mine Quartering is used for:",
       "options": [
+        "Calculating reserves",
         "Sampling coal to determine quality",
-        "Dividing mine into quarters",
         "Measuring depth",
-        "Calculating reserves"
+        "Dividing mine into quarters"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Quartering: coal sampling technique for quality analysis"
     },
     {
@@ -1603,9 +1603,9 @@
       "stem": "Overburden in opencast mining refers to:",
       "options": [
         "Soil and rock above coal seam",
+        "Underground rock",
         "Coal seam itself",
-        "Water table",
-        "Underground rock"
+        "Water table"
       ],
       "answer": 0,
       "solution": "Overburden: material above the coal deposit"
@@ -1621,9 +1621,9 @@
       "stem": "Strip ratio is:",
       "options": [
         "Volume of overburden to volume of coal",
+        "Height to width ratio",
         "Weight of coal to weight of overburden",
-        "Depth of mine to width",
-        "Height to width ratio"
+        "Depth of mine to width"
       ],
       "answer": 0,
       "solution": "Strip ratio = OB volume / Coal volume"
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Longwall mining method is used for:",
       "options": [
+        "Non-coal minerals only",
         "Thick coal seams underground",
         "Opencast mining only",
-        "Thin seams",
-        "Non-coal minerals only"
+        "Thin seams"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Longwall: high-production underground method for thick seams"
     },
     {
@@ -1658,8 +1658,8 @@
       "options": [
         "Extracting coal leaving pillars for support",
         "Full extraction",
-        "Open pit method",
-        "Dredging"
+        "Dredging",
+        "Open pit method"
       ],
       "answer": 0,
       "solution": "Bord and pillar: rooms (bords) excavated, pillars left"
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Coal washeries are used for:",
       "options": [
-        "Cleaning and grading coal",
         "Storing coal",
         "Transporting coal",
-        "Burning coal"
+        "Burning coal",
+        "Cleaning and grading coal"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Washery: removes impurities, improves coal quality"
     },
     {
@@ -1693,9 +1693,9 @@
       "stem": "The Coal Controller's Organisation is under which ministry?",
       "options": [
         "Ministry of Coal",
-        "Ministry of Power",
+        "Ministry of Finance",
         "Ministry of Mines",
-        "Ministry of Finance"
+        "Ministry of Power"
       ],
       "answer": 0,
       "solution": "CCO: under Ministry of Coal"
@@ -1711,9 +1711,9 @@
       "stem": "ECL stands for:",
       "options": [
         "Eastern Coalfields Limited",
-        "Eastern Cement Limited",
         "Energy Coal Limited",
-        "Electricity Coal Limited"
+        "Electricity Coal Limited",
+        "Eastern Cement Limited"
       ],
       "answer": 0,
       "solution": "ECL = Eastern Coalfields Limited"
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "SECL headquarter is at:",
       "options": [
-        "Raipur",
         "Kolkata",
+        "Raipur",
         "New Delhi",
         "Nagpur"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "SECL HQ: Bilaspur (Chhattisgarh)"
     },
     {
@@ -1747,9 +1747,9 @@
       "stem": "Coal India Limited was formed in:",
       "options": [
         "1975",
+        "2000",
         "1973",
-        "1991",
-        "2000"
+        "1991"
       ],
       "answer": 0,
       "solution": "CIL formed: 1975 after nationalisation"
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "The coal sector was opened for commercial mining in:",
       "options": [
-        "2020",
         "1991",
         "2010",
+        "2020",
         "2005"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Commercial mining auction: 2020"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "Jharia coalfield is in which state?",
       "options": [
+        "Madhya Pradesh",
         "Jharkhand",
         "West Bengal",
-        "Odisha",
-        "Madhya Pradesh"
+        "Odisha"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Jharia: Dhanbad, Jharkhand"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Raniganj coalfield is in:",
       "options": [
-        "West Bengal",
-        "Jharkhand",
         "Odisha",
-        "Madhya Pradesh"
+        "Jharkhand",
+        "Madhya Pradesh",
+        "West Bengal"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Raniganj: West Bengal"
     },
     {
@@ -1818,13 +1818,85 @@
       "difficulty": "medium",
       "stem": "Talcher coalfield is in:",
       "options": [
-        "Odisha",
-        "Jharkhand",
+        "West Bengal",
         "Madhya Pradesh",
-        "West Bengal"
+        "Odisha",
+        "Jharkhand"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Talcher: Odisha"
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Average",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average of first 10 even numbers is:",
+      "options": [
+        "9",
+        "12",
+        "11",
+        "10"
+      ],
+      "answer": 2,
+      "solution": "First 10 even numbers: 2,4,6,8,10,12,14,16,18,20. Sum = 110. Average = 11"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Average",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average of first 50 natural numbers is:",
+      "options": [
+        "24.5",
+        "25.5",
+        "25",
+        "26"
+      ],
+      "answer": 1,
+      "solution": "Sum = 50×51/2 = 1275. Average = 1275/50 = 25.5"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of present ages of A and B is 5:7. If B is 28 years old, what is A's age?",
+      "options": [
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "answer": 1,
+      "solution": "5/7 = A/28 → A = 20"
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "How many times does the 29th of a month occur in 400 years?",
+      "options": [
+        "4490",
+        "4500",
+        "4497",
+        "4400"
+      ],
+      "answer": 2,
+      "solution": "In 400 years: 97 leap years. So 29 Feb occurs 97 times. Total 29th of any month = 12×400 - 97 = 4497... Actually: 400 years have 4800 months. 97 of those are Feb in leap years. So 29th occurs 4800 - 97 = 4703... Let me recalculate. Every month has a 29th. In 400 years = 4800 months. But Feb in non-leap years only has 28 days. Non-leap Feb = 400 - 97 = 303. So 29th occurs 4800 - 303 = 4497 times."
     }
   ]
 }

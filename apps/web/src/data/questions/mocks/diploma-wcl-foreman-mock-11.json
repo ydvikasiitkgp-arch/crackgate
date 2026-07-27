@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "The driving torque in a single-phase energy meter is produced by:",
       "options": [
-        "Only shunt magnet",
         "Interaction of series and shunt magnet fluxes",
-        "Spring control",
-        "Gravity"
+        "Gravity",
+        "Power measurement only",
+        "Spring control"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Series magnet (proportional to I) and shunt magnet (proportional to V) interact to produce torque ∝ VI cosφ."
     },
     {
@@ -54,10 +54,10 @@
       "difficulty": "medium",
       "stem": "The braking torque in an energy meter is provided by:",
       "options": [
-        "Air friction",
+        "Fluid friction",
         "A permanent magnet eddy current disc brake",
         "Spring",
-        "Fluid friction"
+        "Air friction"
       ],
       "answer": 1,
       "solution": "A permanent magnet near the disc edge produces eddy current braking torque proportional to speed."
@@ -73,11 +73,11 @@
       "stem": "An energy meter disc rotates faster when:",
       "options": [
         "Power consumption is less",
+        "Frequency is less",
         "Power consumption is more",
-        "Voltage is less",
-        "Frequency is less"
+        "Voltage is less"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Higher power → more driving torque → faster disc rotation."
     },
     {
@@ -90,10 +90,10 @@
       "difficulty": "medium",
       "stem": "The correct connection of a single-phase wattmeter has:",
       "options": [
-        "Current coil in series and potential coil in series",
+        "Both coils in parallel",
         "Current coil in series and potential coil in parallel",
         "Both coils in series",
-        "Both coils in parallel"
+        "Current coil in series and potential coil in series"
       ],
       "answer": 1,
       "solution": "Current coil in series with load; potential coil in parallel with load."
@@ -108,12 +108,12 @@
       "difficulty": "medium",
       "stem": "The two-wattmeter method is used to measure power in:",
       "options": [
-        "Single-phase circuits",
-        "Three-phase three-wire circuits",
         "DC circuits only",
-        "Single-phase only"
+        "Single-phase only",
+        "Single-phase circuits",
+        "Three-phase three-wire circuits"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Two-wattmeter method measures total three-phase power in 3-wire systems."
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "In a balanced three-phase system with unity PF, the two wattmeters read:",
       "options": [
-        "Equal and opposite",
         "Equal and positive",
+        "Equal and opposite",
         "One reads zero",
         "Both negative"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "At unity PF, both wattmeters read equal positive values."
     },
     {
@@ -144,8 +144,8 @@
       "difficulty": "medium",
       "stem": "At zero power factor (purely reactive load), in the two-wattmeter method:",
       "options": [
-        "Both readings are positive",
         "One reading is zero",
+        "Both readings are positive",
         "Both readings are equal and opposite",
         "Both readings are negative"
       ],
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "The voltmeter-ammeter method for resistance measurement gives accurate results when measuring:",
       "options": [
-        "Low resistance (voltmeter across resistance)",
-        "High resistance (ammeter in series)",
         "Depends on connection",
-        "Both connections equally"
+        "Both connections equally",
+        "High resistance (ammeter in series)",
+        "Low resistance (voltmeter across resistance)"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "For low R: short shunt. For high R: long shunt."
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "In the short shunt connection of voltmeter-ammeter method, the voltmeter measures:",
       "options": [
-        "Voltage across resistance only",
         "Voltage across resistance and ammeter",
-        "Only ammeter voltage drop",
-        "Source voltage"
+        "Source voltage",
+        "Power measurement only",
+        "Voltage across resistance only"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Short shunt: voltmeter connected directly across the unknown resistance."
     },
     {
@@ -198,10 +198,10 @@
       "difficulty": "medium",
       "stem": "Kelvin's double bridge is used to measure:",
       "options": [
-        "Very high resistance",
+        "Inductance",
         "Very low resistance (below 1 ohm)",
-        "Medium resistance",
-        "Inductance"
+        "Very high resistance",
+        "Medium resistance"
       ],
       "answer": 1,
       "solution": "Kelvin bridge eliminates lead and contact resistance errors."
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "Kelvin bridge eliminates errors caused by:",
       "options": [
-        "High resistance",
         "Lead resistance and contact resistance",
+        "Frequency",
         "Temperature",
-        "Frequency"
+        "High resistance"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Kelvin bridge uses additional ratio arms to nullify lead resistance effect."
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "Wheatstone bridge is used to measure:",
       "options": [
-        "Very low resistance",
-        "Medium resistance (1 ohm to 1 megaohm)",
         "Very high resistance",
-        "Capacitance"
+        "Capacitance",
+        "Very low resistance",
+        "Medium resistance (1 ohm to 1 megaohm)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Wheatstone bridge measures medium resistances accurately."
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "A Wheatstone bridge is balanced when:",
       "options": [
-        "P/Q = R/S",
-        "P × Q = R × S",
         "P + Q = R + S",
+        "P × Q = R × S",
+        "P/Q = R/S",
         "P = Q = R = S"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Bridge balance: P/Q = R/S where P, Q are ratio arms."
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "A megger operates on the principle of:",
       "options": [
-        "Wheatstone bridge",
-        "Deflecting type instrument with hand-driven DC generator",
         "PMMC movement only",
-        "Electrostatic principle"
+        "Wheatstone bridge",
+        "Electrostatic principle",
+        "Deflecting type instrument with hand-driven DC generator"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Hand-driven generator applies DC voltage; ratio of voltage to current gives resistance."
     },
     {
@@ -306,10 +306,10 @@
       "difficulty": "medium",
       "stem": "While measuring insulation resistance with a megger, the measured resistance includes:",
       "options": [
-        "Only conductor resistance",
+        "Resistance measurement only",
         "Surface leakage and volume insulation resistance",
-        "Only contact resistance",
-        "Only cable capacitance"
+        "Power measurement only",
+        "Applicable in limited scenarios"
       ],
       "answer": 1,
       "solution": "Megger measures total insulation resistance including surface leakage."
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "A multimeter can measure:",
       "options": [
-        "Only voltage",
-        "Voltage, current, and resistance",
-        "Only resistance",
-        "Only current"
+        "Current measurement only",
+        "Resistance measurement only",
+        "Applicable in limited scenarios",
+        "Voltage, current, and resistance"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Multimeter combines voltmeter, ammeter, and ohmmeter functions."
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "A clamp meter measures current by:",
       "options": [
-        "Breaking the circuit and inserting the meter",
         "Clamping a current transformer jaw around the conductor",
-        "Using a shunt resistor",
-        "Direct contact with conductor"
+        "Direct contact with conductor",
+        "Breaking the circuit and inserting the meter",
+        "Using a shunt resistor"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Clamp meter uses split CT core that clamps around the conductor."
     },
     {
@@ -361,11 +361,11 @@
       "stem": "The advantage of a clamp meter is:",
       "options": [
         "Higher accuracy than PMMC",
+        "Can measure power directly",
         "Non-invasive current measurement without breaking circuit",
-        "Can measure voltage directly",
-        "Can measure power directly"
+        "Can measure voltage directly"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Clamp meter allows current measurement without disconnecting conductor."
     },
     {
@@ -379,11 +379,11 @@
       "stem": "CRO stands for:",
       "options": [
         "Current Resistance Oscilloscope",
+        "Circuit Response Observer",
         "Cathode Ray Oscilloscope",
-        "Central Readout Oscillator",
-        "Circuit Response Observer"
+        "Central Readout Oscillator"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "CRO displays voltage waveforms on a CRT screen."
     },
     {
@@ -398,8 +398,8 @@
       "options": [
         "Signal voltage",
         "Sweep (time base) generator",
-        "Z-axis modulation",
-        "Intensity modulation"
+        "Intensity modulation",
+        "Z-axis modulation"
       ],
       "answer": 1,
       "solution": "Sawtooth sweep generator deflects beam horizontally at constant rate."
@@ -416,8 +416,8 @@
       "options": [
         "Sweep generator",
         "Signal to be measured applied to Y-plates",
-        "Z-axis input",
-        "Focus control"
+        "Focus control",
+        "Z-axis input"
       ],
       "answer": 1,
       "solution": "Input signal applied to vertical (Y) deflection plates."
@@ -434,8 +434,8 @@
       "options": [
         "Successive approximation",
         "Dual slope integrating ADC",
-        "Flash ADC only",
-        "Sigma-delta only"
+        "Sigma-delta only",
+        "Flash ADC only"
       ],
       "answer": 1,
       "solution": "Dual-slope ADC provides high accuracy and noise rejection for DMM."
@@ -451,11 +451,11 @@
       "stem": "The advantage of a digital multimeter over analog is:",
       "options": [
         "Lower cost",
-        "Higher input impedance and direct digital readout",
         "Better for AC only",
+        "Higher input impedance and direct digital readout",
         "No battery needed"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "DMM has very high input impedance and gives precise digital readout."
     },
     {
@@ -468,10 +468,10 @@
       "difficulty": "medium",
       "stem": "A power analyzer measures:",
       "options": [
-        "Only voltage",
+        "Current measurement only",
         "Voltage, current, power factor, harmonics, and power",
-        "Only current",
-        "Only resistance"
+        "Voltage measurement only",
+        "Applicable in limited scenarios"
       ],
       "answer": 1,
       "solution": "Power analyzers measure V, I, PF, power, energy, harmonics, and flicker."
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "The true RMS value of an AC quantity is the:",
       "options": [
-        "Peak value",
-        "Square root of mean of squares of instantaneous values",
         "Average value",
-        "Peak-to-peak value / 2"
+        "Peak value",
+        "Peak-to-peak value / 2",
+        "Square root of mean of squares of instantaneous values"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "True RMS = √(mean of v²). Handles non-sinusoidal waveforms."
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "A PMMC instrument with a series multiplier is used as a:",
       "options": [
-        "Ammeter",
-        "Voltmeter",
         "Ohmmeter",
-        "Wattmeter"
+        "Wattmeter",
+        "Ammeter",
+        "Voltmeter"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "High resistance in series with PMMC extends voltage range."
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "A PMMC instrument with a shunt is used as a:",
       "options": [
-        "Voltmeter",
-        "Ammeter",
         "Ohmmeter",
-        "Wattmeter"
+        "Voltmeter",
+        "Wattmeter",
+        "Ammeter"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Low resistance (shunt) in parallel extends current range."
     },
     {
@@ -559,11 +559,11 @@
       "stem": "The multiplier resistance of a voltmeter should be:",
       "options": [
         "Very low",
-        "Very high",
         "Equal to load resistance",
+        "Very high",
         "Zero"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Multiplier resistance must be very high to minimize current drawn."
     },
     {
@@ -576,10 +576,10 @@
       "difficulty": "medium",
       "stem": "The sensitivity of a voltmeter is expressed in:",
       "options": [
-        "Ohms",
+        "Amperes",
         "Ohms per volt (Ω/V)",
-        "Volts per ohm",
-        "Amperes"
+        "Ohms",
+        "Volts per ohm"
       ],
       "answer": 1,
       "solution": "Sensitivity (Ω/V) = 1/full-scale deflection current."
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "An ideal voltmeter has:",
       "options": [
-        "Zero resistance",
         "Infinite resistance",
         "Equal resistance to load",
+        "Zero resistance",
         "Negative resistance"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Infinite resistance ensures zero current drawn from circuit."
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "An ideal ammeter has:",
       "options": [
-        "Infinite resistance",
-        "Zero resistance",
         "Equal resistance to load",
-        "Negative resistance"
+        "Infinite resistance",
+        "Negative resistance",
+        "Zero resistance"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Zero resistance ensures no voltage drop across the ammeter."
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "A PMMC instrument can be converted to measure AC by adding a:",
       "options": [
+        "Capacitor",
         "Rectifier",
         "Transformer",
-        "Capacitor",
         "Inductor"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Rectifier-type instrument uses rectifier bridge with PMMC to measure AC."
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "Hot wire instruments work on the principle of:",
       "options": [
+        "Electromagnetic induction",
         "Magnetic effect of current",
-        "Heating effect of current causing expansion of wire",
         "Electrostatic effect",
-        "Electromagnetic induction"
+        "Heating effect of current causing expansion of wire"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Current heats a wire causing expansion and pointer movement. Works for AC and DC."
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "Induction type energy meters work on the principle of:",
       "options": [
+        "Electrostatic force",
         "PMMC action",
         "Interaction of alternating fluxes producing rotating field",
-        "Heating effect",
-        "Electrostatic force"
+        "Heating effect"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Alternating fluxes produce rotating field inducing eddy currents in disc."
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "Creeping in an energy meter is:",
       "options": [
-        "Disc rotation at no load",
-        "Disc rotation at full load",
+        "Meter fuse blowing",
         "Meter reading backwards",
-        "Meter fuse blowing"
+        "Disc rotation at full load",
+        "Disc rotation at no load"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Creeping is slow disc rotation at no load due to incomplete magnet symmetry."
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "To prevent creeping, energy meters are provided with:",
       "options": [
+        "Dampers",
         "Brake magnets",
         "A small hole or anti-creep notch in the disc",
-        "Dampers",
         "Extra voltage coils"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Anti-creep holes prevent continuous rotation at no load."
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "An kWh meter disc constant of 600 rev/kWh means:",
       "options": [
-        "The meter draws 600 A",
-        "The disc rotates 600 times per kWh of energy consumed",
         "The meter voltage is 600 V",
-        "The meter has 600 ohm resistance"
+        "The meter draws 600 A",
+        "The meter has 600 ohm resistance",
+        "The disc rotates 600 times per kWh of energy consumed"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Meter constant: disc makes 600 revolutions per kWh consumed."
     },
     {
@@ -738,8 +738,8 @@
       "difficulty": "medium",
       "stem": "If a 600 rev/kWh meter disc rotates 30 times in 2 minutes, the load is:",
       "options": [
-        "0.5 kW",
         "1.0 kW",
+        "0.5 kW",
         "1.5 kW",
         "2.0 kW"
       ],
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "A CT of ratio 200/5 A with a secondary ammeter reading 3.5 A indicates a primary current of:",
       "options": [
+        "140 A",
         "3.5 A",
         "70 A",
-        "140 A",
         "1000 A"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Primary current = (200/5) × 3.5 = 140 A."
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "A PT of ratio 11000/110 V with secondary voltage of 105 V indicates a primary voltage of:",
       "options": [
-        "105 V",
         "10500 V",
+        "105 V",
         "11000 V",
         "11550 V"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Primary voltage = (11000/110) × 105 = 10500 V."
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "The burden on a CT is expressed in:",
       "options": [
-        "Amperes",
-        "Volt-amperes (VA)",
+        "Watts",
         "Ohms only",
-        "Watts"
+        "Amperes",
+        "Volt-amperes (VA)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "CT burden is total VA load on the secondary."
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "Instrument transformers provide isolation between:",
       "options": [
-        "Primary conductor and secondary metering/relay circuits",
-        "Two phases",
+        "Conductor and earth",
         "Two windings",
-        "Conductor and earth"
+        "Two phases",
+        "Primary conductor and secondary metering/relay circuits"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CTs and PTs isolate high-voltage primary from metering/protection circuits."
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "A potentiometer measures voltage by:",
       "options": [
-        "Direct connection",
         "Comparison with a known voltage (null-balance method)",
         "Current measurement",
+        "Direct connection",
         "Resistance measurement"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Potentiometer compares unknown EMF against calibrated voltage at null."
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "The main advantage of a potentiometer is:",
       "options": [
-        "High current handling",
         "No current drawn from source at null — true EMF measurement",
         "Very low cost",
+        "High current handling",
         "Works only for AC"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "At null balance, no current flows from source, measuring true EMF."
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "A CRO can measure:",
       "options": [
-        "Only voltage amplitude",
         "Voltage, frequency, phase, and waveform",
-        "Current directly",
-        "Power directly"
+        "Voltage measurement only",
+        "Power directly",
+        "Current directly"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CRO displays voltage vs. time, enabling measurement of amplitude, frequency, and phase."
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "The Lissajous pattern on a CRO is used to measure:",
       "options": [
+        "Resistance",
         "Power",
         "Frequency ratio and phase difference between two signals",
-        "Current",
-        "Resistance"
+        "Current"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Lissajous figures help determine frequency ratio and phase."
     },
     {
@@ -902,8 +902,8 @@
       "options": [
         "Measuring very high current",
         "Very high input impedance compared to PMMC voltmeter",
-        "Measuring power directly",
-        "Working without power"
+        "Working without power",
+        "Measuring power directly"
       ],
       "answer": 1,
       "solution": "VTVM uses vacuum tube amplifier for very high input impedance."
@@ -918,10 +918,10 @@
       "difficulty": "medium",
       "stem": "An FET-based voltmeter has input impedance of the order of:",
       "options": [
-        "1 kΩ",
         "100 kΩ",
+        "1 Ω",
         "100 MΩ to several GΩ",
-        "1 Ω"
+        "1 kΩ"
       ],
       "answer": 2,
       "solution": "FET input stages provide extremely high input impedance (10¹⁰–10¹² Ω)."
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "Peak value of a sine wave can be measured using:",
       "options": [
-        "Moving iron instrument",
-        "CRO or peak-reading voltmeter",
+        "Dynamometer instrument",
         "PMMC instrument",
-        "Dynamometer instrument"
+        "CRO or peak-reading voltmeter",
+        "Moving iron instrument"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "CRO directly shows peak value."
     },
     {
@@ -955,11 +955,11 @@
       "stem": "The average value of a full-wave rectified sine wave is:",
       "options": [
         "V_m/π",
-        "2V_m/π",
         "V_m/√2",
+        "2V_m/π",
         "V_m/2"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Average of full-wave rectified sine = 2V_m/π = 0.637 V_m."
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "Form factor of a sinusoidal waveform is defined as:",
       "options": [
-        "V_rms / V_avg",
         "V_avg / V_rms",
+        "V_rms / V_peak",
         "V_peak / V_rms",
-        "V_rms / V_peak"
+        "V_rms / V_avg"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Form factor = RMS/Average = π/(2√2) = 1.11 for sinusoidal wave."
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Crest factor (peak factor) of a sine wave is:",
       "options": [
+        "2.0",
         "1.11",
-        "1.414",
         "0.9",
-        "2.0"
+        "1.414"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Crest factor = V_peak/V_rms = √2 = 1.414 for sinusoidal waveform."
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "An oscilloscope probe (10:1) is used to:",
       "options": [
-        "Increase the input voltage by 10×",
         "Attenuate signal by 10× and increase input impedance",
+        "Reduce noise only",
         "Increase bandwidth only",
-        "Reduce noise only"
+        "Increase the input voltage by 10×"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "10:1 probe attenuates signal 10× and increases input impedance to ~10 MΩ."
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "Bandwidth of a CRO refers to:",
       "options": [
-        "Maximum voltage it can measure",
-        "Frequency range over which the vertical amplifier maintains specified accuracy",
         "Sweep speed range",
-        "Screen size"
+        "Screen size",
+        "Frequency range over which the vertical amplifier maintains specified accuracy",
+        "Maximum voltage it can measure"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Bandwidth is the frequency range where vertical sensitivity is within ±3 dB."
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "A sampling oscilloscope is used to measure:",
       "options": [
-        "Low frequency signals",
         "Very high frequency repetitive signals",
+        "Current waveforms only",
         "DC signals only",
-        "Current waveforms only"
+        "Low frequency signals"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Sampling oscilloscope reconstructs high-frequency repetitive waveforms."
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "The function of the time base in a CRO is to:",
       "options": [
-        "Amplify the input signal",
-        "Provide horizontal sweep at known rate for time measurement",
+        "Control brightness",
         "Focus the beam",
-        "Control brightness"
+        "Provide horizontal sweep at known rate for time measurement",
+        "Amplify the input signal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Time base produces sawtooth waveform for horizontal deflection."
     },
     {
@@ -1080,10 +1080,10 @@
       "difficulty": "medium",
       "stem": "A digital power meter typically uses which method for power calculation?",
       "options": [
-        "Analog wattmeter method",
+        "Electrostatic method",
         "Simultaneous sampling of V and I with DSP computation",
         "Thermal method",
-        "Electrostatic method"
+        "Analog wattmeter method"
       ],
       "answer": 1,
       "solution": "Digital power meters sample V and I simultaneously, computing power using DSP."
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "A multimeter in resistance mode measures resistance by:",
       "options": [
-        "Passing a known current and measuring voltage drop",
+        "Using bridge method",
         "Direct ohmic contact measurement",
-        "Measuring inductance",
-        "Using bridge method"
+        "Passing a known current and measuring voltage drop",
+        "Measuring inductance"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Internal battery supplies known current; measured voltage drop gives R = V/I."
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "When measuring resistance with a multimeter, the reading includes:",
       "options": [
-        "Only the unknown resistance",
         "Unknown resistance plus lead resistance",
-        "Only lead resistance",
+        "Voltage measurement only",
+        "Resistance measurement only",
         "Capacitance effect only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Multimeter measures total R including test lead resistance."
     },
     {
@@ -1134,10 +1134,10 @@
       "difficulty": "medium",
       "stem": "The CEA regulations for electrical safety in mines were framed under which act?",
       "options": [
-        "Mines Act 1952",
+        "Factories Act 1948",
         "Electricity Act 2003",
         "Coal Mines Act 1952",
-        "Factories Act 1948"
+        "Mines Act 1952"
       ],
       "answer": 1,
       "solution": "CEA Regulations 2017 are framed under the Electricity Act 2003."
@@ -1170,10 +1170,10 @@
       "difficulty": "medium",
       "stem": "A flameproof enclosure (Ex d) for mining equipment ensures that:",
       "options": [
-        "No spark can occur inside",
+        "Temperature never rises",
         "Any explosion inside is contained and does not ignite external gas",
-        "The enclosure is gas-tight",
-        "Temperature never rises"
+        "No spark can occur inside",
+        "The enclosure is gas-tight"
       ],
       "answer": 1,
       "solution": "Ex d enclosure can withstand internal explosion and cools escaping gases through flame paths."
@@ -1188,9 +1188,9 @@
       "difficulty": "medium",
       "stem": "The maximum flame path gap for Class I Group IIA gases in a flameproof enclosure is:",
       "options": [
-        "0.1 mm",
-        "0.2 mm (for flanges)",
         "1.0 mm",
+        "0.2 mm (for flanges)",
+        "0.1 mm",
         "5.0 mm"
       ],
       "answer": 1,
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "An increased safety (Ex e) enclosure prevents ignition by:",
       "options": [
+        "Using inert gas fill",
         "Containing explosions",
         "Ensuring no sparking or hot surface occurs under normal and specified fault conditions",
-        "Using inert gas fill",
         "Using intrinsic safety"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ex e requires enhanced construction: higher IP rating, temperature limits, and creepage distances."
     },
     {
@@ -1225,11 +1225,11 @@
       "stem": "Intrinsic safety (Ex i) limits electrical energy to prevent ignition by:",
       "options": [
         "Containing the explosion",
-        "Ensuring stored energy is below ignition threshold of gas",
+        "Using flameproof enclosure",
         "Cooling the spark",
-        "Using flameproof enclosure"
+        "Ensuring stored energy is below ignition threshold of gas"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ex i limits voltage, current, and stored energy below minimum ignition energy."
     },
     {
@@ -1244,10 +1244,10 @@
       "options": [
         "100 mJ",
         "20 mJ",
-        "0.28 mJ",
-        "0.01 mJ"
+        "0.01 mJ",
+        "0.28 mJ"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Methane minimum ignition energy is ~0.28 mJ."
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "IS standards for mining electrical equipment in India are specified by:",
       "options": [
-        "BIS (Bureau of Indian Standards)",
         "DGMS",
-        "CEA",
-        "ISO"
+        "ISO",
+        "BIS (Bureau of Indian Standards)",
+        "CEA"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "BIS publishes IS standards for mining equipment safety requirements."
     },
     {
@@ -1278,10 +1278,10 @@
       "difficulty": "medium",
       "stem": "The permit to work system in mines for electrical maintenance involves:",
       "options": [
-        "Oral permission from supervisor only",
+        "Just switching off power",
         "Written permit specifying scope, safety measures, and authorized personnel",
         "No formal procedure",
-        "Just switching off power"
+        "Oral permission from supervisor only"
       ],
       "answer": 1,
       "solution": "PTW is a formal written system ensuring all safety measures are verified."
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "Lockout/Tagout (LOTO) procedure in mine electrical safety requires:",
       "options": [
-        "Only turning off the switch",
-        "Disconnecting, locking, tagging, and verifying zero energy state before work",
+        "Waiting for power failure",
         "Informing the operator only",
-        "Waiting for power failure"
+        "Disconnecting, locking, tagging, and verifying zero energy state before work",
+        "Reduce equipment maintenance"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "LOTO ensures equipment is isolated, locked, and verified dead before maintenance."
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "In first aid for electric shock, the first action should be:",
       "options": [
+        "Call the manager",
         "Give water to the victim",
-        "Separate the victim from live source using insulated material",
         "Start CPR immediately",
-        "Call the manager"
+        "Separate the victim from live source using insulated material"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "First priority: disconnect victim from live source using dry insulating material."
     },
     {
@@ -1332,10 +1332,10 @@
       "difficulty": "medium",
       "stem": "CPR for electric shock victim involves:",
       "options": [
-        "Only chest compressions",
+        "Optional in non-hazardous areas",
         "Chest compressions and rescue breathing (30:2 ratio)",
-        "Only rescue breathing",
-        "Giving oxygen mask only"
+        "Giving oxygen mask only",
+        "Acoustic properties of surfaces"
       ],
       "answer": 1,
       "solution": "Standard CPR: 30 compressions followed by 2 rescue breaths."
@@ -1350,10 +1350,10 @@
       "difficulty": "medium",
       "stem": "A Class A fire involves:",
       "options": [
-        "Flammable metals",
-        "Ordinary combustibles (wood, paper, cloth)",
         "Flammable liquids",
-        "Electrical equipment"
+        "Ordinary combustibles (wood, paper, cloth)",
+        "Electrical equipment",
+        "Flammable metals"
       ],
       "answer": 1,
       "solution": "Class A: ordinary combustibles. Class B: flammable liquids. Class C: electrical."
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "A CO₂ fire extinguisher is most suitable for:",
       "options": [
+        "Class D fires only",
         "Class A fires",
         "Class B and Class C (electrical) fires",
-        "Class D fires only",
         "Wood fires only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "CO₂ extinguishers are ideal for electrical and flammable liquid fires."
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "A DCP (Dry Chemical Powder) extinguisher is effective against:",
       "options": [
-        "Only Class A fires",
         "Class A, B, and C fires",
-        "Class D fires only",
-        "Gas fires only"
+        "Optional in non-hazardous areas",
+        "Gas fires only",
+        "Class D fires only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "DCP works on Class A, B, and C fires by chemical inhibition."
     },
     {
@@ -1405,11 +1405,11 @@
       "stem": "Water should NOT be used on which type of fire?",
       "options": [
         "Wood fire",
-        "Oil fire",
+        "Grass fire",
         "Paper fire",
-        "Grass fire"
+        "Oil fire"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Water on oil fires can spread fire and cause splashing."
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "Foam extinguishers are effective on:",
       "options": [
-        "Electrical fires",
         "Flammable liquid (Class B) fires by smothering",
-        "Class D fires",
-        "Metal fires"
+        "Electrical fires",
+        "Metal fires",
+        "Class D fires"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Foam forms blanket over liquid surface, cutting off oxygen."
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Lightning protection for mines involves:",
       "options": [
-        "Ignoring it as mines are underground",
         "Installing lightning arresters on surface structures and earthing systems",
-        "Using only wooden poles",
-        "No special measures needed"
+        "Ignoring it as mines are underground",
+        "No special measures needed",
+        "Using only wooden poles"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Surface installations need proper lightning protection with arresters and earthing."
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "Coal dust explosion can be prevented by:",
       "options": [
-        "Increasing ventilation",
         "Applying stone dust (inertite) on surfaces and in galleries",
-        "Using fans only",
-        "Ignoring dust accumulation"
+        "Ignoring dust accumulation",
+        "Increasing ventilation",
+        "Using fans only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Stone dusting mixed with coal dust makes it non-explosible."
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "If '+' means 'x', 'x' means '-', '-' means '/', '/' means '+', then 8+4-2=?",
       "options": [
-        "3",
-        "6",
         "12",
+        "6",
+        "3",
         "10"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "8x4/2=16"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "Odd one out: 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961",
       "options": [
+        "Applicable in limited scenarios",
         "All are perfect squares",
-        "Some are not",
-        "Only one is different",
-        "None"
+        "None",
+        "Some are not"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "All are perfect squares (11² to 31²)"
     },
     {
@@ -1513,9 +1513,9 @@
       "stem": "Find the missing number: 3, 7, 15, 31, 63, ?:",
       "options": [
         "127",
-        "125",
+        "120",
         "128",
-        "120"
+        "125"
       ],
       "answer": 0,
       "solution": "Each x2+1: 63*2+1=127"
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "A clock shows 6:30. The angle between the hands is:",
       "options": [
-        "15 degrees",
-        "0 degrees",
         "30 degrees",
-        "45 degrees"
+        "15 degrees",
+        "45 degrees",
+        "0 degrees"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "At 6:30: minute hand at 180°, hour at 195°, diff=15°"
     },
     {
@@ -1549,9 +1549,9 @@
       "stem": "If ROPE is coded as TQRG, then CORD is coded as:",
       "options": [
         "EQTF",
-        "DPSE",
+        "ERUF",
         "FQTE",
-        "ERUF"
+        "DPSE"
       ],
       "answer": 0,
       "solution": "Each letter +2: R->T, O->Q, P->R, E->G. So C->E, O->Q, R->T, D->F = EQTF"
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Blood relation: A is B's sister. C is B's mother. D is C's father. D is A's:",
       "options": [
-        "Grandfather",
         "Father",
+        "Uncle",
         "Brother",
-        "Uncle"
+        "Grandfather"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "D is C's father; C is A's mother; D = A's grandfather"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "If in a code, DELHI = 12345 and CALCUTTA = 67890, then LALIT is coded as:",
       "options": [
-        "87850",
         "78751",
         "87851",
-        "87850"
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "D=1,E=2,L=3,H=4,I=5; C=6,A=7,L=3,U=8,T=9,A=7. LALIT=37395. Hmm, CALCUTTA uses C=6,A=7,L=8... wait. Let me re-read. CALCUTTA=67890 means C=6,A=7,L=8,C=8? No, letters: C-A-L-C-U-T-T-A = 6-7-8-9-0-? Let me simplify this."
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a woman, Raj said: She is the mother of my only daughter. She is Raj's:",
       "options": [
-        "Wife",
-        "Mother",
+        "Daughter",
         "Sister",
-        "Daughter"
+        "Mother",
+        "Wife"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Mother of his only daughter = his wife"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "A walks 5 km East, turns left and walks 3 km. Distance from start:",
       "options": [
-        "5.83 km",
+        "3 km",
         "8 km",
-        "2 km",
-        "3 km"
+        "5.83 km",
+        "2 km"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "D=sqrt(25+9)=sqrt(34)=5.83 km"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "If Monday is Day 1, what day is Day 100?",
       "options": [
-        "Wednesday",
-        "Thursday",
         "Tuesday",
-        "Monday"
+        "Monday",
+        "Wednesday",
+        "Thursday"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "100 mod 7 = 2; Day 100 = Day 2 = Tuesday"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Odd one out: Square, Rectangle, Triangle, Circle",
       "options": [
-        "Circle",
+        "Triangle",
         "Square",
         "Rectangle",
-        "Triangle"
+        "Circle"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Circle has no straight sides; others have straight sides"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "Statement: All pens are books. All books are paper. Conclusion: Some paper is pen.",
       "options": [
-        "Definitely true",
         "Probably true",
+        "Can't say",
         "Probably false",
-        "Can't say"
+        "Definitely true"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "All pens are paper (through books), so some paper is pen"
     },
     {
@@ -1712,8 +1712,8 @@
       "options": [
         "67845",
         "67345",
-        "54321",
-        "67854"
+        "67854",
+        "54321"
       ],
       "answer": 0,
       "solution": "S=6,O=7,U=8,T=4,H=5 = 67845"
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "Find the odd one: 1, 4, 9, 16, 20, 36, 49",
       "options": [
-        "20",
-        "1",
+        "9",
         "4",
-        "9"
+        "1",
+        "20"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "20 is not a perfect square; others are (1,4,9,16,36,49)"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "If '+' means '/', '-' means '+', '*' means '-', '/' means '*', then 5+3-2*4=?",
       "options": [
-        "5",
-        "7",
         "1",
-        "9"
+        "7",
+        "9",
+        "5"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "5/3+2-4 = 1.67+2-4 = -0.33. None match. Let me fix: 6+3-2*4 = 6/3+2-4 = 2+2-4 = 0. Let me redo with simpler numbers."
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "Mirror image of LETTER when mirror is placed on left is:",
       "options": [
-        "RETTEL",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
         "LETTER",
-        "RETTEL",
         "RETLEL"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Mirror reverses left-right: RETTEL"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "Which word is opposite of GENEROUS?",
       "options": [
-        "Stingy",
         "Kind",
-        "Brave",
-        "Smart"
+        "Smart",
+        "Stingy",
+        "Brave"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Generous: giving; antonym: stingy"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Analogy: Bird : Fly :: Fish : ?",
       "options": [
+        "Jump",
         "Swim",
-        "Walk",
         "Run",
-        "Jump"
+        "Walk"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Birds fly; fish swim"
     },
     {
@@ -1819,12 +1819,84 @@
       "stem": "Find the missing: 4, 9, 16, 25, 36, ?:",
       "options": [
         "49",
-        "48",
+        "50",
         "42",
-        "50"
+        "48"
       ],
       "answer": 0,
       "solution": "Perfect squares: 7²=49"
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "By selling 12 articles, a person gains the selling price of 2 articles. What is the profit percentage?",
+      "options": [
+        "20%",
+        "16.67%",
+        "25%",
+        "14.29%"
+      ],
+      "answer": 0,
+      "solution": "SP of 12 - CP of 12 = SP of 2 → SP of 10 = CP of 12 → profit on 12 = SP of 2. Profit% = (SP of 2/CP of 12) × 100. Since SP of 10 = CP of 12, CP = (10/12)SP. Profit = SP - (10/12)SP = (2/12)SP = SP/6 per article. Profit% = (SP/6) / (10SP/12) × 100 = (SP/6) × (12/10SP) × 100 = 20%"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If A is 25% more than B, by what percent is B less than A?",
+      "options": [
+        "20%",
+        "25%",
+        "30%",
+        "15%"
+      ],
+      "answer": 0,
+      "solution": "A = 1.25B. B less than A by (0.25B/1.25B) × 100 = 20%"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A商品被标价高于成本价60%。若给予25%折扣，利润百分比是多少？",
+      "options": [
+        "25%",
+        "10%",
+        "15%",
+        "20%"
+      ],
+      "answer": 3,
+      "solution": "MP = 1.60 × CP, SP = 0.75 × 1.60 × CP = 1.20 × CP → 20% profit"
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A and B share profits in the ratio 3:2. A invested ₹50000 for 12 months. For how many months did B invest ₹40000?",
+      "options": [
+        "12 months",
+        "11 months",
+        "10 months",
+        "9 months"
+      ],
+      "answer": 1,
+      "solution": "Profit ratio = (Investment × Time). 3/2 = (50000×12)/(40000×T) → 3T = (50000×12×2)/(40000×3) = 1200000/120000 = 10. T = 10... Actually: 3/2 = 600000/(40000T) → 3 × 40000T = 2 × 600000 → 120000T = 1200000 → T = 10. So 10 months."
     }
   ]
 }

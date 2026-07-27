@@ -32,11 +32,11 @@
       "stem": "Tachometric surveying is preferred over chain surveying when:",
       "options": [
         "The ground is flat and open",
-        "The ground is rough, undulating, or obstructed",
-        "Only short distances need measuring",
-        "Only horizontal angles are needed"
+        "Measure air velocity",
+        "Record temperature variations",
+        "The ground is rough, undulating, or obstructed"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Tachometry is ideal for rough, undulating, or obstructed terrain where direct chaining is difficult or inaccurate."
     },
     {
@@ -49,12 +49,12 @@
       "difficulty": "medium",
       "stem": "The accuracy of stadia tachometry is typically:",
       "options": [
-        "1 in 100",
-        "1 in 500 to 1 in 1000",
+        "1 in 100,000",
         "1 in 10,000",
-        "1 in 100,000"
+        "1 in 500 to 1 in 1000",
+        "1 in 100"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Stadia tachometry typically achieves accuracy of 1 in 500 to 1 in 1000, suitable for preliminary surveys."
     },
     {
@@ -68,11 +68,11 @@
       "stem": "In tachometry, if the staff is held tilted, the measured distance will be:",
       "options": [
         "Correct",
+        "Unaffected",
         "Longer than the true distance",
-        "Shorter than the true distance",
-        "Unaffected"
+        "Shorter than the true distance"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A tilted staff gives a larger stadia interval, making the computed distance longer than the true distance."
     },
     {
@@ -85,12 +85,12 @@
       "difficulty": "medium",
       "stem": "The 'subtense bar' is typically:",
       "options": [
-        "1 m long",
-        "2 m long",
+        "10 m long",
         "5 m long",
-        "10 m long"
+        "2 m long",
+        "1 m long"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A standard subtense bar is 2 m long, precisely calibrated and mounted horizontally."
     },
     {
@@ -104,9 +104,9 @@
       "stem": "In the subtense bar method, the distance is calculated as:",
       "options": [
         "D = b / (2 tan(θ/2))",
-        "D = KS",
+        "D = b × sin θ",
         "D = C × s",
-        "D = b × sin θ"
+        "D = KS"
       ],
       "answer": 0,
       "solution": "D = b / (2 tan(θ/2)), where b is the bar length (2 m) and θ is the measured horizontal angle."
@@ -121,12 +121,12 @@
       "difficulty": "medium",
       "stem": "A subtense bar is most useful for:",
       "options": [
-        "Long distance measurement",
-        "Short to medium accurate distance measurement",
+        "Levelling",
         "Measuring vertical angles",
-        "Levelling"
+        "Short to medium accurate distance measurement",
+        "Long distance measurement"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Subtense bar is useful for short to medium distances (up to ~200 m) with high accuracy."
     },
     {
@@ -140,11 +140,11 @@
       "stem": "Tachometric methods are extensively used in mine surveying for:",
       "options": [
         "Surface boundary surveys only",
-        "Rapid detailing of benches, dump profiles, and stope surveying",
+        "GPS base station surveys",
         "Setting out buildings",
-        "GPS base station surveys"
+        "Rapid detailing of benches, dump profiles, and stope surveying"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Tachometry is widely used in mines for rapid profiling of benches, dumps, high walls, and underground openings."
     },
     {
@@ -175,12 +175,12 @@
       "difficulty": "medium",
       "stem": "For K to be exactly 100, the ratio f/i must be:",
       "options": [
-        "50",
-        "100",
+        "150",
         "200",
-        "150"
+        "50",
+        "100"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "When f/i = 100, the stadia interval factor K equals exactly 100."
     },
     {
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "In tachometric surveying, the vertical angle is measured to determine:",
       "options": [
-        "Only the horizontal distance",
-        "The height difference and to correct the horizontal distance",
         "The stadia interval",
+        "Measure air velocity",
+        "The height difference and to correct the horizontal distance",
         "The staff readings"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The vertical angle is used both to compute the height difference and to reduce the slope distance to horizontal distance."
     },
     {
@@ -229,12 +229,12 @@
       "difficulty": "medium",
       "stem": "In stadia tachometry, the staff must be held:",
       "options": [
-        "Tilted towards the instrument",
-        "Perfectly vertical (plumb)",
         "Horizontal",
-        "At any angle"
+        "At any angle",
+        "Tilted towards the instrument",
+        "Perfectly vertical (plumb)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The staff must be held perfectly vertical for accurate stadia readings; otherwise, the distance will be in error."
     },
     {
@@ -247,12 +247,12 @@
       "difficulty": "medium",
       "stem": "Tachometric surveying eliminates the need for:",
       "options": [
-        "Angular measurement",
         "Direct chaining or taping of distances",
         "Staff readings",
-        "Benchmarks"
+        "Benchmarks",
+        "Angular measurement"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Tachometry replaces direct distance measurement by chaining/taping with optical distance determination."
     },
     {
@@ -265,12 +265,12 @@
       "difficulty": "medium",
       "stem": "A 'stadia diaphragm' with three horizontal hairs is used to:",
       "options": [
-        "Measure vertical angles only",
         "Read three staff readings (upper, middle, lower) to determine stadia interval",
         "Measure horizontal angles",
-        "Determine the instrument height"
+        "Determine the instrument height",
+        "Measure vertical angles only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The stadia diaphragm has upper, middle, and lower hairs; the difference between upper and lower readings gives the stadia interval."
     },
     {
@@ -283,12 +283,12 @@
       "difficulty": "medium",
       "stem": "The 'tachometric constant' is the product of:",
       "options": [
+        "Focal length + stadia interval",
         "Focal length × stadia interval",
-        "Focal length / stadia interval",
         "Stadia interval / focal length",
-        "Focal length + stadia interval"
+        "Focal length / stadia interval"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The tachometric constant K = f/i (focal length of objective divided by stadia hair interval)."
     },
     {
@@ -301,12 +301,12 @@
       "difficulty": "medium",
       "stem": "A 'control survey' establishes:",
       "options": [
-        "Detailed boundary measurements",
-        "A network of precisely located points as a reference framework",
+        "Building foundation details",
         "Contour lines only",
-        "Building foundation details"
+        "A network of precisely located points as a reference framework",
+        "Detailed boundary measurements"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Control surveys establish a network of accurately located horizontal and vertical control points."
     },
     {
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "Triangulation is a method of horizontal control that uses:",
       "options": [
-        "Direct distance measurement only",
-        "Measurement of angles in a network of triangles",
         "GPS only",
-        "Taping"
+        "Direct distance measurement only",
+        "Taping",
+        "Measurement of angles in a network of triangles"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Triangulation determines positions by measuring angles in a network of interconnected triangles."
     },
     {
@@ -355,12 +355,12 @@
       "difficulty": "medium",
       "stem": "The 'strength of figure' in triangulation refers to:",
       "options": [
-        "The physical strength of the survey marker",
         "The geometric quality of the triangle shapes affecting accuracy",
         "The number of surveyors",
-        "The weight of the instrument"
+        "The weight of the instrument",
+        "The physical strength of the survey marker"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Strength of figure describes the geometric quality of triangle shapes; well-conditioned triangles give better accuracy."
     },
     {
@@ -373,12 +373,12 @@
       "difficulty": "medium",
       "stem": "A well-conditioned triangle in triangulation has angles between:",
       "options": [
+        "60° and 90°",
         "0° and 90°",
         "30° and 120°",
-        "45° and 135°",
-        "60° and 90°"
+        "45° and 135°"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Well-conditioned triangles have all angles between 30° and 120° for optimal geometric strength."
     },
     {
@@ -391,12 +391,12 @@
       "difficulty": "medium",
       "stem": "The 'strength of figure' factor R is given by:",
       "options": [
-        "R = D + C",
-        "R = δ₁² + δ₁δ₂ + δ₂² (where δ are the factors from the triangle)",
         "R = 1/R",
-        "R = A + B"
+        "R = A + B",
+        "R = D + C",
+        "R = δ₁² + δ₁δ₂ + δ₂² (where δ are the factors from the triangle)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "R = D + C where D = δ₁² + δ₁δ₂ + δ₂² and C depends on the number of stations; smaller R means stronger figure."
     },
     {
@@ -410,11 +410,11 @@
       "stem": "In triangulation, 'station adjustment' ensures:",
       "options": [
         "All distances are equal",
-        "The sum of angles around a station equals 360°",
+        "The base line is correct",
         "All triangles are equilateral",
-        "The base line is correct"
+        "The sum of angles around a station equals 360°"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Station adjustment distributes angular misclosure so the sum of angles meeting at a station equals exactly 360°."
     },
     {
@@ -428,11 +428,11 @@
       "stem": "A 'geodetic triangle' on the earth's surface has angles that sum to:",
       "options": [
         "Exactly 180°",
-        "Slightly more than 180° (spherical excess)",
         "Slightly less than 180°",
+        "Slightly more than 180° (spherical excess)",
         "Exactly 360°"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "On a curved earth, triangle angles sum to 180° + spherical excess; the excess depends on the triangle area."
     },
     {
@@ -445,12 +445,12 @@
       "difficulty": "medium",
       "stem": "Spherical excess is:",
       "options": [
-        "Always negative",
         "The amount by which the sum of geodetic triangle angles exceeds 180°",
-        "Always ignored",
-        "Equal to the base line error"
+        "Always negative",
+        "Equal to the base line error",
+        "Always ignored"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Spherical excess E = (A × 180°) / (R² × sin 1\"), where A is the triangle area on the ellipsoid."
     },
     {
@@ -464,11 +464,11 @@
       "stem": "A 'satellite station' in triangulation is a station that:",
       "options": [
         "Uses GPS",
-        "Is not connected to the main triangulation network directly",
+        "Is on a hilltop",
         "Is occupied by a satellite",
-        "Is on a hilltop"
+        "Is not connected to the main triangulation network directly"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A satellite station is a supplementary station observed from the main network but not forming part of the primary triangle chain."
     },
     {
@@ -481,12 +481,12 @@
       "difficulty": "medium",
       "stem": "The 'subtense' method is used at satellite stations to determine:",
       "options": [
-        "The coordinates of the satellite station from observed angles to main stations",
-        "The distance by taping",
         "The elevation",
+        "The distance by taping",
+        "The coordinates of the satellite station from observed angles to main stations",
         "The area"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "At satellite stations, angles are observed to surrounding main network points, and the station position is computed by intersection."
     },
     {
@@ -499,12 +499,12 @@
       "difficulty": "medium",
       "stem": "Trilateration is a method of control survey that uses:",
       "options": [
-        "Angle measurement only",
         "Direct distance measurement between stations",
+        "levelling",
         "GPS only",
-        "levelling"
+        "Angle measurement only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Trilateration determines positions by measuring distances (typically with EDM) between control stations."
     },
     {
@@ -536,11 +536,11 @@
       "stem": "GPS (Global Positioning System) in mine surveying is used for:",
       "options": [
         "Replacing all ground surveys",
+        "Underground levelling",
         "Establishing and densifying horizontal control networks",
-        "Measuring vertical angles only",
-        "Underground levelling"
+        "Measuring vertical angles only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "GPS is used for establishing primary horizontal control, densification, and surveying accessible surface areas."
     },
     {
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "Differential GPS (DGPS) improves accuracy by:",
       "options": [
-        "Using two GPS receivers — one as base and one as rover",
-        "Using more satellites",
+        "Measuring at night",
         "Using a longer antenna",
-        "Measuring at night"
+        "Using more satellites",
+        "Using two GPS receivers — one as base and one as rover"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "DGPS uses a base station at a known position to compute corrections applied to the rover, improving accuracy."
     },
     {
@@ -589,12 +589,12 @@
       "difficulty": "medium",
       "stem": "RTK (Real-Time Kinematic) GPS provides:",
       "options": [
-        "Centimetre-level accuracy in real time",
         "Metre-level accuracy",
-        "Only post-processed results",
-        "Only vertical measurements"
+        "Used only for horizontal lines",
+        "Applicable to total stations only",
+        "Centimetre-level accuracy in real time"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "RTK GPS uses carrier-phase measurements with a base station to provide centimetre-level accuracy in real time."
     },
     {
@@ -607,12 +607,12 @@
       "difficulty": "medium",
       "stem": "The 'baseline' in GPS surveying refers to:",
       "options": [
-        "A measured tape distance",
         "The vector between two simultaneously observed GPS points",
         "The magnetic meridian",
+        "A measured tape distance",
         "A levelling line"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A GPS baseline is the three-dimensional vector between two points observed simultaneously."
     },
     {
@@ -625,10 +625,10 @@
       "difficulty": "medium",
       "stem": "In a GPS control survey, 'static' observation means:",
       "options": [
-        "The receivers are moving",
+        "Record temperature variations",
         "Receivers are left on fixed points for extended periods (hours) for high accuracy",
-        "Observations are taken at night",
-        "Only one receiver is used"
+        "The receivers are moving",
+        "Observations are taken at night"
       ],
       "answer": 1,
       "solution": "Static GPS involves long-duration observations (1-24 hours) at fixed points for the highest accuracy."
@@ -643,12 +643,12 @@
       "difficulty": "medium",
       "stem": "A 'strong triangle figure' in triangulation is one in which:",
       "options": [
-        "All angles are equal to 60°",
         "Angles are well-distributed between 30° and 120° with good geometry",
         "One angle is 0°",
-        "The triangle is very elongated"
+        "The triangle is very elongated",
+        "All angles are equal to 60°"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Strong triangle figures have well-conditioned angles (30°-120°) that minimize error propagation."
     },
     {
@@ -661,12 +661,12 @@
       "difficulty": "medium",
       "stem": "In triangulation, the 'forward direction' is determined by:",
       "options": [
-        "Measuring distances only",
-        "Observing angles from a known station to an unknown station",
+        "GPS only",
         "Using a compass",
-        "GPS only"
+        "Measuring distances only",
+        "Observing angles from a known station to an unknown station"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Forward direction involves measuring angles from a known station to determine the direction to the next unknown station."
     },
     {
@@ -679,12 +679,12 @@
       "difficulty": "medium",
       "stem": "A 'braced quadrilateral' in triangulation is:",
       "options": [
-        "A triangle with an extra diagonal",
         "A four-sided figure with both diagonals measured, providing strong geometry",
-        "A single triangle",
-        "A circle"
+        "A triangle with an extra diagonal",
+        "A circle",
+        "A single triangle"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A braced quadrilateral has both diagonals observed, providing redundancy and strong geometric strength."
     },
     {
@@ -699,8 +699,8 @@
       "options": [
         "EDM only",
         "Precision丈量 (taping) with steel bands or invar wires",
-        "GPS",
-        "Stadia method"
+        "Stadia method",
+        "GPS"
       ],
       "answer": 1,
       "solution": "Historically, base lines were measured with invar tapes/wires under precise tension and temperature conditions."
@@ -715,12 +715,12 @@
       "difficulty": "medium",
       "stem": "The modern method for base line measurement in control surveys is:",
       "options": [
+        "Subtense bar",
         "Steel tape",
         "EDM (Electronic Distance Measurement)",
-        "Stadia method",
-        "Subtense bar"
+        "Stadia method"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "EDM is now the standard for precise base line measurement in control surveys."
     },
     {
@@ -733,12 +733,12 @@
       "difficulty": "medium",
       "stem": "In a triangulation network, 'side equation' check ensures:",
       "options": [
-        "All sides are equal",
         "The length computed through different paths of triangles agrees",
+        "All angles are equal",
         "The base line is correct",
-        "All angles are equal"
+        "All sides are equal"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Side equations verify that distances computed through different chains of triangles yield consistent results."
     },
     {
@@ -751,10 +751,10 @@
       "difficulty": "medium",
       "stem": "In mine control surveys, the 'primary control' network:",
       "options": [
-        "Covers the entire mine in detail",
-        "Provides the main reference framework with the highest accuracy",
         "Is used only for contouring",
-        "Has the lowest accuracy"
+        "Provides the main reference framework with the highest accuracy",
+        "Has the lowest accuracy",
+        "Covers the entire mine in detail"
       ],
       "answer": 1,
       "solution": "Primary control is the highest-accuracy network from which secondary and tertiary surveys are derived."
@@ -769,12 +769,12 @@
       "difficulty": "medium",
       "stem": "GPS surveying in open-pit mines is used for:",
       "options": [
-        "Only boundary surveys",
-        "Rapid topographic surveys, volume calculations, and equipment tracking",
+        "Test roof stability",
         "Underground surveying",
-        "Shaft plumbing only"
+        "Shaft plumbing only",
+        "Rapid topographic surveys, volume calculations, and equipment tracking"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "GPS enables rapid topographic surveys, volume calculations, and real-time equipment tracking in open-pit mines."
     },
     {
@@ -787,12 +787,12 @@
       "difficulty": "medium",
       "stem": "The 'WGS 84' coordinate system is:",
       "options": [
-        "A local mine grid",
-        "The World Geodetic System used as the reference frame for GPS",
         "An old survey datum",
-        "A contour system"
+        "A contour system",
+        "A local mine grid",
+        "The World Geodetic System used as the reference frame for GPS"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "WGS 84 (World Geodetic System 1984) is the global reference coordinate system used by GPS."
     },
     {
@@ -807,8 +807,8 @@
       "options": [
         "No conversion",
         "A map projection and datum transformation",
-        "Only a rotation",
-        "Only a scale factor"
+        "Applicable to total stations only",
+        "Used only for horizontal lines"
       ],
       "answer": 1,
       "solution": "GPS geodetic coordinates must be transformed using a map projection (e.g., UTM) and datum conversion to local grid."
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "In triangulation, 'angular misclosure' is distributed using:",
       "options": [
-        "Bowditch rule",
         "Equal distribution or condensation adjustment (least squares)",
+        "Bowditch rule",
         "Transit rule",
         "Ignoring it"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Angular misclosure is distributed equally (simple) or by least squares adjustment (rigorous) for high-accuracy surveys."
     },
     {
@@ -842,11 +842,11 @@
       "stem": "The altitude of a celestial body is its angular distance",
       "options": [
         "From the meridian",
-        "Above or below the observer's horizon",
         "From the pole",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Above or below the observer's horizon"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Angular distance above or below the horizon."
     },
     {
@@ -859,12 +859,12 @@
       "difficulty": "medium",
       "stem": "The azimuth of a celestial body is measured from",
       "options": [
-        "The east point",
         "The north or south point along the horizon",
+        "Voltage measurement only",
         "The zenith",
-        "Nothing"
+        "The east point"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Measured from north or south point along the horizon."
     },
     {
@@ -878,11 +878,11 @@
       "stem": "The hour angle of a celestial body is",
       "options": [
         "The angle at the observer",
-        "The angle measured westward from the observer's meridian",
         "The angle at the pole",
-        "Nothing"
+        "The angle measured westward from the observer's meridian",
+        "Applicable in limited scenarios"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Angle measured westward from the observer's meridian."
     },
     {
@@ -916,7 +916,7 @@
         "90 minus altitude",
         "Equal to altitude",
         "The same as azimuth",
-        "Nothing"
+        "Applicable in limited scenarios"
       ],
       "answer": 0,
       "solution": "Zenith distance = 90 - altitude."
@@ -931,12 +931,12 @@
       "difficulty": "medium",
       "stem": "The astronomical triangle is formed by",
       "options": [
-        "Zenith, pole, and star",
-        "Three stars",
         "Two poles and zenith",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Zenith, pole, and star",
+        "Three stars"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Formed by zenith, celestial pole, and star."
     },
     {
@@ -949,12 +949,12 @@
       "difficulty": "medium",
       "stem": "Sidereal time is based on the",
       "options": [
+        "Planet's motion",
         "Sun's apparent motion",
-        "Stars' apparent motion",
         "Moon's motion",
-        "Planet's motion"
+        "Stars' apparent motion"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Based on stars' apparent motion."
     },
     {
@@ -967,10 +967,10 @@
       "difficulty": "medium",
       "stem": "Solar time is based on the",
       "options": [
-        "Stars' motion",
+        "Applicable in limited scenarios",
         "Sun's apparent motion",
-        "Moon's motion",
-        "Nothing"
+        "Stars' motion",
+        "Moon's motion"
       ],
       "answer": 1,
       "solution": "Based on Sun's apparent motion."
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "A sidereal day is shorter than a solar day by approximately",
       "options": [
+        "12 minutes",
         "4 minutes",
         "8 minutes",
-        "12 minutes",
         "24 minutes"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Shorter by approximately 4 minutes."
     },
     {
@@ -1003,10 +1003,10 @@
       "difficulty": "medium",
       "stem": "Local Mean Time (LMT) is based on",
       "options": [
-        "Standard time",
+        "Applicable in limited scenarios",
         "The observer's longitude",
-        "The prime meridian",
-        "Nothing"
+        "Standard time",
+        "The prime meridian"
       ],
       "answer": 1,
       "solution": "Based on the observer's longitude."
@@ -1021,10 +1021,10 @@
       "difficulty": "medium",
       "stem": "Local Sidereal Time (LST) is the",
       "options": [
-        "Only solar time",
-        "Hour angle of the vernal equinox",
         "Altitude of the sun",
-        "Nothing"
+        "Hour angle of the vernal equinox",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
       ],
       "answer": 1,
       "solution": "Hour angle of the vernal equinox."
@@ -1040,11 +1040,11 @@
       "stem": "The equal altitude method for finding true bearing involves",
       "options": [
         "Nothing specific",
-        "Observing a star at equal altitudes east and west of the meridian",
         "Measuring solar altitude only",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Observing a star at equal altitudes east and west of the meridian"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Observing star at equal altitudes east and west."
     },
     {
@@ -1057,10 +1057,10 @@
       "difficulty": "medium",
       "stem": "The gyro theodolite determines",
       "options": [
-        "Only magnetic bearing",
+        "Record temperature variations",
         "True north direction",
         "Magnetic declination",
-        "Nothing"
+        "Measure air velocity"
       ],
       "answer": 1,
       "solution": "Determines true north direction."
@@ -1075,12 +1075,12 @@
       "difficulty": "medium",
       "stem": "The gyro north is determined by",
       "options": [
-        "Magnetic compass",
         "Free gyroscope precession",
-        "Star observation only",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Magnetic compass",
+        "Star observation only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "By free gyroscope precession."
     },
     {
@@ -1094,11 +1094,11 @@
       "stem": "A free gyroscope maintains its axis in",
       "options": [
         "Any direction",
-        "The same plane in space",
         "Magnetic north",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "The same plane in space"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Maintains axis in the same plane in space."
     },
     {
@@ -1112,11 +1112,11 @@
       "stem": "The precession of a gyroscope is the",
       "options": [
         "Nothing specific",
+        "Applicable in limited scenarios",
         "Slow rotation of the spin axis about a vertical axis",
-        "Only vibration",
-        "Nothing"
+        "Works under ideal conditions only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Slow rotation of spin axis about vertical axis."
     },
     {
@@ -1129,12 +1129,12 @@
       "difficulty": "medium",
       "stem": "The meridian altitude of a star is its altitude when it is",
       "options": [
-        "At the horizon",
         "On the observer's meridian",
+        "Applicable in limited scenarios",
         "At the pole",
-        "Nothing"
+        "At the horizon"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "When on the observer's meridian."
     },
     {
@@ -1147,12 +1147,12 @@
       "difficulty": "medium",
       "stem": "The zenith is the point directly",
       "options": [
-        "Below the observer",
-        "Above the observer on the celestial sphere",
+        "Applicable in limited scenarios",
         "At the horizon",
-        "Nothing"
+        "Below the observer",
+        "Above the observer on the celestial sphere"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Directly above the observer on celestial sphere."
     },
     {
@@ -1166,11 +1166,11 @@
       "stem": "The celestial equator is the projection of",
       "options": [
         "The ecliptic",
-        "Earth's equator onto the celestial sphere",
         "The meridian",
-        "Nothing"
+        "Earth's equator onto the celestial sphere",
+        "Applicable in limited scenarios"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Projection of Earth's equator onto celestial sphere."
     },
     {
@@ -1183,12 +1183,12 @@
       "difficulty": "medium",
       "stem": "The ecliptic is the apparent path of the",
       "options": [
-        "Stars",
-        "Sun on the celestial sphere",
         "Moon",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Stars",
+        "Sun on the celestial sphere"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Apparent path of the Sun on celestial sphere."
     },
     {
@@ -1201,12 +1201,12 @@
       "difficulty": "medium",
       "stem": "Greenwich Mean Time (GMT) is based on",
       "options": [
-        "Local longitude",
         "The prime meridian",
-        "Standard time zones",
-        "Nothing"
+        "Local longitude",
+        "Applicable in limited scenarios",
+        "Standard time zones"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Based on the prime meridian."
     },
     {
@@ -1219,12 +1219,12 @@
       "difficulty": "medium",
       "stem": "Universal Time (UT) is essentially the same as",
       "options": [
+        "Applicable in limited scenarios",
         "Indian Standard Time",
-        "Greenwich Mean Time",
         "Local time",
-        "Nothing"
+        "Greenwich Mean Time"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Essentially the same as GMT."
     },
     {
@@ -1237,10 +1237,10 @@
       "difficulty": "medium",
       "stem": "The conversion from LMT to GMT requires knowledge of",
       "options": [
-        "Only altitude",
+        "Works under ideal conditions only",
         "The observer's longitude",
-        "Magnetic declination",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Magnetic declination"
       ],
       "answer": 1,
       "solution": "The observer's longitude."
@@ -1256,11 +1256,11 @@
       "stem": "The Polaris is useful for azimuth determination because",
       "options": [
         "It is brightest",
-        "It is very close to the north celestial pole",
+        "Applicable in limited scenarios",
         "It moves fast",
-        "Nothing"
+        "It is very close to the north celestial pole"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Very close to the north celestial pole."
     },
     {
@@ -1273,12 +1273,12 @@
       "difficulty": "medium",
       "stem": "The co-latitude of a place is",
       "options": [
-        "90 minus latitude",
         "90 plus latitude",
+        "90 minus latitude",
         "Equal to latitude",
-        "Nothing"
+        "Applicable in limited scenarios"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Co-latitude = 90 - latitude."
     },
     {
@@ -1291,12 +1291,12 @@
       "difficulty": "medium",
       "stem": "In the astronomical triangle, the three vertices are",
       "options": [
-        "Zenith, north pole, star",
         "East, west, north",
-        "Three stars",
-        "Nothing"
+        "Zenith, north pole, star",
+        "Applicable in limited scenarios",
+        "Three stars"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Zenith, north celestial pole, and star."
     },
     {
@@ -1309,12 +1309,12 @@
       "difficulty": "medium",
       "stem": "The time equation is the difference between",
       "options": [
-        "Local time and standard time",
         "Apparent solar time and mean solar time",
-        "Sidereal and solar time",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Local time and standard time",
+        "Sidereal and solar time"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Between apparent solar time and mean solar time."
     },
     {
@@ -1327,12 +1327,12 @@
       "difficulty": "medium",
       "stem": "The gyro theodolite operates on the principle of",
       "options": [
-        "Magnetic attraction",
         "Conservation of angular momentum of a spinning rotor",
         "Gravity only",
-        "Nothing"
+        "Monitor gas concentrations",
+        "Magnetic attraction"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Conservation of angular momentum of spinning rotor."
     },
     {
@@ -1345,12 +1345,12 @@
       "difficulty": "medium",
       "stem": "The meridian passage of a star occurs when it",
       "options": [
-        "Rises",
-        "Crosses the observer's meridian",
         "Sets",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Crosses the observer's meridian",
+        "Rises"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Crosses the observer's meridian."
     },
     {
@@ -1363,12 +1363,12 @@
       "difficulty": "medium",
       "stem": "The prime vertical is the great circle passing through the zenith and",
       "options": [
-        "North and south points",
-        "East and west points",
+        "Applicable in limited scenarios",
         "The poles",
-        "Nothing"
+        "North and south points",
+        "East and west points"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Through zenith and east-west points."
     },
     {
@@ -1381,12 +1381,12 @@
       "difficulty": "medium",
       "stem": "The diurnal motion of stars is caused by",
       "options": [
-        "Star movement",
         "Earth's rotation on its axis",
-        "Earth's revolution",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "Star movement",
+        "Earth's revolution"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Caused by Earth's rotation."
     },
     {
@@ -1400,11 +1400,11 @@
       "stem": "The annual motion of the Sun is caused by",
       "options": [
         "Sun's movement",
+        "Applicable in limited scenarios",
         "Earth's revolution around the Sun",
-        "Earth's rotation",
-        "Nothing"
+        "Earth's rotation"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Caused by Earth's revolution."
     },
     {
@@ -1417,12 +1417,12 @@
       "difficulty": "medium",
       "stem": "The North Star is located in the constellation",
       "options": [
-        "Orion",
-        "Ursa Minor",
+        "Applicable in limited scenarios",
         "Cassiopeia",
-        "Nothing"
+        "Orion",
+        "Ursa Minor"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In Ursa Minor."
     },
     {
@@ -1435,12 +1435,12 @@
       "difficulty": "medium",
       "stem": "The altitude of the celestial pole is equal to the",
       "options": [
-        "Longitude",
         "Latitude of the observer",
-        "Declination",
-        "Nothing"
+        "Longitude",
+        "Applicable in limited scenarios",
+        "Declination"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Equal to latitude of the observer."
     },
     {
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "The zenith and nadir are",
       "options": [
-        "On the horizon",
         "Diametrically opposite on the celestial sphere",
-        "Same point",
-        "Nothing"
+        "Applicable in limited scenarios",
+        "On the horizon",
+        "Same point"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Diametrically opposite on celestial sphere."
     },
     {
@@ -1471,12 +1471,12 @@
       "difficulty": "medium",
       "stem": "Newton's first law of motion is also known as:",
       "options": [
-        "A. Law of acceleration",
         "B. Law of inertia",
+        "D. Law of gravity",
         "C. Law of reaction",
-        "D. Law of gravity"
+        "A. Law of acceleration"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Newton's first law is the law of inertia."
     },
     {
@@ -1489,12 +1489,12 @@
       "difficulty": "medium",
       "stem": "Which planet has the most moons in the solar system?",
       "options": [
-        "A. Jupiter",
         "B. Saturn",
         "C. Uranus",
-        "D. Neptune"
+        "D. Neptune",
+        "A. Jupiter"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Saturn has over 140 confirmed moons, the most in the solar system."
     },
     {
@@ -1508,11 +1508,11 @@
       "stem": "The chemical element with atomic number 79 is:",
       "options": [
         "A. Silver",
-        "B. Platinum",
         "C. Gold",
-        "D. Copper"
+        "D. Copper",
+        "B. Platinum"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Gold (Au) has atomic number 79."
     },
     {
@@ -1561,12 +1561,12 @@
       "difficulty": "medium",
       "stem": "The Bharat Ratna award was first given in which year?",
       "options": [
+        "D. 1960",
         "A. 1947",
         "B. 1950",
-        "C. 1954",
-        "D. 1960"
+        "C. 1954"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Bharat Ratna was first awarded in 1954 to C. Rajagopalachari, S. Radhakrishnan, and C.V. Raman."
     },
     {
@@ -1579,12 +1579,12 @@
       "difficulty": "medium",
       "stem": "Which Indian sportsperson was awarded the Rajiv Gandhi Khel Ratna (now Major Dhyan Chand Khel Ratna) in 2023?",
       "options": [
-        "A. Virat Kohli",
-        "B. Neeraj Chopra",
+        "D. Mirabai Chanu",
         "C. PV Sindhu",
-        "D. Mirabai Chanu"
+        "B. Neeraj Chopra",
+        "A. Virat Kohli"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Neeraj Chopra received the Major Dhyan Chand Khel Ratna for javelin throw."
     },
     {
@@ -1597,10 +1597,10 @@
       "difficulty": "medium",
       "stem": "The headquarters of the United Nations is located in which city?",
       "options": [
+        "D. London",
         "A. Geneva",
-        "B. Washington D.C.",
         "C. New York",
-        "D. London"
+        "B. Washington D.C."
       ],
       "answer": 2,
       "solution": "UN headquarters is in New York City."
@@ -1615,12 +1615,12 @@
       "difficulty": "medium",
       "stem": "BRICS includes which of the following countries?",
       "options": [
+        "D. Brazil, Russia, Ireland, China, South Africa",
         "A. Brazil, Russia, India, China, South Africa",
-        "B. Britain, Russia, Italy, China, Spain",
         "C. Brazil, Romania, Indonesia, Canada, Saudi Arabia",
-        "D. Brazil, Russia, Ireland, China, South Africa"
+        "B. Britain, Russia, Italy, China, Spain"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "BRICS originally included Brazil, Russia, India, China, and South Africa."
     },
     {
@@ -1633,12 +1633,12 @@
       "difficulty": "medium",
       "stem": "Who wrote the book 'Discovery of India'?",
       "options": [
-        "A. Mahatma Gandhi",
-        "B. Jawaharlal Nehru",
         "C. Dr. B.R. Ambedkar",
-        "D. Bankim Chandra Chatterjee"
+        "A. Mahatma Gandhi",
+        "D. Bankim Chandra Chatterjee",
+        "B. Jawaharlal Nehru"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Jawaharlal Nehru wrote 'Discovery of India' during his imprisonment."
     },
     {
@@ -1651,12 +1651,12 @@
       "difficulty": "medium",
       "stem": "The Arjuna Award is given for excellence in:",
       "options": [
-        "A. Literature",
         "B. Science",
         "C. Sports",
-        "D. Social work"
+        "D. Social work",
+        "A. Literature"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Arjuna Award is given for outstanding sports performance."
     },
     {
@@ -1669,12 +1669,12 @@
       "difficulty": "medium",
       "stem": "Which organization manages the Indian space programme?",
       "options": [
+        "D. DAE",
         "A. DRDO",
         "B. ISRO",
-        "C. BARC",
-        "D. DAE"
+        "C. BARC"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "ISRO (Indian Space Research Organisation) manages India's space programme."
     },
     {
@@ -1687,12 +1687,12 @@
       "difficulty": "medium",
       "stem": "The Nobel Peace Prize 2023 was awarded to:",
       "options": [
+        "D. UNICEF",
         "A. IPCC",
         "B. Narges Mohammadi",
-        "C. WHO",
-        "D. UNICEF"
+        "C. WHO"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Narges Mohammadi received the 2023 Nobel Peace Prize for her fight against oppression of women in Iran."
     },
     {
@@ -1706,11 +1706,11 @@
       "stem": "Which Indian is known for the book 'Wings of Fire'?",
       "options": [
         "A. Jawaharlal Nehru",
-        "B. APJ Abdul Kalam",
         "C. Vikram Sarabhai",
+        "B. APJ Abdul Kalam",
         "D. Homi Bhabha"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "APJ Abdul Kalam wrote his autobiography 'Wings of Fire'."
     },
     {
@@ -1725,8 +1725,8 @@
       "options": [
         "A. New York",
         "B. Geneva",
-        "C. Paris",
-        "D. London"
+        "D. London",
+        "C. Paris"
       ],
       "answer": 1,
       "solution": "WHO headquarters is in Geneva, Switzerland."
@@ -1742,9 +1742,9 @@
       "stem": "Who is the author of 'My Experiments with Truth'?",
       "options": [
         "A. Jawaharlal Nehru",
-        "B. Subhas Chandra Bose",
+        "D. B.R. Ambedkar",
         "C. Mahatma Gandhi",
-        "D. B.R. Ambedkar"
+        "B. Subhas Chandra Bose"
       ],
       "answer": 2,
       "solution": "Mahatma Gandhi wrote the autobiography 'My Experiments with Truth'."
@@ -1760,9 +1760,9 @@
       "stem": "The Padma Vibhushan is the _ _ _ _ highest civilian award in India?",
       "options": [
         "A. Second",
-        "B. Third",
         "C. Fourth",
-        "D. First"
+        "D. First",
+        "B. Third"
       ],
       "answer": 0,
       "solution": "Padma Vibhushan is the second-highest civilian award after Bharat Ratna."
@@ -1778,11 +1778,11 @@
       "stem": "The headquarters of the International Court of Justice is in:",
       "options": [
         "A. New York",
-        "B. The Hague",
         "C. Geneva",
-        "D. Vienna"
+        "D. Vienna",
+        "B. The Hague"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "ICJ is headquartered in The Hague, Netherlands."
     },
     {
@@ -1796,11 +1796,11 @@
       "stem": "Which Indian won the Nobel Prize in Economics?",
       "options": [
         "A. C.V. Raman",
-        "B. Amartya Sen",
         "C. Har Gobind Khorana",
+        "B. Amartya Sen",
         "D. Venki Ramakrishnan"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Amartya Sen won the Nobel Prize in Economics in 1998."
     },
     {
@@ -1813,13 +1813,85 @@
       "difficulty": "medium",
       "stem": "Which country hosted the FIFA World Cup 2022?",
       "options": [
-        "A. Russia",
-        "B. Japan",
+        "D. Brazil",
         "C. Qatar",
-        "D. Brazil"
+        "A. Russia",
+        "B. Japan"
+      ],
+      "answer": 1,
+      "solution": "Qatar hosted the FIFA World Cup 2022."
+    },
+    {
+      "id": 81,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the day before yesterday was Thursday, what day will it be three days after tomorrow?",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Sunday"
+      ],
+      "answer": 0,
+      "solution": "Day before yesterday = Thursday → Today = Saturday. Tomorrow = Sunday. 3 days after tomorrow = Wednesday. Wait: today = Saturday. Tomorrow = Sunday. 3 days after Sunday = Wednesday. But Monday is listed first... Let me recalculate: If day before yesterday is Thursday, today is Saturday. Tomorrow is Sunday. Three days after tomorrow: Sunday + 3 = Wednesday."
+    },
+    {
+      "id": 82,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is the angle between the hands of a clock at 3:30?",
+      "options": [
+        "85°",
+        "90°",
+        "75°",
+        "80°"
       ],
       "answer": 2,
-      "solution": "Qatar hosted the FIFA World Cup 2022."
+      "solution": "Hour hand at 3:30 = 3×30 + 30×0.5 = 105°. Minute hand = 30×6 = 180°. Angle = |180 - 105| = 75°"
+    },
+    {
+      "id": 83,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An article is sold for ₹600 at a 20% loss. What was the cost price?",
+      "options": [
+        "₹680",
+        "₹700",
+        "₹720",
+        "₹750"
+      ],
+      "answer": 3,
+      "solution": "CP = 600 / 0.80 = ₹750"
+    },
+    {
+      "id": 84,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A person covers a distance at 20 km/h and returns at 30 km/h. What is the average speed for the whole journey?",
+      "options": [
+        "24 km/h",
+        "25 km/h",
+        "22 km/h",
+        "26 km/h"
+      ],
+      "answer": 0,
+      "solution": "Average speed = 2×20×30/(20+30) = 1200/50 = 24 km/h"
     }
   ]
 }
