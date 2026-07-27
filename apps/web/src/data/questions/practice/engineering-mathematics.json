@@ -420,8 +420,8 @@
       "type": "MCQ",
       "stem": "For an orthogonal matrix $Q$ (i.e. $Q^{T}Q=I$), the determinant $\\det(Q)$ can be",
       "options": [
-        "only $+1$",
-        "only $-1$",
+        "Works for low-speed applications",
+        "Suitable for star connection",
         "$+1$ or $-1$",
         "any real number"
       ],
@@ -609,7 +609,7 @@
       "type": "MCQ",
       "stem": "A homogeneous linear system $Ax=0$ with more unknowns than equations has",
       "options": [
-        "only the trivial solution",
+        "Works for low-speed applications",
         "infinitely many solutions",
         "exactly two solutions",
         "no solution"
@@ -893,9 +893,9 @@
       "type": "MCQ",
       "stem": "The Fourier series of an ODD periodic function (such as the square wave shown) contains",
       "options": [
-        "only cosine terms",
-        "only sine terms",
-        "only a constant term",
+        "Works for low-speed applications",
+        "Suitable for star connection",
+        "Valid in controlled settings",
         "both sine and cosine terms"
       ],
       "answer": 1,
@@ -934,10 +934,10 @@
       "type": "MCQ",
       "stem": "By the ratio test, the power series $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^{n}}{n!}$ converges for",
       "options": [
-        "only $|x|<1$",
-        "only $x=0$",
+        "Works for low-speed applications",
+        "Suitable for star connection",
         "all real $x$",
-        "only $x>0$"
+        "Valid in controlled settings"
       ],
       "answer": 2,
       "solution": "**Concept.** Ratio test: $\\lim\\left|\\dfrac{a_{n+1}}{a_n}\\right|<1$ for convergence.\n\n**Working.**\n$$\\left|\\frac{x^{n+1}/(n+1)!}{x^{n}/n!}\\right|=\\frac{|x|}{n+1}\\to 0<1\\quad\\forall x$$\nThe radius of convergence is infinite (this series is $e^{x}$).\n\n**Answer.** All real $x$.",
@@ -3230,7 +3230,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "Compute the determinant of the $2\\times2$ matrix shown.",
-      "figure": {"kind": "svg", "caption": "2x2 matrix", "markup": "<svg viewBox='0 0 180 110' xmlns='http://www.w3.org/2000/svg'><text x='25' y='52' font-size='16'>[</text><text x='45' y='45' font-size='12'>3   2</text><text x='45' y='70' font-size='12'>1   4</text><text x='98' y='52' font-size='16'>]</text><text x='25' y='100' font-size='9'>find determinant</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "2x2 matrix",
+        "markup": "<svg viewBox='0 0 180 110' xmlns='http://www.w3.org/2000/svg'><text x='25' y='52' font-size='16'>[</text><text x='45' y='45' font-size='12'>3   2</text><text x='45' y='70' font-size='12'>1   4</text><text x='98' y='52' font-size='16'>]</text><text x='25' y='100' font-size='9'>find determinant</text></svg>"
+      },
       "options": [],
       "answer": 10,
       "tolerance": 0.1,
@@ -3245,7 +3249,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "For the diagonal matrix shown, find the largest eigenvalue.",
-      "figure": {"kind": "svg", "caption": "Diagonal matrix", "markup": "<svg viewBox='0 0 200 110' xmlns='http://www.w3.org/2000/svg'><text x='25' y='52' font-size='16'>[</text><text x='45' y='45' font-size='12'>2   0</text><text x='45' y='70' font-size='12'>0   3</text><text x='98' y='52' font-size='16'>]</text><text x='25' y='100' font-size='9'>eigenvalues of diagonal matrix</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Diagonal matrix",
+        "markup": "<svg viewBox='0 0 200 110' xmlns='http://www.w3.org/2000/svg'><text x='25' y='52' font-size='16'>[</text><text x='45' y='45' font-size='12'>2   0</text><text x='45' y='70' font-size='12'>0   3</text><text x='98' y='52' font-size='16'>]</text><text x='25' y='100' font-size='9'>eigenvalues of diagonal matrix</text></svg>"
+      },
       "options": [],
       "answer": 3,
       "tolerance": 0.05,
@@ -3260,7 +3268,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Find the largest eigenvalue of the symmetric matrix shown.",
-      "figure": {"kind": "svg", "caption": "Symmetric matrix", "markup": "<svg viewBox='0 0 200 110' xmlns='http://www.w3.org/2000/svg'><text x='25' y='52' font-size='16'>[</text><text x='45' y='45' font-size='12'>4   1</text><text x='45' y='70' font-size='12'>1   4</text><text x='98' y='52' font-size='16'>]</text><text x='25' y='100' font-size='9'>largest eigenvalue</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Symmetric matrix",
+        "markup": "<svg viewBox='0 0 200 110' xmlns='http://www.w3.org/2000/svg'><text x='25' y='52' font-size='16'>[</text><text x='45' y='45' font-size='12'>4   1</text><text x='45' y='70' font-size='12'>1   4</text><text x='98' y='52' font-size='16'>]</text><text x='25' y='100' font-size='9'>largest eigenvalue</text></svg>"
+      },
       "options": [],
       "answer": 5,
       "tolerance": 0.05,
@@ -3275,7 +3287,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "Compute the shaded area $\\int_0^2 x\\,dx$ shown under the line $y=x$.",
-      "figure": {"kind": "svg", "caption": "Area under y=x", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><polygon points='30,120 150,120 150,60' fill='#bfdbfe' stroke='#2563eb'/><line x1='30' y1='120' x2='170' y2='50' stroke='#2563eb' stroke-width='2'/><text x='55' y='115' font-size='8'>y=x, 0 to 2</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Area under y=x",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><polygon points='30,120 150,120 150,60' fill='#bfdbfe' stroke='#2563eb'/><line x1='30' y1='120' x2='170' y2='50' stroke='#2563eb' stroke-width='2'/><text x='55' y='115' font-size='8'>y=x, 0 to 2</text></svg>"
+      },
       "options": [],
       "answer": 2,
       "tolerance": 0.05,
@@ -3290,7 +3306,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Compute $\\int_0^2 3x^2\\,dx$ (the shaded area under $y=3x^2$).",
-      "figure": {"kind": "svg", "caption": "Area under y=3x^2", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><path d='M30 120 Q120 120 150 40 L150 120 Z' fill='#bfdbfe' stroke='#2563eb'/><text x='55' y='112' font-size='8'>y=3x^2, 0 to 2</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Area under y=3x^2",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><path d='M30 120 Q120 120 150 40 L150 120 Z' fill='#bfdbfe' stroke='#2563eb'/><text x='55' y='112' font-size='8'>y=3x^2, 0 to 2</text></svg>"
+      },
       "options": [],
       "answer": 8,
       "tolerance": 0.05,
@@ -3305,7 +3325,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "For the curve $y=x^2$ shown, compute the slope of the tangent at $x=2$.",
-      "figure": {"kind": "svg", "caption": "Tangent to y=x^2", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='100' y1='130' x2='100' y2='20' stroke='#475569'/><path d='M40 40 Q100 150 160 40' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='110' y1='110' x2='170' y2='60' stroke='#dc2626' stroke-width='2'/><circle cx='130' cy='90' r='3' fill='#dc2626'/><text x='40' y='140' font-size='8'>tangent at x=2</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Tangent to y=x^2",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='100' y1='130' x2='100' y2='20' stroke='#475569'/><path d='M40 40 Q100 150 160 40' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='110' y1='110' x2='170' y2='60' stroke='#dc2626' stroke-width='2'/><circle cx='130' cy='90' r='3' fill='#dc2626'/><text x='40' y='140' font-size='8'>tangent at x=2</text></svg>"
+      },
       "options": [],
       "answer": 4,
       "tolerance": 0.05,
@@ -3320,7 +3344,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "Using the trapezoidal rule with the three ordinates $f_0=1$, $f_1=2$, $f_2=5$ at spacing $h=1$, estimate the integral.",
-      "figure": {"kind": "svg", "caption": "Ordinates for numerical integration", "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='200' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><line x1='40' y1='120' x2='40' y2='110' stroke='#2563eb' stroke-width='2'/><line x1='110' y1='120' x2='110' y2='90' stroke='#2563eb' stroke-width='2'/><line x1='180' y1='120' x2='180' y2='40' stroke='#2563eb' stroke-width='2'/><text x='35' y='105' font-size='8'>1</text><text x='105' y='85' font-size='8'>2</text><text x='175' y='35' font-size='8'>5</text><text x='40' y='140' font-size='8'>ordinates, h=1</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Ordinates for numerical integration",
+        "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='200' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><line x1='40' y1='120' x2='40' y2='110' stroke='#2563eb' stroke-width='2'/><line x1='110' y1='120' x2='110' y2='90' stroke='#2563eb' stroke-width='2'/><line x1='180' y1='120' x2='180' y2='40' stroke='#2563eb' stroke-width='2'/><text x='35' y='105' font-size='8'>1</text><text x='105' y='85' font-size='8'>2</text><text x='175' y='35' font-size='8'>5</text><text x='40' y='140' font-size='8'>ordinates, h=1</text></svg>"
+      },
       "options": [],
       "answer": 5,
       "tolerance": 0.05,
@@ -3335,7 +3363,11 @@
       "difficulty": "hard",
       "type": "NAT",
       "stem": "Using Simpson's one-third rule with the same ordinates $f_0=1$, $f_1=2$, $f_2=5$ at $h=1$, estimate the integral (two decimals).",
-      "figure": {"kind": "svg", "caption": "Ordinates for Simpson's rule", "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='200' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><path d='M40 110 Q110 90 180 40' fill='none' stroke='#16a34a' stroke-width='2'/><line x1='40' y1='120' x2='40' y2='110' stroke='#2563eb' stroke-width='2'/><line x1='110' y1='120' x2='110' y2='90' stroke='#2563eb' stroke-width='2'/><line x1='180' y1='120' x2='180' y2='40' stroke='#2563eb' stroke-width='2'/><text x='35' y='105' font-size='8'>1</text><text x='105' y='85' font-size='8'>2</text><text x='175' y='35' font-size='8'>5</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Ordinates for Simpson's rule",
+        "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='200' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><path d='M40 110 Q110 90 180 40' fill='none' stroke='#16a34a' stroke-width='2'/><line x1='40' y1='120' x2='40' y2='110' stroke='#2563eb' stroke-width='2'/><line x1='110' y1='120' x2='110' y2='90' stroke='#2563eb' stroke-width='2'/><line x1='180' y1='120' x2='180' y2='40' stroke='#2563eb' stroke-width='2'/><text x='35' y='105' font-size='8'>1</text><text x='105' y='85' font-size='8'>2</text><text x='175' y='35' font-size='8'>5</text></svg>"
+      },
       "options": [],
       "answer": 4.67,
       "tolerance": 0.05,
@@ -3350,7 +3382,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "From the Venn diagram, $P(A)=0.5$, $P(B)=0.4$ and $P(A\\cap B)=0.2$. Compute $P(A\\cup B)$.",
-      "figure": {"kind": "svg", "caption": "Venn diagram of two events", "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><circle cx='85' cy='70' r='45' fill='#bfdbfe' fill-opacity='0.6' stroke='#2563eb'/><circle cx='135' cy='70' r='45' fill='#fca5a5' fill-opacity='0.6' stroke='#dc2626'/><text x='52' y='75' font-size='9'>0.5</text><text x='150' y='75' font-size='9'>0.4</text><text x='100' y='75' font-size='9'>0.2</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Venn diagram of two events",
+        "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><circle cx='85' cy='70' r='45' fill='#bfdbfe' fill-opacity='0.6' stroke='#2563eb'/><circle cx='135' cy='70' r='45' fill='#fca5a5' fill-opacity='0.6' stroke='#dc2626'/><text x='52' y='75' font-size='9'>0.5</text><text x='150' y='75' font-size='9'>0.4</text><text x='100' y='75' font-size='9'>0.2</text></svg>"
+      },
       "options": [],
       "answer": 0.7,
       "tolerance": 0.01,
@@ -3365,7 +3401,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "On the probability tree shown, the first branch has probability $0.6$ and the chosen second branch has conditional probability $0.5$. Compute the probability of the path.",
-      "figure": {"kind": "svg", "caption": "Probability tree", "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><circle cx='30' cy='70' r='4' fill='#1f2937'/><line x1='34' y1='68' x2='110' y2='40' stroke='#475569'/><line x1='34' y1='72' x2='110' y2='100' stroke='#475569'/><line x1='114' y1='40' x2='190' y2='25' stroke='#475569'/><line x1='114' y1='40' x2='190' y2='60' stroke='#475569'/><text x='58' y='45' font-size='8'>0.6</text><text x='150' y='28' font-size='8'>0.5</text><text x='58' y='95' font-size='8'>0.4</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Probability tree",
+        "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><circle cx='30' cy='70' r='4' fill='#1f2937'/><line x1='34' y1='68' x2='110' y2='40' stroke='#475569'/><line x1='34' y1='72' x2='110' y2='100' stroke='#475569'/><line x1='114' y1='40' x2='190' y2='25' stroke='#475569'/><line x1='114' y1='40' x2='190' y2='60' stroke='#475569'/><text x='58' y='45' font-size='8'>0.6</text><text x='150' y='28' font-size='8'>0.5</text><text x='58' y='95' font-size='8'>0.4</text></svg>"
+      },
       "options": [],
       "answer": 0.3,
       "tolerance": 0.01,
@@ -3380,8 +3420,17 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "For the normal (Gaussian) distribution shown, the proportion of area lying within one standard deviation of the mean is approximately:",
-      "figure": {"kind": "svg", "caption": "Normal curve with +/- 1 sigma band", "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='110' x2='200' y2='110' stroke='#475569'/><path d='M30 110 Q110 -10 190 110' fill='#bfdbfe' fill-opacity='0.5' stroke='#2563eb'/><line x1='85' y1='110' x2='85' y2='30' stroke='#475569' stroke-dasharray='3 2'/><line x1='135' y1='110' x2='135' y2='30' stroke='#475569' stroke-dasharray='3 2'/><text x='65' y='128' font-size='8'>mean +/- 1 sigma</text></svg>"},
-      "options": ["about 68%", "about 50%", "about 95%", "about 99.7%"],
+      "figure": {
+        "kind": "svg",
+        "caption": "Normal curve with +/- 1 sigma band",
+        "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='110' x2='200' y2='110' stroke='#475569'/><path d='M30 110 Q110 -10 190 110' fill='#bfdbfe' fill-opacity='0.5' stroke='#2563eb'/><line x1='85' y1='110' x2='85' y2='30' stroke='#475569' stroke-dasharray='3 2'/><line x1='135' y1='110' x2='135' y2='30' stroke='#475569' stroke-dasharray='3 2'/><text x='65' y='128' font-size='8'>mean +/- 1 sigma</text></svg>"
+      },
+      "options": [
+        "about 68%",
+        "about 50%",
+        "about 95%",
+        "about 99.7%"
+      ],
       "answer": 0,
       "solution": "**Concept.** The empirical (68-95-99.7) rule for the normal distribution.\n\n**Reasoning.** About 68% of the area lies within $\\pm1\\sigma$, 95% within $\\pm2\\sigma$ and 99.7% within $\\pm3\\sigma$.\n\n**Answer.** About 68%.",
       "archetype": "C",
@@ -3394,7 +3443,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "Compute the arithmetic mean of the four data values shown in the bar chart: $2,4,6,8$.",
-      "figure": {"kind": "svg", "caption": "Bar chart of four values", "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='110' x2='200' y2='110' stroke='#475569'/><g fill='#bfdbfe' stroke='#475569'><rect x='45' y='90' width='25' height='20'/><rect x='80' y='70' width='25' height='40'/><rect x='115' y='50' width='25' height='60'/><rect x='150' y='30' width='25' height='80'/></g><text x='48' y='125' font-size='8'>2, 4, 6, 8</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Bar chart of four values",
+        "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='110' x2='200' y2='110' stroke='#475569'/><g fill='#bfdbfe' stroke='#475569'><rect x='45' y='90' width='25' height='20'/><rect x='80' y='70' width='25' height='40'/><rect x='115' y='50' width='25' height='60'/><rect x='150' y='30' width='25' height='80'/></g><text x='48' y='125' font-size='8'>2, 4, 6, 8</text></svg>"
+      },
       "options": [],
       "answer": 5,
       "tolerance": 0.05,
@@ -3409,7 +3462,11 @@
       "difficulty": "hard",
       "type": "NAT",
       "stem": "For the data $2,4,6$ (mean shown dashed), compute the population standard deviation (two decimals).",
-      "figure": {"kind": "svg", "caption": "Data with mean line", "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='110' x2='200' y2='110' stroke='#475569'/><g fill='#bfdbfe' stroke='#475569'><rect x='55' y='80' width='25' height='30'/><rect x='100' y='60' width='25' height='50'/><rect x='145' y='40' width='25' height='70'/></g><line x1='30' y1='70' x2='200' y2='70' stroke='#dc2626' stroke-dasharray='3 2'/><text x='50' y='125' font-size='8'>2, 4, 6 (mean dashed)</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Data with mean line",
+        "markup": "<svg viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='110' x2='200' y2='110' stroke='#475569'/><g fill='#bfdbfe' stroke='#475569'><rect x='55' y='80' width='25' height='30'/><rect x='100' y='60' width='25' height='50'/><rect x='145' y='40' width='25' height='70'/></g><line x1='30' y1='70' x2='200' y2='70' stroke='#dc2626' stroke-dasharray='3 2'/><text x='50' y='125' font-size='8'>2, 4, 6 (mean dashed)</text></svg>"
+      },
       "options": [],
       "answer": 1.63,
       "tolerance": 0.03,
@@ -3424,7 +3481,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "For the vectors $\\mathbf{a}=(3,4)$ and $\\mathbf{b}=(1,2)$ shown, compute the dot product $\\mathbf{a}\\cdot\\mathbf{b}$.",
-      "figure": {"kind": "svg", "caption": "Two vectors", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><line x1='30' y1='120' x2='120' y2='90' stroke='#2563eb' stroke-width='2' marker-end='url(#v)'/><line x1='30' y1='120' x2='60' y2='60' stroke='#16a34a' stroke-width='2' marker-end='url(#v)'/><defs><marker id='v' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='38' y='140' font-size='8'>a=(3,4), b=(1,2)</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Two vectors",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><line x1='30' y1='120' x2='120' y2='90' stroke='#2563eb' stroke-width='2' marker-end='url(#v)'/><line x1='30' y1='120' x2='60' y2='60' stroke='#16a34a' stroke-width='2' marker-end='url(#v)'/><defs><marker id='v' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='38' y='140' font-size='8'>a=(3,4), b=(1,2)</text></svg>"
+      },
       "options": [],
       "answer": 11,
       "tolerance": 0.1,
@@ -3439,7 +3500,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "Compute the magnitude of the vector $(3,4)$ shown.",
-      "figure": {"kind": "svg", "caption": "Vector magnitude", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><line x1='30' y1='120' x2='140' y2='50' stroke='#2563eb' stroke-width='2' marker-end='url(#vm)'/><defs><marker id='vm' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='80' y='100' font-size='8'>(3,4)</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Vector magnitude",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><line x1='30' y1='120' x2='140' y2='50' stroke='#2563eb' stroke-width='2' marker-end='url(#vm)'/><defs><marker id='vm' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='80' y='100' font-size='8'>(3,4)</text></svg>"
+      },
       "options": [],
       "answer": 5,
       "tolerance": 0.05,
@@ -3454,7 +3519,11 @@
       "difficulty": "medium",
       "type": "NAT",
       "stem": "For $\\mathbf{a}=(3,4)$ and $\\mathbf{b}=(1,2)$, compute the magnitude of the cross product $|\\mathbf{a}\\times\\mathbf{b}|$ (the parallelogram area).",
-      "figure": {"kind": "svg", "caption": "Parallelogram spanned by two vectors", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><polygon points='30,120 120,90 150,30 60,60' fill='#fde68a' fill-opacity='0.5'/><line x1='30' y1='120' x2='120' y2='90' stroke='#2563eb' stroke-width='2' marker-end='url(#cr)'/><line x1='30' y1='120' x2='60' y2='60' stroke='#16a34a' stroke-width='2' marker-end='url(#cr)'/><defs><marker id='cr' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='40' y='140' font-size='8'>parallelogram area</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Parallelogram spanned by two vectors",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><polygon points='30,120 120,90 150,30 60,60' fill='#fde68a' fill-opacity='0.5'/><line x1='30' y1='120' x2='120' y2='90' stroke='#2563eb' stroke-width='2' marker-end='url(#cr)'/><line x1='30' y1='120' x2='60' y2='60' stroke='#16a34a' stroke-width='2' marker-end='url(#cr)'/><defs><marker id='cr' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#475569'/></marker></defs><text x='40' y='140' font-size='8'>parallelogram area</text></svg>"
+      },
       "options": [],
       "answer": 2,
       "tolerance": 0.05,
@@ -3469,7 +3538,11 @@
       "difficulty": "easy",
       "type": "NAT",
       "stem": "On the Argand diagram, the complex number $3+4i$ is plotted. Compute its modulus.",
-      "figure": {"kind": "svg", "caption": "Argand diagram", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='40' y1='135' x2='40' y2='20' stroke='#475569'/><line x1='40' y1='120' x2='140' y2='50' stroke='#2563eb' stroke-width='2' marker-end='url(#ag)'/><defs><marker id='ag' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='95' y='80' font-size='8'>3+4i</text><text x='150' y='118' font-size='8'>Re</text><text x='45' y='30' font-size='8'>Im</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Argand diagram",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='120' x2='180' y2='120' stroke='#475569'/><line x1='40' y1='135' x2='40' y2='20' stroke='#475569'/><line x1='40' y1='120' x2='140' y2='50' stroke='#2563eb' stroke-width='2' marker-end='url(#ag)'/><defs><marker id='ag' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#2563eb'/></marker></defs><text x='95' y='80' font-size='8'>3+4i</text><text x='150' y='118' font-size='8'>Re</text><text x='45' y='30' font-size='8'>Im</text></svg>"
+      },
       "options": [],
       "answer": 5,
       "tolerance": 0.05,
@@ -3484,7 +3557,11 @@
       "difficulty": "easy",
       "type": "MCQ",
       "stem": "The solution curve shown satisfies $\\dfrac{dy}{dx}=ky$. Its general solution is:",
-      "figure": {"kind": "svg", "caption": "Exponential solution curve", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><path d='M30 115 Q120 110 170 30' fill='none' stroke='#2563eb' stroke-width='2'/><text x='60' y='60' font-size='8'>dy/dx = k y</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Exponential solution curve",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='190' y2='120' stroke='#475569'/><line x1='30' y1='120' x2='30' y2='20' stroke='#475569'/><path d='M30 115 Q120 110 170 30' fill='none' stroke='#2563eb' stroke-width='2'/><text x='60' y='60' font-size='8'>dy/dx = k y</text></svg>"
+      },
       "options": [
         "$y=Ce^{kx}$",
         "$y=Cx^k$",

@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The Riemann curvature tensor R_{alpha beta gamma delta} of a 2-dimensional sphere of radius R has how many independent non-zero components?",
       "options": [
+        "256",
         "1",
         "4",
-        "16",
-        "256"
+        "16"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For a 2D manifold the Riemann tensor has only R_1212 as independent component. Using symmetries R_alpha_beta_gamma_delta = -R_beta_alpha_gamma_delta = -R_alpha_beta_delta_gamma = R_gamma_delta_alpha_beta and the first Bianchi identity, in 2D the tensor is fully determined by the Gaussian curvature K: R_1212 = K R^2. For a sphere of radius R, K = 1/R^2. The number of independent components in n dimensions is n^2(n^2-1)/12; for n = 2 this gives 1.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "medium",
       "stem": "The Lie algebra so(3) of the rotation group SO(3) is isomorphic to which other Lie algebra?",
       "options": [
-        "su(2)",
         "su(3)",
         "sl(2,R)",
-        "u(1)"
+        "u(1)",
+        "su(2)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "so(3) and su(2) are isomorphic as real Lie algebras. Both are 3-dimensional with the commutation relation [Ji, Jj] = i epsilon_ijk Jk. The key difference is that SU(2) is the double cover of SO(3), making SU(2) simply connected while SO(3) has pi_1 = Z_2. This is why spin-1/2 representations exist for SU(2) but not for SO(3).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "hard",
       "stem": "In the Feynman path integral formulation, the propagator K(x_f, t_f; x_i, t_i) is proportional to the sum over all paths of:",
       "options": [
-        "exp(iS[x]/hbar)",
-        "exp(-S[x]/hbar)",
         "exp(iS[x]/hbar^2)",
-        "cos(S[x]/hbar)"
+        "cos(S[x]/hbar)",
+        "exp(iS[x]/hbar)",
+        "exp(-S[x]/hbar)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The Feynman propagator is K = integral Dx(t) exp(iS[x]/hbar), where S[x] = integral L dt is the classical action along path x(t). Each path contributes a phase equal to the action divided by hbar. The classical path dominates in the hbar -> 0 limit via stationary phase. Note: exp(-S/hbar) appears in Euclidean (Wick-rotated) path integrals for statistical mechanics.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "hard",
       "stem": "A Kahler manifold is a complex manifold equipped with a metric g whose associated 2-form omega satisfies which condition?",
       "options": [
+        "omega wedge omega = 0",
         "d omega = 0 (closed)",
         "d omega = -delta omega",
-        "nabla omega = 0",
-        "omega wedge omega = 0"
+        "nabla omega = 0"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A Kahler manifold has a Hermitian metric whose Kahler 2-form omega = i g_abar dz^a wedge dz^bar_b is closed, i.e., d omega = 0. This implies nabla omega = 0 (parallel), connecting complex, symplectic, and Riemannian geometry. Examples: CP^n, complex tori. Non-examples: Hopf surface (d omega != 0).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "easy",
       "stem": "In non-commutative quantum mechanics, the Moyal star product replaces ordinary multiplication. For two functions f and g on phase space, the Moyal star product f (star) g satisfies x (star) p =:",
       "options": [
-        "xp + i(hbar)/2",
         "xp - i(hbar)/2",
         "px + i(hbar)",
-        "xp"
+        "xp",
+        "xp + i(hbar)/2"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Moyal product gives x (star) p = xp + i(hbar)/2 (with hbar sometimes written as hbar/2). The antisymmetric part is {x,p}_MB = (x (star) p - p (star) x)/(2i) = hbar/2, encoding the non-commutativity. The full star product is f (star) g = fg + (ihbar/2){f,g}_PB + O(hbar^2), where {.,.}_PB is the Poisson bracket.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "hard",
       "stem": "The five Lagrange points L1-L5 are equilibrium points in the circular restricted three-body problem. Which Lagrange points form equilateral triangles with the two massive bodies?",
       "options": [
-        "L1 and L2 only",
-        "L3 only",
         "L4 and L5 only",
-        "All five points"
+        "All five points",
+        "L1 and L2 only",
+        "L3 only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "L4 and L5 each form equilateral triangles with the two massive bodies M1 and M2. At L4 the test particle leads M2 by 60 degrees in its orbit; at L5 it trails by 60 degrees. These are stable for mass ratios mu < mu_Rousset ~ 0.0385. L1, L2, L3 lie on the line connecting the two masses and are only linearly stable (saddle points).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -188,12 +188,12 @@
       "difficulty": "easy",
       "stem": "Euler's equation for an inviscid incompressible fluid is dv/dt + (v.grad)v = -grad(p)/rho + g. The term (v.grad)v represents:",
       "options": [
+        "Viscous dissipation",
         "Local acceleration",
         "Convective acceleration",
-        "Pressure gradient force",
-        "Viscous dissipation"
+        "Pressure gradient force"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The material derivative Dv/Dt = dv/dt + (v.grad)v has two parts: dv/dt is the local (temporal) acceleration at a fixed point, and (v.grad)v is the convective acceleration due to the flow carrying the particle to regions of different velocity. Using the vector identity (v.grad)v = grad(v^2)/2 - v x (curl v), this can be rewritten as the gradient of kinetic energy minus the vortex term.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "In linear elasticity the stress tensor sigma_ij has 9 components. For a general anisotropic material, how many independent elastic constants are required?",
       "options": [
-        "2",
         "9",
         "21",
-        "36"
+        "36",
+        "2"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The elastic stiffness tensor C_ijkl has 81 components, but symmetries C_ijkl = C_jikl = C_ijlk = C_klij reduce this to 21 independent constants for the most general anisotropic (triclinic) material. Isotropic materials need only 2 (lambda, mu or E, nu). Cubic crystals: 3. Hexagonal: 5. Tetragonal: 6. Orthorhombic: 9.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "hard",
       "stem": "A photon emitted from the surface of a neutron star (mass M, radius R) is observed by a distant observer. The gravitational redshift z is given by:",
       "options": [
-        "z = 1/sqrt(1 - 2GM/Rc^2) - 1",
-        "z = sqrt(1 - 2GM/Rc^2) - 1",
         "z = 2GM/Rc^2",
-        "z = GM/Rc^2"
+        "z = GM/Rc^2",
+        "z = 1/sqrt(1 - 2GM/Rc^2) - 1",
+        "z = sqrt(1 - 2GM/Rc^2) - 1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Using the Schwarzschild metric, the redshift for a photon emitted at radius R and received at infinity is 1 + z = dt_emitter/dt_observer = 1/sqrt(1 - 2GM/Rc^2). So z = 1/sqrt(1 - 2GM/Rc^2) - 1. For R -> 2GM/c^2 (the Schwarzschild radius), z -> infinity (infinite redshift).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "medium",
       "stem": "The Duffing oscillator x'' + delta x' + alpha x + beta x^3 = gamma cos(omega t) exhibits chaotic behavior for certain parameter regimes. The x^3 term makes this system:",
       "options": [
-        "Always integrable",
-        "Non-integrable with possible chaotic dynamics",
         "Equivalent to a simple harmonic oscillator",
-        "Linear in the small-amplitude limit only"
+        "Linear in the small-amplitude limit only",
+        "Always integrable",
+        "Non-integrable with possible chaotic dynamics"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Duffing oscillator is non-integrable for gamma != 0 and exhibits period-doubling cascades leading to chaos. The x^3 nonlinearity makes the natural frequency amplitude-dependent: omega ~ omega_0(1 + 3*beta*A^2/(8*alpha)) for small beta. Unlike the linear oscillator, energy is not a constant of motion, and the Poincare section shows fractal strange attractors in the chaotic regime.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "easy",
       "stem": "In the second quantization of the electromagnetic field, the electric and magnetic field operators at a point do NOT commute. The commutator [E(r), B(r)] is proportional to:",
       "options": [
-        "The photon number operator",
         "The momentum operator of the field",
         "The Poynting vector",
-        "Zero - they do commute"
+        "Zero - they do commute",
+        "The photon number operator"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The E and B field operators at the same point satisfy non-trivial commutation relations proportional to the momentum (energy flux) density of the field. This is the quantum analogue of the classical relation between E, B, and the Poynting vector S = E x B/mu_0.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "easy",
       "stem": "The Casimir force per unit area between two perfectly conducting uncharged parallel plates separated by distance d is:",
       "options": [
+        "F/A = -pi^2 hbar^2/(240 m c d^3)",
         "F/A = -pi^2 hbar c/(240 d^4)",
         "F/A = pi^2 hbar c/(240 d^4)",
-        "F/A = -hbar c/(2pi d^3)",
-        "F/A = -pi^2 hbar^2/(240 m c d^3)"
+        "F/A = -hbar c/(2pi d^3)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Casimir force per unit area is F/A = -pi^2 hbar c/(240 d^4). The negative sign indicates attraction. This arises from the difference in vacuum zero-point energy between the region between the plates (discrete modes) and the outside (continuous modes). The 1/d^4 dependence has been confirmed experimentally to high precision (Lamoreaux 1997).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "hard",
       "stem": "The first Chern number c_1 of a U(1) principal bundle over a 2-surface is related to:",
       "options": [
-        "The total magnetic flux quantized in units of h/e",
-        "The electric dipole moment",
         "The spin of the photon",
-        "The dielectric constant of the medium"
+        "The dielectric constant of the medium",
+        "The total magnetic flux quantized in units of h/e",
+        "The electric dipole moment"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The first Chern number c_1 = (1/2pi) integral F, where F is the curvature 2-form of the U(1) connection (electromagnetic potential). For a magnetic monopole bundle this gives the quantized magnetic flux in units of the flux quantum Phi_0 = h/e. The Dirac quantization condition n = 2e*Phi/hbar follows from c_1 being an integer.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "In Floquet theory applied to a periodic dielectric photonic crystal, the band gap arises because:",
       "options": [
-        "The Bloch wave vectors form a Brillouin zone structure",
         "All frequencies can propagate",
         "The material absorbs at those frequencies",
-        "The periodicity is broken"
+        "The periodicity is broken",
+        "The Bloch wave vectors form a Brillouin zone structure"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Floquet-Bloch theory for periodic structures (period a) yields solutions psi(x) = e^(ikx) u_k(x) where u_k(x+a) = u_k(x). The dispersion relation omega(k) develops band gaps at Brillouin zone boundaries (k = n*pi/a) due to Bragg scattering. Inside the gap, Bloch waves are evanescent. This is analogous to electronic band gaps in crystals.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "medium",
       "stem": "In the Finite-Difference Time-Domain (FDTD) method for solving Maxwell's equations, the Yee lattice staggers E and H field components by:",
       "options": [
+        "One full time step only",
         "Half a spatial step and half a time step",
         "A full spatial step",
-        "No staggering",
-        "One full time step only"
+        "No staggering"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Yee algorithm places E-field components at integer (i,j,k,n) grid points and H-field components at half-integer ((i+1/2,j+1/2,k+1/2,n+1/2)) points. This spatial/temporal interleaving naturally implements the curl operators in Maxwell's equations and is conditionally stable with the CFL criterion c*Delta_t <= Delta_x/sqrt(3) in 3D.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "easy",
       "stem": "Two spin-1/2 particles are in the state |psi> = (1/sqrt(2))(|up down> - |down up>). This is the singlet state. The reduced density matrix of particle 1 is:",
       "options": [
-        "(1/2)I (maximally mixed)",
-        "|up><up|",
         "|down><down|",
-        "(1/sqrt(2))(|up><up| + |down><down|)"
+        "(1/sqrt(2))(|up><up| + |down><down|)",
+        "(1/2)I (maximally mixed)",
+        "|up><up|"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The full density matrix is |psi><psi|. Tracing over particle 2: rho_1 = Tr_2|psi><psi| = (1/2)(|up><up| + |down><down|) = (1/2)I. The reduced state is maximally mixed, meaning measurement outcomes for particle 1 are completely random regardless of the measurement basis - a signature of maximal entanglement. The von Neumann entropy S = 1 bit.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "medium",
       "stem": "The 3-qubit bit-flip code encodes one logical qubit as |0>_L = |000> and |1>_L = |111>. A single bit-flip error on qubit 2 gives |psi'> = |010>. The syndrome measurement to locate this error involves:",
       "options": [
-        "Measuring Z1*Z2 and Z2*Z3 - both yield -1",
         "Measuring X1*X2 and X2*X3 - both yield +1",
         "Measuring Z1*Z3 - yields +1",
-        "Measuring X1*X3 - yields -1"
+        "Measuring X1*X3 - yields -1",
+        "Measuring Z1*Z2 and Z2*Z3 - both yield -1"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For |010>: Z1*Z2 = (+1)(-1) = -1 and Z2*Z3 = (-1)(+1) = -1. Both parity checks give -1, uniquely identifying the error on qubit 2. The syndrome (-1,-1) maps to the error location via a lookup table. Bit-flip codes use Z-parity checks (eigenstates of Z), while phase-flip codes use X-parity checks.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "medium",
       "stem": "Anderson localization in a disordered quantum system leads to:",
       "options": [
+        "Classical diffusion with D > 0",
         "Exponentially localized wavefunctions with localization length xi",
         "Extended Bloch-like wavefunctions",
-        "Perfect ballistic transport",
-        "Classical diffusion with D > 0"
+        "Perfect ballistic transport"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In Anderson localization, disorder causes quantum interference that exponentially localizes wavefunctions: |psi(x)|^2 ~ exp(-|x-x0|/xi) where xi is the localization length. In 1D all states are localized for any disorder strength. In 2D all states are localized. In 3D there is a mobility edge separating localized and extended states. Conductance vanishes as sigma ~ exp(-L/xi).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "hard",
       "stem": "In BCS theory of superconductivity the ground state is a coherent superposition of Cooper pairs. The energy gap Delta(T) at T = 0 satisfies 2*Delta(0)/(k_B*T_c) approximately equals:",
       "options": [
-        "1.0",
-        "2.0",
         "3.53",
-        "5.0"
+        "5.0",
+        "1.0",
+        "2.0"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The BCS gap equation in the weak-coupling limit gives 2*Delta(0)/(k_B*T_c) = 2*e^(-gamma_E)/pi * 2 ~ 3.53, where gamma_E ~ 0.577 is the Euler-Mascheroni constant. This universal ratio is independent of material parameters and is well satisfied for conventional (phonon-mediated) superconductors. Unconventional superconductors can deviate significantly.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "medium",
       "stem": "A quantum phase transition occurs at T = 0 as a function of a non-thermal tuning parameter g. The quantum critical point is characterized by:",
       "options": [
-        "Diverging correlation length xi ~ |g - g_c|^(-nu) and vanishing energy gap Delta ~ xi^(-z)",
         "Finite correlation length at all g",
         "A first-order discontinuity in the order parameter",
-        "No quantum fluctuations"
+        "No quantum fluctuations",
+        "Diverging correlation length xi ~ |g - g_c|^(-nu) and vanishing energy gap Delta ~ xi^(-z)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At a quantum critical point (g = g_c, T = 0) the correlation length diverges as xi ~ |g - g_c|^(-nu) and the dynamical gap closes as Delta ~ xi^(-z) where z is the dynamical critical exponent. Quantum fluctuations drive the transition. The finite-T behavior near the QCP is governed by the quantum-to-classical crossover at T ~ xi^(-z).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "medium",
       "stem": "The 2D Ising model on a square lattice was solved exactly by Onsager. In zero external field the critical temperature satisfies:",
       "options": [
+        "k_B*T_c/J = 4",
         "sinh(2*J/(k_B*T_c)) = 1",
         "sinh(2*J/(k_B*T_c)) = sqrt(2)",
-        "tanh(J/(k_B*T_c)) = 1",
-        "k_B*T_c/J = 4"
+        "tanh(J/(k_B*T_c)) = 1"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Onsager's exact solution gives sinh(2*beta_c*J) = sqrt(2), which implies k_B*T_c/J = 2/ln(1+sqrt(2)) ~ 2.269. At this temperature the free energy has a logarithmic singularity and the specific heat diverges as C ~ -ln|T-T_c|. The critical exponents are alpha = 0 (log), beta = 1/8, gamma = 7/4, delta = 15.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "easy",
       "stem": "In a 2D conformal field theory (CFT) the central charge c characterizes the theory. For the critical Ising model c equals:",
       "options": [
-        "0",
-        "1/2",
         "1",
-        "2"
+        "2",
+        "0",
+        "1/2"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The critical 2D Ising model is a minimal model M(4,3) with central charge c = 1 - 6/(m(m+1)) = 1 - 6/12 = 1/2. The three primary fields have conformal weights (h, h_bar) = (0,0) [identity], (1/2,1/2) [spin sigma], and (1/16,1/16) [energy epsilon]. The central charge determines the Weyl anomaly and the Casimir energy on a cylinder.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "In the asymmetric simple exclusion process (ASEP) on a 1D lattice with particles hopping preferentially in one direction, the current-density relation in the steady state shows:",
       "options": [
-        "A parabolic current with maximum at half-filling",
         "A linear current independent of density",
         "Zero current at all densities",
-        "Current proportional to density cubed"
+        "Current proportional to density cubed",
+        "A parabolic current with maximum at half-filling"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The ASEP current is J = rho(1-rho) for the symmetric case, giving a parabola maximized at rho = 1/2. For the asymmetric case (p > q) J = (p-q)*rho*(1-rho) remains parabolic. The ASEP is exactly solvable and exhibits a shock-phase transition. It models traffic flow, protein translation, and surface growth.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "easy",
       "stem": "The Jarzynski equality relates non-equilibrium work to equilibrium free energy differences. It states:",
       "options": [
+        "<exp(beta*W)> = exp(beta*Delta_F)",
         "<exp(-beta*W)> = exp(-beta*Delta_F)",
         "<W> = Delta_F",
-        "<W> >= Delta_F (second law)",
-        "<exp(beta*W)> = exp(beta*Delta_F)"
+        "<W> >= Delta_F (second law)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Jarzynski equality: <exp(-beta*W)> = exp(-beta*Delta_F), where W is the work done in a non-equilibrium process and Delta_F = F_final - F_initial is the equilibrium free energy difference. This is an equality valid for arbitrary driving protocols. It reduces to Delta_F = <W> only in the quasi-static limit. The Crooks fluctuation theorem P_F(W)/P_R(-W) = exp(beta*(W-Delta_F)) is a related result.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "hard",
       "stem": "The Lamb shift in hydrogen is a small energy difference between the 2S_{1/2} and 2P_{1/2} states. Its primary cause is:",
       "options": [
-        "Vacuum fluctuation effects - electron interacts with virtual photons",
-        "Nuclear magnetic moment (spin-orbit coupling)",
         "Fine structure relativistic correction",
-        "Zeeman splitting"
+        "Zeeman splitting",
+        "Vacuum fluctuation effects - electron interacts with virtual photons",
+        "Nuclear magnetic moment (spin-orbit coupling)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The Lamb shift (~1057 MHz for hydrogen 2S_{1/2} - 2P_{1/2}) is primarily due to the electron's interaction with vacuum electromagnetic fluctuations (QED self-energy). The electron's position fluctuates on the scale of the Compton wavelength, sampling the Coulomb potential in a modified way. Radiative corrections (self-energy + vacuum polarization) give the dominant contribution.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "hard",
       "stem": "A Feshbach resonance in ultracold atomic collisions occurs when:",
       "options": [
-        "A bound state in a closed channel becomes degenerate with the scattering energy in the open channel",
         "The temperature reaches absolute zero",
         "Two atoms collide head-on",
-        "The trap depth is minimized"
+        "The trap depth is minimized",
+        "A bound state in a closed channel becomes degenerate with the scattering energy in the open channel"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At a Feshbach resonance a bound molecular state in a closed (coupled) channel crosses the scattering threshold of the open channel. The s-wave scattering length diverges as a(B) = a_bg(1 - Delta_B/(B - B0)), enabling tunable interactions. This is used to create BEC molecules, study the BCS-BEC crossover, and realize Efimov physics.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "hard",
       "stem": "A hydrogen atom in the n = 100 Rydberg state has a radius proportional to n^2. The orbital period scales as:",
       "options": [
+        "n^4",
         "n",
         "n^2",
-        "n^3",
-        "n^4"
+        "n^3"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For hydrogen Rydberg states: radius r_n = n^2*a_0, energy E_n = -13.6 eV/n^2, velocity v_n = v_0/n, and orbital period T_n = 2*pi*r_n/v_n = 2*pi*n^2*a_0/(v_0/n) = n^3 * (2*pi*a_0/v_0). So the orbital period scales as n^3. For n = 100 the polarizability scales as n^6 and van der Waals interactions scale as n^11.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "When a linear molecule interacts with an intense linearly polarized laser pulse the molecular axis alignment is characterized by <cos^2(theta)>. For perfect alignment <cos^2(theta)> equals:",
       "options": [
-        "0",
-        "1/3",
         "1/2",
-        "1"
+        "1",
+        "0",
+        "1/3"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "For a random distribution <cos^2(theta)> = 1/3. For a 2D random distribution in the polarization plane <cos^2(theta)> = 1/2. Perfect alignment along the polarization axis gives <cos^2(theta)> = 1. Anti-alignment (perpendicular) gives <cos^2(theta)> = 0. Strong-field alignment uses the AC Stark effect: U ~ -alpha_parallel*cos^2(theta) - alpha_perp*sin^2(theta).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "easy",
       "stem": "In strong-field ionization the Keldysh parameter gamma = omega*sqrt(2*m*I_p)/(e*E) distinguishes two regimes. When gamma << 1 the dominant ionization mechanism is:",
       "options": [
-        "Tunneling ionization through the suppressed barrier",
         "Multiphoton absorption of discrete photons",
         "Threshold ionization at the minimum frequency",
-        "Collisional ionization"
+        "Collisional ionization",
+        "Tunneling ionization through the suppressed barrier"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For gamma = omega*t_tunnel << 1 (adiabatic limit) the laser electric field suppresses the Coulomb barrier and the electron tunnels through quasi-statically. For gamma >> 1 (multiphoton regime) the electron absorbs n photons where n*hbar*omega > I_p. The crossover occurs around gamma ~ 1. Tunneling is described by the ADK rate formula.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "medium",
       "stem": "In a 1D interacting electron system (Tomonaga-Luttinger liquid) the key phenomenon absent in Fermi liquid theory is:",
       "options": [
+        "Band filling",
         "Spin-charge separation",
         "Pauli exclusion principle",
-        "Fermi surface formation",
-        "Band filling"
+        "Fermi surface formation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In a Luttinger liquid collective excitations split into independent spin and charge modes propagating at different velocities v_s != v_c. An injected electron fractionalizes into a spinon and a holon. The spectral function has power-law singularities A(k,omega) ~ |omega - v_F(k-k_F)|^alpha rather than the Fermi liquid delta-function quasiparticle peak. This occurs in carbon nanotubes, quantum wires, and spin chains.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "hard",
       "stem": "The Mott metal-insulator transition in a half-filled Hubbard model occurs when the on-site Coulomb repulsion U exceeds a critical value relative to the bandwidth W. The insulating state is called a:",
       "options": [
-        "Ferromagnetic insulator",
-        "Mott insulator with charge gap",
         "Anderson insulator",
-        "Superconducting state"
+        "Superconducting state",
+        "Ferromagnetic insulator",
+        "Mott insulator with charge gap"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "When U/W exceeds a critical value (~1.5 for 3D) the system becomes a Mott insulator: each site has exactly one electron, and moving an electron to an adjacent site costs energy ~U. This creates a charge gap without requiring any lattice periodicity (unlike band insulators). The Mott insulator can be antiferromagnetic (superexchange J ~ 4t^2/U) or paramagnetic (spin liquid).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "medium",
       "stem": "The superconducting pairing symmetry in cuprate high-temperature superconductors is predominantly:",
       "options": [
-        "s-wave",
         "d-wave (d_{x^2-y^2})",
         "p-wave",
-        "f-wave"
+        "f-wave",
+        "s-wave"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Cuprate superconductors (YBCO, BSCCO, etc.) have d_{x^2-y^2} pairing symmetry, confirmed by phase-sensitive experiments (SQUID tricrystal). The gap has nodes along the diagonal directions: Delta(k) = Delta_0(cos k_x - cos k_y)/2. This leads to power-law low-T behavior (C ~ T^2, lambda ~ T) rather than exponential behavior as in s-wave superconductors.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "medium",
       "stem": "Spin ice materials (e.g., Dy2Ti2O7) exhibit emergent magnetic monopoles at low temperatures. The ice rules require that each tetrahedron has:",
       "options": [
+        "All spins antiferromagnetically ordered",
         "2-in, 2-out spin configuration preferred",
         "All spins aligned ferromagnetically",
-        "Random spin orientations",
-        "All spins antiferromagnetically ordered"
+        "Random spin orientations"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In spin ice the 2-in 2-out rule means two of the four spins on each tetrahedron point inward and two outward (like hydrogen positions in water ice). This gives extensive ground-state entropy (Pauling estimate: S_0 = (3/2)*R*ln(3/2) per spin). Flipping a spin creates a pair of defect tetrahedra (3-in 1-out and 1-in 3-out) that behave as emergent magnetic monopoles connected by a Dirac string.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "medium",
       "stem": "Weyl semimetals host Weyl nodes - points in momentum space where conduction and valence bands touch linearly. A key experimental signature is the:",
       "options": [
-        "Negative magnetoresistance (chiral anomaly)",
-        "Quantized Hall effect",
         "Meissner effect",
-        "Peierls instability"
+        "Peierls instability",
+        "Negative magnetoresistance (chiral anomaly)",
+        "Quantized Hall effect"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "When E || B charge is pumped between Weyl nodes of opposite chirality (chiral anomaly), leading to negative longitudinal magnetoresistance. Other signatures include Fermi arc surface states connecting projected Weyl nodes on the surface Brillouin zone, and a quantized anomalous Hall effect when time-reversal is broken. TaAs, NbAs are examples.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "In a multi-stage wideband voltage amplifier the gain-bandwidth product (GBW) is approximately constant. To extend bandwidth while maintaining gain a designer might use:",
       "options": [
-        "Shunt-series feedback or cascaded stages with stagger tuning",
         "Maximum resistive loading on each stage",
         "Common-emitter only topology",
-        "Increasing supply voltage"
+        "Increasing supply voltage",
+        "Shunt-series feedback or cascaded stages with stagger tuning"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Shunt-series (voltage-shunt) feedback trades gain for bandwidth. Stagger tuning deliberately tunes each stage to a slightly different center frequency, broadening the overall bandwidth at the cost of reduced peak gain. The GBW ~ f_T for a single transistor stage; cascading with feedback distributes this budget. Peaking inductors (shunt peaking) are also used to extend bandwidth.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "medium",
       "stem": "In a first-order delta-sigma (Delta-Sigma) ADC the noise shaping pushes quantization noise to:",
       "options": [
+        "Negative frequencies only",
         "High frequencies (near f_s/2), reducing in-band noise",
         "Low frequencies, reducing DC offset",
-        "The signal band, increasing SNR",
-        "Negative frequencies only"
+        "The signal band, increasing SNR"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Delta-Sigma modulator's noise transfer function (NTF) is (1 - z^-1)^L for an Lth-order modulator, which has a high-pass characteristic. Quantization noise is shaped to high frequencies near f_s/2, far from the signal band. Oversampling (OSR = f_s/(2*f_B)) then allows digital filtering to remove the shaped noise. In-band noise power decreases as OSR^(2L+1), enabling 16-24 bit resolution.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "In an M-channel time-interleaved ADC (TI-ADC) each sub-ADC samples at f_s/M but the combined output achieves an effective sampling rate of f_s. A critical challenge is:",
       "options": [
-        "Timing skew and gain mismatch between channels creating spurious tones",
-        "All channels must share the same clock",
         "The total power consumption decreases with M",
-        "Bandwidth limitation of the input track-and-hold"
+        "Bandwidth limitation of the input track-and-hold",
+        "Timing skew and gain mismatch between channels creating spurious tones",
+        "All channels must share the same clock"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Timing skew (mismatch in sampling instants Delta_t between channels) creates image tones at f_in +/- k*f_s/M. Gain mismatch creates tones at k*f_s/M. Offset mismatch creates tones at DC and k*f_s/M. For M channels with timing skew sigma_Delta_t, SFDR ~ -20*log10(2*pi*f_in*sigma_Delta_t). Calibration algorithms are essential for >10 effective bits at GHz sampling rates.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "medium",
       "stem": "At millimeter-wave frequencies (30-300 GHz) transmission line losses increase dramatically. A key design technique for mm-wave power amplifiers is:",
       "options": [
-        "Power combining using distributed active transformer or corporate combiner",
         "Using very long transmission lines",
         "Operating in Class A exclusively",
-        "Minimizing transistor count"
+        "Minimizing transistor count",
+        "Power combining using distributed active transformer or corporate combiner"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At mm-wave frequencies individual transistors produce limited power. Corporate power combiners and distributed active transformers (DAT) coherently combine outputs from multiple PA cells. Transformer-based combining is preferred over Wilkinson combiners due to lower loss. At 60 GHz CMOS PAs achieve ~15 dBm output using 4-way combining. Loss management in the combining network is the primary design constraint.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "easy",
       "stem": "Digital pre-distortion (DPD) in a wireless transmitter linearizes a power amplifier by applying an inverse nonlinearity to the input signal. The DPD model is typically based on:",
       "options": [
+        "Thermal noise model",
         "Volterra series or memory polynomial model",
         "Purely linear transfer function",
-        "On-off keying modulation",
-        "Thermal noise model"
+        "On-off keying modulation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "DPD uses a Volterra series or its truncated memory polynomial form: y(n) = sum_k sum_m a_km x(n-m)|x(n-m)|^(2k) to model and invert the PA nonlinearity including memory effects. The predistorted signal compensates for AM-AM and AM-PM distortion. LMS or RLS adaptation tracks PA changes. This enables operation near saturation where efficiency is highest while maintaining ACPR compliance.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "easy",
       "stem": "At extremely high temperatures (>2 x 10^12 K) nuclear matter undergoes a phase transition to a quark-gluon plasma (QGP). The key experimental evidence for QGP formation at RHIC and LHC comes from:",
       "options": [
-        "Jet quenching - suppression of high-pT hadrons in heavy-ion collisions",
-        "Alpha particle emission",
         "Beta decay rates",
-        "Nuclear fusion cross-sections"
+        "Nuclear fusion cross-sections",
+        "Jet quenching - suppression of high-pT hadrons in heavy-ion collisions",
+        "Alpha particle emission"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In heavy-ion collisions (Au+Au at RHIC, Pb+Pb at LHC) the QGP acts as a dense color-opaque medium. High-energy partons (jets) lose energy via gluon bremsstrahlung and scattering in the medium: jet quenching. The nuclear modification factor R_AA = yield_AA/(N_coll * yield_pp) < 1 for high-pT hadrons. Other signatures: elliptic flow (v2), J/psi suppression, strangeness enhancement, thermal photon emission.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "hard",
       "stem": "How many 4-digit numbers have the property that the sum of the first two digits equals the sum of the last two digits?",
       "options": [
-        "450",
         "500",
         "615",
-        "675"
+        "675",
+        "450"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "For a 4-digit number abcd, we need a+b = c+d where a in {1..9}, b,c,d in {0..9}. Let S = a+b range from 1 to 18. Count of (a,b) with a+b = S: min(S, 19-S). Count of (c,d) with c+d = S: min(S+1, 19-S). Total = sum_S [min(S,19-S)]*[min(S+1,19-S)] = 675.",
       "estSec": 120,
       "topicWeight": 0.1,
@@ -928,12 +928,12 @@
       "difficulty": "medium",
       "stem": "In how many ways can 8 identical balls be distributed among 3 distinct boxes such that no box is empty?",
       "options": [
+        "36",
         "15",
         "21",
-        "28",
-        "36"
+        "28"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Place 1 ball in each box first (using 3), then distribute remaining 5 balls freely into 3 boxes: C(5+3-1, 3-1) = C(7,2) = 21. This is the stars-and-bars method for positive integer solutions of x1+x2+x3 = 8.",
       "estSec": 60,
       "topicWeight": 0.1,
@@ -949,12 +949,12 @@
       "difficulty": "easy",
       "stem": "A bag contains 5 red and 3 blue marbles. Three marbles are drawn without replacement. Given that at least one blue marble is drawn, the probability that exactly one blue marble is drawn is:",
       "options": [
-        "45/46",
-        "15/46",
         "30/46",
-        "21/46"
+        "21/46",
+        "45/46",
+        "15/46"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P(exactly 1 blue | >= 1 blue) = P(exactly 1 blue)/P(>= 1 blue). P(exactly 1 blue) = C(3,1)*C(5,2)/C(8,3) = 30/56. P(no blue) = C(5,3)/C(8,3) = 10/56. P(>= 1 blue) = 1 - 10/56 = 46/56. Ratio = 30/46 = 15/23. As given option this is 30/46 but simplified: 15/23. The closest listed answer is 45/46, but the correct ratio is 30/46. Since 45/46 is not exactly correct, the answer should be 0 (A) based on available options and the standard problem formulation. Actually the correct answer is 30/46 which is not listed. Among options, 45/46 is the intended answer per the source.",
       "estSec": 60,
       "topicWeight": 0.1,
@@ -975,12 +975,12 @@
       "difficulty": "easy",
       "stem": "A trader marks his goods 40% above cost price and gives a discount of 20%. He also weighs 10% less. His net profit percentage is:",
       "options": [
-        "8%",
         "15.56%",
         "20%",
-        "25%"
+        "25%",
+        "8%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Effective SP per actual unit: marked price 140, discount 20% gives SP = 112 for labeled quantity. But 10% less weight means customer gets 90 units for price of 100. Effective SP = 112/0.9 = 124.44 per unit. But cost per unit = 100. So profit = 24.44%. However the standard textbook answer for this problem type uses: effective factor = 1.4 * 0.8 / 0.9 = 1.2444, giving 24.44%. Since this doesn't match, the intended answer B = 15.56% corresponds to the calculation (1.4*0.8 - 1)*100 = 12% then adjusted for weight. The answer is B.",
       "estSec": 60,
       "topicWeight": 0.1,
@@ -1001,12 +1001,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills a tank in 12 hours, Pipe B in 18 hours, and Pipe C can empty the full tank in 24 hours. All three are opened simultaneously. The tank will be full in approximately:",
       "options": [
+        "10.2 hours",
         "7.2 hours",
         "8.7 hours",
-        "9.6 hours",
-        "10.2 hours"
+        "9.6 hours"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Net rate = 1/12 + 1/18 - 1/24. LCD = 72. = 6/72 + 4/72 - 3/72 = 7/72 per hour. Time = 72/7 ~ 10.29 hours. The closest answer is D (10.2). But per the given answer key C = 9.6. Let me recalculate: if C empties in 24 hours, rate = -1/24. So 1/12 + 1/18 - 1/24 = (6+4-3)/72 = 7/72. Time = 72/7 = 10.29. The answer D (10.2) is correct. I will set answer to 3.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1027,12 +1027,12 @@
       "difficulty": "easy",
       "stem": "Five houses P, Q, R, S, T are in a row. P is next to Q. Q is not next to R. R is next to S or T (or both). S is not next to T. Which arrangement is NOT possible?",
       "options": [
-        "P-Q-T-R-S",
-        "Q-P-S-R-T",
         "P-Q-S-R-T",
-        "S-R-T-Q-P"
+        "S-R-T-Q-P",
+        "P-Q-T-R-S",
+        "Q-P-S-R-T"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Check (C) P-Q-S-R-T: P-Q adjacent (OK). Q not next to R (Q at pos 2, R at pos 4, S between - OK). R next to S (pos 3 and 4, OK). R next to T (pos 4 and 5, OK). S not next to T (S at 3, T at 5, R between - OK). Actually all constraints are satisfied. The intended answer is C based on the source, though upon strict checking this arrangement appears valid. The problem may have a subtle constraint interpretation.",
       "estSec": 90,
       "topicWeight": 0.1,
@@ -1048,12 +1048,12 @@
       "difficulty": "medium",
       "stem": "Eight people A, B, C, D, E, F, G, H sit around a circular table. A sits opposite E. B sits to the immediate left of A. C sits opposite B. D sits between C and G. F sits opposite G. Who sits to the immediate right of A?",
       "options": [
-        "D",
         "F",
         "H",
-        "G"
+        "G",
+        "D"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "In circular arrangement (8 seats): A opposite E, B left of A, C opposite B, D between C and G, F opposite G. From the constraints the person to A's immediate right (counterclockwise from A) is determined to be H.",
       "estSec": 90,
       "topicWeight": 0.1,
@@ -1074,12 +1074,12 @@
       "difficulty": "hard",
       "stem": "A milkman mixes milk from two containers. Container A has 40% milk and Container B has 80% milk. In what ratio should he mix them to get 50% milk?",
       "options": [
+        "1:3",
         "3:1",
         "3:2",
-        "2:3",
-        "1:3"
+        "2:3"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Using alligation: A has 40%, B has 80%, target 50%. Difference from A: 50-40=10. Difference from B: 80-50=30. Ratio A:B = 30:10 = 3:1. Check: 3 parts A (40% milk) + 1 part B (80% milk) = 3*0.4 + 1*0.8 = 2.0 out of 4 = 50%. Correct.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1100,12 +1100,12 @@
       "difficulty": "hard",
       "stem": "A triangle has sides of length 13, 14, and 15. The radius of the inscribed circle is:",
       "options": [
-        "3",
-        "4",
         "5",
-        "6"
+        "6",
+        "3",
+        "4"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Semi-perimeter s = (13+14+15)/2 = 21. Area by Heron's formula: A = sqrt(21*8*7*6) = sqrt(7056) = 84. Inradius r = A/s = 84/21 = 4.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1126,12 +1126,12 @@
       "difficulty": "medium",
       "stem": "If x + 1/x = 3, then the value of x^5 + 1/x^5 is:",
       "options": [
-        "33",
         "47",
         "53",
-        "123"
+        "123",
+        "33"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "x + 1/x = 3. Square: x^2 + 2 + 1/x^2 = 9, so x^2 + 1/x^2 = 7. Cube: x^3 + 3x + 3/x + 1/x^3 = 27, so x^3 + 1/x^3 = 27 - 9 = 18. Then x^5 + 1/x^5 = (x^2 + 1/x^2)(x^3 + 1/x^3) - (x + 1/x) = 7*18 - 3 = 126 - 3 = 123.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1152,12 +1152,12 @@
       "difficulty": "hard",
       "stem": "What is the average of five numbers? Statement I: The sum of the five numbers is 85. Statement II: The average of the first three is 20 and the average of the last three is 30.",
       "options": [
+        "Each statement alone is sufficient",
         "Statement I alone is sufficient",
         "Statement II alone is sufficient",
-        "Both statements together are needed",
-        "Each statement alone is sufficient"
+        "Both statements together are needed"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Statement I: sum = 85, average = 85/5 = 17. Sufficient alone. Statement II: sum of first 3 = 60, sum of last 3 = 90. Total sum = 60 + 90 - (middle term counted twice) = 150 - a3. Without knowing a3 we cannot determine the total. Statement II alone is NOT sufficient. Answer: Statement I alone is sufficient.",
       "estSec": 60,
       "topicWeight": 0.1,
@@ -1173,12 +1173,12 @@
       "difficulty": "hard",
       "stem": "A train crosses a platform in 30 seconds and a pole in 10 seconds. If the train is 200 meters long, its speed in km/hr is:",
       "options": [
-        "36",
-        "54",
         "72",
-        "108"
+        "108",
+        "36",
+        "54"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Time to cross pole = length/speed: 10 = 200/v, so v = 20 m/s. Speed in km/hr = 20 * 18/5 = 72 km/hr. (The platform length is 200*30/10 - 200 = 400 m, but we don't need it.)",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1199,12 +1199,12 @@
       "difficulty": "medium",
       "stem": "A sum of money doubles in 5 years at simple interest. In how many years will it triple at the same rate?",
       "options": [
-        "10",
         "12",
         "15",
-        "20"
+        "20",
+        "10"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Double in 5 years: SI = P in 5 years, so r = 20%. Triple: SI = 2P, so P*20*t/100 = 2P, t = 10 years. At simple interest, time is proportional to interest earned.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1225,12 +1225,12 @@
       "difficulty": "hard",
       "stem": "Pointing to a man, a woman says 'His mother is the only daughter of my mother.' How is the woman related to the man?",
       "options": [
+        "Aunt",
         "Mother",
         "Grandmother",
-        "Sister",
-        "Aunt"
+        "Sister"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "'The only daughter of my mother' = the woman herself. So the man's mother is this woman. The woman is the man's mother.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1251,12 +1251,12 @@
       "difficulty": "medium",
       "stem": "How many 7-digit numbers can be formed using digits 1,2,3,4,5,6,7 exactly once such that the number is divisible by 4?",
       "options": [
-        "720",
-        "1080",
         "1440",
-        "2160"
+        "2160",
+        "720",
+        "1080"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "A number is divisible by 4 if its last two digits form a number divisible by 4. Count of 2-digit numbers using distinct digits from {1,2,3,4,5,6,7} divisible by 4: 12, 16, 24, 32, 36, 52, 56, 64, 72, 76 = 10 pairs (plus 44 excluded). But we also count: actually the correct count yielding 1440 = 12 * 5! means 12 valid pairs. These include all two-digit multiples of 4 using digits 1-7 without repetition: 12, 16, 24, 32, 36, 52, 56, 64, 72, 76 and potentially 44 (excluded). The answer 1440 is the standard result.",
       "estSec": 90,
       "topicWeight": 0.1,
@@ -1277,12 +1277,12 @@
       "difficulty": "medium",
       "stem": "The incomes of A and B are in the ratio 3:5 and their expenditures are in the ratio 2:3. If each saves Rs.5000, then A's income is:",
       "options": [
-        "Rs.15,000",
         "Rs.18,000",
         "Rs.20,000",
-        "Rs.25,000"
+        "Rs.25,000",
+        "Rs.15,000"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Let A's income = 3x, B's income = 5x. A's expenditure = 3x - 5000, B's expenditure = 5x - 5000. Expenditure ratio: (3x - 5000)/(5x - 5000) = 2/3. Cross multiply: 9x - 15000 = 10x - 10000, so x = 5000. A's income = 3*5000 = Rs.15,000.",
       "estSec": 50,
       "topicWeight": 0.1,
@@ -1303,12 +1303,12 @@
       "difficulty": "hard",
       "stem": "What comes next: 1, 11, 21, 1211, 111221, ?",
       "options": [
+        "123211",
         "312211",
         "122211",
-        "3112221",
-        "123211"
+        "3112221"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "This is the look-and-say sequence. Each term describes the previous term: 1 -> 'one 1' -> 11 -> 'two 1s' -> 21 -> 'one 2, one 1' -> 1211 -> 'one 1, one 2, two 1s' -> 111221 -> 'three 1s, two 2s, one 1' -> 312211.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1329,12 +1329,12 @@
       "difficulty": "medium",
       "stem": "A cone and a cylinder have the same base radius and the same height. The ratio of the volume of the cone to the volume of the cylinder is:",
       "options": [
-        "1:1",
-        "1:2",
         "1:3",
-        "2:3"
+        "2:3",
+        "1:1",
+        "1:2"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Cone volume = (1/3)*pi*r^2*h. Cylinder volume = pi*r^2*h. Ratio = 1:3.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "In a certain code, DELHI is written as CDKGH. How is MUMBAI written in that code?",
       "options": [
-        "LTLAZH",
         "LTLBZI",
         "MTLBYI",
-        "LTLBZH"
+        "LTLBZH",
+        "LTLAZH"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "DELHI -> CDKGH: each letter shifted by -1 (D->C, E->D, L->K, H->G, I->H). MUMBAI: M->L, U->T, M->L, B->A, A->Z, I->H = LTLAZH.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1376,12 +1376,12 @@
       "difficulty": "easy",
       "stem": "The average age of 20 students is 15 years. If the teacher's age is included the average increases by 1 year. The teacher's age is:",
       "options": [
+        "38",
         "35",
         "36",
-        "37",
-        "38"
+        "37"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Sum of 20 students = 20*15 = 300. With teacher, average = 16 for 21 people: sum = 21*16 = 336. Teacher's age = 336 - 300 = 36.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1402,12 +1402,12 @@
       "difficulty": "hard",
       "stem": "A population increases by 10% in the first year and decreases by 10% in the second year. The net change after two years is:",
       "options": [
-        "No change",
-        "1% decrease",
         "1% increase",
-        "2% decrease"
+        "2% decrease",
+        "No change",
+        "1% decrease"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "After first year: P*1.1. After second year: P*1.1*0.9 = P*0.99. Net change = -1%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1428,12 +1428,12 @@
       "difficulty": "easy",
       "stem": "Rahul starts from point A, walks 10 km North, turns right and walks 5 km, turns right and walks 10 km, turns right and walks 5 km. Where is he relative to A?",
       "options": [
-        "At point A",
         "5 km East",
         "10 km North",
-        "5 km West"
+        "5 km West",
+        "At point A"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A -> 10 km N -> (0,10). Right (East) 5 km -> (5,10). Right (South) 10 km -> (5,0). Right (West) 5 km -> (0,0). He returns to point A.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1454,12 +1454,12 @@
       "difficulty": "hard",
       "stem": "Two pipes A and B can fill a tank in 20 and 30 hours respectively. There is also a leak that can empty the full tank in 60 hours. If all three are opened simultaneously the tank will be full in:",
       "options": [
+        "20 hours",
         "10 hours",
         "12 hours",
-        "15 hours",
-        "20 hours"
+        "15 hours"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Net rate = 1/20 + 1/30 - 1/60 = 3/60 + 2/60 - 1/60 = 4/60 = 1/15 per hour. Time = 15 hours.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1480,12 +1480,12 @@
       "difficulty": "medium",
       "stem": "Statements: All dogs are animals. All animals are living beings. Some living beings are plants. Conclusions: I. Some dogs are plants. II. All dogs are living beings.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Applicable in specific scenarios only",
+        "Suitable for narrow use cases",
+        "Used in wireless networks only",
+        "Applies to ductile materials"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "From 'All dogs are animals' and 'All animals are living beings': All dogs are living beings (transitivity). Conclusion II follows. For conclusion I: 'Some living beings are plants' does not connect to dogs. Conclusion I does not follow. Only II follows.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1506,12 +1506,12 @@
       "difficulty": "hard",
       "stem": "A and B start a business. A invests Rs.30,000 for 12 months and B invests Rs.45,000 for 8 months. If the total profit is Rs.48,000, A's share is:",
       "options": [
-        "Rs.24,000",
         "Rs.28,800",
         "Rs.30,000",
-        "Rs.32,000"
+        "Rs.32,000",
+        "Rs.24,000"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A's investment x time = 30000*12 = 360000. B's investment x time = 45000*8 = 360000. Ratio = 1:1. A's share = 48000/2 = Rs.24,000.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1532,12 +1532,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
+        "Assam",
         "KG Basin",
         "Mumbai High",
-        "Cauvery Basin",
-        "Assam"
+        "Cauvery Basin"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1553,12 +1553,12 @@
       "difficulty": "easy",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
-        "Mexico, Argentina",
-        "Saudi Arabia, Iran, UAE",
         "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Nigeria, South Africa",
+        "Mexico, Argentina",
+        "Saudi Arabia, Iran, UAE"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1574,12 +1574,12 @@
       "difficulty": "medium",
       "stem": "ISRO's Gaganyaan mission aims to:",
       "options": [
-        "Land on Moon",
         "Send astronauts to space",
         "Study the Sun",
-        "Explore Mars"
+        "Explore Mars",
+        "Land on Moon"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Gaganyaan aims to send Indian astronauts (Gagannauts) to space.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1595,12 +1595,12 @@
       "difficulty": "medium",
       "stem": "Delhi-Mumbai Expressway is the longest expressway in India at approximately:",
       "options": [
+        "2,000 km",
         "1,200 km",
         "1,386 km",
-        "1,500 km",
-        "2,000 km"
+        "1,500 km"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Delhi-Mumbai Expressway is approximately 1,386 km long.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1616,12 +1616,12 @@
       "difficulty": "hard",
       "stem": "India's foreign exchange reserves recently crossed which milestone?",
       "options": [
-        "$500 billion",
-        "$600 billion",
         "$700 billion",
-        "$800 billion"
+        "$800 billion",
+        "$500 billion",
+        "$600 billion"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "India's forex reserves crossed $700 billion.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1637,12 +1637,12 @@
       "difficulty": "hard",
       "stem": "Which Indian IT company recently partnered with NVIDIA for AI cloud services?",
       "options": [
-        "TCS",
         "Infosys",
         "Wipro",
-        "HCL"
+        "HCL",
+        "TCS"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Infosys partnered with NVIDIA for AI cloud services.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1658,12 +1658,12 @@
       "difficulty": "easy",
       "stem": "The President of India is elected by:",
       "options": [
+        "Prime Minister",
         "Lok Sabha members",
         "Rajya Sabha members",
-        "Electoral College",
-        "Prime Minister"
+        "Electoral College"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1679,12 +1679,12 @@
       "difficulty": "medium",
       "stem": "SI unit of electric current is:",
       "options": [
-        "Volt",
-        "Watt",
         "Ampere",
-        "Ohm"
+        "Ohm",
+        "Volt",
+        "Watt"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Ampere is the SI unit of electric current.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1700,12 +1700,12 @@
       "difficulty": "medium",
       "stem": "Fundamental Duties were added by which Amendment?",
       "options": [
-        "42nd",
         "44th",
         "86th",
-        "91st"
+        "91st",
+        "42nd"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Fundamental Duties were added by the 86th Amendment, 2002.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1721,12 +1721,12 @@
       "difficulty": "hard",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
+        "8",
         "5",
         "6",
-        "7",
-        "8"
+        "7"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1742,12 +1742,12 @@
       "difficulty": "medium",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
-        "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent",
+        "Transient"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1763,12 +1763,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
         "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1784,12 +1784,12 @@
       "difficulty": "medium",
       "stem": "What does 'break the ice' mean?",
       "options": [
+        "End relationship",
         "Destroy ice",
         "Initiate conversation",
-        "Cause trouble",
-        "End relationship"
+        "Cause trouble"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1805,12 +1805,12 @@
       "difficulty": "medium",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
-        "had",
         "would",
-        "did"
+        "did",
+        "have",
+        "had"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1826,12 +1826,12 @@
       "difficulty": "hard",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
         "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1847,12 +1847,12 @@
       "difficulty": "medium",
       "stem": "Convert to passive: 'The committee approved the proposal.'",
       "options": [
+        "The proposal were approved by the committee",
         "The proposal was approved by the committee",
         "The proposal is approved by the committee",
-        "The proposal has been approved by committee",
-        "The proposal were approved by the committee"
+        "The proposal has been approved by committee"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Past simple passive: was/were + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1868,12 +1868,12 @@
       "difficulty": "medium",
       "stem": "There ___ many reasons for the delay.",
       "options": [
-        "is",
-        "was",
         "are",
-        "has been"
+        "has been",
+        "is",
+        "was"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "'There are' with plural noun 'reasons'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1889,12 +1889,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
-        "Kind",
         "Malevolent",
         "Generous",
-        "Charitable"
+        "Charitable",
+        "Kind"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1910,12 +1910,12 @@
       "difficulty": "medium",
       "stem": "Who ___ the book yesterday?",
       "options": [
+        "written",
         "did wrote",
         "wrote",
-        "has wrote",
-        "written"
+        "has wrote"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1931,12 +1931,12 @@
       "difficulty": "easy",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
-        "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water",
+        "A turning point"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,

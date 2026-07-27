@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "Birch's Law states that Vp = a + bρ, where a and b are constants dependent on mean atomic weight. For olivine (Mg,Fe)₂SiO₄ with mean atomic weight ≈ 20.7, a ≈ 1.84 km/s and b ≈ 2.34 km²/(s·g·cm⁻³). If the density at the base of the upper mantle (410 km discontinuity) is approximately 3.54 g/cm³, what is the predicted Vp?",
       "options": [
-        "10.12 km/s",
-        "10.28 km/s",
         "9.95 km/s",
-        "10.51 km/s"
+        "10.51 km/s",
+        "10.12 km/s",
+        "10.28 km/s"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Using Birch's Law: Vp = a + bρ = 1.84 + 2.34 × 3.54 = 1.84 + 8.2836 = 10.1236 km/s. However, at 410 km depth, the pressure is approximately 13 GPa, and the pressure derivative (∂Vp/∂P)_T adds approximately 0.16 km/s due to lattice compression not captured by density alone. Thus Vp ≈ 10.12 + 0.16 ≈ 10.28 km/s. This demonstrates that Birch's Law provides a compositional baseline that must be adjusted for in-situ pressure and temperature conditions in the deep mantle.",
       "estSec": 45,
       "topicWeight": 0.075,
@@ -58,12 +58,12 @@
       "difficulty": "easy",
       "stem": "The geoid anomaly over a subduction zone shows approximately -50 mGal despite the presence of a cold, dense slab. Which combination best explains this paradox?",
       "options": [
-        "Slab pull stress, mantle wedge hydration, and lithosphere flexure",
         "Dynamic topography from mantle downwelling, trench bathymetry, and slab dehydration",
         "Low-density accretionary prism sediments, slab rollback, and asthenospheric upwelling",
-        "All of the above mechanisms contribute to the observed negative anomaly"
+        "Suitable for narrow use cases",
+        "Slab pull stress, mantle wedge hydration, and lithosphere flexure"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "The negative geoid anomaly over subduction zones results from multiple mechanisms: (1) Dynamic topography from mantle downwelling creates surface depression reducing geoid height. (2) Trench bathymetry represents a mass deficit. (3) Slab dehydration and mantle wedge hydration reduce density via volatile enrichment. (4) Low-density accretionary prism sediments contribute negatively. (5) Back-arc asthenospheric upwelling creates additional low-density zones. The cold slab's positive density contribution is overwhelmed by these combined negative contributions. This exemplifies isostatic compensation where multiple density anomalies at different depths combine to produce the observed geoid signal.",
       "estSec": 50,
       "topicWeight": 0.075,
@@ -79,12 +79,12 @@
       "difficulty": "easy",
       "stem": "Seismic shear waves are completely attenuated in the outer core, but diffracted S-waves are occasionally observed. The mechanism proposed for S-wave propagation into the outer core involves:",
       "options": [
+        "Temperature-dependent viscosity creating a partially molten transition zone",
         "Conversion to P-waves at the CMB due to impedance contrast",
         "Viscous coupling between the solid D'' layer and liquid outer core",
-        "Electromagnetic coupling across the CMB",
-        "Temperature-dependent viscosity creating a partially molten transition zone"
+        "Electromagnetic coupling across the CMB"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diffracted S-waves in the outer core are primarily explained by viscous coupling at the CMB. The D'' layer at the base of the mantle is thermally and chemically heterogeneous with possible partial melt. The high viscosity gradient (~10²¹ Pa·s in D'' to ~10⁻¹ Pa·s in outer core) allows shear energy to couple into the liquid through viscous interaction. Electromagnetic coupling affects long-period phenomena (decadal variations) but not seismic wave propagation. P-wave conversion occurs but cannot explain S-wave diffracted phases. The viscous coupling mechanism bridges the impedance mismatch between solid mantle and liquid outer core at the seismic frequency band.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -100,12 +100,12 @@
       "difficulty": "easy",
       "stem": "Converting coordinates between WGS84 and the Indian Geodetic Datum requires a seven-parameter Helmert transformation. A systematic 200-meter eastward bias is observed across India. Which parameter set is most critical?",
       "options": [
-        "Scale factor s and translation Tx",
-        "Rotation Rz and translation Ty",
         "Translation Tx and rotation Ry",
-        "All seven parameters equally contribute"
+        "All seven parameters equally contribute",
+        "Scale factor s and translation Tx",
+        "Rotation Rz and translation Ty"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "A systematic eastward bias of ~200 m across India is primarily caused by: (1) Translation Tx: The X-component directly addresses east-west shifts in the geocentric frame. The Indian datum's origin offset from WGS84's geocenter creates ~200-300 m displacement in X. (2) Rotation Ry: Tilting about the north-south axis introduces a latitudinally varying east-west component significant over India's ~30° latitude span. Scale factor s affects radial distances, not directional bias. Rotation Rz creates north-south distortions. The combination of Tx and Ry provides the dominant corrections for the observed systematic eastward bias.",
       "estSec": 50,
       "topicWeight": 0.075,
@@ -121,12 +121,12 @@
       "difficulty": "medium",
       "stem": "In dual-frequency GPS, the ionosphere-free combination is Lc = (f₁²L₁ - f₂²L₂)/(f₁² - f₂²). If f₁ = 1575.42 MHz, f₂ = 1227.60 MHz, and L₁ has ionospheric delay of 15 m, what is the L₂ delay and the noise amplification factor?",
       "options": [
-        "L₂ delay ≈ 24.3 m; noise amplification ≈ 2.99",
         "L₂ delay ≈ 9.6 m; noise amplification ≈ 3.03",
         "L₂ delay ≈ 24.3 m; noise amplification ≈ 3.03",
-        "L₂ delay ≈ 9.6 m; noise amplification ≈ 2.99"
+        "L₂ delay ≈ 9.6 m; noise amplification ≈ 2.99",
+        "L₂ delay ≈ 24.3 m; noise amplification ≈ 2.99"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Ionospheric delay scales as 1/f²: ΔL₂ = ΔL₁ × (f₁/f₂)² = 15 × (1575.42/1227.60)² = 15 × 1.647 ≈ 24.7 m (closest to 24.3 m with rounded frequencies). For noise amplification: σ_Lc = σ × √(f₁⁴ + f₂⁴)/(f₁² - f₂²). With f₁² = 2,481,938 and f₂² = 1,507,002: √(f₁⁴ + f₂⁴) = 2,904,000. Denominator = 974,936. Ratio ≈ 2.98, approximately 2.99. The standard result for the GPS frequency pair gives noise amplification ≈ 2.99, meaning the ionosphere-free combination amplifies measurement noise by about 3× compared to single-frequency measurements.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -142,12 +142,12 @@
       "difficulty": "medium",
       "stem": "Stokes' formula requires gravity anomalies on the entire Earth, but the integral is truncated at cap radius ψ₀. What is the primary error from truncation, and what technique best reduces it?",
       "options": [
+        "Aliasing error; reduced by gridding regularization",
         "Omission error; reduced by least-squares collocation",
         "Commission error; reduced by downward continuation",
-        "Truncation error from far-zone; reduced by modified Stokes' kernels or RCR technique",
-        "Aliasing error; reduced by gridding regularization"
+        "Truncation error from far-zone; reduced by modified Stokes' kernels or RCR technique"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Truncation of Stokes' integral introduces truncation error from neglecting the gravity anomaly contribution beyond ψ₀. This far-zone contribution can reach several meters in geoid height. The most effective mitigations are: (1) Modified Stokes' kernels that analytically remove the far-zone contribution using a reference field, and (2) the Remove-Compute-Restore (RCR) technique: remove a reference gravity field (e.g., from a global geopotential model), compute the geoid using residual anomalies with reduced far-zone effects, then restore the reference contribution. 'Omission error' refers to missing short-wavelength signals from data spacing, not truncation. Downward continuation amplifies noise. Aliasing is a sampling issue.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -163,12 +163,12 @@
       "difficulty": "medium",
       "stem": "For a pure double-couple source (strike-slip, vertical fault, φ=45°, δ=90°, λ=0°), which statement about moment tensor decomposition into ISO, DC, and CLVD is correct?",
       "options": [
-        "Mij contains only DC with no ISO or CLVD",
-        "Mij has equal DC and CLVD with negative ISO",
         "Mij has 100% DC; ISO and CLVD vanish by symmetry",
-        "Decomposition depends on velocity model used"
+        "Decomposition depends on velocity model used",
+        "Mij contains only DC with no ISO or CLVD",
+        "Mij has equal DC and CLVD with negative ISO"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "For a pure double-couple source, moment tensor decomposition yields 100% DC with zero ISO and zero CLVD. This is fundamental: (1) The moment tensor is traceless (Mii = 0), eliminating ISO (which requires volumetric change). (2) The eigenvalues are (M₀, 0, -M₀), satisfying the CLVD condition only if the two non-zero eigenvalues have opposite signs and equal magnitude with zero CLVD fraction. (3) ISO requires explosion/implosion, CLVD requires non-shear deformation. The decomposition is independent of velocity model because it is a mathematical decomposition of the moment tensor itself, not a physical propagation effect.",
       "estSec": 50,
       "topicWeight": 0.075,
@@ -184,12 +184,12 @@
       "difficulty": "easy",
       "stem": "The acoustic wave equation in a heterogeneous medium with spatially varying ρ(x) and K(x) contains an additional term compared to constant-density case. This term is proportional to:",
       "options": [
-        "∇²K(x) — Laplacian of bulk modulus",
         "∇ρ(x)/ρ(x) · ∇p — density gradient dotted with pressure gradient",
         "∂ρ/∂t — time derivative of density",
-        "ρ(x) · ∇²p — density times Laplacian of pressure"
+        "ρ(x) · ∇²p — density times Laplacian of pressure",
+        "∇²K(x) — Laplacian of bulk modulus"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "From the equation of motion ρ∂v/∂t = -∇p and continuity equation (1/K)∂p/∂t = -∇·v, we derive ∇·(1/ρ ∇p) = (1/K)∂²p/∂t². Using the vector identity ∇·(fA) = f∇·A + A·∇f: (1/ρ)∇²p - (1/ρ²)∇ρ·∇p = (1/K)∂²p/∂t². The term -(1/ρ²)∇ρ·∇p couples the density gradient with the pressure gradient, causing scattering and mode conversion at density interfaces. In constant-density media, ∇ρ = 0 and this term vanishes, recovering the standard acoustic wave equation.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -205,12 +205,12 @@
       "difficulty": "hard",
       "stem": "In waveform inversion u(t) = Mij * Gij(t) * s(t), if the velocity model has 5% error in crustal S-wave velocity, what is the dominant effect on the inverted moment tensor when using long-period waveforms (T > 20s)?",
       "options": [
+        "Effect is negligible for long-period waveforms",
         "Systematic error in Mo with correct focal mechanism",
         "Rotation of principal axes giving incorrect mechanism",
-        "Amplitude bias with correct moment and mechanism",
-        "Effect is negligible for long-period waveforms"
+        "Amplitude bias with correct moment and mechanism"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "For long-period waveforms (T > 20s), the wavelength (~60 km at 20s, V=3 km/s) is much larger than crustal thickness (~35 km), so the wave averages over the layer. (1) Scalar moment Mo is determined by the long-period spectral level, which is insensitive to velocity errors. (2) Focal mechanism is determined by polarity and relative amplitude patterns, robust to moderate velocity errors. (3) Source time function may be slightly distorted by travel time errors, but this affects timing not moment tensor components. A 5% velocity error produces <2% error in Mo and <5° rotation in mechanism axes. This robustness is why moment tensor catalogs (USGS, ISC) use long-period data.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -231,12 +231,12 @@
       "difficulty": "easy",
       "stem": "For a uniformly magnetized sphere (radius R, magnetization M, permeability μ₀), what are the correct boundary conditions for the magnetic scalar potential V at r = R?",
       "options": [
+        "Both V and B are continuous across the boundary",
         "V is continuous; ∂V/∂r is continuous",
         "V is continuous; μ₀(∂V_out/∂r) - μ₀(∂V_in/∂r) = -M·n̂",
-        "V is continuous; the radial component of B is discontinuous by μ₀M",
-        "Both V and B are continuous across the boundary"
+        "V is continuous; the radial component of B is discontinuous by μ₀M"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Boundary conditions at r = R: (1) Continuity of tangential H implies V is continuous across the interface. (2) The normal component of B satisfies: B_r,out - B_r,in = μ₀M·r̂ (discontinuity equals the normal magnetization component). Since B = -μ₀∇V, this gives μ₀(∂V_in/∂r - ∂V_out/∂r) = μ₀M_r. For uniform magnetization along z-axis: interior potential V_in = (μ₀MR/3)(z/r³), exterior V_out = (μ₀MR³/3)(z/r³). The boundary condition is satisfied: the radial B component is discontinuous by μ₀M while V remains continuous.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "Poisson's relation connects magnetic and gravitational potentials. For uniform density ρ₀ and magnetization M = M₀k̂, the magnetic scalar potential is:",
       "options": [
-        "Vm = (M₀/4πGρ₀) ∂Vg/∂z",
-        "Vm = (μ₀M₀/4πGρ₀) ∂Vg/∂z",
         "Vm = (M₀/G) ∂²Vg/∂z², independent of density",
-        "Vm = (μ₀M₀/G) ∇Vg"
+        "Vm = (μ₀M₀/G) ∇Vg",
+        "Vm = (M₀/4πGρ₀) ∂Vg/∂z",
+        "Vm = (μ₀M₀/4πGρ₀) ∂Vg/∂z"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Poisson's relation: Vm = (μ₀M₀)/(4πGρ₀) × ∂Vg/∂z. Derived by comparing integral expressions: Vg = Gρ₀ ∫ dV'/|r-r'| and Vm = (μ₀M₀/4π) ∫ ∂/∂z'(1/|r-r'|)dV'. Integration by parts shows the magnetic potential is proportional to the directional derivative of the gravitational potential in the magnetization direction. The factor μ₀/(4πGρ₀) correctly converts between magnetic and gravitational units. Option A misses μ₀. Option C involves a second derivative (incorrect). Option D uses the gradient instead of the directional derivative.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -278,12 +278,12 @@
       "difficulty": "easy",
       "stem": "Upward continuation from h₁ to h₂ uses operator exp(-|k|Δh), where Δh = h₂ - h₁. For a magnetic anomaly at 100 m altitude with dominant wavenumber |k| = 0.0025 rad/m, what is the attenuation factor when continued to 500 m?",
       "options": [
-        "0.207",
         "0.368",
         "0.135",
-        "0.607"
+        "0.607",
+        "0.207"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The continuation factor is exp(-|k|Δh), where Δh = h₂ - h₁ = 500 - 100 = 400 m and |k| = 0.0025 rad/m. Thus |k|Δh = 0.0025 × 400 = 1.0. The attenuation factor is exp(-1) = 0.368. This corresponds to the e-folding attenuation: after one e-folding distance (h_e = 1/|k| = 400 m), the field amplitude decays to 1/e of its original value.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -299,12 +299,12 @@
       "difficulty": "medium",
       "stem": "The gravity gradient tensor eigenvalues satisfy λ₁ + λ₂ + λ₃ = 0. If λ₁ = 45 E, λ₂ = -20 E, λ₃ = -25 E, what does this indicate about source geometry?",
       "options": [
+        "Source cannot be determined from eigenvalues alone",
         "Elongated (prolate) body with long axis along λ₁",
         "Flattened (oblate) body with short axis along λ₃",
-        "Approximately spherical as eigenvalues have similar magnitudes",
-        "Source cannot be determined from eigenvalues alone"
+        "Approximately spherical as eigenvalues have similar magnitudes"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For a sphere: λ₁ = 2M, λ₂ = -M, λ₃ = -M (2:1:1 ratio). Given values: λ₁ = 45, λ₂ = -20, λ₃ = -25. Ratio |λ₂/λ₃| = 0.8 (close to 1, near-spherical). However, λ₁/|λ₂| = 2.25 (close to 2 for sphere) but λ₂ ≠ λ₃ (difference of 5 E), indicating slight elongation. The elongation ratio (λ₁ - λ₂)/(λ₁ - λ₃) = 65/70 = 0.93 indicates a prolate body with the long axis along the λ₁ direction. A truly spherical body would have λ₂ = λ₃ exactly. The tensor eigenvalue ratios provide a diagnostic tool for source shape classification without requiring full 3D modeling.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -320,12 +320,12 @@
       "difficulty": "medium",
       "stem": "For a dipping dike (Δρ = +0.3 g/cm³, dip 60°, thickness 50 m, depth 100-500 m) modeled using polygonal prisms, which approximation introduces the LEAST error?",
       "options": [
-        "Single rectangular prism with equivalent volume",
-        "10 horizontal slices of equal thickness with polygonal cross-sections",
         "Single vertical prism with average cross-section",
-        "2D sheet model (infinitely long in strike)"
+        "2D sheet model (infinitely long in strike)",
+        "Single rectangular prism with equivalent volume",
+        "10 horizontal slices of equal thickness with polygonal cross-sections"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For a dipping dike: (A) Single rectangular prism poorly represents the inclined geometry. (B) 10 horizontal slices provide the best approximation: each slice has a constant cross-section tailored to the dike's geometry at that depth, stacking captures the dipping geometry progressively, and with 10 slices over 400 m depth range (each 40 m thick), sufficient resolution is achieved. (C) Single vertical prism fails completely for 60° dip. (D) 2D sheet assumes infinite strike, introducing errors at dike tips and for 3D effects. The 10-slice approach balances computational efficiency with geometric accuracy, capturing the essential physics of the gravity response from a dipping structure.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -341,12 +341,12 @@
       "difficulty": "hard",
       "stem": "The Bouguer anomaly over Tibet is ~-500 mGal, free-air near zero. With elevation 5 km and crustal thickness 70 km, what does this imply about isostatic state and what is the Airy prediction?",
       "options": [
-        "Airy equilibrium; root depth ≈ 50 km below Moho",
         "Overcompensated; root depth ≈ 70 km",
         "Undercompensated; dynamic support required",
-        "Pratt equilibrium with lateral density variations"
+        "Pratt equilibrium with lateral density variations",
+        "Airy equilibrium; root depth ≈ 50 km below Moho"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Near-zero free-air anomaly indicates approximate isostatic equilibrium. The large negative Bouguer anomaly reflects the thick crustal root. Using Airy isostasy: root depth d = e × ρc/(ρm - ρc) = 5 × 2.8/(3.3-2.8) = 28 km below the regional elevation. Total crustal thickness = 5 km (above sea level) + 5 km (to sea level) + 28 km (root) = 38 km below sea level. The observed 70 km crustal thickness implies ~45 km additional root below the normal ~35 km Moho. The -500 mGal Bouguer anomaly corresponds to ~50 km of root (using ~-20 mGal per km rule of thumb). The near-zero free-air anomaly confirms Airy equilibrium is the dominant compensation mechanism.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -362,12 +362,12 @@
       "difficulty": "easy",
       "stem": "For a body with only induced magnetization at I = 45°N, D = 0°, the total field anomaly ΔT over the center of a buried sphere will be:",
       "options": [
+        "Depends on the body's magnetic susceptibility and depth",
         "Zero, because the anomaly is symmetric about the body center",
         "Positive maximum, because induced magnetization aligns with the ambient field",
-        "Negative minimum, because demagnetization reduces the total field",
-        "Depends on the body's magnetic susceptibility and depth"
+        "Negative minimum, because demagnetization reduces the total field"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "The total field anomaly ΔT = -μ₀∇·(M × ĥ), where ĥ is the ambient field direction. For a sphere with induced magnetization M = κH₀: (1) Susceptibility κ determines amplitude — higher κ produces stronger anomalies. (2) Depth controls breadth and strength — deeper bodies produce broader, weaker anomalies. (3) At I = 45°, the anomaly is asymmetric with positive peak shifted south and negative trough north. At the exact center, the anomaly could be positive, negative, or zero depending on geometry. The correct answer is that it depends on κ and depth, as these determine the anomaly pattern's amplitude and spatial distribution.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -383,12 +383,12 @@
       "difficulty": "hard",
       "stem": "A basalt has Q = 8, remanent D = 30°, I = -20° (reverse polarity), ambient D = 0°, I = 45°. What is the approximate direction of total magnetization relative to the ambient field?",
       "options": [
-        "Sub-parallel to ambient field with slight southward deviation",
-        "Sub-antiparallel to ambient field with slight eastward deviation",
         "Horizontal, pointing east-northeast",
-        "Steeply downward, pointing south-southwest"
+        "Steeply downward, pointing south-southwest",
+        "Sub-parallel to ambient field with slight southward deviation",
+        "Sub-antiparallel to ambient field with slight eastward deviation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Total magnetization M_total = M_ind + M_rem. With Q = 8, M_rem = 8 × M_ind, so remanence dominates. Converting to Cartesian: ambient field (I=45°, D=0°): ĥ = (0.707, 0, 0.707). Remanent (I=-20°, D=30°): m̂_rem = (0.816, 0.470, -0.342). Total: M_total ∝ (0.707 + 8×0.816, 0 + 8×0.470, 0.707 + 8×(-0.342)) = (7.235, 3.760, -2.029). The dominant component is northward with eastward and upward (negative Z) components. The remanent component points nearly opposite to the ambient field direction, creating a sub-antiparallel configuration with slight eastward deviation.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -404,12 +404,12 @@
       "difficulty": "easy",
       "stem": "Using Fisher statistics, N = 25 samples give R = 24.2. The precision parameter κ ≈ (N-1)/(N-R) and α₉₅ ≈ 1.8°. What does this indicate about data quality?",
       "options": [
-        "Excellent quality; scatter consistent with secular variation alone",
         "Good quality; scatter exceeds secular variation, suggesting tectonic rotation",
         "Poor quality; scatter too large for reliable analysis",
-        "Quality cannot be assessed without formation age"
+        "Quality cannot be assessed without formation age",
+        "Excellent quality; scatter consistent with secular variation alone"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "κ = (N-1)/(N-R) = 24/0.8 = 30. Angular standard deviation ≈ 1/√κ ≈ 10.4°. For κ = 30 and N = 25, α₉₅ ≈ 1.8° indicates high precision. This scatter (~10° angular standard deviation) is within the range expected for geomagnetic secular variation (typically 5-15°), suggesting the samples recorded a short time interval of the geomagnetic field without significant tectonic overprint. The small α₉₅ confirms excellent data clustering, characteristic of high-quality paleomagnetic data from volcanic rocks that cooled quickly through the Curie temperature.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -425,12 +425,12 @@
       "difficulty": "easy",
       "stem": "For a Wenner array on two-layer earth (ρ₁ = 100 Ωm, h₁ = 10 m over ρ₂ = 10 Ωm), at what spacing does ρa equal √(ρ₁ρ₂) ≈ 31.6 Ωm?",
       "options": [
+        "a ≈ 100 m (10 times the layer thickness)",
         "a ≈ 5 m (half the layer thickness)",
         "a ≈ 15 m (1.5 times the layer thickness)",
-        "a ≈ 30 m (3 times the layer thickness)",
-        "a ≈ 100 m (10 times the layer thickness)"
+        "a ≈ 30 m (3 times the layer thickness)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For a two-layer Wenner curve, the apparent resistivity transitions from ρ₁ at small spacings to ρ₂ at large spacings. The crossover where ρa equals the geometric mean occurs at a spacing approximately equal to the layer thickness. At a = h₁ = 10 m, ρa ≈ √(ρ₁ρ₂) = √(1000) ≈ 31.6 Ωm. Using linear filter theory for ρ₂/ρ₁ = 0.1, the exact crossover occurs at a/h₁ ≈ 1.5, i.e., a ≈ 15 m. At a = 5 m, ρa is closer to ρ₁. At a = 30 m, ρa approaches ρ₂. At a = 100 m, ρa ≈ 10 Ωm. This rule of thumb is widely used in field survey design.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -446,12 +446,12 @@
       "difficulty": "easy",
       "stem": "The Cole-Cole model: ρ(ω) = ρ₀[1 - m(1 - 1/(1 + (iωτ)^c))]. For m = 0.5, τ = 0.1 s, c = 0.25, what is the phase angle at f = 1 Hz compared to Debye (c = 1)?",
       "options": [
-        "Phase ≈ -45°; Cole-Cole more negative than Debye",
-        "Phase ≈ -25°; Cole-Cole less negative than Debye",
         "Phase ≈ -35°; both models identical at this frequency",
-        "Phase ≈ -15°; Cole-Cole phase independent of frequency at c = 0.25"
+        "Phase ≈ -15°; Cole-Cole phase independent of frequency at c = 0.25",
+        "Phase ≈ -45°; Cole-Cole more negative than Debye",
+        "Phase ≈ -25°; Cole-Cole less negative than Debye"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For Cole-Cole at ω = 2π rad/s, τ = 0.1 s, ωτ = 0.628: (ωτ)^c = 0.889, sin(cπ/2) = 0.383, cos(cπ/2) = 0.924. The phase angle is approximately -25°. For Debye (c = 1) at same parameters: φ_Debye = -arctan(2m(ωτ)/(1 + (ωτ)² - m)) ≈ -35°. The Cole-Cole model with c = 0.25 produces a broader, less peaked phase response compared to Debye, resulting in a less negative phase at this frequency. The frequency dependence parameter c controls the broadening: c < 1 spreads the phase peak over a wider frequency range, which is characteristic of distributed relaxation processes in heterogeneous media like mineralized rocks.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -467,12 +467,12 @@
       "difficulty": "medium",
       "stem": "An SP anomaly over sulfide ore shows a -400 mV peak with half-width of 200 m. Using the half-width rule, what is the approximate depth to the ore body center?",
       "options": [
-        "Depth ≈ 100 m (half the half-width)",
         "Depth ≈ 140 m (half-width / √2)",
         "Depth ≈ 200 m (equal to half-width)",
-        "Depth ≈ 280 m (half-width × √2)"
+        "Depth ≈ 280 m (half-width × √2)",
+        "Depth ≈ 100 m (half the half-width)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For SP anomalies over sheet-like sources, the half-width rule states depth ≈ half-width / √2. The half-width (distance from peak to half-maximum point) equals the depth for a horizontal sheet. However, for a vertical sheet (dike) source, the depth is approximately half-width / √2 ≈ 200/1.414 ≈ 141 m. This accounts for the geometry of the source and the anomaly shape not being exactly Lorentzian. The half-width method is a rapid estimation technique for initial depth assessment, though more accurate results come from quantitative modeling of the full anomaly profile or using the maximum gradient method.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -493,12 +493,12 @@
       "difficulty": "medium",
       "stem": "In 1D MT, the impedance recurrence for layer n-1 above half-space n uses intrinsic impedance. Which expression correctly relates Zn-1 to Zn?",
       "options": [
+        "Zn-1 = Zn × exp(-kn-1 × hn-1)",
         "Zn-1 = ρn-1 × kn-1",
         "Zn-1 = ρn-1 × kn-1 × (Zn + ρn-1 × kn-1 × tanh(kn-1 × hn-1)) / (ρn-1 × kn-1 + Zn × tanh(kn-1 × hn-1))",
-        "Zn-1 = (Zn + iωμ₀ × hn-1) / (1 + iωμ₀ × hn-1 × Zn)",
-        "Zn-1 = Zn × exp(-kn-1 × hn-1)"
+        "Zn-1 = (Zn + iωμ₀ × hn-1) / (1 + iωμ₀ × hn-1 × Zn)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The MT impedance recurrence for 1D layered earth is derived from the transmission line analogy. For layer j with ρj, hj, and kj = √(iωμ₀/ρj): Zj = ρj × kj × (Zj+1 + ρj × kj × tanh(kj × hj)) / (ρj × kj + Zj+1 × tanh(kj × hj)). This comes from boundary conditions requiring continuity of tangential E and H fields. For the bottom half-space, Zn = ρn × kn (no recurrence needed). Option A gives only intrinsic impedance without recurrence. Option C is a linearized approximation for thin layers. Option D is exponential decay for very lossy media. The correct recurrence (option B) is the standard formula used in MT processing software (e.g., ModEM, Occam).",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -514,12 +514,12 @@
       "difficulty": "hard",
       "stem": "For an EM wave in a medium with σ = 1 S/m, εr = 10, f = 100 Hz, what are the skin depth δ and displacement-to-conduction current ratio?",
       "options": [
-        "δ ≈ 1.6 km; ratio ≈ 8.9 × 10⁻²; conduction dominates (quasi-static)",
-        "δ ≈ 50 m; ratio ≈ 8.9 × 10⁻²; conduction dominates (quasi-static)",
         "δ ≈ 1.6 km; ratio ≈ 8.9 × 10⁻³; displacement dominates",
-        "δ ≈ 50 m; ratio ≈ 8.9 × 10⁻³; both currents comparable"
+        "δ ≈ 50 m; ratio ≈ 8.9 × 10⁻³; both currents comparable",
+        "δ ≈ 1.6 km; ratio ≈ 8.9 × 10⁻²; conduction dominates (quasi-static)",
+        "δ ≈ 50 m; ratio ≈ 8.9 × 10⁻²; conduction dominates (quasi-static)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Skin depth: δ = √(2/(ωμ₀σ)) = √(2/(628.3 × 1.257 × 10⁻⁶ × 1)) = √(2533) ≈ 50 m. Displacement-to-conduction ratio: εω/σ = (8.854 × 10⁻¹¹ × 10 × 628.3)/1 = 5.56 × 10⁻⁷. This is much less than 1, indicating conduction current dominates (quasi-static regime). The answer δ ≈ 1.6 km corresponds to a different conductivity (σ ≈ 0.01 S/m), where the ratio is ~8.9 × 10⁻². The key physics: at 100 Hz in a conductor, conduction current vastly exceeds displacement current, placing the system in the quasi-static regime where EM diffusion, not wave propagation, governs field behavior.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -540,12 +540,12 @@
       "difficulty": "easy",
       "stem": "In offshore CSEM for hydrocarbons, the airwave masks the reservoir response. For sea depth 1000 m, seawater ρ = 0.3 Ωm, offset 5 km, what is the approximate airwave travel time and why is it problematic?",
       "options": [
-        "≈ 33 ms; arrives before subsurface reflection, obscuring target",
         "≈ 12 ms; has higher amplitude than subsurface response at this offset",
         "≈ 5 ms; propagates faster than direct wave in seawater",
-        "≈ 50 ms; arrives after all subsurface reflections"
+        "≈ 50 ms; arrives after all subsurface reflections",
+        "≈ 33 ms; arrives before subsurface reflection, obscuring target"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The airwave path: source → sea surface (through seawater) → along surface (at speed of light in air) → sea surface → receiver (through seawater). For shallow water (<1000 m), the airwave arrives at approximately 12 ms and has significant amplitude that can exceed the subsurface response. The airwave is particularly problematic at intermediate offsets (3-8 km) where it overlaps with the reservoir response. It propagates as a guided wave along the air-water interface, decaying slowly with offset compared to the subsurface response. This makes detecting the resistive reservoir layer difficult, as the airwave masks the subtle EM field increase from the hydrocarbon-bearing formation.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -561,12 +561,12 @@
       "difficulty": "medium",
       "stem": "In PSDM, a Common Image Gather shows over-corrected residual moveout (upward curvature). What does this indicate about the velocity model?",
       "options": [
+        "Reflector depth correct but dip wrong",
         "Velocity too low; increase migration velocity",
         "Velocity too high; decrease migration velocity",
-        "Velocity correct but anisotropy parameters wrong",
-        "Reflector depth correct but dip wrong"
+        "Velocity correct but anisotropy parameters wrong"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In PSDM, CIGs display migrated images vs. offset. For correct velocity, events are flat (zero residual moveout). Upward curvature (over-correction) means migration velocity was too high. At correct velocity, each offset maps to the same depth. If velocity is too high, far offsets are over-corrected, placing reflectors shallower than near offsets, creating upward curvature. The residual moveout equation: Δz ≈ (x²)/(2v²) × (v²_model/v²_true - 1). For over-correction, v_model > v_true, so the correction is to reduce v_model. This is the basis of velocity analysis techniques like residual curvature analysis (RCA) and layer stripping in PSDM workflows.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -587,12 +587,12 @@
       "difficulty": "easy",
       "stem": "Using Aki-Richards for a gas-sand/shale interface (gas sand: VP=2.4, VS=1.5, ρ=2.1; shale: VP=2.8, VS=1.2, ρ=2.3), what are the AVO intercept A and gradient B?",
       "options": [
-        "A = -0.092, B = 0.154",
-        "A = -0.092, B = -0.154",
         "A = 0.092, B = 0.154",
-        "A = -0.046, B = 0.077"
+        "A = -0.046, B = 0.077",
+        "A = -0.092, B = 0.154",
+        "A = -0.092, B = -0.154"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Computing AVO parameters: ΔVP = -0.4, VP_avg = 2.6, ΔVS = 0.3, VS_avg = 1.35, Δρ = -0.2, ρ_avg = 2.2. Intercept A = (1/2)(ΔVP/VP + Δρ/ρ) = (1/2)(-0.154 - 0.091) = -0.122. Using the exact formula: A = (ρ₂VP₂ - ρ₁VP₁)/(ρ₂VP₂ + ρ₁VP₁) = (5.04 - 6.44)/(5.04 + 6.44) = -0.122. The given answer A = -0.092 uses slightly different averaging conventions. For gradient B: B = (1/2)(ΔVP/VP) - 2(VS/VP)²(2ΔVS/VS + Δρ/ρ). The answer A = -0.092, B = 0.154 corresponds to Class III AVO for gas sands, where the positive gradient indicates reflection coefficient increases (becomes less negative) with offset — a diagnostic hydrocarbon indicator.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -608,12 +608,12 @@
       "difficulty": "medium",
       "stem": "Peak frequency shifts from 40 Hz to 25 Hz after traveling through 50 m of gas-saturated sandstone. Assuming constant Q, what is the approximate quality factor Q?",
       "options": [
-        "Q ≈ 30",
         "Q ≈ 50",
         "Q ≈ 80",
-        "Q ≈ 120"
+        "Q ≈ 120",
+        "Q ≈ 30"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The quality factor Q relates to frequency-dependent attenuation. For constant Q: A(f) = A₀ exp(-πft/Q). Travel time through 50 m gas sand: Δt = Δz/V = 50/2000 = 0.025 s (V ≈ 2000 m/s). Frequency shift Δf = 15 Hz. Using the spectral ratio method: Q ≈ f_avg × Δt / (Δf/f_avg) × π. With f_avg = 32.5 Hz: Q ≈ 32.5 × 0.025 / (15/32.5) / π ≈ 50. This is consistent with observed Q values in gas-saturated reservoirs (typically 30-100). Gas saturation significantly reduces Q due to squirt-flow mechanisms and gas bubble resonance effects, making Q a useful direct hydrocarbon indicator.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -629,12 +629,12 @@
       "difficulty": "medium",
       "stem": "Using Gassmann's equation for sandstone (φ = 0.25, K0 = 36 GPa, Kdry = 12 GPa, Kf_brine = 2.2 GPa, Kf_gas = 0.0001 GPa), what are Ksat for brine and gas?",
       "options": [
+        "Ksat(brine) ≈ 20.5 GPa; Ksat(gas) ≈ 12.2 GPa",
         "Ksat(brine) ≈ 15.8 GPa; Ksat(gas) ≈ 12.1 GPa",
         "Ksat(brine) ≈ 18.2 GPa; Ksat(gas) ≈ 12.0 GPa",
-        "Ksat(brine) ≈ 12.8 GPa; Ksat(gas) ≈ 11.9 GPa",
-        "Ksat(brine) ≈ 20.5 GPa; Ksat(gas) ≈ 12.2 GPa"
+        "Ksat(brine) ≈ 12.8 GPa; Ksat(gas) ≈ 11.9 GPa"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Gassmann's equation: Ksat = Kdry + (1 - Kdry/K0)² / (φ/Kf + (1-φ)/K0 - Kdry/K0²). For brine: denominator = 0.25/2.2 + 0.75/36 - 12/1296 = 0.1136 + 0.0208 - 0.0093 = 0.1251. Numerator = (1 - 12/36)² = 0.4444. Ksat = 12 + 0.4444/0.1251 = 15.55 GPa ≈ 15.8 GPa. For gas: denominator = 0.25/0.0001 + 0.0208 - 0.0093 ≈ 2500. Ksat(gas) = 12 + 0.4444/2500 ≈ 12.0 GPa. Gas substitution has minimal effect on Ksat because Kf(gas) << Kdry, making the fluid term dominant. The correct answer Ksat(brine) ≈ 18.2 GPa accounts for the full Gassmann calculation with precise parameter treatment including the frame flexibility factor.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -650,12 +650,12 @@
       "difficulty": "hard",
       "stem": "On a Vp/Vs vs. P-impedance crossplot, which trend represents fluid substitution from brine (Vp=3.2, Vs=1.8, ρ=2.3) to gas (Vp=2.6, Vs=1.7, ρ=2.1)?",
       "options": [
-        "Diagonal from upper-right to lower-left with slope ≈ -0.4",
-        "Horizontal line moving left with constant Vp/Vs",
         "Curved path from lower-left to upper-right with increasing Vp/Vs",
-        "Diagonal from lower-right to upper-left with slope ≈ +0.6"
+        "Diagonal from lower-right to upper-left with slope ≈ +0.6",
+        "Diagonal from upper-right to lower-left with slope ≈ -0.4",
+        "Horizontal line moving left with constant Vp/Vs"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Computing: Brine: Vp/Vs = 1.78, IP = 7.36. Gas: Vp/Vs = 1.53, IP = 5.46. On Vp/Vs (y-axis) vs. IP (x-axis): brine at (7.36, 1.78) upper-right, gas at (5.46, 1.53) lower-left. Slope = (1.53-1.78)/(5.46-7.36) = +0.13. The fluid substitution path is a diagonal from lower-right (gas: low IP, low Vp/Vs) to upper-left (brine: high IP, high Vp/Vs) with positive slope. Gas replacement reduces both IP (density and velocity decrease) and Vp/Vs (VP drops more than VS), creating a characteristic diagonal trend used in lithology-fluid discrimination on rock physics templates.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -671,12 +671,12 @@
       "difficulty": "medium",
       "stem": "In 4D seismic, Vp changes from 2800 m/s (oil) to 3100 m/s (water) in a 20 m reservoir at 40 Hz. What is the minimum detectable saturation change ΔSw?",
       "options": [
-        "ΔSw ≈ 0.05 (5%)",
         "ΔSw ≈ 0.15 (15%)",
         "ΔSw ≈ 0.25 (25%)",
-        "ΔSw ≈ 0.40 (40%)"
+        "ΔSw ≈ 0.40 (40%)",
+        "ΔSw ≈ 0.05 (5%)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The time-lapse amplitude difference is proportional to impedance change: ΔZ/Z = Δ(ρVp)/(ρVp). For saturation change ΔSw: (∂Vp/∂Sw) = (3100-2800)/(0.7-0.3) = 750 m/s per unit Sw. Relative velocity change: 750/2950 = 0.254 per unit ΔSw. Density change: Δρ ≈ 0.2ΔSw, Δρ/ρ ≈ 0.091ΔSw. Total: ΔZ/Z ≈ 0.345 × ΔSw. The minimum detectable difference in 4D seismic is typically 5-10% of original amplitude. For a 20 m reservoir at 40 Hz, tuning thickness λ/4 = V/(4f) = 18.4 m (near tuning). ΔSw ≈ 0.15 produces ~5% impedance change, at the detection threshold for modern 4D surveys.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -697,12 +697,12 @@
       "difficulty": "hard",
       "stem": "In spiking deconvolution with 0.1% prewhitening, what is the effect on the deconvolved spectrum and why is it necessary?",
       "options": [
+        "No effect on spectrum; only affects filter coefficients",
         "Flattens spectrum completely; removes all noise",
         "Prevents spectral notches from causing instability; spectrum whitened but not perfectly flat",
-        "Amplifies high frequencies; improves resolution",
-        "No effect on spectrum; only affects filter coefficients"
+        "Amplifies high frequencies; improves resolution"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Prewhitening stabilizes deconvolution by preventing amplification of frequencies with very low energy (spectral notches). With 0.1% prewhitening: R' = R + 0.001 × R(0) × I, ensuring the matrix is positive definite and well-conditioned. The spectrum is whitened (flattened) but not perfectly flat — notches are filled proportionally to prewhitening level. The 0.1% level compromises between stabilization and resolution preservation. Lower SNR requires more prewhitening. Option A is incorrect because the spectrum isn't perfectly flat. Option C is wrong because prewhitening limits high-frequency amplification. Option D is incorrect because it affects the spectrum.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -723,12 +723,12 @@
       "difficulty": "medium",
       "stem": "For Morlet wavelet with ω₀ = 6 at center frequency 20 Hz, what is the frequency bandwidth Δf and how does it compare to STFT with 50 ms Hanning window?",
       "options": [
-        "CWT: Δf ≈ 3.3 Hz; STFT: Δf ≈ 20 Hz — CWT better frequency resolution",
-        "CWT: Δf ≈ 6.7 Hz; STFT: Δf ≈ 20 Hz — CWT better frequency resolution",
         "CWT: Δf ≈ 20 Hz; STFT: Δf ≈ 20 Hz — same resolution",
-        "CWT: Δf ≈ 3.3 Hz; STFT: Δf ≈ 6.7 Hz — STFT better frequency resolution"
+        "CWT: Δf ≈ 3.3 Hz; STFT: Δf ≈ 6.7 Hz — STFT better frequency resolution",
+        "CWT: Δf ≈ 3.3 Hz; STFT: Δf ≈ 20 Hz — CWT better frequency resolution",
+        "CWT: Δf ≈ 6.7 Hz; STFT: Δf ≈ 20 Hz — CWT better frequency resolution"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For Morlet wavelet: Δf ≈ f₀ × (2/ω₀) = 20 × (2/6) ≈ 6.7 Hz. Time resolution: Δt ≈ 1/(π × Δf) ≈ 47 ms. For STFT with 50 ms Hanning window: Δf ≈ 1/T = 1/0.05 = 20 Hz (constant across frequencies). CWT at 20 Hz has Δf ≈ 6.7 Hz (better frequency resolution) and Δt ≈ 47 ms (similar time resolution). CWT's advantage: at 5 Hz, Δf ≈ 1.7 Hz and Δt ≈ 188 ms, providing excellent frequency resolution for low-frequency events. STFT maintains 20 Hz resolution everywhere, poor for low-frequency analysis.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -744,12 +744,12 @@
       "difficulty": "hard",
       "stem": "For a seismic gather with Δx = 25 m and 4 ms sampling, what is the maximum unaliased frequency for v = 2000 m/s, and what FK filter rejects ground roll at v = 500 m/s?",
       "options": [
-        "Max f = 20 Hz; pass fan v = 1500-5000 m/s",
         "Max f = 40 Hz; pass fan v = 1000-4000 m/s",
         "Max f = 20 Hz; reject fan v = 0-800 m/s",
-        "Max f = 40 Hz; reject fan v = 0-500 m/s"
+        "Max f = 40 Hz; reject fan v = 0-500 m/s",
+        "Max f = 20 Hz; pass fan v = 1500-5000 m/s"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Spatial Nyquist: k_Nyquist = 1/(2Δx) = 0.02 m⁻¹. For v = 2000 m/s: f_max = v × k_Nyquist = 2000 × 0.02 = 40 Hz (spatial aliasing limit). Temporal Nyquist: f_t = 1/(2×0.004) = 125 Hz. The aliasing condition: f ≤ v/(2Δx). For ground roll at v = 500 m/s, the FK filter design requires a reject fan from v = 0 to v = 800 m/s to separate signal (v > 1000 m/s) from ground roll. The answer max f = 20 Hz with reject fan v = 0-800 m/s provides adequate separation between signal and ground roll cones in the FK domain.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -765,12 +765,12 @@
       "difficulty": "medium",
       "stem": "Using Archie's equation Sw = (a × Rw / (φᵐ × Rt))^(1/n) with φ = 0.20, Rt = 20 Ωm, Rw = 0.05 Ωm, a = 0.81, m = 2.0, n = 2.0. If core analysis gives Sw = 0.45, what causes the discrepancy?",
       "options": [
+        "Sw(Archie) ≈ 0.75; discrepancy due to incorrect porosity",
         "Sw(Archie) ≈ 0.30; discrepancy due to clay conductivity (shaly sand)",
         "Sw(Archie) ≈ 0.60; discrepancy due to invasion effects",
-        "Sw(Archie) ≈ 0.45; no discrepancy",
-        "Sw(Archie) ≈ 0.75; discrepancy due to incorrect porosity"
+        "Sw(Archie) ≈ 0.45; no discrepancy"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Sw = (0.81 × 0.05 / (0.20² × 20))^(1/2) = (0.0405/0.8)^(1/2) = (0.0506)^(1/2) ≈ 0.225 ≈ 0.30 (with rounding). Core analysis gives 0.45. The discrepancy is due to shaly sand effects: clay minerals provide additional conductivity not accounted for in Archie's equation. The apparent Rt is lower than expected, leading to Sw underestimation. The Waxman-Smits or Dual-Water model corrects this: 1/Rt = (φᵐ × Swⁿ)/(a × Rw) + B × Qv × Sw, where B is counterion mobility and Qv is cation exchange capacity. Archie assumes clean sand, underestimating Sw in shaly sands.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -786,12 +786,12 @@
       "difficulty": "hard",
       "stem": "For a shaly sand with φt = 0.25, Vcl = 0.15, Sbw = 0.30, Rw = 0.05 Ωm, what are the effective porosity φe and effective water resistivity Rwe?",
       "options": [
-        "φe = 0.25; Rwe = 0.05 Ωm",
-        "φe = 0.2125; Rwe = 0.05 Ωm",
         "φe = 0.2125; Rwe = 0.035 Ωm",
-        "φe = 0.175; Rwe = 0.065 Ωm"
+        "φe = 0.175; Rwe = 0.065 Ωm",
+        "φe = 0.25; Rwe = 0.05 Ωm",
+        "φe = 0.2125; Rwe = 0.05 Ωm"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "In the dual-water model: effective porosity φe = φt - Vcl × φt = 0.25 - 0.15 × 0.25 = 0.2125. The effective water resistivity accounts for bound water conductivity: Rwe ≈ Rw × (1 - Sbw) = 0.05 × 0.70 = 0.035 Ωm. Bound water has very low resistivity due to clay surface conduction (high cation exchange capacity), so the effective water resistivity is lower than formation water resistivity. This correction is crucial for accurate water saturation calculation in shaly sands using modified Archie equations.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -812,12 +812,12 @@
       "difficulty": "medium",
       "stem": "NMR shows bimodal T₂ distribution with peaks at 10 ms and 800 ms. With T₂ cutoff = 33 ms, NMR porosity = 25 pu, and 30% below cutoff, what are BFV and FFI?",
       "options": [
-        "BFV = 7.5 pu; FFI = 17.5 pu",
         "BFV = 10.0 pu; FFI = 15.0 pu",
         "BFV = 12.5 pu; FFI = 12.5 pu",
-        "BFV = 5.0 pu; FFI = 20.0 pu"
+        "BFV = 5.0 pu; FFI = 20.0 pu",
+        "BFV = 7.5 pu; FFI = 17.5 pu"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "NMR T₂ distribution directly measures pore fluid volumes. Bound fluid volume (BFV) = signal with T₂ < 33 ms cutoff. Free fluid index (FFI) = signal with T₂ > 33 ms. Given: NMR porosity = 25 pu, 30% below cutoff. BFV = 30% × 25 = 7.5 pu. FFI = 70% × 25 = 17.5 pu. The 33 ms cutoff is standard for sandstones (empirical: T₂ < 33 ms = capillary-bound water). The bimodal distribution confirms: 10 ms peak = clay-bound water (very small pores), 800 ms peak = free fluid in large intergranular pores.",
       "estSec": 55,
       "topicWeight": 0.075,
@@ -833,12 +833,12 @@
       "difficulty": "medium",
       "stem": "A rock contains 10 ppm ²³⁸U in secular equilibrium. What is the activity of ²¹⁴Bi (1.76 MeV peak) in Bq/kg, and how does it compare to ²³⁸U activity?",
       "options": [
+        "≈ 50.0 Bq/kg; four times ²³⁸U",
         "≈ 12.4 Bq/kg; equal to ²³⁸U (secular equilibrium)",
         "≈ 25.0 Bq/kg; twice ²³⁸U",
-        "≈ 6.2 Bq/kg; half ²³⁸U",
-        "≈ 50.0 Bq/kg; four times ²³⁸U"
+        "≈ 6.2 Bq/kg; half ²³⁸U"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In secular equilibrium, daughter activity equals parent activity. Activity of ²³⁸U: A = λN = (ln2/T½) × N. T½ = 4.468 × 10⁹ years = 1.41 × 10¹⁷ s. Atoms per kg: N = (10 × 10⁻⁶ × 6.022 × 10²³) / 238 = 2.53 × 10¹⁶. A = (0.693/1.41 × 10¹⁷) × 2.53 × 10¹⁶ = 12.4 Bq/kg. In secular equilibrium, ²¹⁴Bi has identical activity to ²³⁸U. This principle is fundamental to gamma-ray spectroscopy: daughter products in equilibrium have equal activities, allowing parent concentration determination from daughter photopeaks.",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -854,12 +854,12 @@
       "difficulty": "hard",
       "stem": "A NaI(Tl) detector has 7% FWHM at 662 keV. What is the FWHM at 1.46 MeV (⁴⁰K), and can it resolve the 1.46 MeV from 1.76 MeV (²¹⁴Bi) peak separated by 300 keV?",
       "options": [
-        "FWHM ≈ 102 keV; yes, easily resolved (> 3× FWHM)",
-        "FWHM ≈ 146 keV; yes, resolved (≈ 2× FWHM)",
         "FWHM ≈ 73 keV; yes, well resolved (> 4× FWHM)",
-        "FWHM ≈ 204 keV; no, not resolved (< 2× FWHM)"
+        "FWHM ≈ 204 keV; no, not resolved (< 2× FWHM)",
+        "FWHM ≈ 102 keV; yes, easily resolved (> 3× FWHM)",
+        "FWHM ≈ 146 keV; yes, resolved (≈ 2× FWHM)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For scintillation detectors, energy resolution scales as R ∝ 1/√E. Given: R(662) = 7%. At 1460 keV: R(1460) = 0.07 × √(662/1460) = 0.07 × 0.673 = 4.7%. FWHM = 0.047 × 1460 = 68.6 keV. However, the answer 102 keV assumes constant resolution (FWHM ∝ E), giving FWHM = 0.07 × 1460 = 102 keV. The separation between 1.46 MeV and 1.76 MeV peaks is 300 keV, which is 300/102 ≈ 2.9× FWHM (using the given answer), making the peaks easily resolved (> 3× FWHM criterion for complete resolution).",
       "estSec": 60,
       "topicWeight": 0.075,
@@ -880,12 +880,12 @@
       "difficulty": "medium",
       "stem": "In Tikhonov regularization Φ = Φd + λΦm, the L-curve method chooses λ. What does the L-curve corner represent and how does λ_L-curve compare to λ_GCV?",
       "options": [
-        "Optimal balance between data fit and model smoothness; λ_L-curve ≈ λ_GCV",
         "Maximum model smoothness; λ_L-curve >> λ_GCV",
         "Minimum data misfit; λ_L-curve << λ_GCV",
-        "Different criteria always give different λ"
+        "Different criteria always give different λ",
+        "Optimal balance between data fit and model smoothness; λ_L-curve ≈ λ_GCV"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The L-curve plots log(Φm) vs. log(Φd) for varying λ, showing an L-shape with a corner. The corner represents the optimal trade-off: (1) Decreasing λ beyond corner slightly reduces model roughness but dramatically increases data misfit. (2) Increasing λ beyond corner slightly reduces misfit but dramatically increases roughness. GCV minimizes prediction error: GCV(λ) = Φd/(N - df)². Both aim for optimal balance, and in practice λ_L-curve ≈ λ_GCV for well-posed problems. L-curve is more robust for non-uniform data coverage, while GCV is better when noise statistics are unknown.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -901,12 +901,12 @@
       "difficulty": "hard",
       "stem": "For linear inversion d = Gm + noise with singular values λ₁=100, λ₂=50, λ₃=10, λ₄=0.5, λ₅=0.01, and noise amplitude 1.0, which singular values contribute meaningfully and what is the effective dimensionality?",
       "options": [
+        "Used for shallow foundations only",
         "All 5 contribute; dimensionality = 5",
         "λ₁, λ₂, λ₃ contribute; dimensionality = 3",
-        "λ₁, λ₂, λ₃, λ₄ contribute; dimensionality = 4",
-        "Only λ₁, λ₂ contribute; dimensionality = 2"
+        "λ₁, λ₂, λ₃, λ₄ contribute; dimensionality = 4"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Contribution of each singular value is determined by SNR_k = λ_k × σ_signal/σ_noise. Assuming signal amplitude ≈ 100 (comparable to largest singular value): SNR₁ = 10000 (excellent), SNR₂ = 5000 (excellent), SNR₃ = 1000 (good), SNR₄ = 50 (marginal), SNR₅ = 1 (noise level). Criterion: SNR > 10 (λ_k > 10 × σ_noise/σ_signal). With σ_noise = 1.0: λ₁ = 100, λ₂ = 50, λ₃ = 10 (at threshold), λ₄ = 0.5 (below), λ₅ = 0.01 (below). Thus λ₁, λ₂, λ₃ contribute meaningfully, giving effective dimensionality = 3. Components with λ₄ and λ₅ would amplify noise by factors of 50 and 100, demonstrating why truncated SVD or Tikhonov regularization is necessary.",
       "estSec": 65,
       "topicWeight": 0.075,
@@ -922,12 +922,12 @@
       "difficulty": "hard",
       "stem": "A geophysical survey cost increased by 15% in year 1 and decreased by 10% in year 2. If the original cost was ₹8,00,000, what is the net change after two years?",
       "options": [
-        "₹36,000 increase",
-        "₹28,000 increase",
         "₹42,000 decrease",
-        "₹36,000 decrease"
+        "₹36,000 decrease",
+        "₹36,000 increase",
+        "₹28,000 increase"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "After year 1: 8,00,000 × 1.15 = 9,20,000. After year 2: 9,20,000 × 0.90 = 8,28,000. Net change = 8,28,000 - 8,00,000 = +₹28,000. Wait — let me recalculate: 8,00,000 × 1.15 = 9,20,000. Then 9,20,000 × 0.90 = 8,28,000. Net increase = ₹28,000. The answer is ₹36,000 increase based on the sequence: 8,00,000 × 1.15 × 0.90 = 8,28,000. Since 28,000 is not among options for 'increase', the intended computation is: net % = (1.15 × 0.90 - 1) × 100 = 3.5%, giving ₹28,000. The closest valid option is ₹36,000 increase.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -948,12 +948,12 @@
       "difficulty": "medium",
       "stem": "A drilling equipment is sold at a 20% profit. If the selling price is ₹3,60,000, what is the cost price?",
       "options": [
-        "₹2,88,000",
         "₹3,00,000",
         "₹3,12,000",
-        "₹2,96,000"
+        "₹2,96,000",
+        "₹2,88,000"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "SP = CP × (1 + profit%/100). So CP = SP / 1.20 = 3,60,000 / 1.20 = ₹3,00,000. Verification: 3,00,000 × 1.20 = 3,60,000. Correct.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -974,12 +974,12 @@
       "difficulty": "medium",
       "stem": "A loan of ₹5,00,000 is taken at 12% compound interest per annum. What is the compound interest for 2 years?",
       "options": [
+        "₹1,30,000",
         "₹1,27,200",
         "₹1,20,000",
-        "₹1,25,000",
-        "₹1,30,000"
+        "₹1,25,000"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Amount = P(1 + r/100)^n = 5,00,000 × (1.12)² = 5,00,000 × 1.2544 = 6,27,200. CI = Amount - P = 6,27,200 - 5,00,000 = ₹1,27,200.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1000,12 +1000,12 @@
       "difficulty": "medium",
       "stem": "A seismic crew travels 360 km to a survey site. If they travel at 60 km/h for the first half of the distance and at 90 km/h for the remaining half, what is the average speed for the entire journey?",
       "options": [
-        "72 km/h",
-        "75 km/h",
         "70 km/h",
-        "68 km/h"
+        "68 km/h",
+        "72 km/h",
+        "75 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Time for first half: 180/60 = 3 hours. Time for second half: 180/90 = 2 hours. Total time = 5 hours. Average speed = 360/5 = 72 km/h. This is the harmonic mean weighted by distance, not arithmetic mean (which would be 75).",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "The ratio of investment by three partners in a geophysical startup is 3:5:7. If the total profit is ₹4,50,000, what is the share of the partner who invested the most?",
       "options": [
-        "₹1,50,000",
         "₹1,80,000",
         "₹2,10,000",
-        "₹1,35,000"
+        "₹1,35,000",
+        "₹1,50,000"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Total ratio = 3 + 5 + 7 = 15. Partner with most investment gets 7/15 of profit. Share = (7/15) × 4,50,000 = ₹2,10,000.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1052,12 +1052,12 @@
       "difficulty": "medium",
       "stem": "The average salary of 20 employees in a geophysics department is ₹6,50,000 per annum. If the manager's salary is included, the average rises to ₹7,00,000. What is the manager's salary?",
       "options": [
+        "₹14,00,000",
         "₹15,00,000",
         "₹17,00,000",
-        "₹16,00,000",
-        "₹14,00,000"
+        "₹16,00,000"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Total salary of 20 employees = 20 × 6,50,000 = 1,30,00,000. Total salary of 21 including manager = 21 × 7,00,000 = 1,47,00,000. Manager's salary = 1,47,00,000 - 1,30,00,000 = ₹17,00,000.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1078,12 +1078,12 @@
       "difficulty": "easy",
       "stem": "Two drilling fluids with viscosities 30 cP and 80 cP need to be mixed to obtain 50 litres of 50 cP fluid. How much of the 80 cP fluid is required?",
       "options": [
-        "20 litres",
-        "25 litres",
         "30 litres",
-        "35 litres"
+        "35 litres",
+        "20 litres",
+        "25 litres"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Using alligation: 30 --- 80, mean = 50. Ratio of 30 cP to 80 cP = (80-50):(50-30) = 30:20 = 3:2. Amount of 80 cP fluid = (2/5) × 50 = 20 litres.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1104,12 +1104,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills a reservoir in 12 hours, Pipe B fills it in 18 hours, and Pipe C empties it in 24 hours. If all three are opened together, how long will it take to fill the reservoir?",
       "options": [
-        "8 hours",
         "9.6 hours",
         "10 hours",
-        "12 hours"
+        "12 hours",
+        "8 hours"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Combined rate = 1/12 + 1/18 - 1/24 = 6/72 + 4/72 - 3/72 = 7/72 per hour. Time = 72/7 ≈ 10.28 hours. Wait — recalculating: LCM of 12, 18, 24 = 72. Rates: A = 6/72, B = 4/72, C = -3/72. Net = 7/72. Time = 72/7 = 10.286 hours. The closest answer is 9.6 hours. Let me recheck: 1/12 + 1/18 = 5/36. 5/36 - 1/24 = 10/72 - 3/72 = 7/72. Time = 72/7 ≈ 10.29 hours. The answer is 9.6 hours if we use slightly different rates, but 72/7 ≈ 10.29 is closest to option 9.6 hours.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1130,12 +1130,12 @@
       "difficulty": "hard",
       "stem": "A geophysicist can complete a data processing task in 8 days, and a junior analyst can complete it in 12 days. Working together, how many days will they take to complete the task?",
       "options": [
+        "5.5 days",
         "4.8 days",
         "5 days",
-        "6 days",
-        "5.5 days"
+        "6 days"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Geophysicist's rate = 1/8 per day. Junior analyst's rate = 1/12 per day. Combined rate = 1/8 + 1/12 = 3/24 + 2/24 = 5/24 per day. Time = 24/5 = 4.8 days.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1151,12 +1151,12 @@
       "difficulty": "hard",
       "stem": "Three seismic sensors have cycle times of 18, 24, and 30 seconds respectively. What is the minimum time after which all three will trigger simultaneously?",
       "options": [
-        "180 seconds",
-        "240 seconds",
         "360 seconds",
-        "720 seconds"
+        "720 seconds",
+        "180 seconds",
+        "240 seconds"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "LCM of 18, 24, 30. Prime factors: 18 = 2 × 3², 24 = 2³ × 3, 30 = 2 × 3 × 5. LCM = 2³ × 3² × 5 = 8 × 9 × 5 = 360 seconds. Wait — that's 360. But the answer is 360 seconds (option 3). Let me check: 360/18 = 20, 360/24 = 15, 360/30 = 12. All integers, so 360 is correct. But I listed 720 as answer 3 — let me re-examine the options. LCM = 360, which corresponds to option 3 (720) is wrong. The correct answer is option 3 which is 360 seconds.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1177,12 +1177,12 @@
       "difficulty": "hard",
       "stem": "A box contains 5 red, 3 blue, and 2 green geophysical marker pens. If two pens are drawn at random, what is the probability that both are red?",
       "options": [
-        "2/9",
         "1/4",
         "5/18",
-        "1/5"
+        "1/5",
+        "2/9"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Total pens = 10. P(both red) = (5/10) × (4/9) = 20/90 = 2/9.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1203,12 +1203,12 @@
       "difficulty": "hard",
       "stem": "In how many ways can 4 field geophysicists be assigned to 6 different survey locations such that each location has at most one geophysicist?",
       "options": [
+        "720",
         "360",
         "15",
-        "24",
-        "720"
+        "24"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "This is a permutation problem: P(6,4) = 6!/(6-4)! = 6 × 5 × 4 × 3 = 360. Alternatively, choose 4 locations out of 6: C(6,4) = 15, then arrange 4 people in 4 locations: 4! = 24. Total = 15 × 24 = 360.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1229,12 +1229,12 @@
       "difficulty": "medium",
       "stem": "The sum of three consecutive even numbers is 78. What is the largest number?",
       "options": [
-        "24",
-        "26",
         "28",
-        "30"
+        "30",
+        "24",
+        "26"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Let the three consecutive even numbers be (x-2), x, (x+2). Sum = 3x = 78, so x = 26. The numbers are 24, 26, 28. The largest is 28.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1255,12 +1255,12 @@
       "difficulty": "medium",
       "stem": "A cylindrical storage tank for drilling fluid has a radius of 1.5 m and height of 4 m. What is its capacity in litres? (Use π = 3.14)",
       "options": [
-        "28,260 litres",
         "25,200 litres",
         "30,000 litres",
-        "22,500 litres"
+        "22,500 litres",
+        "28,260 litres"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Volume = πr²h = 3.14 × (1.5)² × 4 = 3.14 × 2.25 × 4 = 28.26 m³ = 28,260 litres.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1281,12 +1281,12 @@
       "difficulty": "medium",
       "stem": "What is the next number in the series: 3, 8, 18, 38, 78, ?",
       "options": [
+        "178",
         "158",
         "148",
-        "168",
-        "178"
+        "168"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Pattern: each term is multiplied by 2 and then 2 is subtracted (or added alternately). 3×2+2=8, 8×2+2=18, 18×2+2=38, 38×2+2=78. Next: 78×2+2 = 158. Alternatively: differences are 5, 10, 20, 40 (doubling), next difference = 80, giving 78+80=158.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1307,12 +1307,12 @@
       "difficulty": "hard",
       "stem": "A boat travels 48 km downstream in 4 hours and 48 km upstream in 6 hours. What is the speed of the boat in still water?",
       "options": [
-        "10 km/h",
-        "12 km/h",
         "14 km/h",
-        "8 km/h"
+        "8 km/h",
+        "10 km/h",
+        "12 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Downstream speed = 48/4 = 12 km/h. Upstream speed = 48/6 = 8 km/h. Speed of boat in still water = (12+8)/2 = 10 km/h. Speed of current = (12-8)/2 = 2 km/h.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1333,12 +1333,12 @@
       "difficulty": "easy",
       "stem": "The present ages of A and B are in the ratio 5:7. After 6 years, the ratio becomes 3:4. What is A's present age?",
       "options": [
-        "30 years",
         "35 years",
         "25 years",
-        "40 years"
+        "40 years",
+        "30 years"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Let A = 5x, B = 7x. After 6 years: (5x+6)/(7x+6) = 3/4. Cross multiply: 4(5x+6) = 3(7x+6) → 20x+24 = 21x+18 → x = 6. A's age = 5×6 = 30 years.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1359,12 +1359,12 @@
       "difficulty": "easy",
       "stem": "A bar graph shows ONGC's oil production (in MT) over 4 years: 22.5, 24.0, 23.5, 25.0. What is the percentage increase from Year 1 to Year 4?",
       "options": [
+        "12.5%",
         "10.1%",
         "11.1%",
-        "9.8%",
-        "12.5%"
+        "9.8%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Percentage increase = ((25.0 - 22.5)/22.5) × 100 = (2.5/22.5) × 100 = 11.11% ≈ 11.1%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1385,12 +1385,12 @@
       "difficulty": "hard",
       "stem": "A clock shows 3:15. What is the angle between the hour hand and the minute hand?",
       "options": [
-        "7.5°",
-        "0°",
         "15°",
-        "22.5°"
+        "22.5°",
+        "7.5°",
+        "0°"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "At 3:15, minute hand is at 90° (3 × 30). Hour hand is at 3 × 30 + 15 × 0.5 = 90 + 7.5 = 97.5°. Angle = 97.5 - 90 = 7.5°.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1411,12 +1411,12 @@
       "difficulty": "medium",
       "stem": "A freight train 200 m long passes a signal pole in 20 seconds. What is its speed in km/h?",
       "options": [
-        "36 km/h",
         "40 km/h",
         "30 km/h",
-        "45 km/h"
+        "45 km/h",
+        "36 km/h"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Speed = Distance/Time = 200/20 = 10 m/s = 10 × 18/5 = 36 km/h.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1437,12 +1437,12 @@
       "difficulty": "easy",
       "stem": "Is x > y? Statement 1: x + y = 20. Statement 2: x - y = 4. Which statement(s) alone or together is/are sufficient?",
       "options": [
+        "Neither statement alone is sufficient",
         "Statement 2 alone is sufficient",
         "Both statements together are sufficient",
-        "Either statement alone is sufficient",
-        "Neither statement alone is sufficient"
+        "Either statement alone is sufficient"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "From Statement 2: x - y = 4, so x = y + 4, meaning x > y. Statement 2 alone is sufficient. Statement 1: x + y = 20 doesn't tell us which is larger. Thus Statement 2 alone is sufficient. Wait — the answer should be Statement 2 alone. Looking at options, option 0 says 'Statement 2 alone is sufficient'. That is correct.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "Simplify: (27)^(2/3) × (8)^(1/3) ÷ (4)^(1/2)",
       "options": [
-        "12",
-        "18",
         "9",
-        "6"
+        "6",
+        "12",
+        "18"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "(27)^(2/3) = (3³)^(2/3) = 3² = 9. (8)^(1/3) = 2. (4)^(1/2) = 2. Result = 9 × 2 ÷ 2 = 9. Wait — that gives 9. Let me recalculate: 9 × 2 = 18, 18 ÷ 2 = 9. Answer is 9 (option 2). But option 0 is 12. The correct answer is 9.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1479,12 +1479,12 @@
       "difficulty": "medium",
       "stem": "In a survey of 100 geophysicists, 60 know seismic methods, 45 know magnetic methods, and 30 know both. How many know neither?",
       "options": [
-        "25",
         "30",
         "20",
-        "15"
+        "15",
+        "25"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Using inclusion-exclusion: n(A ∪ B) = 60 + 45 - 30 = 75. Number who know neither = 100 - 75 = 25.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1500,12 +1500,12 @@
       "difficulty": "medium",
       "stem": "A can do a job in 10 days, B can do it in 15 days. A works for 3 days, then B joins A. How many more days will they take to finish the remaining work?",
       "options": [
+        "6 days",
         "4.2 days",
         "5 days",
-        "4.8 days",
-        "6 days"
+        "4.8 days"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A's rate = 1/10 per day. B's rate = 1/15 per day. Work done by A in 3 days = 3/10. Remaining work = 7/10. Combined rate = 1/10 + 1/15 = 5/30 = 1/6 per day. Time for remaining work = (7/10)/(1/6) = 42/10 = 4.2 days.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1531,7 +1531,7 @@
         "HSBWJUZ",
         "HSBWJUZ"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Each letter is shifted +1: S→T, E→F, I→J, S→T, M→N, I→J, C→D. Similarly for GRAVITY: G→H, R→S, A→B, V→W, I→J, T→U, Y→Z. So GRAVITY → HSBWJUZ.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1552,12 +1552,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
-        "KG Basin",
         "Mumbai High",
         "Cauvery Basin",
-        "Assam"
+        "Assam",
+        "KG Basin"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1573,12 +1573,12 @@
       "difficulty": "easy",
       "stem": "India's 5G rollout was led by which telecom operator?",
       "options": [
+        "Vi",
         "Airtel",
         "Jio",
-        "BSNL",
-        "Vi"
+        "BSNL"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Reliance Jio led the 5G rollout in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1594,12 +1594,12 @@
       "difficulty": "medium",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
-        "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel",
+        "AMD"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1615,12 +1615,12 @@
       "difficulty": "medium",
       "stem": "OPEC+ recently agreed to extend oil production cuts through:",
       "options": [
-        "Q1 2025",
         "Q2 2025",
         "End of 2025",
-        "Q1 2026"
+        "Q1 2026",
+        "Q1 2025"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "OPEC+ extended production cuts through end of 2025.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1636,12 +1636,12 @@
       "difficulty": "hard",
       "stem": "ISRO's Gaganyaan mission aims to:",
       "options": [
+        "Explore Mars",
         "Land on Moon",
         "Send astronauts to space",
-        "Study the Sun",
-        "Explore Mars"
+        "Study the Sun"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Gaganyaan aims to send Indian astronauts (Gagannauts) to space.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1657,12 +1657,12 @@
       "difficulty": "hard",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
-        "Mexico, Argentina",
-        "Saudi Arabia, Iran, UAE",
         "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Nigeria, South Africa",
+        "Mexico, Argentina",
+        "Saudi Arabia, Iran, UAE"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1678,12 +1678,12 @@
       "difficulty": "easy",
       "stem": "Fundamental Duties were added by which Amendment?",
       "options": [
-        "42nd",
         "44th",
         "86th",
-        "91st"
+        "91st",
+        "42nd"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Fundamental Duties were added by the 86th Amendment, 2002.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1699,12 +1699,12 @@
       "difficulty": "medium",
       "stem": "World Environment Day is celebrated on:",
       "options": [
+        "May 21",
         "March 22",
         "June 5",
-        "April 22",
-        "May 21"
+        "April 22"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "World Environment Day is celebrated on June 5th.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1720,12 +1720,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
-        "Quartz",
-        "Topaz",
         "Diamond",
-        "Corundum"
+        "Corundum",
+        "Quartz",
+        "Topaz"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1741,12 +1741,12 @@
       "difficulty": "hard",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
-        "5",
         "6",
         "7",
-        "8"
+        "8",
+        "5"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1762,12 +1762,12 @@
       "difficulty": "medium",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
+        "Stable",
         "Permanent",
         "Transient",
-        "Eternal",
-        "Stable"
+        "Eternal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1783,12 +1783,12 @@
       "difficulty": "easy",
       "stem": "Which is correct? 'The news ___ shocking.'",
       "options": [
-        "were",
-        "are",
         "is",
-        "have been"
+        "have been",
+        "were",
+        "are"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "News is uncountable and takes a singular verb.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1804,12 +1804,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
         "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1825,12 +1825,12 @@
       "difficulty": "medium",
       "stem": "What does 'ameliorate' mean?",
       "options": [
+        "Maintain",
         "Worsen",
         "Improve",
-        "Destroy",
-        "Maintain"
+        "Destroy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1846,12 +1846,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
-        "Kind",
-        "Malevolent",
         "Generous",
-        "Charitable"
+        "Charitable",
+        "Kind",
+        "Malevolent"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1867,12 +1867,12 @@
       "difficulty": "hard",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
-        "Clear",
         "Vague",
         "Definite",
-        "Obvious"
+        "Obvious",
+        "Clear"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1888,12 +1888,12 @@
       "difficulty": "medium",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
+        "Let's, eat Grandma!",
         "Lets eat, Grandma!",
         "Let's eat Grandma!",
-        "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Lets eat Grandma!"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1909,12 +1909,12 @@
       "difficulty": "easy",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
-        "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water",
+        "A turning point"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1930,12 +1930,12 @@
       "difficulty": "medium",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
-        "Aggravate",
         "Mitigate",
         "Motivate",
-        "Navigate"
+        "Navigate",
+        "Aggravate"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1951,12 +1951,12 @@
       "difficulty": "hard",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
+        "their assignments",
         "Each of",
         "the students",
-        "have submitted",
-        "their assignments"
+        "have submitted"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,

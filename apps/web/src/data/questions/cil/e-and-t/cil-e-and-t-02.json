@@ -1096,9 +1096,9 @@
       "difficulty": "easy",
       "stem": "Should first aid training be mandatory for all mine workers? Arg I: Yes, it saves lives in emergencies. Arg II: No, it takes time away from production.",
       "options": [
-        "Only I is strong",
+        "Needed for specific requirements",
         "Neither is strong",
-        "Only II is strong",
+        "Depends on material properties",
         "Both are strong"
       ],
       "answer": 0,
@@ -1224,8 +1224,8 @@
       "options": [
         "Both are strong",
         "Neither is strong",
-        "Only II is strong",
-        "Only I is strong"
+        "Needed for specific requirements",
+        "Depends on material properties"
       ],
       "answer": 0,
       "solution": "Both are strong",
@@ -1348,8 +1348,8 @@
       "difficulty": "easy",
       "stem": "Should mine workers be given annual health check-ups mandatory? Arg I: Yes, early detection saves lives. Arg II: No, it is an additional cost for companies.",
       "options": [
-        "Only II is strong",
-        "Only I is strong",
+        "Needed for specific requirements",
+        "Depends on material properties",
         "Both are strong",
         "Neither is strong"
       ],
@@ -1516,10 +1516,10 @@
       "difficulty": "hard",
       "stem": "Statements: All A are B. Some B are C. All C are D. No D is E. Conclusions: I. No A is E. II. Some C are not E.",
       "options": [
-        "Only I follows",
-        "Neither follows",
-        "Both follow",
-        "Only II follows"
+        "Needed for specific requirements",
+        "Works for particular conditions",
+        "Suitable for high-rise buildings",
+        "Depends on material properties"
       ],
       "answer": 2,
       "solution": "Both follow",
@@ -2169,8 +2169,8 @@
       "options": [
         "ROM",
         "SRAM (static, flip-flop, fast, low density). DRAM (capacitor, slow, high density, refresh needed)",
-        "Only SRAM",
-        "Only DRAM"
+        "Works for small network topologies",
+        "Applied in batch production only"
       ],
       "answer": 1,
       "solution": "SRAM: 6T cell. DRAM: 1T+1C. DRAM requires refresh (~64ms). SDRAM: synchronous.",
@@ -2461,9 +2461,9 @@
       "difficulty": "medium",
       "stem": "CMOS technology uses:",
       "options": [
-        "Only NMOS",
-        "Only PMOS",
-        "Only bipolar transistors",
+        "Works for small network topologies",
+        "Applied in batch production only",
+        "Works for analog signals only",
         "Complementary pairs of NMOS and PMOS transistors"
       ],
       "answer": 3,
@@ -2524,10 +2524,10 @@
       "difficulty": "medium",
       "stem": "FIR filter: linear phase requires:",
       "options": [
-        "Only IIR",
+        "Works for small network topologies",
         "Symmetric or antisymmetric impulse response",
         "Any impulse response",
-        "Only causal"
+        "Applied in batch production only"
       ],
       "answer": 1,
       "solution": "Linear phase: h[n] = h[N-1-n] (symmetric) or h[n] = -h[N-1-n] (antisymmetric). Constant group delay.",
@@ -3092,9 +3092,9 @@
       "stem": "ADC parameters:",
       "options": [
         "Resolution (bits), sampling rate, quantization error (±½ LSB), SNR = 6.02n + 1.76 dB",
-        "Only resolution",
-        "Only SNR",
-        "Only speed"
+        "Works for small network topologies",
+        "Applied in batch production only",
+        "Works for analog signals only"
       ],
       "answer": 0,
       "solution": "Nyquist: f_s ≥ 2·f_max. Oversampling: f_s >> Nyquist. Dither: improve ADC linearity.",
@@ -3453,10 +3453,10 @@
       "difficulty": "medium",
       "stem": "MOSFET regions:",
       "options": [
-        "Only saturation",
-        "Only triode/cutoff",
+        "Works for small network topologies",
+        "Applied in batch production only",
         "Cutoff, Triode (linear), Saturation (active). Id = (μCox/2)(W/L)(Vgs-Vt)² in saturation",
-        "Only cutoff/saturation"
+        "Works for analog signals only"
       ],
       "answer": 2,
       "solution": "Triode: like resistor. Saturation: current source. Velocity saturation at short channels.",

@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The Riemann curvature tensor in 4-dimensional spacetime has how many independent components?",
       "options": [
+        "50",
         "10",
         "20",
-        "25",
-        "50"
+        "25"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In n dimensions the Riemann tensor has n^2(n^2-1)/12 independent components. For n=4 this gives 16(15)/12 = 20. The symmetries are: antisymmetry in first pair, antisymmetry in second pair, symmetry under pair exchange, and the first Bianchi identity.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "easy",
       "stem": "The Lorentz group SO(1,3) has how many connected components?",
       "options": [
-        "1",
-        "2",
         "3",
-        "4"
+        "4",
+        "1",
+        "2"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "The Lorentz group has 4 connected components: (1) proper orthochronous (det=+1, Lambda^0_0 >= +1), (2) parity (det=-1), (3) time reversal (det=+1, Lambda^0_0 <= -1), (4) PT (det=-1). The proper orthochronous component is the identity component connected to the identity.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "easy",
       "stem": "The derivative of the Dirac delta function delta'(x) acting on a test function f(x) gives:",
       "options": [
-        "f(0)",
         "f'(0)",
         "-f'(0)",
-        "f''(0)"
+        "f''(0)",
+        "f(0)"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "By definition of distributional derivative: integral delta'(x)f(x)dx = -integral delta(x)f'(x)dx = -f'(0). The minus sign arises from integration by parts and is fundamental to the distributional derivative formalism.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "easy",
       "stem": "In the Hamilton-Jacobi equation H(q, dS/dq, t) + dS/dt = 0, the characteristic function S generates canonical transformations that map the original Hamiltonian problem to:",
       "options": [
+        "A chaotic system",
         "A non-integrable system",
         "A trivial system with constant Hamiltonian",
-        "A dissipative system",
-        "A chaotic system"
+        "A dissipative system"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Hamilton-Jacobi theory finds a canonical transformation to new coordinates where the new Hamiltonian is identically zero (or constant), making the motion trivial: all new coordinates and momenta are constants. S generates this transformation via p = dS/dq. The action S is the generating function of type F_2.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "medium",
       "stem": "In field theory, Noether's theorem associates conserved currents with continuous symmetries. For a complex scalar field with global U(1) symmetry phi -> e^(i*alpha)*phi, the conserved charge is:",
       "options": [
-        "Electric charge",
-        "Energy",
         "Angular momentum",
-        "Linear momentum"
+        "Linear momentum",
+        "Electric charge",
+        "Energy"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The global U(1) symmetry phi -> e^(i*alpha)*phi yields the conserved current j^mu = i(phi* d^mu phi - phi d^mu phi*) and conserved charge Q = integral j^0 d^3x. This is the electric charge (or particle number) in the non-relativistic limit. Local U(1) gauge invariance requires the introduction of the electromagnetic field.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "easy",
       "stem": "In a rectangular waveguide operating in the TE_10 mode the cutoff frequency is determined by:",
       "options": [
-        "The width of the waveguide a: f_c = c/(2a)",
         "The height of the waveguide b: f_c = c/(2b)",
         "Both dimensions: f_c = c/2*sqrt(1/a^2 + 1/b^2)",
-        "The length of the waveguide"
+        "The length of the waveguide",
+        "The width of the waveguide a: f_c = c/(2a)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For TE_mn mode in rectangular waveguide: f_c = (c/2)*sqrt((m/a)^2 + (n/b)^2). For TE_10 (m=1, n=0): f_c = c/(2a). This is the lowest cutoff frequency. The guide wavelength lambda_g = lambda/sqrt(1-(f_c/f)^2) and phase velocity v_p = c/sqrt(1-(f_c/f)^2) are both frequency-dependent.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "The radiation resistance of a short dipole of length l << lambda is proportional to:",
       "options": [
+        "l",
         "l^2",
         "l^3",
-        "l^4",
-        "l"
+        "l^4"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For a short dipole (l << lambda): R_rad = 80*pi^2*(l/lambda)^2 * (dl/l)^2 approximately equals 20*pi^2*(l/lambda)^2. Wait, more precisely for a Hertzian dipole: R_rad = 80*pi^2*(dl/lambda)^2. So R_rad is proportional to (dl)^2, which means it's proportional to l^2. Let me reconsider - actually the correct answer for a short dipole is R_rad ~ l^4 is incorrect. The answer should be l^2. Let me fix this.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "In the path integral formulation, the propagator for a free non-relativistic particle in 1D is:",
       "options": [
-        "K = sqrt(m/(2*pi*i*hbar*t)) * exp(i*m*x^2/(2*hbar*t))",
-        "K = exp(-m*x^2/(2*hbar*t))",
         "K = delta(x - x_0)",
-        "K = 1/sqrt(2*pi) * exp(-x^2/2)"
+        "K = 1/sqrt(2*pi) * exp(-x^2/2)",
+        "K = sqrt(m/(2*pi*i*hbar*t)) * exp(i*m*x^2/(2*hbar*t))",
+        "K = exp(-m*x^2/(2*hbar*t))"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The free particle propagator K(x_f,t_f;x_i,t_i) = integral Dx(t) exp(iS/hbar) evaluates exactly to sqrt(m/(2*pi*i*hbar*(t_f-t_i))) * exp(i*m*(x_f-x_i)^2/(2*hbar*(t_f-t_i))). This is the Fresnel integral and represents the probability amplitude for propagation from x_i to x_f in time t.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "hard",
       "stem": "The von Neumann entropy S = -Tr(rho*log(rho)) of a maximally entangled Bell state between two qubits equals:",
       "options": [
-        "0",
         "log(2)",
         "2*log(2)",
-        "1/log(2)"
+        "1/log(2)",
+        "0"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a Bell state |Phi+> = (|00>+|11>)/sqrt(2), the reduced density matrix of either qubit is rho = (1/2)I. So S = -Tr((1/2)I * log((1/2)I)) = -2*(1/2)*log(1/2) = log(2) = 1 bit (or ln(2) nats). This is the maximum possible entanglement entropy for a two-qubit system.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "medium",
       "stem": "Quantum decoherence describes the loss of quantum coherence through interaction with the environment. For a qubit coupled to a thermal bath, the off-diagonal elements of the density matrix decay at a rate called:",
       "options": [
-        "T_1 (longitudinal relaxation)",
-        "T_2 (transverse relaxation)",
         "T_2* (dephasing time)",
-        "All of the above"
+        "Works under ideal conditions",
+        "T_1 (longitudinal relaxation)",
+        "T_2 (transverse relaxation)"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "T_2* is the inhomogeneous dephasing time that includes both intrinsic T_2 processes (population relaxation + pure dephasing) and inhomogeneous broadening. T_2* < T_2 always. The off-diagonal elements decay as exp(-t/T_2*). T_1 is the energy relaxation time for population decay. For pure dephasing T_2 = 2*T_1.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "medium",
       "stem": "The Landau theory of phase transitions expands the free energy in powers of the order parameter phi. For a second-order transition the free energy near T_c is F = a(T-T_c)*phi^2 + b*phi^4. The equilibrium order parameter below T_c scales as:",
       "options": [
-        "phi ~ (T_c - T)^(1/2)",
         "phi ~ (T_c - T)^(1/3)",
         "phi ~ (T_c - T)^(1/4)",
-        "phi ~ (T_c - T)"
+        "phi ~ (T_c - T)",
+        "phi ~ (T_c - T)^(1/2)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Minimizing F with respect to phi: dF/dphi = 2a(T-T_c)*phi + 4b*phi^3 = 0. For T < T_c: phi^2 = a(T_c-T)/(2b), so phi ~ (T_c-T)^(1/2). This gives the mean-field critical exponent beta = 1/2. Landau theory is exact above 4 dimensions (upper critical dimension d_u = 4).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "easy",
       "stem": "The renormalization group (RG) flow near a critical fixed point is governed by relevant and irrelevant operators. Near the Wilson-Fisher fixed point in 3D Ising model, the correlation length exponent nu satisfies:",
       "options": [
+        "nu = 1",
         "nu = 1/2 (mean field)",
         "nu approximately equals 0.630",
-        "nu = 2/3",
-        "nu = 1"
+        "nu = 2/3"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The 3D Ising model (n=1, d=3) has nu = 0.6300(15) from high-precision Monte Carlo and epsilon-expansion. Mean field gives nu = 1/2. The epsilon-expansion (epsilon = 4-d) gives nu = 1/2 + epsilon/12 + O(epsilon^2). For epsilon=1 (d=3) this gives nu ~ 0.583, close to the exact value.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "easy",
       "stem": "The fine structure splitting of hydrogen energy levels arises from relativistic corrections and spin-orbit coupling. For the n=2 level, the splitting between 2P_{3/2} and 2P_{1/2} is approximately:",
       "options": [
-        "4.5 x 10^-5 eV",
-        "10.9 GHz",
         "1057 MHz",
-        "Both A and B are correct"
+        "Both A and B are correct",
+        "4.5 x 10^-5 eV",
+        "10.9 GHz"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "The 2P_{3/2} - 2P_{1/2} splitting is 4.53 x 10^-5 eV = 10.97 GHz = 0.365 cm^-1. The Lamb shift (2S_{1/2} - 2P_{1/2}) is 1057 MHz = 4.37 x 10^-6 eV. Both are correct values for different splittings. The fine structure interval is about 10 times larger than the Lamb shift.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "medium",
       "stem": "In nearly-free electron theory the energy gap at the Brillouin zone boundary k = pi/a arises from:",
       "options": [
-        "Electron-electron interactions",
         "Bragg reflection of electron waves by the periodic potential",
         "Spin-orbit coupling",
-        "Phonon scattering"
+        "Phonon scattering",
+        "Electron-electron interactions"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "At k = pi/a the electron wave satisfies the Bragg condition 2a*sin(theta) = n*lambda, leading to standing waves. Two standing wave solutions exist: psi_+ ~ cos(pi*x/a) (low energy, |V_G| lowers it) and psi_- ~ sin(pi*x/a) (high energy, |V_G| raises it). The energy gap is 2*|V_G| where V_G is the Fourier component of the periodic potential.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "hard",
       "stem": "In the nuclear shell model magic numbers 2, 8, 20, 28, 50, 82, 126 arise from filling nuclear orbitals. The magic number 28 is explained by:",
       "options": [
+        "Filling of the 1g_{9/2} orbital",
         "Completion of the 1f_{7/2} subshell",
         "Completion of the 2p_{3/2} subshell",
-        "Closure of the 2d_{5/2} subshell",
-        "Filling of the 1g_{9/2} orbital"
+        "Closure of the 2d_{5/2} subshell"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The magic number 28 corresponds to filling the 1f_{7/2} orbital (j = 7/2, 2j+1 = 8 nucleons, 20+8 = 28). This requires strong spin-orbit coupling that pushes the 1f_{7/2} below the 2p_{3/2} and 1f_{5/2} levels. Without spin-orbit coupling the magic numbers would be 2, 8, 18, 32, 50, ...",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "hard",
       "stem": "The Lyapunov exponent lambda measures the rate of exponential divergence of nearby trajectories in phase space. For a chaotic system with lambda > 0, the maximum predictability time scales as:",
       "options": [
-        "t_pred ~ 1/lambda",
-        "t_pred ~ lambda",
         "t_pred ~ exp(-lambda)",
-        "t_pred ~ ln(lambda)"
+        "t_pred ~ ln(lambda)",
+        "t_pred ~ 1/lambda",
+        "t_pred ~ lambda"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The separation of nearby trajectories grows as delta(t) ~ delta(0)*exp(lambda*t). Given measurement precision delta(0) and acceptable error delta_max, the predictability time is t_pred ~ (1/lambda)*ln(delta_max/delta(0)). So t_pred is inversely proportional to the Lyapunov exponent: larger lambda means shorter prediction horizon.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "hard",
       "stem": "Second harmonic generation (SHG) converts two photons of frequency omega into one photon of frequency 2*omega. SHG requires:",
       "options": [
-        "A medium with inversion symmetry",
         "A medium without inversion symmetry (non-centrosymmetric)",
         "A medium with only electric dipole transitions",
-        "A magnetic material"
+        "A magnetic material",
+        "A medium with inversion symmetry"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "SHG is a second-order nonlinear process (chi^(2)) that vanishes in centrosymmetric media due to symmetry. The nonlinear polarization P^(2) = epsilon_0*chi^(2)*E^2 is zero if the medium has inversion symmetry. SHG is used for frequency doubling, surface probing, and quantum optics with BBO, KTP, LiNbO3 crystals.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "easy",
       "stem": "The Berry phase acquired by a quantum state when parameters are cyclically varied is:",
       "options": [
+        "Dependent on the speed of parameter variation",
         "A geometric phase depending only on the path in parameter space",
         "A dynamical phase proportional to energy and time",
-        "Always zero for adiabatic processes",
-        "Dependent on the speed of parameter variation"
+        "Always zero for adiabatic processes"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Berry phase gamma_n = i*integral <n(R)|grad_R|n(R)> dR is a geometric (topological) phase depending only on the closed path in parameter space R, not on the speed of traversal. It's gauge-invariant and observable. Examples: Aharonov-Bohm phase, spin-1/2 in rotating magnetic field (gamma = pi*(1-cos(theta))).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "hard",
       "stem": "Landauer's principle states that erasing one bit of information at temperature T requires a minimum energy dissipation of:",
       "options": [
-        "k_B*T*ln(2)",
-        "k_B*T",
         "k_B*T*ln(2)/2",
-        "2*k_B*T"
+        "2*k_B*T",
+        "k_B*T*ln(2)",
+        "k_B*T"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Landauer's principle: erasing one bit (mapping 0 or 1 to 0) is a logically irreversible operation that must dissipate at least k_B*T*ln(2) of energy as heat. This sets the fundamental limit for reversible computing. Experimental verification: Bérut et al. (2012) measured heat dissipation in colloidal particle bit erasure, confirming the bound.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "easy",
       "stem": "The Geiger-Nuttall law relates the decay constant alpha of alpha emitters to the energy of the emitted alpha particle Q_alpha. It states:",
       "options": [
-        "log(lambda) = a + b*log(Q_alpha)",
         "log(lambda) = a + b/sqrt(Q_alpha)",
         "lambda = a*Q_alpha^2",
-        "lambda = a*exp(-Q_alpha/k_B*T)"
+        "lambda = a*exp(-Q_alpha/k_B*T)",
+        "log(lambda) = a + b*log(Q_alpha)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Geiger-Nuttall law: log_10(lambda) = a + b*log_10(E_alpha) or equivalently lambda = A*exp(-B/sqrt(Q_alpha)). This arises from quantum tunneling through the Coulomb barrier: the Gamow factor gives transmission probability T ~ exp(-2*pi*Z*e^2/(hbar*v)). Higher Q_alpha means higher velocity v and larger tunneling probability.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "medium",
       "stem": "The Cabibbo-Kobayashi-Maskawa (CKM) matrix describes quark mixing in weak interactions. The unitarity condition |V_ud|^2 + |V_us|^2 + |V_ub|^2 = 1 is a consequence of:",
       "options": [
+        "Color confinement",
         "Conservation of probability in quark flavor transitions",
         "Conservation of electric charge",
-        "CP violation",
-        "Color confinement"
+        "CP violation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Unitarity of the CKM matrix V (V*V^dagger = I) is equivalent to probability conservation in weak decays. The first row condition |V_ud|^2 + |V_us|^2 + |V_ub|^2 = 1 must be satisfied to high precision. Experimental tests: unitarity triangle analysis from B-factories, neutron beta decay, superallowed Fermi decays.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "medium",
       "stem": "The Chandrasekhar limit sets the maximum mass of a stable white dwarf star. This limit is approximately:",
       "options": [
-        "0.5 solar masses",
-        "1.4 solar masses",
         "3 solar masses",
-        "8 solar masses"
+        "8 solar masses",
+        "0.5 solar masses",
+        "1.4 solar masses"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Chandrasekhar limit M_Ch ~ 1.4*M_sun (precisely 1.44 for non-rotating, non-magnetic) is the maximum mass supported by electron degeneracy pressure. Above this, electrons are captured by protons (inverse beta decay) and the star collapses. This limit depends on composition: M_Ch ~ 5.8/Y_e^2 solar masses where Y_e is electron fraction.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "easy",
       "stem": "In a tokamak fusion reactor the plasma is confined by a combination of toroidal and poloidal magnetic fields. The safety factor q measures:",
       "options": [
-        "The number of toroidal transits per poloidal transit of a field line",
         "The plasma beta (ratio of plasma pressure to magnetic pressure)",
         "The resistivity of the plasma",
-        "The ion gyroradius"
+        "The ion gyroradius",
+        "The number of toroidal transits per poloidal transit of a field line"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The safety factor q = r*B_phi/(R*B_theta) is the ratio of toroidal to poloidal magnetic flux enclosed. For stability q must exceed 1 (Kruskal-Shafranov limit). Typical tokamak values: q(0) ~ 1 at magnetic axis, q(a) ~ 3-4 at edge. MHD instabilities (kink, ballooning) occur at rational q surfaces.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "hard",
       "stem": "In a Fabry-Perot interferometer with mirror reflectivity R, the finesse F is given by:",
       "options": [
+        "F = (1+R)/(1-R)",
         "F = pi*sqrt(R)/(1-R)",
         "F = (1-R)/pi*sqrt(R)",
-        "F = 4R/(1-R)^2",
-        "F = (1+R)/(1-R)"
+        "F = 4R/(1-R)^2"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The finesse F = pi*sqrt(R)/(1-R) determines the resolving power of the Fabry-Perot. For R = 0.99, F ~ 314. The free spectral range is FSR = c/(2*n*d) and the linewidth of each peak is FSR/F. High finesse means narrow transmission peaks and high spectral resolution.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "The Einstein relation connects diffusion coefficient D and mobility mu in a semiconductor. At thermal equilibrium:",
       "options": [
-        "D/mu = k_B*T/e (thermal voltage)",
-        "D*mu = k_B*T/e",
         "D = mu*k_B*T",
-        "D/mu = e/k_B*T"
+        "D/mu = e/k_B*T",
+        "D/mu = k_B*T/e (thermal voltage)",
+        "D*mu = k_B*T/e"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The Einstein relation D/mu = k_B*T/e = V_T (thermal voltage ~26 mV at 300K). This follows from the balance between drift and diffusion currents in equilibrium. For non-degenerate semiconductors: D = (k_B*T/e)*mu. This relation is fundamental to semiconductor device physics and is used in deriving the diode equation.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "easy",
       "stem": "Shor's algorithm factors an N-bit integer in polynomial time using quantum parallelism. The key quantum subroutine is:",
       "options": [
-        "Quantum Fourier Transform (QFT)",
         "Grover's search",
         "Quantum teleportation",
-        "Superdense coding"
+        "Superdense coding",
+        "Quantum Fourier Transform (QFT)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Shor's algorithm uses the QFT to find the period r of the function f(x) = a^x mod N. The quantum circuit: (1) prepare superposition, (2) compute modular exponentiation, (3) apply QFT, (4) measure to get period. The QFT runs in O(n^2) gates vs O(n*2^n) for classical FFT. Overall complexity: O(n^3) vs sub-exponential classical algorithms.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "medium",
       "stem": "Kinesin is a molecular motor that transports cargo along microtubules. It moves by a hand-over-hand mechanism using ATP hydrolysis. The step size of kinesin is approximately:",
       "options": [
+        "100 nm",
         "8 nm",
         "2 nm",
-        "40 nm",
-        "100 nm"
+        "40 nm"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Kinesin-1 takes 8 nm steps (the tubulin dimer repeat distance) per ATP hydrolysis cycle, moving processively along microtubules. The efficiency is ~50% (work output ~12 pN*nm per step vs ~100 pN*nm ATP energy). The velocity is ~800 nm/s at saturating ATP. The force generated is ~6 pN.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "P-waves (primary waves) in the Earth's interior are longitudinal elastic waves. The P-wave velocity in the mantle is approximately:",
       "options": [
-        "4 km/s",
-        "8 km/s",
         "13 km/s",
-        "20 km/s"
+        "20 km/s",
+        "4 km/s",
+        "8 km/s"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "P-wave velocity in the upper mantle is ~8 km/s, increasing to ~13 km/s at the base of the mantle (D'' layer). In the outer core (liquid iron) v_P ~ 8-10 km/s. P-waves are faster than S-waves (v_S ~ 4.5 km/s in upper mantle) because they involve compression which has higher elastic modulus.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "easy",
       "stem": "The solar constant (total solar irradiance at Earth's orbit) is approximately:",
       "options": [
-        "100 W/m^2",
         "370 W/m^2",
         "1361 W/m^2",
-        "5000 W/m^2"
+        "5000 W/m^2",
+        "100 W/m^2"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The solar constant S_0 = 1361 W/m^2 (TSI, Total Solar Irradiance) varies by ~0.1% over the solar cycle. After atmospheric absorption and scattering, the average insolation at Earth's surface is ~1000 W/m^2 on a clear day. The Earth's energy balance: S_0/4 * (1-albedo) = sigma*T_eff^4 gives T_eff ~ 255 K.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "easy",
       "stem": "The effective dose equivalent (E) in radiation protection is measured in:",
       "options": [
+        "Roentgen (R)",
         "Gray (Gy)",
         "Becquerel (Bq)",
-        "Sievert (Sv)",
-        "Roentgen (R)"
+        "Sievert (Sv)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The effective dose E (in Sievert, Sv) accounts for radiation type and tissue sensitivity: E = sum_T w_T * H_T where w_T is the tissue weighting factor and H_T is the equivalent dose in tissue T. 1 Sv = 1 J/kg (for uniformly irradiating the body). Annual limit for public: 1 mSv, occupational: 20 mSv averaged over 5 years.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "easy",
       "stem": "The retarded Green's function G^ret(x,x') for the wave equation satisfies:",
       "options": [
-        "(d^2/dt^2 - nabla^2)*G^ret = delta(x-x')*delta(t-t') with G^ret = 0 for t < t'",
-        "(d^2/dt^2 - nabla^2)*G^ret = 0 for all t",
         "G^ret(x,x') = G^ret(x',x) always",
-        "G^ret is real-valued"
+        "G^ret is real-valued",
+        "(d^2/dt^2 - nabla^2)*G^ret = delta(x-x')*delta(t-t') with G^ret = 0 for t < t'",
+        "(d^2/dt^2 - nabla^2)*G^ret = 0 for all t"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The retarded Green's function satisfies the inhomogeneous wave equation with a delta-function source and vanishes for t < t' (causality). In 3D: G^ret = delta(t-t'-|x-x'|/c)/(4*pi*|x-x'|) which is nonzero only on the forward light cone. This encodes the causal propagation of waves.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "hard",
       "stem": "For a symmetric top (I_1 = I_2 != I_3) in free precession, the angular velocity vector precesses about the body symmetry axis with frequency:",
       "options": [
-        "Omega = (I_3 - I_1)*omega_3/I_1",
         "Omega = I_1*omega_3/I_3",
         "Omega = (I_1 + I_3)*omega_3/(I_1*I_3)",
-        "Omega = omega_3"
+        "Omega = omega_3",
+        "Omega = (I_3 - I_1)*omega_3/I_1"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In body-frame coordinates, the angular velocity precesses about the symmetry axis at frequency Omega = (I_3 - I_1)*omega_3/I_1 (Euler's free precession). For I_3 > I_1 (oblate) the precession is in the same sense as rotation. The space-frame precession frequency is omega_p = (I_3 - I_1)*omega_3/I_3.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "hard",
       "stem": "The Abraham-Lorentz equation of motion for a charged particle includes a radiation reaction force. This force is proportional to:",
       "options": [
+        "The square of the acceleration",
         "The velocity v",
         "The acceleration a",
-        "The jerk (da/dt)",
-        "The square of the acceleration"
+        "The jerk (da/dt)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The Abraham-Lorentz force F_rad = (mu_0*e^2/(6*pi*c))*da/dt is proportional to the time derivative of acceleration (jerk). This leads to the problematic runaway solutions and pre-acceleration. The Landau-Lifshitz approximation is used in practical calculations to avoid these pathologies.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "medium",
       "stem": "In the quantum measurement problem, the Wigner's friend scenario illustrates:",
       "options": [
-        "The difficulty of defining when wavefunction collapse occurs",
-        "The uncertainty principle",
         "Quantum tunneling",
-        "The EPR paradox"
+        "The EPR paradox",
+        "The difficulty of defining when wavefunction collapse occurs",
+        "The uncertainty principle"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Wigner's friend: a friend inside a lab measures a quantum system and sees a definite outcome, while Wigner outside describes the friend+system as a superposition. Different observers disagree on whether collapse has occurred. This highlights the measurement problem and interpretations of quantum mechanics (Copenhagen, Many-Worlds, etc.).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "The Meissner effect in superconductors expels magnetic flux from the interior. The magnetic field penetrates exponentially B(x) = B_0*exp(-x/lambda_L) where lambda_L is the London penetration depth. For type-II superconductors, flux penetrates as:",
       "options": [
-        "Uniformly throughout the material",
         "Quantized vortices (fluxons) each carrying flux Phi_0 = h/(2e)",
-        "Only at grain boundaries",
-        "As a continuous flux flow"
+        "Used for shallow foundations only",
+        "As a continuous flux flow",
+        "Uniformly throughout the material"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In type-II superconductors (kappa = lambda/xi > 1/sqrt(2)) magnetic flux penetrates above H_c1 as quantized vortices (Abrikosov lattice), each carrying flux quantum Phi_0 = h/(2e) = 2.07 x 10^-15 Wb. The vortex core (size ~ xi) is normal, surrounded by circulating supercurrents extending to lambda_L.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "medium",
       "stem": "The Higgs mechanism gives mass to W and Z bosons through spontaneous symmetry breaking. The mass ratio M_W/M_Z is:",
       "options": [
+        "tan(theta_W)",
         "cos(theta_W)",
         "sin(theta_W)",
-        "1/cos(theta_W)",
-        "tan(theta_W)"
+        "1/cos(theta_W)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "M_W = M_Z*cos(theta_W) where theta_W is the weak mixing angle (Weinberg angle). M_Z = 91.1876 GeV, M_W = 80.379 GeV, giving cos(theta_W) = 0.8815, theta_W = 28.13 degrees. The photon remains massless due to the unbroken U(1)_em symmetry.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "hard",
       "stem": "The Bekenstein-Hawking entropy of a Schwarzschild black hole is proportional to its horizon area. The entropy is:",
       "options": [
-        "S = k_B*A/(4*l_P^2) where l_P is the Planck length",
-        "S = k_B*ln(A)",
         "S = k_B*A/(2*l_P^2)",
-        "S = k_B*M*c^2/T_H"
+        "S = k_B*M*c^2/T_H",
+        "S = k_B*A/(4*l_P^2) where l_P is the Planck length",
+        "S = k_B*ln(A)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "S_BH = k_B*A/(4*l_P^2) = k_B*c^3*A/(4*G*hbar) where l_P = sqrt(G*hbar/c^3) ~ 1.6 x 10^-35 m. This is the maximum entropy a region of space can contain (holographic principle). For a solar mass black hole: S ~ 10^77 k_B, far exceeding the entropy of the sun ~ 10^58 k_B.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "medium",
       "stem": "The noise figure (NF) of a cascaded amplifier system is dominated by the first stage. This is described by:",
       "options": [
-        "Friis formula for noise factor",
         "The Nyquist formula",
         "Shot noise formula",
-        "Johnson noise formula"
+        "Johnson noise formula",
+        "Friis formula for noise factor"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Friis formula: F_total = F_1 + (F_2-1)/G_1 + (F_3-1)/(G_1*G_2) + ... where F_i is noise factor and G_i is gain of stage i. This shows the first stage dominates if it has high gain. For low-noise receivers: use LNA (low-noise amplifier) as first stage with G_LNA > 10 dB and F_LNA < 1 dB.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "easy",
       "stem": "The Bouguer gravity anomaly corrects measured gravity for:",
       "options": [
+        "Tidal effects",
         "Terrain effects and the mass of rock between station and sea level",
         "Earth's rotation only",
-        "Atmospheric pressure variations",
-        "Tidal effects"
+        "Atmospheric pressure variations"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Bouguer correction: g_B = g_measured - g_free_air + g_Bouguer - g_terrain. The Bouguer plate correction accounts for the gravitational attraction of the rock slab between the station and sea level: delta_g = 2*pi*G*rho*h ~ 0.0419*rho*h mGal (h in meters, rho in g/cm^3). Complete Bouguer anomalies are used for geological interpretation.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "The blue color of the sky is due to Rayleigh scattering of sunlight by atmospheric molecules. The scattering cross-section scales as:",
       "options": [
-        "lambda^(-4)",
-        "lambda^(-2)",
         "lambda^(+2)",
-        "lambda^(+4)"
+        "lambda^(+4)",
+        "lambda^(-4)",
+        "lambda^(-2)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Rayleigh scattering cross-section sigma ~ lambda^(-4) (or omega^4). Short wavelengths (blue, lambda ~ 450 nm) scatter ~5.5 times more than red (lambda ~ 650 nm). This explains why the sky is blue (scattered light is blue) and sunsets are red (blue removed from direct beam). For particles larger than lambda (Mie scattering), the dependence is weaker.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "hard",
       "stem": "If A can complete a task in 10 days and B can complete it in 15 days, how many days will they take working together?",
       "options": [
-        "5",
         "6",
         "7.5",
-        "12.5"
+        "12.5",
+        "5"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A's rate = 1/10, B's rate = 1/15. Combined rate = 1/10 + 1/15 = 5/30 = 1/6. Time = 6 days.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -933,12 +933,12 @@
       "difficulty": "easy",
       "stem": "A product's price increased by 20% and then decreased by 20%. The net change in price is:",
       "options": [
+        "2% decrease",
         "No change",
         "4% increase",
-        "4% decrease",
-        "2% decrease"
+        "4% decrease"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Let original price = 100. After 20% increase: 120. After 20% decrease: 120 * 0.8 = 96. Net change = 96 - 100 = -4%, i.e., 4% decrease.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -959,12 +959,12 @@
       "difficulty": "hard",
       "stem": "A shopkeeper marks a product 40% above cost price and gives a 20% discount. His profit percentage is:",
       "options": [
-        "10%",
-        "12%",
         "15%",
-        "20%"
+        "20%",
+        "10%",
+        "12%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let CP = 100. MP = 140. SP = 140 * 0.8 = 112. Profit = 112 - 100 = 12. Profit% = 12%.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "A sum of money doubles in 8 years at simple interest. In how many years will it triple?",
       "options": [
-        "12",
         "16",
         "20",
-        "24"
+        "24",
+        "12"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "If P doubles in 8 years, interest earned = P. Rate = 100/8 = 12.5% per year. For triple: interest needed = 2P. Time = 2P/(P*12.5/100) = 200/12.5 = 16 years.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1011,12 +1011,12 @@
       "difficulty": "medium",
       "stem": "Three numbers are in the ratio 3:5:7. If their sum is 84, the largest number is:",
       "options": [
+        "49",
         "21",
         "35",
-        "42",
-        "49"
+        "42"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Let numbers be 3x, 5x, 7x. Sum = 15x = 84. x = 5.6. Largest = 7 * 5.6 = 39.2. Wait, let me recalculate: 15x = 84, x = 5.6. 7x = 39.2. But this doesn't match options. Let me recheck: if ratio is 3:5:7 and sum is 84, then 3x + 5x + 7x = 15x = 84, x = 5.6, 7x = 39.2. This is not in options. The correct answer should be 7/15 * 84 = 39.2. Since 39.2 is not an option, let me recalculate with correct arithmetic: 7*84/15 = 7*5.6 = 39.2. The answer should be 39.2 but closest option is 42. Actually, 7*84/15 = 39.2. Let me check if the ratio should give integer: if sum is 75, then x=5, largest=35. If sum is 90, x=6, largest=42. Let me fix this question to have clean numbers.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1037,12 +1037,12 @@
       "difficulty": "medium",
       "stem": "The average of 5 consecutive odd numbers is 27. What is the largest number?",
       "options": [
-        "25",
-        "27",
         "29",
-        "31"
+        "31",
+        "25",
+        "27"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "5 consecutive odd numbers: x-4, x-2, x, x+2, x+4. Average = x = 27. Largest = 27 + 4 = 31.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1063,12 +1063,12 @@
       "difficulty": "hard",
       "stem": "A train 150m long passes a pole in 15 seconds. The time taken to cross a 300m platform is:",
       "options": [
-        "30 seconds",
         "45 seconds",
         "60 seconds",
-        "75 seconds"
+        "75 seconds",
+        "30 seconds"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Speed = 150/15 = 10 m/s. To cross platform: distance = 150 + 300 = 450m. Time = 450/10 = 45 seconds.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1089,12 +1089,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills a tank in 12 hours and Pipe B empties it in 18 hours. If both are opened together, the tank fills in:",
       "options": [
+        "40 hours",
         "24 hours",
         "30 hours",
-        "36 hours",
-        "40 hours"
+        "36 hours"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "A's rate = 1/12, B's rate = -1/18. Combined = 1/12 - 1/18 = 3/36 - 2/36 = 1/36. Time = 36 hours.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1115,12 +1115,12 @@
       "difficulty": "hard",
       "stem": "In what ratio should water be mixed with milk costing Rs. 40/litre to get a mixture worth Rs. 25/litre?",
       "options": [
-        "3:5",
-        "5:3",
         "3:8",
-        "8:3"
+        "8:3",
+        "3:5",
+        "5:3"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Water costs Rs. 0/litre. Using alligation: Milk(40) ---- 25 ---- Water(0). Ratio = (25-0):(40-25) = 25:15 = 5:3. So milk:water = 5:3, meaning water:milk = 3:5.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1141,12 +1141,12 @@
       "difficulty": "medium",
       "stem": "If x + 1/x = 5, then x^2 + 1/x^2 equals:",
       "options": [
-        "23",
         "25",
         "27",
-        "29"
+        "29",
+        "23"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Squaring: (x + 1/x)^2 = 25. x^2 + 2 + 1/x^2 = 25. x^2 + 1/x^2 = 23.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1167,12 +1167,12 @@
       "difficulty": "medium",
       "stem": "Statements: All scientists are researchers. Some researchers are teachers. Conclusions: I. Some scientists are teachers. II. Some teachers are scientists.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Depends on operating conditions",
+        "Used for shallow foundations only",
+        "Works for analog signals only",
+        "Works under ideal conditions"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "From 'All scientists are researchers' and 'Some researchers are teachers', we cannot conclude that any scientist is a teacher. The 'some researchers' who are teachers may not include any scientists. Neither conclusion follows necessarily.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -1193,12 +1193,12 @@
       "difficulty": "medium",
       "stem": "In a certain code language, COMPUTER is written as RFUVQNPC. How will MEDICINE be coded?",
       "options": [
-        "EOJDJEFM",
-        "FOJDJEFN",
         "FDJDJEFM",
-        "EOJEIDFM"
+        "EOJEIDFM",
+        "EOJDJEFM",
+        "FOJDJEFN"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The pattern is reverse the word and shift each letter: C->R (C+15=R), O->F (O+11=F), etc. Actually, looking at the pattern: COMPUTER -> RFUVQNPC is a specific cipher. MEDICINE -> EOJDJEFM follows the same substitution pattern.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -1219,12 +1219,12 @@
       "difficulty": "easy",
       "stem": "Pointing to a photograph, Arun said, 'She is the daughter of the only son of my grandfather.' How is the girl in the photograph related to Arun?",
       "options": [
-        "Sister",
         "Daughter",
         "Mother",
-        "Niece"
+        "Niece",
+        "Sister"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Grandfather's only son = Arun's father. Arun's father's daughter = Arun's sister. So the girl is Arun's sister.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1245,12 +1245,12 @@
       "difficulty": "medium",
       "stem": "Rahul starts from point A and walks 5 km north, then turns right and walks 3 km, then turns right and walks 5 km. How far is he from point A?",
       "options": [
+        "8 km",
         "3 km",
         "4 km",
-        "5 km",
-        "8 km"
+        "5 km"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "North 5 km, then East 3 km, then South 5 km. Net displacement: 3 km East. Distance from A = 3 km.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1271,12 +1271,12 @@
       "difficulty": "hard",
       "stem": "What comes next in the series: 2, 6, 12, 20, 30, ?",
       "options": [
-        "40",
-        "42",
         "44",
-        "48"
+        "48",
+        "40",
+        "42"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Differences: 4, 6, 8, 10, 12. Next number = 30 + 12 = 42. Alternatively, n(n+1): 1*2=2, 2*3=6, 3*4=12, 4*5=20, 5*6=30, 6*7=42.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "A table shows sales data: Jan=120, Feb=150, Mar=180, Apr=160, May=200. What is the average monthly sales?",
       "options": [
-        "150",
         "160",
         "170",
-        "180"
+        "180",
+        "150"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Average = (120+150+180+160+200)/5 = 810/5 = 162. Closest option is 160. Actually 810/5 = 162. The answer should be 162 but since it's not in options, 160 is closest.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1323,12 +1323,12 @@
       "difficulty": "medium",
       "stem": "The area of a circle with diameter 14 cm is approximately:",
       "options": [
+        "1232 cm^2",
         "154 cm^2",
         "308 cm^2",
-        "616 cm^2",
-        "1232 cm^2"
+        "616 cm^2"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Radius = 7 cm. Area = pi*r^2 = 22/7 * 49 = 154 cm^2.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1349,12 +1349,12 @@
       "difficulty": "hard",
       "stem": "The value of sin^2(30) + cos^2(60) is:",
       "options": [
-        "1/2",
-        "1",
         "3/4",
-        "0"
+        "0",
+        "1/2",
+        "1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "sin(30) = 1/2, sin^2(30) = 1/4. cos(60) = 1/2, cos^2(60) = 1/4. Sum = 1/4 + 1/4 = 1/2.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1375,12 +1375,12 @@
       "difficulty": "medium",
       "stem": "Two dice are thrown simultaneously. The probability that the sum of numbers is 7 is:",
       "options": [
-        "1/6",
         "1/12",
         "5/36",
-        "7/36"
+        "7/36",
+        "1/6"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Total outcomes = 36. Favorable outcomes for sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. Probability = 6/36 = 1/6.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1401,12 +1401,12 @@
       "difficulty": "medium",
       "stem": "In how many ways can 5 people be seated around a circular table?",
       "options": [
+        "720",
         "24",
         "60",
-        "120",
-        "720"
+        "120"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Circular permutations of n objects = (n-1)! = 4! = 24.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1427,12 +1427,12 @@
       "difficulty": "medium",
       "stem": "Convert to reported speech: He said, 'I am studying.'",
       "options": [
-        "He said that he was studying",
-        "He said that he is studying",
         "He said that he has been studying",
-        "He said that he had been studying"
+        "He said that he had been studying",
+        "He said that he was studying",
+        "He said that he is studying"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In reported speech, present continuous 'am studying' changes to past continuous 'was studying'.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1448,12 +1448,12 @@
       "difficulty": "medium",
       "stem": "Choose the correct modal: 'You _____ respect your elders.'",
       "options": [
-        "should",
         "would",
         "could",
-        "might"
+        "might",
+        "should"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "'Should' expresses obligation or advice. It is the appropriate modal for expressing moral duty.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1469,12 +1469,12 @@
       "difficulty": "hard",
       "stem": "Choose the one-word substitute for 'A person who loves books':",
       "options": [
+        "Philosopher",
         "Bibliophile",
         "Philatelist",
-        "Numismatist",
-        "Philosopher"
+        "Numismatist"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bibliophile is a person who collects or loves books. Philatelist collects stamps, Numismatist collects coins.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1490,12 +1490,12 @@
       "difficulty": "medium",
       "stem": "Choose the correct verb: 'The news _____ good.'",
       "options": [
-        "is",
-        "are",
         "were",
-        "have been"
+        "have been",
+        "is",
+        "are"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "'News' is an uncountable noun (singular), so it takes the singular verb 'is'.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1511,12 +1511,12 @@
       "difficulty": "hard",
       "stem": "What does 'give up' mean?",
       "options": [
-        "To surrender or quit",
         "To hand over",
         "To increase",
-        "To remove"
+        "To remove",
+        "To surrender or quit"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "'Give up' means to surrender, quit, or stop trying.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1532,12 +1532,12 @@
       "difficulty": "easy",
       "stem": "Which PSU recently achieved the milestone of 1 billion tonnes of crude oil production?",
       "options": [
+        "IOCL",
         "BPCL",
         "HPCL",
-        "ONGC",
-        "IOCL"
+        "ONGC"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "ONGC achieved this milestone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1553,12 +1553,12 @@
       "difficulty": "easy",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
-        "Delhi-Mumbai",
-        "Mumbai-Ahmedabad",
         "Chennai-Bangalore",
-        "Kolkata-Hyderabad"
+        "Kolkata-Hyderabad",
+        "Delhi-Mumbai",
+        "Mumbai-Ahmedabad"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The first bullet train project connects Mumbai and Ahmedabad.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1574,12 +1574,12 @@
       "difficulty": "medium",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
-        "KG Basin",
         "Mumbai High",
         "Cauvery Basin",
-        "Assam"
+        "Assam",
+        "KG Basin"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1595,12 +1595,12 @@
       "difficulty": "medium",
       "stem": "India's 5G rollout was led by which telecom operator?",
       "options": [
+        "Vi",
         "Airtel",
         "Jio",
-        "BSNL",
-        "Vi"
+        "BSNL"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Reliance Jio led the 5G rollout in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1616,12 +1616,12 @@
       "difficulty": "hard",
       "stem": "Which renewable energy source saw the highest capacity addition in India in 2024?",
       "options": [
-        "Solar",
-        "Wind",
         "Hydro",
-        "Biomass"
+        "Biomass",
+        "Solar",
+        "Wind"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Solar energy saw the highest capacity addition.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1637,12 +1637,12 @@
       "difficulty": "hard",
       "stem": "Aditya-L1 mission studies:",
       "options": [
-        "Moon's surface",
         "Mars atmosphere",
         "Sun",
-        "Deep space"
+        "Deep space",
+        "Moon's surface"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Aditya-L1 is India's first solar observation mission.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1658,12 +1658,12 @@
       "difficulty": "easy",
       "stem": "The largest desert in India is:",
       "options": [
+        "Spiti Desert",
         "Thar Desert",
         "Rann of Kutch",
-        "Ladakh Desert",
-        "Spiti Desert"
+        "Ladakh Desert"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Thar Desert is the largest desert in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1679,12 +1679,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
-        "Quartz",
-        "Topaz",
         "Diamond",
-        "Corundum"
+        "Corundum",
+        "Quartz",
+        "Topaz"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1700,12 +1700,12 @@
       "difficulty": "medium",
       "stem": "Minimum age for Lok Sabha membership:",
       "options": [
-        "21 years",
         "25 years",
         "30 years",
-        "35 years"
+        "35 years",
+        "21 years"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Minimum age for Lok Sabha membership is 25 years.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1721,12 +1721,12 @@
       "difficulty": "hard",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
+        "8",
         "5",
         "6",
-        "7",
-        "8"
+        "7"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1742,12 +1742,12 @@
       "difficulty": "medium",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
-        "Lets eat, Grandma!",
-        "Let's eat Grandma!",
         "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Let's, eat Grandma!",
+        "Lets eat, Grandma!",
+        "Let's eat Grandma!"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1763,12 +1763,12 @@
       "difficulty": "easy",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
         "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1784,12 +1784,12 @@
       "difficulty": "medium",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
+        "their assignments",
         "Each of",
         "the students",
-        "have submitted",
-        "their assignments"
+        "have submitted"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1805,12 +1805,12 @@
       "difficulty": "hard",
       "stem": "What does 'resilient' mean?",
       "options": [
-        "Fragile",
-        "Able to recover quickly",
         "Slow",
-        "Weak"
+        "Weak",
+        "Fragile",
+        "Able to recover quickly"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Resilient means able to recover quickly from difficulties.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1826,12 +1826,12 @@
       "difficulty": "hard",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
         "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1847,12 +1847,12 @@
       "difficulty": "hard",
       "stem": "What does 'candid' mean?",
       "options": [
+        "Polite",
         "Secretive",
         "Frank and honest",
-        "Formal",
-        "Polite"
+        "Formal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Candid means truthful and straightforward; frank.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1868,12 +1868,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'pragmatic'?",
       "options": [
-        "Idealistic",
-        "Practical",
         "Theoretical",
-        "Emotional"
+        "Emotional",
+        "Idealistic",
+        "Practical"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Pragmatic means dealing with things practically.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1889,12 +1889,12 @@
       "difficulty": "easy",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
-        "Aggravate",
         "Mitigate",
         "Motivate",
-        "Navigate"
+        "Navigate",
+        "Aggravate"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1910,12 +1910,12 @@
       "difficulty": "medium",
       "stem": "___ honest man always speaks the truth.",
       "options": [
+        "No article",
         "A",
         "An",
-        "The",
-        "No article"
+        "The"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1931,12 +1931,12 @@
       "difficulty": "hard",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
-        "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water",
+        "A turning point"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,

@@ -42,12 +42,12 @@
         "caption": ""
       },
       "options": [
-        "Only cosine terms",
-        "Only sine terms",
+        "Used for high-volume low-variety",
         "Both sine and cosine terms",
-        "A constant term plus cosine terms"
+        "A constant term plus cosine terms",
+        "Applies to specific environments"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "f(x) = x is an odd function on (−π, π). For odd functions, all cosine coefficients aₙ = 0. Only sine coefficients are nonzero: bₙ = (2/n)(−1)^(n+1). The Fourier series is f(x) = 2[sin x − sin 2x/2 + sin 3x/3 − ···].",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -68,12 +68,12 @@
         "caption": ""
       },
       "options": [
+        "11",
         "3",
         "5",
-        "6",
-        "11"
+        "6"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For any square matrix, the sum of eigenvalues equals the trace: λ₁ + λ₂ = tr(A) = 5. The product equals the determinant: λ₁ · λ₂ = det(A) = 6. We can verify: λ₁, λ₂ are roots of λ² − 5λ + 6 = 0 → (λ−2)(λ−3) = 0 → λ₁ = 2, λ₂ = 3.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -94,12 +94,12 @@
         "caption": ""
       },
       "options": [
-        "(3 cos²θ − 1)/2",
-        "(3 cos θ − 1)/2",
         "(cos²θ − 1)/2",
-        "3 cos²θ − 1"
+        "3 cos²θ − 1",
+        "(3 cos²θ − 1)/2",
+        "(3 cos θ − 1)/2"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P₂(x) = (3x² − 1)/2, so P₂(cos θ) = (3 cos²θ − 1)/2. This can be verified: P₂(1) = (3−1)/2 = 1 ✓, P₂(0) = (0−1)/2 = −1/2 ✓, P₂(−1) = (3−1)/2 = 1 ✓.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -120,12 +120,12 @@
         "caption": ""
       },
       "options": [
-        "0",
         "1",
         "2πδ(ω)",
-        "δ(ω)"
+        "δ(ω)",
+        "0"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "F(ω) = ∫₋∞^∞ δ(t)e^(−iωt)dt = e^(−iω·0) = 1. The Fourier transform of δ(t) is the constant 1 for all ω — a delta function in time corresponds to all frequencies equally.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -146,12 +146,12 @@
         "caption": ""
       },
       "options": [
+        "L = m√(kr₀)",
         "L = √(mk r₀)",
         "L = √(mk/r₀)",
-        "L = mk r₀",
-        "L = m√(kr₀)"
+        "L = mk r₀"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For a circular orbit of radius r₀: mv²/r₀ = k/r₀² → v² = k/(mr₀). Then L = mvr₀ = m√(k/(mr₀))·r₀ = √(mk r₀). This gives the unique angular momentum for a circular orbit.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -172,12 +172,12 @@
         "caption": ""
       },
       "options": [
-        "√(k/m)",
-        "√(3k/m)",
         "√(2k/m)",
-        "√(k/(2m))"
+        "√(k/(2m))",
+        "√(k/m)",
+        "√(3k/m)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For the symmetric mode, both masses move in the same direction. The middle spring doesn't stretch. Each mass feels only its wall spring k. Equation of motion: mẍ = −kx, so ω_sym = √(k/m). The antisymmetric mode has ω = √(3k/m).",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "A damped harmonic oscillator has mass m, damping b, spring constant k. The condition for critical damping is:",
       "options": [
-        "b = 2√(mk)",
         "b = √(mk)",
         "b = 2mk",
-        "b = 4mk"
+        "b = 4mk",
+        "b = 2√(mk)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Characteristic equation: ms² + bs + k = 0, giving s = (−b ± √(b²−4mk))/(2m). Critical damping: discriminant = 0 → b² − 4mk = 0 → b = 2√(mk).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "medium",
       "stem": "A uniform solid cylinder of mass M and radius R rolls without slipping down an inclined plane. Its acceleration is:",
       "options": [
+        "(3/5) g sin θ",
         "g sin θ",
         "(2/3) g sin θ",
-        "(1/2) g sin θ",
-        "(3/5) g sin θ"
+        "(1/2) g sin θ"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For rolling without slipping: Ma = Mg sin θ − f, Iα = fR, a = Rα. For a solid cylinder I = ½MR². So f = ½Ma. Then Ma = Mg sin θ − ½Ma → a = (2/3)g sin θ.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "hard",
       "stem": "A particle moves under a central force F = F(r)r̂. Which quantities are conserved?",
       "options": [
-        "Linear momentum and kinetic energy",
-        "Angular momentum and total energy",
         "Angular momentum and linear momentum",
-        "Only kinetic energy"
+        "Used for high-volume low-variety",
+        "Linear momentum and kinetic energy",
+        "Angular momentum and total energy"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For a central force F = F(r)r̂, torque τ = r × F = 0 (r parallel to F). So angular momentum L is conserved. The force is conservative, so total energy E is also conserved. Linear momentum is NOT conserved (there is an external force).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "medium",
       "stem": "A parallel-plate capacitor has area A, plate separation d, filled with dielectric of permittivity ε. The capacitance is:",
       "options": [
-        "ε₀A/d",
         "εA/d",
         "ε₀d/A",
-        "εd/A"
+        "εd/A",
+        "ε₀A/d"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "C = εA/d where ε = εᵣε₀ for a dielectric with relative permittivity εᵣ. The dielectric increases capacitance by factor εᵣ compared to vacuum.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "hard",
       "stem": "The polarization P of a dielectric material is related to the electric field E by:",
       "options": [
+        "P = χₑE/ε₀",
         "P = ε₀E",
         "P = ε₀χₑE",
-        "P = εE",
-        "P = χₑE/ε₀"
+        "P = εE"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "P = ε₀χₑE, where χₑ is the electric susceptibility. D = ε₀E + P = ε₀(1 + χₑ)E = εE where ε = ε₀εᵣ and εᵣ = 1 + χₑ.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "medium",
       "stem": "A solenoid with N turns, length L carries current I with a core of permeability μ. The magnetic field inside is:",
       "options": [
-        "μ₀NI/L",
-        "μNI/L",
         "μ₀NI/(2L)",
-        "μNI/(2πr)"
+        "μNI/(2πr)",
+        "μ₀NI/L",
+        "μNI/L"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For an ideal solenoid with core permeability μ: B = μnI = μ(N/L)I = μNI/L.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "hard",
       "stem": "In free space, the displacement current density is:",
       "options": [
-        "μ₀J",
         "ε₀∂E/∂t",
         "μ₀ε₀∂B/∂t",
-        "∂D/∂t"
+        "∂D/∂t",
+        "μ₀J"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The displacement current density is J_D = ε₀∂E/∂t. Maxwell added this to Ampère's law to ensure consistency with charge conservation: ∂ρ/∂t + ∇·J = 0.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "The energy levels of a one-dimensional quantum harmonic oscillator are:",
       "options": [
+        "Eₙ = n²ℏω",
         "Eₙ = nℏω",
         "Eₙ = (n + ½)ℏω",
-        "Eₙ = (n − ½)ℏω",
-        "Eₙ = n²ℏω"
+        "Eₙ = (n − ½)ℏω"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Eₙ = (n + ½)ℏω for n = 0, 1, 2, .... The ½ℏω zero-point energy is purely quantum — the particle cannot be at rest due to the uncertainty principle.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "hard",
       "stem": "A particle of energy E encounters a rectangular barrier V₀ (width a) with E < V₀. The transmission coefficient T:",
       "options": [
-        "Is always zero for E < V₀",
-        "Decreases exponentially with barrier width a",
         "Is always 1",
-        "Depends only on E/V₀"
+        "Depends only on E/V₀",
+        "Is always zero for E < V₀",
+        "Decreases exponentially with barrier width a"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For E < V₀: T ≈ (16E(V₀−E)/V₀²)·e^(−2κa) where κ = √(2m(V₀−E))/ℏ. Key feature: exponential decrease with width a.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "easy",
       "stem": "The fine structure splitting of the hydrogen atom n = 2 level gives levels with total angular momentum j =:",
       "options": [
-        "j = 0 and j = 1",
         "j = 1/2 and j = 3/2",
         "j = 1/2 and j = 5/2",
-        "j = 1 and j = 2"
+        "j = 1 and j = 2",
+        "j = 0 and j = 1"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For n = 2: 2S₁/₂ has j = 1/2; 2P states split into 2P₁/₂ (j=1/2) and 2P₃/₂ (j=3/2). The Lamb shift further splits 2S₁/₂ and 2P₁/₂.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "hard",
       "stem": "The Heisenberg uncertainty principle states:",
       "options": [
+        "Δx · Δp = ℏ",
         "Δx · Δp ≥ ℏ",
         "Δx · Δp ≥ ℏ/2",
-        "Δx · Δp ≤ ℏ/2",
-        "Δx · Δp = ℏ"
+        "Δx · Δp ≤ ℏ/2"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Robertson-Schrödinger relation gives Δx · Δp ≥ ℏ/2. Equality holds for Gaussian wave packets — minimum uncertainty states.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "medium",
       "stem": "The wave function of a particle must be:",
       "options": [
-        "Real and positive",
-        "Single-valued, continuous, and square-integrable",
         "An eigenstate of momentum",
-        "Periodic in space"
+        "Periodic in space",
+        "Real and positive",
+        "Single-valued, continuous, and square-integrable"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Physical wave functions must be single-valued, continuous, and square-integrable. They need not be real — complex wave functions are common.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "medium",
       "stem": "From the Helmholtz free energy F = U − TS, which Maxwell relation follows?",
       "options": [
-        "(∂S/∂V)_T = (∂P/∂T)_V",
         "(∂T/∂V)_S = (∂P/∂S)_V",
         "(∂S/∂P)_T = (∂V/∂T)_P",
-        "(∂S/∂V)_P = (∂T/∂P)_V"
+        "(∂S/∂V)_P = (∂T/∂P)_V",
+        "(∂S/∂V)_T = (∂P/∂T)_V"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "From dF = −S dT − P dV, since F is a state function: d²F/(dTdV) = d²F/(dVdT), giving (∂S/∂V)_T = (∂P/∂T)_V.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "easy",
       "stem": "The Clausius-Clapeyron equation gives dP/dT for a phase boundary. For liquid-gas equilibrium, dP/dT:",
       "options": [
+        "Zero",
         "Always negative",
         "Always positive",
-        "Depends on the sign of ΔV",
-        "Zero"
+        "Depends on the sign of ΔV"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Clausius-Clapeyron: dP/dT = L/(TΔV). For liquid→gas ΔV > 0, so dP/dT > 0. For solid→liquid (most substances) ΔV < 0, giving dP/dT < 0 (water is the exception).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "easy",
       "stem": "Near a second-order phase transition, M ∝ (T_c − T)^β. The critical exponent β for the 2D Ising model is:",
       "options": [
-        "β = 1/2",
-        "β = 1/3",
         "β = 1/8",
-        "β = 1"
+        "β = 1",
+        "β = 1/2",
+        "β = 1/3"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The 2D Ising model (Onsager solution) gives β = 1/8 exactly. Mean-field theory predicts β = 1/2, incorrect in low dimensions.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "easy",
       "stem": "Boltzmann's entropy S = k_B ln W. For W = 10²³, the value of S/k_B is:",
       "options": [
-        "23",
         "52.9",
         "10²³",
-        "1"
+        "1",
+        "23"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "S/k_B = ln(10²³) = 23 × ln(10) = 23 × 2.3026 ≈ 52.9.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "easy",
       "stem": "In LS coupling, the ground state term symbol of carbon (Z=6, configuration 1s²2s²2p²) is:",
       "options": [
+        "³P₁",
         "¹S₀",
         "¹D₂",
-        "³P₀",
-        "³P₁"
+        "³P₀"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For p²: Hund's rules give (1) maximum S → S=1 (triplet), (2) maximum L → L=1 (P), (3) less-than-half-filled: J = |L−S| = 0. Ground state is ³P₀.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "easy",
       "stem": "The rotational constant B of a diatomic molecule is related to the moment of inertia I by:",
       "options": [
-        "B = ℏ/(2I)",
-        "B = ℏ²/(2I)",
         "B = ℏ²I",
-        "B = 2ℏ²/I"
+        "B = 2ℏ²/I",
+        "B = ℏ/(2I)",
+        "B = ℏ²/(2I)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The rotational constant is B = ℏ²/(2I), where I = μr². Energy levels: E_J = BJ(J+1) = ℏ²J(J+1)/(2I).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "In Raman spectroscopy, the ratio of anti-Stokes to Stokes intensity at temperature T is:",
       "options": [
-        "exp(−ℏω/k_BT)",
         "exp(+ℏω/k_BT)",
         "1",
-        "k_BT/(ℏω)"
+        "k_BT/(ℏω)",
+        "exp(−ℏω/k_BT)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "I_anti-Stokes/I_Stokes = exp(−ℏω/k_BT). Anti-Stokes requires initial excited state (Boltzmann factor), so weaker at room temperature.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "medium",
       "stem": "The He-Ne laser operates at a wavelength of:",
       "options": [
+        "337 nm",
         "10.6 μm",
         "632.8 nm",
-        "532 nm",
-        "337 nm"
+        "532 nm"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "He-Ne laser emits at 632.8 nm (visible red). 10.6 μm is CO₂, 532 nm is Nd:YAG, 337 nm is N₂ laser.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "medium",
       "stem": "The Franck-Condon factor |⟨v'|v''⟩|² is largest when:",
       "options": [
-        "Vibrational frequencies very different",
-        "Bond lengths very different",
         "Bond lengths approximately equal",
-        "Spin-forbidden transition"
+        "Spin-forbidden transition",
+        "Vibrational frequencies very different",
+        "Bond lengths very different"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Franck-Condon factor is largest when equilibrium internuclear distances are similar — vertical transition lands near v'=0 maximum.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "In a 1D monatomic lattice, the group velocity of phonons at the Brillouin zone boundary (k = π/a) is:",
       "options": [
-        "Maximum",
         "Zero",
         "Half the speed of sound",
-        "Equal to phase velocity"
+        "Equal to phase velocity",
+        "Maximum"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "ω = 2√(C/M)|sin(ka/2)|. v_g = dω/dk = a√(C/M)|cos(ka/2)|. At k = π/a: v_g = 0. Standing wave.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "medium",
       "stem": "In BCS theory, Cooper pair formation is mediated by:",
       "options": [
+        "Plasmons",
         "Phonons (lattice vibrations)",
         "Photons",
-        "Magnons",
-        "Plasmons"
+        "Magnons"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In BCS theory, two electrons form a Cooper pair by exchanging virtual phonons. One electron polarizes the lattice, attracting the second electron.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "medium",
       "stem": "Below T_c in a ferromagnet, spontaneous magnetization arises from:",
       "options": [
-        "Thermal agitation",
-        "Exchange interaction between spins",
         "External field only",
-        "Crystal field effects"
+        "Crystal field effects",
+        "Thermal agitation",
+        "Exchange interaction between spins"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Below T_c, the quantum mechanical exchange interaction aligns neighboring electron spins parallel, creating magnetic domains.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "medium",
       "stem": "In the tight-binding model, the bandwidth W of a 1D chain with hopping integral t is:",
       "options": [
-        "2t",
         "4t",
         "8t",
-        "t"
+        "t",
+        "2t"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "E(k) = E₀ − 2t cos(ka). Bandwidth W = (E₀+2t) − (E₀−2t) = 4t.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "easy",
       "stem": "In intrinsic silicon at room temperature, nᵢ ≈:",
       "options": [
+        "1.5 × 10²⁰ cm⁻³",
         "1.5 × 10¹⁰ cm⁻³",
         "1.5 × 10¹⁵ cm⁻³",
-        "1.5 × 10⁶ cm⁻³",
-        "1.5 × 10²⁰ cm⁻³"
+        "1.5 × 10⁶ cm⁻³"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "nᵢ for Si at 300 K is 1.5 × 10¹⁰ cm⁻³. Smaller band gap → higher nᵢ.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "medium",
       "stem": "The current through a PN junction under forward bias V is given by:",
       "options": [
-        "I = I₀ exp(qV/k_BT)",
-        "I = I₀[exp(qV/nk_BT) − 1]",
         "I = I₀[1 − exp(−qV/k_BT)]",
-        "I = V/R"
+        "I = V/R",
+        "I = I₀ exp(qV/k_BT)",
+        "I = I₀[exp(qV/nk_BT) − 1]"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Shockley equation: I = I₀[exp(qV/nk_BT) − 1], where I₀ is reverse saturation current, n is ideality factor (1-2).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "easy",
       "stem": "In a BJT common-emitter configuration, I_C = β I_B. The current gain β typically ranges from:",
       "options": [
-        "5–10",
         "20–50",
         "50–300",
-        "500–1000"
+        "500–1000",
+        "5–10"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "β = h_FE is the DC current gain, typically 50–300 for small-signal transistors. Also: I_E = I_C + I_B = (β+1)I_B.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "easy",
       "stem": "An RC low-pass filter has cutoff f_c = 1/(2πRC). At f = f_c, the output voltage is:",
       "options": [
+        "Equal to the input voltage",
         "Half the input voltage",
         "70.7% of the input voltage (V_in/√2)",
-        "Zero",
-        "Equal to the input voltage"
+        "Zero"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At cutoff: |H(jω)| = 1/√(1+1) = 1/√2 ≈ 0.707. Phase shift = −45°.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "hard",
       "stem": "In ¹⁴₇N + ⁴₂He → ¹⁷₈O + X, the particle X is:",
       "options": [
-        "Neutron ⁰₁n",
-        "Proton ¹₁H",
         "Deuteron ²₁H",
-        "Alpha ⁴₂He"
+        "Alpha ⁴₂He",
+        "Neutron ⁰₁n",
+        "Proton ¹₁H"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A conservation: 14+4=17+A → A=1. Z conservation: 7+2=8+Z → Z=1. X = proton. Rutherford's 1919 experiment.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "easy",
       "stem": "Which quantity is always conserved in nuclear reactions?",
       "options": [
-        "Parity",
         "Isospin",
         "Baryon number",
-        "Strangeness"
+        "Strangeness",
+        "Parity"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Baryon number is conserved in all interactions. Parity is violated in weak interactions. Strangeness is conserved in strong but not weak.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "medium",
       "stem": "The quark content of a proton is:",
       "options": [
+        "uds",
         "udd",
         "uud",
-        "uss",
-        "uds"
+        "uss"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Proton = uud. Charge: 2(2/3) + (−1/3) = +1. Neutron = udd: 2/3 + 2(−1/3) = 0.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "easy",
       "stem": "A radioactive substance has half-life 5 years. What fraction remains after 20 years?",
       "options": [
-        "1/4",
-        "1/8",
         "1/16",
-        "1/32"
+        "1/32",
+        "1/4",
+        "1/8"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Half-lives = 20/5 = 4. Fraction = (½)⁴ = 1/16.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "⁵⁶Fe has B/A ≈ 8.8 MeV while ²³⁵U has B/A ≈ 7.6 MeV. This implies:",
       "options": [
-        "Fission of iron releases energy",
         "Fusion of uranium releases energy",
         "Fission of uranium and fusion of light elements both release energy",
-        "Neither releases energy"
+        "Neither releases energy",
+        "Fission of iron releases energy"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "⁵⁶Fe has highest B/A. Moving away (fission of heavier or fusion of lighter) releases energy. Uranium fission → fragments with higher B/A.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "hard",
       "stem": "A product's price increases by 15% and then decreases by 10%. The net change is:",
       "options": [
+        "−5%",
         "+3.5%",
         "−3.5%",
-        "+5%",
-        "−5%"
+        "+5%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Price = 100 → 115 → 115×0.9 = 103.5. Net change = +3.5%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -933,12 +933,12 @@
       "difficulty": "medium",
       "stem": "A can do a work in 20 days, B in 30 days. A works alone 5 days, then both work together. How many more days?",
       "options": [
-        "9 days",
-        "10 days",
         "12 days",
-        "15 days"
+        "15 days",
+        "9 days",
+        "10 days"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A's 5 days = 5/20 = 1/4 done. Remaining = 3/4. Combined rate = 1/20+1/30 = 1/12. Days = (3/4)/(1/12) = 9.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -959,12 +959,12 @@
       "difficulty": "medium",
       "stem": "A man buys for Rs.400 and sells at 20% loss. To gain 15%, he should sell at:",
       "options": [
-        "Rs.440",
         "Rs.460",
         "Rs.475",
-        "Rs.500"
+        "Rs.500",
+        "Rs.440"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "To gain 15%: SP = 400 × 1.15 = Rs.460. The 20% loss info is a distractor.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -985,12 +985,12 @@
       "difficulty": "hard",
       "stem": "Average weight of 20 students is 60 kg. Including the teacher, average becomes 61 kg. Teacher's weight:",
       "options": [
+        "80 kg",
         "70 kg",
         "75 kg",
-        "81 kg",
-        "80 kg"
+        "81 kg"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Total = 20×60 = 1200. With teacher: 21×61 = 1281. Teacher = 1281−1200 = 81 kg.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1011,12 +1011,12 @@
       "difficulty": "hard",
       "stem": "A bag has 5 red and 3 blue balls. Two drawn without replacement. P(both red) =",
       "options": [
-        "25/64",
-        "5/14",
         "10/28",
-        "25/28"
+        "25/28",
+        "25/64",
+        "5/14"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "P = (5/8)×(4/7) = 20/56 = 5/14.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1037,12 +1037,12 @@
       "difficulty": "easy",
       "stem": "A:B = 3:5 and B:C = 2:3. Then A:B:C =",
       "options": [
-        "3:5:3",
         "6:10:15",
         "3:10:15",
-        "6:5:3"
+        "6:5:3",
+        "3:5:3"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A:B = 3:5, B:C = 2:3. Make B common: A:B = 6:10, B:C = 10:15. A:B:C = 6:10:15.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1063,12 +1063,12 @@
       "difficulty": "medium",
       "stem": "A car goes from A to B at 40 km/h and returns at 60 km/h. Average speed is:",
       "options": [
+        "55 km/h",
         "48 km/h",
         "50 km/h",
-        "52 km/h",
-        "55 km/h"
+        "52 km/h"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Average speed = 2×40×60/(40+60) = 4800/100 = 48 km/h.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1089,12 +1089,12 @@
       "difficulty": "hard",
       "stem": "Simple interest on Rs.5000 at 8% p.a. for 3 years is:",
       "options": [
-        "Rs.1,000",
-        "Rs.1,200",
         "Rs.1,400",
-        "Rs.1,600"
+        "Rs.1,600",
+        "Rs.1,000",
+        "Rs.1,200"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "SI = P×r×t/100 = 5000×8×3/100 = Rs.1,200.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1115,12 +1115,12 @@
       "difficulty": "medium",
       "stem": "How many 3-letter words can be formed from the letters of 'LOGARITHM' (no repetition)?",
       "options": [
-        "504",
         "336",
         "720",
-        "240"
+        "240",
+        "504"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "9 letters available. 3-letter words = P(9,3) = 9×8×7 = 504.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1141,12 +1141,12 @@
       "difficulty": "medium",
       "stem": "The LCM of 12, 15 and 20 is:",
       "options": [
+        "180",
         "30",
         "60",
-        "120",
-        "180"
+        "120"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "12 = 2²×3, 15 = 3×5, 20 = 2²×5. LCM = 2²×3×5 = 60. Wait, that gives 60. Let me verify: 60/12=5✓, 60/15=4✓, 60/20=3✓. Answer is 60.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1167,12 +1167,12 @@
       "difficulty": "hard",
       "stem": "A boat goes 24 km upstream in 6 hours and 24 km downstream in 3 hours. Speed of current =",
       "options": [
-        "2 km/h",
-        "3 km/h",
         "4 km/h",
-        "5 km/h"
+        "5 km/h",
+        "2 km/h",
+        "3 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Upstream = 24/6 = 4 km/h. Downstream = 24/3 = 8 km/h. Current = (8−4)/2 = 2 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1193,12 +1193,12 @@
       "difficulty": "hard",
       "stem": "Pipe A fills a tank in 12 hours, Pipe B empties it in 18 hours. Both open, tank fills in:",
       "options": [
-        "30 hours",
         "36 hours",
         "24 hours",
-        "40 hours"
+        "40 hours",
+        "30 hours"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A rate = 1/12, B rate = −1/18. Net = 1/12−1/18 = 1/36. Time = 36 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1219,12 +1219,12 @@
       "difficulty": "medium",
       "stem": "Father is 30 years older than son. In 5 years, father's age will be twice son's age. Present age of son =",
       "options": [
+        "35 years",
         "20 years",
         "25 years",
-        "30 years",
-        "35 years"
+        "30 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Let son = x, father = x+30. In 5 years: x+35 = 2(x+5) → x+35 = 2x+10 → x = 25.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1245,12 +1245,12 @@
       "difficulty": "hard",
       "stem": "In what ratio must rice at Rs.30/kg be mixed with rice at Rs.45/kg to get a mixture worth Rs.40/kg?",
       "options": [
-        "1:2",
-        "2:1",
         "1:3",
-        "3:1"
+        "3:1",
+        "1:2",
+        "2:1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Using alligation: (45−40):(40−30) = 5:10 = 1:2.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1271,12 +1271,12 @@
       "difficulty": "hard",
       "stem": "Two trains of lengths 150 m and 200 m run in opposite directions at 54 km/h and 72 km/h. Crossing time =",
       "options": [
-        "6 sec",
         "8 sec",
         "10 sec",
-        "12 sec"
+        "12 sec",
+        "6 sec"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Relative speed = 54+72 = 126 km/h = 35 m/s. Distance = 350 m. Time = 350/35 = 10 sec.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "What comes next: 3, 8, 18, 38, ?",
       "options": [
+        "88",
         "78",
         "68",
-        "58",
-        "88"
+        "58"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Differences: 5, 10, 20, 40 (doubling). Next = 38+40 = 78.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1323,12 +1323,12 @@
       "difficulty": "hard",
       "stem": "If SKILL is coded as TKHLM, then CODE is coded as:",
       "options": [
-        "DPFE",
-        "DNFE",
         "DPEF",
-        "DPHE"
+        "DPHE",
+        "DPFE",
+        "DNFE"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Each letter shifted +1: C→D, O→P, D→E, E→F = DPFE.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1349,12 +1349,12 @@
       "difficulty": "hard",
       "stem": "Pointing to a man, a woman says 'He is the son of my mother's only daughter.' How is the man related to the woman?",
       "options": [
-        "Brother",
         "Son",
         "Father",
-        "Nephew"
+        "Nephew",
+        "Brother"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "My mother's only daughter = myself. He is my son.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1375,12 +1375,12 @@
       "difficulty": "medium",
       "stem": "Rahul walks 10 km North, turns right and walks 5 km, turns right and walks 10 km. He is now:",
       "options": [
+        "10 km West of start",
         "5 km East of start",
         "5 km West of start",
-        "10 km East of start",
-        "10 km West of start"
+        "10 km East of start"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "N10 → (0,10). Right(E) 5 → (5,10). Right(S) 10 → (5,0). 5 km East.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1401,12 +1401,12 @@
       "difficulty": "medium",
       "stem": "Statements: All dogs are animals. Some animals are cats. Conclusions: I. Some dogs are cats. II. Some cats are animals.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Suitable for narrow use cases",
+        "Works under ideal conditions",
+        "Works for particular conditions",
+        "Suitable for high-rise buildings"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "From 'Some animals are cats' by conversion: 'Some cats are animals' (II follows). 'Some dogs are cats' does not follow.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1427,12 +1427,12 @@
       "difficulty": "medium",
       "stem": "If P > Q >= R < S, which is definitely true?",
       "options": [
-        "P > R",
         "P > S",
         "Q < S",
-        "R > P"
+        "R > P",
+        "P > R"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "From P > Q >= R, we get P > R by transitivity.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "Four friends P, Q, R, S sit around a square table. P is left of Q, R is opposite P. Who is right of R?",
       "options": [
+        "Cannot be determined",
         "P",
         "Q",
-        "S",
-        "Cannot be determined"
+        "S"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Clockwise: Q, P, S, R. S is right of R.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1479,12 +1479,12 @@
       "difficulty": "medium",
       "stem": "In a class of 45, Meena's rank from top is 18. Rank from bottom =",
       "options": [
-        "27",
-        "28",
         "29",
-        "26"
+        "26",
+        "27",
+        "28"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Rank from bottom = 45 - 18 + 1 = 28.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1505,12 +1505,12 @@
       "difficulty": "medium",
       "stem": "If January 1, 2024 is Monday, what day is January 1, 2025?",
       "options": [
-        "Monday",
         "Tuesday",
         "Wednesday",
-        "Thursday"
+        "Thursday",
+        "Monday"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "2024 is a leap year (366 days). 366 mod 7 = 2. Monday + 2 = Wednesday.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1531,12 +1531,12 @@
       "difficulty": "easy",
       "stem": "The area of a circle with radius 7 cm is (use pi = 22/7):",
       "options": [
+        "156 cm2",
         "154 cm2",
         "144 cm2",
-        "148 cm2",
-        "156 cm2"
+        "148 cm2"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Area = pi*r^2 = (22/7)*49 = 22*7 = 154 cm2.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1557,12 +1557,12 @@
       "difficulty": "easy",
       "stem": "India's crude oil imports from Russia increased significantly due to:",
       "options": [
-        "Pipeline completion",
-        "Discounted prices post-sanctions",
         "New trade agreement",
-        "Currency swap"
+        "Currency swap",
+        "Pipeline completion",
+        "Discounted prices post-sanctions"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India increased imports from Russia due to discounted prices after Western sanctions.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1578,12 +1578,12 @@
       "difficulty": "easy",
       "stem": "Which renewable energy source saw the highest capacity addition in India in 2024?",
       "options": [
-        "Solar",
         "Wind",
         "Hydro",
-        "Biomass"
+        "Biomass",
+        "Solar"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Solar energy saw the highest capacity addition.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1599,12 +1599,12 @@
       "difficulty": "medium",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
+        "Nigeria, South Africa",
         "Mexico, Argentina",
         "Saudi Arabia, Iran, UAE",
-        "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Turkey, Indonesia"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "OPEC+ recently agreed to extend oil production cuts through:",
       "options": [
-        "Q1 2025",
-        "Q2 2025",
         "End of 2025",
-        "Q1 2026"
+        "Q1 2026",
+        "Q1 2025",
+        "Q2 2025"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "OPEC+ extended production cuts through end of 2025.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1641,12 +1641,12 @@
       "difficulty": "hard",
       "stem": "Which Indian IT company recently partnered with NVIDIA for AI cloud services?",
       "options": [
-        "TCS",
         "Infosys",
         "Wipro",
-        "HCL"
+        "HCL",
+        "TCS"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Infosys partnered with NVIDIA for AI cloud services.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1662,12 +1662,12 @@
       "difficulty": "hard",
       "stem": "India's indigenous aircraft carrier is:",
       "options": [
+        "INS Arihant",
         "INS Vikrant",
         "INS Vikramaditya",
-        "INS Arighat",
-        "INS Arihant"
+        "INS Arighat"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "INS Vikrant is India's first indigenous aircraft carrier.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1683,12 +1683,12 @@
       "difficulty": "easy",
       "stem": "Which planet is known as the 'Red Planet'?",
       "options": [
-        "Venus",
-        "Mars",
         "Jupiter",
-        "Saturn"
+        "Saturn",
+        "Venus",
+        "Mars"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Mars is known as the Red Planet.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1704,12 +1704,12 @@
       "difficulty": "medium",
       "stem": "Upper House of Indian Parliament:",
       "options": [
-        "Lok Sabha",
         "Rajya Sabha",
         "Vidhan Sabha",
-        "Vidhan Parishad"
+        "Vidhan Parishad",
+        "Lok Sabha"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Rajya Sabha is the Upper House.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1725,12 +1725,12 @@
       "difficulty": "medium",
       "stem": "SI unit of electric current is:",
       "options": [
+        "Ohm",
         "Volt",
         "Watt",
-        "Ampere",
-        "Ohm"
+        "Ampere"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Ampere is the SI unit of electric current.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1746,12 +1746,12 @@
       "difficulty": "hard",
       "stem": "India gained independence on:",
       "options": [
-        "January 26, 1950",
-        "August 15, 1947",
         "August 15, 1950",
-        "January 26, 1947"
+        "January 26, 1947",
+        "January 26, 1950",
+        "August 15, 1947"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India gained independence on August 15, 1947.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1767,12 +1767,12 @@
       "difficulty": "medium",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
         "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1788,12 +1788,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
+        "Charitable",
         "Kind",
         "Malevolent",
-        "Generous",
-        "Charitable"
+        "Generous"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1809,12 +1809,12 @@
       "difficulty": "easy",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
-        "at",
         "in",
-        "of"
+        "of",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1830,12 +1830,12 @@
       "difficulty": "hard",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
         "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1851,12 +1851,12 @@
       "difficulty": "medium",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
+        "Navigate",
         "Aggravate",
         "Mitigate",
-        "Motivate",
-        "Navigate"
+        "Motivate"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1872,12 +1872,12 @@
       "difficulty": "easy",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
-        "Clear",
-        "Vague",
         "Definite",
-        "Obvious"
+        "Obvious",
+        "Clear",
+        "Vague"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1893,12 +1893,12 @@
       "difficulty": "medium",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
         "had",
         "would",
-        "did"
+        "did",
+        "have"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1914,12 +1914,12 @@
       "difficulty": "hard",
       "stem": "The meeting was put ___ Friday.",
       "options": [
+        "up",
         "on",
         "at",
-        "off",
-        "up"
+        "off"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1935,12 +1935,12 @@
       "difficulty": "easy",
       "stem": "Choose the correct sentence: 'The team are working hard.'",
       "options": [
-        "Correct — team is plural",
-        "Incorrect — should be 'is working'",
         "Incorrect — should be 'were working'",
-        "Both A and C"
+        "Both A and C",
+        "Correct — team is plural",
+        "Incorrect — should be 'is working'"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Collective noun 'team' takes a singular verb in formal English.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1956,12 +1956,12 @@
       "difficulty": "easy",
       "stem": "What does 'resilient' mean?",
       "options": [
-        "Fragile",
         "Able to recover quickly",
         "Slow",
-        "Weak"
+        "Weak",
+        "Fragile"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Resilient means able to recover quickly from difficulties.",
       "estSec": 15,
       "topicWeight": 0.1,

@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "In engineering geology, the Rock Quality Designation (RQD) is defined as the percentage of core recovery consisting of pieces:",
       "options": [
-        "Longer than 5 cm",
-        "Longer than 10 cm",
         "Longer than 15 cm",
-        "Longer than 20 cm"
+        "Longer than 20 cm",
+        "Longer than 5 cm",
+        "Longer than 10 cm"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "RQD is the percentage of intact core pieces longer than 10 cm (4 inches) relative to the total core run length. An RQD of 100% indicates excellent rock quality, while below 25% indicates very poor rock.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -58,12 +58,12 @@
       "difficulty": "medium",
       "stem": "The Uniaxial Compressive Strength (UCS) of a rock is determined by loading a cylindrical specimen until failure. For a standard test, the height-to-diameter ratio is:",
       "options": [
+        "3:1",
         "1:1",
         "2:1",
-        "2.5:1",
-        "3:1"
+        "2.5:1"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "ISRM suggested methods specify a height-to-diameter ratio of 2.5:1 for uniaxial compressive strength testing. The specimen diameter is typically 47-54 mm, and loading is applied at a constant stress rate of 0.5-1.0 MPa/s.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -79,12 +79,12 @@
       "difficulty": "medium",
       "stem": "Darcy's Law for groundwater flow is expressed as Q = −KiA. In this equation, what does the negative sign indicate?",
       "options": [
-        "Water flows from high to low hydraulic head",
         "Flow is always downward",
         "Permeability is negative",
-        "Pressure decreases with depth"
+        "Pressure decreases with depth",
+        "Water flows from high to low hydraulic head"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The negative sign in Darcy's Law indicates that groundwater flows in the direction of decreasing hydraulic head (from higher to lower head). Darcy's velocity v = Q/A = −Ki, where K is hydraulic conductivity, i is hydraulic gradient, and A is cross-sectional area.",
       "figure": {
         "kind": "svg",
@@ -105,12 +105,12 @@
       "difficulty": "medium",
       "stem": "In a pumping test with a fully penetrating well in a confined aquifer, the Theis equation relates drawdown to time and distance. The Cooper-Jacob simplification is valid when the well function value u is:",
       "options": [
-        "u > 0.05",
-        "u < 0.05",
         "u = 0.01",
-        "u = 1.0"
+        "u = 1.0",
+        "u > 0.05",
+        "u < 0.05"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Cooper-Jacob straight-line approximation is valid when u < 0.05 (u = r²S/4Tt). This simplification allows drawdown to be plotted as a straight line on semi-log paper, yielding transmissivity from the slope and storativity from the intercept.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -126,12 +126,12 @@
       "difficulty": "hard",
       "stem": "The Mercalli Intensity Scale measures earthquake effects based on:",
       "options": [
+        "Seismic moment",
         "Seismic wave amplitudes",
         "Observed damage and human perception",
-        "Richter magnitude",
-        "Seismic moment"
+        "Richter magnitude"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Modified Mercalli Intensity (MMI) scale is a qualitative scale (I-XII) that describes earthquake effects on structures, objects, and people. Unlike magnitude scales (Richter, Moment), it varies with location and depends on observed damage and felt effects.",
       "figure": {
         "kind": "svg",
@@ -152,12 +152,12 @@
       "difficulty": "hard",
       "stem": "Which type of landslide involves the rapid flow of saturated soil and debris down a slope, typically triggered by heavy rainfall?",
       "options": [
-        "Rockfall",
         "Debris flow",
         "Rotational slide",
-        "Creep"
+        "Creep",
+        "Rockfall"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Debris flows (mudflows) are rapid, fluid-like movements of water-saturated soil, rock fragments, and organic material. They occur when slope materials become saturated during intense rainfall, reducing shear strength below critical thresholds.",
       "figure": {
         "kind": "svg",
@@ -178,12 +178,12 @@
       "difficulty": "hard",
       "stem": "Pyroclastic density currents (PDCs) are among the most lethal volcanic hazards. What is the approximate temperature range of a typical PDC?",
       "options": [
-        "100-200°C",
-        "200-400°C",
         "300-700°C",
-        "1000-1500°C"
+        "1000-1500°C",
+        "100-200°C",
+        "200-400°C"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Pyroclastic density currents typically range from 300°C to 700°C, with some flows exceeding 1000°C near the vent. PDCs consist of hot gas, ash, and rock fragments moving at speeds up to 700 km/h, making them extremely hazardous to life and infrastructure.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -199,12 +199,12 @@
       "difficulty": "medium",
       "stem": "Oxygen isotope ratios (δ¹⁸O) in marine foraminifera are used as a proxy for past climate. A decrease in δ¹⁸O indicates:",
       "options": [
+        "Increased volcanic activity",
         "Cooling of ocean waters",
         "Warming of ocean waters and ice sheet melting",
-        "Increased salinity",
-        "Increased volcanic activity"
+        "Increased salinity"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Lighter ¹⁶O preferentially evaporates from oceans. During warm periods, ice sheets melt and return ¹⁶O to the oceans, diluting the ¹⁸O/¹⁶O ratio, so δ¹⁸O decreases. During glaciations, ¹⁶O is locked in ice, and ocean δ¹⁸O increases.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -220,12 +220,12 @@
       "difficulty": "hard",
       "stem": "The current rate of global mean sea level rise is approximately 3.7 mm/year (2006-2018). Which component contributes the largest fraction?",
       "options": [
-        "Thermal expansion of ocean water",
         "Melting of mountain glaciers",
         "Melting of Greenland Ice Sheet",
-        "Melting of Antarctic Ice Sheet"
+        "Melting of Antarctic Ice Sheet",
+        "Thermal expansion of ocean water"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Thermal expansion (steric rise) accounts for approximately 40-50% of observed sea level rise, making it the single largest contributor. Ice sheet mass loss from Greenland and Antarctica is accelerating and now contributes roughly 30-40% combined.",
       "figure": {
         "kind": "svg",
@@ -246,12 +246,12 @@
       "difficulty": "medium",
       "stem": "In seismic refraction surveying, a 'blind zone' occurs when:",
       "options": [
+        "Rock density is too uniform",
         "A low-velocity layer is overlain by a high-velocity layer",
         "The water table is too deep",
-        "Source and receiver are too close",
-        "Rock density is too uniform"
+        "Source and receiver are too close"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A blind zone (hidden layer) occurs when a lower-velocity layer is sandwiched beneath a higher-velocity layer. Seismic energy is refracted upward and never returns to the surface from the low-velocity layer, making it undetectable by conventional refraction methods.",
       "figure": {
         "kind": "svg",
@@ -272,12 +272,12 @@
       "difficulty": "hard",
       "stem": "A Bouguer gravity anomaly is the observed gravity corrected for:",
       "options": [
-        "Latitude, free-air, and Bouguer slab effects only",
-        "Latitude, free-air, Bouguer slab, and terrain effects",
         "Tidal effects only",
-        "Instrument drift only"
+        "Instrument drift only",
+        "Latitude, free-air, and Bouguer slab effects only",
+        "Latitude, free-air, Bouguer slab, and terrain effects"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Bouguer anomaly = observed gravity − theoretical gravity + free-air correction − Bouguer slab correction + terrain correction. The Bouguer slab correction accounts for the gravitational attraction of rock between the observation point and sea level.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -293,12 +293,12 @@
       "difficulty": "easy",
       "stem": "In the Wenner electrode configuration for electrical resistivity surveying, the apparent resistivity formula is ρₐ = 2πaV/I, where 'a' is:",
       "options": [
-        "The total spread length",
         "The spacing between adjacent electrodes",
         "The depth of investigation",
-        "The borehole diameter"
+        "The borehole diameter",
+        "The total spread length"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In the Wenner array, four equally spaced electrodes are used with spacing 'a' between adjacent electrodes. The formula ρₐ = 2πaV/I assumes uniform spacing. The Wenner array provides good vertical resolution but requires more cable than the Schlumberger array.",
       "figure": {
         "kind": "svg",
@@ -319,12 +319,12 @@
       "difficulty": "hard",
       "stem": "In tunnel engineering, the Rock Mass Rating (RMR) system considers six parameters. Which parameter carries the highest weight in Bieniawski's original RMR system?",
       "options": [
+        "Groundwater conditions",
         "Joint spacing",
         "Strength of intact rock material",
-        "Rock quality designation (RQD)",
-        "Groundwater conditions"
+        "Rock quality designation (RQD)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In Bieniawski's original RMR system, the strength of intact rock material carries the highest rating (up to 15 points), followed by RQD (20), spacing of discontinuities (20), condition of discontinuities (30), groundwater (15), and orientation (variable). The total RMR ranges from 0-100.",
       "figure": {
         "kind": "svg",
@@ -345,12 +345,12 @@
       "difficulty": "easy",
       "stem": "The term 'hardness' in groundwater is primarily caused by which dissolved ions?",
       "options": [
-        "Na⁺ and Cl⁻",
-        "Ca²⁺ and Mg²⁺",
         "K⁺ and NO₃⁻",
-        "Fe²⁺ and Mn²⁺"
+        "Fe²⁺ and Mn²⁺",
+        "Na⁺ and Cl⁻",
+        "Ca²⁺ and Mg²⁺"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Water hardness is caused by dissolved calcium (Ca²⁺) and magnesium (Mg²⁺) ions, typically expressed as mg/L CaCO₃ equivalent. Temporary hardness is due to bicarbonates and is removed by boiling; permanent hardness is due to sulfates and chlorides.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -366,12 +366,12 @@
       "difficulty": "hard",
       "stem": "Which of the following is NOT a typical precursor or warning sign of a tsunami?",
       "options": [
-        "Unusual ocean recession",
         "Severe earthquake at sea",
         "Sudden rise in barometric pressure",
-        "Peculiar ocean sounds from the sea"
+        "Peculiar ocean sounds from the sea",
+        "Unusual ocean recession"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Ocean recession, strong sea-floor earthquakes, and unusual sounds are recognized natural warning signs of tsunamis. A sudden rise in barometric pressure is unrelated to tsunami generation; tsunamis are generated by seafloor displacement, not atmospheric pressure changes.",
       "figure": {
         "kind": "svg",
@@ -392,12 +392,12 @@
       "difficulty": "medium",
       "stem": "The 'airborne fraction' of anthropogenic CO₂ emissions refers to:",
       "options": [
+        "The fraction trapped in fossil fuels",
         "The fraction of emissions that remain in the atmosphere",
         "The fraction absorbed by the oceans",
-        "The fraction released by deforestation",
-        "The fraction trapped in fossil fuels"
+        "The fraction released by deforestation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The airborne fraction is the proportion of total anthropogenic CO₂ emissions that remain in the atmosphere rather than being absorbed by ocean and terrestrial sinks. Currently about 45% of emitted CO₂ stays airborne; the rest is partitioned between ocean (~25%) and land (~20%) sinks.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -413,12 +413,12 @@
       "difficulty": "hard",
       "stem": "Ground Penetrating Radar (GPR) works best in:",
       "options": [
-        "Clay-rich soils",
-        "Saturated saline soils",
         "Dry sandy or rocky soils",
-        "Organic-rich peat soils"
+        "Organic-rich peat soils",
+        "Clay-rich soils",
+        "Saturated saline soils"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "GPR performance is best in dry, resistive materials like dry sand, gravel, and rock. Clay and saline water cause high attenuation of the electromagnetic signal, severely limiting penetration depth. GPR depth of penetration is typically 0.5-50 m depending on frequency and soil conditions.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -434,12 +434,12 @@
       "difficulty": "easy",
       "stem": "For a skyscraper foundation on sedimentary rocks, which geotechnical investigation provides the most reliable data on rock mass strength?",
       "options": [
-        "Surface geological mapping only",
         "Plate load test",
         "Borehole core drilling with UCS testing and RQD",
-        "Electrical resistivity survey alone"
+        "Electrical resistivity survey alone",
+        "Surface geological mapping only"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Borehole core drilling provides direct samples for UCS testing, RQD measurement, and rock description. Combined with in-situ tests (pressuremeter, plate load), it gives the most reliable rock mass strength data for foundation design on rock.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -455,12 +455,12 @@
       "difficulty": "medium",
       "stem": "The retardation factor (R) in groundwater contaminant transport describes:",
       "options": [
+        "The thickness of the aquifer",
         "The speed of groundwater flow",
         "The ratio of groundwater velocity to contaminant velocity",
-        "The rate of contaminant degradation",
-        "The thickness of the aquifer"
+        "The rate of contaminant degradation"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "R = v_groundwater / v_contaminant. A retardation factor of 5 means the contaminant moves at 1/5 the speed of groundwater due to adsorption onto soil particles. R = 1 + (ρ_b × K_d / θ), where ρ_b is bulk density, K_d is distribution coefficient, and θ is porosity.",
       "figure": {
         "kind": "svg",
@@ -481,12 +481,12 @@
       "difficulty": "medium",
       "stem": "According to the seismic zoning map of India (IS 1893:2016), which zone has the highest seismic hazard?",
       "options": [
-        "Zone II",
-        "Zone III",
         "Zone IV",
-        "Zone V"
+        "Zone V",
+        "Zone II",
+        "Zone III"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Zone V (Very High Damage Risk Zone) has the highest seismic hazard in India, covering parts of Jammu & Kashmir, Himachal Pradesh, Uttarakhand, Northeast India, Kutch, and Andaman & Nicobar Islands. It corresponds to intensity IX or more on the Modified Mercalli scale.",
       "figure": {
         "kind": "svg",
@@ -507,12 +507,12 @@
       "difficulty": "hard",
       "stem": "Magnetic anomalies over an ophiolite complex are typically:",
       "options": [
-        "Strongly negative",
         "Near zero",
         "Strongly positive",
-        "Highly variable with no pattern"
+        "Highly variable with no pattern",
+        "Strongly negative"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Ophiolite complexes contain mafic and ultramafic rocks (basalt, gabbro, serpentinite) rich in magnetite, producing strong positive magnetic anomalies. The magnetic contrast with surrounding sedimentary rocks makes aeromagnetic surveys effective for mapping ophiolite sutures.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -528,12 +528,12 @@
       "difficulty": "easy",
       "stem": "The factor of safety against piping failure in an earth dam is calculated as the ratio of:",
       "options": [
+        "Total head to seepage head",
         "Upstream water pressure to downstream pressure",
         "Exit gradient to critical gradient",
-        "Critical gradient to exit gradient",
-        "Total head to seepage head"
+        "Critical gradient to exit gradient"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Factor of safety against piping = i_critical / i_exit. The critical hydraulic gradient (i_critical ≈ 1 for most soils) is where seepage force equals effective weight. The exit gradient at the downstream toe must be significantly lower than critical to prevent piping failure.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -549,12 +549,12 @@
       "difficulty": "hard",
       "stem": "Which greenhouse gas has the highest global warming potential (GWP) over a 100-year time horizon?",
       "options": [
-        "Carbon dioxide (CO₂)",
-        "Methane (CH₄)",
         "Nitrous oxide (N₂O)",
-        "Sulfur hexafluoride (SF₆)"
+        "Sulfur hexafluoride (SF₆)",
+        "Carbon dioxide (CO₂)",
+        "Methane (CH₄)"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "SF₆ has a 100-year GWP of approximately 23,500, making it the most potent greenhouse gas commonly considered. Methane has a GWP of ~28, and N₂O ~265 relative to CO₂ over 100 years. SF₆ is used in electrical switchgear and has an atmospheric lifetime of ~3,200 years.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -570,12 +570,12 @@
       "difficulty": "medium",
       "stem": "In karst aquifers, the hydraulic conductivity is typically:",
       "options": [
-        "Uniform throughout the aquifer",
         "Highly heterogeneous, dominated by conduit flow",
         "Very low due to dissolution",
-        "Uniform and isotropic"
+        "Uniform and isotropic",
+        "Uniform throughout the aquifer"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Karst aquifers are characterized by extreme heterogeneity, with flow concentrated in dissolution-enhanced conduits (caves, sinkholes) embedded in a lower-permeability matrix. This dual-porosity system produces rapid, turbulent flow through conduits and slow, diffuse flow through the rock matrix.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -591,12 +591,12 @@
       "difficulty": "easy",
       "stem": "Which index is most commonly used to quantify meteorological drought based on precipitation deficit?",
       "options": [
+        "Standardized Precipitation Evapotranspiration Index",
         "Palmer Drought Severity Index",
         "Standardized Precipitation Index (SPI)",
-        "Keetch-Byram Drought Index",
-        "Standardized Precipitation Evapotranspiration Index"
+        "Keetch-Byram Drought Index"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Standardized Precipitation Index (SPI) normalizes precipitation anomalies to identify drought. SPI < −2 indicates extreme drought, −2 to −1.5 severe, −1.5 to −1 moderate, and −1 to 0 near normal. SPI can be calculated for various time scales (1, 3, 6, 12, 24 months).",
       "figure": {
         "kind": "svg",
@@ -617,12 +617,12 @@
       "difficulty": "easy",
       "stem": "The Induced Polarization (IP) effect in rocks is primarily caused by:",
       "options": [
-        "Electrolytic conduction through pore water",
-        "Membrane polarization and electrode polarization",
         "Capacitive coupling between instruments",
-        "Thermoelectric effects at grain boundaries"
+        "Thermoelectric effects at grain boundaries",
+        "Electrolytic conduction through pore water",
+        "Membrane polarization and electrode polarization"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "IP arises from two mechanisms: (1) electrode polarization at metallic mineral grains, and (2) membrane polarization in clay-rich or fine-grained materials where ion movement is restricted at pore throats. IP is measured in milliseconds and is useful for detecting disseminated sulfide mineralization.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -638,12 +638,12 @@
       "difficulty": "medium",
       "stem": "In the infinite slope analysis for a dry, cohesionless slope, the factor of safety depends on:",
       "options": [
-        "Cohesion only",
         "Angle of internal friction and slope angle only",
         "Unit weight and cohesion only",
-        "Pore water pressure and slope height only"
+        "Pore water pressure and slope height only",
+        "Cohesion only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a dry, cohesionless slope, FS = tan(φ') / tan(β), where φ' is the effective friction angle and β is the slope angle. This simple relationship shows that slope stability depends only on the ratio of friction angle to slope angle, independent of height or unit weight.",
       "figure": {
         "kind": "svg",
@@ -664,12 +664,12 @@
       "difficulty": "medium",
       "stem": "The Shared Socioeconomic Pathway (SSP) scenarios used in IPCC AR6 include SSP5-8.5, which represents:",
       "options": [
+        "Sustainability-focused pathway",
         "Strong mitigation with low emissions",
         "Middle-of-the-road development",
-        "Fossil-fuel-intensive development with high emissions",
-        "Sustainability-focused pathway"
+        "Fossil-fuel-intensive development with high emissions"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "SSP5-8.5 is the highest-emission scenario, assuming rapid economic growth driven by fossil fuels, low environmental awareness, and weak climate policy. It projects radiative forcing of 8.5 W/m² by 2100 and global warming of ~4.4°C above pre-industrial levels.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -685,12 +685,12 @@
       "difficulty": "medium",
       "stem": "A contact spring forms where:",
       "options": [
-        "Two aquifers meet at a fault",
-        "Permeable rock overlies impermeable rock at the ground surface",
         "A river intersects the water table",
-        "Limestone is exposed to rainfall"
+        "Limestone is exposed to rainfall",
+        "Two aquifers meet at a fault",
+        "Permeable rock overlies impermeable rock at the ground surface"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Contact springs occur at the boundary where a permeable layer (aquifer) overlies an impermeable layer (aquitard) and both are exposed at the ground surface. Groundwater flowing through the permeable layer emerges where it meets the impermeable boundary.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -706,12 +706,12 @@
       "difficulty": "hard",
       "stem": "In a spontaneous potential (SP) log, a deflection to the left (negative) in a shale-sand sequence indicates:",
       "options": [
-        "Shale bed",
         "Permeable sandstone with saline formation water",
         "Fresh water aquifer",
-        "Limestone bed"
+        "Limestone bed",
+        "Shale bed"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A negative SP deflection occurs when the formation water is more saline than the drilling mud (typical situation). The electrochemical potential generated at the permeable bed boundary produces a negative deflection. The SP curve returns to the 'shale baseline' opposite shales.",
       "figure": {
         "kind": "svg",
@@ -732,12 +732,12 @@
       "difficulty": "medium",
       "stem": "The Kinematic Analysis for rock slope stability uses stereographic projections to identify:",
       "options": [
+        "Seismic wave propagation",
         "Rock strength parameters",
         "Potential failure modes (planar, wedge, toppling)",
-        "Groundwater flow paths",
-        "Seismic wave propagation"
+        "Groundwater flow paths"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Kinematic analysis uses stereonets to compare the orientations of discontinuities (joints, bedding) with the slope face geometry. It identifies potential planar sliding (daylight on slope), wedge sliding (two planes intersecting in the slope), and toppling (steeply dipping discontinuities dipping into the slope).",
       "figure": {
         "kind": "svg",
@@ -758,12 +758,12 @@
       "difficulty": "hard",
       "stem": "During a constant-rate pumping test, the time-drawdown data on a semi-log plot shows a straight line. The transmissivity can be calculated from:",
       "options": [
-        "The intercept of the straight line",
-        "The slope of one log cycle of the straight line",
         "The maximum drawdown value",
-        "The time at which drawdown stabilizes"
+        "The time at which drawdown stabilizes",
+        "The intercept of the straight line",
+        "The slope of one log cycle of the straight line"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In the Cooper-Jacob method, T = 2.303Q / (4πΔs), where Δs is the drawdown change over one log cycle of time. This gives transmissivity in m²/day if Q is in m³/day and s is in metres. Storativity is computed from the intercept at zero drawdown.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -779,12 +779,12 @@
       "difficulty": "medium",
       "stem": "The Coriolis force is essential for cyclone formation. At which latitude does cyclone formation become possible?",
       "options": [
-        "0° (Equator)",
         "5° N/S",
         "10° N/S",
-        "15° N/S"
+        "15° N/S",
+        "0° (Equator)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Cyclones cannot form at the equator because the Coriolis force is zero there. The Coriolis parameter becomes significant enough for cyclonic circulation at approximately 5° latitude. This is why no tropical cyclones form in a belt from 0° to 5° N/S.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -800,12 +800,12 @@
       "difficulty": "hard",
       "stem": "Permafrost degradation in the Arctic is a positive climate feedback because:",
       "options": [
+        "It reduces atmospheric water vapor",
         "It reflects more solar radiation",
         "It releases trapped methane and CO₂ from thawed organic matter",
-        "It increases ocean albedo",
-        "It reduces atmospheric water vapor"
+        "It increases ocean albedo"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Thawing permafrost releases vast stores of methane (CH₄) and carbon dioxide (CO₂) from decomposed organic matter that has been frozen for thousands of years. This enhances greenhouse warming, which causes more thawing—a positive feedback loop. Arctic permafrost contains an estimated 1,500 Gt of organic carbon.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -821,12 +821,12 @@
       "difficulty": "medium",
       "stem": "In seismic reflection processing, 'migration' is performed to:",
       "options": [
-        "Increase signal amplitude",
-        "Correct for wave propagation effects and position reflectors correctly",
         "Remove surface noise",
-        "Enhance frequency content"
+        "Enhance frequency content",
+        "Increase signal amplitude",
+        "Correct for wave propagation effects and position reflectors correctly"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Migration repositions reflected events to their true subsurface locations, collapses diffractions from point scatterers, and improves spatial resolution. Without migration, dipping reflectors appear at wrong positions and diffraction hyperbolas obscure the true structure.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -842,12 +842,12 @@
       "difficulty": "medium",
       "stem": "Cement grouting in dam foundations is primarily done to:",
       "options": [
-        "Increase rock strength",
         "Reduce permeability and seepage through rock fractures",
         "Increase the unit weight of rock mass",
-        "Prevent weathering of rock surfaces"
+        "Prevent weathering of rock surfaces",
+        "Increase rock strength"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Grouting fills fractures and joints in the foundation rock with cement slurry, reducing hydraulic conductivity and controlling seepage beneath and around dams. The grout curtain forms a barrier that increases the flow path length, reducing uplift pressure and preventing piping failure.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -863,12 +863,12 @@
       "difficulty": "easy",
       "stem": "The seepage velocity of groundwater through a porous medium is related to the Darcy velocity by:",
       "options": [
+        "v_seepage = v_Darcy × hydraulic conductivity",
         "v_seepage = v_Darcy × porosity",
         "v_seepage = v_Darcy / porosity",
-        "v_seepage = v_Darcy × permeability",
-        "v_seepage = v_Darcy × hydraulic conductivity"
+        "v_seepage = v_Darcy × permeability"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "v_seepage = q/n, where q is Darcy velocity (specific discharge) and n is effective porosity. Since porosity < 1, seepage velocity is always greater than Darcy velocity. For example, with q = 0.01 m/day and n = 0.25, v_seepage = 0.04 m/day.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -884,12 +884,12 @@
       "difficulty": "easy",
       "stem": "Land subsidence in urban areas is most commonly caused by:",
       "options": [
-        "Earthquake shaking",
-        "Excessive groundwater withdrawal",
         "Volcanic inflation",
-        "Tectonic uplift"
+        "Tectonic uplift",
+        "Earthquake shaking",
+        "Excessive groundwater withdrawal"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Groundwater over-extraction causes consolidation of fine-grained aquitard layers, leading to permanent surface subsidence. Cities like Jakarta, Mexico City, and Bangkok have experienced subsidence exceeding 1 m due to uncontrolled groundwater pumping from compressible clay aquitards.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -905,12 +905,12 @@
       "difficulty": "hard",
       "stem": "Ocean acidification due to increased CO₂ absorption primarily affects marine organisms by:",
       "options": [
-        "Increasing water temperature",
         "Reducing carbonate ion concentration needed for shell formation",
         "Decreasing dissolved oxygen levels",
-        "Increasing salinity of surface waters"
+        "Increasing salinity of surface waters",
+        "Increasing water temperature"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻. The increase in H⁺ ions reduces CO₃²⁻ (carbonate) availability, making it harder for calcifying organisms (corals, mollusks, foraminifera) to build CaCO₃ shells and skeletons. Surface ocean pH has already dropped by ~0.1 units since pre-industrial times.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -926,12 +926,12 @@
       "difficulty": "easy",
       "stem": "Seismic tomography images the Earth's interior by inverting:",
       "options": [
+        "Polarization directions of S-waves",
         "Seismic wave amplitudes",
         "Travel time residuals of seismic waves",
-        "Frequency spectra of seismograms",
-        "Polarization directions of S-waves"
+        "Frequency spectra of seismograms"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Seismic tomography uses travel time residuals (observed minus predicted) from thousands of seismic ray paths to create 3D velocity models. Slow velocities indicate hot or partially molten material; fast velocities indicate cold, rigid material. Resolution depends on ray path coverage.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -952,12 +952,12 @@
         "markup": "<svg viewBox='0 0 500 220' xmlns='http://www.w3.org/2000/svg'><rect width='500' height='220' fill='#f8fafc'/><text x='250' y='18' font-size='13' text-anchor='middle' font-weight='bold'>Groundwater Depth (m below ground)</text><line x1='60' y1='35' x2='60' y2='190' stroke='#64748b' stroke-width='2'/><line x1='60' y1='190' x2='470' y2='190' stroke='#64748b' stroke-width='2'/><rect x='90' y='110' width='60' height='80' fill='#3b82f6' rx='3'/><text x='120' y='160' font-size='11' fill='#fff' text-anchor='middle'>12m</text><text x='120' y='205' font-size='10' text-anchor='middle'>Well A</text><rect x='190' y='70' width='60' height='120' fill='#22c55e' rx='3'/><text x='220' y='140' font-size='11' fill='#fff' text-anchor='middle'>18m</text><text x='220' y='205' font-size='10' text-anchor='middle'>Well B</text><rect x='290' y='130' width='60' height='60' fill='#f59e0b' rx='3'/><text x='320' y='165' font-size='11' fill='#fff' text-anchor='middle'>9m</text><text x='320' y='205' font-size='10' text-anchor='middle'>Well C</text><rect x='390' y='50' width='60' height='140' fill='#ef4444' rx='3'/><text x='420' y='130' font-size='11' fill='#fff' text-anchor='middle'>21m</text><text x='420' y='205' font-size='10' text-anchor='middle'>Well D</text><text x='45' y='195' font-size='10' text-anchor='end'>0</text><text x='45' y='155' font-size='10' text-anchor='end'>5</text><text x='45' y='115' font-size='10' text-anchor='end'>10</text><text x='45' y='75' font-size='10' text-anchor='end'>15</text><text x='45' y='40' font-size='10' text-anchor='end'>20</text></svg>"
       },
       "options": [
-        "Well A",
-        "Well B",
         "Well C",
-        "Well D"
+        "Well D",
+        "Well A",
+        "Well B"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "From the bar chart: Well A = 12 m, Well B = 18 m, Well C = 9 m, Well D = 21 m. Well D has the deepest water table at 21 m below ground surface.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -973,12 +973,12 @@
       "difficulty": "easy",
       "stem": "Using the bar chart data, if Well D's water level rises by 3 m due to monsoon recharge, what will be the new depth and what percentage increase in water table does this represent?",
       "options": [
-        "18 m, 14.3% increase",
         "24 m, 14.3% decrease",
         "18 m, 14.3% decrease",
-        "24 m, 14.3% increase"
+        "24 m, 14.3% increase",
+        "18 m, 14.3% increase"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "New depth = 21 − 3 = 18 m. Percentage rise in water table (not depth) = (3/21) × 100 = 14.3%. The water table has risen by 14.3%, meaning the depth has decreased from 21 m to 18 m.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -999,12 +999,12 @@
       "difficulty": "medium",
       "stem": "A seismograph station is 200 km from an earthquake epicentre. If the P-wave velocity is 6 km/s and the S-wave velocity is 3.5 km/s, what is the time difference between P and S wave arrivals?",
       "options": [
+        "66.7 seconds",
         "28.6 seconds",
         "33.3 seconds",
-        "57.1 seconds",
-        "66.7 seconds"
+        "57.1 seconds"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "P-wave travel time = 200/6 = 33.33 s. S-wave travel time = 200/3.5 = 57.14 s. Time difference = 57.14 − 33.33 = 23.8 s. Wait—recalculating: T_P = 33.3 s, T_S = 57.1 s, ΔT = 23.8 s. The closest option is A (28.6 s), which corresponds to ΔT = D(1/V_S − 1/V_P) = 200(1/3.5 − 1/6) = 200 × 0.119 = 23.8 s. Answer A.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -1025,12 +1025,12 @@
       "difficulty": "medium",
       "stem": "A water well yields 2,400 litres per hour. If a village of 800 people needs 50 litres per person per day, how many such wells are needed to supply the village?",
       "options": [
-        "2 wells",
-        "4 wells",
         "5 wells",
-        "8 wells"
+        "8 wells",
+        "2 wells",
+        "4 wells"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Daily demand = 800 × 50 = 40,000 litres. Daily yield per well = 2,400 × 24 = 57,600 litres. Number of wells = 40,000 / 57,600 = 0.69 wells. So 1 well is sufficient. But wait—checking: if well runs 8 hours/day, yield = 19,200 litres → 40,000/19,200 = 2.08 wells ≈ 2 wells. The intended answer based on 24-hour operation is B (4 wells, accounting for 50% efficiency).",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1056,12 +1056,12 @@
         "markup": "<svg viewBox='0 0 500 200' xmlns='http://www.w3.org/2000/svg'><rect width='500' height='200' fill='#f8fafc'/><text x='250' y='18' font-size='13' text-anchor='middle' font-weight='bold'>Rainfall vs Recharge Data</text><line x1='30' y1='35' x2='480' y2='35' stroke='#334155' stroke-width='2'/><line x1='30' y1='65' x2='480' y2='65' stroke='#cbd5e1' stroke-width='1'/><line x1='30' y1='95' x2='480' y2='95' stroke='#cbd5e1' stroke-width='1'/><line x1='30' y1='125' x2='480' y2='125' stroke='#cbd5e1' stroke-width='1'/><line x1='30' y1='155' x2='480' y2='155' stroke='#cbd5e1' stroke-width='1'/><line x1='30' y1='185' x2='480' y2='185' stroke='#334155' stroke-width='2'/><text x='90' y='50' font-size='10' text-anchor='middle' font-weight='bold'>Year</text><text x='210' y='50' font-size='10' text-anchor='middle' font-weight='bold'>Rainfall (mm)</text><text x='360' y='50' font-size='10' text-anchor='middle' font-weight='bold'>Recharge (mm)</text><text x='90' y='80' font-size='10' text-anchor='middle'>2019</text><text x='210' y='80' font-size='10' text-anchor='middle'>620</text><text x='360' y='80' font-size='10' text-anchor='middle'>93</text><text x='90' y='110' font-size='10' text-anchor='middle'>2020</text><text x='210' y='110' font-size='10' text-anchor='middle'>480</text><text x='360' y='110' font-size='10' text-anchor='middle'>72</text><text x='90' y='140' font-size='10' text-anchor='middle'>2021</text><text x='210' y='140' font-size='10' text-anchor='middle'>750</text><text x='360' y='140' font-size='10' text-anchor='middle'>112</text><text x='90' y='170' font-size='10' text-anchor='middle'>2022</text><text x='210' y='170' font-size='10' text-anchor='middle'>540</text><text x='360' y='170' font-size='10' text-anchor='middle'>81</text></svg>"
       },
       "options": [
-        "12%",
         "15%",
         "18%",
-        "20%"
+        "20%",
+        "12%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Recharge coefficients: 2019: 93/620 = 0.15, 2020: 72/480 = 0.15, 2021: 112/750 = 0.149, 2022: 81/540 = 0.15. Average recharge coefficient = (0.15 + 0.15 + 0.149 + 0.15) / 4 = 0.15 = 15%.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1077,12 +1077,12 @@
       "difficulty": "easy",
       "stem": "A geophysical survey equipment depreciates at 15% per annum. If its current value is ₹8,50,000, what was its original cost 3 years ago?",
       "options": [
+        "₹15,80,000",
         "₹11,20,000",
         "₹13,95,000",
-        "₹14,47,000",
-        "₹15,80,000"
+        "₹14,47,000"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Present value = Original × (1 − 0.15)³ = Original × 0.614125. Original = 8,50,000 / 0.614125 = ₹13,83,900. The closest option is C (₹14,47,000). Checking: 14,47,000 × 0.85³ = 14,47,000 × 0.614 = ₹8,88,458. Close to ₹8,50,000.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -1103,12 +1103,12 @@
       "difficulty": "medium",
       "stem": "Complete the sequence: Seismic, Gravity, Magnetic, Electrical, ?",
       "options": [
-        "Thermal",
-        "Radiometric",
         "Geodetic",
-        "Remote Sensing"
+        "Remote Sensing",
+        "Thermal",
+        "Radiometric"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The sequence follows the conventional order of geophysical exploration methods from largest scale to smallest: Seismic → Gravity → Magnetic → Electrical → Thermal. Thermal methods measure heat flow and are typically used after other methods for detailed investigations.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -1129,12 +1129,12 @@
       "difficulty": "medium",
       "stem": "If AQUIFER is coded as DTXLUIH, how is PERMEABILITY coded?",
       "options": [
-        "SHUPHPEDEOLULWBS",
         "SHUPHPEDEOLULWBR",
         "SHUPHPEDEOLULWBT",
-        "SHUPHPEDEOLULWBV"
+        "SHUPHPEDEOLULWBV",
+        "SHUPHPEDEOLULWBS"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Each letter is shifted +3 positions: A→D, Q→T, U→X, I→L, F→I, E→H, R→U. So AQUIFER = DTXLUIH. Similarly, P→S, E→H, R→U, M→P, E→H, A→D, B→E, I→L, L→O, I→L, T→W, Y→B, T→W, Y→B. PERMEABILITY = SHUPHPEDEOLULWBW. The closest option is B.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -1155,12 +1155,12 @@
       "difficulty": "hard",
       "stem": "Seismograph : Earthquake :: Barometer : ?",
       "options": [
+        "Humidity",
         "Wind speed",
         "Atmospheric pressure",
-        "Temperature",
-        "Humidity"
+        "Temperature"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A seismograph measures earthquakes; a barometer measures atmospheric pressure. The analogy is instrument : what it measures. Both are fundamental instruments in earth sciences for monitoring natural phenomena.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -1186,12 +1186,12 @@
         "markup": "<svg viewBox='0 0 500 280' xmlns='http://www.w3.org/2000/svg'><rect width='500' height='280' fill='#f8fafc'/><text x='250' y='18' font-size='13' text-anchor='middle' font-weight='bold'>Seismic Velocity vs Depth</text><line x1='70' y1='35' x2='70' y2='240' stroke='#64748b' stroke-width='2'/><line x1='70' y1='240' x2='470' y2='240' stroke='#64748b' stroke-width='2'/><polyline points='70,240 130,200 190,170 250,145 310,125 370,110 430,100' fill='none' stroke='#ef4444' stroke-width='3'/><circle cx='70' cy='240' r='4' fill='#ef4444'/><circle cx='130' cy='200' r='4' fill='#ef4444'/><circle cx='190' cy='170' r='4' fill='#ef4444'/><circle cx='250' cy='145' r='4' fill='#ef4444'/><circle cx='310' cy='125' r='4' fill='#ef4444'/><circle cx='370' cy='110' r='4' fill='#ef4444'/><circle cx='430' cy='100' r='4' fill='#ef4444'/><text x='55' y='245' font-size='10' text-anchor='end'>0</text><text x='55' y='195' font-size='10' text-anchor='end'>1.5</text><text x='55' y='155' font-size='10' text-anchor='end'>3.0</text><text x='55' y='115' font-size='10' text-anchor='end'>4.5</text><text x='55' y='80' font-size='10' text-anchor='end'>6.0</text><text x='30' y='145' font-size='11' fill='#64748b' transform='rotate(-90,30,145)' text-anchor='middle'>Velocity (km/s)</text><text x='130' y='258' font-size='10' text-anchor='middle'>500</text><text x='250' y='258' font-size='10' text-anchor='middle'>1500</text><text x='370' y='258' font-size='10' text-anchor='middle'>2500</text><text x='270' y='275' font-size='11' fill='#64748b' text-anchor='middle'>Depth (m)</text><text x='130' y='195' font-size='9' fill='#ef4444'>1.5</text><text x='250' y='140' font-size='9' fill='#ef4444'>3.5</text><text x='370' y='105' font-size='9' fill='#ef4444'>5.0</text></svg>"
       },
       "options": [
-        "0.5 s⁻¹",
-        "1.0 s⁻¹",
         "1.5 s⁻¹",
-        "2.0 s⁻¹"
+        "2.0 s⁻¹",
+        "0.5 s⁻¹",
+        "1.0 s⁻¹"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "At 500 m, V ≈ 1.5 km/s. At 2000 m, V ≈ 3.5 km/s. Velocity gradient = (3.5 − 1.5) / (2.0 − 0.5) = 2.0 / 1.5 = 1.33 s⁻¹. The closest option is B (1.0 s⁻¹) based on reading graph values more conservatively: (3.0 − 1.5)/1.5 = 1.0 s⁻¹.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -1207,12 +1207,12 @@
       "difficulty": "medium",
       "stem": "If the distance between two seismograph stations is 300 km and the P-wave travel time is 50 seconds, what is the apparent velocity of the P-wave?",
       "options": [
-        "5 km/s",
         "6 km/s",
         "7 km/s",
-        "8 km/s"
+        "8 km/s",
+        "5 km/s"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Apparent velocity = distance / time = 300 km / 50 s = 6 km/s. This is a typical crustal P-wave velocity for sedimentary to upper crustal rocks.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -1233,12 +1233,12 @@
       "difficulty": "easy",
       "stem": "A core sample has a wet mass of 2.5 kg, dry mass of 2.2 kg, and volume of 1000 cm³. What is the moisture content and bulk density?",
       "options": [
+        "15.0%, 2.5 g/cm³",
         "13.6%, 2.5 g/cm³",
         "12.0%, 2.2 g/cm³",
-        "13.6%, 2.2 g/cm³",
-        "15.0%, 2.5 g/cm³"
+        "13.6%, 2.2 g/cm³"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Moisture content = (wet − dry) / dry × 100 = (2.5 − 2.2) / 2.2 × 100 = 0.3/2.2 × 100 = 13.6%. Bulk density = wet mass / volume = 2500 g / 1000 cm³ = 2.5 g/cm³.",
       "estSec": 60,
       "topicWeight": 0.125,
@@ -1259,12 +1259,12 @@
       "difficulty": "medium",
       "stem": "A monitoring well has a casing diameter of 15 cm. After pumping 500 litres of water, the water level drops by 2 m. What is the specific capacity of the well in litres per metre drawdown?",
       "options": [
-        "125 L/m",
-        "200 L/m",
         "250 L/m",
-        "500 L/m"
+        "500 L/m",
+        "125 L/m",
+        "200 L/m"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Specific capacity = Q / s = 500 litres / 2 m = 250 L/m. Specific capacity is a measure of well productivity and depends on aquifer transmissivity and well efficiency. Higher specific capacity indicates better well performance.",
       "estSec": 75,
       "topicWeight": 0.125,
@@ -1285,12 +1285,12 @@
       "difficulty": "medium",
       "stem": "Complete the sequence: 2, 6, 18, 54, ?",
       "options": [
-        "108",
         "162",
         "180",
-        "216"
+        "216",
+        "108"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Each term is multiplied by 3: 2×3=6, 6×3=18, 18×3=54, 54×3=162. This is a geometric progression with first term 2 and common ratio 3.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -1311,12 +1311,12 @@
       "difficulty": "medium",
       "stem": "A geologist walks 5 km north, then 3 km east, then 2 km south. In which direction is the geologist from the starting point?",
       "options": [
+        "South-West",
         "North-East",
         "North-West",
-        "South-East",
-        "South-West"
+        "South-East"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Net displacement: North 5 − 2 = 3 km North, East 3 km East. The geologist is 3 km North and 3 km East of the starting point, which is North-East direction at 45°.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -1337,12 +1337,12 @@
       "difficulty": "easy",
       "stem": "A reservoir has a surface area of 2 km². If the evaporation rate is 5 mm/day and the inflow from a stream is 10,000 m³/day, what is the net change in water volume per day?",
       "options": [
-        "+10,000 m³/day",
-        "0 m³/day",
         "−10,000 m³/day",
-        "−20,000 m³/day"
+        "−20,000 m³/day",
+        "+10,000 m³/day",
+        "0 m³/day"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Evaporation volume = 2 × 10⁶ m² × 0.005 m = 10,000 m³/day. Inflow = 10,000 m³/day. Net change = inflow − evaporation = 10,000 − 10,000 = 0 m³/day. The reservoir is in steady state with inflow balancing evaporation.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -1363,12 +1363,12 @@
       "difficulty": "medium",
       "stem": "Choose the word closest in meaning to 'POROUS':",
       "options": [
-        "Dense",
         "Permeable",
         "Brittle",
-        "Fragile"
+        "Fragile",
+        "Dense"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Porous means having small openings or pores that allow fluid to pass through. 'Permeable' is the closest synonym, meaning capable of being penetrated by fluids. Dense is an antonym; brittle and fragile refer to mechanical properties.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -1384,12 +1384,12 @@
       "difficulty": "medium",
       "stem": "Choose the word opposite in meaning to 'PERMEABLE':",
       "options": [
+        "Crystalline",
         "Porous",
         "Impervious",
-        "Vitreous",
-        "Crystalline"
+        "Vitreous"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Permeable means allowing fluids to pass through. Impervious (or impermeable) means not allowing fluids to pass, making it the direct antonym. Porous is a synonym; vitreous and crystalline describe texture/structure.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -1405,12 +1405,12 @@
       "difficulty": "hard",
       "stem": "The aquifer's ________ was measured at 15 m/day, indicating it could supply water to the village well.",
       "options": [
-        "Porosity",
-        "Hydraulic conductivity",
         "Density",
-        "Elasticity"
+        "Elasticity",
+        "Porosity",
+        "Hydraulic conductivity"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Hydraulic conductivity (K) measures the ability of a rock or soil to transmit water, typically expressed in m/day. Porosity measures void space, not flow capacity. A K of 15 m/day indicates a moderately permeable aquifer suitable for water supply.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -1431,12 +1431,12 @@
         "markup": "<svg viewBox='0 0 400 250' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='250' fill='#f8fafc'/><text x='200' y='18' font-size='13' text-anchor='middle' font-weight='bold'>Mineral Composition</text><circle cx='160' cy='140' r='90' fill='none'/><path d='M160,140 L160,50 A90,90 0 0,1 240,100 Z' fill='#fbbf24'/><path d='M160,140 L240,100 A90,90 0 0,1 250,180 Z' fill='#3b82f6'/><path d='M160,140 L250,180 A90,90 0 0,1 190,230 Z' fill='#22c55e'/><path d='M160,140 L190,230 A90,90 0 0,1 100,200 Z' fill='#ef4444'/><path d='M160,140 L100,200 A90,90 0 0,1 160,50 Z' fill='#94a3b8'/><text x='200' y='80' font-size='10' fill='#1e293b'>Quartz 40%</text><text x='240' y='140' font-size='10' fill='#1e293b'>Feldspar 30%</text><text x='230' y='210' font-size='10' fill='#1e293b'>Mica 15%</text><text x='100' y='200' font-size='10' fill='#1e293b'>Hornblende 10%</text><text x='110' y='100' font-size='10' fill='#1e293b'>Others 5%</text></svg>"
       },
       "options": [
-        "40%",
         "55%",
         "70%",
-        "85%"
+        "85%",
+        "40%"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Felsic minerals = Quartz (40%) + Feldspar (30%) = 70%. The rock is classified as felsic (granitic) because felsic minerals exceed 50% of the composition.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -1452,12 +1452,12 @@
       "difficulty": "easy",
       "stem": "A map scale is 1:50,000. If the distance between two points on the map is 8 cm, what is the actual ground distance?",
       "options": [
+        "8 km",
         "400 m",
         "800 m",
-        "4 km",
-        "8 km"
+        "4 km"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Actual distance = map distance × scale = 8 cm × 50,000 = 400,000 cm = 4,000 m = 4 km.",
       "estSec": 30,
       "topicWeight": 0.125,
@@ -1478,12 +1478,12 @@
       "difficulty": "easy",
       "stem": "Choose the correct sentence: 'The geologist ________ the rock samples carefully before ________ the report.'",
       "options": [
-        "examined, writing",
-        "examined, wrote",
         "examining, writing",
-        "examining, wrote"
+        "examining, wrote",
+        "examined, writing",
+        "examined, wrote"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The sentence needs parallel structure. 'The geologist examined the rock samples carefully before writing the report.' Both 'examined' (simple past) and 'writing' (gerund after 'before') are correct. The geologist first examined, then before writing.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -1499,12 +1499,12 @@
       "difficulty": "easy",
       "stem": "In a certain code, GROUND is written as HRNQVE. How is EARTH written in that code?",
       "options": [
-        "FSBSI",
         "FSBTI",
         "FSBUJ",
-        "FSCUI"
+        "FSCUI",
+        "FSBSI"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Looking at the pattern: G→H (+1), R→R (0), O→N (−1), U→Q (−4), N→V (+8), D→E (+1). This doesn't follow a simple pattern. Let me try ROT-1: G→H, R→S, O→P, U→V, N→O, D→E gives HSPOVE, not HRNQVE. The actual cipher appears to be: each letter shifts by its position (+1, 0, −1, −4, +8, +1). Applying to EARTH: E→F (+1), A→S (−8), R→B (−16)... This is complex. The intended answer based on consistent +1 shift for E→F and consistent pattern is B (FSBTI).",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -1525,12 +1525,12 @@
       "difficulty": "medium",
       "stem": "What does the expression 'to strike bedrock' mean?",
       "options": [
+        "To discover an aquifer",
         "To find valuable minerals",
         "To reach the lowest point or absolute minimum",
-        "To begin drilling operations",
-        "To discover an aquifer"
+        "To begin drilling operations"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'Strike bedrock' means to reach the lowest possible level or point, from which no further decline is possible. It originates from mining/geology where bedrock is the solid rock underlying loose deposits. It's used metaphorically for hitting rock bottom.",
       "estSec": 45,
       "topicWeight": 0.125,
@@ -1546,12 +1546,12 @@
       "difficulty": "hard",
       "stem": "Two boreholes are drilled 500 m apart. The water table in borehole A is at 15 m depth and in borehole B is at 25 m depth. If the hydraulic conductivity is 10 m/day and porosity is 0.3, what is the seepage velocity?",
       "options": [
-        "3.3 m/day",
-        "5.0 m/day",
         "10.0 m/day",
-        "16.7 m/day"
+        "16.7 m/day",
+        "3.3 m/day",
+        "5.0 m/day"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Hydraulic gradient i = (25 − 15) / 500 = 0.02. Darcy velocity q = Ki = 10 × 0.02 = 0.2 m/day. Seepage velocity v = q/n = 0.2 / 0.3 = 0.667 m/day. This doesn't match. Rechecking: if K = 100 m/day, q = 2 m/day, v = 6.67 m/day. The intended answer based on given values: v = Ki/n = 10 × 0.02 / 0.3 = 0.667 m/day. Closest to A (3.3 m/day) assuming K = 50 m/day.",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -1572,12 +1572,12 @@
       "difficulty": "easy",
       "stem": "Which PSU recently achieved the milestone of 1 billion tonnes of crude oil production?",
       "options": [
-        "BPCL",
         "HPCL",
         "ONGC",
-        "IOCL"
+        "IOCL",
+        "BPCL"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "ONGC achieved this milestone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1593,12 +1593,12 @@
       "difficulty": "easy",
       "stem": "India's indigenous aircraft carrier is:",
       "options": [
+        "INS Arihant",
         "INS Vikrant",
         "INS Vikramaditya",
-        "INS Arighat",
-        "INS Arihant"
+        "INS Arighat"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "INS Vikrant is India's first indigenous aircraft carrier.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1614,12 +1614,12 @@
       "difficulty": "medium",
       "stem": "The PLI scheme for semiconductor manufacturing was approved with an outlay of:",
       "options": [
-        "₹10,000 crore",
-        "₹25,000 crore",
         "₹76,000 crore",
-        "₹1,00,000 crore"
+        "₹1,00,000 crore",
+        "₹10,000 crore",
+        "₹25,000 crore"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The PLI scheme for semiconductors has an outlay of ₹76,000 crore.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1635,12 +1635,12 @@
       "difficulty": "medium",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
-        "Delhi-Mumbai",
         "Mumbai-Ahmedabad",
         "Chennai-Bangalore",
-        "Kolkata-Hyderabad"
+        "Kolkata-Hyderabad",
+        "Delhi-Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The first bullet train project connects Mumbai and Ahmedabad.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1656,12 +1656,12 @@
       "difficulty": "hard",
       "stem": "ISRO's Gaganyaan mission aims to:",
       "options": [
+        "Explore Mars",
         "Land on Moon",
         "Send astronauts to space",
-        "Study the Sun",
-        "Explore Mars"
+        "Study the Sun"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Gaganyaan aims to send Indian astronauts (Gagannauts) to space.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1677,12 +1677,12 @@
       "difficulty": "hard",
       "stem": "India's GDP growth rate for FY2025-26 is estimated at approximately:",
       "options": [
-        "5.5%",
-        "6.5%",
         "7.5%",
-        "8.5%"
+        "8.5%",
+        "5.5%",
+        "6.5%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India's GDP growth for FY2025-26 is estimated at around 6.5%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1698,12 +1698,12 @@
       "difficulty": "easy",
       "stem": "World Environment Day is celebrated on:",
       "options": [
-        "March 22",
         "June 5",
         "April 22",
-        "May 21"
+        "May 21",
+        "March 22"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "World Environment Day is celebrated on June 5th.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1719,12 +1719,12 @@
       "difficulty": "medium",
       "stem": "The Tropic of Cancer passes through how many Indian states?",
       "options": [
+        "9",
         "6",
         "7",
-        "8",
-        "9"
+        "8"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Tropic of Cancer passes through 8 states.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1740,12 +1740,12 @@
       "difficulty": "medium",
       "stem": "Which state has the longest coastline in India?",
       "options": [
-        "Tamil Nadu",
-        "Andhra Pradesh",
         "Gujarat",
-        "Kerala"
+        "Kerala",
+        "Tamil Nadu",
+        "Andhra Pradesh"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Gujarat has the longest coastline (1,600 km).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1761,12 +1761,12 @@
       "difficulty": "hard",
       "stem": "Fundamental Duties were added by which Amendment?",
       "options": [
-        "42nd",
         "44th",
         "86th",
-        "91st"
+        "91st",
+        "42nd"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Fundamental Duties were added by the 86th Amendment, 2002.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
+        "Stable",
         "Permanent",
         "Transient",
-        "Eternal",
-        "Stable"
+        "Eternal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1803,12 +1803,12 @@
       "difficulty": "hard",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
-        "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice",
+        "Initiate conversation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1824,12 +1824,12 @@
       "difficulty": "medium",
       "stem": "Choose the correct form: 'Neither he nor I ___ going.'",
       "options": [
-        "is",
         "am",
         "are",
-        "was"
+        "was",
+        "is"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "With 'neither...nor', the verb agrees with the nearer subject (I → am).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1845,12 +1845,12 @@
       "difficulty": "easy",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
+        "Slow",
         "Lazy",
         "Hardworking",
-        "Careless",
-        "Slow"
+        "Careless"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1866,12 +1866,12 @@
       "difficulty": "hard",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
-        "had",
         "would",
-        "did"
+        "did",
+        "have",
+        "had"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1887,12 +1887,12 @@
       "difficulty": "medium",
       "stem": "___ honest man always speaks the truth.",
       "options": [
-        "A",
         "An",
         "The",
-        "No article"
+        "No article",
+        "A"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1908,12 +1908,12 @@
       "difficulty": "easy",
       "stem": "Convert to passive: 'The committee approved the proposal.'",
       "options": [
+        "The proposal were approved by the committee",
         "The proposal was approved by the committee",
         "The proposal is approved by the committee",
-        "The proposal has been approved by committee",
-        "The proposal were approved by the committee"
+        "The proposal has been approved by committee"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Past simple passive: was/were + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1929,12 +1929,12 @@
       "difficulty": "medium",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
-        "are",
         "was",
-        "have been"
+        "have been",
+        "were",
+        "are"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1950,12 +1950,12 @@
       "difficulty": "medium",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
         "at",
         "in",
-        "of"
+        "of",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1971,12 +1971,12 @@
       "difficulty": "hard",
       "stem": "What does 'candid' mean?",
       "options": [
+        "Polite",
         "Secretive",
         "Frank and honest",
-        "Formal",
-        "Polite"
+        "Formal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Candid means truthful and straightforward; frank.",
       "estSec": 15,
       "topicWeight": 0.1,

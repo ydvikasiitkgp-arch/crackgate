@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The inertia tensor of a uniform thin rod of mass M and length L about an axis through its centre and perpendicular to its length is:",
       "options": [
+        "1/8 ML²",
         "⅓ML²",
         "1/12 ML²",
-        "¼ML²",
-        "1/8 ML²"
+        "¼ML²"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For a thin rod about an axis through its centre perpendicular to its length, I = (1/12)ML². This follows from integrating r² dm along the rod: I = ∫_{-L/2}^{L/2} (M/L)x² dx = (M/L)(L³/12) = ML²/12.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "hard",
       "stem": "The Laplace transform of f(t) = t·e^(−2t) is:",
       "options": [
-        "1/(s+2)²",
         "1/(s−2)²",
         "2/(s+2)³",
-        "1/(s+2)³"
+        "1/(s+2)³",
+        "1/(s+2)²"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Using the frequency shifting property: L{t·e^(at)} = 1/(s−a)². Here a = −2, so L{t·e^(−2t)} = 1/(s+2)². Equivalently, from L{t·f(t)} = −d/ds F(s), with F(s) = 1/(s+2), giving −d/ds(1/(s+2)) = 1/(s+2)².",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "easy",
       "stem": "The eigenvalues of the matrix [[2, 1], [1, 2]] are:",
       "options": [
-        "1 and 3",
-        "2 and 2",
         "0 and 4",
-        "−1 and 5"
+        "−1 and 5",
+        "1 and 3",
+        "2 and 2"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Characteristic equation: det(A − λI) = (2−λ)² − 1 = 0 → (2−λ)² = 1 → λ = 1 or λ = 3. Trace = 4 = 1+3 ✓, determinant = 3 = 1×3 ✓.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "easy",
       "stem": "The Rodrigues formula for Legendre polynomials Pₙ(x) is:",
       "options": [
+        "Pₙ(x) = (2ⁿ/n!)(dⁿ/dxⁿ)(x²−1)ⁿ",
         "Pₙ(x) = (1/2ⁿn!)(dⁿ/dxⁿ)(x²−1)ⁿ",
         "Pₙ(x) = (1/n!)(dⁿ/dxⁿ)(x²−1)ⁿ",
-        "Pₙ(x) = (1/2ⁿ)(dⁿ/dxⁿ)(x²−1)ⁿ",
-        "Pₙ(x) = (2ⁿ/n!)(dⁿ/dxⁿ)(x²−1)ⁿ"
+        "Pₙ(x) = (1/2ⁿ)(dⁿ/dxⁿ)(x²−1)ⁿ"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Rodrigues formula is Pₙ(x) = 1/(2ⁿn!) · dⁿ/dxⁿ (x²−1)ⁿ. For example, P₀ = 1, P₁ = x, P₂ = (3x²−1)/2. The 2ⁿn! normalization ensures Pₙ(1) = 1.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "medium",
       "stem": "A disc of mass M and radius R rolls without slipping on a horizontal surface. The ratio of translational to rotational kinetic energy is:",
       "options": [
-        "1",
         "2",
         "3",
-        "4"
+        "4",
+        "1"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For rolling without slipping, v = ωR. Translational KE = ½Mv² = ½Mω²R². Rotational KE = ½Iω² = ½(½MR²)ω² = ¼Mω²R². Ratio = (½)/(¼) = 2.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "easy",
       "stem": "Liouville's theorem in classical mechanics states that:",
       "options": [
-        "Energy is conserved in all Hamiltonian systems",
-        "The phase space volume element is invariant under Hamiltonian evolution",
         "Angular momentum is always conserved",
-        "The action variable is adiabatically invariant"
+        "The action variable is adiabatically invariant",
+        "Energy is conserved in all Hamiltonian systems",
+        "The phase space volume element is invariant under Hamiltonian evolution"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Liouville's theorem: dρ/dt = 0 along phase space trajectories, meaning the phase space density ρ(q,p,t) is conserved. The volume element ∏dqᵢdpᵢ is invariant under canonical transformations. This is the foundation of statistical mechanics.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "easy",
       "stem": "A transformation (q, p) → (Q, P) is canonical if and only if the Poisson bracket {Q, P}_{q,p} equals:",
       "options": [
+        "Depends on the Hamiltonian",
         "0",
         "1",
-        "−1",
-        "Depends on the Hamiltonian"
+        "−1"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A transformation is canonical if it preserves the fundamental Poisson bracket: {Q, P} = 1. This is equivalent to the transformation being a symplectomorphism — preserving the symplectic 2-form ω = dp∧dq.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "In the Hamilton-Jacobi theory, the generating function W(q, α, t) satisfies:",
       "options": [
-        "The Hamilton equation of motion",
         "The Lagrange equation",
         "The Hamilton-Jacobi equation H + ∂W/∂t = 0",
-        "The Jacobi identity"
+        "The Jacobi identity",
+        "The Hamilton equation of motion"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The Hamilton-Jacobi equation is H(q, ∂W/∂q, t) + ∂W/∂t = 0. When W is found, the transformed momenta are constants of motion, reducing the problem to quadratures.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "hard",
       "stem": "The cutoff frequency for the TE₁₀ mode in a rectangular waveguide with broad-wall dimension a (in vacuum) is:",
       "options": [
-        "c/(2a)",
-        "c/(2a√(εμ))",
         "c/(a+b)",
-        "2c/a"
+        "2c/a",
+        "c/(2a)",
+        "c/(2a√(εμ))"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For the TE₁₀ mode (m=1, n=0) in a vacuum-filled rectangular waveguide, the cutoff frequency is f_c = c/(2a). This is the dominant (lowest cutoff) mode. Higher modes have f_c = c/2√((m/a)² + (n/b)²).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "easy",
       "stem": "The Brewster angle θ_B for light incident from air (n₁) to glass (n₂) satisfies:",
       "options": [
-        "tan θ_B = n₂/n₁",
         "sin θ_B = n₂/n₁",
         "cos θ_B = n₁/n₂",
-        "tan θ_B = n₁/n₂"
+        "tan θ_B = n₁/n₂",
+        "tan θ_B = n₂/n₁"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At the Brewster angle, reflected light is completely p-polarized. The condition is tan θ_B = n₂/n₁. For air-to-glass (n₁=1, n₂=1.5), θ_B ≈ 56.3°. The reflected and refracted rays are perpendicular at this angle.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "easy",
       "stem": "The leading non-vanishing term in the multipole expansion of the electrostatic potential from a charge distribution depends on:",
       "options": [
+        "Used for high-volume low-variety",
         "Whether the total charge is nonzero (monopole)",
         "Whether the dipole moment is nonzero",
-        "Whether the quadrupole moment is nonzero",
-        "Only on the size of the charge distribution"
+        "Whether the quadrupole moment is nonzero"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The multipole expansion: V(r) = (1/4πε₀)[Q/r + p·r̂/r² + ...]. If Q ≠ 0, the monopole term dominates at large distances. If Q = 0, the dipole term leads. The expansion is hierarchical.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "medium",
       "stem": "The displacement current term was added to Ampère's law by Maxwell to:",
       "options": [
-        "Account for magnetic monopoles",
-        "Ensure charge conservation (continuity equation)",
         "Describe electromagnetic radiation",
-        "Correct for relativistic effects"
+        "Correct for relativistic effects",
+        "Account for magnetic monopoles",
+        "Ensure charge conservation (continuity equation)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Maxwell added μ₀ε₀∂E/∂t to Ampère's law to make it consistent with the continuity equation ∂ρ/∂t + ∇·J = 0. Without it, taking the divergence of ∇×B = μ₀J gives 0 = μ₀∇·J, violating charge conservation.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "The total power radiated by an oscillating electric dipole p(t) = p₀ cos(ωt) is proportional to:",
       "options": [
-        "ω²p₀²",
         "ω⁴p₀²",
         "ωp₀²",
-        "ω⁶p₀²"
+        "ω⁶p₀²",
+        "ω²p₀²"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Larmor formula for dipole radiation: P = μ₀ω⁴p₀²/(12πc³). The ω⁴ dependence explains why blue light scatters more than red (Rayleigh scattering ∝ 1/λ⁴ ∝ ω⁴).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "medium",
       "stem": "The WKB quantization condition for bound states in a potential V(x) with two turning points is:",
       "options": [
+        "∮ p(x) dx = nπℏ",
         "∫ p(x) dx = (n+½)πℏ",
         "∫ p(x) dx = nπℏ",
-        "∫ p(x) dx = (n+¼)πℏ",
-        "∮ p(x) dx = nπℏ"
+        "∫ p(x) dx = (n+¼)πℏ"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Bohr-Sommerfeld/WKB quantization: ∫_{x₁}^{x₂} p(x) dx = (n + ½)πℏ, where p(x) = √(2m(E − V(x))). The ½ comes from the phase shift at turning points (connection formulas). Excellent for large quantum numbers.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "hard",
       "stem": "The variational principle in quantum mechanics states that for any trial wavefunction |ψ_trial⟩:",
       "options": [
-        "⟨ψ|H|ψ⟩/⟨ψ|ψ⟩ ≥ E₀",
-        "⟨ψ|H|ψ⟩/⟨ψ|ψ⟩ ≤ E₀",
         "⟨ψ|H|ψ⟩/⟨ψ|ψ⟩ = E₀",
-        "⟨ψ|H|ψ⟩ ≥ E₁"
+        "⟨ψ|H|ψ⟩ ≥ E₁",
+        "⟨ψ|H|ψ⟩/⟨ψ|ψ⟩ ≥ E₀",
+        "⟨ψ|H|ψ⟩/⟨ψ|ψ⟩ ≤ E₀"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The variational theorem: ⟨ψTrial|H|ψTrial⟩/⟨ψTrial|ψTrial⟩ ≥ E₀, where E₀ is the exact ground state energy. The expectation value of H with any trial state is an upper bound to the true ground state energy. Equality holds only if |ψTrial⟩ is exact.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "medium",
       "stem": "The eigenvalues of the S² operator for a spin-½ particle are:",
       "options": [
-        "¾ℏ²",
         "¼ℏ²",
         "½ℏ²",
-        "ℏ²"
+        "ℏ²",
+        "¾ℏ²"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "S²|s,m⟩ = s(s+1)ℏ²|s,m⟩. For s = ½: s(s+1)ℏ² = (½)(3/2)ℏ² = ¾ℏ². This eigenvalue is the same for m = ±½.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "hard",
       "stem": "The partial wave expansion of the scattering amplitude f(θ) for a spinless particle is:",
       "options": [
+        "f(θ) = (1/k) Σₗ (2l+1) e^(iδₗ) sin δₗ Pₗ(cos θ)",
         "f(θ) = Σₗ (2l+1) aₗ Pₗ(cos θ)",
         "f(θ) = Σₗ aₗ Pₗ(cos θ)",
-        "f(θ) = (1/k) Σₗ (2l+1) sin δₗ e^(iδₗ) Pₗ(cos θ)",
-        "f(θ) = (1/k) Σₗ (2l+1) e^(iδₗ) sin δₗ Pₗ(cos θ)"
+        "f(θ) = (1/k) Σₗ (2l+1) sin δₗ e^(iδₗ) Pₗ(cos θ)"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "f(θ) = (1/k) Σₗ (2l+1) e^(iδₗ) sin δₗ Pₗ(cos θ), where δₗ is the phase shift for the l-th partial wave. Total cross section: σ = (4π/k²) Σₗ (2l+1) sin²δₗ. This expansion is exact and converges rapidly for low-energy scattering.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "medium",
       "stem": "For two identical spin-½ fermions, the total wavefunction must be:",
       "options": [
-        "Symmetric under particle exchange",
-        "Antisymmetric under particle exchange",
         "Either symmetric or antisymmetric",
-        "Independent of particle exchange"
+        "Independent of particle exchange",
+        "Symmetric under particle exchange",
+        "Antisymmetric under particle exchange"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Fermions obey Fermi-Dirac statistics and the Pauli exclusion principle. The total wavefunction (spatial × spin) must be antisymmetric under exchange of any two fermions.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "easy",
       "stem": "Bose-Einstein condensation occurs when:",
       "options": [
-        "All particles occupy the lowest energy state at T = 0",
         "A macroscopic fraction of particles occupy the ground state at T > 0 below a critical temperature",
         "Fermions pair up to form bosons",
-        "The gas becomes a classical ideal gas"
+        "The gas becomes a classical ideal gas",
+        "All particles occupy the lowest energy state at T = 0"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "BEC is a phase transition where a macroscopic number N₀ of bosons occupy the single-particle ground state at T < T_c. It occurs in dilute gases (e.g., ⁸⁷Rb at ~170 nK). T_c ∝ (N/V)^(2/3) ℏ²/(mk_B).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "hard",
       "stem": "Wien's displacement law states that the wavelength of peak emission λ_max from a black body satisfies:",
       "options": [
+        "λ_max T² = b",
         "λ_max T = b",
         "λ_max/T = b",
-        "λ_max² T = b",
-        "λ_max T² = b"
+        "λ_max² T = b"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Wien's displacement law: λ_max T = b, where b = 2.898 × 10⁻³ m·K. As T increases, peak wavelength shifts shorter (blue shift). For the Sun (T ≈ 5800 K), λ_max ≈ 500 nm.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "hard",
       "stem": "In the grand canonical ensemble, the grand partition function Ξ is defined as:",
       "options": [
-        "Ξ = Σᵢ e^(−β(Eᵢ − μNᵢ))",
-        "Ξ = Σᵢ e^(−βEᵢ)",
         "Ξ = Tr e^(−β(H − μN))",
-        "Both A and C"
+        "Both A and C",
+        "Ξ = Σᵢ e^(−β(Eᵢ − μNᵢ))",
+        "Ξ = Σᵢ e^(−βEᵢ)"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "The grand partition function Ξ = Σ_{N,S} e^(−β(E_S − μN)) = Tr e^(−β(H − μN)). The grand potential is Φ = −kT ln Ξ. Both forms A and C are equivalent definitions.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "easy",
       "stem": "According to the equipartition theorem, each quadratic degree of freedom contributes to the average energy:",
       "options": [
-        "kT",
         "½kT",
         "2kT",
-        "kT/2"
+        "kT/2",
+        "kT"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The equipartition theorem: ⟨E⟩ per quadratic degree of freedom = ½kT. For a monatomic ideal gas (3 translational DOF): ⟨E⟩ = 3/2 kT, C_V = 3/2 R.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "hard",
       "stem": "The hyperfine splitting of the hydrogen 1s ground state arises from the interaction between:",
       "options": [
+        "The proton charge and the electron charge distribution",
         "The electron orbital angular momentum and the nuclear spin",
         "The electron spin and the nuclear spin magnetic moments",
-        "The electron kinetic energy and the nuclear mass",
-        "The proton charge and the electron charge distribution"
+        "The electron kinetic energy and the nuclear mass"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Hyperfine structure arises from the magnetic dipole-dipole interaction between the electron spin and nuclear spin magnetic moments. For hydrogen 1s, this gives the 21 cm line (1420 MHz).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "easy",
       "stem": "In Nuclear Magnetic Resonance (NMR), the Larmor frequency ν₀ of a nucleus with gyromagnetic ratio γ in a magnetic field B₀ is:",
       "options": [
-        "ν₀ = γB₀/(2π)",
-        "ν₀ = γB₀",
         "ν₀ = B₀/γ",
-        "ν₀ = γ²B₀"
+        "ν₀ = γ²B₀",
+        "ν₀ = γB₀/(2π)",
+        "ν₀ = γB₀"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Larmor frequency: ω₀ = γB₀ (angular), so ν₀ = γB₀/(2π). For ¹H at 7 T: ν₀ ≈ 300 MHz. This is the resonance condition for NMR transitions.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "hard",
       "stem": "The Einstein relation between absorption coefficient B₁₂ and stimulated emission coefficient B₂₁ for a two-level system with degeneracies g₁ and g₂ is:",
       "options": [
-        "B₁₂ = B₂₁",
         "g₁B₁₂ = g₂B₂₁",
         "B₁₂ = g₂B₂₁",
-        "B₁₂/B₂₁ = g₁/g₂"
+        "B₁₂/B₂₁ = g₁/g₂",
+        "B₁₂ = B₂₁"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "From Einstein's derivation: g₁B₁₂ = g₂B₂₁, so B₁₂/B₂₁ = g₂/g₁. For non-degenerate levels (g₁ = g₂ = 1), B₁₂ = B₂₁.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "medium",
       "stem": "The fine structure constant α ≈ 1/137 characterizes:",
       "options": [
+        "Both B and C",
         "The strength of the strong nuclear force",
         "The ratio of the fine structure splitting to the gross structure",
-        "The ratio of the electron velocity to c in the first Bohr orbit",
-        "Both B and C"
+        "The ratio of the electron velocity to c in the first Bohr orbit"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "α = e²/(4πε₀ℏc) ≈ 1/137.036. It equals v₁/c for hydrogen ground state. Fine structure splitting scales as α² relative to gross levels (Eₙ ∝ α²mc²).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "medium",
       "stem": "The threshold frequency ν₀ for the photoelectric effect is related to the work function Φ by:",
       "options": [
-        "hν₀ = Φ",
-        "hν₀ = Φ/2",
         "ν₀ = Φ²",
-        "hν₀ = ½Φ"
+        "hν₀ = ½Φ",
+        "hν₀ = Φ",
+        "hν₀ = Φ/2"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Einstein's photoelectric equation: K_max = hν − Φ. At threshold, K_max = 0, so hν₀ = Φ. Below this frequency, no electrons are emitted regardless of intensity.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "The Mössbauer effect involves:",
       "options": [
-        "Recoil-free emission and absorption of gamma rays by nuclei in a solid",
         "The splitting of spectral lines in a magnetic field",
         "The scattering of X-rays by crystal planes",
-        "The absorption of neutrons by heavy nuclei"
+        "The absorption of neutrons by heavy nuclei",
+        "Recoil-free emission and absorption of gamma rays by nuclei in a solid"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Mössbauer effect (1958) is the recoil-free emission and absorption of gamma-ray photons by nuclei bound in a solid lattice. Applications include measuring hyperfine fields and gravitational redshift.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "medium",
       "stem": "The reciprocal lattice vector G satisfies e^(iG·R) = 1 for all direct lattice vectors R. This implies that the reciprocal lattice is:",
       "options": [
+        "Always a simple cubic lattice",
         "The Fourier transform of the direct lattice",
         "The dual of the direct lattice under the dot product",
-        "Identical to the direct lattice",
-        "Always a simple cubic lattice"
+        "Identical to the direct lattice"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The reciprocal lattice is defined by G = h·b₁ + k·b₂ + l·b₃, where bᵢ·aⱼ = 2πδᵢⱼ. It is the dual basis scaled by 2π. The condition e^(iG·R) = 1 is the Laue condition for constructive interference.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "medium",
       "stem": "In the tight-binding approximation, the energy band width is determined by:",
       "options": [
-        "The atomic energy levels alone",
-        "The overlap integral between neighbouring atomic orbitals",
         "The lattice constant only",
-        "The electron effective mass"
+        "The electron effective mass",
+        "The atomic energy levels alone",
+        "The overlap integral between neighbouring atomic orbitals"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In tight-binding, E(k) = E_atomic − 2t(cos kₓa + cos kᵧa + cos k_z a), where t is the hopping/overlap integral. Band width = 2zt (z = coordination number). Larger overlap → wider band.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "easy",
       "stem": "The Kramers-Kronig relations connect:",
       "options": [
-        "The real and imaginary parts of a causal response function",
         "The electric and magnetic fields in a conductor",
         "The energy and momentum of a phonon",
-        "The effective mass and band gap of a semiconductor"
+        "The effective mass and band gap of a semiconductor",
+        "The real and imaginary parts of a causal response function"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Kramers-Kronig relations connect the real and imaginary parts of any causal response function, e.g., ε(ω) = ε₁(ω) + iε₂(ω). They follow from causality (analyticity in the upper half-plane).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "medium",
       "stem": "In a monatomic chain with lattice constant a, the phonon dispersion relation ω(k) at the Brillouin zone boundary (k = π/a) has:",
       "options": [
+        "Negative group velocity",
         "Zero group velocity",
         "Maximum group velocity",
-        "Group velocity equal to the speed of sound",
-        "Negative group velocity"
+        "Group velocity equal to the speed of sound"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ω(k) = 2√(C/m)|sin(ka/2)|. Group velocity v_g = dω/dk = √(C/m)·a·cos(ka/2). At k = π/a: v_g = 0 (standing wave). The BZ boundary reflects phonons.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "medium",
       "stem": "The Fermi wave vector k_F of a free electron gas in 3D with electron density n is given by:",
       "options": [
-        "k_F = (3π²n)^(1/3)",
-        "k_F = (2πn)^(1/3)",
         "k_F = (3n/π)^(1/3)",
-        "k_F = (6π²n)^(1/3)"
+        "k_F = (6π²n)^(1/3)",
+        "k_F = (3π²n)^(1/3)",
+        "k_F = (2πn)^(1/3)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For free electrons with spin degeneracy 2: n = k_F³/(3π²), so k_F = (3π²n)^(1/3). Fermi energy: E_F = ℏ²k_F²/(2m). The DOS at E_F determines metallic properties.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "medium",
       "stem": "In a BJT operating in the active region, the collector current I_C is related to the base current I_B by:",
       "options": [
-        "I_C = βI_B",
         "I_C = I_B/β",
         "I_C = β²I_B",
-        "I_C = αI_B"
+        "I_C = αI_B",
+        "I_C = βI_B"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In active mode: I_C = β·I_B, where β = dI_C/dI_B is the current gain (typically 50–300). Also, I_C = α·I_E where α = β/(β+1).",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "A MOSFET operates in the saturation region when:",
       "options": [
+        "V_DS = 0",
         "V_DS < V_GS − V_th",
         "V_DS ≥ V_GS − V_th",
-        "V_GS < V_th",
-        "V_DS = 0"
+        "V_GS < V_th"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "For an n-channel MOSFET: saturation occurs when V_DS ≥ V_GS − V_th (pinch-off at the drain). In saturation, I_D ≈ ½k_n'(W/L)(V_GS − V_th)².",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "easy",
       "stem": "A second-order Sallen-Key low-pass filter has two poles. Its roll-off rate above the cutoff frequency is:",
       "options": [
-        "−20 dB/decade",
-        "−40 dB/decade",
         "−60 dB/decade",
-        "−80 dB/decade"
+        "−80 dB/decade",
+        "−20 dB/decade",
+        "−40 dB/decade"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Each pole contributes −20 dB/decade. A second-order filter (two poles) gives −40 dB/decade. nth order → −20n dB/decade.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "The resolution of an N-bit ADC with full-scale range V_FS is:",
       "options": [
-        "V_FS / 2ᴺ",
         "V_FS / N",
         "V_FS / 2ᴺ⁻¹",
-        "2ᴺ / V_FS"
+        "2ᴺ / V_FS",
+        "V_FS / 2ᴺ"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Resolution (LSB size) = V_FS/2ᴺ. For a 12-bit ADC with 5V range: 5/4096 ≈ 1.22 mV. Higher N gives finer resolution.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "medium",
       "stem": "In the nuclear shell model, the magic numbers (2, 8, 20, 28, 50, 82, 126) correspond to:",
       "options": [
+        "The number of nucleons in the most stable isotope",
         "Nuclei with maximum binding energy per nucleon",
         "Closed proton or neutron shells with extra stability",
-        "Nuclei with zero quadrupole moment",
-        "The number of nucleons in the most stable isotope"
+        "Nuclei with zero quadrupole moment"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Magic numbers arise from the nuclear shell model with strong spin-orbit coupling (Mayer-Jensen, 1949). Nuclei with magic Z or N have enhanced stability. Doubly magic nuclei (e.g., ⁴He, ¹⁶O, ²⁰⁸Pb) are especially stable.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "medium",
       "stem": "CP violation in the kaon system implies:",
       "options": [
-        "Physics is invariant under charge conjugation C",
-        "Physics is invariant under parity P",
         "The laws of physics are not the same for matter and antimatter",
-        "The strong CP problem is resolved"
+        "The strong CP problem is resolved",
+        "Physics is invariant under charge conjugation C",
+        "Physics is invariant under parity P"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "CP violation means the combined C and P operation is not a symmetry. Decays of K⁰ mesons show CP is violated at ~0.2%. This is one explanation for matter-antimatter asymmetry (Sakharov conditions).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "The pion triplet (π⁺, π⁰, π⁻) forms an isospin multiplet with total isospin I =:",
       "options": [
-        "0",
         "½",
         "1",
-        "2"
+        "2",
+        "0"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Pions have I = 1 (triplet): π⁺ (I₃ = +1), π⁰ (I₃ = 0), π⁻ (I₃ = −1). The strong interaction is approximately isospin symmetric, so pions of different charges have nearly equal masses.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "medium",
       "stem": "A sum of Rs.8,000 becomes Rs.9,261 in 3 years at compound interest. What is the annual rate of interest?",
       "options": [
+        "8%",
         "4%",
         "5%",
-        "6%",
-        "8%"
+        "6%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A = P(1 + r/100)³ → 9261 = 8000(1 + r/100)³ → (1 + r/100)³ = 1.157625 → 1 + r/100 = 1.05 → r = 5%.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -933,12 +933,12 @@
       "difficulty": "medium",
       "stem": "The LCM of 12, 15 and 20 is:",
       "options": [
-        "30",
-        "60",
         "120",
-        "180"
+        "180",
+        "30",
+        "60"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "12 = 2²×3, 15 = 3×5, 20 = 2²×5. LCM = 2²×3×5 = 60.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -959,12 +959,12 @@
       "difficulty": "easy",
       "stem": "A and B invest Rs.30,000 and Rs.50,000 respectively in a business. After 1 year, A adds Rs.10,000. The total profit after 2 years is Rs.48,000. A's share is:",
       "options": [
-        "Rs.20,000",
         "Rs.24,000",
         "Rs.28,000",
-        "Rs.32,000"
+        "Rs.32,000",
+        "Rs.20,000"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A's investment: 30000×2 + 10000×1 = 70000. B's investment: 50000×2 = 100000. Ratio = 7:10. A's share = 48000×7/(7+10) = Rs.19,764 ≈ Rs.20,000.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "If 1st January 2025 is a Wednesday, what day of the week is 1st January 2026?",
       "options": [
+        "Saturday",
         "Wednesday",
         "Thursday",
-        "Friday",
-        "Saturday"
+        "Friday"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "2025 is not a leap year (365 days). 365 = 52 weeks + 1 day. So 1st January 2026 is Wednesday + 1 = Thursday.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1011,12 +1011,12 @@
       "difficulty": "hard",
       "stem": "The value of sin²30° + cos²60° is:",
       "options": [
-        "0",
-        "½",
         "1",
-        "2"
+        "2",
+        "0",
+        "½"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "sin30° = ½, cos60° = ½. sin²30° + cos²60° = ¼ + ¼ = ½.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1037,12 +1037,12 @@
       "difficulty": "medium",
       "stem": "The area of a circle with diameter 14 cm is approximately:",
       "options": [
-        "154 cm²",
         "308 cm²",
         "616 cm²",
-        "88 cm²"
+        "88 cm²",
+        "154 cm²"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "r = 7 cm. Area = πr² = π×49 ≈ 153.94 ≈ 154 cm².",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1058,12 +1058,12 @@
       "difficulty": "easy",
       "stem": "Rs.5,000 invested at 8% simple interest per annum amounts to Rs.6,000 in:",
       "options": [
+        "4 years",
         "2 years",
         "2.5 years",
-        "3 years",
-        "4 years"
+        "3 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SI = A − P = 1000. SI = PRT/100 → 1000 = 5000×8×T/100 → T = 2.5 years.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1084,12 +1084,12 @@
       "difficulty": "medium",
       "stem": "If x + 1/x = 5, the value of x² + 1/x² is:",
       "options": [
-        "23",
-        "25",
         "27",
-        "30"
+        "30",
+        "23",
+        "25"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Squaring: (x + 1/x)² = 25 → x² + 2 + 1/x² = 25 → x² + 1/x² = 23.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1110,12 +1110,12 @@
       "difficulty": "hard",
       "stem": "The mean of 5 observations is 4.4 and the variance is 8.24. If three of the five observations are 1, 2 and 6, the other two are:",
       "options": [
-        "4 and 9",
         "5 and 8",
         "3 and 10",
-        "2 and 11"
+        "2 and 11",
+        "4 and 9"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Sum = 5×4.4 = 22. Known sum = 9. Remaining sum = 13. Check 4 and 9: Σ(xᵢ−4.4)² = (1−4.4)²+(2−4.4)²+(6−4.4)²+(4−4.4)²+(9−4.4)² = 11.56+5.76+2.56+0.16+21.16 = 41.2. 41.2/5 = 8.24 ✓",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1131,12 +1131,12 @@
       "difficulty": "hard",
       "stem": "A cylinder has radius 7 cm and height 10 cm. The total surface area is approximately:",
       "options": [
+        "440 cm²",
         "308 cm²",
         "748 cm²",
-        "528 cm²",
-        "440 cm²"
+        "528 cm²"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "TSA = 2πr² + 2πrh = 2π(49) + 2π(70) = 98π + 140π = 238π ≈ 748 cm².",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1157,12 +1157,12 @@
       "difficulty": "medium",
       "stem": "The ratio of ages of A and B is 3:5. After 10 years, the ratio becomes 2:3. What is B's present age?",
       "options": [
-        "20 years",
-        "25 years",
         "30 years",
-        "35 years"
+        "35 years",
+        "20 years",
+        "25 years"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let A = 3x, B = 5x. After 10 years: (3x+10)/(5x+10) = 2/3. Cross multiply: 9x+30 = 10x+20 → x = 10. B's age = 5 × 10 = 50... Hmm that gives 50, not an option. Let me try (3x+10)/(5x+10) = 2/3: 9x+30 = 10x+20 → x = 10. B = 50. The options don't match. Let me reconsider: if x = 5, then A=15, B=25. After 10 years: 25/35 = 5/7, not 2/3. The problem as stated has B = 50, which isn't an option. The intended answer of Rs.25,000 or 25 years may use a different formulation. Given the options, B's present age = 25 years.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1183,12 +1183,12 @@
       "difficulty": "medium",
       "stem": "In what ratio must water be mixed with milk costing Rs.30/litre to get a mixture worth Rs.20/litre?",
       "options": [
-        "1:2",
         "2:3",
         "1:3",
-        "3:2"
+        "3:2",
+        "1:2"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Alligation: Water (Rs.0) and Milk (Rs.30). Mean price = Rs.20. Ratio = (30−20):(20−0) = 10:20 = 1:2.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1209,12 +1209,12 @@
       "difficulty": "medium",
       "stem": "A boat can travel 20 km upstream in 5 hours and 20 km downstream in 2 hours. What is the speed of the current?",
       "options": [
+        "5 km/h",
         "2 km/h",
         "3 km/h",
-        "4 km/h",
-        "5 km/h"
+        "4 km/h"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Upstream speed = 20/5 = 4 km/h. Downstream speed = 20/2 = 10 km/h. Current = (10 − 4)/2 = 3 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1235,12 +1235,12 @@
       "difficulty": "hard",
       "stem": "Pipe A can fill a tank in 20 hours and Pipe B can empty it in 30 hours. If both are opened simultaneously, the tank will be full in:",
       "options": [
-        "50 hours",
-        "60 hours",
         "40 hours",
-        "45 hours"
+        "45 hours",
+        "50 hours",
+        "60 hours"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A's rate = 1/20, B's rate = −1/30. Net rate = 1/20 − 1/30 = 1/60 per hour. Time = 60 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1261,12 +1261,12 @@
       "difficulty": "easy",
       "stem": "The ratio of ages of A and B is 3:5. After 8 years, the ratio becomes 5:7. What is B's present age?",
       "options": [
-        "16 years",
         "20 years",
         "24 years",
-        "32 years"
+        "32 years",
+        "16 years"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Let A = 3x, B = 5x. After 8 years: (3x+8)/(5x+8) = 5/7. 21x + 56 = 25x + 40 → 4x = 16 → x = 4. B = 5×4 = 20.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1287,12 +1287,12 @@
       "difficulty": "medium",
       "stem": "The HCF of 24, 36 and 60 is:",
       "options": [
+        "24",
         "6",
         "12",
-        "18",
-        "24"
+        "18"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "24 = 2³×3, 36 = 2²×3², 60 = 2²×3×5. HCF = 2²×3 = 12.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1313,12 +1313,12 @@
       "difficulty": "hard",
       "stem": "Two dice are thrown simultaneously. What is the probability that the sum of the numbers is 7?",
       "options": [
-        "1/6",
-        "1/12",
         "5/36",
-        "7/36"
+        "7/36",
+        "1/6",
+        "1/12"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Total outcomes = 36. Favorable pairs for sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. Probability = 6/36 = 1/6.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1339,12 +1339,12 @@
       "difficulty": "hard",
       "stem": "How many ways can 5 books be arranged on a shelf?",
       "options": [
-        "25",
         "60",
         "120",
-        "720"
+        "720",
+        "25"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1365,12 +1365,12 @@
       "difficulty": "hard",
       "stem": "What comes next: 3, 7, 15, 31, 63, ?",
       "options": [
+        "130",
         "95",
         "120",
-        "127",
-        "130"
+        "127"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Each term = previous × 2 + 1. 63 → 127. Alternatively: aₙ = 2^(n+1) − 1. For n=6: 127.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1391,12 +1391,12 @@
       "difficulty": "medium",
       "stem": "Doctor : Hospital :: Teacher : ?",
       "options": [
-        "Medicine",
-        "School",
         "Student",
-        "Books"
+        "Books",
+        "Medicine",
+        "School"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A doctor works in a hospital; a teacher works in a school. The relationship is professional : workplace.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1417,12 +1417,12 @@
       "difficulty": "easy",
       "stem": "All dogs are animals. Some animals are cats. Which of the following is definitely true?",
       "options": [
-        "All dogs are cats",
         "Some cats are dogs",
         "Some dogs may be cats",
-        "No dog is a cat"
+        "No dog is a cat",
+        "All dogs are cats"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "From 'all dogs are animals' and 'some animals are cats', we can only say some dogs may be cats (overlapping region exists). Options A, B, D are not necessarily true.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1438,12 +1438,12 @@
       "difficulty": "medium",
       "stem": "If DELHI is coded as 73541 and CALCUTTA as 82589662, how can CALICUT be coded?",
       "options": [
+        "5251896",
         "5254896",
         "8251896",
-        "8254896",
-        "5251896"
+        "8254896"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "From DELHI: D=7, E=3, L=5, H=4, I=1. From CALCUTTA: C=8, A=2, L=5, U=9, T=6. CALICUT = C(8)A(2)L(5)I(1)C(8)U(9)T(6) → 8251896. The closest matching option is 8254896.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1464,12 +1464,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a man, a woman says, 'His mother is the only daughter of my mother.' How is the woman related to the man?",
       "options": [
-        "Grandmother",
-        "Mother",
         "Sister",
-        "Aunt"
+        "Aunt",
+        "Grandmother",
+        "Mother"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "'The only daughter of my mother' = the woman herself. So 'his mother' = the woman. She is the man's mother.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1490,12 +1490,12 @@
       "difficulty": "medium",
       "stem": "Ram walks 10 km North, turns left and walks 5 km, then turns left again and walks 10 km. In which direction is he from the starting point?",
       "options": [
-        "North",
         "South",
         "East",
-        "West"
+        "West",
+        "North"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "N 10 km → (0,10). Left (West) 5 km → (−5,10). Left (South) 10 km → (−5,0). He is 5 km West.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1516,12 +1516,12 @@
       "difficulty": "hard",
       "stem": "The angle between the hour hand and the minute hand at 3:30 is:",
       "options": [
+        "105°",
         "75°",
         "85°",
-        "90°",
-        "105°"
+        "90°"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "At 3:30, minute hand at 180° (at 6). Hour hand at 3×30° + 30×0.5° = 90° + 15° = 105°. Angle = |180° − 105°| = 75°.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1542,12 +1542,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
-        "KG Basin",
-        "Mumbai High",
         "Cauvery Basin",
-        "Assam"
+        "Assam",
+        "KG Basin",
+        "Mumbai High"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1563,12 +1563,12 @@
       "difficulty": "easy",
       "stem": "Aditya-L1 mission studies:",
       "options": [
-        "Moon's surface",
         "Mars atmosphere",
         "Sun",
-        "Deep space"
+        "Deep space",
+        "Moon's surface"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Aditya-L1 is India's first solar observation mission.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
+        "2.0% of GDP",
         "0.5% of GDP",
         "1.0% of GDP",
-        "1.5% of GDP",
-        "2.0% of GDP"
+        "1.5% of GDP"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1605,12 +1605,12 @@
       "difficulty": "medium",
       "stem": "Reliance Industries recently announced a major investment in:",
       "options": [
-        "Coal mining",
-        "Green energy",
         "Oil refining",
-        "Copper smelting"
+        "Copper smelting",
+        "Coal mining",
+        "Green energy"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Reliance announced major investments in green energy transition.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1626,12 +1626,12 @@
       "difficulty": "hard",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
         "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1647,12 +1647,12 @@
       "difficulty": "hard",
       "stem": "COP28 was held in which country?",
       "options": [
+        "UK",
         "Egypt",
         "UAE",
-        "India",
-        "UK"
+        "India"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "COP28 was held in Dubai, UAE.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1668,12 +1668,12 @@
       "difficulty": "easy",
       "stem": "Fundamental Duties were added by which Amendment?",
       "options": [
-        "42nd",
-        "44th",
         "86th",
-        "91st"
+        "91st",
+        "42nd",
+        "44th"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Fundamental Duties were added by the 86th Amendment, 2002.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1689,12 +1689,12 @@
       "difficulty": "medium",
       "stem": "World Environment Day is celebrated on:",
       "options": [
-        "March 22",
         "June 5",
         "April 22",
-        "May 21"
+        "May 21",
+        "March 22"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "World Environment Day is celebrated on June 5th.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "Smallest state in India by area:",
       "options": [
+        "Mizoram",
         "Sikkim",
         "Goa",
-        "Tripura",
-        "Mizoram"
+        "Tripura"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Goa is the smallest state by area (3,702 sq km).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1731,12 +1731,12 @@
       "difficulty": "hard",
       "stem": "SI unit of electric current is:",
       "options": [
-        "Volt",
-        "Watt",
         "Ampere",
-        "Ohm"
+        "Ohm",
+        "Volt",
+        "Watt"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Ampere is the SI unit of electric current.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1752,12 +1752,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
-        "Kind",
         "Malevolent",
         "Generous",
-        "Charitable"
+        "Charitable",
+        "Kind"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1773,12 +1773,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
+        "No article",
         "A",
         "An",
-        "The",
-        "No article"
+        "The"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1794,12 +1794,12 @@
       "difficulty": "hard",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
-        "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent",
+        "Transient"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1815,12 +1815,12 @@
       "difficulty": "medium",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
-        "Lets eat, Grandma!",
         "Let's eat Grandma!",
         "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Let's, eat Grandma!",
+        "Lets eat, Grandma!"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1836,12 +1836,12 @@
       "difficulty": "easy",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
+        "Everywhere",
         "Omnipresent",
         "Rare",
-        "Common",
-        "Everywhere"
+        "Common"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1857,12 +1857,12 @@
       "difficulty": "easy",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
-        "Aggravate",
-        "Mitigate",
         "Motivate",
-        "Navigate"
+        "Navigate",
+        "Aggravate",
+        "Mitigate"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1878,12 +1878,12 @@
       "difficulty": "medium",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
         "at",
         "off",
-        "up"
+        "up",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1899,12 +1899,12 @@
       "difficulty": "hard",
       "stem": "What does 'candid' mean?",
       "options": [
+        "Polite",
         "Secretive",
         "Frank and honest",
-        "Formal",
-        "Polite"
+        "Formal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Candid means truthful and straightforward; frank.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1920,12 +1920,12 @@
       "difficulty": "hard",
       "stem": "By the time we arrive, they ___ already left.",
       "options": [
-        "will",
-        "would",
         "will have",
-        "would have"
+        "would have",
+        "will",
+        "would"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Future perfect: will have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1941,12 +1941,12 @@
       "difficulty": "medium",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
         "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,

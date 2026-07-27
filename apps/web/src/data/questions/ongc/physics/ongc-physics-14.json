@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The Bessel function J_n(x) satisfies the differential equation x^2*y'' + x*y' + (x^2 - n^2)*y = 0. For n = 0, the first zero of J_0(x) occurs at approximately:",
       "options": [
-        "2.405",
         "3.832",
         "5.136",
-        "6.380"
+        "6.380",
+        "2.405"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The first zero of J_0(x) is at x = 2.4048. This is important in problems involving circular membranes, waveguides, and heat conduction in cylinders. The zeros of J_n(x) are denoted j_{n,k} where k is the kth zero.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "medium",
       "stem": "The residue of f(z) = 1/(z^2 + 1)^2 at z = i is:",
       "options": [
+        "-1/4",
         "i/4",
         "-i/4",
-        "1/4",
-        "-1/4"
+        "1/4"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "f(z) = 1/((z-i)^2(z+i)^2) has a pole of order 2 at z = i. Residue = lim_{z->i} d/dz[(z-i)^2 * f(z)] = lim_{z->i} d/dz[1/(z+i)^2] = lim_{z->i} [-2/(z+i)^3] = -2/(2i)^3 = -2/(-8i) = 1/(4i) = -i/4.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "easy",
       "stem": "The convolution theorem states that the Fourier transform of the convolution of two functions is:",
       "options": [
-        "The product of their individual Fourier transforms",
-        "The sum of their Fourier transforms",
         "The convolution of their Fourier transforms",
-        "The difference of their Fourier transforms"
+        "The difference of their Fourier transforms",
+        "The product of their individual Fourier transforms",
+        "The sum of their Fourier transforms"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The convolution theorem: F{f*g} = F{f} * F{g} (product of transforms). This is fundamental in signal processing, optics, and quantum mechanics. The reverse is also true: F{fg} = (1/2pi) F{f} * F{g}.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "medium",
       "stem": "For a double pendulum with masses m_1, m_2 and lengths l_1, l_2, the number of degrees of freedom is:",
       "options": [
-        "1",
         "2",
         "3",
-        "4"
+        "4",
+        "1"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A double pendulum has 2 degrees of freedom: the two angles theta_1 and theta_2 (or equivalently, the two angular positions). The system is described by two generalized coordinates and is chaotic for large amplitudes.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "hard",
       "stem": "For motion in an inverse-cube force field F = -k/r^3, the effective potential has a term proportional to:",
       "options": [
+        "k*r^2",
         "l^2/(2*mu*r^2)",
         "-k/r",
-        "l^2/(2*mu*r^2) - k/r^3",
-        "k*r^2"
+        "l^2/(2*mu*r^2) - k/r^3"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The effective potential is V_eff = V(r) + l^2/(2*mu*r^2). For an inverse-cube force F = -k/r^3, V(r) = -k/(2*r^2). So V_eff = -k/(2*r^2) + l^2/(2*mu*r^2) = (l^2/mu - k)/(2*r^2). The centrifugal term l^2/(2*mu*r^2) is always present.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "easy",
       "stem": "In a conductor with conductivity sigma, the displacement current term in Maxwell's equations becomes important when the frequency exceeds:",
       "options": [
-        "sigma/epsilon (dielectric relaxation frequency)",
-        "1/(sigma*mu)",
         "epsilon/sigma",
-        "sigma*mu"
+        "sigma*mu",
+        "sigma/epsilon (dielectric relaxation frequency)",
+        "1/(sigma*mu)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The displacement current J_d = epsilon*dE/dt becomes comparable to conduction current J_c = sigma*E when omega*epsilon > sigma, i.e., omega > sigma/epsilon. This defines the dielectric relaxation frequency. For good conductors sigma/epsilon ~ 10^17 rad/s (optical frequencies).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "The skin depth delta in a good conductor scales as:",
       "options": [
-        "1/sqrt(f)",
         "1/f",
         "sqrt(f)",
-        "f"
+        "f",
+        "1/sqrt(f)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The skin depth delta = sqrt(2/(omega*mu*sigma)) = sqrt(1/(pi*f*mu*sigma)). So delta is proportional to 1/sqrt(f). Higher frequency means smaller skin depth. For copper at 1 GHz: delta ~ 2.1 micrometers.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "hard",
       "stem": "The commutation relation between angular momentum components is [J_x, J_y] = i*hbar*J_z. This implies that J_x and J_y:",
       "options": [
+        "Are conserved quantities",
         "Cannot be simultaneously measured with arbitrary precision",
         "Can both have definite values simultaneously",
-        "Are always perpendicular",
-        "Are conserved quantities"
+        "Are always perpendicular"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Non-zero commutation relations imply incompatible observables (uncertainty principle). Delta_Jx * Delta_Jy >= (hbar/2)|<J_z>|. This is why we can only simultaneously diagonalize J^2 and one component (J_z).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "medium",
       "stem": "In the hydrogen atom, the expectation value <r> for the 2p state (n=2, l=1) is:",
       "options": [
-        "5*a_0",
-        "4*a_0",
         "6*a_0",
-        "3*a_0"
+        "3*a_0",
+        "5*a_0",
+        "4*a_0"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For hydrogen, <r>_{nl} = (a_0/2)[3n^2 - l(l+1)]. For n=2, l=1: <r> = (a_0/2)[3(4) - 1(2)] = (a_0/2)[12-2] = 5*a_0. This is larger than <r>_{10} = 1.5*a_0 for the ground state.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "medium",
       "stem": "In time-independent perturbation theory, the first-order energy correction E_n^(1) is:",
       "options": [
-        "<psi_n|H'|psi_n> (diagonal matrix element)",
-        "<psi_m|H'|psi_n> for m != n",
         "The trace of H'",
-        "Zero for non-degenerate states"
+        "Zero for non-degenerate states",
+        "<psi_n|H'|psi_n> (diagonal matrix element)",
+        "<psi_m|H'|psi_n> for m != n"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "First-order perturbation theory: E_n = E_n^(0) + <n|H'|n> + O(H'^2). The first-order correction is the expectation value of the perturbation in the unperturbed state. Second-order corrections involve off-diagonal matrix elements.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "hard",
       "stem": "The canonical partition function Z = sum_i exp(-beta*E_i) generates thermodynamic quantities. The Helmholtz free energy is:",
       "options": [
-        "F = -k_B*T*ln(Z)",
         "F = k_B*T*Z",
         "F = -Z/k_B*T",
-        "F = exp(-Z)"
+        "F = exp(-Z)",
+        "F = -k_B*T*ln(Z)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "F = -k_B*T*ln(Z) connects microscopic (Z) to macroscopic (F). From F all thermodynamic quantities follow: S = -dF/dT, P = -dF/dV, U = -d(ln Z)/d(beta). This is the power of the canonical ensemble approach.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "easy",
       "stem": "Bose-Einstein condensation occurs when a gas of bosons is cooled below a critical temperature T_c. At T = 0, all particles occupy:",
       "options": [
+        "A superposition of all states",
         "The ground state (zero-momentum state)",
         "All energy states equally",
-        "Only high-energy states",
-        "A superposition of all states"
+        "Depends on material properties"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Below T_c, a macroscopic fraction of particles condenses into the single-particle ground state (k=0). This is a quantum phase transition. T_c ~ (2*pi*hbar^2/(m*k_B))*(n/zeta(3/2))^(2/3). First observed in dilute alkali gases in 1995 (Cornell, Wieman, Ketterle - Nobel 2001).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "easy",
       "stem": "In the anomalous Zeeman effect, the splitting of spectral lines in a weak magnetic field is due to:",
       "options": [
-        "Coupling of both orbital and spin angular momenta with the field",
-        "Only orbital angular momentum coupling",
         "Nuclear magnetic moment",
-        "Fine structure interactions"
+        "Fine structure interactions",
+        "Coupling of both orbital and spin angular momenta with the field",
+        "Depends on material properties"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The anomalous Zeeman effect (normal for singlet states) occurs when both L and S contribute to the magnetic moment. The energy shift is Delta E = mu_B * B * (m_l + g_e*m_s) where g_e ~ 2 is the electron spin g-factor. This produces more lines than the normal Zeeman triplet.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "Population inversion (N_2 > N_1) is necessary for laser action. In a three-level laser system, the pumping rate must exceed:",
       "options": [
-        "The spontaneous emission rate from level 2 to level 1",
         "The stimulated emission rate",
         "The collision de-excitation rate",
-        "All of the above"
+        "Varies with scale of operation",
+        "The spontaneous emission rate from level 2 to level 1"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In a three-level system (Ruby laser), pumping must be fast enough to overcome spontaneous decay from level 2 to level 1. Since the lower laser level (level 1) is the ground state, more than half the population must be excited - requiring very high pump power. This is why four-level lasers are more efficient.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "medium",
       "stem": "In a 1D monatomic chain with lattice constant a and spring constant K, the dispersion relation omega(q) at the Brillouin zone boundary (q = pi/a) is:",
       "options": [
+        "omega = K/M",
         "omega_max = 2*sqrt(K/M)",
         "omega = 0",
-        "omega = sqrt(K/M)",
-        "omega = K/M"
+        "omega = sqrt(K/M)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For a monatomic chain: omega = 2*sqrt(K/M)*|sin(qa/2)|. At q = pi/a: omega_max = 2*sqrt(K/M). This is the maximum frequency. At q = 0: omega = 0 (acoustic branch). The group velocity v_g = d*omega/dq = 0 at the zone boundary.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "medium",
       "stem": "Nuclear fission of U-235 produces approximately how much energy per fission event?",
       "options": [
-        "1 MeV",
-        "10 MeV",
         "200 MeV",
-        "1 GeV"
+        "1 GeV",
+        "1 MeV",
+        "10 MeV"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Each U-235 fission releases ~200 MeV total: ~165 MeV in kinetic energy of fragments, ~5 MeV in prompt gammas, ~10 MeV in neutrinos, ~20 MeV in delayed beta/gamma from fission products. This is about 80 TJ per kg of U-235.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "medium",
       "stem": "The Standard Model of particle physics is based on the gauge symmetry group:",
       "options": [
-        "SU(3) x SU(2) x U(1)",
         "SU(5)",
         "SO(10)",
-        "U(1) x U(1) x U(1)"
+        "U(1) x U(1) x U(1)",
+        "SU(3) x SU(2) x U(1)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Standard Model gauge group is SU(3)_color x SU(2)_weak x U(1)_Y. After electroweak symmetry breaking: SU(3)_c x U(1)_em. SU(3) gives QCD (strong force), SU(2) x U(1) gives electroweak force. Grand Unified Theories (GUTs) embed this in a simple group like SU(5) or SO(10).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "medium",
       "stem": "The Hubble constant H_0 describes the current expansion rate of the universe. Its approximate value is:",
       "options": [
+        "100 km/s/Mpc",
         "70 km/s/Mpc",
         "300 km/s/Mpc",
-        "1000 km/s/Mpc",
-        "100 km/s/Mpc"
+        "1000 km/s/Mpc"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "H_0 ~ 70 km/s/Mpc (Planck 2018: 67.4, SH0ES 2022: 73.0). This discrepancy (Hubble tension) is a major open problem. The age of the universe t_0 ~ 1/H_0 ~ 14 Gyr. The Hubble length c/H_0 ~ 14 Gly.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "hard",
       "stem": "In magnetotelluric (MT) sounding, the depth of investigation increases with:",
       "options": [
-        "Lower frequency (longer period)",
-        "Higher frequency",
         "Stronger magnetic field",
-        "Closer station spacing"
+        "Closer station spacing",
+        "Lower frequency (longer period)",
+        "Higher frequency"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The skin depth delta = sqrt(2*rho/(omega*mu)) where rho is resistivity. Lower frequency (longer period) means deeper penetration. MT uses natural EM field variations (periods 0.01-10000 s) to probe Earth's resistivity structure from shallow crust to upper mantle.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "hard",
       "stem": "The greenhouse effect in Earth's atmosphere is primarily due to absorption of infrared radiation by:",
       "options": [
-        "CO_2, H_2O, CH_4 and other trace gases",
         "Oxygen and nitrogen",
         "Ozone only",
-        "Dust particles"
+        "Dust particles",
+        "CO_2, H_2O, CH_4 and other trace gases"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Greenhouse gases (H_2O ~ 60%, CO_2 ~ 26%, CH_4 ~ 8%, O_3 ~ 4%) absorb and re-emit infrared radiation, warming the surface by ~33 K (from 255 K to 288 K). Without the greenhouse effect Earth would be a frozen planet. Human activities have increased CO_2 from 280 to 420 ppm.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "medium",
       "stem": "The Watson-Crick base pairing in DNA follows Chargaff's rules. Adenine pairs with thymine via:",
       "options": [
+        "Van der Waals forces",
         "Two hydrogen bonds",
         "Three hydrogen bonds",
-        "Covalent bonds",
-        "Van der Waals forces"
+        "Covalent bonds"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A-T base pair: 2 hydrogen bonds (N-H...O and N-H...N). G-C base pair: 3 hydrogen bonds (stronger). This specificity (A-T, G-C) is crucial for DNA replication. The total hydrogen bonds in DNA stabilize the double helix structure.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "hard",
       "stem": "The plasma frequency omega_p = sqrt(n*e^2/(epsilon_0*m_e)) represents:",
       "options": [
-        "The natural oscillation frequency of electron density perturbations",
-        "The cyclotron frequency of electrons",
         "The ion acoustic wave frequency",
-        "The Alfvén wave frequency"
+        "The Alfvén wave frequency",
+        "The natural oscillation frequency of electron density perturbations",
+        "The cyclotron frequency of electrons"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The plasma frequency is the natural frequency at which electron density oscillates when displaced. For omega < omega_p the wave is reflected (opaque); for omega > omega_p it propagates (transparent). This explains why radio waves are reflected by the ionosphere.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "In a single-mode optical fiber, light propagation is characterized by the V-number V = (2*pi*a/lambda)*sqrt(n_1^2 - n_2^2). Single-mode operation requires:",
       "options": [
-        "V < 2.405",
         "V > 2.405",
         "V = 1",
-        "V > 10"
+        "V > 10",
+        "V < 2.405"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Single-mode operation occurs when V < 2.405 (first zero of J_0). This ensures only the fundamental LP_01 mode propagates. For V > 2.405, higher-order modes exist (multi-mode). Typical single-mode fibers: a = 4-5 micrometers, delta_n ~ 0.005.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "hard",
       "stem": "The Barkhausen criterion for sustained oscillations in a feedback oscillator requires:",
       "options": [
+        "Phase shift = pi/2",
         "Loop gain A*beta = 1 and phase shift = 2*n*pi",
         "Loop gain A*beta > 1",
-        "Loop gain A*beta < 1",
-        "Phase shift = pi/2"
+        "Loop gain A*beta < 1"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Barkhausen criterion: (1) |A*beta| = 1 (loop gain magnitude = 1), (2) angle(A*beta) = 2*n*pi (phase shift = 0, 2*pi, ...). For startup, |A*beta| > 1 initially, then limiting nonlinearities reduce gain to exactly 1.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "Ground Penetrating Radar (GPR) uses electromagnetic pulses in the frequency range of:",
       "options": [
-        "10 MHz - 2.5 GHz",
-        "100 GHz - 1 THz",
         "1-10 Hz",
-        "X-rays"
+        "X-rays",
+        "10 MHz - 2.5 GHz",
+        "100 GHz - 1 THz"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "GPR typically operates at 10 MHz to 2.5 GHz. Lower frequencies give greater depth penetration (up to 50 m in ice, 1-2 m in clay) but lower resolution. Higher frequencies give better resolution (cm scale) but shallower penetration. Applications: archaeology, utilities, concrete inspection.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "medium",
       "stem": "The half-value layer (HVL) of an X-ray beam is the thickness of material required to reduce the intensity to:",
       "options": [
-        "Half (50%)",
         "One quarter (25%)",
         "One tenth (10%)",
-        "One/e (37%)"
+        "One/e (37%)",
+        "Half (50%)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "HVL is defined as the thickness that reduces beam intensity to 50%. The linear attenuation coefficient mu = ln(2)/HVL. For diagnostic X-rays (100 keV) in lead: HVL ~ 0.27 mm. The HVL is used to specify filtration and shielding requirements.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "easy",
       "stem": "The Euler-Lagrange equation for minimizing the functional I[y] = integral F(x,y,y')dx is:",
       "options": [
+        "F(x,y,y') = constant",
         "dF/dy - d/dx(dF/dy') = 0",
         "dF/dx + dF/dy = 0",
-        "d^2y/dx^2 + y = 0",
-        "F(x,y,y') = constant"
+        "d^2y/dx^2 + y = 0"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Euler-Lagrange equation: dF/dy - d/dx(dF/dy') = 0 is the necessary condition for an extremum. It's used in classical mechanics (Lagrange equations), optics (Fermat's principle), and field theory. For F = y'^2 - y^2, this gives y'' + y = 0 (harmonic oscillator).",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "For two coupled oscillators with masses m and spring constants k, K (coupling), the normal mode frequencies are:",
       "options": [
-        "omega_1 = sqrt(k/m), omega_2 = sqrt((k+2K)/m)",
-        "omega_1 = sqrt((k+K)/m), omega_2 = sqrt(k/m)",
         "omega_1 = omega_2 = sqrt(k/m)",
-        "omega_1 = sqrt(K/m), omega_2 = sqrt(k/m)"
+        "omega_1 = sqrt(K/m), omega_2 = sqrt(k/m)",
+        "omega_1 = sqrt(k/m), omega_2 = sqrt((k+2K)/m)",
+        "omega_1 = sqrt((k+K)/m), omega_2 = sqrt(k/m)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For two identical masses coupled by spring K: in-phase mode omega_1 = sqrt(k/m) (no coupling spring compression), out-of-phase mode omega_2 = sqrt((k+2K)/m). The beat frequency between modes is Delta_omega = omega_2 - omega_1.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "easy",
       "stem": "Circularly polarized light can be represented as a superposition of:",
       "options": [
-        "Two orthogonal linear polarizations with 90-degree phase difference",
         "Two parallel linear polarizations",
         "Two circular polarizations of the same handedness",
-        "Any two polarization states"
+        "Any two polarization states",
+        "Two orthogonal linear polarizations with 90-degree phase difference"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Right circular: E_x = E_0 cos(wt), E_y = E_0 cos(wt - pi/2) = E_0 sin(wt). This is equal-amplitude orthogonal linear components with pi/2 phase shift. Left circular has +pi/2 phase shift. Unpolarized light is an incoherent superposition of orthogonal polarizations.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "easy",
       "stem": "Wigner's theorem states that symmetry transformations in quantum mechanics can be represented by:",
       "options": [
+        "Hermitian operators",
         "Unitary or anti-unitary operators",
-        "Only unitary operators",
-        "Only orthogonal matrices",
-        "Hermitian operators"
+        "Depends on material properties",
+        "Needed for specific requirements"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Wigner's theorem: any symmetry (transformation preserving transition probabilities) is implemented by either a unitary or anti-unitary operator. Time reversal is anti-unitary. Spatial translations, rotations are unitary. This theorem is foundational for quantum symmetry principles.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "easy",
       "stem": "The fluctuation-dissipation theorem relates equilibrium fluctuations to the linear response of a system. It states that the autocorrelation function of a variable A is related to:",
       "options": [
-        "The response function (susceptibility) when the system is perturbed",
-        "The temperature of the system only",
         "The system's energy only",
-        "The number of degrees of freedom"
+        "The number of degrees of freedom",
+        "The response function (susceptibility) when the system is perturbed",
+        "The temperature of the system only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The FDT: chi(omega) = (1/k_B*T) * integral <A(t)A(0)>_eq * exp(-i*omega*t) dt. The response function chi (susceptibility) is determined by equilibrium fluctuations. Examples: Nyquist noise (voltage fluctuations -> resistance), magnetic susceptibility (spin fluctuations -> relaxation time).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "hard",
       "stem": "In beta-minus decay, a neutron converts to a proton by emitting:",
       "options": [
-        "An electron and an antineutrino",
         "A positron and a neutrino",
         "A photon",
-        "An alpha particle"
+        "An alpha particle",
+        "An electron and an antineutrino"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Beta-minus decay: n -> p + e^- + nu_e_bar. The antineutrino was postulated by Pauli (1930) to conserve energy, momentum, and angular momentum. The continuous electron energy spectrum (up to Q-value) confirmed the three-body nature of beta decay.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "hard",
       "stem": "Neutrino oscillations (discovered by Super-Kamiokande in 1998) demonstrate that neutrinos:",
       "options": [
+        "Are identical to antineutrinos",
         "Have non-zero mass",
         "Are massless",
-        "Travel faster than light",
-        "Are identical to antineutrinos"
+        "Travel faster than light"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Neutrino oscillations require non-zero mass differences between flavor eigenstates. The survival probability P(nu_e -> nu_e) = 1 - sin^2(2*theta)*sin^2(1.27*Delta_m^2*L/E). Solar, atmospheric, reactor, and accelerator neutrino experiments have measured mixing parameters.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "easy",
       "stem": "Pulsars are rapidly rotating neutron stars that emit beams of radiation. The period of a pulsar is typically in the range of:",
       "options": [
-        "Milliseconds to seconds",
-        "Hours to days",
         "Microseconds",
-        "Nanoseconds"
+        "Nanoseconds",
+        "Milliseconds to seconds",
+        "Hours to days"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Pulsar periods range from ~1.4 ms (millisecond pulsars, recycled) to ~8 seconds (slow pulsars). The period increases over time (spin-down) due to magnetic dipole radiation. The Crab pulsar has P = 33 ms, the Vela pulsar P = 89 ms.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "easy",
       "stem": "In CMOS digital circuits, the dynamic power dissipation is proportional to:",
       "options": [
-        "C*V^2*f (capacitance, voltage, frequency)",
         "V^2/R",
         "I^2*R",
-        "C*V*f"
+        "C*V*f",
+        "C*V^2*f (capacitance, voltage, frequency)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Dynamic power P_dyn = alpha*C_L*V_DD^2*f where alpha is activity factor. This shows why reducing voltage (V_DD) is the most effective way to reduce power (quadratic dependence). Modern chips use multiple voltage domains and dynamic voltage scaling.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "medium",
       "stem": "In electrical well logging, the Spontaneous Potential (SP) log measures:",
       "options": [
+        "Radioactive emissions",
         "Natural electrical potential differences between borehole and formation",
         "Formation resistivity",
-        "Acoustic velocity",
-        "Radioactive emissions"
+        "Acoustic velocity"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The SP log measures natural DC potential differences caused by electrochemical reactions at permeable bed boundaries. It's used to identify permeable beds (sandstones), estimate formation water salinity, and determine shale volume. Deflections from shale baseline indicate permeable zones.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "The ozone layer in the stratosphere absorbs ultraviolet radiation. The absorption of UV-B radiation by ozone occurs primarily in the wavelength range:",
       "options": [
-        "280-315 nm",
-        "315-400 nm",
         "100-280 nm",
-        "400-700 nm"
+        "400-700 nm",
+        "280-315 nm",
+        "315-400 nm"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ozone absorbs UV-C (100-280 nm) completely, UV-B (280-315 nm) partially (causes skin cancer, cataracts), and UV-A (315-400 nm) weakly. The ozone hole over Antarctica is caused by CFC-catalyzed destruction. The Montreal Protocol (1987) phased out CFC production.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "easy",
       "stem": "The resting membrane potential of a typical neuron (-70 mV) is primarily determined by:",
       "options": [
-        "Potassium ion concentration gradient (K^+ equilibrium potential)",
         "Sodium ion concentration gradient",
         "Chloride ion concentration gradient",
-        "Calcium ion concentration gradient"
+        "Calcium ion concentration gradient",
+        "Potassium ion concentration gradient (K^+ equilibrium potential)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The resting potential is close to E_K (~-90 mV) because the membrane is most permeable to K^+ at rest (leak channels). The Goldman equation gives the actual potential considering all ion permeabilities. Na^+/K^+-ATPase maintains the concentration gradients.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "easy",
       "stem": "The relative biological effectiveness (RBE) of alpha particles compared to X-rays is approximately:",
       "options": [
+        "100",
         "1",
         "5-20",
-        "0.1",
-        "100"
+        "0.1"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Alpha particles have high LET (linear energy transfer) and cause dense ionization tracks. RBE ~ 5-20 depending on endpoint. This is why alpha emitters are particularly hazardous when inhaled or ingested (internal exposure), despite being stopped by skin (external exposure).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "The Legendre polynomials P_n(x) are solutions to Legendre's differential equation. P_2(x) equals:",
       "options": [
-        "(3x^2 - 1)/2",
-        "x",
         "1",
-        "(5x^3 - 3x)/2"
+        "(5x^3 - 3x)/2",
+        "(3x^2 - 1)/2",
+        "x"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "P_0(x) = 1, P_1(x) = x, P_2(x) = (3x^2-1)/2, P_3(x) = (5x^3-3x)/2. The recursion: (n+1)P_{n+1}(x) = (2n+1)xP_n(x) - nP_{n-1}(x). Legendre polynomials appear in spherical harmonics, multipole expansions, and quantum mechanics (angular momentum).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "hard",
       "stem": "If A can do a work in 20 days and B can do it in 30 days, how long will they take working together?",
       "options": [
-        "10 days",
         "12 days",
         "15 days",
-        "25 days"
+        "25 days",
+        "10 days"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A's rate = 1/20, B's rate = 1/30. Combined = 1/20 + 1/30 = 5/60 = 1/12. Time = 12 days.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -933,12 +933,12 @@
       "difficulty": "medium",
       "stem": "A student scores 60% in one exam and 80% in another. The total marks for each exam are 50 and 100 respectively. His overall percentage is:",
       "options": [
+        "75%",
         "65%",
         "70%",
-        "73.3%",
-        "75%"
+        "73.3%"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "First exam: 60% of 50 = 30. Second exam: 80% of 100 = 80. Total = 110/150 = 73.3%.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -959,12 +959,12 @@
       "difficulty": "medium",
       "stem": "A trader sells goods at 10% loss on cost price but uses 20% less weight. His profit or loss percentage is:",
       "options": [
-        "10% loss",
-        "12.5% profit",
         "15% profit",
-        "No loss no profit"
+        "No loss no profit",
+        "10% loss",
+        "12.5% profit"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Let CP = 100/kg, he sells 800g as 1kg. SP = 90 (10% loss on marked). CP for 800g = 80. Profit = 90-80 = 10. Profit% = 10/80 * 100 = 12.5%.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "Rs. 1000 compounded annually at 10% for 2 years becomes:",
       "options": [
-        "Rs. 1100",
         "Rs. 1200",
         "Rs. 1210",
-        "Rs. 1250"
+        "Rs. 1250",
+        "Rs. 1100"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "A = P(1+r)^n = 1000(1.1)^2 = 1000*1.21 = 1210. CI = 1210-1000 = 210.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1011,12 +1011,12 @@
       "difficulty": "hard",
       "stem": "If A:B = 2:3 and B:C = 4:5, then A:C equals:",
       "options": [
+        "8:5",
         "8:15",
         "2:5",
-        "4:15",
-        "8:5"
+        "4:15"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A:B = 2:3, B:C = 4:5. Making B common: A:B:C = 8:12:15. So A:C = 8:15.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1037,12 +1037,12 @@
       "difficulty": "medium",
       "stem": "The average of 10 numbers is 15. If one number 25 is removed, the average of the remaining numbers is:",
       "options": [
-        "14",
-        "14.44",
         "15",
-        "16"
+        "16",
+        "14",
+        "14.44"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Sum = 10*15 = 150. After removing 25: 125/9 = 13.89. Wait, 125/9 = 13.889. This doesn't match options. Let me recalculate: 150-25=125, 125/9=13.89. The answer should be 13.89 but it's not in options. If the removed number was 15, the average would remain 15. If removed number is 25, average becomes 13.89. Let me adjust: if average of 10 numbers is 15 and one number 15 is removed, average remains 15. If 25 is removed, new average = (150-25)/9 = 125/9 = 13.89.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1063,12 +1063,12 @@
       "difficulty": "medium",
       "stem": "A car travels 60 km in 1 hour and 120 km in the next 2 hours. The average speed is:",
       "options": [
-        "60 km/h",
         "80 km/h",
         "90 km/h",
-        "100 km/h"
+        "100 km/h",
+        "60 km/h"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Total distance = 180 km, Total time = 3 hours. Average speed = 180/3 = 60 km/h.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1089,12 +1089,12 @@
       "difficulty": "medium",
       "stem": "A boat's speed in still water is 10 km/h. The river flows at 2 km/h. Time taken to go 24 km upstream and return is:",
       "options": [
+        "6 hours",
         "4 hours",
         "5 hours",
-        "5.33 hours",
-        "6 hours"
+        "5.33 hours"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Upstream speed = 10-2 = 8 km/h. Downstream speed = 10+2 = 12 km/h. Time = 24/8 + 24/12 = 3 + 2 = 5 hours. Wait, 3+2=5, not 5.33. Let me recalculate: 24/8 = 3, 24/12 = 2. Total = 5 hours. The answer should be 5 hours.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1115,12 +1115,12 @@
       "difficulty": "hard",
       "stem": "The angle between the hour hand and minute hand at 3:15 is:",
       "options": [
-        "0 degrees",
-        "7.5 degrees",
         "15 degrees",
-        "22.5 degrees"
+        "22.5 degrees",
+        "0 degrees",
+        "7.5 degrees"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "At 3:15, minute hand is at 3 (90 degrees). Hour hand moves 0.5 degrees per minute from 3. In 15 minutes, hour hand moves 7.5 degrees past 3. Angle = 90 + 7.5 - 90 = 7.5 degrees.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1141,12 +1141,12 @@
       "difficulty": "medium",
       "stem": "If 2x + 3y = 12 and 3x + 2y = 13, then x + y equals:",
       "options": [
-        "4",
         "5",
         "6",
-        "7"
+        "7",
+        "4"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Adding: 5x + 5y = 25. x + y = 5.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1167,12 +1167,12 @@
       "difficulty": "medium",
       "stem": "Statements: All cats are animals. Some animals are birds. Conclusions: I. Some cats are birds. II. All birds are cats.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Required for specialized cases",
+        "Depends on material properties",
+        "Needed for specific requirements",
+        "Works for particular conditions"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "From 'All cats are animals' and 'Some animals are birds', we cannot conclude that any cat is a bird. The 'some animals' that are birds may not include any cats. Neither conclusion follows.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -1193,12 +1193,12 @@
       "difficulty": "medium",
       "stem": "If APPLE = 50 and ORANGE = 60, then GRAPE = ?",
       "options": [
-        "50",
-        "55",
         "60",
-        "65"
+        "65",
+        "50",
+        "55"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Sum of position values: APPLE = 1+16+16+12+5 = 50. ORANGE = 15+18+1+14+7+5 = 60. GRAPE = 7+18+1+16+5 = 47. This doesn't match. Let me use A=1, B=2...: APPLE: A=1, P=16, P=16, L=12, E=5. Sum=50. Correct. GRAPE: G=7, R=18, A=1, P=16, E=5. Sum=47. Not in options. Maybe the coding is different. Let me try: APPLE has 5 letters, 50/5=10 per letter average. GRAPE has 5 letters. If each letter contributes its position, GRAPE=47. The answer might be 55 if there's a different scheme.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -1219,12 +1219,12 @@
       "difficulty": "hard",
       "stem": "A says to B, 'I am the daughter of the only son of your grandfather.' How is A related to B?",
       "options": [
-        "Sister",
         "Daughter",
         "Mother",
-        "Aunt"
+        "Aunt",
+        "Sister"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "B's grandfather's only son = B's father. B's father's daughter = B's sister. So A is B's sister.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1245,12 +1245,12 @@
       "difficulty": "medium",
       "stem": "If North-East becomes North, then South-East becomes:",
       "options": [
+        "South-West",
         "East",
         "South",
-        "North-East",
-        "South-West"
+        "North-East"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "This is a 45-degree rotation. If NE -> N (45 degrees clockwise), then SE -> E (45 degrees clockwise from SE is East).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1271,12 +1271,12 @@
       "difficulty": "medium",
       "stem": "What comes next: 1, 4, 9, 16, 25, ?",
       "options": [
-        "30",
-        "35",
         "36",
-        "49"
+        "49",
+        "30",
+        "35"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "These are perfect squares: 1^2, 2^2, 3^2, 4^2, 5^2, 6^2 = 36.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "Production data: Year1=100, Year2=120, Year3=110, Year4=130, Year5=150. The percentage increase from Year1 to Year5 is:",
       "options": [
-        "25%",
         "30%",
         "40%",
-        "50%"
+        "50%",
+        "25%"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Increase = 150-100 = 50. Percentage = 50/100 * 100 = 50%.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1323,12 +1323,12 @@
       "difficulty": "medium",
       "stem": "The volume of a sphere with radius 7 cm is (use pi = 22/7):",
       "options": [
+        "1078 cm^3",
         "1437.33 cm^3",
         "4312 cm^3",
-        "2156 cm^3",
-        "1078 cm^3"
+        "2156 cm^3"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Volume = (4/3)*pi*r^3 = (4/3)*(22/7)*343 = (4*22*343)/(3*7) = 30184/21 = 1437.33 cm^3.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -1349,12 +1349,12 @@
       "difficulty": "hard",
       "stem": "The total surface area of a cube with side 5 cm is:",
       "options": [
-        "100 cm^2",
-        "125 cm^2",
         "150 cm^2",
-        "200 cm^2"
+        "200 cm^2",
+        "100 cm^2",
+        "125 cm^2"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "TSA of cube = 6*a^2 = 6*25 = 150 cm^2.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -1375,12 +1375,12 @@
       "difficulty": "medium",
       "stem": "A bag contains 5 red and 3 blue balls. Two balls are drawn at random. The probability that both are red is:",
       "options": [
-        "5/14",
         "10/28",
         "25/64",
-        "5/8"
+        "5/8",
+        "5/14"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "P(both red) = (5/8)*(4/7) = 20/56 = 5/14. Wait, 20/56 simplifies to 5/14, not 10/28. 5/14 = 10/28. Both A and B are correct (same fraction). The answer is 5/14 = 10/28.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1401,12 +1401,12 @@
       "difficulty": "easy",
       "stem": "The LCM of 12, 15, and 20 is:",
       "options": [
+        "240",
         "60",
         "120",
-        "180",
-        "240"
+        "180"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "12 = 2^2*3, 15 = 3*5, 20 = 2^2*5. LCM = 2^2*3*5 = 60.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -1427,12 +1427,12 @@
       "difficulty": "easy",
       "stem": "Convert to reported speech: She said, 'I will come tomorrow.'",
       "options": [
-        "She said that she would come the next day",
-        "She said that she will come tomorrow",
         "She said that she would come tomorrow",
-        "She said that she will come the next day"
+        "She said that she will come the next day",
+        "She said that she would come the next day",
+        "She said that she will come tomorrow"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In reported speech: will -> would, tomorrow -> the next day.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1448,12 +1448,12 @@
       "difficulty": "easy",
       "stem": "Choose the correct verb: 'The committee _____ unanimously.'",
       "options": [
-        "agreed",
         "agrees",
         "are agreeing",
-        "have agreed"
+        "have agreed",
+        "agreed"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Committee is a collective noun acting as a unit, so singular verb is used. Past tense 'agreed' is correct.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1469,12 +1469,12 @@
       "difficulty": "medium",
       "stem": "What does 'look up to' mean?",
       "options": [
+        "To lift something",
         "To admire someone",
         "To search for something",
-        "To visit someone",
-        "To lift something"
+        "To visit someone"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "'Look up to' means to admire or respect someone.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -1490,12 +1490,12 @@
       "difficulty": "hard",
       "stem": "Choose the correct conditional: 'If I _____ rich, I would travel the world.'",
       "options": [
-        "am",
-        "was",
         "were",
-        "be"
+        "be",
+        "am",
+        "was"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "In second conditional (unreal present), we use 'were' for all persons: 'If I were rich...'",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1511,12 +1511,12 @@
       "difficulty": "hard",
       "stem": "In reading comprehension, an inference is:",
       "options": [
-        "A conclusion drawn from evidence and reasoning",
         "A fact directly stated in the text",
         "The main idea of the passage",
-        "A definition of a word"
+        "A definition of a word",
+        "A conclusion drawn from evidence and reasoning"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "An inference is a conclusion reached by reasoning from evidence in the text, not directly stated. It requires the reader to 'read between the lines'.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -1532,12 +1532,12 @@
       "difficulty": "easy",
       "stem": "The International Energy Agency (IEA) is headquartered in:",
       "options": [
+        "London",
         "Geneva",
         "Vienna",
-        "Paris",
-        "London"
+        "Paris"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The IEA is headquartered in Paris, France.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1553,12 +1553,12 @@
       "difficulty": "easy",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
-        "0.5% of GDP",
-        "1.0% of GDP",
         "1.5% of GDP",
-        "2.0% of GDP"
+        "2.0% of GDP",
+        "0.5% of GDP",
+        "1.0% of GDP"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1574,12 +1574,12 @@
       "difficulty": "medium",
       "stem": "The G20 summit under India's presidency was held in:",
       "options": [
-        "Mumbai",
         "New Delhi",
         "Bengaluru",
-        "Chennai"
+        "Chennai",
+        "Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The G20 summit was held in New Delhi.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1595,12 +1595,12 @@
       "difficulty": "medium",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
+        "Qualcomm",
         "Intel",
         "AMD",
-        "Nvidia",
-        "Qualcomm"
+        "Nvidia"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1616,12 +1616,12 @@
       "difficulty": "hard",
       "stem": "Which renewable energy source saw the highest capacity addition in India in 2024?",
       "options": [
-        "Solar",
-        "Wind",
         "Hydro",
-        "Biomass"
+        "Biomass",
+        "Solar",
+        "Wind"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Solar energy saw the highest capacity addition.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1637,12 +1637,12 @@
       "difficulty": "hard",
       "stem": "OPEC+ recently agreed to extend oil production cuts through:",
       "options": [
-        "Q1 2025",
         "Q2 2025",
         "End of 2025",
-        "Q1 2026"
+        "Q1 2026",
+        "Q1 2025"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "OPEC+ extended production cuts through end of 2025.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1658,12 +1658,12 @@
       "difficulty": "easy",
       "stem": "Which state has the longest coastline in India?",
       "options": [
+        "Kerala",
         "Tamil Nadu",
         "Andhra Pradesh",
-        "Gujarat",
-        "Kerala"
+        "Gujarat"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Gujarat has the longest coastline (1,600 km).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1679,12 +1679,12 @@
       "difficulty": "medium",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
-        "5",
-        "6",
         "7",
-        "8"
+        "8",
+        "5",
+        "6"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1700,12 +1700,12 @@
       "difficulty": "medium",
       "stem": "The largest desert in India is:",
       "options": [
-        "Thar Desert",
         "Rann of Kutch",
         "Ladakh Desert",
-        "Spiti Desert"
+        "Spiti Desert",
+        "Thar Desert"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Thar Desert is the largest desert in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1721,12 +1721,12 @@
       "difficulty": "hard",
       "stem": "Largest freshwater lake in India:",
       "options": [
+        "Sambhar Lake",
         "Chilika Lake",
         "Wular Lake",
-        "Dal Lake",
-        "Sambhar Lake"
+        "Dal Lake"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Wular Lake in J&K is the largest freshwater lake in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1742,12 +1742,12 @@
       "difficulty": "medium",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
-        "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent",
+        "Transient"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1763,12 +1763,12 @@
       "difficulty": "hard",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
-        "Clear",
         "Vague",
         "Definite",
-        "Obvious"
+        "Obvious",
+        "Clear"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1784,12 +1784,12 @@
       "difficulty": "hard",
       "stem": "By the time we arrive, they ___ already left.",
       "options": [
+        "would have",
         "will",
         "would",
-        "will have",
-        "would have"
+        "will have"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Future perfect: will have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1805,12 +1805,12 @@
       "difficulty": "hard",
       "stem": "Who ___ the book yesterday?",
       "options": [
-        "did wrote",
-        "wrote",
         "has wrote",
-        "written"
+        "written",
+        "did wrote",
+        "wrote"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1826,12 +1826,12 @@
       "difficulty": "easy",
       "stem": "The teacher told the students ___ quietly.",
       "options": [
-        "to study",
         "study",
         "studying",
-        "studied"
+        "studied",
+        "to study"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Infinitive after 'told': told someone to do something.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1847,12 +1847,12 @@
       "difficulty": "hard",
       "stem": "What does 'ameliorate' mean?",
       "options": [
+        "Maintain",
         "Worsen",
         "Improve",
-        "Destroy",
-        "Maintain"
+        "Destroy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1868,12 +1868,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
-        "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent",
+        "Rare"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1889,12 +1889,12 @@
       "difficulty": "easy",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
         "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1910,12 +1910,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
+        "Slow",
         "Lazy",
         "Hardworking",
-        "Careless",
-        "Slow"
+        "Careless"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1931,12 +1931,12 @@
       "difficulty": "medium",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
-        "are",
         "was",
-        "have been"
+        "have been",
+        "were",
+        "are"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,

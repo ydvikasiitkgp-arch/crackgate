@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "The Helmholtz equation ∇²ψ + k²ψ = 0 arises from the separation of which equation?",
       "options": [
+        "Diffusion equation",
         "Laplace's equation",
         "Poisson's equation",
-        "Wave equation (time-harmonic)",
-        "Diffusion equation"
+        "Wave equation (time-harmonic)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Starting from the wave equation ∇²ψ − (1/c²)∂²ψ/∂t² = 0 and assuming ψ(r,t) = ψ(r)e^(−iωt), substitution yields ∇²ψ + (ω²/c²)ψ = 0, i.e. the Helmholtz equation with k = ω/c. Laplace's equation is the static limit (k = 0).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "easy",
       "stem": "Two solutions of y'' + P(x)y' + Q(x)y = 0 have Wronskian W(x). If the solutions are linearly dependent, W(x) equals:",
       "options": [
-        "5",
-        "0",
         "∞",
-        "−5"
+        "−5",
+        "5",
+        "0"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "By Abel's identity, W(x) = C·e^(−∫P dx). Two solutions are linearly dependent if and only if W(x) = 0 for all x. This is the fundamental criterion for linear independence of solutions of second-order ODEs.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "medium",
       "stem": "If A and B are similar matrices (B = P⁻¹AP), which property is NOT necessarily preserved?",
       "options": [
-        "Eigenvalues",
         "Determinant",
         "Trace",
-        "Eigenvectors"
+        "Eigenvectors",
+        "Eigenvalues"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Similar matrices share eigenvalues, determinant, trace, rank, and characteristic polynomial. However, eigenvectors are NOT preserved: if Ax = λx, then B(P⁻¹x) = λ(P⁻¹x), so eigenvectors of B are P⁻¹ times those of A.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "medium",
       "stem": "The Laplace transform of f(t) = t·e^(−2t) is:",
       "options": [
+        "s/(s+2)²",
         "1/(s+2)²",
         "2/(s+2)³",
-        "1/(s−2)²",
-        "s/(s+2)²"
+        "1/(s−2)²"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Using L{t^n·e^(at)} = n!/(s−a)^(n+1) with n = 1, a = −2: L{t·e^(−2t)} = 1/(s+2)².",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "hard",
       "stem": "Which Fourier transform property states that convolution in time corresponds to multiplication in frequency?",
       "options": [
-        "Time-shifting property",
-        "Frequency-shifting property",
         "Convolution theorem",
-        "Parseval's theorem"
+        "Parseval's theorem",
+        "Time-shifting property",
+        "Frequency-shifting property"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The convolution theorem: F{f * g} = F{f}·F{g}. Time-shifting gives F{f(t−t₀)} = e^(−iωt₀)F(ω). Frequency-shifting gives F{e^(iω₀t)f(t)} = F(ω−ω₀). Parseval's theorem relates energy in time and frequency domains.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "medium",
       "stem": "A solid sphere (I = 2MR²/5) rolls without slipping down an incline of angle θ. Its centre-of-mass acceleration is:",
       "options": [
-        "g sin θ",
         "(5/7) g sin θ",
         "(2/3) g sin θ",
-        "(3/5) g sin θ"
+        "(3/5) g sin θ",
+        "g sin θ"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "ma = Mg sin θ − f and τ = fR = Iα with a = Rα. So f = (2/5)Ma. Substituting: Ma = Mg sin θ − (2/5)Ma → a = (5/7)g sin θ. The factor 5/7 accounts for rotational KE.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "In Kaluza-Klein theory, electromagnetism is unified with gravity by compactifying general relativity on:",
       "options": [
+        "A Calabi-Yau manifold",
         "A 2-sphere S²",
         "A circle S¹ (one extra dimension)",
-        "A torus T²",
-        "A Calabi-Yau manifold"
+        "A torus T²"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Kaluza (1921) and Klein (1926) showed that 5D general relativity with the 5th dimension compactified on a circle of radius R reproduces 4D gravity plus electromagnetism. The off-diagonal g_μ5 components become the electromagnetic potential A_μ.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "For an integrable Hamiltonian system with action-angle variables (J, θ), the Hamiltonian depends only on:",
       "options": [
-        "θ only",
-        "J only",
         "Both J and θ",
-        "Neither J nor θ"
+        "Neither J nor θ",
+        "θ only",
+        "J only"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For integrable systems, H = H(J₁,...,Jₙ) depends only on action variables. The angles evolve linearly: θᵢ(t) = θᵢ(0) + ωᵢt where ωᵢ = ∂H/∂Jᵢ, making analysis of periodic/quasi-periodic motion straightforward.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "medium",
       "stem": "The Routhian R is formed by a partial Legendre transform over cyclic coordinates. It is defined as:",
       "options": [
-        "R = T − V",
         "R = Σ_(cyclic) pᵢq̇ᵢ − L",
         "R = L − H",
-        "R = ∂L/∂q̇"
+        "R = ∂L/∂q̇",
+        "R = T − V"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Routhian performs a partial Legendre transform: R = Σ_(cyclic) pᵢq̇ᵢ − L, reducing degrees of freedom by treating cyclic momenta as parameters. It combines Lagrangian and Hamiltonian approaches for systems with mixed cyclic and non-cyclic coordinates.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "hard",
       "stem": "The normal modes of a string of length L fixed at both ends have frequencies:",
       "options": [
-        "fₙ = n²f₁",
         "fₙ = nf₁ where f₁ = v/(2L)",
         "fₙ = √n · f₁",
-        "fₙ = (n+1)f₁"
+        "fₙ = (n+1)f₁",
+        "fₙ = n²f₁"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Boundary conditions give kₙ = nπ/L. Since ω = vk and f = ω/(2π), fₙ = nv/(2L) = nf₁. Integer multiples of the fundamental give harmonic overtones.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "hard",
       "stem": "A point charge q is at distance d from the centre of a grounded conducting sphere of radius R. The image charge magnitude is:",
       "options": [
+        "+q(R/d)",
         "−q(R/d)",
         "−q(R²/d²)",
-        "−q(d/R)",
-        "+q(R/d)"
+        "−q(d/R)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "By the method of images, q' = −q(R/d) placed at distance b = R²/d from the centre (inside sphere) satisfies φ = 0 on the sphere surface.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "medium",
       "stem": "In a symmetric dielectric slab waveguide (core n₁, cladding n₂), guided modes exist when β satisfies:",
       "options": [
-        "β > kn₁",
-        "kn₂ < β < kn₁",
         "β < kn₂",
-        "β = kn₁"
+        "β = kn₁",
+        "β > kn₁",
+        "kn₂ < β < kn₁"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Guided modes require kn₂ < β < kn₁ (k = ω/c). This ensures oscillatory fields in the core and evanescent fields in the cladding. The cutoff is determined by the V-number V = kd√(n₁²−n₂²)/2.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "hard",
       "stem": "The Faraday rotation angle for light propagating through a medium in a magnetic field is proportional to:",
       "options": [
-        "B only",
         "B × L (field × path length)",
         "B² × L",
-        "√B × L"
+        "√B × L",
+        "B only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Faraday rotation θ = VBL, where V is the Verdet constant, B is the field component along propagation, and L is the path length. This linear dependence on both B and L distinguishes it from the Cotton-Mouton effect.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "In second harmonic generation (SHG), a laser beam of frequency ω produces output at frequency:",
       "options": [
+        "√ω",
         "ω/2",
         "2ω",
-        "ω²",
-        "√ω"
+        "ω²"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "In SHG, two photons of frequency ω combine in a χ⁽²⁾ nonlinear medium to produce one photon at 2ω. Phase matching k₂ω = 2kω is required. KDP and BBO crystals convert 1064 nm Nd:YAG light to 532 nm green.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "hard",
       "stem": "Resonant inductive coupling efficiency depends most critically on:",
       "options": [
-        "Wire colour",
-        "The figure of merit k²Q₁Q₂ (coupling × quality factors)",
         "Temperature only",
-        "Wire diameter only"
+        "Wire diameter only",
+        "Wire colour",
+        "The figure of merit k²Q₁Q₂ (coupling × quality factors)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Efficiency η ≈ k²Q₁Q₂/(1+√(1+k²Q₁Q₂))². The figure of merit k²Q₁Q₂ (k = coupling coefficient, Q = quality factor) determines maximum achievable efficiency. Higher k and Q improve efficiency.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "hard",
       "stem": "The ground state energy of the quantum harmonic oscillator is:",
       "options": [
-        "Zero",
         "ℏω/2 (zero-point energy)",
         "ℏω",
-        "3ℏω/2"
+        "3ℏω/2",
+        "Zero"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Eₙ = (n+½)ℏω. The ground state (n=0) has E₀ = ½ℏω — the zero-point energy arising from the uncertainty principle. It has measurable consequences (e.g., liquid helium not freezing at 1 atm).",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "hard",
       "stem": "A charged particle in uniform magnetic field B has Landau levels with energy spacing equal to:",
       "options": [
+        "eB/m",
         "ℏeB/m (cyclotron energy)",
         "ℏeB/(2m)",
-        "ℏ²eB/m",
-        "eB/m"
+        "ℏ²eB/m"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Landau levels: Eₙ = ℏωc(n+½) where ωc = eB/m is the cyclotron frequency. The spacing is ℏωc = ℏeB/m. This quantisation of cyclotron orbits is the basis for the quantum Hall effect.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "medium",
       "stem": "In the Aharonov-Bohm effect, the phase shift between electron paths around a solenoid enclosing flux Φ is:",
       "options": [
-        "Δφ = eΦ/ℏ",
-        "Δφ = Φ/(ℏc)",
         "Δφ = eΦ²/ℏ",
-        "Δφ = ℏ/(eΦ)"
+        "Δφ = ℏ/(eΦ)",
+        "Δφ = eΦ/ℏ",
+        "Δφ = Φ/(ℏc)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The AB phase shift is Δφ = (e/ℏ)∮A·dl = eΦ/ℏ = 2π(Φ/Φ₀) where Φ₀ = h/e is the flux quantum. This demonstrates that the vector potential A has physical significance even where B = 0.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "hard",
       "stem": "The Büttiker-Landauer traversal time for quantum tunnelling through a barrier is approximately:",
       "options": [
-        "τ ≈ m/(ℏκ²) where κ = √(2m(V₀−E))/ℏ",
         "τ = L/v",
         "τ = ℏ/E",
-        "τ = L²/(2D)"
+        "τ = L²/(2D)",
+        "τ ≈ m/(ℏκ²) where κ = √(2m(V₀−E))/ℏ"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Büttiker-Landauer time τ ≈ m/(ℏκ²) = ℏ/(2(V₀−E)) for a rectangular barrier. Tunnelling is not instantaneous — the traversal time depends on barrier height and width through the decay constant κ.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "medium",
       "stem": "Quantum decoherence causes the transition from quantum to classical behaviour by:",
       "options": [
+        "Converting all superpositions to mixed states at T = 0",
         "Collapsing the wavefunction upon measurement",
         "Decaying off-diagonal density matrix elements via entanglement with environment",
-        "Violating the uncertainty principle",
-        "Converting all superpositions to mixed states at T = 0"
+        "Violating the uncertainty principle"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Decoherence causes off-diagonal elements of the reduced density matrix to decay (T₂ relaxation), suppressing quantum interference. It does NOT collapse the wavefunction — it creates entanglement with the environment, making interference unobservable.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "hard",
       "stem": "The Boltzmann entropy S = k_B ln Ω relates entropy to:",
       "options": [
-        "Average energy",
-        "Number of accessible microstates Ω at fixed E, V, N",
         "Number of particles",
-        "Temperature"
+        "Temperature",
+        "Average energy",
+        "Number of accessible microstates Ω at fixed E, V, N"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "S = k_B ln Ω for the microcanonical ensemble, where Ω(E,V,N) counts microstates compatible with macroscopic constraints. Temperature is derived: 1/T = ∂S/∂E.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "medium",
       "stem": "In the canonical ensemble, the relative energy fluctuation ⟨(ΔE)²⟩/⟨E⟩² for an ideal gas of N particles scales as:",
       "options": [
-        "1",
         "N",
         "1/N",
-        "1/√N"
+        "1/√N",
+        "1"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "⟨(ΔE)²⟩ = k_BT²C_V. For ideal gas: C_V = (3/2)Nk_B, ⟨E⟩ = (3/2)Nk_BT. So ⟨(ΔE)²⟩/⟨E⟩² = 1/N. Fluctuations become negligible for macroscopic N.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "The lambda point (Tλ ≈ 2.17 K) in liquid ⁴He marks the transition to:",
       "options": [
+        "Complete solidification",
         "A pure Bose-Einstein condensate of all atoms",
         "The superfluid He-II phase with zero viscosity and quantised vortices",
-        "A ferromagnetic state",
-        "Complete solidification"
+        "A ferromagnetic state"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Below Tλ, liquid ⁴He enters He-II: a superfluid with zero viscosity, infinite thermal conductivity, and quantised circulation. Related to but not identical to BEC — interactions modify the picture. The specific heat shows a characteristic lambda-shaped divergence.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "medium",
       "stem": "Shannon entropy H = −Σ pᵢ log₂ pᵢ is maximised when:",
       "options": [
-        "One outcome has probability 1",
-        "All outcomes are equally probable",
         "All outcomes have probability 0",
-        "The distribution is Gaussian"
+        "The distribution is Gaussian",
+        "One outcome has probability 1",
+        "All outcomes are equally probable"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Shannon entropy is maximised for uniform distribution (pᵢ = 1/n), giving H = log₂ n — maximum uncertainty. This connects to Boltzmann entropy: S = k_B ln W for equal-probability microstates.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "The Pauli exclusion principle states no two identical fermions can share the same:",
       "options": [
-        "Atom",
         "Energy level",
         "Complete set of quantum numbers",
-        "Orbital"
+        "Orbital",
+        "Atom"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "No two identical fermions can have the same complete set of quantum numbers. Two electrons CAN share an orbital (same n, l, mₗ) but must have opposite spins (mₛ = ±½).",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "hard",
       "stem": "The Larmor precession frequency ωL of a magnetic moment in field B is:",
       "options": [
+        "Proportional to 1/B",
         "Proportional to B²",
         "Proportional to B (ωL = gμBB/ℏ)",
-        "Independent of B",
-        "Proportional to 1/B"
+        "Independent of B"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "ωL = gμBB/ℏ = γB (gyromagnetic ratio γ = gμB/ℏ). The torque τ = μ×B causes angular momentum to precess around B. Basis of NMR, ESR, and atomic magnetometry.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "easy",
       "stem": "The intensity of a vibronic transition in the Franck-Condon principle is proportional to:",
       "options": [
-        "Energy difference between states",
-        "|⟨v'|v''⟩|² (overlap integral squared of vibrational wavefunctions)",
         "Transition dipole moment only",
-        "Rotational quantum number"
+        "Rotational quantum number",
+        "Energy difference between states",
+        "|⟨v'|v''⟩|² (overlap integral squared of vibrational wavefunctions)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Franck-Condon factor |⟨v'|v''⟩|² determines vibronic line intensity. The electronic transition is fast (vertical), so vibrational wavefunctions overlap at the same internuclear distance. Maximum overlap gives the most intense line.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "easy",
       "stem": "The ground state molecular term symbol of O₂ is:",
       "options": [
-        "¹Σ_g⁺",
         "³Σ_g⁻",
         "¹Δ_g",
-        "³Π_u"
+        "³Π_u",
+        "¹Σ_g⁺"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "O₂ has two unpaired electrons in π* antibonding orbitals. By Hund's rules, maximum spin: S=1 (triplet), giving ³Σ_g⁻. This paramagnetic triplet explains why liquid O₂ is attracted to magnets.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "hard",
       "stem": "Penning ionization (A* + B → A + B⁺ + e⁻) occurs when:",
       "options": [
+        "B has higher ionisation energy than A",
         "The excitation energy of A* exceeds the ionisation energy of B",
         "Both atoms are in the ground state",
-        "A* has a shorter lifetime than the collision time",
-        "B has higher ionisation energy than A"
+        "A* has a shorter lifetime than the collision time"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Energetically allowed when E*(A) > IE(B). Metastable He* (19.8 eV) can ionise most atoms/molecules, making it useful in ionisation detectors and plasma sources.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "medium",
       "stem": "The Debye-Waller factor e^(−2W) describes reduction of X-ray diffraction intensity due to:",
       "options": [
-        "Absorption",
-        "Thermal vibrations of atoms about lattice positions",
         "Crystal defects",
-        "Finite crystal size"
+        "Finite crystal size",
+        "Absorption",
+        "Thermal vibrations of atoms about lattice positions"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "e^(−2W) accounts for Bragg peak attenuation from thermal motion. 2W = ⟨(Δu·Q)²⟩ where Δu is atomic displacement and Q is scattering vector. At high T, W ∝ T.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "medium",
       "stem": "In Compton scattering, the wavelength shift Δλ depends on:",
       "options": [
-        "Target material only",
         "Scattering angle θ: Δλ = (h/mₑc)(1 − cos θ)",
         "Beam intensity",
-        "Electron temperature"
+        "Electron temperature",
+        "Target material only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Δλ = λ_C(1 − cos θ) where λ_C = h/mₑc ≈ 2.43 pm. The shift depends only on angle, confirming photon-electron collisions are elastic and particle-like.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "medium",
       "stem": "In semiconductor cyclotron resonance, the effective mass m* is determined from resonance frequency ωc and field B as:",
       "options": [
+        "m* = e/(Bωc)",
         "m* = eB/ωc",
         "m* = ωc/(eB)",
-        "m* = eB²/ωc",
-        "m* = e/(Bωc)"
+        "m* = eB²/ωc"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ωc = eB/m*, so m* = eB/ωc. Measuring microwave absorption at resonance for known frequency gives effective mass — crucial for mapping semiconductor band structures.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "medium",
       "stem": "In a GaAs/AlGaAs quantum well, electrons are confined in GaAs because:",
       "options": [
-        "GaAs has higher density",
-        "Conduction band offset creates a potential well in the lower-bandgap GaAs",
         "AlGaAs is magnetic",
-        "GaAs has indirect bandgap"
+        "GaAs has indirect bandgap",
+        "GaAs has higher density",
+        "Conduction band offset creates a potential well in the lower-bandgap GaAs"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "GaAs bandgap (~1.42 eV) < AlGaAs (~1.8 eV). The conduction band offset confines electrons in GaAs, creating a 2D electron gas with very high mobility — the basis of HEMTs and quantum Hall effect.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "easy",
       "stem": "Thermal noise voltage in a resistor R at temperature T over bandwidth Δf is:",
       "options": [
-        "⟨V²⟩ = 4kTRΔf",
         "⟨V²⟩ = kTRΔf",
         "⟨V²⟩ = 2kTR²Δf",
-        "⟨V²⟩ = kTΔf/R"
+        "⟨V²⟩ = kTΔf/R",
+        "⟨V²⟩ = 4kTRΔf"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Johnson-Nyquist noise: ⟨V²⟩ = 4kTRΔf. White noise independent of frequency, setting the fundamental noise floor for all electronic circuits.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "The Nyquist-Shannon theorem requires sampling at rate at least:",
       "options": [
+        "f_max/2",
         "f_max",
         "2f_max",
-        "4f_max",
-        "f_max/2"
+        "4f_max"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Nyquist rate = 2f_max. Sampling below this causes aliasing. For audio (20 kHz), standard CD rate 44.1 kHz > 40 kHz.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "easy",
       "stem": "For an 8-bit R-2R DAC with Vref = 5V and input = 0b10000000 (MSB only), the output is:",
       "options": [
-        "5.00 V",
-        "2.50 V",
         "1.25 V",
-        "3.75 V"
+        "3.75 V",
+        "5.00 V",
+        "2.50 V"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Input value = 128. Vout = Vref × (input/2⁸) = 5 × (128/256) = 2.50 V. The MSB contributes exactly Vref/2.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "The basic programmable element inside an FPGA is a:",
       "options": [
-        "Flip-flop only",
         "Look-Up Table (LUT) + flip-flop",
         "Full adder",
-        "Multiplexer only"
+        "Multiplexer only",
+        "Flip-flop only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "FPGA CLBs contain LUTs (implementing any Boolean function via truth table in SRAM) and flip-flops (for sequential logic). A k-input LUT handles any k-variable Boolean function.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "hard",
       "stem": "An OTA differs from a standard op-amp in that its output is:",
       "options": [
+        "Frequency proportional to input",
         "Voltage proportional to differential input",
         "Current proportional to differential input (transconductance gₘ)",
-        "Power proportional to input",
-        "Frequency proportional to input"
+        "Power proportional to input"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "OTA: Iout = gₘ(V+ − V⁻), a voltage-controlled current source. Unlike standard op-amps (voltage output), OTAs output current. gₘ is controllable via bias current — useful for variable-gain amplifiers, filters, and analog multipliers.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "easy",
       "stem": "Nuclear isomers (e.g. ⁹⁹ᵐTc) are long-lived because:",
       "options": [
-        "They have different charge than the ground state",
-        "Gamma decay requires large ΔJ, making it highly forbidden",
         "They have different neutron number",
-        "They are held by strong force"
+        "They are held by strong force",
+        "They have different charge than the ground state",
+        "Gamma decay requires large ΔJ, making it highly forbidden"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Isomers are metastable excited states with large spin difference ΔJ from ground state. The large angular momentum change makes gamma decay highly forbidden, giving long half-lives (ns to years). ⁹⁹ᵐTc (t₁/₂ = 6h) is widely used in medical imaging.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "hard",
       "stem": "The strong nuclear force (QCD) exhibits confinement, meaning:",
       "options": [
-        "It is infinite in range",
         "Quarks cannot exist as free particles",
         "It acts only on charged particles",
-        "It is weaker than EM at all distances"
+        "It is weaker than EM at all distances",
+        "It is infinite in range"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "QCD confinement: quarks and gluons are never observed isolated. The interquark potential is弱 at short distances (asymptotic freedom) but grows linearly with separation, preventing liberation.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "hard",
       "stem": "A student scored 78% in an exam with total marks 250. The passing mark is 65%. By how many marks did the student exceed the passing mark?",
       "options": [
+        "50",
         "25",
         "32.5",
-        "35",
-        "50"
+        "35"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Scored: 78% × 250 = 195. Passing: 65% × 250 = 162.5. Excess = 195 − 162.5 = 32.5.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -933,12 +933,12 @@
       "difficulty": "easy",
       "stem": "A completes a task in 15 days, B in 20 days. Working together, they finish in:",
       "options": [
-        "7.5 days",
-        "8.57 days",
         "9 days",
-        "10 days"
+        "10 days",
+        "7.5 days",
+        "8.57 days"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Combined rate = 1/15 + 1/20 = 7/60 per day. Days = 60/7 ≈ 8.57.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -959,12 +959,12 @@
       "difficulty": "medium",
       "stem": "A shopkeeper buys for Rs.1,200 and sells at a 20% loss. Selling price?",
       "options": [
-        "Rs.960",
         "Rs.1,040",
         "Rs.1,080",
-        "Rs.1,440"
+        "Rs.1,440",
+        "Rs.960"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SP = 1200 × (1 − 0.20) = 1200 × 0.80 = Rs.960.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "Average of five numbers is 42. Excluding one number, average becomes 38. The excluded number is:",
       "options": [
+        "60",
         "52",
         "56",
-        "58",
-        "60"
+        "58"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Total of 5 = 210. Total of 4 = 152. Excluded = 210 − 152 = 58.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1011,12 +1011,12 @@
       "difficulty": "easy",
       "stem": "Two dice are thrown. Probability that the sum is 7?",
       "options": [
-        "1/6",
-        "1/12",
         "5/36",
-        "7/36"
+        "7/36",
+        "1/6",
+        "1/12"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Total = 36. Pairs for 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. P = 6/36 = 1/6.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1037,12 +1037,12 @@
       "difficulty": "easy",
       "stem": "If A:B = 2:3 and B:C = 4:5, then A:B:C =?",
       "options": [
-        "8:12:15",
         "2:3:5",
         "8:12:20",
-        "4:6:5"
+        "4:6:5",
+        "8:12:15"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Make B common: A:B = 8:12, B:C = 12:15. A:B:C = 8:12:15.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1063,12 +1063,12 @@
       "difficulty": "easy",
       "stem": "A train 150 m long passes a pole in 15 sec. Time to pass a 200 m platform?",
       "options": [
+        "35 sec",
         "23.3 sec",
         "25 sec",
-        "30 sec",
-        "35 sec"
+        "30 sec"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Speed = 150/15 = 10 m/s. Total distance = 150 + 200 = 350 m. Time = 350/10 = 35 sec.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1089,12 +1089,12 @@
       "difficulty": "hard",
       "stem": "Compound interest on Rs.8,000 at 15% p.a. for 2 years (compounded annually):",
       "options": [
-        "Rs.2,400",
-        "Rs.2,600",
         "Rs.2,580",
-        "Rs.2,500"
+        "Rs.2,500",
+        "Rs.2,400",
+        "Rs.2,600"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "A = 8000(1.15)² = 8000 × 1.3225 = 10,580. CI = 10,580 − 8,000 = Rs.2,580.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1115,12 +1115,12 @@
       "difficulty": "easy",
       "stem": "How many ways can 5 different books be arranged on a shelf?",
       "options": [
-        "25",
         "60",
         "120",
-        "720"
+        "720",
+        "25"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1141,12 +1141,12 @@
       "difficulty": "easy",
       "stem": "The LCM of 12, 18 and 24 is:",
       "options": [
+        "48",
         "36",
         "72",
-        "144",
-        "48"
+        "144"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "12 = 2²×3, 18 = 2×3², 24 = 2³×3. LCM = 2³×3² = 72.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1167,12 +1167,12 @@
       "difficulty": "hard",
       "stem": "A boat goes 24 km upstream in 6 h and 24 km downstream in 3 h. Speed of current?",
       "options": [
-        "2 km/h",
-        "3 km/h",
         "4 km/h",
-        "6 km/h"
+        "6 km/h",
+        "2 km/h",
+        "3 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Upstream = 24/6 = 4 km/h. Downstream = 24/3 = 8 km/h. Current = (8−4)/2 = 2 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1193,12 +1193,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills in 12 h, Pipe B empties in 18 h. Both open, tank full in:",
       "options": [
-        "30 h",
         "36 h",
         "24 h",
-        "15 h"
+        "15 h",
+        "30 h"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Net rate = 1/12 − 1/18 = 1/36 per hour. Time = 36 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1219,12 +1219,12 @@
       "difficulty": "easy",
       "stem": "Ratio of ages A:B = 3:5. After 8 years, ratio = 5:7. B's present age?",
       "options": [
+        "32 years",
         "16 years",
         "20 years",
-        "24 years",
-        "32 years"
+        "24 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A = 3x, B = 5x. (3x+8)/(5x+8) = 5/7 → 21x+56 = 25x+40 → 4x=16 → x=4. B = 20.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1245,12 +1245,12 @@
       "difficulty": "medium",
       "stem": "Water must be mixed with milk at Rs.40/litre to get mixture at Rs.25/litre in ratio:",
       "options": [
-        "3:5",
-        "5:3",
         "3:8",
-        "8:5"
+        "8:5",
+        "3:5",
+        "5:3"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Alligation: Water(0) and Milk(40). Mean = 25. Ratio = (40−25):(25−0) = 15:25 = 3:5. Water:Milk = 3:5.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1271,12 +1271,12 @@
       "difficulty": "medium",
       "stem": "Two trains of 120 m and 180 m run in opposite directions at 54 and 72 km/h. Time to cross?",
       "options": [
-        "6 sec",
         "8 sec",
         "10 sec",
-        "12 sec"
+        "12 sec",
+        "6 sec"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Relative speed = 54+72 = 126 km/h = 35 m/s. Distance = 300 m. Time = 300/35 ≈ 8.57 sec. Closest: 8 sec.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "What comes next: 3, 8, 18, 38, 78, ?",
       "options": [
+        "138",
         "148",
         "158",
-        "168",
-        "138"
+        "168"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Differences: 5, 10, 20, 40, 80 (doubling). Next = 78 + 80 = 158.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1328,7 +1328,7 @@
         "OWODCK",
         "OWODCK"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Each letter shifted by +2: D→F, E→G, L→N, H→J, I→K. So DELHI → FGNJK... Let me verify: D(4)→F(6)+2, E(5)→G(7)+2, L(12)→N(14)+2, H(8)→J(10)+2, I(9)→K(11)+2. DELHI → FGNJK. For MUMBAI: M(13)→O(15), U(21)→W(23), M(13)→O(15), B(2)→D(4), A(1)→C(3), I(9)→K(11) = OWODCK.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1349,12 +1349,12 @@
       "difficulty": "easy",
       "stem": "A says to B, 'Your mother is the only daughter of my mother.' How is A related to B?",
       "options": [
-        "Mother",
         "Sister",
         "Grandmother",
-        "Aunt"
+        "Aunt",
+        "Mother"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "'Only daughter of my mother' = A herself. So 'your mother' = A. A is B's mother.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1375,12 +1375,12 @@
       "difficulty": "medium",
       "stem": "A man walks 8 km North, turns right walks 6 km, turns right walks 8 km. How far from start and direction?",
       "options": [
+        "14 km North",
         "6 km East",
         "6 km West",
-        "10 km East",
-        "14 km North"
+        "10 km East"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Start: 8 km N → (0,8). Right(E) 6 km → (6,8). Right(S) 8 km → (6,0). Distance = 6 km East.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1401,12 +1401,12 @@
       "difficulty": "easy",
       "stem": "Statements: All dogs are animals. Some animals are cats. Conclusions: I. Some dogs are cats. II. Some cats are animals.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Depends on material properties",
+        "Applies to specific environments",
+        "Common in all rock types",
+        "Suitable for high-rise buildings"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "From the given statements, 'Some cats are animals' follows by conversion of statement 2. We cannot conclude 'Some dogs are cats' — the cats that are animals may not be dogs.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1427,12 +1427,12 @@
       "difficulty": "medium",
       "stem": "If X > Y ≥ Z > W, which is definitely true?",
       "options": [
-        "X > Z",
         "X > W",
         "Y > W",
-        "All of the above"
+        "Suitable for high-rise buildings",
+        "X > Z"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "X > Z (via Y), X > W (transitivity), Y > W (direct). All are true.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1453,12 +1453,12 @@
       "difficulty": "hard",
       "stem": "Five persons A, B, C, D, E sit in a row facing north. C is to the immediate right of A. B is at one end. E is to the immediate left of D. D is not next to B. Who sits at the left end?",
       "options": [
+        "E",
         "A",
         "B",
-        "C",
-        "E"
+        "C"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "B at right end (not next to D). E left of D together. C right of A. Arrangement: E D A C B. Left end = E.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1479,12 +1479,12 @@
       "difficulty": "medium",
       "stem": "In a class of 40, Rahul's rank from top is 15. Rank from bottom?",
       "options": [
-        "25",
-        "26",
         "27",
-        "28"
+        "28",
+        "25",
+        "26"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Rank from bottom = 40 − 15 + 1 = 26.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1505,12 +1505,12 @@
       "difficulty": "medium",
       "stem": "At 60 km/h a car reaches on time. At 40 km/h it is 2 hours late. Distance?",
       "options": [
-        "120 km",
         "240 km",
         "180 km",
-        "360 km"
+        "360 km",
+        "120 km"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "d/40 − d/60 = 2 → (3d−2d)/120 = 2 → d = 240 km.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1526,12 +1526,12 @@
       "difficulty": "hard",
       "stem": "Four friends P, Q, R, S sit around a square table, one on each side. P is to the left of Q. R is opposite P. Who is to the right of R?",
       "options": [
+        "Cannot be determined",
         "P",
         "Q",
-        "S",
-        "Cannot be determined"
+        "S"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "P left of Q (clockwise: Q, P, S, R). R opposite P. S is to the right of R.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1552,12 +1552,12 @@
       "difficulty": "easy",
       "stem": "India's coal production target for FY2025 is:",
       "options": [
-        "900 MT",
-        "1000 MT",
         "1200 MT",
-        "1500 MT"
+        "1500 MT",
+        "900 MT",
+        "1000 MT"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "India targets 1200 MT of coal production.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1573,12 +1573,12 @@
       "difficulty": "easy",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
-        "Delhi-Mumbai",
         "Mumbai-Ahmedabad",
         "Chennai-Bangalore",
-        "Kolkata-Hyderabad"
+        "Kolkata-Hyderabad",
+        "Delhi-Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The first bullet train project connects Mumbai and Ahmedabad.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1594,12 +1594,12 @@
       "difficulty": "medium",
       "stem": "BPCL recently commissioned a new refinery in:",
       "options": [
+        "Andhra Pradesh",
         "Assam",
         "Kerala",
-        "Maharashtra",
-        "Andhra Pradesh"
+        "Maharashtra"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "BPCL commissioned a refinery in Andhra Pradesh.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1615,12 +1615,12 @@
       "difficulty": "medium",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
-        "Mexico, Argentina",
-        "Saudi Arabia, Iran, UAE",
         "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Nigeria, South Africa",
+        "Mexico, Argentina",
+        "Saudi Arabia, Iran, UAE"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1636,12 +1636,12 @@
       "difficulty": "hard",
       "stem": "The G20 summit under India's presidency was held in:",
       "options": [
-        "Mumbai",
         "New Delhi",
         "Bengaluru",
-        "Chennai"
+        "Chennai",
+        "Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The G20 summit was held in New Delhi.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1657,12 +1657,12 @@
       "difficulty": "hard",
       "stem": "The Ujjwala Yojana provides:",
       "options": [
+        "Free internet",
         "Free electricity",
         "Free LPG connections",
-        "Free water supply",
-        "Free internet"
+        "Free water supply"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ujjwala Yojana provides free LPG connections to BPL families.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1678,12 +1678,12 @@
       "difficulty": "easy",
       "stem": "The President of India is elected by:",
       "options": [
-        "Lok Sabha members",
-        "Rajya Sabha members",
         "Electoral College",
-        "Prime Minister"
+        "Prime Minister",
+        "Lok Sabha members",
+        "Rajya Sabha members"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1699,12 +1699,12 @@
       "difficulty": "medium",
       "stem": "Upper House of Indian Parliament:",
       "options": [
-        "Lok Sabha",
         "Rajya Sabha",
         "Vidhan Sabha",
-        "Vidhan Parishad"
+        "Vidhan Parishad",
+        "Lok Sabha"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Rajya Sabha is the Upper House.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1720,12 +1720,12 @@
       "difficulty": "medium",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
+        "8",
         "5",
         "6",
-        "7",
-        "8"
+        "7"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1741,12 +1741,12 @@
       "difficulty": "hard",
       "stem": "Minimum age for Lok Sabha membership:",
       "options": [
-        "21 years",
-        "25 years",
         "30 years",
-        "35 years"
+        "35 years",
+        "21 years",
+        "25 years"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Minimum age for Lok Sabha membership is 25 years.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1762,12 +1762,12 @@
       "difficulty": "hard",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
         "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1783,12 +1783,12 @@
       "difficulty": "hard",
       "stem": "She is proficient ___ English.",
       "options": [
+        "of",
         "on",
         "at",
-        "in",
-        "of"
+        "in"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1804,12 +1804,12 @@
       "difficulty": "hard",
       "stem": "The teacher told the students ___ quietly.",
       "options": [
-        "to study",
-        "study",
         "studying",
-        "studied"
+        "studied",
+        "to study",
+        "study"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Infinitive after 'told': told someone to do something.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1825,12 +1825,12 @@
       "difficulty": "easy",
       "stem": "What is the meaning of 'pragmatic'?",
       "options": [
-        "Idealistic",
         "Practical",
         "Theoretical",
-        "Emotional"
+        "Emotional",
+        "Idealistic"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Pragmatic means dealing with things practically.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1846,12 +1846,12 @@
       "difficulty": "medium",
       "stem": "___ honest man always speaks the truth.",
       "options": [
+        "No article",
         "A",
         "An",
-        "The",
-        "No article"
+        "The"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1867,12 +1867,12 @@
       "difficulty": "medium",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
-        "at",
         "off",
-        "up"
+        "up",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1888,12 +1888,12 @@
       "difficulty": "hard",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
         "are",
         "was",
-        "have been"
+        "have been",
+        "were"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1909,12 +1909,12 @@
       "difficulty": "hard",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
+        "Slow",
         "Lazy",
         "Hardworking",
-        "Careless",
-        "Slow"
+        "Careless"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1930,12 +1930,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'benevolent':",
       "options": [
-        "Kind",
-        "Malevolent",
         "Generous",
-        "Charitable"
+        "Charitable",
+        "Kind",
+        "Malevolent"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Benevolent means well-meaning; malevolent means ill-willed.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1951,12 +1951,12 @@
       "difficulty": "medium",
       "stem": "By the time we arrive, they ___ already left.",
       "options": [
-        "will",
         "would",
         "will have",
-        "would have"
+        "would have",
+        "will"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Future perfect: will have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,

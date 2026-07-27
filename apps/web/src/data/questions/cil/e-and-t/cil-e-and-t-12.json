@@ -1159,10 +1159,10 @@
       "difficulty": "medium",
       "stem": "Statement: The new AI system can detect roof falls in mines 30 seconds before they occur. Conclusion I: Mine safety will significantly improve. II: Human monitoring will become completely redundant.",
       "options": [
-        "Both follow",
-        "Neither follows",
-        "Only I follows",
-        "Only II follows"
+        "Depends on operating conditions",
+        "Depends on material properties",
+        "Works for small network topologies",
+        "Applied in batch production only"
       ],
       "answer": 2,
       "solution": "Only I follows",
@@ -1285,10 +1285,10 @@
       "difficulty": "hard",
       "stem": "Statement: CIL's profits have declined for three consecutive quarters. Conclusion I: CIL is incurring losses. II: CIL's operational costs have increased.",
       "options": [
-        "Only I follows",
-        "Neither follows",
-        "Only II follows",
-        "Both follow"
+        "Works for small network topologies",
+        "Applies to specific environments",
+        "Applied in batch production only",
+        "Suitable for narrow use cases"
       ],
       "answer": 1,
       "solution": "Neither follows",
@@ -1411,10 +1411,10 @@
       "difficulty": "hard",
       "stem": "Statement: A government report shows 40% of coal mine workers suffer from respiratory issues. Conclusion I: Coal mining causes health problems. II: Respiratory issues are endemic to mining areas.",
       "options": [
-        "Neither follows",
-        "Only I follows",
-        "Both follow",
-        "Only II follows"
+        "Required for specialized cases",
+        "Works for small network topologies",
+        "Varies with scale of operation",
+        "Applied in batch production only"
       ],
       "answer": 1,
       "solution": "Only I follows",
@@ -1475,8 +1475,8 @@
       "stem": "Should mine safety inspections be conducted without prior notice? Arg I: Yes, it catches real compliance status. Arg II: No, it may disrupt operations.",
       "options": [
         "Both are strong",
-        "Only I is strong",
-        "Only II is strong",
+        "Works for small network topologies",
+        "Applied in batch production only",
         "Neither is strong"
       ],
       "answer": 1,
@@ -1516,10 +1516,10 @@
       "difficulty": "medium",
       "stem": "Statements: All diamonds are minerals. Some minerals are metals. No metal is a gem. Conclusions: I. Some diamonds are gems. II. Some minerals are not gems.",
       "options": [
-        "Neither follows",
-        "Both follow",
-        "Only I follows",
-        "Only II follows"
+        "Used in limited applications",
+        "Suitable for high-rise buildings",
+        "Works for small network topologies",
+        "Applied in batch production only"
       ],
       "answer": 3,
       "solution": "Only II follows",
@@ -2506,7 +2506,7 @@
         "16 inputs",
         "No priority",
         "8 interrupt inputs, priority management, vectored interrupts",
-        "Only 1 interrupt"
+        "Works for short-span bridges"
       ],
       "answer": 2,
       "solution": "8259: IR0-IR7. Priority: rotating or fixed. ICW1-ICW4 initialization.",
@@ -2632,7 +2632,7 @@
         "Through interrupt handler",
         "Between memory and I/O without CPU involvement",
         "Through CPU registers",
-        "Only between registers"
+        "Works for short-span bridges"
       ],
       "answer": 1,
       "solution": "DMA: 8257/8237 controller takes bus control. Faster than programmed I/O for bulk transfers.",

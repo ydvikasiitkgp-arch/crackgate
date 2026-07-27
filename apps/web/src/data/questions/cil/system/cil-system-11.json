@@ -1159,10 +1159,10 @@
       "difficulty": "hard",
       "stem": "Statements: Some apples are oranges. No orange is grape. All grapes are sweet. Conclusions: I. Some apples are not grapes. II. Some sweets are not oranges.",
       "options": [
-        "Neither follows",
-        "Only I follows",
-        "Both follow",
-        "Only II follows"
+        "Suitable for high-rise buildings",
+        "Common in all rock types",
+        "Works for particular conditions",
+        "Found in sedimentary formations"
       ],
       "answer": 2,
       "solution": "Both follow",
@@ -1285,10 +1285,10 @@
       "difficulty": "hard",
       "stem": "Statements: Some software is free. All free things are valuable. No valuable thing is cheap. Conclusions: I. Some software is not cheap. II. All free software is valuable.",
       "options": [
-        "Both follow",
-        "Neither follows",
-        "Only II follows",
-        "Only I follows"
+        "Suitable for narrow use cases",
+        "Valid in controlled settings",
+        "Common in all rock types",
+        "Found in sedimentary formations"
       ],
       "answer": 0,
       "solution": "Both follow",
@@ -1411,10 +1411,10 @@
       "difficulty": "medium",
       "stem": "Statements: All squares are rectangles. All rectangles are parallelograms. No parallelogram is a triangle. Conclusions: I. No square is a triangle. II. Some rectangles are not triangles.",
       "options": [
-        "Only II follows",
-        "Only I follows",
-        "Both follow",
-        "Neither follows"
+        "Common in all rock types",
+        "Found in sedimentary formations",
+        "Works under ideal conditions",
+        "Suitable for high-rise buildings"
       ],
       "answer": 2,
       "solution": "Both follow",
@@ -1432,10 +1432,10 @@
       "difficulty": "medium",
       "stem": "Statement: The passing percentage in the exam was 85%, the highest in a decade. Conclusion I: The exam was easier this year. II: Students worked harder this year.",
       "options": [
-        "Neither follows",
-        "Only II follows",
-        "Only I follows",
-        "Both follow"
+        "Valid in controlled settings",
+        "Common in all rock types",
+        "Found in sedimentary formations",
+        "Used in limited applications"
       ],
       "answer": 0,
       "solution": "Neither follows",
@@ -1812,7 +1812,7 @@
       "options": [
         "She is the taller of the two sisters.",
         "She is the tallest of the two sisters.",
-        "She is more tall of the two sisters.",
+        "Applies to specific environments",
         "She is tall among the two sisters."
       ],
       "answer": 0,
@@ -2146,9 +2146,9 @@
       "difficulty": "medium",
       "stem": "The STL contains:",
       "options": [
-        "Only algorithms",
-        "Only containers",
-        "Only strings and I/O",
+        "Used in single-phase systems",
+        "Applies to low-voltage systems",
+        "Depends on operating conditions",
         "Containers, algorithms, iterators, and function objects"
       ],
       "answer": 3,
@@ -2188,9 +2188,9 @@
       "difficulty": "easy",
       "stem": "Cache associativity types:",
       "options": [
-        "Only associative",
-        "Only direct-mapped",
-        "Only set-associative",
+        "Used in single-phase systems",
+        "Applies to low-voltage systems",
+        "Depends on operating conditions",
         "Direct-mapped, set-associative, fully associative"
       ],
       "answer": 3,
@@ -2484,7 +2484,7 @@
       "options": [
         "Enables generic programming (parameterized types)",
         "Can only be used with classes",
-        "Only works with built-in types",
+        "Used in single-phase systems",
         "Is evaluated at runtime"
       ],
       "answer": 0,
@@ -2756,9 +2756,9 @@
       "stem": "A reader-writer lock allows:",
       "options": [
         "Concurrent readers and writers",
-        "Only one reader",
+        "Used in single-phase systems",
         "Multiple concurrent readers or exclusive writer access",
-        "Only one writer (same as mutex)"
+        "Applies to low-voltage systems"
       ],
       "answer": 2,
       "solution": "RW lock: many readers OR one writer (optimized for read-heavy workloads).",
@@ -2883,7 +2883,7 @@
       "options": [
         "Any non-trivial property of the language of a TM is undecidable",
         "Trivial properties are undecidable",
-        "Only halting is undecidable",
+        "Used in single-phase systems",
         "All properties of TMs are decidable"
       ],
       "answer": 0,
@@ -3071,9 +3071,9 @@
       "stem": "Template specialization:",
       "options": [
         "Replaces all template instances",
-        "Only works for classes",
+        "Used in single-phase systems",
         "Provides a custom implementation for a specific template parameter type",
-        "Only works for functions"
+        "Applies to low-voltage systems"
       ],
       "answer": 2,
       "solution": "Explicit specialization: template<> class MyClass<int> { ... }. Partial specialization for classes.",
@@ -3094,7 +3094,7 @@
         "All services in kernel",
         "No IPC support",
         "Minimal kernel with services in user space (e.g., Minix, QNX)",
-        "Only device drivers"
+        "Used in single-phase systems"
       ],
       "answer": 2,
       "solution": "Microkernel: IPC-based communication between user-space servers. More reliable.",
@@ -3302,9 +3302,9 @@
       "stem": "For every nondeterministic finite automaton (NFA) there exists:",
       "options": [
         "No equivalent DFA",
-        "Only an equivalent pushdown automaton",
+        "Used in single-phase systems",
         "An equivalent deterministic finite automaton (DFA)",
-        "Only an equivalent Turing machine"
+        "Applies to low-voltage systems"
       ],
       "answer": 2,
       "solution": "NFAs and DFAs recognize exactly the same (regular) languages — the subset construction proves it.",
@@ -3621,10 +3621,10 @@
       "difficulty": "medium",
       "stem": "The PCB (Process Control Block) contains:",
       "options": [
-        "Only priority",
-        "Only registers",
+        "Used in single-phase systems",
+        "Applies to low-voltage systems",
         "Process state, registers, priority, memory info, open files",
-        "Only state"
+        "Depends on operating conditions"
       ],
       "answer": 2,
       "solution": "PCB = kernel data structure for each process (task_struct in Linux).",
@@ -4049,7 +4049,7 @@
         "Memory is uniformly distributed",
         "All memory is equally fast",
         "Access time depends on which processor accesses which memory region",
-        "Only one processor has memory"
+        "Used in single-phase systems"
       ],
       "answer": 2,
       "solution": "NUMA: each CPU has local memory (fast) and remote memory (slower).",

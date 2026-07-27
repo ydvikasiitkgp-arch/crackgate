@@ -18,12 +18,12 @@
       "difficulty": "hard",
       "stem": "The lithosphere-asthenosphere boundary (LAB) is primarily defined by:",
       "options": [
-        "A sharp seismic velocity discontinuity at 35 km depth globally",
         "A rheological transition from rigid to ductile behavior due to temperature-dependent viscosity",
         "A chemical boundary separating felsic crust from mafic upper mantle",
-        "A magnetic polarity transition marking the base of the Curie isotherm"
+        "A magnetic polarity transition marking the base of the Curie isotherm",
+        "A sharp seismic velocity discontinuity at 35 km depth globally"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The LAB is a rheological boundary where the rigid lithospheric plate overlies the ductile asthenosphere, characterized by elevated temperature causing partial melting and reduced viscosity.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -39,12 +39,12 @@
       "difficulty": "medium",
       "stem": "In the framework of whole-mantle convection, the D\" layer at the core-mantle boundary is most commonly associated with:",
       "options": [
+        "An isostatic compensation zone for oceanic trench subduction",
         "Complete chemical homogenization of lower and upper mantle material",
         "A thermal boundary layer with possible chemical heterogeneity and ultra-low velocity zones",
-        "A purely seismic velocity gradient produced by iron depletion in the lower mantle",
-        "An isostatic compensation zone for oceanic trench subduction"
+        "A purely seismic velocity gradient produced by iron depletion in the lower mantle"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The D\" layer (~200 km thick) is a thermal boundary layer at the base of the mantle exhibiting ultra-low velocity zones (ULVZs), possible chemical heterogeneity, and post-perovskite phase transitions, representing a complex thermochemical boundary.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -60,12 +60,12 @@
       "difficulty": "hard",
       "stem": "The Rayleigh number determines the onset of convection in a fluid layer. Which parameter does NOT directly appear in the Rayleigh number expression?",
       "options": [
-        "Thermal diffusivity",
-        "Gravitational acceleration",
         "Magnetic permeability",
-        "Coefficient of thermal expansion"
+        "Coefficient of thermal expansion",
+        "Thermal diffusivity",
+        "Gravitational acceleration"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The Rayleigh number Ra = (ρgαβd⁴)/(κη) involves thermal diffusivity κ, gravitational acceleration g, thermal expansion α, but NOT magnetic permeability. Magnetic effects are captured separately by the magnetic Prandtl number.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -81,12 +81,12 @@
       "difficulty": "hard",
       "stem": "Which of the following is the largest single source of error in single-frequency GPS positioning?",
       "options": [
-        "Multipath effects",
         "Ionospheric delay",
         "Receiver clock error",
-        "Satellite ephemeris error"
+        "Satellite ephemeris error",
+        "Multipath effects"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ionospheric delay is the largest error source for single-frequency GPS, contributing 2–50 m depending on solar activity. Dual-frequency receivers can eliminate ~99% of this error using the dispersive nature of the ionosphere.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -102,12 +102,12 @@
       "difficulty": "hard",
       "stem": "The seven-parameter Helmert transformation (Bursa-Wolf) for converting between geodetic datums requires minimum how many control points, and which parameters are solved?",
       "options": [
+        "4 points; 3 translations, 3 rotations, 1 scale factor, and 1 datum shift",
         "1 point; 3 translations only",
         "2 points; 3 translations and 1 scale factor",
-        "3 points; 3 translations, 3 rotations, and 1 scale factor",
-        "4 points; 3 translations, 3 rotations, 1 scale factor, and 1 datum shift"
+        "3 points; 3 translations, 3 rotations, and 1 scale factor"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The Bursa-Wolf model solves 7 parameters (3 translations Tx, Ty, Tz; 3 rotations Rx, Ry, Rz; 1 scale factor ΔS) requiring a minimum of 3 common points for a unique solution, though 4+ points are used for least-squares adjustment.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -123,12 +123,12 @@
       "difficulty": "easy",
       "stem": "The geoid undulation N at any point represents the separation between:",
       "options": [
-        "The mean sea level and the topographic surface",
-        "The reference ellipsoid and the telluroid",
         "The reference ellipsoid and the geoid surface along the plumb line",
-        "The geoid surface and the ellipsoidal height measured by GPS"
+        "The geoid surface and the ellipsoidal height measured by GPS",
+        "The mean sea level and the topographic surface",
+        "The reference ellipsoid and the telluroid"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Geoid undulation N = h − H, where h is the ellipsoidal height (GPS) and H is the orthometric height (levelling). It represents the perpendicular distance between the reference ellipsoid and the geoid along the plumb line.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -149,12 +149,12 @@
       "difficulty": "medium",
       "stem": "The seismic moment M₀ of an earthquake is related to fault parameters by M₀ = μAD. In this expression, which combination correctly identifies all three parameters?",
       "options": [
-        "μ = seismic velocity, A = epicentral area, D = depth to hypocenter",
         "μ = rigidity of the source rock, A = rupture area, D = average slip on the fault",
         "μ = viscosity of the crust, A = aftershock area, D = displacement of seismograph",
-        "μ = density of the mantle, A = surface projection of fault, D = focal depth"
+        "μ = density of the mantle, A = surface projection of fault, D = focal depth",
+        "μ = seismic velocity, A = epicentral area, D = depth to hypocenter"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "M₀ = μAD where μ is the shear modulus (rigidity) of the rock at the source (~3×10¹⁰ Pa), A is the fault rupture area, and D is the average displacement (slip) across the fault. This is the fundamental definition of seismic moment.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -175,12 +175,12 @@
       "difficulty": "medium",
       "stem": "In an elastic half-space, the ratio of P-wave velocity to S-wave velocity depends solely on:",
       "options": [
+        "Depth and lateral extent of the seismic source",
         "Density and gravitational acceleration",
         "Bulk modulus and shear modulus (Poisson's ratio)",
-        "Frequency and wavelength of the seismic wave",
-        "Depth and lateral extent of the seismic source"
+        "Frequency and wavelength of the seismic wave"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Vp/Vs = √[(λ+2μ)/μ] where λ is Lamé's first parameter and μ is the shear modulus. For a Poisson solid (λ = μ), Vp/Vs = √3 ≈ 1.732, depending solely on elastic moduli (Poisson's ratio).",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -202,12 +202,12 @@
       "stress": "true",
       "stem": "The concept of seismic gap in earthquake forecasting is based on the premise that:",
       "options": [
-        "Regions with low seismicity are always aseismic and pose no hazard",
-        "Segments of active faults that have not ruptured recently are likely to accumulate strain energy and produce future large earthquakes",
         "Gaps in seismograph coverage lead to underestimation of earthquake magnitudes",
-        "Foreshock sequences create temporary gaps in background seismicity before mainshocks"
+        "Foreshock sequences create temporary gaps in background seismicity before mainshocks",
+        "Regions with low seismicity are always aseismic and pose no hazard",
+        "Segments of active faults that have not ruptured recently are likely to accumulate strain energy and produce future large earthquakes"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Seismic gaps are fault segments that have not experienced significant earthquakes for an unusually long time relative to adjacent segments. The seismic gap hypothesis posits these segments are locked and accumulating strain, making them candidates for future large earthquakes.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -228,12 +228,12 @@
       "difficulty": "hard",
       "stem": "In potential field theory, Laplace's equation ∇²V = 0 applies in regions that are:",
       "options": [
-        "Within any source mass or magnetization distribution",
-        "Source-free, i.e., outside the region containing mass or magnetic sources",
         "At the Earth's surface where boundary conditions are applied",
-        "Inside the Earth's core where thermal sources dominate"
+        "Inside the Earth's core where thermal sources dominate",
+        "Within any source mass or magnetization distribution",
+        "Source-free, i.e., outside the region containing mass or magnetic sources"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Laplace's equation holds in source-free regions (outside the mass/magnetic distribution). Poisson's equation ∇²V = −4πGρ applies inside source regions. The solution to Laplace's equation in spherical harmonics is fundamental to global gravity field modeling.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -249,12 +249,12 @@
       "difficulty": "hard",
       "stem": "In the diffusion approximation of Maxwell's equations applicable to EM induction in the Earth, the displacement current term is neglected because:",
       "options": [
-        "The Earth has zero permittivity at all frequencies",
         "The conduction current dominates when the frequency is low and conductivity is high, making σ ≫ ωε",
         "The magnetic field is always perpendicular to the electric field in conductive media",
-        "The displacement current only affects wave propagation in vacuum, not in solids"
+        "The displacement current only affects wave propagation in vacuum, not in solids",
+        "The Earth has zero permittivity at all frequencies"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In conducting media like the Earth, the conduction current J = σE dominates over the displacement current Ḋ = ε(∂E/∂t) when σ ≫ ωε, which holds for all frequencies below ~10⁸ Hz. This reduces Maxwell's equations to the diffusion equation.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -275,12 +275,12 @@
       "difficulty": "easy",
       "stem": "The unit of electrical conductivity commonly used in geophysical EM methods is:",
       "options": [
+        "Farad per meter (F/m)",
         "Ohm (Ω)",
         "Siemens per meter (S/m)",
-        "Henry per meter (H/m)",
-        "Farad per meter (F/m)"
+        "Henry per meter (H/m)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Electrical conductivity σ is measured in Siemens per meter (S/m). In geophysics, the resistivity ρ = 1/σ is often used instead, measured in Ohm-meters (Ω·m). Typical Earth materials range from 10⁻⁵ S/m (granite) to 10² S/m (massive sulfides).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -296,12 +296,12 @@
       "difficulty": "hard",
       "stem": "When performing upward continuation to separate regional from residual gravity anomalies, the continuation operation:",
       "options": [
-        "Amplifies high-frequency components and suppresses deep, long-wavelength signals",
-        "Suppresses high-frequency (shallow) components while preserving or enhancing deep, long-wavelength (regional) signals",
         "Creates artificial anomalies that must be removed by additional filtering",
-        "Is only applicable to aeromagnetic data and not to gravity data"
+        "Is only applicable to aeromagnetic data and not to gravity data",
+        "Amplifies high-frequency components and suppresses deep, long-wavelength signals",
+        "Suppresses high-frequency (shallow) components while preserving or enhancing deep, long-wavelength (regional) signals"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Upward continuation to height h acts as a low-pass filter, attenuating short-wavelength (shallow/residual) anomalies proportional to exp(−kz) while preserving long-wavelength (deep/regional) signals. This is a mathematically rigorous method for regional-residual separation.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -317,12 +317,12 @@
       "difficulty": "easy",
       "stem": "The second vertical derivative of gravity data is most useful for:",
       "options": [
-        "Determining the depth to the Moho discontinuity",
         "Enhancing shallow anomaly sources and sharpening the edges of anomalies from near-surface bodies",
         "Removing the effect of topography from Bouguer anomaly maps",
-        "Converting gravity data to equivalent magnetic data for joint inversion"
+        "Converting gravity data to equivalent magnetic data for joint inversion",
+        "Determining the depth to the Moho discontinuity"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The second vertical derivative (2VD) is a high-pass filter that emphasizes shallow sources and sharpens anomaly edges. It helps delineate the lateral extent of near-surface density contrasts but amplifies noise, requiring careful regularization.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -339,12 +339,12 @@
       "stress": "true",
       "stem": "In gravity interpretation, the principle of equivalence states that:",
       "options": [
+        "The Bouguer anomaly is always equivalent to the free-air anomaly over flat terrain",
         "Two bodies with identical densities must produce identical gravity anomalies",
         "A shallow, low-density body can produce the same gravity anomaly as a deeper, higher-density body if their products of density contrast and volume are equal",
-        "Gravity and magnetic anomalies over the same body are always equivalent in shape",
-        "The Bouguer anomaly is always equivalent to the free-air anomaly over flat terrain"
+        "Gravity and magnetic anomalies over the same body are always equivalent in shape"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Equivalence means different combinations of depth, geometry, and density contrast can produce identical gravity anomalies, making gravity interpretation inherently non-unique. This underscores the need for geological constraints and integrated interpretation.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -360,12 +360,12 @@
       "difficulty": "easy",
       "stem": "The analytic signal amplitude of a 2D magnetic anomaly is defined as A(x) = √[(∂T/∂x)² + (∂T/∂z)²]. Its key advantage for magnetic interpretation is that:",
       "options": [
-        "It is only sensitive to the magnetization direction and not to the body geometry",
-        "It produces maxima directly over the edges of magnetic bodies, regardless of the ambient field direction or remanent magnetization",
         "It eliminates the need for pole reduction before anomaly interpretation",
-        "It converts total magnetic field data to equivalent gravity data"
+        "It converts total magnetic field data to equivalent gravity data",
+        "It is only sensitive to the magnetization direction and not to the body geometry",
+        "It produces maxima directly over the edges of magnetic bodies, regardless of the ambient field direction or remanent magnetization"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The analytic signal amplitude is independent of the direction of magnetization and ambient field (for simple 2D sources), producing maxima over causative body edges. This makes it a powerful tool for contact location without requiring pole reduction.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -386,12 +386,12 @@
       "difficulty": "medium",
       "stem": "Euler deconvolution uses the homogeneity equation: (x−x₀)∂T/∂x + (y−y₀)∂T/∂y + (z−z₀)∂T/∂z = N(B−T). The structural index N for a thin dike source in 2D magnetic data is:",
       "options": [
-        "N = 0 (for a step/contact)",
         "N = 1 (for a thin dike)",
         "N = 2 (for a horizontal cylinder)",
-        "N = 3 (for a sphere)"
+        "N = 3 (for a sphere)",
+        "N = 0 (for a step/contact)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The structural index N characterizes the rate of decay of the anomaly with distance. For 2D sources: N=0 (contact/step), N=1 (thin dike/sill), N=2 (horizontal cylinder), N=3 (sphere/pole). Correct N selection is critical for accurate depth estimation.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -407,12 +407,12 @@
       "difficulty": "easy",
       "stem": "Reduction to the pole (RTP) of magnetic data is performed to:",
       "options": [
+        "Enhance deep magnetic sources by suppressing shallow anomalies",
         "Remove the effect of diurnal variation from ground magnetic surveys",
         "Reposition magnetic anomalies to lie directly over their causative sources by simulating a vertical magnetic field direction",
-        "Convert magnetic field data to apparent resistivity sections",
-        "Enhance deep magnetic sources by suppressing shallow anomalies"
+        "Convert magnetic field data to apparent resistivity sections"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "RTP transforms magnetic data to what it would look like if the ambient field and magnetization were both vertical (as at the magnetic pole). This simplifies interpretation by centering anomalies over their sources, but is unstable near the magnetic equator.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -428,12 +428,12 @@
       "difficulty": "medium",
       "stem": "In 2D electrical resistivity tomography (ERT), the Wenner array provides:",
       "options": [
-        "Better lateral resolution but poor depth of investigation compared to the Schlumberger array",
-        "Good signal-to-noise ratio and sensitivity to vertical resistivity changes, but limited lateral resolution",
         "Uniform sensitivity at all depths with no geometric factor",
-        "Compatibility with cross-borehole surveys only"
+        "Compatibility with cross-borehole surveys only",
+        "Better lateral resolution but poor depth of investigation compared to the Schlumberger array",
+        "Good signal-to-noise ratio and sensitivity to vertical resistivity changes, but limited lateral resolution"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Wenner array offers high signal-to-noise ratio and good vertical resolution (sensitivity to layered structures) but limited lateral resolution compared to dipole-dipole. Its geometric factor is constant at 2πa, making data acquisition straightforward.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -450,12 +450,12 @@
       "stress": "true",
       "stem": "In least-squares inversion of ERT data, the regularization parameter α in the objective function Φ = Φd + αΦm controls:",
       "options": [
-        "The number of iterations allowed before convergence",
         "The trade-off between fitting the observed data (Φd) and the model smoothness/constraints (Φm)",
         "The initial resistivity value assigned to the starting model",
-        "The depth of investigation of the survey configuration"
+        "The depth of investigation of the survey configuration",
+        "The number of iterations allowed before convergence"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "α balances data misfit (Φd) against model roughness (Φm). Large α produces smooth models that fit data poorly; small α fits data closely but may produce oscillatory, geologically implausible models. Optimal α is chosen via L-curve analysis or discrepancy principle.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -476,12 +476,12 @@
       "difficulty": "hard",
       "stem": "The self-potential (SP) anomaly over a sulfide ore body is primarily generated by:",
       "options": [
+        "Thermoelectric effects from geothermal gradients",
         "Piezoelectric effects in quartz-bearing host rocks",
         "Electrochemical (redox) potential due to differences in oxidation conditions between the top and bottom of the conductor",
-        "Induced polarization from the transmitter electrode",
-        "Thermoelectric effects from geothermal gradients"
+        "Induced polarization from the transmitter electrode"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SP over massive sulfides is primarily an electrochemical (self-potential) phenomenon driven by redox gradients. The top of the body in the oxidized zone acts as a cathode and the bottom in the reduced zone as an anode, creating a natural battery effect producing negative SP anomalies.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -497,12 +497,12 @@
       "difficulty": "medium",
       "stem": "In time-domain electromagnetic (TDEM) sounding, the late-time decay of the secondary magnetic field from a conductive plate follows:",
       "options": [
-        "An exponential decay with time constant τ = L/R",
-        "A power-law decay proportional to t^(-5/2) for a sphere, or t^(-2) for a thin sheet",
         "A sinusoidal oscillation at the Larmor frequency",
-        "A constant amplitude until the transmitter is re-energized"
+        "A constant amplitude until the transmitter is re-energized",
+        "An exponential decay with time constant τ = L/R",
+        "A power-law decay proportional to t^(-5/2) for a sphere, or t^(-2) for a thin sheet"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Late-time TDEM responses decay as power laws: ~t^(-5/2) for spherical conductors, ~t^(-2) for thin sheets, and ~t^(-3/2) for half-space responses. The decay rate depends on the conductor geometry and conductivity, not just the time constant L/R.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -518,12 +518,12 @@
       "difficulty": "medium",
       "stem": "A conductive weathered overburden layer in EM surveying primarily affects the anomaly by:",
       "options": [
-        "Enhancing the amplitude of anomalies from deeper targets",
         "Attenuating the primary field reaching the target and generating a strong secondary response that masks deeper conductor responses",
         "Changing the frequency of the transmitted EM signal",
-        "Creating artificial magnetic anomalies that interfere with magnetotelluric data"
+        "Creating artificial magnetic anomalies that interfere with magnetotelluric data",
+        "Enhancing the amplitude of anomalies from deeper targets"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Conductive overburden attenuates the primary EM field (skin depth effect) and generates a strong secondary response that can mask deeper conductor anomalies. This is a major challenge in EM prospecting in tropical lateritic terrains.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -540,12 +540,12 @@
       "stress": "true",
       "stem": "The skin depth δ in EM methods is given by δ = √(2/ωμσ). Increasing the operating frequency will:",
       "options": [
+        "Increase the signal amplitude at all depths",
         "Increase the depth of investigation",
         "Decrease the depth of investigation but improve resolution of shallow structures",
-        "Have no effect on depth of investigation for a homogeneous half-space",
-        "Increase the signal amplitude at all depths"
+        "Have no effect on depth of investigation for a homogeneous half-space"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Higher frequency → smaller skin depth → shallower investigation but better resolution of near-surface features. Lower frequency → larger skin depth → deeper penetration but lower resolution. This is the fundamental trade-off in EM survey design.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -562,12 +562,12 @@
       "stress": "true",
       "stem": "A seismic 'dim spot' over a hydrocarbon reservoir indicates:",
       "options": [
-        "An increase in reflection amplitude due to gas-induced velocity pull-up",
-        "A decrease in reflection amplitude from the reservoir top due to a reduction in the impedance contrast between the cap rock and the reservoir rock",
         "Enhanced multiple reflections masking the primary reservoir event",
-        "A frequency increase caused by gas-related attenuation"
+        "A frequency increase caused by gas-related attenuation",
+        "An increase in reflection amplitude due to gas-induced velocity pull-up",
+        "A decrease in reflection amplitude from the reservoir top due to a reduction in the impedance contrast between the cap rock and the reservoir rock"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Dim spots occur when the acoustic impedance of the hydrocarbon-saturated reservoir is closer to (or greater than) the overlying cap rock, reducing the impedance contrast and hence reflection amplitude. This is common in high-porosity chalk reservoirs (e.g., North Sea).",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -583,12 +583,12 @@
       "difficulty": "medium",
       "stem": "The primary advantage of 4-component (4C) ocean-bottom seismometer (OBS) recording over conventional towed-streamer is:",
       "options": [
-        "Higher spatial resolution at shallow depths",
         "The ability to record both P-waves and converted S-waves (PS-waves), providing shear velocity information",
         "Faster data acquisition in deep-water environments",
-        "Elimination of the need for source dephasing"
+        "Elimination of the need for source dephasing",
+        "Higher spatial resolution at shallow depths"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "4C OBS records 3-component geophone (Z, X, Y) plus hydrophone data, enabling recording of both P-waves and converted S-waves (PS). S-waves provide lithology and fluid discrimination information not available from P-waves alone.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -604,12 +604,12 @@
       "difficulty": "medium",
       "stem": "Seismic interferometry (virtual source method) allows one to:",
       "options": [
+        "Increase the frequency content of seismic data beyond the source bandwidth",
         "Eliminate the need for a physical seismic source by cross-correlating responses at two receiver locations to create virtual source-receiver pairs",
         "Remove all multiples from seismic data without any prior velocity model",
-        "Convert P-wave data to S-wave data without mode conversion",
-        "Increase the frequency content of seismic data beyond the source bandwidth"
+        "Convert P-wave data to S-wave data without mode conversion"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Seismic interferometry uses cross-correlation (or convolution) of recorded wavefields at two receivers to synthesize the Green's function between them, effectively creating a virtual source at one receiver. This is valuable for imaging beneath complex overburden.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -626,12 +626,12 @@
       "stress": "true",
       "stem": "In AVO analysis, a Class III AVO anomaly is characterized by:",
       "options": [
-        "A low-impedance gas sand producing a negative intercept (A) with increasing magnitude of negative gradient (B)",
-        "A high-impedance carbonate producing a positive intercept with positive gradient",
         "Zero intercept with a strong positive gradient indicating a thin bed effect",
-        "A negative intercept with a positive gradient approaching zero at far offsets"
+        "A negative intercept with a positive gradient approaching zero at far offsets",
+        "A low-impedance gas sand producing a negative intercept (A) with increasing magnitude of negative gradient (B)",
+        "A high-impedance carbonate producing a positive intercept with positive gradient"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Class III AVO (Rutherford & Williams, 1989): low-impedance gas sand beneath higher-impedance shale, producing negative A and negative B. The reflection becomes more negative with increasing offset, producing a bright spot that strengthens at far offsets.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -647,12 +647,12 @@
       "difficulty": "medium",
       "stem": "Gassmann's fluid substitution equation relates the saturated rock bulk modulus Ksat to the dry rock bulk modulus Kdry. The equation requires knowledge of:",
       "options": [
-        "Only the porosity and mineral bulk modulus",
         "The dry rock bulk modulus, porosity, mineral bulk modulus, and the bulk moduli of the pore fluid and mineral",
         "The shear modulus of the fluid and the dry rock density only",
-        "The seismic velocity of the rock at two different confining pressures"
+        "The seismic velocity of the rock at two different confining pressures",
+        "Used for static loading only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Gassmann's equation: Ksat = Kdry + (1 − Kdry/Kmin)² / [φ/Kfl + (1−φ)/Kmin − Kdry/Kmin²]. It requires Kdry, φ, Kmin, and Kfl. The shear modulus is assumed unaffected by fluid (μsat = μdry). Applicable only at low frequencies (relaxed limit).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -669,12 +669,12 @@
       "stress": "true",
       "stem": "In 3D seismic survey design, the concept of 'bin size' determines:",
       "options": [
+        "The frequency bandwidth of the recorded data",
         "The maximum depth of investigation",
         "The spatial sampling interval in the inline and crossline directions, controlling spatial resolution and aliasing",
-        "The number of channels per shot record",
-        "The frequency bandwidth of the recorded data"
+        "The number of channels per shot record"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Bin size (typically 12.5m × 12.5m or 6.25m × 6.25m) is the spatial grid cell to which all traces are sorted. Smaller bins improve spatial resolution and reduce spatial aliasing but increase fold and acquisition cost. Bin size must satisfy the spatial Nyquist criterion.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -695,12 +695,12 @@
       "difficulty": "medium",
       "stem": "The analytic signal formed by combining a real seismic trace with its Hilbert transform provides:",
       "options": [
-        "The instantaneous frequency only, with no phase information",
-        "A complex-valued signal whose envelope represents instantaneous amplitude and whose phase angle gives instantaneous phase",
         "A zero-phase version of the original trace with doubled amplitude",
-        "The power spectral density of the trace for frequency-domain processing"
+        "The power spectral density of the trace for frequency-domain processing",
+        "The instantaneous frequency only, with no phase information",
+        "A complex-valued signal whose envelope represents instantaneous amplitude and whose phase angle gives instantaneous phase"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The analytic signal z(t) = x(t) + iHy(x(t)) has envelope |z(t)| = instantaneous amplitude (reflection strength), arg(z(t)) = instantaneous phase, and d(arg(z))/dt = instantaneous frequency. These attributes are widely used in seismic interpretation.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -717,12 +717,12 @@
       "stress": "true",
       "stem": "A causal FIR filter designed using the window method will exhibit:",
       "options": [
-        "Zero phase distortion at all frequencies",
         "Linear phase (constant group delay) and a symmetric impulse response, with Gibbs phenomenon at discontinuities in the ideal response",
         "Non-linear phase with maximum amplitude at the cutoff frequency",
-        "An IIR transfer function with recursive feedback"
+        "An IIR transfer function with recursive feedback",
+        "Zero phase distortion at all frequencies"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "FIR filters designed by windowing have symmetric impulse responses ensuring linear phase (constant group delay). The truncation of the ideal (infinite) impulse response by the window causes ripples (Gibbs phenomenon) near discontinuities in the frequency response.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "In spectral analysis of seismic data, applying a Hanning (Hann) window before FFT computation:",
       "options": [
+        "Converts the time-domain signal to the frequency domain directly",
         "Increases the spectral leakage by enhancing side lobes",
         "Reduces spectral leakage by tapering the signal edges to zero, at the cost of slightly reduced frequency resolution",
-        "Has no effect on the power spectrum for periodic signals",
-        "Converts the time-domain signal to the frequency domain directly"
+        "Has no effect on the power spectrum for periodic signals"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Hanning window reduces spectral leakage by smoothly tapering the signal to zero at the ends, suppressing side lobes in the frequency domain. The trade-off is a slightly wider main lobe (reduced frequency resolution). It is widely used in seismic spectral analysis.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -760,12 +760,12 @@
       "stress": "true",
       "stem": "The Archie equation for water saturation is Sw = (aφmRw/Rt)^(1/n). In a shaly sand, using this equation without modification will:",
       "options": [
-        "Overestimate water saturation (underestimate hydrocarbon saturation) because clay minerals provide additional conductive pathways",
-        "Underestimate water saturation (overestimate hydrocarbon saturation) because clay conductivity is ignored",
         "Give the correct water saturation regardless of clay content",
-        "Only be valid if the cementation exponent m is set to 2.0"
+        "Used for static loading only",
+        "Overestimate water saturation (underestimate hydrocarbon saturation) because clay minerals provide additional conductive pathways",
+        "Underestimate water saturation (overestimate hydrocarbon saturation) because clay conductivity is ignored"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In shaly sands, clay minerals (especially smectite) provide cation exchange conduction pathways that lower Rt beyond what hydrocarbon saturation alone would cause. Archie's equation ignores this extra conductivity, leading to underestimation of Sw (overestimation of hydrocarbons). Models like Waxman-Smits or Dual-Water correct for this.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -782,12 +782,12 @@
       "stress": "true",
       "stem": "The difference between total porosity (from neutron-density logs) and effective porosity (from NMR or core data) in a shaly sand is primarily due to:",
       "options": [
-        "Borehole rugosity effects on the density tool",
         "The presence of clay-bound water (CBW) and capillary-bound water (BVI) that contribute to total porosity but do not contribute to fluid flow",
         "Differences in the depth of investigation of the two logging tools",
-        "Temperature and pressure variations along the wellbore"
+        "Temperature and pressure variations along the wellbore",
+        "Borehole rugosity effects on the density tool"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Total porosity includes all pore space (free fluid + capillary-bound + clay-bound water). Effective porosity excludes clay-bound water (CBW) and sometimes capillary-bound water (BVI). NMR directly measures these fluid volumes, providing a more accurate effective porosity estimate.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -804,12 +804,12 @@
       "stress": "true",
       "stem": "The Pickett plot method for determining water saturation and cementation parameters uses a log-log crossplot of:",
       "options": [
+        "Sonic travel time vs. formation density",
         "Neutron porosity vs. density porosity",
         "Resistivity (Rt) vs. porosity (φ), where the water-saturated trend defines a straight line",
-        "Gamma ray vs. deep resistivity",
-        "Sonic travel time vs. formation density"
+        "Gamma ray vs. deep resistivity"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Pickett plot displays Rt vs. φ on log-log scales. Water-saturated points fall on a straight line (the Ro line). Points above this line indicate hydrocarbons. The slope gives the cementation exponent m, and the intercept gives Rw, both of which are critical for saturation calculation.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -825,12 +825,12 @@
       "difficulty": "medium",
       "stem": "In airborne gamma-ray spectrometry, the three primary radioelements measured are:",
       "options": [
-        "Uranium-238, Thorium-232, and Iron-56 via their characteristic gamma-ray emissions",
-        "Potassium-40, Uranium-238 (via Bismuth-214), and Thorium-232 (via Thallium-208)",
         "Cesium-137, Cobalt-60, and Radium-226 from artificial and natural sources",
-        "Carbon-14, Tritium, and Lead-210 from cosmogenic production"
+        "Carbon-14, Tritium, and Lead-210 from cosmogenic production",
+        "Uranium-238, Thorium-232, and Iron-56 via their characteristic gamma-ray emissions",
+        "Potassium-40, Uranium-238 (via Bismuth-214), and Thorium-232 (via Thallium-208)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Aerial gamma-ray spectrometry measures K-40 (1.46 MeV), U-238 via Bi-214 (1.76 MeV), and Th-232 via Tl-208 (2.61 MeV). The eU and eTh are 'equivalent' concentrations derived from single daughter products, assuming secular equilibrium.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -847,12 +847,12 @@
       "stress": "true",
       "stem": "High-purity germanium (HPGe) detectors offer superior energy resolution compared to NaI(Tl) scintillation detectors for gamma-ray spectroscopy because:",
       "options": [
-        "Germanium has a higher atomic number, leading to greater photoelectric absorption",
         "The average energy required to create an electron-hole pair in Ge (~3 eV) is much lower than the energy to create a photoelectron in NaI (~300 eV), resulting in more charge carriers and better statistical resolution",
         "Germanium detectors are operated at room temperature while NaI requires cooling",
-        "NaI detectors have a higher detection efficiency for gamma rays above 3 MeV"
+        "NaI detectors have a higher detection efficiency for gamma rays above 3 MeV",
+        "Germanium has a higher atomic number, leading to greater photoelectric absorption"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "HPGe achieves ~0.1–0.2% energy resolution at 662 keV vs. ~7% for NaI. This is because Ge requires only ~3 eV per electron-hole pair vs. ~300 eV per photoelectron in NaI, producing ~100× more charge carriers per gamma interaction, dramatically improving statistical resolution.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -869,12 +869,12 @@
       "stress": "true",
       "stem": "Particle Swarm Optimization (PSO) in geophysical inversion differs from gradient-based methods in that:",
       "options": [
+        "PSO can only be applied to 1D layered earth models",
         "PSO requires computation of the Jacobian matrix at each iteration",
         "PSO is a population-based stochastic method that explores the model space without requiring gradient information, making it suitable for non-linear, non-convex objective functions",
-        "PSO always converges to the global minimum in fewer iterations than Gauss-Newton",
-        "PSO can only be applied to 1D layered earth models"
+        "PSO always converges to the global minimum in fewer iterations than Gauss-Newton"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "PSO is a metaheuristic optimization method inspired by social behavior of bird flocking. It uses a population of particles that share information to explore the model space without gradients. It handles non-convex, multi-modal objective functions well but may require many forward evaluations.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -896,12 +896,12 @@
       "stress": "true",
       "stem": "A trained convolutional neural network (CNN) used as a surrogate forward model in geophysical inversion offers the advantage of:",
       "options": [
-        "Providing mathematically exact solutions to Maxwell's equations",
-        "Replacing thousands of expensive numerical forward simulations with fast approximations, enabling real-time or Monte Carlo uncertainty analysis",
         "Eliminating the need for training data by learning physics from first principles",
-        "Guaranteeing convergence to the global minimum regardless of training quality"
+        "Guaranteeing convergence to the global minimum regardless of training quality",
+        "Providing mathematically exact solutions to Maxwell's equations",
+        "Replacing thousands of expensive numerical forward simulations with fast approximations, enabling real-time or Monte Carlo uncertainty analysis"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "CNN surrogate models, once trained on forward simulation data, can evaluate forward responses in milliseconds vs. seconds/minutes for numerical methods. This enables rapid uncertainty quantification via Monte Carlo sampling and fast iterative inversion, though accuracy depends on training data coverage.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -917,12 +917,12 @@
       "difficulty": "hard",
       "stem": "A train running at 72 km/h crosses a platform in 30 seconds. If the length of the train is 300 m, the length of the platform is:",
       "options": [
-        "200 m",
         "300 m",
         "400 m",
-        "500 m"
+        "500 m",
+        "200 m"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Speed = 72 km/h = 20 m/s. Distance covered = speed × time = 20 × 30 = 600 m. Platform length = 600 − 300 = 300 m.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -943,12 +943,12 @@
       "difficulty": "medium",
       "stem": "If the price of a commodity increases by 25%, by what percentage must a consumer reduce consumption so that expenditure remains unchanged?",
       "options": [
+        "15%",
         "20%",
         "25%",
-        "30%",
-        "15%"
+        "30%"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "New expenditure = 1.25P × (1−x) = P. So (1−x) = 1/1.25 = 0.8, meaning x = 0.2 = 20%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -970,12 +970,12 @@
       "stress": "true",
       "stem": "A shopkeeper marks his goods 40% above the cost price and gives a discount of 10%. His profit percentage is:",
       "options": [
-        "26%",
-        "28%",
         "30%",
-        "32%"
+        "32%",
+        "26%",
+        "28%"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "MP = 1.4CP. SP = 0.9 × 1.4CP = 1.26CP. Profit = 26%.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -996,12 +996,12 @@
       "difficulty": "easy",
       "stem": "The difference between compound interest and simple interest on a sum of ₹10,000 for 2 years at 10% per annum is:",
       "options": [
-        "₹100",
         "₹200",
         "₹250",
-        "₹300"
+        "₹300",
+        "₹100"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SI = 10000 × 0.1 × 2 = ₹2000. CI = 10000[(1.1)² − 1] = ₹2100. Difference = ₹100.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1022,12 +1022,12 @@
       "difficulty": "medium",
       "stem": "If A:B = 3:4 and B:C = 2:5, then A:B:C equals:",
       "options": [
+        "6:4:10",
         "3:4:10",
         "6:8:20",
-        "3:2:5",
-        "6:4:10"
+        "3:2:5"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A:B = 3:4 = 6:8, B:C = 2:5 = 8:20. So A:B:C = 6:8:20 = 3:4:10.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1048,12 +1048,12 @@
       "difficulty": "easy",
       "stem": "In what ratio must water be mixed with milk costing ₹30 per litre so that the mixture costs ₹20 per litre?",
       "options": [
-        "1:2",
-        "1:3",
         "2:3",
-        "3:2"
+        "3:2",
+        "1:2",
+        "1:3"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Using alligation: Water (₹0) — Milk (₹30). Mean = ₹20. Ratio = (30−20):(20−0) = 10:20 = 1:2.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1075,12 +1075,12 @@
       "stress": "true",
       "stem": "The area of a rhombus with diagonals 24 cm and 10 cm is:",
       "options": [
-        "120 cm²",
         "240 cm²",
         "60 cm²",
-        "144 cm²"
+        "144 cm²",
+        "120 cm²"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Area of rhombus = ½ × d₁ × d₂ = ½ × 24 × 10 = 120 cm².",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1102,12 +1102,12 @@
       "stress": "true",
       "stem": "If x + 1/x = 5, then the value of x² + 1/x² is:",
       "options": [
+        "30",
         "23",
         "25",
-        "27",
-        "30"
+        "27"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "(x + 1/x)² = x² + 2 + 1/x² = 25. So x² + 1/x² = 23.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1128,12 +1128,12 @@
       "difficulty": "hard",
       "stem": "Two dice are thrown simultaneously. The probability that the sum of the numbers is a prime number is:",
       "options": [
-        "5/12",
-        "1/6",
         "7/36",
-        "1/4"
+        "1/4",
+        "5/12",
+        "1/6"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Prime sums from 2 to 12: {2,3,5,7,11}. Favorable outcomes: 2(1), 3(2), 5(4), 7(6), 11(2) = 15. Total = 36. P = 15/36 = 5/12.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1154,12 +1154,12 @@
       "difficulty": "medium",
       "stem": "The least number which when divided by 6, 7, 8 and 9 leaves a remainder of 1 in each case is:",
       "options": [
-        "505",
         "2521",
         "1009",
-        "251"
+        "251",
+        "505"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "LCM(6,7,8,9) = LCM(2×3, 7, 2³, 3²) = 2³ × 3² × 7 = 504. Required number = 504 + 1 = 505.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1181,12 +1181,12 @@
       "stress": "true",
       "stem": "How many 4-letter words (with or without meaning) can be formed using the letters of the word 'LOGARITHM' if no letter is repeated?",
       "options": [
+        "1680",
         "3024",
         "2401",
-        "4096",
-        "1680"
+        "4096"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "LOGARITHM has 9 distinct letters. P(9,4) = 9!/(9−4)! = 9×8×7×6 = 3024.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1207,12 +1207,12 @@
       "difficulty": "medium",
       "stem": "The average of 5 numbers is 20. If one number is excluded, the average becomes 18. The excluded number is:",
       "options": [
-        "28",
-        "30",
         "26",
-        "32"
+        "32",
+        "28",
+        "30"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Sum of 5 = 100. Sum of 4 = 72. Excluded = 100 − 72 = 28.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1234,12 +1234,12 @@
       "stress": "true",
       "stem": "Statements: All dogs are animals. All animals are living beings. Conclusions: I. All dogs are living beings. II. Some living beings are dogs.",
       "options": [
-        "Only conclusion I follows",
-        "Only conclusion II follows",
-        "Both conclusions I and II follow",
-        "Neither conclusion I nor II follows"
+        "Used for static loading only",
+        "Works under ideal conditions",
+        "Depends on operating conditions",
+        "Found in sedimentary formations"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "From the two universal affirmative premises, by transitivity, all dogs are living beings (Conclusion I). Since all dogs are living beings, some living beings are dogs (Conclusion II). Both follow.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1261,12 +1261,12 @@
       "stress": "true",
       "stem": "In a certain code language, 'SUN' is written as 'UWP'. How will 'RAIN' be written in that code?",
       "options": [
+        "TBGP",
         "TCGP",
         "TCGP",
-        "TCGQ",
-        "TBGP"
+        "TCGQ"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "S→U (+2), U→W (+2), N→P (+2). Each letter is shifted by +2 positions. R→T, A→C, I→K, N→P. Wait, let me recalculate: R+2=T, A+2=C, I+2=K, N+2=P = TCKP. Checking options: Option A is TCGP. There may be an issue with the options; the correct encoded form is TCKP.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1288,12 +1288,12 @@
       "stress": "true",
       "stem": "Pointing to a woman, Ravi said, 'She is the daughter of the woman who is the mother of the husband of my mother.' How is the woman related to Ravi?",
       "options": [
-        "Sister",
-        "Mother",
         "Aunt",
-        "Wife"
+        "Wife",
+        "Sister",
+        "Mother"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ravi's mother's husband = Ravi's father. Ravi's father's mother = Ravi's paternal grandmother. The grandmother's daughter = Ravi's aunt or mother. Since Ravi says 'the woman' (not his mother), she is Ravi's sister (father's mother's daughter's daughter).",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1315,12 +1315,12 @@
       "stress": "true",
       "stem": "A bar chart shows sales of a company over 4 quarters: Q1 = ₹120L, Q2 = ₹180L, Q3 = ₹150L, Q3 = ₹210L. The percentage increase from Q1 to Q4 is approximately:",
       "options": [
-        "75%",
         "80%",
         "70%",
-        "60%"
+        "60%",
+        "75%"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Increase = (210 − 120)/120 × 100 = 90/120 × 100 = 75%.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1341,12 +1341,12 @@
       "difficulty": "easy",
       "stem": "A can complete a work in 12 days and B can complete it in 18 days. Working together, they can complete the work in:",
       "options": [
+        "6.5 days",
         "7.2 days",
         "7 days",
-        "8 days",
-        "6.5 days"
+        "8 days"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Combined rate = 1/12 + 1/18 = 3/36 + 2/36 = 5/36. Time = 36/5 = 7.2 days.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1368,12 +1368,12 @@
       "stress": "true",
       "stem": "Pipe A can fill a tank in 20 hours and Pipe B can empty it in 30 hours. If both pipes are opened simultaneously, the tank will be full in:",
       "options": [
-        "60 hours",
-        "50 hours",
         "40 hours",
-        "45 hours"
+        "45 hours",
+        "60 hours",
+        "50 hours"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Net rate = 1/20 − 1/30 = (3−2)/60 = 1/60 per hour. Time = 60 hours.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1394,12 +1394,12 @@
       "difficulty": "medium",
       "stem": "A boat can travel 36 km downstream in 4 hours and the same distance upstream in 6 hours. The speed of the stream is:",
       "options": [
-        "1.5 km/h",
         "2 km/h",
         "2.5 km/h",
-        "3 km/h"
+        "3 km/h",
+        "1.5 km/h"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Downstream speed = 36/4 = 9 km/h. Upstream speed = 36/6 = 6 km/h. Stream speed = (9−6)/2 = 1.5 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1421,12 +1421,12 @@
       "stress": "true",
       "stem": "A man walks 5 km North, turns right and walks 3 km, turns right again and walks 5 km. He is now facing which direction from his starting point?",
       "options": [
+        "South",
         "East",
         "West",
-        "North",
-        "South"
+        "North"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "After walking 5 km N, 3 km E, 5 km S, he is 3 km East of his starting point.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1447,12 +1447,12 @@
       "difficulty": "hard",
       "stem": "The present ages of A and B are in the ratio 5:7. After 12 years, their ages will be in the ratio 7:9. The present age of B is:",
       "options": [
-        "35 years",
-        "42 years",
         "49 years",
-        "28 years"
+        "28 years",
+        "35 years",
+        "42 years"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let A=5x, B=7x. (5x+12)/(7x+12) = 7/9. 9(5x+12) = 7(7x+12). 45x+108 = 49x+84. 4x = 24, x=6. B = 7×6 = 42. Checking: option A is 35 but correct answer is 42. Let me recalculate: 9(5x+12) = 7(7x+12) → 45x+108 = 49x+84 → 4x = 24 → x = 6 → B = 42. The answer should be option B (42 years).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1474,12 +1474,12 @@
       "stress": "true",
       "stem": "In a code, COMPUTER is written as RFUVQNPC. How will MEDICINE be written?",
       "options": [
-        "EOJDJEFM",
         "FOJDJEFN",
         "EOJEIDFM",
-        "FOJEIDFM"
+        "FOJEIDFM",
+        "EOJDJEFM"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The coding scheme: C→R (reverse order, 3rd from end), O→F (reverse), M→U (reverse), P→V, U→Q, T→N, E→P, R→C. Pattern: each letter maps to its reverse-position letter. M→E, E→O, D→J, I→D, C→J, I→D, N→E, E→F. Wait, that gives EOJDJEDF. Checking: answer is EOJDJEFM.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1500,12 +1500,12 @@
       "difficulty": "easy",
       "stem": "The volume of a cylinder is 1386 cm³ and its height is 14 cm. Its curved surface area is:",
       "options": [
+        "1848 cm²",
         "924 cm²",
         "462 cm²",
-        "616 cm²",
-        "1848 cm²"
+        "616 cm²"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "V = πr²h = 1386. r² = 1386/(22/7 × 14) = 1386/44 = 31.5. r = √31.5 ≈ 5.61... Actually, r² = 1386/(14π) = 1386/43.98 = 31.51. CSA = 2πrh = 2 × (22/7) × 5.61 × 14 = 2 × 22 × 5.61 × 2 = 494. Let me recalculate: πr² = 1386/14 = 99. r² = 99/(22/7) = 99 × 7/22 = 31.5. r = √31.5 ≈ 5.612. CSA = 2πr × 14 = 2 × (22/7) × 5.612 × 14 = 2 × 22 × 5.612 × 2 = 493.9. Hmm, that doesn't match. Let me recheck: if r² = 99/(22/7) = 31.5, r ≈ 5.612, CSA = 2πr × 14 = 2 × 3.14159 × 5.612 × 14 ≈ 493.9. The intended answer is 924 cm², suggesting r = 7 cm (π × 49 × 14 = 2156 ≠ 1386). If r=5.29, πr² = 87.9, then V = 87.9 × 14 = 1230. Let me use r² = 31.5: r = 5.61, CSA = 2 × 3.14 × 5.61 × 14 = 493.6. The closest option is 924 if we interpret differently. The intended answer per the question design is 924 cm².",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1527,12 +1527,12 @@
       "stress": "true",
       "stem": "The angle of elevation of the top of a tower from a point on the ground is 30°. On walking 20 m towards the tower, the angle of elevation becomes 60°. The height of the tower is:",
       "options": [
-        "10√3 m",
-        "20√3 m",
         "30 m",
-        "15√3 m"
+        "15√3 m",
+        "10√3 m",
+        "20√3 m"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let height = h, initial distance = d. h/d = tan30° = 1/√3. h/(d−20) = tan60° = √3. From first: d = h√3. Substitute: h/(h√3−20) = √3 → h = √3(h√3−20) = 3h−20√3 → 2h = 20√3 → h = 10√3.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1554,12 +1554,12 @@
       "stress": "true",
       "stem": "Five friends A, B, C, D, E sit in a row facing north. C sits exactly in the middle. A sits to the left of C. B does not sit at either end. D sits immediately to the right of E. Who sits at the rightmost end?",
       "options": [
-        "B",
         "D",
         "E",
-        "A"
+        "A",
+        "B"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Positions: 1,2,3,4,5 (left to right, facing north). C at position 3. A is left of C, so A at 1 or 2. D is immediately right of E. B not at ends (not 1 or 5). If A=1, then positions 2,4,5 for B,D,E. D immediately right of E means (E,D) are consecutive. B≠5, so B=2. Then (E,D) at (4,5) or D,E not possible. If E=4, D=5: positions 1=A, 2=B, 3=C, 4=E, 5=D. D at rightmost. Answer: D (option B).",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1580,12 +1580,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
+        "Assam",
         "KG Basin",
         "Mumbai High",
-        "Cauvery Basin",
-        "Assam"
+        "Cauvery Basin"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1601,12 +1601,12 @@
       "difficulty": "easy",
       "stem": "The PLI scheme for semiconductor manufacturing was approved with an outlay of:",
       "options": [
-        "₹10,000 crore",
-        "₹25,000 crore",
         "₹76,000 crore",
-        "₹1,00,000 crore"
+        "₹1,00,000 crore",
+        "₹10,000 crore",
+        "₹25,000 crore"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The PLI scheme for semiconductors has an outlay of ₹76,000 crore.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1622,12 +1622,12 @@
       "difficulty": "medium",
       "stem": "Which country successfully landed on the Moon's south pole in 2023?",
       "options": [
-        "USA",
         "China",
         "India",
-        "Japan"
+        "Japan",
+        "USA"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "India's Chandrayaan-3 successfully landed on the Moon's south pole.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1643,12 +1643,12 @@
       "difficulty": "medium",
       "stem": "Which renewable energy source saw the highest capacity addition in India in 2024?",
       "options": [
+        "Biomass",
         "Solar",
         "Wind",
-        "Hydro",
-        "Biomass"
+        "Hydro"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Solar energy saw the highest capacity addition.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1664,12 +1664,12 @@
       "difficulty": "hard",
       "stem": "The National Green Hydrogen Mission has an initial outlay of:",
       "options": [
-        "₹12,000 crore",
-        "₹19,744 crore",
         "₹25,000 crore",
-        "₹50,000 crore"
+        "₹50,000 crore",
+        "₹12,000 crore",
+        "₹19,744 crore"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The National Green Hydrogen Mission has an outlay of ₹19,744 crore.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1685,12 +1685,12 @@
       "difficulty": "hard",
       "stem": "India's GDP growth rate for FY2025-26 is estimated at approximately:",
       "options": [
-        "5.5%",
         "6.5%",
         "7.5%",
-        "8.5%"
+        "8.5%",
+        "5.5%"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "India's GDP growth for FY2025-26 is estimated at around 6.5%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1706,12 +1706,12 @@
       "difficulty": "easy",
       "stem": "The President of India is elected by:",
       "options": [
+        "Prime Minister",
         "Lok Sabha members",
         "Rajya Sabha members",
-        "Electoral College",
-        "Prime Minister"
+        "Electoral College"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1727,12 +1727,12 @@
       "difficulty": "medium",
       "stem": "Largest freshwater lake in India:",
       "options": [
-        "Chilika Lake",
-        "Wular Lake",
         "Dal Lake",
-        "Sambhar Lake"
+        "Sambhar Lake",
+        "Chilika Lake",
+        "Wular Lake"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Wular Lake in J&K is the largest freshwater lake in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1748,12 +1748,12 @@
       "difficulty": "medium",
       "stem": "Minimum age for Lok Sabha membership:",
       "options": [
-        "21 years",
         "25 years",
         "30 years",
-        "35 years"
+        "35 years",
+        "21 years"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Minimum age for Lok Sabha membership is 25 years.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1769,12 +1769,12 @@
       "difficulty": "hard",
       "stem": "World Environment Day is celebrated on:",
       "options": [
+        "May 21",
         "March 22",
         "June 5",
-        "April 22",
-        "May 21"
+        "April 22"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "World Environment Day is celebrated on June 5th.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1790,12 +1790,12 @@
       "difficulty": "hard",
       "stem": "She is proficient ___ English.",
       "options": [
-        "on",
-        "at",
         "in",
-        "of"
+        "of",
+        "on",
+        "at"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1811,12 +1811,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
         "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1832,12 +1832,12 @@
       "difficulty": "easy",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
+        "Obvious",
         "Clear",
         "Vague",
-        "Definite",
-        "Obvious"
+        "Definite"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1853,12 +1853,12 @@
       "difficulty": "medium",
       "stem": "What does 'ameliorate' mean?",
       "options": [
-        "Worsen",
-        "Improve",
         "Destroy",
-        "Maintain"
+        "Maintain",
+        "Worsen",
+        "Improve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1874,12 +1874,12 @@
       "difficulty": "hard",
       "stem": "Who ___ the book yesterday?",
       "options": [
-        "did wrote",
         "wrote",
         "has wrote",
-        "written"
+        "written",
+        "did wrote"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1895,12 +1895,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
+        "Slow",
         "Lazy",
         "Hardworking",
-        "Careless",
-        "Slow"
+        "Careless"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1916,12 +1916,12 @@
       "difficulty": "hard",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
-        "Lets eat, Grandma!",
-        "Let's eat Grandma!",
         "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Let's, eat Grandma!",
+        "Lets eat, Grandma!",
+        "Let's eat Grandma!"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1937,12 +1937,12 @@
       "difficulty": "medium",
       "stem": "___ honest man always speaks the truth.",
       "options": [
-        "A",
         "An",
         "The",
-        "No article"
+        "No article",
+        "A"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1958,12 +1958,12 @@
       "difficulty": "medium",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
+        "Navigate",
         "Aggravate",
         "Mitigate",
-        "Motivate",
-        "Navigate"
+        "Motivate"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1979,12 +1979,12 @@
       "difficulty": "hard",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
-        "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water",
+        "A turning point"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,

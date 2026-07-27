@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "Azimuthal anisotropy in the upper mantle is primarily attributed to which mechanism?",
       "options": [
-        "Lattice-preferred orientation of olivine crystals",
         "Shape-preferred orientation of melt pockets",
         "Scattering from compositional heterogeneities",
-        "Attenuation anisotropy due to partial melting"
+        "Attenuation anisotropy due to partial melting",
+        "Lattice-preferred orientation of olivine crystals"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Lattice-preferred orientation (LPO) of olivine due to dislocation creep in mantle flow is the dominant mechanism for seismic azimuthal anisotropy in the upper mantle.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -58,12 +58,12 @@
       "difficulty": "hard",
       "stem": "Long-wavelength geoid anomalies (degree 2–3) over subduction zones are most sensitive to which mantle property?",
       "options": [
-        "Viscosity structure of the lower mantle",
-        "Lateral temperature variations in the lithosphere",
         "Topography of the core–mantle boundary",
-        "Thickness of the oceanic crust"
+        "Thickness of the oceanic crust",
+        "Viscosity structure of the lower mantle",
+        "Lateral temperature variations in the lithosphere"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Large-scale geoid highs over subduction zones reflect dynamic topography and viscosity contrasts, with degree-2 and degree-3 patterns being particularly sensitive to CMB topography and lower-mantle viscosity.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -79,12 +79,12 @@
       "difficulty": "medium",
       "stem": "What is the approximate contribution of radiogenic heat production (U, Th, K) to Earth's total surface heat flow of ~47 TW?",
       "options": [
+        "~35 TW",
         "~5 TW",
         "~10 TW",
-        "~20 TW",
-        "~35 TW"
+        "~20 TW"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Radiogenic heat production contributes approximately 20 TW of the total ~47 TW surface heat flow, with the remainder (~27 TW) coming from primordial secular cooling of the mantle and core.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -105,12 +105,12 @@
       "difficulty": "hard",
       "stem": "The International Terrestrial Reference Frame (ITRF2020) realizes the origin using which combination of geodetic techniques?",
       "options": [
-        "GPS only",
         "VLBI + SLR",
         "GPS + GLONASS",
-        "GPS + SLR + DORIS"
+        "GPS + SLR + DORIS",
+        "GPS only"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "ITRF2020 combines GPS (GNSS), SLR, VLBI, and DORIS observations. The origin is primarily determined by SLR (sensitive to the geocenter), while the scale is provided by SLR and VLBI.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -131,12 +131,12 @@
       "difficulty": "easy",
       "stem": "Length-of-day (LOD) variations with periods of 1–10 years are primarily caused by which angular momentum exchange?",
       "options": [
-        "Atmosphere–solid Earth",
-        "Core–mantle",
         "Ocean–solid Earth",
-        "Moon–solid Earth"
+        "Moon–solid Earth",
+        "Atmosphere–solid Earth",
+        "Core–mantle"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Interannual LOD variations (1–10 year periods) are dominated by core–mantle angular momentum exchange mediated by electromagnetic and topographic coupling at the CMB.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -152,12 +152,12 @@
       "difficulty": "easy",
       "stem": "The Chandler wobble has a period of approximately 433 days and is primarily excited by which process?",
       "options": [
+        "Post-glacial rebound",
         "Lunar tidal torques",
         "Atmospheric and oceanic mass redistribution",
-        "Core–mantle coupling",
-        "Post-glacial rebound"
+        "Core–mantle coupling"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The Chandler wobble is a free Eulerian nutation of the solid Earth, excited and maintained by stochastic angular momentum transfers from the atmosphere, oceans, and hydrosphere.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -178,12 +178,12 @@
       "difficulty": "medium",
       "stem": "In full waveform inversion (FWI), the primary computational challenge for 3D elastic problems is:",
       "options": [
-        "Insufficient data coverage",
         "Cycle-skipping in the misfit functional",
         "Memory requirements for storing sensitivity kernels",
-        "Inability to handle anisotropic media"
+        "Inability to handle anisotropic media",
+        "Insufficient data coverage"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "3D elastic FWI requires storing the full wavefield at every time step for adjoint computation, leading to enormous memory requirements. This is mitigated by checkpointing or on-the-fly adjoint methods.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -199,12 +199,12 @@
       "difficulty": "easy",
       "stem": "In adjoint tomography, the Fréchet derivative of the misfit functional with respect to model parameters is computed by:",
       "options": [
-        "Explicit matrix–vector multiplication",
-        "Cross-correlating forward and adjoint wavefields",
         "Finite-difference model perturbations",
-        "Ray-path integration using Born approximation"
+        "Ray-path integration using Born approximation",
+        "Explicit matrix–vector multiplication",
+        "Cross-correlating forward and adjoint wavefields"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The adjoint-state method computes sensitivity kernels by cross-correlating the forward wavefield from the source with an adjoint wavefield propagated from the receivers, avoiding explicit computation of partial derivatives.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -220,12 +220,12 @@
       "difficulty": "medium",
       "stem": "Cross-correlation of ambient seismic noise between two stations converges to the Green's function when the noise field satisfies which condition?",
       "options": [
+        "Locally generated microseisms only",
         "White noise spectrum",
         "Spatially homogeneous and equipartitioned wavefield",
-        "Monochromatic source at one station",
-        "Locally generated microseisms only"
+        "Monochromatic source at one station"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The cross-correlation of a diffuse, equipartitioned noise field between two receivers converges to the Green's function (plus its time-reverse) between them, as shown by campillo and Paul (2003) and Lobkis & Weaver (2001).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -246,12 +246,12 @@
       "difficulty": "medium",
       "stem": "During a geomagnetic polarity reversal, the dipole field intensity typically drops to what percentage of its normal value?",
       "options": [
+        "~1%",
         "~50%",
         "~25%",
-        "~10%",
-        "~1%"
+        "~10%"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Paleointensity data show that during reversals the dipole moment falls to roughly 10% of its normal value, while non-dipole components may remain comparable, creating complex transitional field geometries.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -267,12 +267,12 @@
       "difficulty": "medium",
       "stem": "The Geocentric Axial Dipole (GAD) hypothesis states that the time-averaged geomagnetic field is axial and dipolar. What is the primary evidence supporting this hypothesis?",
       "options": [
-        "Observations of the present-day field",
-        "Paleomagnetic data from volcanic rocks on continents",
         "Magnetic anomaly stripes at mid-ocean ridges",
-        "All of the above"
+        "Depends on material properties",
+        "Observations of the present-day field",
+        "Paleomagnetic data from volcanic rocks on continents"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "The GAD hypothesis is supported by multiple lines of evidence: present-day field is dominantly axial dipolar, paleomagnetic inclinations on continents are consistent with GAD latitudes, and magnetic stripes on the seafloor are symmetric about ridges consistent with GAD reversals.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -293,12 +293,12 @@
       "difficulty": "easy",
       "stem": "Geomagnetic jerks (sudden changes in the secular variation trend) originate primarily from which region?",
       "options": [
-        "Inner core boundary",
         "Core–mantle boundary (CMB)",
         "Upper mantle",
-        "Ionosphere"
+        "Ionosphere",
+        "Inner core boundary"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Jerks are thought to originate at the CMB from hydromagnetic processes in the outer core, such as torsional oscillations or the passage of magnetic flux patches. Their rapid onset (~1 year) constrains the electromagnetic diffusion time through the lower mantle.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "The GOCE satellite measured the gravity gradient tensor using a gradiometer. What was the primary advantage of measuring gravity gradients over gravity anomalies?",
       "options": [
+        "Independence of satellite orbit determination",
         "Higher sensitivity to deep mantle structures",
         "Better spatial resolution for short-wavelength features",
-        "Lower sensitivity to atmospheric drag",
-        "Independence of satellite orbit determination"
+        "Lower sensitivity to atmospheric drag"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Gravity gradients (second derivatives of the potential) enhance short-wavelength signals relative to gravity anomalies (first derivatives), providing better spatial resolution of crustal and upper-mantle density structures.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -345,12 +345,12 @@
       "difficulty": "medium",
       "stem": "The invariant eigenvalues of the gravity gradient tensor (Vxx, Vyy, Vzz) are used to classify source geometries. For a horizontal cylinder, which relationship holds?",
       "options": [
-        "Vzz > Vxx ≈ Vyy",
-        "Vzz ≈ Vxx > Vyy",
         "Vxx ≈ Vyy ≈ Vzz",
-        "Vzz < Vxx ≈ Vyy"
+        "Vzz < Vxx ≈ Vyy",
+        "Vzz > Vxx ≈ Vyy",
+        "Vzz ≈ Vxx > Vyy"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "For a 2D horizontal cylinder, the invariants satisfy Vzz ≈ Vxx > Vyy (where Vyy is along the strike). This distinguishes it from a sphere (Vzz > Vxx ≈ Vyy) and a vertical cylinder (Vzz > Vxx >> Vyy).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -366,12 +366,12 @@
       "difficulty": "easy",
       "stem": "In 3D gravity forward modeling using rectangular prisms, the analytical gravity gradient component Vzz at an observation point requires evaluation of:",
       "options": [
-        "A single logarithmic term",
         "A triple arctangent expression",
         "Numerical integration only",
-        "A simple inverse-square law"
+        "A simple inverse-square law",
+        "A single logarithmic term"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Vzz component for a rectangular prism involves a triple arctangent expression (Blakely 1996), reflecting the integration of Newton's law over a 3D volume. Each arctangent accounts for one spatial dimension of the prism.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -392,12 +392,12 @@
       "difficulty": "easy",
       "stem": "In micromagnetic modeling, the equilibrium magnetization state of a single-domain magnetite particle (~50 nm) is determined by minimizing which energy functional?",
       "options": [
+        "Anisotropy and Zeeman energies only",
         "Exchange energy only",
         "Sum of exchange, magnetostatic, anisotropy, and Zeeman energies",
-        "Magnetostatic energy only",
-        "Anisotropy and Zeeman energies only"
+        "Magnetostatic energy only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The total micromagnetic energy includes exchange (stiffness), magnetostatic (demagnetizing), magnetocrystalline anisotropy, and Zeeman (external field) terms. The equilibrium state is found by minimizing this functional.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -413,12 +413,12 @@
       "difficulty": "hard",
       "stem": "The Verwey transition in magnetite (Fe₃O₄) at ~120 K involves a structural change. What is its primary effect on magnetic properties?",
       "options": [
-        "Sudden increase in saturation magnetization",
-        "Change in magnetocrystalline anisotropy and electrical conductivity",
         "Complete demagnetization",
-        "Shift in Curie temperature"
+        "Shift in Curie temperature",
+        "Sudden increase in saturation magnetization",
+        "Change in magnetocrystalline anisotropy and electrical conductivity"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Verwey transition involves a cubic-to-monoclinic structural change, causing a sharp change in magnetocrystalline anisotropy (from negative to very large positive), magnetostriction, and electrical conductivity.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -434,12 +434,12 @@
       "difficulty": "medium",
       "stem": "In AMS analysis, the shape parameter T ranges from -1 to +1. A prolate (cigar-shaped) susceptibility ellipsoid has T in which range?",
       "options": [
-        "T > 0 (oblate)",
         "T ≈ 0 (neutral)",
         "T < 0 (prolate)",
-        "T = 1 exactly"
+        "T = 1 exactly",
+        "T > 0 (oblate)"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The shape parameter T = ln(F)/ln(L) where L = kmax/kint and F = kint/kmin. For prolate ellipsoids, kmax >> kint ≈ kmin, giving T < 0. For oblate, T > 0.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -455,12 +455,12 @@
       "difficulty": "medium",
       "stem": "In magnetotelluric impedance tensor analysis, the strike direction determined from the tensor decomposition is accurate to within:",
       "options": [
+        "360 degrees",
         "90 degrees",
         "180 degrees",
-        "45 degrees",
-        "360 degrees"
+        "45 degrees"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The impedance tensor decomposition (e.g., Groom–Bailey or Swift strike) can only resolve the strike direction modulo 90° due to the inherent 90° ambiguity in MT polarization analysis.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -476,12 +476,12 @@
       "difficulty": "easy",
       "stem": "The MT phase tensor is advantageous over the impedance tensor because it:",
       "options": [
-        "Contains more information about conductivity",
-        "Is unaffected by galvanic distortion",
         "Requires fewer data points",
-        "Only applies to 1D structures"
+        "Works for small network topologies",
+        "Contains more information about conductivity",
+        "Is unaffected by galvanic distortion"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The phase tensor (Caldwell et al., 2004) is immune to galvanic (static) distortion because it is derived from the ratio of impedance components, which cancels the real, frequency-independent distortion tensor.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -497,12 +497,12 @@
       "difficulty": "medium",
       "stem": "Real induction vectors (tipper arrows) in MT point away from conductors when using the convention:",
       "options": [
-        "Parkinson convention (real part)",
         "Wiese convention (imaginary part)",
         "Bahr convention (phase difference)",
-        "Launay convention (amplitude ratio)"
+        "Launay convention (amplitude ratio)",
+        "Parkinson convention (real part)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "In the Parkinson convention, real induction vectors point toward zones of higher conductivity (or alternatively, the real part of the tipper points toward the conductor in some formulations — conventions vary). The Wiese convention has arrows pointing away from conductors.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -518,12 +518,12 @@
       "difficulty": "medium",
       "stem": "In marine controlled-source electromagnetic (CSEM) surveying for hydrocarbon exploration, the primary anomaly mechanism is:",
       "options": [
+        "Seismic impedance contrast at the reservoir boundary",
         "Inductive coupling between the source and the reservoir",
         "Resistivity contrast between the hydrocarbon-bearing layer and surrounding sediments",
-        "Magnetic contrast due to pyrite mineralization",
-        "Seismic impedance contrast at the reservoir boundary"
+        "Magnetic contrast due to pyrite mineralization"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Hydrocarbon reservoirs are typically 10–100 times more resistive than water-saturated sediments. The CSEM method detects this resistivity contrast; the horizontal electric field at the seafloor is enhanced by the presence of a thin resistive layer (the reservoir).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -539,12 +539,12 @@
       "difficulty": "medium",
       "stem": "In 3D CSEM inversion, the most computationally intensive step is:",
       "options": [
-        "Data preprocessing and noise estimation",
-        "Forward modeling of the electromagnetic fields",
         "Calculation of the misfit functional",
-        "Displaying inversion results"
+        "Displaying inversion results",
+        "Data preprocessing and noise estimation",
+        "Forward modeling of the electromagnetic fields"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "3D CSEM forward modeling requires solving Maxwell's equations on a large 3D grid, typically using finite-difference or finite-element methods. This is the dominant computational cost, especially when iterated during inversion.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -560,12 +560,12 @@
       "difficulty": "easy",
       "stem": "Reverse time migration (RTM) images reflectors by correlating:",
       "options": [
-        "Downgoing source wavefield with upgoing receiver wavefield",
         "Upgoing source wavefield with downgoing receiver wavefield",
         "Two downgoing wavefields at different times",
-        "The source wavefield with its time-reverse"
+        "The source wavefield with its time-reverse",
+        "Downgoing source wavefield with upgoing receiver wavefield"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "RTM cross-correlates the forward-propagated downgoing source wavefield with the backward-propagated upgoing receiver wavefield at each image point. This imaging condition handles arbitrarily complex velocity models including caustics and multipathing.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -581,12 +581,12 @@
       "difficulty": "hard",
       "stem": "Least-squares migration (LSM) improves upon conventional migration by:",
       "options": [
+        "Increasing the migration aperture",
         "Using higher-frequency source wavelets",
         "Minimizing the L2-norm data residual through iterative model updates",
-        "Applying a simple gain function to the image",
-        "Increasing the migration aperture"
+        "Applying a simple gain function to the image"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "LSM casts migration as an inverse problem: it iteratively updates the reflectivity model to minimize the misfit between observed and synthetic data, compensating for illumination and amplitude effects that conventional migration ignores.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -602,12 +602,12 @@
       "difficulty": "easy",
       "stem": "The cycle-skipping problem in waveform inversion arises when:",
       "options": [
-        "The frequency is too high for the model",
-        "Phase differences between observed and synthetic waveforms exceed half a cycle",
         "The source wavelet is not accurately known",
-        "The receiver spacing is too coarse"
+        "The receiver spacing is too coarse",
+        "The frequency is too high for the model",
+        "Phase differences between observed and synthetic waveforms exceed half a cycle"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Cycle-skipping occurs when the initial model is sufficiently wrong that the phase difference between observed and synthetic traces exceeds π. This causes the L2 misfit to converge to a local minimum instead of the global solution.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -623,12 +623,12 @@
       "difficulty": "easy",
       "stem": "In reservoir geomechanics, the poroelastic effective stress law states that the effective stress σ' is related to the total stress σ and pore pressure P by:",
       "options": [
-        "σ' = σ − P",
         "σ' = σ − αP (where α is Biot's coefficient)",
         "σ' = σ + αP",
-        "σ' = σ(1 − P/Pc)"
+        "σ' = σ(1 − P/Pc)",
+        "σ' = σ − P"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Biot's effective stress principle: σ' = σ − αP, where α (0 < α ≤ 1) is the Biot coefficient. α = 1 for perfectly compressible grains, but for most reservoir rocks α ranges from 0.5 to 0.95, depending on grain compressibility.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -644,12 +644,12 @@
       "difficulty": "hard",
       "stem": "Time-lapse (4D) AVO analysis is most sensitive to which reservoir change during production?",
       "options": [
+        " variations in overburden velocity",
         "Lateral facies changes",
         "Pore pressure and fluid saturation variations",
-        "Changes in reservoir thickness",
-        " variations in overburden velocity"
+        "Changes in reservoir thickness"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "4D AVO is sensitive to changes in both pore pressure (affecting frame stiffness and velocities) and fluid saturation (affecting density and bulk modulus). Separating these two effects requires AVO analysis beyond simple impedance changes.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -665,12 +665,12 @@
       "difficulty": "easy",
       "stem": "The biggest challenge in 4D seismic monitoring of offshore reservoirs is:",
       "options": [
-        "Seismic attenuation in the overburden",
-        "Repeatability of acquisition geometry between surveys",
         "Lack of sufficient source energy",
-        "Water depth exceeding cable length"
+        "Water depth exceeding cable length",
+        "Seismic attenuation in the overburden",
+        "Repeatability of acquisition geometry between surveys"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Non-repeatability of source and receiver positions between vintages introduces 4D noise. The normalized root-mean-square (NRMS) metric quantifies this; achieving NRMS < 10% requires careful survey design and processing.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -686,12 +686,12 @@
       "difficulty": "easy",
       "stem": "In sparse inversion (compressed sensing), the recovery of a sparse signal from fewer measurements than required by Nyquist is guaranteed when:",
       "options": [
-        "The signal is bandlimited",
         "The measurement matrix satisfies the Restricted Isometry Property (RIP)",
         "The signal has zero mean",
-        "The noise level is below 1%"
+        "The noise level is below 1%",
+        "The signal is bandlimited"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Restricted Isometry Property (RIP) ensures that the measurement matrix approximately preserves distances between sparse vectors, guaranteeing unique and stable recovery via ℓ1-minimization when the number of measurements M ≥ C·K·log(N/K).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -707,12 +707,12 @@
       "difficulty": "medium",
       "stem": "In dictionary learning for seismic data, the K-SVD algorithm alternates between which two steps?",
       "options": [
+        "Wavelet transform and thresholding",
         "Forward modeling and inversion",
         "Sparse coding and dictionary update",
-        "Filtering and deconvolution",
-        "Wavelet transform and thresholding"
+        "Filtering and deconvolution"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "K-SVD alternates: (1) sparse coding — representing each data vector as a sparse combination of current dictionary atoms, and (2) dictionary update — optimizing each atom and its coefficients using SVD to minimize reconstruction error.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -728,12 +728,12 @@
       "difficulty": "medium",
       "stem": "A U-Net architecture for seismic denoising achieves superior performance primarily because:",
       "options": [
-        "It uses deeper networks than alternatives",
-        "Skip connections preserve spatial information while encoding semantic features",
         "It requires no training data",
-        "It only uses convolutional layers"
+        "It only uses convolutional layers",
+        "It uses deeper networks than alternatives",
+        "Skip connections preserve spatial information while encoding semantic features"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "U-Net's encoder-decoder structure with skip connections allows the network to combine high-resolution spatial details (from skip paths) with abstract semantic information (from bottleneck), enabling precise noise removal while preserving signal amplitudes.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -749,12 +749,12 @@
       "difficulty": "medium",
       "stem": "In multilateral wells, the primary challenge for formation evaluation is:",
       "options": [
-        "Higher drilling costs",
         "Acquiring representative log data in each lateral branch",
         "Lack of suitable drill bits",
-        "Excessive mud weight requirements"
+        "Excessive mud weight requirements",
+        "Higher drilling costs"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Conventional logging tools cannot easily access all lateral branches. Solutions include logging while drilling (LWD) in each branch, borehole imaging at junctions, and specialized tools for selective logging of individual laterals.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -770,12 +770,12 @@
       "difficulty": "hard",
       "stem": "Through-casing resistivity (TCR) logging measures formation resistivity by detecting:",
       "options": [
+        "Acoustic reflections from the casing–cement interface",
         "Electromagnetic wave attenuation through casing",
         "Very small currents (nanoamps) leaking from the casing into the formation",
-        "Natural gamma-ray radiation from the formation",
-        "Acoustic reflections from the casing–cement interface"
+        "Natural gamma-ray radiation from the formation"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "TCR tools inject a known current into the casing and measure the tiny currents (nA range) that leak through the casing into the formation. The ratio of measured to injected current, combined with casing properties, yields the formation resistivity.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -791,12 +791,12 @@
       "difficulty": "hard",
       "stem": "The Archie cementation exponent (m) in the water saturation equation depends primarily on:",
       "options": [
-        "Clay content",
-        "Pore geometry and tortuosity of the interconnected pore space",
         "Formation temperature",
-        "Drilling mud properties"
+        "Drilling mud properties",
+        "Clay content",
+        "Pore geometry and tortuosity of the interconnected pore space"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The cementation exponent m (typically 1.8–2.2) reflects the tortuosity and connectivity of the pore network. In vuggy carbonates, m can exceed 2.5, while in fractured formations it can be less than 1.5.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -812,12 +812,12 @@
       "difficulty": "easy",
       "stem": "Cosmic ray muon tomography uses the attenuation of atmospheric muons to image density variations. Muon attenuation is primarily caused by:",
       "options": [
-        "Electromagnetic interactions with orbital electrons",
         "Nuclear interactions (hadronic cascades) in matter",
         "Gravitational deflection by dense bodies",
-        "Thermal diffusion in the atmosphere"
+        "Thermal diffusion in the atmosphere",
+        "Electromagnetic interactions with orbital electrons"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Muons lose energy mainly through ionization (EM interactions) at high energies, but at geological thicknesses (~100+ m), the dominant effect for imaging is absorption via nuclear (hadronic) interactions. The opacity is measured in meters water equivalent (m.w.e.).",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -838,12 +838,12 @@
       "difficulty": "medium",
       "stem": "In positron annihilation spectroscopy (PAS) applied to geological materials, the positron lifetime is sensitive to:",
       "options": [
+        "Radioactive decay rates",
         "Magnetic field strength",
         "Electron density and defect structure of the material",
-        "Temperature gradients",
-        "Radioactive decay rates"
+        "Temperature gradients"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Positrons annihilate with electrons; the lifetime is inversely proportional to electron density. Voids, vacancies, and dislocations trap positrons, increasing their lifetime. This makes PAS sensitive to nanoscale defect structure in minerals.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -859,12 +859,12 @@
       "difficulty": "medium",
       "stem": "In hierarchical Bayesian inversion, the noise variance (σ²) is treated as:",
       "options": [
-        "A fixed known quantity",
-        "A parameter to be estimated along with the model",
         "Always equal to the data misfit",
-        "Irregular if regularization is applied"
+        "Irregular if regularization is applied",
+        "A fixed known quantity",
+        "A parameter to be estimated along with the model"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Hierarchical Bayesian methods treat σ² (and sometimes regularization parameters) as unknown hyperparameters to be estimated from the data using empirical Bayes or full hierarchical priors, avoiding subjective specification of noise levels.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -880,12 +880,12 @@
       "difficulty": "medium",
       "stem": "Trans-dimensional Markov Chain Monte Carlo (MCMC) methods allow the number of model parameters (e.g., layers) to vary during sampling because:",
       "options": [
-        "They are computationally faster than fixed-dimension MCMC",
         "They provide a natural mechanism for model selection via the Reversible Jump algorithm",
         "They require no prior information",
-        "They always converge to the global minimum"
+        "They always converge to the global minimum",
+        "They are computationally faster than fixed-dimension MCMC"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Trans-dimensional MCMC uses the Reversible Jump algorithm (Green 1995) to jump between parameter spaces of different dimensions, automatically penalizing over-parameterized models through the posterior probability, thus performing Bayesian model selection.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -901,12 +901,12 @@
       "difficulty": "hard",
       "stem": "Bayesian model averaging (BMA) accounts for model uncertainty by:",
       "options": [
+        "Using only the maximum-likelihood model",
         "Selecting the single best-fitting model",
         "Weighting predictions from multiple models by their posterior probabilities",
-        "Averaging all models equally",
-        "Using only the maximum-likelihood model"
+        "Averaging all models equally"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "BMA computes a weighted average of predictions from all candidate models, where each model's weight is its posterior probability P(Mᵢ|data). This properly propagates structural uncertainty into predictions, rather than conditioning on a single model.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -922,12 +922,12 @@
       "difficulty": "medium",
       "stem": "If A:B = 3:5 and B:C = 4:7, then A:B:C = ?",
       "options": [
-        "12:20:35",
-        "3:4:7",
         "9:15:35",
-        "15:20:35"
+        "15:20:35",
+        "12:20:35",
+        "3:4:7"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A:B = 3:5 and B:C = 4:7. Make B common: A:B = 12:20, B:C = 20:35. So A:B:C = 12:20:35.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -948,12 +948,12 @@
       "difficulty": "medium",
       "stem": "A student scores 60% in Math and 75% in Science. If the total marks are 150 for each subject, the student's aggregate marks are:",
       "options": [
-        "175",
         "202.5",
         "202",
-        "210"
+        "210",
+        "175"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Math marks = 60% of 150 = 90. Science marks = 75% of 150 = 112.5. Total = 90 + 112.5 = 202.5.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -974,12 +974,12 @@
       "difficulty": "medium",
       "stem": "A shopkeeper marks a product 40% above cost price and offers a 20% discount. The profit percentage is:",
       "options": [
+        "20%",
         "10%",
         "12%",
-        "15%",
-        "20%"
+        "15%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Let CP = 100. MP = 140. SP = 140 × 0.8 = 112. Profit = 12%, so profit percentage = 12%.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1000,12 +1000,12 @@
       "difficulty": "medium",
       "stem": "A can do a work in 12 days, B in 15 days. They work together for 4 days, then A leaves. How many days will B take to finish the remaining work?",
       "options": [
-        "4 days",
-        "5 days",
         "6 days",
-        "7 days"
+        "7 days",
+        "4 days",
+        "5 days"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A's rate = 1/12, B's rate = 1/15. Together = 1/12 + 1/15 = 9/60 = 3/20 per day. In 4 days, they complete 4 × 3/20 = 12/20 = 3/5. Remaining = 2/5. B takes (2/5) / (1/15) = 6 days.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1026,12 +1026,12 @@
       "difficulty": "hard",
       "stem": "The difference between compound interest and simple interest on ₹10,000 for 2 years at 10% per annum is:",
       "options": [
-        "₹100",
         "₹200",
         "₹1,000",
-        "₹10,000"
+        "₹10,000",
+        "₹100"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SI = 10000 × 10% × 2 = 2000. CI = 10000[(1.1)² − 1] = 10000[1.21 − 1] = 2100. Difference = 2100 − 2000 = ₹100.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1052,12 +1052,12 @@
       "difficulty": "easy",
       "stem": "A train 200 m long passes a pole in 20 seconds. How long will it take to cross a platform 300 m long?",
       "options": [
+        "40 seconds",
         "25 seconds",
         "30 seconds",
-        "35 seconds",
-        "40 seconds"
+        "35 seconds"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Speed = 200/20 = 10 m/s. Total distance = 200 + 300 = 500 m. Time = 500/10 = 50 seconds.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1078,12 +1078,12 @@
       "difficulty": "medium",
       "stem": "The average of 5 numbers is 42. If one number is excluded, the average becomes 35. The excluded number is:",
       "options": [
-        "70",
-        "77",
         "84",
-        "91"
+        "91",
+        "70",
+        "77"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Total of 5 numbers = 5 × 42 = 210. Total of 4 numbers = 4 × 35 = 140. Excluded number = 210 − 140 = 70.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1104,12 +1104,12 @@
       "difficulty": "medium",
       "stem": "A boat goes 24 km upstream in 6 hours and 24 km downstream in 3 hours. The speed of the boat in still water is:",
       "options": [
-        "6 km/h",
         "8 km/h",
         "10 km/h",
-        "12 km/h"
+        "12 km/h",
+        "6 km/h"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Upstream speed = 24/6 = 4 km/h. Downstream speed = 24/3 = 8 km/h. Speed in still water = (4 + 8)/2 = 6 km/h.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1130,12 +1130,12 @@
       "difficulty": "medium",
       "stem": "Two dice are thrown simultaneously. The probability that the sum is a prime number is:",
       "options": [
+        "1/6",
         "5/36",
         "7/36",
-        "15/36",
-        "1/6"
+        "15/36"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Prime sums possible: 2, 3, 5, 7, 11. Count: 2(1), 3(2), 5(4), 6(5), 7(6), 8(5), 9(4), 10(3), 11(2), 12(1). Prime: 1+2+4+6+2 = 15. Probability = 15/36 = 5/12.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1156,12 +1156,12 @@
       "difficulty": "easy",
       "stem": "Find the next number: 2, 6, 12, 20, 30, ?",
       "options": [
-        "40",
-        "42",
         "44",
-        "48"
+        "48",
+        "40",
+        "42"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Differences: 4, 6, 8, 10, 12. Next difference = 12. So next term = 30 + 12 = 42.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1182,12 +1182,12 @@
       "difficulty": "medium",
       "stem": "In a certain code, 'GEOPHYSICS' is written as 'FDOGROHXBR'. How is 'SEISMOLOGY' written in that code?",
       "options": [
-        "RDRRNKMFHN",
         "RDHRNKMFHN",
         "RDRRNKMFFN",
-        "RDRRNKMFNF"
+        "RDRRNKMFNF",
+        "RDRRNKMFHN"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The code shifts each letter by -1 in the alphabet. G→F, E→D, O→N... S→R, E→D, I→H... wait. Let me verify: G-1=F, E-1=D, O-1=N, P-1=O, H-1=G, Y-1=X, S-1=R, I-1=H, C-1=B, S-1=R. So GEOPHYSICS → FDOGROHXBR? No, that doesn't match exactly. The pattern is each letter shifted by -1.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1208,12 +1208,12 @@
       "difficulty": "medium",
       "stem": "Statements: All scientists are researchers. Some researchers are teachers. Conclusions: I. Some scientists are teachers. II. Some teachers are scientists.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both I and II follow",
-        "Neither I nor II follows"
+        "Works under ideal conditions",
+        "Works for small network topologies",
+        "Used for static loading only",
+        "Suitable for high-rise buildings"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "From 'All scientists are researchers' and 'Some researchers are teachers', we cannot conclude that any scientists are teachers or any teachers are scientists. The overlap between researchers and teachers may not include any scientists.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1234,12 +1234,12 @@
       "difficulty": "hard",
       "stem": "A says to B: 'Your mother is the only daughter of my mother.' How is A related to B?",
       "options": [
-        "Mother",
-        "Sister",
         "Grandmother",
-        "Aunt"
+        "Aunt",
+        "Mother",
+        "Sister"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The only daughter of A's mother is A herself. So A is saying B's mother is A. Therefore, A is B's mother.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1260,12 +1260,12 @@
       "difficulty": "easy",
       "stem": "Rahul starts from point A, walks 5 km North, turns right and walks 3 km, turns right again and walks 5 km. How far and in which direction is he from point A?",
       "options": [
-        "3 km East",
         "3 km West",
         "8 km East",
-        "8 km North"
+        "8 km North",
+        "3 km East"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "N 5 km → E 3 km → S 5 km. Net displacement: 3 km East of A.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1286,12 +1286,12 @@
       "difficulty": "medium",
       "stem": "Six persons A, B, C, D, E, F sit in a row facing north. A sits at one end. D is to the immediate left of B. E sits between C and F. C does not sit next to A. B is not at the end. Who sits at the other end?",
       "options": [
+        "F",
         "B",
         "C",
-        "D",
-        "F"
+        "D"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A at position 1. B not at end, so B is at position 2-5. D is left of B. E between C and F. C not next to A (position 2). So C is at position 5, F at position 6. E at position 4, D at position 3, B at position 2. So C is at the other end.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1312,12 +1312,12 @@
       "difficulty": "medium",
       "stem": "If x + 1/x = 5, then x² + 1/x² = ?",
       "options": [
-        "23",
-        "25",
         "27",
-        "29"
+        "29",
+        "23",
+        "25"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Squaring: (x + 1/x)² = 25. x² + 2 + 1/x² = 25. x² + 1/x² = 23.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1338,12 +1338,12 @@
       "difficulty": "hard",
       "stem": "The area of a triangle with sides 13 cm, 14 cm, and 15 cm is:",
       "options": [
-        "80 cm²",
         "84 cm²",
         "90 cm²",
-        "96 cm²"
+        "96 cm²",
+        "80 cm²"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Using Heron's formula: s = (13+14+15)/2 = 21. Area = √[21(21-13)(21-14)(21-15)] = √[21×8×7×6] = √7056 = 84 cm².",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1364,12 +1364,12 @@
       "difficulty": "easy",
       "stem": "The value of sin²30° + cos²60° + tan²45° is:",
       "options": [
+        "3",
         "1.5",
         "2",
-        "2.5",
-        "3"
+        "2.5"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "sin²30° = (1/2)² = 1/4. cos²60° = (1/2)² = 1/4. tan²45° = 1² = 1. Sum = 1/4 + 1/4 + 1 = 1.5.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1390,12 +1390,12 @@
       "difficulty": "hard",
       "stem": "The production of a company (in tonnes) for five years: 2018: 120, 2019: 150, 2020: 100, 2021: 180, 2022: 200. What is the percentage increase from 2020 to 2022?",
       "options": [
-        "50%",
-        "80%",
         "100%",
-        "120%"
+        "120%",
+        "50%",
+        "80%"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Increase = 200 − 100 = 100. Percentage = (100/100) × 100 = 100%.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1416,12 +1416,12 @@
       "difficulty": "hard",
       "stem": "In a pie chart showing expenditure: Food 30%, Rent 25%, Transport 20%, Others 25%. If total monthly income is ₹40,000, the expenditure on Food is:",
       "options": [
-        "₹8,000",
         "₹10,000",
         "₹12,000",
-        "₹15,000"
+        "₹15,000",
+        "₹8,000"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Food expenditure = 30% of 40,000 = 0.30 × 40,000 = ₹12,000.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1442,12 +1442,12 @@
       "difficulty": "easy",
       "stem": "Students in three classes: Class A = 40, Class B = 50, Class C = 60. Pass percentages: A = 75%, B = 80%, C = 70%. Total students who passed:",
       "options": [
+        "120",
         "105",
         "110",
-        "115",
-        "120"
+        "115"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "A passed = 40 × 0.75 = 30. B passed = 50 × 0.80 = 40. C passed = 60 × 0.70 = 42. Total = 30 + 40 + 42 = 112.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1468,12 +1468,12 @@
       "difficulty": "medium",
       "stem": "The number of ways to arrange the letters of the word 'GEOPHYSICS' is:",
       "options": [
-        "10!/2!",
-        "10!/2!2!",
         "10!",
-        "9!"
+        "9!",
+        "10!/2!",
+        "10!/2!2!"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "GEOPHYSICS has 10 letters with S repeated twice. Arrangements = 10!/2!.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1489,12 +1489,12 @@
       "difficulty": "hard",
       "stem": "If 1st January 2025 is a Wednesday, what day is 1st March 2025?",
       "options": [
-        "Friday",
         "Saturday",
         "Sunday",
-        "Monday"
+        "Monday",
+        "Friday"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Jan has 31 days, Feb has 28 days in 2025. Days from 1 Jan to 1 Mar = 31 + 28 = 59 days. 59 mod 7 = 3. Wednesday + 3 = Saturday.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1515,12 +1515,12 @@
       "difficulty": "hard",
       "stem": "Find the odd one out: 2, 3, 5, 7, 11, 14, 17",
       "options": [
+        "17",
         "2",
         "7",
-        "14",
-        "17"
+        "14"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "All numbers except 14 are prime numbers. 14 = 2 × 7 is composite.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1541,12 +1541,12 @@
       "difficulty": "hard",
       "stem": "In what ratio must water be mixed with milk costing ₹30/litre to get a mixture worth ₹20/litre?",
       "options": [
-        "1:2",
-        "1:3",
         "2:3",
-        "3:2"
+        "3:2",
+        "1:2",
+        "1:3"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "By alligation: Milk ₹30 — Mixture ₹20 — Water ₹0. Ratio = (20-0):(30-20) = 20:10 = 2:1. But wait, water to milk ratio = (30-20):(20-0) = 10:20 = 1:2.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1567,12 +1567,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
-        "KG Basin",
         "Mumbai High",
         "Cauvery Basin",
-        "Assam"
+        "Assam",
+        "KG Basin"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1588,12 +1588,12 @@
       "difficulty": "easy",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
+        "2.0% of GDP",
         "0.5% of GDP",
         "1.0% of GDP",
-        "1.5% of GDP",
-        "2.0% of GDP"
+        "1.5% of GDP"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1609,12 +1609,12 @@
       "difficulty": "medium",
       "stem": "India's crude oil imports from Russia increased significantly due to:",
       "options": [
-        "Pipeline completion",
-        "Discounted prices post-sanctions",
         "New trade agreement",
-        "Currency swap"
+        "Currency swap",
+        "Pipeline completion",
+        "Discounted prices post-sanctions"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India increased imports from Russia due to discounted prices after Western sanctions.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1630,12 +1630,12 @@
       "difficulty": "medium",
       "stem": "OPEC+ recently agreed to extend oil production cuts through:",
       "options": [
-        "Q1 2025",
         "Q2 2025",
         "End of 2025",
-        "Q1 2026"
+        "Q1 2026",
+        "Q1 2025"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "OPEC+ extended production cuts through end of 2025.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1651,12 +1651,12 @@
       "difficulty": "hard",
       "stem": "India's highest civilian award is:",
       "options": [
+        "Gandhi Peace Prize",
         "Padma Vibhushan",
         "Bharat Ratna",
-        "Padma Bhushan",
-        "Gandhi Peace Prize"
+        "Padma Bhushan"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Bharat Ratna is India's highest civilian award.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1672,12 +1672,12 @@
       "difficulty": "hard",
       "stem": "India's indigenous aircraft carrier is:",
       "options": [
-        "INS Vikrant",
-        "INS Vikramaditya",
         "INS Arighat",
-        "INS Arihant"
+        "INS Arihant",
+        "INS Vikrant",
+        "INS Vikramaditya"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "INS Vikrant is India's first indigenous aircraft carrier.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1693,12 +1693,12 @@
       "difficulty": "easy",
       "stem": "SI unit of electric current is:",
       "options": [
-        "Volt",
         "Watt",
         "Ampere",
-        "Ohm"
+        "Ohm",
+        "Volt"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Ampere is the SI unit of electric current.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1714,12 +1714,12 @@
       "difficulty": "medium",
       "stem": "Largest freshwater lake in India:",
       "options": [
+        "Sambhar Lake",
         "Chilika Lake",
         "Wular Lake",
-        "Dal Lake",
-        "Sambhar Lake"
+        "Dal Lake"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Wular Lake in J&K is the largest freshwater lake in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1735,12 +1735,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
-        "Quartz",
-        "Topaz",
         "Diamond",
-        "Corundum"
+        "Corundum",
+        "Quartz",
+        "Topaz"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1756,12 +1756,12 @@
       "difficulty": "hard",
       "stem": "The largest desert in India is:",
       "options": [
-        "Thar Desert",
         "Rann of Kutch",
         "Ladakh Desert",
-        "Spiti Desert"
+        "Spiti Desert",
+        "Thar Desert"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Thar Desert is the largest desert in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1777,12 +1777,12 @@
       "difficulty": "hard",
       "stem": "Who ___ the book yesterday?",
       "options": [
+        "written",
         "did wrote",
         "wrote",
-        "has wrote",
-        "written"
+        "has wrote"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1798,12 +1798,12 @@
       "difficulty": "hard",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
-        "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent",
+        "Rare"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1819,12 +1819,12 @@
       "difficulty": "hard",
       "stem": "Choose the word meaning 'to make something less severe':",
       "options": [
-        "Aggravate",
         "Mitigate",
         "Motivate",
-        "Navigate"
+        "Navigate",
+        "Aggravate"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Mitigate means to make less severe or painful.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1840,12 +1840,12 @@
       "difficulty": "medium",
       "stem": "Which is correct? 'The news ___ shocking.'",
       "options": [
+        "have been",
         "were",
         "are",
-        "is",
-        "have been"
+        "is"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "News is uncountable and takes a singular verb.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1861,12 +1861,12 @@
       "difficulty": "hard",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
-        "Lazy",
-        "Hardworking",
         "Careless",
-        "Slow"
+        "Slow",
+        "Lazy",
+        "Hardworking"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1882,12 +1882,12 @@
       "difficulty": "hard",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
-        "Each of",
         "the students",
         "have submitted",
-        "their assignments"
+        "their assignments",
+        "Each of"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1903,12 +1903,12 @@
       "difficulty": "medium",
       "stem": "Choose the correct sentence: 'The team are working hard.'",
       "options": [
+        "Both A and C",
         "Correct — team is plural",
         "Incorrect — should be 'is working'",
-        "Incorrect — should be 'were working'",
-        "Both A and C"
+        "Incorrect — should be 'were working'"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Collective noun 'team' takes a singular verb in formal English.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1924,12 +1924,12 @@
       "difficulty": "easy",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
-        "are",
         "was",
-        "have been"
+        "have been",
+        "were",
+        "are"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1945,12 +1945,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
-        "A",
         "An",
         "The",
-        "No article"
+        "No article",
+        "A"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1966,12 +1966,12 @@
       "difficulty": "hard",
       "stem": "The meeting was put ___ Friday.",
       "options": [
+        "up",
         "on",
         "at",
-        "off",
-        "up"
+        "off"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,

@@ -42,12 +42,12 @@
         "caption": ""
       },
       "options": [
+        "Helmholtz identity",
         "Curl-curl identity",
         "Gradient-divergence identity",
-        "Laplacian decomposition",
-        "Helmholtz identity"
+        "Laplacian decomposition"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The identity ∇×(∇×A) = ∇(∇·A) − ∇²A is universally called the curl-curl identity. It separates the double curl into a gradient-of-divergence term and a vector Laplacian term, and is used to derive the electromagnetic wave equation from Maxwell's equations.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -68,12 +68,12 @@
         "caption": ""
       },
       "options": [
-        "Circle",
         "Ellipse",
         "Parabola",
-        "Hyperbola"
+        "Hyperbola",
+        "Circle"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Substituting z = Re^{iθ}: w = Re^{iθ} + (c²/R)e^{−iθ} = (R + c²/R)cosθ + i(R − c²/R)sinθ. This parametrizes an ellipse with semi-axes a = R + c²/R and b = |R − c²/R|, confirming the Joukowski map sends circles to ellipses.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "easy",
       "stem": "The algebraic identity R_{ijkl} + R_{iklj} + R_{iljk} = 0 for the Riemann curvature tensor is known as:",
       "options": [
-        "Killing equation",
-        "First Bianchi identity",
         "Ricci identity",
-        "Kähler identity"
+        "Kähler identity",
+        "Killing equation",
+        "First Bianchi identity"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The first Bianchi identity states that the Riemann tensor is antisymmetric under cyclic permutation of its last three indices: R_{ijkl} + R_{iklj} + R_{iljk} = 0. This is an algebraic (not differential) identity that follows from the symmetry of the connection.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -110,12 +110,12 @@
       "difficulty": "easy",
       "stem": "The Laplace transform of the zeroth-order Bessel function J₀(t) is:",
       "options": [
+        "√(s² + 1)/s",
         "1/√(s² + 1)",
         "s/√(s² + 1)",
-        "1/(s² + 1)",
-        "√(s² + 1)/s"
+        "1/(s² + 1)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Using the integral representation J₀(t) = (1/π)∫₀^π cos(t sin φ)dφ and evaluating the Laplace integral, one obtains ℒ{J₀(t)} = 1/√(s² + 1) for Re(s) > 0. This is a standard transform pair.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -131,12 +131,12 @@
       "difficulty": "hard",
       "stem": "The period T of a simple pendulum with large amplitude θ₀ can be expanded as a series in θ₀. The first correction to the small-angle period T₀ = 2π√(l/g) is:",
       "options": [
-        "T ≈ T₀(1 + θ₀²/16)",
         "T ≈ T₀(1 + θ₀²/8)",
         "T ≈ T₀(1 + θ₀²/4)",
-        "T ≈ T₀(1 + 3θ₀²/16)"
+        "T ≈ T₀(1 + 3θ₀²/16)",
+        "T ≈ T₀(1 + θ₀²/16)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The exact period is T = 4√(l/g)·K(sin(θ₀/2)), where K is the complete elliptic integral of the first kind. Expanding K(k) ≈ (π/2)(1 + k²/4 + 9k⁴/64 + ...) with k ≈ θ₀/2 gives T ≈ T₀(1 + θ₀²/16 + ...). The θ₀²/16 term is the leading anharmonic correction.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -152,12 +152,12 @@
       "difficulty": "easy",
       "stem": "A body falling freely from rest in the Northern Hemisphere experiences a horizontal deflection due to the Coriolis force. The deflection is directed:",
       "options": [
-        "To the east",
-        "To the west",
         "Toward the north pole",
-        "Away from the north pole"
+        "Away from the north pole",
+        "To the east",
+        "To the west"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For a body falling with velocity v = −v_z ẑ, the Coriolis acceleration is a_cor = −2Ω × v. With Ω having a northward horizontal component Ω cos φ and vertical component Ω sin φ, the cross product yields a_cor = 2Ωv_z cos φ x̂ (eastward). Thus the falling body deflects east.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -173,12 +173,12 @@
       "difficulty": "medium",
       "stem": "According to Noether's theorem, conservation of angular momentum in a central force problem is associated with invariance of the Lagrangian under:",
       "options": [
+        "Galilean boost",
         "Time translation",
         "Spatial translation",
-        "Rotational symmetry",
-        "Galilean boost"
+        "Rotational symmetry"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Noether's theorem states: every continuous symmetry of the Lagrangian corresponds to a conserved quantity. Rotational invariance (the Lagrangian does not change under rotation of coordinates) yields conservation of angular momentum. Time translation gives energy conservation; spatial translation gives momentum conservation.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -194,12 +194,12 @@
       "difficulty": "easy",
       "stem": "The Tisserand parameter T_J is a quasi-conserved quantity in the circular restricted three-body problem. For a body with semi-major axis a, eccentricity e, and inclination i relative to Jupiter's orbit, T_J is approximately:",
       "options": [
-        "a_J/a + 2√(a/a_J)√(1−e²) cos i",
         "a/a_J + 2√(a_J/a) cos i",
         "a_J/a + 2√(a_J/a) sin i",
-        "2a_J/a + √(a/a_J) cos i"
+        "2a_J/a + √(a/a_J) cos i",
+        "a_J/a + 2√(a/a_J)√(1−e²) cos i"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The Tisserand parameter is T_J = a_J/a + 2√(a/a_J)√(1−e²) cos i. It is approximately conserved in the restricted three-body problem and is used to identify comets related to a particular parent body. For nearly circular orbits (e ≈ 0), it simplifies to a_J/a + 2√(a/a_J) cos i.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -220,12 +220,12 @@
         "caption": ""
       },
       "options": [
-        "√(L/C)",
-        "√(CL)",
         "L/C",
-        "C/L"
+        "C/L",
+        "√(L/C)",
+        "√(CL)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For a lossless transmission line, the telegrapher's equations yield the characteristic impedance Z₀ = √(L/C) with dimensions of ohms. It represents the ratio of voltage to current for a single traveling wave, and is the impedance that results in no reflections.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -246,12 +246,12 @@
         "caption": ""
       },
       "options": [
-        "λ/4 from the load",
         "λ/2 from the load",
         "λ/8 from the load",
-        "3λ/4 from the load"
+        "3λ/4 from the load",
+        "λ/4 from the load"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A full 360° rotation on the Smith chart corresponds to λ/2 along the transmission line. Therefore 180° rotation corresponds to λ/4. At λ/4 from the load, the impedance transforms as Z_in = Z₀²/Z_L, which is the impedance inversion property of a quarter-wave transformer.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -267,12 +267,12 @@
       "difficulty": "hard",
       "stem": "The quality factor Q of a resonant cavity increases with:",
       "options": [
+        "Lower operating frequency for a given mode",
         "Higher wall conductivity",
         "Smaller cavity dimensions",
-        "Higher loss tangent of the filling material",
-        "Lower operating frequency for a given mode"
+        "Higher loss tangent of the filling material"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Q = ω₀ × (energy stored)/(power dissipated). Higher wall conductivity reduces ohmic losses (skin-effect resistance), increasing Q. Smaller cavities decrease stored energy faster than losses. Higher loss tangent increases dielectric losses. For a given mode, lower frequency means larger cavity and different Q scaling.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "A plane electromagnetic wave of intensity I is normally incident on a perfectly absorbing surface. The radiation pressure exerted on the surface is:",
       "options": [
-        "I/c",
-        "I/(2c)",
         "2I/c",
-        "I/c²"
+        "I/c²",
+        "I/c",
+        "I/(2c)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For a perfectly absorbing surface, the momentum transferred per unit time per unit area is I/c (all incident momentum is absorbed). For a perfectly reflecting surface, it would be 2I/c (momentum reversed). The radiation pressure on a perfect absorber is P = I/c.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -314,12 +314,12 @@
         "caption": ""
       },
       "options": [
-        "No bound states",
         "Exactly one bound state",
         "Two bound states",
-        "Three bound states"
+        "Three bound states",
+        "No bound states"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "For a symmetric finite square well, the even-parity bound states satisfy a transcendental equation. One new state appears each time η crosses nπ/2. For η < π/2, only one even-parity bound state exists, and no odd-parity states exist. Thus exactly one bound state is always present regardless of well depth.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -335,12 +335,12 @@
       "difficulty": "hard",
       "stem": "A particle of mass m in a one-dimensional attractive delta function potential V(x) = −αδ(x) has exactly one bound state. Its energy is:",
       "options": [
+        "−mα²/ℏ²",
         "−mα²/(2ℏ²)",
         "−α²/(2mℏ²)",
-        "−2mα²/ℏ²",
-        "−mα²/ℏ²"
+        "−2mα²/ℏ²"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Solving −ℏ²ψ''/(2m) − αδ(x)ψ = Eψ with E < 0 gives the bound state energy E = −mα²/(2ℏ²). The wavefunction is ψ(x) = √(κ) e^{−κ|x|} with κ = mα/ℏ². This is the only bound state.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -356,12 +356,12 @@
       "difficulty": "medium",
       "stem": "A semiconductor quantum dot is often called an 'artificial atom' because:",
       "options": [
-        "It contains exactly the same number of electrons as an atom",
-        "It has discrete, quantized energy levels analogous to an atomic spectrum",
         "It is always spherical in shape",
-        "It is composed of the same elements as natural atoms"
+        "It is composed of the same elements as natural atoms",
+        "It contains exactly the same number of electrons as an atom",
+        "It has discrete, quantized energy levels analogous to an atomic spectrum"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Quantum dots confine charge carriers in all three spatial dimensions, producing discrete energy levels similar to atomic orbitals. The energy spacing can be tuned by changing the dot size, but the key analogy to atoms is the discrete (quantized) energy spectrum, not the shape or composition.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -377,12 +377,12 @@
       "difficulty": "hard",
       "stem": "In Feynman's path integral formulation, the propagator K(b, a) from point a to point b is obtained by:",
       "options": [
-        "Summing over all possible paths with phase exp(iS[x]/ℏ)",
         "Solving the time-dependent Schrödinger equation directly",
         "Applying the time-evolution operator to the initial state",
-        "Minimizing the classical action functional"
+        "Minimizing the classical action functional",
+        "Summing over all possible paths with phase exp(iS[x]/ℏ)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Feynman's path integral expresses the propagator as K(b,a) = ∫𝒟[x(t)] exp(iS[x]/ℏ), a sum over all paths from a to b weighted by exp(iS/ℏ). Classical paths dominate in the ℏ → 0 limit via stationary phase, recovering classical mechanics.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -398,12 +398,12 @@
       "difficulty": "hard",
       "stem": "The spontaneous magnetization M of a ferromagnet below the Curie temperature T_C in mean field theory varies near T_C as:",
       "options": [
+        "M ∝ (T_C − T)²",
         "M ∝ (T_C − T)^{1/2}",
         "M ∝ (T_C − T)",
-        "M ∝ (T_C − T)^{3/2}",
-        "M ∝ (T_C − T)²"
+        "M ∝ (T_C − T)^{3/2}"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In mean field (Brillouin/Weiss) theory, the self-consistent equation for M near T_C yields M ∝ (1 − T/T_C)^{β} with the mean field critical exponent β = 1/2. So M ∝ (T_C − T)^{1/2} just below T_C. The exact 2D Ising value is β = 1/8.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -419,12 +419,12 @@
       "difficulty": "medium",
       "stem": "The exact Onsager solution of the 2D Ising model gives the critical exponent β = 1/8 for the spontaneous magnetization. In contrast, mean field theory predicts:",
       "options": [
-        "β = 1/2",
-        "β = 1/8",
         "β = 1/3",
-        "β = 5/16"
+        "β = 5/16",
+        "β = 1/2",
+        "β = 1/8"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Mean field theory (valid for d ≥ 4 dimensions above the upper critical dimension) gives β = 1/2, while the exact 2D Ising result is β = 1/8. This dramatic difference shows that mean field theory fails in low dimensions where fluctuations are important.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -440,12 +440,12 @@
       "difficulty": "easy",
       "stem": "For a photon gas in thermal equilibrium at temperature T, the relationship between radiation pressure P and energy density u is:",
       "options": [
-        "P = u/3",
         "P = u",
         "P = 2u/3",
-        "P = u/2"
+        "P = u/2",
+        "P = u/3"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Photons are massless bosons with equation of state P = u/3 (in SI: P = u/3). This follows from the Stefan-Boltzmann law and the thermodynamic relation P = −(∂F/∂V)_T with the Helmholtz free energy for a photon gas F = −(π²/45)(kT)⁴V/(ℏc)³.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -461,12 +461,12 @@
       "difficulty": "easy",
       "stem": "The Rényi entropy of order α is S_α = (1/(1−α)) ln(Σp_i^α). In the limit α → 1, this reduces to:",
       "options": [
+        "Hartley entropy",
         "Shannon entropy",
         "Von Neumann entropy",
-        "Tsallis entropy",
-        "Hartley entropy"
+        "Tsallis entropy"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Taking the limit α → 1 using L'Hôpital's rule: lim_{α→1} (1/(1−α)) ln(Σp_i^α) = −Σp_i ln p_i, which is the Shannon entropy. The Rényi entropy is a one-parameter generalization that includes Shannon entropy as a special case.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -482,12 +482,12 @@
       "difficulty": "medium",
       "stem": "In the variational treatment of the helium atom ground state using the trial wavefunction ψ = (Z_eff³/π) exp[−Z_eff(r₁ + r₂)] (in atomic units), minimizing the energy expectation value gives the optimal effective nuclear charge Z_eff =:",
       "options": [
-        "27/16",
-        "2",
         "5/2",
-        "19/16"
+        "19/16",
+        "27/16",
+        "2"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The energy functional is E(Z_eff) = Z_eff² − 4Z_eff + (5/8)Z_eff = Z_eff² − (27/8)Z_eff. Minimizing: dE/dZ_eff = 2Z_eff − 27/8 = 0, giving Z_eff = 27/16 ≈ 1.6875. This screens the nuclear charge (Z = 2) by the electron cloud, giving the best single-parameter variational energy of −2.8476 hartree (exact: −2.9037).",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -503,12 +503,12 @@
       "difficulty": "hard",
       "stem": "For electric dipole transitions in a hydrogen-like atom, the selection rules are Δl = ±1, Δm_l = 0, ±1. Which of the following transitions is FORBIDDEN?",
       "options": [
-        "2s → 1s",
         "2p → 1s",
         "3d → 2p",
-        "4f → 3d"
+        "4f → 3d",
+        "2s → 1s"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The 2s → 1s transition has Δl = 0 (both are s states with l = 0), violating the Δl = ±1 selection rule. This is a forbidden electric dipole transition. The 2s state decays very slowly via two-photon emission (lifetime ~0.12 s).",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -524,12 +524,12 @@
       "difficulty": "easy",
       "stem": "A nonlinear molecule with N atoms has 3N − 6 normal modes of vibration. For water (H₂O, N = 3), the three vibrational modes are:",
       "options": [
+        "One stretch, one bend, one torsion",
         "Symmetric stretch, asymmetric stretch, and bending",
         "Three stretching modes",
-        "Two stretches and one rotation",
-        "One stretch, one bend, one torsion"
+        "Two stretches and one rotation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Water has 3(3) − 6 = 3 vibrational modes: the symmetric O–H stretch (~3657 cm⁻¹), asymmetric O–H stretch (~3756 cm⁻¹), and H–O–H bending mode (~1595 cm⁻¹). All three are infrared active due to the change in dipole moment.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -545,12 +545,12 @@
       "difficulty": "medium",
       "stem": "The Doppler broadening of a spectral line at temperature T for atoms of mass m and rest wavelength λ₀ has a full width at half maximum Δλ_D proportional to:",
       "options": [
-        "√(T/m)",
-        "T/m",
         "T²/m",
-        "√(T)"
+        "√(T)",
+        "√(T/m)",
+        "T/m"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The Doppler width is Δν_D = (ν₀/c)√(2kT ln 2/m), or equivalently Δλ_D = (λ₀/c)√(2kT ln 2/m) ∝ √(T/m). Higher temperature or lighter mass increases the thermal velocity spread, broadening the line.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -566,12 +566,12 @@
       "difficulty": "medium",
       "stem": "In Doppler-free saturation spectroscopy, a strong pump beam and a weak counter-propagating probe beam produce a 'Lamb dip' at the center of the absorption line. The Lamb dip occurs because:",
       "options": [
-        "Both beams interact with the same zero-velocity class of atoms",
         "The pump beam creates a population inversion",
         "Stimulated emission cancels absorption",
-        "The probe beam is amplified by stimulated emission"
+        "The probe beam is amplified by stimulated emission",
+        "Both beams interact with the same zero-velocity class of atoms"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The pump saturates the transition for atoms with v = 0 (the velocity class that sees both beams at the same frequency). When the probe scans through the same transition, it finds reduced absorption for v = 0 atoms (already depleted by the pump), creating a narrow dip within the broader Doppler profile.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -587,12 +587,12 @@
       "difficulty": "easy",
       "stem": "The Hall coefficient R_H for a metal with free electron density n is R_H = −1/(ne). For a p-type semiconductor where holes are the majority carriers, R_H is:",
       "options": [
+        "Temperature-independent",
         "Positive",
         "Negative",
-        "Zero",
-        "Temperature-independent"
+        "Zero"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For holes (charge +e) as majority carriers, R_H = +1/(pe) > 0. The sign of R_H directly indicates the type of charge carrier: negative for electrons, positive for holes. This is the standard method for determining carrier type in semiconductors.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -608,12 +608,12 @@
       "difficulty": "medium",
       "stem": "In a semiconductor with both electrons and holes as carriers, the transverse magnetoresistance:",
       "options": [
-        "Does not vanish even for a spherical Fermi surface",
-        "Is always zero due to compensation",
         "Depends only on the total carrier concentration",
-        "Is independent of the magnetic field"
+        "Is independent of the magnetic field",
+        "Does not vanish even for a spherical Fermi surface",
+        "Is always zero due to compensation"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For a single carrier type with a spherical Fermi surface, the magnetoresistance vanishes exactly. However, with two carrier types (electrons and holes), the different Lorentz deflections prevent complete cancellation, and the magnetoresistance is nonzero and generally increases with B.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -629,12 +629,12 @@
       "difficulty": "hard",
       "stem": "The Peierls instability in a one-dimensional metal at low temperature leads to a lattice distortion that:",
       "options": [
-        "Opens a band gap at the Fermi level, making the system insulating",
         "Enhances electrical conductivity",
         "Produces ferromagnetic ordering",
-        "Creates a superconducting state"
+        "Creates a superconducting state",
+        "Opens a band gap at the Fermi level, making the system insulating"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A 1D metal with a half-filled band is unstable to a periodic lattice distortion (dimerization) that opens a gap at the Fermi level. The energy gained by opening the gap exceeds the elastic energy cost, resulting in a metal-to-insulator (Peierls) transition at temperature T_P.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -650,12 +650,12 @@
       "difficulty": "medium",
       "stem": "In the two-fluid model of superfluid helium (He-II), the superfluid component:",
       "options": [
+        "Has high viscosity and carries no entropy",
         "Has zero viscosity and carries no entropy",
         "Has high viscosity and carries entropy",
-        "Has zero viscosity and carries entropy",
-        "Has high viscosity and carries no entropy"
+        "Has zero viscosity and carries entropy"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The two-fluid model describes He-II as a mixture of a normal component (with viscosity and entropy) and a superfluid component (with exactly zero viscosity and zero entropy). The superfluid component flows without dissipation and cannot carry thermal energy.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
         "caption": ""
       },
       "options": [
-        "Differential gain / Common-mode gain",
-        "Common-mode gain / Differential gain",
         "Differential gain × Common-mode gain",
-        "Differential gain² + Common-mode gain²"
+        "Differential gain² + Common-mode gain²",
+        "Differential gain / Common-mode gain",
+        "Common-mode gain / Differential gain"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "CMRR = A_d/A_cm, where A_d is the differential-mode gain and A_cm is the common-mode gain. In dB: CMRR_dB = 20 log₁₀(A_d/A_cm). A high CMRR means the amplifier effectively rejects signals common to both inputs while amplifying the difference.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -702,12 +702,12 @@
         "caption": ""
       },
       "options": [
-        "Equals the input reference frequency",
         "Is twice the input frequency",
         "Is half the input frequency",
-        "Is independent of the input frequency"
+        "Is independent of the input frequency",
+        "Equals the input reference frequency"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In lock, the phase detector output (error signal) averages to zero, meaning the VCO frequency equals the input reference frequency. The PLL can also use frequency dividers in the feedback path to generate output frequencies that are integer multiples of the reference.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -723,12 +723,12 @@
       "difficulty": "medium",
       "stem": "A sigma-delta (ΣΔ) analog-to-digital converter achieves high resolution by employing:",
       "options": [
+        "A sample-and-hold circuit with pipeline stages",
         "Oversampling combined with noise shaping and digital decimation filtering",
         "Successive approximation with a binary search algorithm",
-        "Parallel flash comparators for single-cycle conversion",
-        "A sample-and-hold circuit with pipeline stages"
+        "Parallel flash comparators for single-cycle conversion"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ΣΔ ADCs oversample the input (typically at 64× to 256× the Nyquist rate) and use a modulator to shape quantization noise toward high frequencies. A digital decimation filter then removes the out-of-band noise, achieving effective resolution far exceeding the quantizer's bit depth.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -744,12 +744,12 @@
       "difficulty": "hard",
       "stem": "The I²C (Inter-Integrated Circuit) serial communication protocol uses how many signal lines?",
       "options": [
-        "2 (SDA and SCL)",
-        "1",
         "3",
-        "4"
+        "4",
+        "2 (SDA and SCL)",
+        "1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "I²C uses exactly two wires: SDA (Serial Data) and SCL (Serial Clock). Both are open-drain with pull-up resistors. The protocol supports multi-master and multi-slave configurations with 7-bit or 10-bit addressing, all on just two lines.",
       "estSec": 10,
       "topicWeight": 0.14,
@@ -765,12 +765,12 @@
       "difficulty": "medium",
       "stem": "In a series linear voltage regulator, the pass transistor maintains a constant output voltage by:",
       "options": [
-        "Operating in its active region and dissipating excess voltage as heat",
         "Switching rapidly between saturation and cutoff",
         "Using a transformer to step down the voltage",
-        "Clipping the voltage with a zener diode only"
+        "Clipping the voltage with a zener diode only",
+        "Operating in its active region and dissipating excess voltage as heat"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A series linear regulator uses a pass transistor in its active (linear) region as a variable resistor. An error amplifier compares the output to a reference and adjusts the transistor's base drive to maintain constant output. The excess voltage (V_in − V_out) × I_load is dissipated as heat.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -786,12 +786,12 @@
       "difficulty": "hard",
       "stem": "The nuclear radius R is related to the mass number A by R = R₀A^{1/3} with R₀ ≈ 1.2 fm. This A^{1/3} dependence implies that nuclear matter:",
       "options": [
+        "Has density proportional to A²",
         "Has approximately constant density for all nuclei",
         "Becomes less dense for heavier nuclei",
-        "Becomes more dense for heavier nuclei",
-        "Has density proportional to A²"
+        "Becomes more dense for heavier nuclei"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Since V ∝ R³ ∝ A and mass M ∝ A, the density ρ = M/V is approximately constant for all nuclei. This demonstrates that nuclear matter is nearly incompressible — adding nucleons increases the volume proportionally, keeping the density ~2.3 × 10¹⁷ kg/m³.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -807,12 +807,12 @@
       "difficulty": "medium",
       "stem": "The Geiger-Nuttall law relates the decay constant λ of alpha emitters to the alpha particle energy E_α. The empirical relation is:",
       "options": [
-        "log₁₀λ = a + b/√E_α",
-        "λ ∝ E_α²",
         "log₁₀λ = a + b·E_α",
-        "λ = a·E_α + b"
+        "λ = a·E_α + b",
+        "log₁₀λ = a + b/√E_α",
+        "λ ∝ E_α²"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The Geiger-Nuttall law states log₁₀λ = a + b/√E_α, where a and b are constants for a given isotopic series. Higher alpha energy leads to much shorter half-lives because the tunneling probability through the Coulomb barrier increases exponentially with energy.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "The continuous energy spectrum of electrons emitted in beta decay led Pauli to postulate the neutrino. The maximum kinetic energy in the beta spectrum corresponds to:",
       "options": [
-        "The case where the antineutrino carries zero kinetic energy",
         "The case where the antineutrino carries maximum energy",
         "The average energy of the antineutrino",
-        "The rest mass energy of the antineutrino"
+        "The rest mass energy of the antineutrino",
+        "The case where the antineutrino carries zero kinetic energy"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "By energy-momentum conservation, the electron and antineutrino share the available energy. The electron has maximum kinetic energy when the antineutrino carries zero kinetic energy (is emitted with near-zero momentum). This endpoint energy equals Q − m_e c².",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -849,12 +849,12 @@
       "difficulty": "medium",
       "stem": "The Homestake experiment (Davis et al.) detected solar neutrinos via ³⁷Cl + ν_e → ³⁷Ar + e⁻. The observed neutrino flux was approximately:",
       "options": [
+        "Zero — no neutrinos were detected",
         "One-third of the theoretical prediction (solar neutrino problem)",
         "Equal to the predicted value",
-        "Three times the predicted value",
-        "Zero — no neutrinos were detected"
+        "Three times the predicted value"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Homestake detected about 1/3 of the predicted ⁸B solar neutrinos. This 'solar neutrino problem' was resolved by the SNO experiment, which showed that electron neutrinos oscillate into muon and tau neutrinos during transit from the Sun.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -870,12 +870,12 @@
       "difficulty": "easy",
       "stem": "Quark confinement implies that the potential between two quarks at large separation r behaves approximately as:",
       "options": [
-        "V(r) = −4α_s/(3r) + κr, where κ is the string tension",
-        "V(r) = −α_s/r²",
         "V(r) = constant",
-        "V(r) = −α_s e^{−r}/r"
+        "V(r) = −α_s e^{−r}/r",
+        "V(r) = −4α_s/(3r) + κr, where κ is the string tension",
+        "V(r) = −α_s/r²"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The quark-antiquark potential has a Coulomb-like term −4α_s/(3r) at short distances (one-gluon exchange) and a linearly rising term κr at large distances (confinement). The string tension κ ≈ 0.18 GeV² means infinite energy is needed to separate quarks, explaining why free quarks are never observed.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -896,12 +896,12 @@
         "caption": ""
       },
       "options": [
-        "ieγ^μ (where e is the coupling, γ^μ Dirac matrices)",
         "igμν (graviton vertex)",
         "ieγ^5 (axial coupling)",
-        "ig_s λ^a (QCD vertex)"
+        "ig_s λ^a (QCD vertex)",
+        "ieγ^μ (where e is the coupling, γ^μ Dirac matrices)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The QED vertex factor is ieγ^μ, where e is the electromagnetic coupling constant and γ^μ are the Dirac gamma matrices. This vertex, combined with propagators and external leg factors, forms the building blocks for computing QED scattering amplitudes to any order in perturbation theory.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -917,12 +917,12 @@
       "difficulty": "hard",
       "stem": "A student scored 72% in an exam where the passing mark is 60%. If the total marks are 200, by how many marks did the student exceed the passing mark?",
       "options": [
+        "60 marks",
         "24 marks",
         "36 marks",
-        "48 marks",
-        "60 marks"
+        "48 marks"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Student scored: 72% of 200 = 144. Passing: 60% of 200 = 120. Excess = 144 − 120 = 24 marks.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -943,12 +943,12 @@
       "difficulty": "medium",
       "stem": "A can complete a task in 12 days and B can complete it in 18 days. Working together, how many days will they take to finish the work?",
       "options": [
-        "7.2 days",
-        "7.5 days",
         "8 days",
-        "6 days"
+        "6 days",
+        "7.2 days",
+        "7.5 days"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A's rate = 1/12 per day; B's rate = 1/18 per day. Combined = 1/12 + 1/18 = 3/36 + 2/36 = 5/36 per day. Days = 36/5 = 7.2 days.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -969,12 +969,12 @@
       "difficulty": "hard",
       "stem": "A shopkeeper buys an article for Rs.800 and sells it at a 25% profit. What is the selling price?",
       "options": [
-        "Rs.950",
         "Rs.1,000",
         "Rs.1,050",
-        "Rs.1,100"
+        "Rs.1,100",
+        "Rs.950"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "SP = CP × (1 + profit%/100) = 800 × 1.25 = Rs.1,000.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -995,12 +995,12 @@
       "difficulty": "medium",
       "stem": "The average of five numbers is 42. If one number is excluded, the average becomes 38. What is the excluded number?",
       "options": [
+        "60",
         "52",
         "56",
-        "58",
-        "60"
+        "58"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Total of 5 numbers = 5 × 42 = 210. Total of 4 numbers = 4 × 38 = 152. Excluded number = 210 − 152 = 58.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1021,12 +1021,12 @@
       "difficulty": "easy",
       "stem": "If A:B = 3:5 and B:C = 4:7, what is A:B:C?",
       "options": [
-        "12:20:35",
-        "3:5:7",
         "12:20:28",
-        "9:15:35"
+        "9:15:35",
+        "12:20:35",
+        "3:5:7"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A:B = 3:5 and B:C = 4:7. Make B equal: A:B = 12:20 and B:C = 20:35. So A:B:C = 12:20:35.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1047,12 +1047,12 @@
       "difficulty": "medium",
       "stem": "A car travels from city A to city B at 60 km/h and returns at 40 km/h. What is the average speed for the entire journey?",
       "options": [
-        "48 km/h",
         "50 km/h",
         "52 km/h",
-        "45 km/h"
+        "45 km/h",
+        "48 km/h"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "For equal distances: average speed = 2v₁v₂/(v₁ + v₂) = 2(60)(40)/(60 + 40) = 4800/100 = 48 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1073,12 +1073,12 @@
       "difficulty": "medium",
       "stem": "A sum of Rs.10,000 is invested at 10% per annum simple interest for 3 years. What is the total amount received?",
       "options": [
+        "Rs.13,500",
         "Rs.13,000",
         "Rs.13,310",
-        "Rs.12,500",
-        "Rs.13,500"
+        "Rs.12,500"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "SI = PRT/100 = 10,000 × 10 × 3/100 = Rs.3,000. Total = P + SI = 10,000 + 3,000 = Rs.13,000.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1099,12 +1099,12 @@
       "difficulty": "medium",
       "stem": "Two fair dice are thrown simultaneously. What is the probability that the sum of the numbers is 7?",
       "options": [
-        "1/6",
-        "1/12",
         "5/36",
-        "7/36"
+        "7/36",
+        "1/6",
+        "1/12"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Favorable outcomes for sum 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes. Total outcomes = 36. Probability = 6/36 = 1/6.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1125,12 +1125,12 @@
       "difficulty": "medium",
       "stem": "In how many ways can 5 books be arranged on a shelf?",
       "options": [
-        "120",
         "60",
         "24",
-        "720"
+        "720",
+        "120"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Number of arrangements = 5! = 5 × 4 × 3 × 2 × 1 = 120.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1151,12 +1151,12 @@
       "difficulty": "medium",
       "stem": "What is the remainder when 2²⁵ is divided by 7?",
       "options": [
+        "3",
         "2",
         "4",
-        "1",
-        "3"
+        "1"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "2¹ mod 7 = 2, 2² mod 7 = 4, 2³ mod 7 = 1. Cycle of 3. 25 = 3×8 + 1, so 2²⁵ mod 7 = 2¹ mod 7 = 2.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1177,12 +1177,12 @@
       "difficulty": "easy",
       "stem": "If x + 1/x = 3, what is the value of x² + 1/x²?",
       "options": [
-        "7",
-        "9",
         "5",
-        "11"
+        "11",
+        "7",
+        "9"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Squaring: (x + 1/x)² = x² + 2 + 1/x² = 9. So x² + 1/x² = 9 − 2 = 7.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1203,12 +1203,12 @@
       "difficulty": "easy",
       "stem": "The area of a triangle with vertices at (0,0), (6,0), and (3,4) is:",
       "options": [
-        "12 sq units",
         "24 sq units",
         "10 sq units",
-        "15 sq units"
+        "15 sq units",
+        "12 sq units"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Area = ½|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)| = ½|0(0−4) + 6(4−0) + 3(0−0)| = ½|24| = 12 sq units.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1229,12 +1229,12 @@
       "difficulty": "easy",
       "stem": "In what ratio should rice costing Rs.40/kg be mixed with rice costing Rs.60/kg to get a mixture costing Rs.52/kg?",
       "options": [
+        "4:1",
         "2:3",
         "3:2",
-        "1:1",
-        "4:1"
+        "1:1"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "By alligation: (60−52):(52−40) = 8:12 = 2:3. So the ratio is 2:3.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1255,12 +1255,12 @@
       "difficulty": "medium",
       "stem": "A boat can travel 20 km upstream in 5 hours and 20 km downstream in 2 hours. What is the speed of the current?",
       "options": [
-        "3 km/h",
-        "2 km/h",
         "4 km/h",
-        "1 km/h"
+        "1 km/h",
+        "3 km/h",
+        "2 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Upstream speed = 20/5 = 4 km/h. Downstream speed = 20/2 = 10 km/h. Current = (downstream − upstream)/2 = (10 − 4)/2 = 3 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1281,12 +1281,12 @@
       "difficulty": "medium",
       "stem": "Pipe A can fill a tank in 10 hours and Pipe B can empty it in 15 hours. If both are opened simultaneously, how long will it take to fill the tank?",
       "options": [
-        "30 hours",
         "25 hours",
         "20 hours",
-        "35 hours"
+        "35 hours",
+        "30 hours"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A's fill rate = 1/10 per hour. B's empty rate = 1/15 per hour. Net rate = 1/10 − 1/15 = 3/30 − 2/30 = 1/30 per hour. Time = 30 hours.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1307,12 +1307,12 @@
       "difficulty": "medium",
       "stem": "A bar chart shows sales over 4 quarters: Q1 = Rs.120 lakh, Q2 = Rs.150 lakh, Q3 = Rs.180 lakh, Q4 = Rs.210 lakh. What is the average quarterly sales?",
       "options": [
+        "Rs.140 lakh",
         "Rs.165 lakh",
         "Rs.150 lakh",
-        "Rs.180 lakh",
-        "Rs.140 lakh"
+        "Rs.180 lakh"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Average = (120 + 150 + 180 + 210)/4 = 660/4 = Rs.165 lakh.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1333,12 +1333,12 @@
       "difficulty": "hard",
       "stem": "In a code language, if APPLE = 50 and ORANGE = 60, then HAVEN = ?",
       "options": [
-        "50",
-        "55",
         "45",
-        "60"
+        "60",
+        "50",
+        "55"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The code assigns each letter its position in the alphabet (A=1, B=2, ..., Z=26) and sums them. APPLE: 1+16+16+12+5 = 50. ORANGE: 15+18+1+14+7+5 = 60. HAVEN: 8+1+22+5+14 = 50.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1359,12 +1359,12 @@
       "difficulty": "medium",
       "stem": "Five persons A, B, C, D, E are sitting in a row facing north. C sits exactly in the middle. A sits to the immediate left of C. D sits to the immediate right of E. Who sits at the leftmost position?",
       "options": [
-        "E",
         "D",
         "B",
-        "A"
+        "A",
+        "E"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Positions 1–5 (left to right). C at position 3. A immediately left of C → A at position 2. D immediately right of E → D = E + 1. Available positions: 1, 4, 5. Only valid assignment: E at 4, D at 5. B at position 1 (leftmost).",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1385,12 +1385,12 @@
       "difficulty": "easy",
       "stem": "Statements: All dogs are animals. All animals are living beings. Conclusion I: All dogs are living beings. Conclusion II: Some living beings are dogs. Which conclusion(s) follow?",
       "options": [
-        "Both I and II follow",
-        "Only I follows",
-        "Only II follows",
-        "Neither follows"
+        "Valid in controlled settings",
+        "Works for particular conditions",
+        "Works for analog signals only",
+        "Works for small network topologies"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "From the chain All dogs → All animals → All living beings, it follows that All dogs are living beings (I). Since all dogs are living beings, certainly some living beings are dogs (II). Both conclusions follow logically.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1411,12 +1411,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a photograph, a man says: 'She is the daughter of the only son of my father.' How is the person in the photograph related to the man?",
       "options": [
-        "Daughter",
-        "Sister",
         "Niece",
-        "Mother"
+        "Mother",
+        "Daughter",
+        "Sister"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The only son of the man's father is the man himself. So 'the daughter of the only son of my father' is the man's own daughter.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1437,12 +1437,12 @@
       "difficulty": "hard",
       "stem": "Rahul starts from point A, walks 5 km north, then turns right and walks 3 km, then turns right and walks 5 km. In which direction is he from the starting point A?",
       "options": [
-        "East",
         "West",
         "North-East",
-        "South-East"
+        "South-East",
+        "East"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "From A: 5 km north → 3 km east (right) → 5 km south (right). Net displacement: 3 km east of A. Direction: East.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1463,12 +1463,12 @@
       "difficulty": "easy",
       "stem": "What is the next number in the series: 2, 6, 12, 20, 30, ?",
       "options": [
+        "44",
         "42",
         "40",
-        "36",
-        "44"
+        "36"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Differences: 4, 6, 8, 10, 12. The next difference is 12, so next term = 30 + 12 = 42. Alternatively, n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1489,12 +1489,12 @@
       "difficulty": "easy",
       "stem": "Doctor : Hospital :: Teacher : ?",
       "options": [
-        "School",
-        "Students",
         "Books",
-        "Knowledge"
+        "Knowledge",
+        "School",
+        "Students"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A doctor works in a hospital. A teacher works in a school. The relationship is professional : workplace.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1515,12 +1515,12 @@
       "difficulty": "medium",
       "stem": "Which does NOT belong to the group? (Apple, Mango, Potato, Banana)",
       "options": [
-        "Potato",
         "Apple",
         "Mango",
-        "Banana"
+        "Banana",
+        "Potato"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Apple, Mango, and Banana are fruits. Potato is a vegetable (tuber). Potato is the odd one out.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1541,12 +1541,12 @@
       "difficulty": "medium",
       "stem": "If 1st January 2025 is a Wednesday, what day of the week is 1st March 2025?",
       "options": [
+        "Monday",
         "Saturday",
         "Friday",
-        "Sunday",
-        "Monday"
+        "Sunday"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Jan has 31 days, Feb has 28 days (2025 is not a leap year). Days from Jan 1 to Mar 1 = 31 + 28 = 59 days. 59 mod 7 = 3. Wednesday + 3 = Saturday.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1567,12 +1567,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
-        "KG Basin",
-        "Mumbai High",
         "Cauvery Basin",
-        "Assam"
+        "Assam",
+        "KG Basin",
+        "Mumbai High"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1588,12 +1588,12 @@
       "difficulty": "easy",
       "stem": "India's first bullet train project connects which two cities?",
       "options": [
-        "Delhi-Mumbai",
         "Mumbai-Ahmedabad",
         "Chennai-Bangalore",
-        "Kolkata-Hyderabad"
+        "Kolkata-Hyderabad",
+        "Delhi-Mumbai"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The first bullet train project connects Mumbai and Ahmedabad.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1609,12 +1609,12 @@
       "difficulty": "medium",
       "stem": "The G20 summit under India's presidency was held in:",
       "options": [
+        "Chennai",
         "Mumbai",
         "New Delhi",
-        "Bengaluru",
-        "Chennai"
+        "Bengaluru"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The G20 summit was held in New Delhi.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1630,12 +1630,12 @@
       "difficulty": "medium",
       "stem": "India's coal production target for FY2025 is:",
       "options": [
-        "900 MT",
-        "1000 MT",
         "1200 MT",
-        "1500 MT"
+        "1500 MT",
+        "900 MT",
+        "1000 MT"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "India targets 1200 MT of coal production.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1651,12 +1651,12 @@
       "difficulty": "hard",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
         "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1672,12 +1672,12 @@
       "difficulty": "hard",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
+        "2.0% of GDP",
         "0.5% of GDP",
         "1.0% of GDP",
-        "1.5% of GDP",
-        "2.0% of GDP"
+        "1.5% of GDP"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1693,12 +1693,12 @@
       "difficulty": "easy",
       "stem": "Smallest state in India by area:",
       "options": [
-        "Sikkim",
-        "Goa",
         "Tripura",
-        "Mizoram"
+        "Mizoram",
+        "Sikkim",
+        "Goa"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Goa is the smallest state by area (3,702 sq km).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1714,12 +1714,12 @@
       "difficulty": "medium",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
-        "5",
         "6",
         "7",
-        "8"
+        "8",
+        "5"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1735,12 +1735,12 @@
       "difficulty": "medium",
       "stem": "The President of India is elected by:",
       "options": [
+        "Prime Minister",
         "Lok Sabha members",
         "Rajya Sabha members",
-        "Electoral College",
-        "Prime Minister"
+        "Electoral College"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1756,12 +1756,12 @@
       "difficulty": "hard",
       "stem": "Largest freshwater lake in India:",
       "options": [
-        "Chilika Lake",
-        "Wular Lake",
         "Dal Lake",
-        "Sambhar Lake"
+        "Sambhar Lake",
+        "Chilika Lake",
+        "Wular Lake"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Wular Lake in J&K is the largest freshwater lake in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1777,12 +1777,12 @@
       "difficulty": "medium",
       "stem": "Choose the correctly punctuated sentence:",
       "options": [
-        "Lets eat, Grandma!",
         "Let's eat Grandma!",
         "Lets eat Grandma!",
-        "Let's, eat Grandma!"
+        "Let's, eat Grandma!",
+        "Lets eat, Grandma!"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Let's needs an apostrophe; comma separates direct address.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1798,12 +1798,12 @@
       "difficulty": "medium",
       "stem": "What does 'candid' mean?",
       "options": [
+        "Polite",
         "Secretive",
         "Frank and honest",
-        "Formal",
-        "Polite"
+        "Formal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Candid means truthful and straightforward; frank.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1819,12 +1819,12 @@
       "difficulty": "hard",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
-        "are",
         "was",
-        "have been"
+        "have been",
+        "were",
+        "are"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1840,12 +1840,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
-        "Lazy",
         "Hardworking",
         "Careless",
-        "Slow"
+        "Slow",
+        "Lazy"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1861,12 +1861,12 @@
       "difficulty": "hard",
       "stem": "She asked me where ___ .",
       "options": [
+        "I live",
         "did I live",
         "do I live",
-        "I lived",
-        "I live"
+        "I lived"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Indirect speech uses past tense: 'where I lived'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1882,12 +1882,12 @@
       "difficulty": "easy",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
-        "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice",
+        "Initiate conversation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1903,12 +1903,12 @@
       "difficulty": "easy",
       "stem": "Who ___ the book yesterday?",
       "options": [
-        "did wrote",
         "wrote",
         "has wrote",
-        "written"
+        "written",
+        "did wrote"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Simple past tense: who wrote.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1924,12 +1924,12 @@
       "difficulty": "medium",
       "stem": "There ___ many reasons for the delay.",
       "options": [
+        "has been",
         "is",
         "was",
-        "are",
-        "has been"
+        "are"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "'There are' with plural noun 'reasons'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1945,12 +1945,12 @@
       "difficulty": "medium",
       "stem": "By the time we arrive, they ___ already left.",
       "options": [
-        "will",
-        "would",
         "will have",
-        "would have"
+        "would have",
+        "will",
+        "would"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Future perfect: will have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1966,12 +1966,12 @@
       "difficulty": "medium",
       "stem": "What does 'resilient' mean?",
       "options": [
-        "Fragile",
         "Able to recover quickly",
         "Slow",
-        "Weak"
+        "Weak",
+        "Fragile"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Resilient means able to recover quickly from difficulties.",
       "estSec": 15,
       "topicWeight": 0.1,

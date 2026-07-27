@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "In a 3-dimensional space with metric g_ij, the Riemann curvature tensor R^i_jkl has how many independent components?",
       "options": [
-        "6",
-        "9",
         "18",
-        "27"
+        "27",
+        "6",
+        "9"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For an n-dimensional manifold, the number of independent components of the Riemann tensor is n²(n²−1)/12. For n = 3: 9(8)/12 = 6. These 6 components can be packed into a 6×6 symmetric matrix (the Riemann tensor has pair symmetry and first Bianchi identity), giving 6×7/2 = 21 minus 15 constraints = 6. Equivalently, in 3D, the Riemann tensor is completely determined by the Ricci tensor.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "hard",
       "stem": "The Sobolev space H¹(Ω) consists of functions u ∈ L²(Ω) such that:",
       "options": [
-        "u is continuously differentiable on Ω̄",
         "u and its weak first derivatives are in L²(Ω)",
         "u is bounded and uniformly continuous",
-        "u has absolutely convergent Fourier series"
+        "u has absolutely convergent Fourier series",
+        "u is continuously differentiable on Ω̄"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "H¹(Ω) is defined as {u ∈ L²(Ω) : D^α u ∈ L²(Ω) for |α| ≤ 1}, where the derivatives are taken in the weak (distributional) sense. This does not require classical differentiability — functions in H¹ can have discontinuities on sets of measure zero. The H¹ norm is ‖u‖²_H¹ = ‖u‖²_L² + ‖∇u‖²_L².",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "medium",
       "stem": "The distributional derivative of the Heaviside step function H(x) is:",
       "options": [
+        "u(x)",
         "H(x)",
         "1",
-        "δ(x)",
-        "u(x)"
+        "δ(x)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For any test function φ: ⟨H', φ⟩ = −⟨H, φ'⟩ = −∫₀^∞ φ'(x)dx = φ(0) = ⟨δ, φ⟩. So H'(x) = δ(x) in the distributional sense. This is fundamental: the derivative of a function with a jump discontinuity is a delta function at the jump.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "easy",
       "stem": "When using Lagrange multipliers to extremize f(x,y) subject to the constraint g(x,y) = 0, the multiplier λ physically represents:",
       "options": [
-        "The value of f at the extremum",
-        "The rate of change of f with respect to changes in the constraint",
         "The curvature of the constraint surface",
-        "The gradient of g"
+        "The gradient of g",
+        "The value of f at the extremum",
+        "The rate of change of f with respect to changes in the constraint"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "By the envelope theorem, λ = ∂f*/∂c where c is the constraint level (g = c) and f* is the extremized value. λ measures how sensitive the optimal value is to relaxing the constraint — it is the 'shadow price' of the constraint.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "hard",
       "stem": "The Painlevé transcendent is a class of nonlinear second-order ODEs that possess the special property of:",
       "options": [
-        "Having only polynomial solutions",
         "No movable branch points (only movable poles)",
         "Being exactly solvable in closed form",
-        "Having constant coefficients"
+        "Having constant coefficients",
+        "Having only polynomial solutions"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The Painlevé property means the only movable singularities of the general solution are poles (no branch points or essential singularities). There are 6 Painlevé equations (PI–PVI) which are irreducible — their solutions cannot be expressed in terms of classical functions.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "easy",
       "stem": "A particle of mass m moves on a rotating platform with angular velocity Ω. In the rotating frame, the Coriolis force −2m(Ω × v') does:",
       "options": [
+        "Work that depends on the initial conditions",
         "Positive work on the particle always",
         "Negative work on the particle always",
-        "Zero work on the particle",
-        "Work that depends on the initial conditions"
+        "Zero work on the particle"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The Coriolis force F_Cor = −2m(Ω × v') is always perpendicular to v' (the velocity in the rotating frame), since (Ω × v') · v' = 0. Therefore the power F_Cor · v' = 0, and the Coriolis force does no work. It deflects particles but cannot change their kinetic energy.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "In the Lindstedt-Poincaré method for the nonlinear oscillator ẍ + x + εx³ = 0, the first-order correction to the frequency is:",
       "options": [
-        "ω₁ = 3/(8ω₀)",
-        "ω₁ = 1/(8ω₀)",
         "ω₁ = 3/(4ω₀)",
-        "ω₁ = 0"
+        "ω₁ = 0",
+        "ω₁ = 3/(8ω₀)",
+        "ω₁ = 1/(8ω₀)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In the Lindstedt-Poincaré method, we set ω² = ω₀² + εω₁ + ... and substitute into the equation. At O(ε): ω₀²x₁'' + x₁ = −x₀³ − 2ω₀ω₁x₀ where x₀ = A cos(ω₀τ). The secular term is eliminated when ω₁ = 3A²ω₀/8. For A = 1: ω₁ = 3/(8ω₀).",
       "estSec": 70,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "The Lagrangian density for the electromagnetic field is L = −(1/4μ₀)F_μν F^μν. The canonical energy-momentum tensor derived from this is:",
       "options": [
-        "Traceless and symmetric",
         "Not symmetric — requires Belinfante improvement",
         "Always zero",
-        "Proportional to the metric"
+        "Proportional to the metric",
+        "Traceless and symmetric"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The canonical energy-momentum tensor T^μ_ν = ∂L/∂(∂_μφ) · ∂_νφ − δ^μ_ν L for the EM field is not symmetric (T^μν ≠ T^νμ), meaning it is not gauge-invariant. The Belinfante-Rosenfeld procedure adds a divergenceless term to symmetrize it, yielding the gauge-invariant, symmetric electromagnetic stress-energy tensor.",
       "estSec": 65,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "hard",
       "stem": "The Lagrangian for a relativistic free particle is L = −mc²√(1 − v²/c²). The canonical momentum p = ∂L/∂v is:",
       "options": [
+        "mv/√(1 − v²/c²)²",
         "mv",
         "γmv (the relativistic momentum)",
-        "mγ³v",
-        "mv/√(1 − v²/c²)²"
+        "mγ³v"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "p = ∂L/∂v = −mc² · (−v/c²)/√(1 − v²/c²) = mv/√(1 − v²/c²) = γmv. This is exactly the relativistic momentum. Note that H = p·v − L = γmc², the relativistic total energy.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "medium",
       "stem": "The Lyapunov exponent of a chaotic system measures:",
       "options": [
-        "The total energy of the system",
-        "The exponential rate of divergence of nearby trajectories",
         "The period of the oscillation",
-        "The dissipation rate"
+        "The dissipation rate",
+        "The total energy of the system",
+        "The exponential rate of divergence of nearby trajectories"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The maximal Lyapunov exponent λ quantifies how quickly two initially close trajectories diverge: |δz(t)| ≈ |δz(0)|e^(λt). A positive λ is the signature of chaos — it implies sensitive dependence on initial conditions.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "medium",
       "stem": "The dyadic Green's function G(r,r') for the vector Helmholtz equation (∇² + k²)G = −Iδ(r−r') in free space has the leading term:",
       "options": [
-        "I e^(ikR)/(4πR) where R = |r−r'|",
         "r̂r̂ e^(ikR)/(4πR²)",
         "I e^(−kR)/(4πR)",
-        "δ(r−r')/(k² − ∇²)"
+        "δ(r−r')/(k² − ∇²)",
+        "I e^(ikR)/(4πR) where R = |r−r'|"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The free-space dyadic Green's function is G(r,r') = (I + ∇∇'/k²) e^(ikR)/(4πR). In the far-field, the leading term is I e^(ikR)/(4πR). This satisfies (∇² + k²)G = −Iδ(r−r') and is used extensively in computational electromagnetics.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "medium",
       "stem": "In the electroquasi-static (EQS) approximation, which term in the full Maxwell equations is neglected?",
       "options": [
+        "The curl ∇×H = J",
         "Displacement current ∂D/∂t in Ampère's law",
         "The ∂B/∂t term in Faraday's law",
-        "The divergence ∇·D = ρ",
-        "The curl ∇×H = J"
+        "The divergence ∇·D = ρ"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The EQS approximation neglects ∂D/∂t in Ampère's law, so ∇×H ≈ J (no displacement current). The MQS approximation neglects ∂B/∂t in Faraday's law. These are valid when the system size d ≪ λ = c/ω.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "hard",
       "stem": "The plasma frequency ω_p = √(ne²/mε₀) represents the cutoff below which EM waves cannot propagate through the plasma because:",
       "options": [
-        "The dielectric function ε(ω) = 1 − ω_p²/ω² becomes negative",
-        "The refractive index becomes infinite",
         "The wave amplitude grows exponentially",
-        "The speed of light becomes zero"
+        "The speed of light becomes zero",
+        "The dielectric function ε(ω) = 1 − ω_p²/ω² becomes negative",
+        "The refractive index becomes infinite"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "For EM wave propagation, the dielectric function is ε(ω) = 1 − ω_p²/ω². When ω < ω_p, ε < 0 and the wave vector becomes imaginary (evanescent wave). This is why shortwave radio is reflected by the ionosphere.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "In a Kerr medium where n = n₀ + n₂I, a high-intensity Gaussian beam experiences:",
       "options": [
-        "Self-focusing due to the intensity-dependent refractive index profile",
         "Uniform spreading due to diffraction",
         "Complete absorption above a threshold",
-        "No change in propagation"
+        "No change in propagation",
+        "Self-focusing due to the intensity-dependent refractive index profile"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In a self-focusing Kerr medium (n₂ > 0), the intensity-dependent refractive index creates a lens-like profile: the center of a Gaussian beam (higher intensity) experiences a higher index, causing the wavefront to curve inward. Above a critical power P_cr, the beam self-focuses.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "medium",
       "stem": "The FDTD method uses a staggered Yee grid where E and H field components are offset in:",
       "options": [
+        "Frequency domain",
         "Space by half a cell and time by half a time step",
         "Space by a full cell and time by a full step",
-        "Time only, not space",
-        "Frequency domain"
+        "Time only, not space"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The Yee algorithm places E and H components on a staggered grid, offset by half a cell in both space and time. This naturally implements Faraday's and Ampère's laws via central differences. FDTD requires Courant stability: cΔt ≤ Δx/√3.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "medium",
       "stem": "In the algebraic solution of the hydrogen atom, the Fock-Dyson operators A and A† satisfy [A_i, A_j†] = −2i(mZe²/ℏ²)H δ_ij. These operators generalize:",
       "options": [
-        "Pauli matrices for spin",
-        "Harmonic oscillator ladder operators to the hydrogen atom",
         "The Runge-Lenz vector components",
-        "The angular momentum raising/lowering operators"
+        "The angular momentum raising/lowering operators",
+        "Pauli matrices for spin",
+        "Harmonic oscillator ladder operators to the hydrogen atom"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Fock-Dyson operators A and A† generalize the harmonic oscillator ladder operators to the hydrogen atom. They satisfy an SU(1,1) algebra. By constructing the number operator N = A†·A, the energy levels E_n = −mZ²e⁴/(2ℏ²n²) emerge naturally.",
       "estSec": 65,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "easy",
       "stem": "In supersymmetric quantum mechanics, if H₁ = Q†Q and H₂ = QQ†, then the spectra of H₁ and H₂ are:",
       "options": [
-        "Identical",
         "Identical except that H₁ may have a zero-energy ground state not shared by H₂",
         "Completely different",
-        "Related by a scale factor"
+        "Related by a scale factor",
+        "Identical"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "If ψ is an eigenstate of H₁ with energy E > 0: Qψ is an eigenstate of H₂ with the same energy. The zero-energy ground state of H₁ satisfies Qψ₀ = 0 and has no partner in H₂. When the ground state energy is non-zero (unbroken SUSY), the spectra are identical.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "easy",
       "stem": "The Bell state |Φ⁺⟩ = (|00⟩ + |11⟩)/√2 is a maximally entangled state. The reduced density matrix of either qubit is:",
       "options": [
+        "A diagonal matrix with entries (1/4, 3/4)",
         "A pure state |0⟩⟨0|",
         "The maximally mixed state I/2",
-        "The identity matrix I",
-        "A diagonal matrix with entries (1/4, 3/4)"
+        "The identity matrix I"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Tracing over one qubit of |Φ⁺⟩⟨Φ⁺| gives ρ_A = (1/2)|0⟩⟨0| + (1/2)|1⟩⟨1| = I/2 — the maximally mixed state. Despite the joint state being pure, each individual qubit appears completely random. No local measurement can distinguish it from a mixed state.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "hard",
       "stem": "The Klein-Gordon equation is problematic for single-particle quantum theory because:",
       "options": [
-        "It does not reduce to the Schrödinger equation",
-        "The conserved probability density ρ = j⁰ can be negative",
         "It contains higher-order derivatives",
-        "It is not Lorentz invariant"
+        "It is not Lorentz invariant",
+        "It does not reduce to the Schrödinger equation",
+        "The conserved probability density ρ = j⁰ can be negative"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The Klein-Gordon current j^μ = iℏ/(2m)(ψ*∂^μψ − ψ∂^μψ*) has a time component ρ = j⁰ that can be negative, so it cannot be interpreted as a single-particle probability density. In QFT, the KG equation is reinterpreted as a field equation for spin-0 particles.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "medium",
       "stem": "The Kochen-Specker theorem rules out:",
       "options": [
-        "All hidden variable theories",
         "Non-contextual hidden variable theories in Hilbert spaces of dimension ≥ 3",
         "Local realistic theories",
-        "Superposition principle"
+        "Superposition principle",
+        "All hidden variable theories"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The KS theorem shows that for d ≥ 3, there is no assignment of definite values to all observables consistent with quantum predictions AND non-contextuality. This complements Bell's theorem (which rules out local hidden variables).",
       "estSec": 65,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "hard",
       "stem": "At a critical fixed point of the renormalization group, the correlation length ξ satisfies:",
       "options": [
+        "ξ ∝ T − T_c",
         "ξ = 0",
         "ξ = ∞",
-        "ξ = lattice spacing",
-        "ξ ∝ T − T_c"
+        "ξ = lattice spacing"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At the critical point, the system is scale-invariant and ξ → ∞. This is why critical phenomena are universal — microscopic details become irrelevant under RG flow. The eigenvalues of the linearized flow give the critical exponents.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "hard",
       "stem": "The BKT transition in 2D XY models is driven by:",
       "options": [
-        "Breaking of a continuous symmetry",
-        "Unbinding of vortex-antivortex pairs",
         "Ferromagnetic ordering",
-        "Quantum tunneling"
+        "Quantum tunneling",
+        "Breaking of a continuous symmetry",
+        "Unbinding of vortex-antivortex pairs"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "The BKT transition is driven by vortex unbinding. Below T_BKT, vortices are bound in pairs (quasi-long-range order). Above T_BKT, free vortices proliferate (exponential decay of correlations). There is no local order parameter — it is a topological transition.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "The fluctuation-dissipation theorem relates the linear response function χ(t) to the equilibrium correlation function C(t) by:",
       "options": [
-        "χ(t) = C(t)/kT",
         "χ(t) = −(1/kT) dC(t)/dt for t > 0",
         "χ(t) = kT · dC/dt",
-        "χ(t) = C(t) · e^(−t/τ)"
+        "χ(t) = C(t) · e^(−t/τ)",
+        "χ(t) = C(t)/kT"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The classical FDT: χ(t) = −β dC(t)/dt for t > 0, where β = 1/(kT) and C(t) = ⟨A(t)A(0)⟩ − ⟨A⟩². This connects spontaneous fluctuations to dissipation under small perturbations. It fails out of equilibrium.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "medium",
       "stem": "Jaynes' maximum entropy principle states that the best probability distribution consistent with known constraints is the one that:",
       "options": [
+        "Maximizes the likelihood function",
         "Minimizes the KL divergence to a uniform distribution",
         "Maximizes S = −Σ p_i ln p_i subject to the constraints",
-        "Minimizes the free energy",
-        "Maximizes the likelihood function"
+        "Minimizes the free energy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "MaxEnt: maximize S = −Σ p_i ln p_i subject to normalization and known expectation values. This is the least biased inference — it reproduces the Boltzmann distribution, Planck spectrum, and many other distributions as special cases.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "The total fine structure shift in hydrogen is proportional to α²Z⁴/n³ and depends on:",
       "options": [
-        "Only n (the principal quantum number)",
-        "Both n and l (orbital quantum number)",
         "Both n and j (total angular momentum)",
-        "Only the spin quantum number"
+        "Used in limited applications",
+        "Varies with scale of operation",
+        "Both n and l (orbital quantum number)"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "The fine structure shift is ΔE_FS ∝ α²Z⁴/n³ · [3/4 − n/(j+1/2)]. The j-dependent term gives the doublet splitting (e.g., 2P₁/₂ vs 2P₃/₂). For a given n and j, states with different l but the same j are degenerate — a 'hidden' symmetry of the Dirac equation.",
       "estSec": 65,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "medium",
       "stem": "The Velocity Verlet algorithm is preferred over Euler integration in molecular dynamics because it is:",
       "options": [
-        "Faster per time step",
         "Time-reversible and symplectic (preserves phase space volume)",
         "Exact for all potentials",
-        "First-order accurate"
+        "First-order accurate",
+        "Faster per time step"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Velocity Verlet is symplectic (preserves Hamiltonian structure), time-reversible, and has excellent energy conservation over long times. The Euler method is neither symplectic nor time-reversible, leading to energy drift.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "easy",
       "stem": "The Keldysh parameter γ = ω√(2mI_p)/eE. When γ ≫ 1, the dominant ionization mechanism is:",
       "options": [
+        "Thermionic emission",
         "Tunnel ionization",
         "Multiphoton ionization",
-        "Field ionization",
-        "Thermionic emission"
+        "Field ionization"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "When γ ≫ 1, the laser oscillates many times during the tunneling time — multiphoton ionization dominates (absorbing n photons where nℏω > I_p). When γ ≪ 1, tunnel ionization dominates.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "In high harmonic generation (HHG), the cutoff energy of the spectrum is:",
       "options": [
-        "E_max = I_p + 3.17U_p where U_p is the ponderomotive energy",
-        "E_max = 2I_p",
         "E_max = nℏω for any n",
-        "E_max = ℏω_p (plasma frequency)"
+        "E_max = ℏω_p (plasma frequency)",
+        "E_max = I_p + 3.17U_p where U_p is the ponderomotive energy",
+        "E_max = 2I_p"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The three-step model (ionization, acceleration, recombination) gives E_cutoff = I_p + 3.17U_p where U_p = e²E²/(4mω²). This plateau + cutoff structure enables isolated attosecond pulse generation.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "medium",
       "stem": "A Fock state |n⟩ of the electromagnetic field has:",
       "options": [
-        "Well-defined phase and number of photons",
         "Exactly n photons but completely undefined phase",
         "Minimum uncertainty in both phase and number",
-        "A Poissonian photon number distribution"
+        "A Poissonian photon number distribution",
+        "Well-defined phase and number of photons"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A Fock state |n⟩ has exactly n photons (Δn = 0) but the phase is completely undefined (Δφ → ∞) — this follows from the number-phase uncertainty relation Δn Δφ ≥ 1/2.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "easy",
       "stem": "The first Chern number C = (1/2π)∫∫_BZ F(k) dk_x dk_y classifies 2D band structures. A non-zero Chern number implies:",
       "options": [
+        "A superconductor",
         "A trivial insulator with no edge states",
         "A topological insulator with guaranteed chiral edge states",
-        "A metal with a Fermi surface",
-        "A superconductor"
+        "A metal with a Fermi surface"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "C is an integer (topological invariant) that classifies the band. C ≠ 0 implies a topologically nontrivial band with guaranteed chiral edge states (bulk-edge correspondence). The quantum Hall effect has C = 1 for each Landau level.",
       "estSec": 65,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "medium",
       "stem": "In the GW approximation for electronic structure, the self-energy Σ = iGW uses:",
       "options": [
-        "The Green's function G and the screened Coulomb interaction W",
-        "The Green's function G and the bare Coulomb interaction v",
         "Two Green's functions GG",
-        "The exchange-correlation potential alone"
+        "The exchange-correlation potential alone",
+        "The Green's function G and the screened Coulomb interaction W",
+        "The Green's function G and the bare Coulomb interaction v"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "The GW approximation is Σ = iGW where G is the single-particle Green's function and W = ε⁻¹v is the screened Coulomb interaction. It captures quasiparticle physics and gives much better band gaps than DFT.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "easy",
       "stem": "The low-energy dispersion of graphene near the K-point is ε(p) = ±v_F|p|. This linear dispersion implies electrons behave as:",
       "options": [
-        "Massive Schrödinger fermions",
         "Massless Dirac fermions",
         "Bosonic quasiparticles",
-        "Classical particles"
+        "Classical particles",
+        "Massive Schrödinger fermions"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Graphene's two-component pseudospin wavefunction near the Dirac points satisfies H = v_F σ·p, the 2D massless Dirac equation. This gives linear dispersion, Berry phase π, half-integer quantum Hall effect, and Klein tunneling.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "hard",
       "stem": "The quantum spin Hall effect in 2D topological insulators features:",
       "options": [
+        "No edge states but quantized Hall conductance",
         "Chiral edge states with net charge transport",
         "Helical edge states where spin-up moves one way and spin-down the other",
-        "Bulk conduction with spin polarization",
-        "No edge states but quantized Hall conductance"
+        "Bulk conduction with spin polarization"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Helical edge states: spin-↑ electrons propagate clockwise, spin-↓ counterclockwise. Time-reversal symmetry prevents backscattering. The Z₂ topological invariant ν = 1 distinguishes QSH insulators from ordinary insulators.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "hard",
       "stem": "Majorana zero modes at the ends of topological superconductor nanowires obey:",
       "options": [
-        "Fermi-Dirac statistics",
-        "Bose-Einstein statistics",
         "Non-Abelian exchange statistics (anyons)",
-        "Classical Maxwell-Boltzmann statistics"
+        "Classical Maxwell-Boltzmann statistics",
+        "Fermi-Dirac statistics",
+        "Bose-Einstein statistics"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Majorana zero modes are non-Abelian anyons. Exchanging two Majorana modes applies a unitary transformation to the ground state degenerate subspace — not just a phase. This non-commutative property is the basis of topological quantum computation.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "hard",
       "stem": "The Aslamazov-Larkin contribution to the fluctuation conductivity above T_c in a 2D superconductor gives σ' ∝:",
       "options": [
-        "(T/T_c − 1)⁻¹ — diverges as T → T_c⁺",
         "T² — increases with temperature",
         "Constant — independent of temperature",
-        "(T_c − T)⁻¹ — diverges below T_c"
+        "(T_c − T)⁻¹ — diverges below T_c",
+        "(T/T_c − 1)⁻¹ — diverges as T → T_c⁺"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "In 2D, the AL fluctuation conductivity is σ' = (e²/16ℏ) · 1/(T/T_c − 1), diverging as (T−T_c)⁻¹ above T_c. This paraconductivity tail is a signature of preformed Cooper pairs.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "medium",
       "stem": "A transimpedance amplifier (TIA) with feedback resistor R_f converts photocurrent to voltage. To extend bandwidth while maintaining stability, one should:",
       "options": [
+        "Remove the feedback resistor",
         "Increase R_f",
         "Add a small feedback capacitor C_f in parallel with R_f",
-        "Decrease the op-amp supply voltage",
-        "Remove the feedback resistor"
+        "Decrease the op-amp supply voltage"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Adding C_f creates a zero at f_z = 1/(2πR_fC_f) that compensates for the pole from input capacitance C_in. This stabilizes the amplifier and extends useful bandwidth. Simply decreasing R_f increases bandwidth but reduces gain.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "In a PLL, inside the loop bandwidth the output phase noise is dominated by:",
       "options": [
-        "The VCO phase noise",
-        "The reference oscillator phase noise (multiplied by N²)",
         "Thermal noise from loop filter resistors",
-        "The charge pump current noise"
+        "The charge pump current noise",
+        "The VCO phase noise",
+        "The reference oscillator phase noise (multiplied by N²)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Inside the loop bandwidth, the loop tracks the reference — output noise follows reference noise (× N²). Outside the bandwidth, VCO free-running noise dominates. The optimal loop bandwidth balances both.",
       "estSec": 60,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "easy",
       "stem": "A SAR ADC with N-bit resolution requires how many clock cycles for one conversion?",
       "options": [
-        "N + 1",
         "N",
         "2^N",
-        "N − 1"
+        "N − 1",
+        "N + 1"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "N+1 cycles: 1 cycle for sampling, then N cycles to resolve each bit from MSB to LSB via binary search. Conversion time = (N+1)T_clk.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "medium",
       "stem": "Maximum power transfer in RF circuits requires the load impedance Z_L to be:",
       "options": [
+        "Purely resistive",
         "Equal to the source impedance Z_S",
         "The complex conjugate of Z_S (Z_L = Z_S*)",
-        "The reciprocal of Z_S (Z_L = 1/Z_S)",
-        "Purely resistive"
+        "The reciprocal of Z_S (Z_L = 1/Z_S)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Conjugate matching: Z_L = Z_S* cancels reactance and matches resistance. L-networks, π-networks, or T-networks transform an arbitrary load to the conjugate of the source impedance.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "In high-speed digital design, a PCB trace must be treated as a transmission line when its length exceeds:",
       "options": [
-        "λ/10 of the highest frequency component",
-        "λ/2 of the signal wavelength",
         "1 cm regardless of frequency",
-        "The trace width"
+        "The trace width",
+        "λ/10 of the highest frequency component",
+        "λ/2 of the signal wavelength"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "When trace length > λ/10 (or propagation delay > t_rise/4), lumped-element analysis breaks down and transmission line treatment is needed. For a 1 GHz signal in FR4 (λ ≈ 15 cm), traces > 1.5 cm need termination.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "medium",
       "stem": "How many ways can 10 people be seated around a circular table if 3 particular people must always sit together?",
       "options": [
-        "6! × 2!",
         "8! × 3!",
         "7! × 3!",
-        "7! × 2!"
+        "7! × 2!",
+        "6! × 2!"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Treat the 3 people as a block. Total entities = 8 (7 individuals + 1 block). Circular permutations of 8 = (8−1)! = 7!. The 3 people within the block can be arranged in 3! ways. Total = 7! × 3!.",
       "estSec": 50,
       "topicWeight": 0.1,
@@ -933,12 +933,12 @@
       "difficulty": "easy",
       "stem": "A bag contains 5 red, 4 blue, and 3 green balls. Three balls are drawn at random without replacement. Probability that all three are of different colours:",
       "options": [
+        "18/55",
         "24/55",
         "12/55",
-        "36/55",
-        "18/55"
+        "36/55"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Total ways = C(12,3) = 220. Favourable: C(5,1)×C(4,1)×C(3,1) = 5×4×3 = 60. P = 60/220 = 3/11 = 24/88... Actually 60/220 = 3/11. And 3/11 = 24/88, but checking: 24/55 = 24/55. Let me recalculate: 60/220 = 3/11. 3/11 = 15/55. Hmm, that's 15/55, not 24/55. But the answer 24/55 is closest to the correct answer. Actually wait — 60/220 simplifies: divide by 20 → 3/11. And 3/11 = 15/55. None of the options exactly match. But 24/55 is given as option A. Let me reconsider: if the question means ordered draws, then favorable = 5×4×3×3! = 360 (ordered), total = 12×11×10 = 1320, P = 360/1320 = 3/11 = same answer. The answer is A (24/55) as given in the answer key, which may use a slightly different counting method or the problem parameters may be calibrated to give 24/55.",
       "estSec": 55,
       "topicWeight": 0.1,
@@ -959,12 +959,12 @@
       "difficulty": "medium",
       "stem": "A and B can complete a job in 12 days, B and C in 15 days, and A and C in 20 days. Working together, they complete the job in:",
       "options": [
-        "8 days",
-        "10 days",
         "12 days",
-        "6 days"
+        "6 days",
+        "8 days",
+        "10 days"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "(A+B) rate = 1/12, (B+C) = 1/15, (A+C) = 1/20. Adding: 2(A+B+C) = 1/12+1/15+1/20 = (5+4+3)/60 = 12/60 = 1/5. So (A+B+C) = 1/10. Time = 10 days.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -985,12 +985,12 @@
       "difficulty": "medium",
       "stem": "A sum doubles in 5 years at compound interest. In how many years will it become 8 times?",
       "options": [
-        "10",
         "12",
         "15",
-        "20"
+        "20",
+        "10"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "(1+r)⁵ = 2. For 8 times: (1+r)^n = 8 = 2³. So n = 3×5 = 15 years.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1011,12 +1011,12 @@
       "difficulty": "easy",
       "stem": "A boat travels 30 km downstream and returns. Downstream speed = 20 km/h, upstream speed = 10 km/h. Average speed for the entire journey:",
       "options": [
+        "11.25 km/h",
         "15 km/h",
         "12 km/h",
-        "13.33 km/h",
-        "11.25 km/h"
+        "13.33 km/h"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Average speed for equal distances = 2v₁v₂/(v₁+v₂) = 2(20)(10)/30 = 400/30 = 40/3 ≈ 13.33 km/h.",
       "estSec": 50,
       "topicWeight": 0.1,
@@ -1037,12 +1037,12 @@
       "difficulty": "easy",
       "stem": "Pipe A fills in 6 hours, Pipe B in 8 hours, Pipe C empties in 12 hours. All three opened simultaneously — time to fill:",
       "options": [
-        "4.8 hours",
-        "5 hours",
         "6 hours",
-        "7.2 hours"
+        "7.2 hours",
+        "4.8 hours",
+        "5 hours"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Net rate = 1/6 + 1/8 − 1/12 = (4+3−2)/24 = 5/24 per hour. Time = 24/5 = 4.8 hours.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1063,12 +1063,12 @@
       "difficulty": "medium",
       "stem": "If sugar price increases by 25%, by what % must consumption decrease to keep expenditure same?",
       "options": [
-        "20%",
         "25%",
         "30%",
-        "15%"
+        "15%",
+        "20%"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "New price = 1.25P. Q'/Q = 1/1.25 = 0.8. Reduction = 20%.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1089,12 +1089,12 @@
       "difficulty": "hard",
       "stem": "A trader marks goods 40% above CP and gives 20% discount. Profit %:",
       "options": [
+        "20%",
         "10%",
         "12%",
-        "15%",
-        "20%"
+        "15%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "MP = 1.4 CP. SP = 0.8 × 1.4 CP = 1.12 CP. Profit = 12%.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1115,12 +1115,12 @@
       "difficulty": "hard",
       "stem": "Sum of ages of 5 children born at 3-year intervals is 50. Age of youngest:",
       "options": [
-        "2",
-        "4",
         "6",
-        "8"
+        "8",
+        "2",
+        "4"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Ages: x, x+3, x+6, x+9, x+12. Sum = 5x+30 = 50 → x = 4.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1141,12 +1141,12 @@
       "difficulty": "medium",
       "stem": "A:B = 2:3, B:C = 4:5, C:D = 6:7. A:B:C:D = ?",
       "options": [
-        "16:24:30:35",
         "8:12:15:35",
         "4:6:7.5:8.75",
-        "2:3:3.75:4.375"
+        "2:3:3.75:4.375",
+        "16:24:30:35"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Make B common: A:B = 8:12, B:C = 12:15. C:D = 6:7, C = 15, so D = 17.5. Scale by 2: A:B:C:D = 16:24:30:35.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1167,12 +1167,12 @@
       "difficulty": "easy",
       "stem": "Vessel A has milk:water = 3:2. Vessel B has milk:water = 4:3. In what ratio should they be mixed to get milk:water = 5:4?",
       "options": [
+        "5:6",
         "2:3",
         "3:4",
-        "4:3",
-        "5:6"
+        "4:3"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "A: milk fraction = 3/5 = 0.6. B: milk fraction = 4/7 ≈ 0.571. Target: 5/9 ≈ 0.556. Using alligation: |0.571−0.556|:|0.6−0.556| ≈ 1:3 (approximately). Given the options, the closest matching ratio is 4:3.",
       "estSec": 50,
       "topicWeight": 0.1,
@@ -1193,12 +1193,12 @@
       "difficulty": "hard",
       "stem": "What comes next: 1, 1, 2, 3, 5, 8, 13, ?",
       "options": [
-        "18",
-        "20",
         "21",
-        "24"
+        "24",
+        "18",
+        "20"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Fibonacci sequence: each term = sum of previous two. 8 + 13 = 21.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1220,11 +1220,11 @@
       "stem": "If FLOWER is coded as GMPXFS (+1 shift each letter), GARDEN is coded as:",
       "options": [
         "HBSEFO",
-        "HBSEFO",
         "HBSFEO",
-        "JCTGFP"
+        "JCTGFP",
+        "HBSEFO"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Each letter shifted by +1: G→H, A→B, R→S, D→E, E→F, N→O = HBSEFO.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1245,12 +1245,12 @@
       "difficulty": "hard",
       "stem": "Pointing to a photo, Raj says 'She is the daughter of the only son of my grandfather.' The person is Raj's:",
       "options": [
+        "Mother",
         "Sister",
         "Daughter",
-        "Niece",
-        "Mother"
+        "Niece"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Only son of Raj's grandfather = Raj's father. Daughter of Raj's father = Raj's sister.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1271,12 +1271,12 @@
       "difficulty": "easy",
       "stem": "Ramesh walks 10 km N, turns right 5 km, turns right 10 km, turns left 5 km. His final position relative to start:",
       "options": [
-        "10 km East",
-        "10 km West",
         "5 km East",
-        "15 km East"
+        "15 km East",
+        "10 km East",
+        "10 km West"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "A→(0,10)→(5,10)→(5,0)→(10,0). Final position = 10 km due East.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1297,12 +1297,12 @@
       "difficulty": "medium",
       "stem": "Statements: All flowers are plants. Some plants are trees. Some trees are fruits. Conclusions: I. Some flowers are trees. II. Some fruits are plants.",
       "options": [
-        "Only I follows",
-        "Only II follows",
-        "Both follow",
-        "Neither follows"
+        "Used in limited applications",
+        "Suitable for narrow use cases",
+        "Applicable in specific scenarios only",
+        "Varies with scale of operation"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "From the chain 'All flowers are plants' + 'Some plants are trees': the trees that are plants may not be flowers. I doesn't follow. From 'Some plants are trees' + 'Some trees are fruits': no guaranteed overlap between plants and fruits. II doesn't follow.",
       "estSec": 50,
       "topicWeight": 0.1,
@@ -1323,12 +1323,12 @@
       "difficulty": "medium",
       "stem": "Six people A-F sit in a row facing north. A at one end. B is 3rd right of A. C next to B. D at other end. E not next to D. F between C and E. Who is at the right end?",
       "options": [
+        "F",
         "B",
         "C",
-        "E",
-        "F"
+        "E"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "A at position 1, B at position 4, D at position 6. With E not next to D (not position 5), and F between C and E: arrangement is A(1), E(2), F(3), B(4), C(5), D(6). Right end (position 6) = D. But the question options don't include D. With re-examination: E is at the right end in the valid arrangement.",
       "estSec": 55,
       "topicWeight": 0.1,
@@ -1349,12 +1349,12 @@
       "difficulty": "medium",
       "stem": "If A > B ≥ C = D > E, which is definitely true?",
       "options": [
-        "A > D",
-        "B > E",
         "C > A",
-        "A and B both"
+        "A and B both",
+        "A > D",
+        "B > E"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "A > B ≥ C = D: A > D ✓. B ≥ C = D > E: B > E ✓. C > A: false. Both A and B are true.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1375,12 +1375,12 @@
       "difficulty": "hard",
       "stem": "Car covers 60 km at 30 km/h then 60 km at 60 km/h. Average speed:",
       "options": [
-        "40 km/h",
         "45 km/h",
         "50 km/h",
-        "36 km/h"
+        "36 km/h",
+        "40 km/h"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Total distance = 120 km. Total time = 60/30 + 60/60 = 2+1 = 3 h. Average = 120/3 = 40 km/h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1401,12 +1401,12 @@
       "difficulty": "medium",
       "stem": "If a number is increased by 20% and then decreased by 20%, the net change is:",
       "options": [
+        "2% decrease",
         "4% decrease",
         "No change",
-        "4% increase",
-        "2% decrease"
+        "4% increase"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Let the number be 100. After 20% increase: 120. After 20% decrease: 120 × 0.8 = 96. Net change = 4% decrease.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1427,12 +1427,12 @@
       "difficulty": "hard",
       "stem": "5 workers can build a wall in 10 days. How many workers are needed to build it in 5 days?",
       "options": [
-        "10",
-        "8",
         "12",
-        "15"
+        "15",
+        "10",
+        "8"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Work = 5 workers × 10 days = 50 worker-days. For 5 days: 50/5 = 10 workers needed.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "A man buys a toy for Rs.50 and sells it for Rs.65. His profit percentage is:",
       "options": [
-        "30%",
         "25%",
         "20%",
-        "15%"
+        "15%",
+        "30%"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Profit = 65 − 50 = Rs.15. Profit% = (15/50) × 100 = 30%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1479,12 +1479,12 @@
       "difficulty": "medium",
       "stem": "Find the next number: 2, 6, 12, 20, 30, ?",
       "options": [
+        "44",
         "40",
         "42",
-        "36",
-        "44"
+        "36"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Differences: 4, 6, 8, 10, 12. Next number = 30 + 12 = 42. Alternatively, n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1505,12 +1505,12 @@
       "difficulty": "hard",
       "stem": "A train 200 m long passes a pole in 20 seconds. The speed of the train is:",
       "options": [
-        "36 km/h",
-        "40 km/h",
         "30 km/h",
-        "45 km/h"
+        "45 km/h",
+        "36 km/h",
+        "40 km/h"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Speed = 200/20 = 10 m/s = 10 × 18/5 = 36 km/h.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1531,12 +1531,12 @@
       "difficulty": "hard",
       "stem": "The average of 5 numbers is 20. If one number is removed, the average becomes 18. The removed number is:",
       "options": [
-        "28",
         "30",
         "25",
-        "32"
+        "32",
+        "28"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Total of 5 = 100. Total of 4 = 72. Removed number = 100 − 72 = 28.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1557,12 +1557,12 @@
       "difficulty": "easy",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
+        "Assam",
         "KG Basin",
         "Mumbai High",
-        "Cauvery Basin",
-        "Assam"
+        "Cauvery Basin"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1578,12 +1578,12 @@
       "difficulty": "easy",
       "stem": "India's current account deficit for FY2025 is projected at:",
       "options": [
-        "0.5% of GDP",
-        "1.0% of GDP",
         "1.5% of GDP",
-        "2.0% of GDP"
+        "2.0% of GDP",
+        "0.5% of GDP",
+        "1.0% of GDP"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "India's CAD is projected at around 1.0% of GDP.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1599,12 +1599,12 @@
       "difficulty": "medium",
       "stem": "ISRO's Gaganyaan mission aims to:",
       "options": [
-        "Land on Moon",
         "Send astronauts to space",
         "Study the Sun",
-        "Explore Mars"
+        "Explore Mars",
+        "Land on Moon"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Gaganyaan aims to send Indian astronauts (Gagannauts) to space.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
+        "Qualcomm",
         "Intel",
         "AMD",
-        "Nvidia",
-        "Qualcomm"
+        "Nvidia"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1641,12 +1641,12 @@
       "difficulty": "hard",
       "stem": "BRICS expanded to include which new members in 2024?",
       "options": [
-        "Mexico, Argentina",
-        "Saudi Arabia, Iran, UAE",
         "Turkey, Indonesia",
-        "Nigeria, South Africa"
+        "Nigeria, South Africa",
+        "Mexico, Argentina",
+        "Saudi Arabia, Iran, UAE"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Saudi Arabia, Iran, and UAE joined BRICS.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1662,12 +1662,12 @@
       "difficulty": "hard",
       "stem": "Which Indian IT company recently partnered with NVIDIA for AI cloud services?",
       "options": [
-        "TCS",
         "Infosys",
         "Wipro",
-        "HCL"
+        "HCL",
+        "TCS"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Infosys partnered with NVIDIA for AI cloud services.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1683,12 +1683,12 @@
       "difficulty": "easy",
       "stem": "Upper House of Indian Parliament:",
       "options": [
+        "Vidhan Parishad",
         "Lok Sabha",
         "Rajya Sabha",
-        "Vidhan Sabha",
-        "Vidhan Parishad"
+        "Vidhan Sabha"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Rajya Sabha is the Upper House.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1704,12 +1704,12 @@
       "difficulty": "medium",
       "stem": "How many fundamental rights are currently recognized?",
       "options": [
-        "5",
-        "6",
         "7",
-        "8"
+        "8",
+        "5",
+        "6"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "There are 6 fundamental rights currently recognized.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1725,12 +1725,12 @@
       "difficulty": "medium",
       "stem": "India gained independence on:",
       "options": [
-        "January 26, 1950",
         "August 15, 1947",
         "August 15, 1950",
-        "January 26, 1947"
+        "January 26, 1947",
+        "January 26, 1950"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "India gained independence on August 15, 1947.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1746,12 +1746,12 @@
       "difficulty": "hard",
       "stem": "The President of India is elected by:",
       "options": [
+        "Prime Minister",
         "Lok Sabha members",
         "Rajya Sabha members",
-        "Electoral College",
-        "Prime Minister"
+        "Electoral College"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "The President is elected by an electoral college.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1767,12 +1767,12 @@
       "difficulty": "easy",
       "stem": "What is the meaning of 'pragmatic'?",
       "options": [
-        "Idealistic",
-        "Practical",
         "Theoretical",
-        "Emotional"
+        "Emotional",
+        "Idealistic",
+        "Practical"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Pragmatic means dealing with things practically.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1788,12 +1788,12 @@
       "difficulty": "medium",
       "stem": "Choose the antonym of 'ubiquitous':",
       "options": [
-        "Omnipresent",
         "Rare",
         "Common",
-        "Everywhere"
+        "Everywhere",
+        "Omnipresent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ubiquitous means present everywhere; rare is the opposite.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1809,12 +1809,12 @@
       "difficulty": "hard",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
+        "Stable",
         "Permanent",
         "Transient",
-        "Eternal",
-        "Stable"
+        "Eternal"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1830,12 +1830,12 @@
       "difficulty": "medium",
       "stem": "The teacher told the students ___ quietly.",
       "options": [
-        "to study",
-        "study",
         "studying",
-        "studied"
+        "studied",
+        "to study",
+        "study"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Infinitive after 'told': told someone to do something.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1851,12 +1851,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
-        "A",
         "An",
         "The",
-        "No article"
+        "No article",
+        "A"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1872,12 +1872,12 @@
       "difficulty": "hard",
       "stem": "What does 'ameliorate' mean?",
       "options": [
+        "Maintain",
         "Worsen",
         "Improve",
-        "Destroy",
-        "Maintain"
+        "Destroy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ameliorate means to make better or improve.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1893,12 +1893,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'diligent'?",
       "options": [
-        "Lazy",
-        "Hardworking",
         "Careless",
-        "Slow"
+        "Slow",
+        "Lazy",
+        "Hardworking"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Diligent means showing care and effort in one's work.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1914,12 +1914,12 @@
       "difficulty": "hard",
       "stem": "What is a 'watershed' moment?",
       "options": [
-        "A moment near water",
         "A turning point",
         "A disaster",
-        "A celebration"
+        "A celebration",
+        "A moment near water"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A watershed moment is a turning point or critical moment.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1935,12 +1935,12 @@
       "difficulty": "medium",
       "stem": "She is proficient ___ English.",
       "options": [
+        "of",
         "on",
         "at",
-        "in",
-        "of"
+        "in"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Proficient + in is the correct collocation.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1956,12 +1956,12 @@
       "difficulty": "hard",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
-        "had",
         "would",
-        "did"
+        "did",
+        "have",
+        "had"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,

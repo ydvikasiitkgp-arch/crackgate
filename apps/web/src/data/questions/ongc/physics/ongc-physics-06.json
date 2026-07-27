@@ -37,12 +37,12 @@
       "difficulty": "hard",
       "stem": "Stokes' theorem relates a surface integral of the curl of a vector field to a line integral around the boundary. Which identity is correct?",
       "options": [
-        "∮_C F·dr = ∬_S (∇×F)·dA",
-        "∬_S F·dA = ∭_V (∇·F) dV",
         "∮_C F·dr = ∭_V (∇·F) dV",
-        "∬_S (∇×F)·dA = ∭_V ∇²F dV"
+        "∬_S (∇×F)·dA = ∭_V ∇²F dV",
+        "∮_C F·dr = ∬_S (∇×F)·dA",
+        "∬_S F·dA = ∭_V (∇·F) dV"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Stokes': ∮F·dr = ∬(∇×F)·dA. Option B is the divergence theorem.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -63,12 +63,12 @@
       "difficulty": "medium",
       "stem": "Green's theorem in the plane relates a line integral around a closed curve C to a double integral over the enclosed region D. For F = (P, Q):",
       "options": [
-        "∮(Pdx+Qdy) = ∬(∂Q/∂x − ∂P/∂y) dA",
         "∮(Pdx+Qdy) = ∬(∂P/∂x + ∂Q/∂y) dA",
         "∮(Pdy−Qdx) = ∬(∂Q/∂x + ∂P/∂y) dA",
-        "∮F·dr = ∬(∇×F) dA"
+        "∮F·dr = ∬(∇×F) dA",
+        "∮(Pdx+Qdy) = ∬(∂Q/∂x − ∂P/∂y) dA"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Green's: ∮(Pdx+Qdy) = ∬(∂Q/∂x−∂P/∂y)dA. The 2D special case of Stokes' theorem.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -89,12 +89,12 @@
       "difficulty": "easy",
       "stem": "The divergence theorem (Gauss's theorem) converts a surface integral into a volume integral. Which statement is correct?",
       "options": [
+        "∬_S F·dA = ∭_V (∇×F) dV for any vector field",
         "∬_S F·dA = ∭_V (∇·F) dV — requires S to be open",
         "∬_S F·dA = ∭_V (∇·F) dV — S must be closed, bounding a simply connected volume V",
-        "∬_S F·dA = ∭_V (∇²F) dV for any vector field",
-        "∬_S F·dA = ∭_V (∇×F) dV for any vector field"
+        "∬_S F·dA = ∭_V (∇²F) dV for any vector field"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Requires S closed, bounding simply connected V, with F continuously differentiable.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -115,12 +115,12 @@
       "difficulty": "easy",
       "stem": "A 3×3 matrix A has eigenvalues 1, 2, and 3. The eigenvalues of A² are:",
       "options": [
-        "1, 4, 9",
-        "1, 2, 3",
         "2, 4, 6",
-        "1, 8, 27"
+        "1, 8, 27",
+        "1, 4, 9",
+        "1, 2, 3"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "If Av = λv then A²v = λ²v. Squares of 1, 2, 3 are 1, 4, 9.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -141,12 +141,12 @@
       "difficulty": "hard",
       "stem": "Euler angles (φ, θ, ψ) describe rigid body orientation. The angle θ represents:",
       "options": [
-        "Rotation about the body-fixed z-axis (spin)",
         "The angle between the space-fixed Z-axis and the body-fixed z-axis (nutation)",
         "The precession angle about the space-fixed Z-axis",
-        "The total angular displacement"
+        "The total angular displacement",
+        "Rotation about the body-fixed z-axis (spin)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "θ is nutation: angle between space Z and body z. φ is precession, ψ is spin.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -167,12 +167,12 @@
       "difficulty": "hard",
       "stem": "A torque-free symmetric top (I₁ = I₂ ≠ I₃) precesses about its angular momentum. The half-angle α of the precession cone satisfies:",
       "options": [
+        "cos α = L/(I₃ω₃)",
         "cos α = I₃ω₃/L",
         "sin α = I₃ω₃/L",
-        "tan α = I₃ω₃/L",
-        "cos α = L/(I₃ω₃)"
+        "tan α = I₃ω₃/L"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "cos α = I₃ω₃/L where ω₃ is spin along symmetry axis, L is conserved angular momentum.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -193,12 +193,12 @@
       "difficulty": "hard",
       "stem": "Two identical masses m connected by three springs: wall—k—m—k—m—k—wall. The angular frequency of the antisymmetric mode is:",
       "options": [
-        "√(k/m)",
-        "√(2k/m)",
         "√(3k/m)",
-        "√(3k/(2m))"
+        "√(3k/(2m))",
+        "√(k/m)",
+        "√(2k/m)"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Antisymmetric mode: middle spring maximally compressed. ω² = 3k/m.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -214,12 +214,12 @@
       "difficulty": "easy",
       "stem": "Hubble's law v = H₀d describes cosmic expansion. The Hubble time 1/H₀ represents:",
       "options": [
-        "The age of the universe in all cosmological models",
         "A characteristic expansion time; approximately the age for linear expansion",
         "The time for light to cross the observable universe",
-        "The period of cosmic oscillation"
+        "The period of cosmic oscillation",
+        "The age of the universe in all cosmological models"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "t_H = 1/H₀ ≈ 14.4 Gyr. For linear expansion, age = 1/H₀.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -235,12 +235,12 @@
       "difficulty": "hard",
       "stem": "A rectangular cavity a × b × d has TE₁₀₁ resonant frequency. For a = 3 cm, d = 4 cm, the frequency is closest to:",
       "options": [
+        "≈ 12.5 GHz",
         "≈ 6.25 GHz",
         "≈ 8.33 GHz",
-        "≈ 5.00 GHz",
-        "≈ 12.5 GHz"
+        "≈ 5.00 GHz"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "f = (c/2)√((1/0.03)²+(1/0.04)²) = 1.5×10⁸×√(1111+625) ≈ 6.25 GHz.",
       "estSec": 55,
       "topicWeight": 0.14,
@@ -256,12 +256,12 @@
       "difficulty": "easy",
       "stem": "When unpolarized light hits a glass surface (n = 1.5) at the Brewster angle, the reflected light is:",
       "options": [
-        "Completely polarized perpendicular to the plane of incidence (s-polarized)",
         "Completely polarized in the plane of incidence (p-polarized)",
         "Unpolarized but reduced in intensity",
-        "Circularly polarized"
+        "Circularly polarized",
+        "Completely polarized perpendicular to the plane of incidence (s-polarized)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At Brewster's angle, p-component has zero reflection. Only s-polarized light is reflected.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -277,12 +277,12 @@
       "difficulty": "medium",
       "stem": "Faraday rotation in a magnetized plasma rotates the polarization plane. The rotation angle is proportional to:",
       "options": [
+        "n_e² (electron density squared)",
         "B² (magnetic field squared)",
         "B × L (magnetic field × path length)",
-        "ω/ω_p (wave frequency / plasma frequency)",
-        "n_e² (electron density squared)"
+        "ω/ω_p (wave frequency / plasma frequency)"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "θ_F ∝ n_e·B·L/ω². Depends on electron density, B along propagation, and path length.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -298,12 +298,12 @@
       "difficulty": "easy",
       "stem": "Cherenkov radiation is emitted when a charged particle exceeds c/n in a medium. The emission angle θ satisfies:",
       "options": [
-        "cos θ = 1/(nβ) where β = v/c",
-        "sin θ = 1/(nβ)",
         "tan θ = nβ",
-        "cos θ = nβ"
+        "cos θ = nβ",
+        "cos θ = 1/(nβ) where β = v/c",
+        "sin θ = 1/(nβ)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "cos θ = c/(nv) = 1/(nβ). Threshold: nβ > 1.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "For a particle in an infinite potential well of width L, the energy of the n = 4 state is how many times the ground state energy?",
       "options": [
-        "4 times",
         "8 times",
         "16 times",
-        "2 times"
+        "2 times",
+        "4 times"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Eₙ ∝ n². E₄/E₁ = 16.",
       "estSec": 15,
       "topicWeight": 0.14,
@@ -340,12 +340,12 @@
       "difficulty": "easy",
       "stem": "The degeneracy of the first excited state (N = 1) of a 3D isotropic harmonic oscillator is:",
       "options": [
+        "10",
         "1",
         "3",
-        "6",
-        "10"
+        "6"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Three configurations: (1,0,0), (0,1,0), (0,0,1). Degeneracy = 3.",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -361,12 +361,12 @@
       "difficulty": "medium",
       "stem": "Spin-orbit coupling in hydrogen splits the 2p state (l = 1, s = 1/2). The two possible values of j are:",
       "options": [
-        "j = 1/2 and j = 3/2",
-        "j = 0 and j = 1",
         "j = 1/2 and j = 5/2",
-        "j = 3/2 and j = 5/2"
+        "j = 3/2 and j = 5/2",
+        "j = 1/2 and j = 3/2",
+        "j = 0 and j = 1"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "j ranges |l−s| to l+s = 1/2, 3/2.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -382,12 +382,12 @@
       "difficulty": "medium",
       "stem": "For the Bell state |Φ⁺⟩ = (|00⟩+|11⟩)/√2, the maximum CHSH parameter S is:",
       "options": [
-        "S = 2 (classical bound)",
         "S = 2√2 ≈ 2.83 (Tsirelson bound)",
         "S = 4",
-        "S = 3"
+        "S = 3",
+        "S = 2 (classical bound)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Local hidden variables: |S| ≤ 2. QM: S = 2√2 ≈ 2.83.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -403,12 +403,12 @@
       "difficulty": "hard",
       "stem": "The Van der Waals equation (P + a/V²)(V − b) = RT. Constants a and b represent:",
       "options": [
+        "a: kinetic energy, b: potential energy",
         "a: molecular volume, b: intermolecular attraction",
         "a: intermolecular attraction, b: excluded volume",
-        "a: temperature correction, b: pressure correction",
-        "a: kinetic energy, b: potential energy"
+        "a: temperature correction, b: pressure correction"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'a' corrects for attractive forces. 'b' corrects for finite molecular volume.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -424,12 +424,12 @@
       "difficulty": "easy",
       "stem": "The Debye model predicts that at very low temperatures (T ≪ Θ_D), the lattice heat capacity is proportional to:",
       "options": [
-        "T",
-        "T²",
         "T³",
-        "T⁴"
+        "T⁴",
+        "T",
+        "T²"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Debye T³ law: C_V ∝ T³ at low T. From g(ω) ∝ ω² density of states.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -445,12 +445,12 @@
       "difficulty": "medium",
       "stem": "For a 3D ideal Bose gas, the BEC critical temperature T_c depends on density n as:",
       "options": [
-        "T_c ∝ n",
         "T_c ∝ n^(2/3)",
         "T_c ∝ n^(1/3)",
-        "T_c ∝ ln(n)"
+        "T_c ∝ ln(n)",
+        "T_c ∝ n"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "T_c = (2πℏ²/mk_B)(n/ζ(3/2))^(2/3), so T_c ∝ n^(2/3).",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -466,12 +466,12 @@
       "difficulty": "hard",
       "stem": "The Onsager reciprocal relations state that the transport coefficient matrix satisfies:",
       "options": [
+        "L_ij = δ_ij",
         "L_ij = L_ji (symmetric)",
         "L_ij = −L_ji (antisymmetric)",
-        "L_ij × L_ji = 1",
-        "L_ij = δ_ij"
+        "L_ij × L_ji = 1"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "L_ij = L_ji follows from microscopic reversibility.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -487,12 +487,12 @@
       "difficulty": "medium",
       "stem": "The Lamb shift lifts the 2S₁/₂–2P₁/₂ degeneracy. It is primarily caused by:",
       "options": [
-        "Spin-orbit coupling",
-        "QED radiative corrections (vacuum polarization + electron self-energy)",
         "Finite proton mass",
-        "Nuclear magnetic dipole"
+        "Nuclear magnetic dipole",
+        "Spin-orbit coupling",
+        "QED radiative corrections (vacuum polarization + electron self-energy)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "QED effects: vacuum polarization and self-energy shift 2S₁/₂ upward.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -508,12 +508,12 @@
       "difficulty": "medium",
       "stem": "For a ²D₃/₂ term (L=2, S=1/2, J=3/2), the Landé g-factor is:",
       "options": [
-        "g_J = 4/5",
         "g_J = 3/2",
         "g_J = 4/3",
-        "g_J = 1"
+        "g_J = 1",
+        "g_J = 4/5"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "g_J = 1 + [J(J+1)+S(S+1)−L(L+1)]/[2J(J+1)] = 1−0.2 = 0.8 = 4/5.",
       "estSec": 50,
       "topicWeight": 0.14,
@@ -529,12 +529,12 @@
       "difficulty": "medium",
       "stem": "In rotational Raman spectroscopy of a linear molecule, the selection rule for J is:",
       "options": [
+        "ΔJ = ±1, ±3",
         "ΔJ = 0",
         "ΔJ = ±1",
-        "ΔJ = ±2",
-        "ΔJ = ±1, ±3"
+        "ΔJ = ±2"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Rotational Raman: ΔJ = ±2. Arises from rank-2 polarizability tensor.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -550,12 +550,12 @@
       "difficulty": "easy",
       "stem": "In a four-level laser, population inversion requires:",
       "options": [
-        "N₂ > N₁",
-        "N₃ > N₂ (upper laser level more populated than lower)",
         "N₀ > N₃",
-        "N₁ = N₂ = N₃"
+        "N₁ = N₂ = N₃",
+        "N₂ > N₁",
+        "N₃ > N₂ (upper laser level more populated than lower)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "N₃ > N₂. Rapid decay |2⟩→|1⟩ keeps N₂ low.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -571,12 +571,12 @@
       "difficulty": "hard",
       "stem": "For a 2D square lattice (lattice constant a), the reciprocal lattice vectors are:",
       "options": [
-        "b₁=(2π/a)x̂, b₂=(2π/a)ŷ",
         "b₁=(a/2π)x̂, b₂=(a/2π)ŷ",
         "b₁=(π/a)x̂, b₂=(π/a)ŷ",
-        "b₁=(2π/a²)x̂, b₂=(2π/a²)ŷ"
+        "b₁=(2π/a²)x̂, b₂=(2π/a²)ŷ",
+        "b₁=(2π/a)x̂, b₂=(2π/a)ŷ"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "From aᵢ·bⱼ = 2πδᵢⱼ: b₁=(2π/a)x̂, b₂=(2π/a)ŷ.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -592,12 +592,12 @@
       "difficulty": "medium",
       "stem": "Bloch's theorem ψ_k(r) = e^(ik·r) u_k(r) implies that in a periodic potential:",
       "options": [
+        "Electron-electron interactions vanish",
         "Electrons are localized at atomic sites",
         "Energy eigenvalues form continuous bands indexed by crystal momentum k",
-        "The potential must be constant",
-        "Electron-electron interactions vanish"
+        "The potential must be constant"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Bloch's theorem gives energy bands E_n(k) separated by gaps — foundation of band theory.",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -613,12 +613,12 @@
       "difficulty": "hard",
       "stem": "At T = 0, the Fermi energy of a free electron gas (density n) is:",
       "options": [
-        "E_F = (ℏ²/2m)(3π²n)^(2/3)",
-        "E_F = (ℏ²/2m)(3π²n)^(1/3)",
         "E_F = (ℏ²/m)(3π²n)^(2/3)",
-        "E_F = k_BT ln(n)"
+        "E_F = k_BT ln(n)",
+        "E_F = (ℏ²/2m)(3π²n)^(2/3)",
+        "E_F = (ℏ²/2m)(3π²n)^(1/3)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "E_F = (ℏ²/2m)(3π²n)^(2/3), from k_F = (3π²n)^(1/3).",
       "estSec": 35,
       "topicWeight": 0.14,
@@ -634,12 +634,12 @@
       "difficulty": "medium",
       "stem": "BCS theory predicts the superconducting gap ratio at T = 0:",
       "options": [
-        "Δ(0) = k_BT_c",
         "2Δ(0) ≈ 3.53 k_BT_c",
         "Δ(0) = 0 at T = 0",
-        "Δ(0) = 2k_BT_c"
+        "Δ(0) = 2k_BT_c",
+        "Δ(0) = k_BT_c"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "BCS: 2Δ(0)/k_BT_c = 2e^(−γ) ≈ 3.53.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -655,12 +655,12 @@
       "difficulty": "hard",
       "stem": "Magnetic domains form in ferromagnetic materials primarily to minimize:",
       "options": [
+        "Electron kinetic energy",
         "Exchange energy",
         "Magnetostatic (demagnetization) energy",
-        "Lattice vibration energy",
-        "Electron kinetic energy"
+        "Lattice vibration energy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Domains minimize magnetostatic energy from the external field of a uniformly magnetized sample.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -676,12 +676,12 @@
       "difficulty": "medium",
       "stem": "For an n-channel enhancement MOSFET, the saturation region occurs when:",
       "options": [
-        "V_GS < V_th",
-        "V_GS > V_th and V_DS < V_GS − V_th",
         "V_GS > V_th and V_DS ≥ V_GS − V_th",
-        "V_GS = V_th"
+        "V_GS = V_th",
+        "V_GS < V_th",
+        "V_GS > V_th and V_DS < V_GS − V_th"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Saturation: V_GS > V_th AND V_DS ≥ V_GS − V_th (channel pinched off at drain).",
       "estSec": 30,
       "topicWeight": 0.14,
@@ -697,12 +697,12 @@
       "difficulty": "medium",
       "stem": "A CMOS inverter has PMOS (top) and NMOS (bottom). When input is HIGH (V_DD):",
       "options": [
-        "PMOS conducts, NMOS is off",
         "NMOS conducts, PMOS is off",
         "Both conduct equally",
-        "Neither conducts"
+        "Neither conducts",
+        "PMOS conducts, NMOS is off"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "NMOS V_GS = V_DD > V_th (conducts). PMOS V_SG = 0 (off). Output pulled LOW.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -718,12 +718,12 @@
       "difficulty": "hard",
       "stem": "In an astable 555 timer, the oscillation frequency depends on:",
       "options": [
-        "Only the capacitor C",
-        "Only resistors R₁ and R₂",
-        "R₁, R₂, and C",
-        "Internal reference voltage only"
+        "Internal reference voltage only",
+        "Works for short-span bridges",
+        "Applies to low-frequency range",
+        "R₁, R₂, and C"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "f = 1.44/((R₁+2R₂)C). Capacitor charges through R₁+R₂, discharges through R₂.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -739,12 +739,12 @@
       "difficulty": "hard",
       "stem": "A parallel-in serial-out (PISO) shift register converts:",
       "options": [
-        "Parallel data to serial data",
-        "Serial data to parallel data",
         "Analog to digital",
-        "Digital to analog"
+        "Digital to analog",
+        "Parallel data to serial data",
+        "Serial data to parallel data"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "PISO loads data in parallel and shifts out serially.",
       "estSec": 20,
       "topicWeight": 0.14,
@@ -760,12 +760,12 @@
       "difficulty": "medium",
       "stem": "A successive approximation (SAR) ADC converts an analog input by:",
       "options": [
-        "Counting up from zero",
         "Binary search: testing bits from MSB to LSB",
         "Integrating over fixed time",
-        "Multi-threshold parallel comparison"
+        "Multi-threshold parallel comparison",
+        "Counting up from zero"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Binary search: tests each bit MSB→LSB. n bits require n comparisons.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -781,12 +781,12 @@
       "difficulty": "medium",
       "stem": "The deuteron magnetic moment is 0.857 μ_N. For a pure S-state proton-neutron pair it would be:",
       "options": [
+        "−1.913 μ_N",
         "0.857 μ_N",
         "0.880 μ_N (sum of p and n moments)",
-        "2.793 μ_N",
-        "−1.913 μ_N"
+        "2.793 μ_N"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Pure S-state: μ_d = μ_p + μ_n = 2.793 + (−1.913) = 0.880 μ_N. Observed difference indicates D-state admixture.",
       "estSec": 45,
       "topicWeight": 0.14,
@@ -802,12 +802,12 @@
       "difficulty": "hard",
       "stem": "The V−A theory of weak interactions means the W boson couples to:",
       "options": [
-        "Left-handed particles and left-handed antiparticles",
-        "Right-handed particles and right-handed antiparticles",
         "Left-handed particles and right-handed antiparticles",
-        "Both chiralities equally"
+        "Both chiralities equally",
+        "Left-handed particles and left-handed antiparticles",
+        "Right-handed particles and right-handed antiparticles"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "V−A: W couples to left-handed particles and right-handed antiparticles. Maximal parity violation.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -823,12 +823,12 @@
       "difficulty": "hard",
       "stem": "The Q-value of a nuclear reaction is defined as:",
       "options": [
-        "KE(reactants) − KE(products)",
         "KE(products) − KE(reactants)",
         "Mass(reactants) − Mass(products)",
-        "Binding energy of products only"
+        "Binding energy of products only",
+        "KE(reactants) − KE(products)"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Q = KE(products) − KE(reactants) = [M(reactants)−M(products)]c².",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -844,12 +844,12 @@
       "difficulty": "easy",
       "stem": "The threshold photon energy for pair production (γ → e⁺e⁻) near a nucleus is:",
       "options": [
+        "13.6 eV",
         "0.511 MeV",
         "1.022 MeV",
-        "2.044 MeV",
-        "13.6 eV"
+        "2.044 MeV"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "E_min = 2m_e c² = 1.022 MeV.",
       "estSec": 25,
       "topicWeight": 0.14,
@@ -865,12 +865,12 @@
       "difficulty": "hard",
       "stem": "How many quark flavors exist in the Standard Model?",
       "options": [
-        "3",
-        "4",
         "5",
-        "6"
+        "6",
+        "3",
+        "4"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Six: (up,down), (charm,strange), (top,bottom). Top quark ~173 GeV/c².",
       "estSec": 10,
       "topicWeight": 0.14,
@@ -886,12 +886,12 @@
       "difficulty": "medium",
       "stem": "The Wu experiment (1957) demonstrated parity violation by observing:",
       "options": [
-        "Asymmetric β-electron emission from polarized ⁶⁰Co nuclei",
         "CP violation in neutral kaons",
         "Muon decay asymmetry",
-        "Neutrino helicity"
+        "Neutrino helicity",
+        "Asymmetric β-electron emission from polarized ⁶⁰Co nuclei"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "β-electrons from polarized ⁶⁰Co emitted opposite to nuclear spin.",
       "estSec": 40,
       "topicWeight": 0.14,
@@ -907,12 +907,12 @@
       "difficulty": "medium",
       "stem": "A student scores 120 out of 200. His percentage is:",
       "options": [
+        "70%",
         "55%",
         "60%",
-        "65%",
-        "70%"
+        "65%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "(120/200)×100 = 60%.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -933,12 +933,12 @@
       "difficulty": "medium",
       "stem": "Marked 40% above CP, 20% discount. Profit%:",
       "options": [
-        "20%",
-        "12%",
         "15%",
-        "10%"
+        "10%",
+        "20%",
+        "12%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "CP=100, MP=140, SP=112. Profit = 12%.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -959,12 +959,12 @@
       "difficulty": "easy",
       "stem": "LCM of 12, 18, and 24 is:",
       "options": [
-        "36",
         "48",
         "72",
-        "144"
+        "144",
+        "36"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "LCM = 2³×3² = 72.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -980,12 +980,12 @@
       "difficulty": "hard",
       "stem": "Rs. 8000 amounts to Rs. 9200 in 3 years at SI. Rate:",
       "options": [
+        "8%",
         "4%",
         "5%",
-        "6%",
-        "8%"
+        "6%"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SI=1200. R=1200×100/(8000×3)=5%.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1006,12 +1006,12 @@
       "difficulty": "hard",
       "stem": "CI on Rs. 10,000 at 10% for 2 years:",
       "options": [
-        "Rs. 2,000",
-        "Rs. 2,100",
         "Rs. 1,100",
-        "Rs. 2,010"
+        "Rs. 2,010",
+        "Rs. 2,000",
+        "Rs. 2,100"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A=10000(1.1)²=12100. CI=2100.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1032,12 +1032,12 @@
       "difficulty": "medium",
       "stem": "A:B=2:3, B:C=4:5. Then A:B:C =",
       "options": [
-        "8:12:15",
         "2:3:5",
         "4:6:5",
-        "8:12:20"
+        "8:12:20",
+        "8:12:15"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "A:B=8:12, B:C=12:15 → 8:12:15.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1058,12 +1058,12 @@
       "difficulty": "easy",
       "stem": "A completes in 12 days, B in 18 days. Together:",
       "options": [
+        "6 days",
         "7 days",
         "7.2 days",
-        "8 days",
-        "6 days"
+        "8 days"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "1/12+1/18=5/36. Time=7.2 days.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1084,12 +1084,12 @@
       "difficulty": "medium",
       "stem": "Pipe A fills in 6h, B empties in 8h. Both open:",
       "options": [
-        "24 hours",
-        "14 hours",
         "7 hours",
-        "12 hours"
+        "12 hours",
+        "24 hours",
+        "14 hours"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Net = 1/6−1/8 = 1/24. Time = 24h.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1110,12 +1110,12 @@
       "difficulty": "hard",
       "stem": "Average of 5 consecutive odd numbers is 27. Largest:",
       "options": [
-        "29",
         "31",
         "33",
-        "27"
+        "27",
+        "29"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Numbers: 23,25,27,29,31. Largest = 31.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1136,12 +1136,12 @@
       "difficulty": "medium",
       "stem": "Remainder when 7²⁵ ÷ 5:",
       "options": [
+        "4",
         "1",
         "2",
-        "3",
-        "4"
+        "3"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Cycle: 7¹≡2, 7²≡4, 7³≡3, 7⁴≡1 mod 5. 25 mod 4=1. 7²⁵≡2.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1162,12 +1162,12 @@
       "difficulty": "hard",
       "stem": "Two dice thrown. P(sum=7):",
       "options": [
-        "1/6",
-        "1/12",
         "5/36",
-        "7/36"
+        "7/36",
+        "1/6",
+        "1/12"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "6 favorable out of 36. P=1/6.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "A:B=3:5. After 8 years ratio 5:7. A's age:",
       "options": [
-        "10",
         "12",
         "15",
-        "18"
+        "18",
+        "10"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "(3x+8)/(5x+8)=5/7 → x=4. A=12.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1214,12 +1214,12 @@
       "difficulty": "medium",
       "stem": "If x+1/x=5, then x²+1/x² =",
       "options": [
+        "15",
         "23",
         "25",
-        "27",
-        "15"
+        "27"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "(x+1/x)²=25=x²+2+1/x². So x²+1/x²=23.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1240,12 +1240,12 @@
       "difficulty": "easy",
       "stem": "24 km upstream in 6h, 24 km downstream in 4h. Boat speed:",
       "options": [
-        "4 km/h",
-        "5 km/h",
         "6 km/h",
-        "8 km/h"
+        "8 km/h",
+        "4 km/h",
+        "5 km/h"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Up=4, Down=6. Boat=(6+4)/2=5.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1266,12 +1266,12 @@
       "difficulty": "easy",
       "stem": "At 60 km/h on time, at 40 km/h 2h late. Distance:",
       "options": [
-        "120 km",
         "240 km",
         "180 km",
-        "360 km"
+        "360 km",
+        "120 km"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "d/40−d/60=2 → d=240 km.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1287,12 +1287,12 @@
       "difficulty": "medium",
       "stem": "APPLE reversed is ELPPA. ORANGE reversed is:",
       "options": [
+        "RAGNOE",
         "EGNARO",
         "EGNARQ",
-        "EGNAOR",
-        "RAGNOE"
+        "EGNAOR"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Pattern: reverse the word. ORANGE → EGNARO.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1313,12 +1313,12 @@
       "difficulty": "easy",
       "stem": "A says: 'I am the only son of your mother's father.' A is B's:",
       "options": [
-        "Brother",
-        "Uncle",
         "Maternal uncle",
-        "Cousin"
+        "Cousin",
+        "Brother",
+        "Uncle"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "B's maternal grandfather's only son = B's mother's brother = maternal uncle.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1339,12 +1339,12 @@
       "difficulty": "easy",
       "stem": "All dogs are animals. Some animals are cats. Does 'Some dogs are cats' follow?",
       "options": [
-        "Definitely true",
         "Definitely false",
         "Does not follow",
-        "Possibly true"
+        "Possibly true",
+        "Definitely true"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "The 'some animals' that are cats need not include any dogs.",
       "estSec": 40,
       "topicWeight": 0.1,
@@ -1365,12 +1365,12 @@
       "difficulty": "medium",
       "stem": "A,B,C,D,E in a row north. C right of A. B at one end. E left of D. D not next to B. Left end:",
       "options": [
+        "E",
         "A",
         "B",
-        "C",
-        "E"
+        "C"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Arrangement: E D A C B. Left end = E.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1391,12 +1391,12 @@
       "difficulty": "medium",
       "stem": "P,Q,R,S at square table. P left of Q. R opposite P. Right of R:",
       "options": [
-        "P",
-        "Q",
         "S",
-        "Cannot determine"
+        "Cannot determine",
+        "P",
+        "Q"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Clockwise: Q,P,S,R. S is right of R.",
       "estSec": 35,
       "topicWeight": 0.1,
@@ -1417,12 +1417,12 @@
       "difficulty": "hard",
       "stem": "Riya: 10 km N, right 5 km, right 10 km. Distance from start:",
       "options": [
-        "5 km",
         "10 km",
         "15 km",
-        "25 km"
+        "25 km",
+        "5 km"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "N10, E5, S10. Net = 5 km East.",
       "estSec": 25,
       "topicWeight": 0.1,
@@ -1443,12 +1443,12 @@
       "difficulty": "medium",
       "stem": "40 students. Rahul rank from top = 15. Rank from bottom:",
       "options": [
+        "28",
         "25",
         "26",
-        "27",
-        "28"
+        "27"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "40−15+1=26.",
       "estSec": 10,
       "topicWeight": 0.1,
@@ -1469,12 +1469,12 @@
       "difficulty": "hard",
       "stem": "Water mixed with milk at Rs.30/L to get Rs.20/L. Ratio:",
       "options": [
-        "1:2",
-        "2:3",
         "1:3",
-        "3:2"
+        "3:2",
+        "1:2",
+        "2:3"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Alligation: (30−20):(20−0) = 10:20 = 1:2.",
       "estSec": 20,
       "topicWeight": 0.1,
@@ -1495,12 +1495,12 @@
       "difficulty": "medium",
       "stem": "120m + 180m trains, 54 + 72 km/h opposite. Cross in:",
       "options": [
-        "6 s",
         "8 s",
         "10 s",
-        "12 s"
+        "12 s",
+        "6 s"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Rel speed=35 m/s. 300/35≈8.6≈8 s.",
       "estSec": 30,
       "topicWeight": 0.1,
@@ -1521,12 +1521,12 @@
       "difficulty": "medium",
       "stem": "If DELHI is coded as CCIDD (each letter shifts back by its position), MUMBAI is:",
       "options": [
+        "LTLBZJ",
         "LTLAZH",
         "LTLBZH",
-        "LTLBZI",
-        "LTLBZJ"
+        "LTLBZI"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "D→C(−1), E→C(−2), L→I(−3), H→D(−4), I→D(−5). Applying same pattern to MUMBAI.",
       "estSec": 45,
       "topicWeight": 0.1,
@@ -1547,12 +1547,12 @@
       "difficulty": "easy",
       "stem": "ISRO's Gaganyaan mission aims to:",
       "options": [
-        "Land on Moon",
-        "Send astronauts to space",
         "Study the Sun",
-        "Explore Mars"
+        "Explore Mars",
+        "Land on Moon",
+        "Send astronauts to space"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Gaganyaan aims to send Indian astronauts (Gagannauts) to space.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1568,12 +1568,12 @@
       "difficulty": "easy",
       "stem": "Which country successfully landed on the Moon's south pole in 2023?",
       "options": [
-        "USA",
         "China",
         "India",
-        "Japan"
+        "Japan",
+        "USA"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "India's Chandrayaan-3 successfully landed on the Moon's south pole.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1589,12 +1589,12 @@
       "difficulty": "medium",
       "stem": "ONGC's largest oil discovery in recent years was in which block?",
       "options": [
+        "Assam",
         "KG Basin",
         "Mumbai High",
-        "Cauvery Basin",
-        "Assam"
+        "Cauvery Basin"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ONGC made a significant discovery in the KG Basin.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1610,12 +1610,12 @@
       "difficulty": "medium",
       "stem": "Which Indian IT company recently partnered with NVIDIA for AI cloud services?",
       "options": [
-        "TCS",
-        "Infosys",
         "Wipro",
-        "HCL"
+        "HCL",
+        "TCS",
+        "Infosys"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Infosys partnered with NVIDIA for AI cloud services.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1631,12 +1631,12 @@
       "difficulty": "hard",
       "stem": "Which company recently developed the most advanced AI chip for data centers?",
       "options": [
-        "Intel",
         "AMD",
         "Nvidia",
-        "Qualcomm"
+        "Qualcomm",
+        "Intel"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Nvidia has been leading in AI chip development.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1652,12 +1652,12 @@
       "difficulty": "hard",
       "stem": "India's 5G rollout was led by which telecom operator?",
       "options": [
+        "Vi",
         "Airtel",
         "Jio",
-        "BSNL",
-        "Vi"
+        "BSNL"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Reliance Jio led the 5G rollout in India.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1673,12 +1673,12 @@
       "difficulty": "easy",
       "stem": "The river flowing through maximum Indian states:",
       "options": [
-        "Ganga",
-        "Yamuna",
         "Godavari",
-        "Narmada"
+        "Narmada",
+        "Ganga",
+        "Yamuna"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ganga flows through 11 states.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1694,12 +1694,12 @@
       "difficulty": "medium",
       "stem": "Smallest state in India by area:",
       "options": [
-        "Sikkim",
         "Goa",
         "Tripura",
-        "Mizoram"
+        "Mizoram",
+        "Sikkim"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Goa is the smallest state by area (3,702 sq km).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1715,12 +1715,12 @@
       "difficulty": "medium",
       "stem": "The hardest natural substance on Earth is:",
       "options": [
+        "Corundum",
         "Quartz",
         "Topaz",
-        "Diamond",
-        "Corundum"
+        "Diamond"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Diamond is the hardest natural substance (10 on Mohs scale).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1736,12 +1736,12 @@
       "difficulty": "hard",
       "stem": "Which state has the longest coastline in India?",
       "options": [
-        "Tamil Nadu",
-        "Andhra Pradesh",
         "Gujarat",
-        "Kerala"
+        "Kerala",
+        "Tamil Nadu",
+        "Andhra Pradesh"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Gujarat has the longest coastline (1,600 km).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1757,12 +1757,12 @@
       "difficulty": "medium",
       "stem": "Identify the error: 'Each of the students have submitted their assignments.'",
       "options": [
-        "Each of",
         "the students",
         "have submitted",
-        "their assignments"
+        "their assignments",
+        "Each of"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "'Each' is singular, so it should be 'has submitted'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1778,12 +1778,12 @@
       "difficulty": "hard",
       "stem": "Choose the synonym of 'ambiguous':",
       "options": [
+        "Obvious",
         "Clear",
         "Vague",
-        "Definite",
-        "Obvious"
+        "Definite"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Ambiguous means open to more than one interpretation; vague.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1799,12 +1799,12 @@
       "difficulty": "medium",
       "stem": "If I ___ known, I would have helped.",
       "options": [
-        "have",
-        "had",
         "would",
-        "did"
+        "did",
+        "have",
+        "had"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Third conditional: If + past perfect, would have + past participle.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1820,12 +1820,12 @@
       "difficulty": "medium",
       "stem": "The teacher told the students ___ quietly.",
       "options": [
-        "to study",
         "study",
         "studying",
-        "studied"
+        "studied",
+        "to study"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Infinitive after 'told': told someone to do something.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1841,12 +1841,12 @@
       "difficulty": "hard",
       "stem": "___ honest man always speaks the truth.",
       "options": [
+        "No article",
         "A",
         "An",
-        "The",
-        "No article"
+        "The"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "'An' before words starting with silent 'h'.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1862,12 +1862,12 @@
       "difficulty": "medium",
       "stem": "What does 'break the ice' mean?",
       "options": [
-        "Destroy ice",
-        "Initiate conversation",
         "Cause trouble",
-        "End relationship"
+        "End relationship",
+        "Destroy ice",
+        "Initiate conversation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Break the ice means to initiate conversation in a social setting.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1883,12 +1883,12 @@
       "difficulty": "medium",
       "stem": "What is the synonym of 'ephemeral'?",
       "options": [
-        "Permanent",
         "Transient",
         "Eternal",
-        "Stable"
+        "Stable",
+        "Permanent"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Ephemeral means short-lived or transient.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1904,12 +1904,12 @@
       "difficulty": "medium",
       "stem": "What is the meaning of 'pragmatic'?",
       "options": [
+        "Emotional",
         "Idealistic",
         "Practical",
-        "Theoretical",
-        "Emotional"
+        "Theoretical"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Pragmatic means dealing with things practically.",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1925,12 +1925,12 @@
       "difficulty": "medium",
       "stem": "The manager, along with his team, ___ present at the meeting.",
       "options": [
-        "were",
-        "are",
         "was",
-        "have been"
+        "have been",
+        "were",
+        "are"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "When 'along with' is used, the verb agrees with the first subject (manager → was).",
       "estSec": 15,
       "topicWeight": 0.1,
@@ -1946,12 +1946,12 @@
       "difficulty": "medium",
       "stem": "The meeting was put ___ Friday.",
       "options": [
-        "on",
         "at",
         "off",
-        "up"
+        "up",
+        "on"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Put off means to postpone.",
       "estSec": 15,
       "topicWeight": 0.1,

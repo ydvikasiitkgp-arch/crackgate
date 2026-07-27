@@ -495,7 +495,7 @@
       "type": "MCQ",
       "stem": "A theodolite is primarily used to measure",
       "options": [
-        "only horizontal distances",
+        "Applies to specific environments",
         "horizontal and vertical angles accurately",
         "magnetic declination only",
         "the calorific value of coal"
@@ -779,7 +779,7 @@
       "type": "MCQ",
       "stem": "Tacheometry (stadia surveying) is used to determine",
       "options": [
-        "only magnetic bearings",
+        "Applies to specific environments",
         "horizontal distances and elevations rapidly using the staff intercept between stadia hairs, without chaining",
         "the calorific value of coal",
         "subsidence above a panel"
@@ -1287,7 +1287,7 @@
       "options": [
         "all the sides by chaining",
         "the angles of a network of triangles together with at least one precisely measured baseline",
-        "only the elevations",
+        "Applies to specific environments",
         "the magnetic bearings only"
       ],
       "answer": 1,
@@ -1357,7 +1357,11 @@
         "Random (accidental, compensating) errors",
         "Magnetic declination"
       ],
-      "answer": [0, 1, 2],
+      "answer": [
+        0,
+        1,
+        2
+      ],
       "solution": "**Concept.** Errors are gross, systematic or random.\n\n**Reasoning.** Blunders are mistakes to be detected and removed; systematic errors follow a law and are cumulative (correctable); random errors are small, compensating and treated statistically. Magnetic declination is a known correction, not a class of error.\n\n**Answer.** Gross, systematic and random.",
       "archetype": "A",
       "marks": 2
@@ -1527,7 +1531,11 @@
         "Photogrammetry and remote sensing",
         "Bowditch's rule"
       ],
-      "answer": [0, 1, 2],
+      "answer": [
+        0,
+        1,
+        2
+      ],
       "solution": "**Concept.** Geomatics covers instruments and platforms that acquire spatial data.\n\n**Reasoning.** Total stations, GNSS and photogrammetry/remote sensing all yield positional or spatial information. Bowditch's rule is a traverse-adjustment computation, not a data-acquisition technique.\n\n**Answer.** Total station, GNSS, photogrammetry/remote sensing.",
       "archetype": "A",
       "marks": 2
@@ -1621,10 +1629,10 @@
         "caption": "Whole-circle bearing of a line"
       },
       "options": [
-        "N 30\u00b0 E",
-        "S 30\u00b0 W",
-        "S 60\u00b0 W",
-        "N 60\u00b0 W"
+        "N 30° E",
+        "S 30° W",
+        "S 60° W",
+        "N 60° W"
       ],
       "answer": 1,
       "solution": "**Concept.** For WCB between $180^\\circ$ and $270^\\circ$ (third quadrant) the reduced bearing is $S\\,(\\text{WCB}-180^\\circ)\\,W$.\n\n**Reasoning.** $210^\\circ-180^\\circ=30^\\circ$, so the line lies in the SW quadrant at $30^\\circ$ from south.\n\n**Answer.** $S\\,30^\\circ\\,W$.",
@@ -2105,8 +2113,8 @@
       "stem": "A total station integrates an electronic theodolite with an EDM. In a single pointing it can directly measure:",
       "options": [
         "horizontal angle, vertical angle and slope distance",
-        "only the horizontal angle",
-        "only the slope distance",
+        "Applies to specific environments",
+        "Used for high-volume low-variety",
         "magnetic declination and gravity"
       ],
       "answer": 0,
@@ -2129,7 +2137,11 @@
       "options": [],
       "answer": 50,
       "tolerance": 0.5,
-      "figure": {"kind": "svg", "caption": "Traverse leg", "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='130' x2='140' y2='50' stroke='#2563eb' stroke-width='2'/><line x1='40' y1='130' x2='40' y2='50' stroke='#475569'/><line x1='40' y1='130' x2='140' y2='130' stroke='#475569'/><text x='62' y='82' font-size='8'>L=100</text><text x='44' y='148' font-size='8'>bearing 30 deg from N</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Traverse leg",
+        "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='130' x2='140' y2='50' stroke='#2563eb' stroke-width='2'/><line x1='40' y1='130' x2='40' y2='50' stroke='#475569'/><line x1='40' y1='130' x2='140' y2='130' stroke='#475569'/><text x='62' y='82' font-size='8'>L=100</text><text x='44' y='148' font-size='8'>bearing 30 deg from N</text></svg>"
+      },
       "solution": "**Concept.** Departure $=L\\sin(\\text{bearing})$.\n\n**Working.**\n$$\\text{Dep}=100\\sin30^\\circ=100\\times0.5=50\\ \\text{m}$$\n\n**Answer.** $50$ m.",
       "archetype": "C"
     },
@@ -2144,7 +2156,11 @@
       "options": [],
       "answer": 240,
       "tolerance": 0.5,
-      "figure": {"kind": "svg", "caption": "Fore bearing", "markup": "<svg viewBox='0 0 180 170' xmlns='http://www.w3.org/2000/svg'><circle cx='90' cy='85' r='55' fill='none' stroke='#475569'/><line x1='90' y1='85' x2='90' y2='30' stroke='#1f2937'/><line x1='90' y1='85' x2='138' y2='113' stroke='#dc2626' stroke-width='2'/><text x='95' y='28' font-size='8'>N</text><text x='28' y='162' font-size='8'>fore bearing 60 deg</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Fore bearing",
+        "markup": "<svg viewBox='0 0 180 170' xmlns='http://www.w3.org/2000/svg'><circle cx='90' cy='85' r='55' fill='none' stroke='#475569'/><line x1='90' y1='85' x2='90' y2='30' stroke='#1f2937'/><line x1='90' y1='85' x2='138' y2='113' stroke='#dc2626' stroke-width='2'/><text x='95' y='28' font-size='8'>N</text><text x='28' y='162' font-size='8'>fore bearing 60 deg</text></svg>"
+      },
       "solution": "**Concept.** Back bearing $=$ fore bearing $+180^\\circ$ (when $<180^\\circ$).\n\n**Working.**\n$$BB=60^\\circ+180^\\circ=240^\\circ$$\n\n**Answer.** $240^\\circ$.",
       "archetype": "C"
     },
@@ -2159,7 +2175,11 @@
       "options": [],
       "answer": 100.7,
       "tolerance": 0.05,
-      "figure": {"kind": "svg", "caption": "Levelling between two points", "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><rect x='100' y='40' width='20' height='10' fill='#94a3b8' stroke='#475569'/><line x1='40' y1='45' x2='180' y2='45' stroke='#475569' stroke-dasharray='3 2'/><line x1='40' y1='45' x2='40' y2='120' stroke='#2563eb'/><line x1='180' y1='45' x2='180' y2='110' stroke='#16a34a'/><text x='24' y='100' font-size='8'>BS 1.5</text><text x='158' y='100' font-size='8'>FS 0.8</text><text x='40' y='140' font-size='8'>BM RL 100</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Levelling between two points",
+        "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><rect x='100' y='40' width='20' height='10' fill='#94a3b8' stroke='#475569'/><line x1='40' y1='45' x2='180' y2='45' stroke='#475569' stroke-dasharray='3 2'/><line x1='40' y1='45' x2='40' y2='120' stroke='#2563eb'/><line x1='180' y1='45' x2='180' y2='110' stroke='#16a34a'/><text x='24' y='100' font-size='8'>BS 1.5</text><text x='158' y='100' font-size='8'>FS 0.8</text><text x='40' y='140' font-size='8'>BM RL 100</text></svg>"
+      },
       "solution": "**Concept.** $RL_{\\text{point}}=RL_{\\text{BM}}+BS-FS$.\n\n**Working.**\n$$RL=100.0+1.5-0.8=100.7\\ \\text{m}$$\n\n**Answer.** $100.7$ m.",
       "archetype": "C"
     },
@@ -2174,7 +2194,11 @@
       "options": [],
       "answer": 0.8,
       "tolerance": 0.02,
-      "figure": {"kind": "svg", "caption": "Rise between readings", "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='40' x2='180' y2='40' stroke='#475569' stroke-dasharray='3 2'/><line x1='40' y1='40' x2='40' y2='120' stroke='#2563eb'/><line x1='180' y1='40' x2='180' y2='100' stroke='#16a34a'/><text x='24' y='100' font-size='8'>BS 2.0</text><text x='158' y='90' font-size='8'>FS 1.2</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Rise between readings",
+        "markup": "<svg viewBox='0 0 220 150' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='40' x2='180' y2='40' stroke='#475569' stroke-dasharray='3 2'/><line x1='40' y1='40' x2='40' y2='120' stroke='#2563eb'/><line x1='180' y1='40' x2='180' y2='100' stroke='#16a34a'/><text x='24' y='100' font-size='8'>BS 2.0</text><text x='158' y='90' font-size='8'>FS 1.2</text></svg>"
+      },
       "solution": "**Concept.** Rise $=BS-FS$ (positive means rising ground).\n\n**Working.**\n$$\\text{Rise}=2.0-1.2=0.8\\ \\text{m}$$\n\n**Answer.** $0.8$ m.",
       "archetype": "C"
     },
@@ -2189,7 +2213,11 @@
       "options": [],
       "answer": 5,
       "tolerance": 0.1,
-      "figure": {"kind": "svg", "caption": "Gradient between stations", "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='60' stroke='#2563eb' stroke-width='2'/><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><text x='42' y='118' font-size='8'>rise 5 m over 100 m</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Gradient between stations",
+        "markup": "<svg viewBox='0 0 220 130' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='100' x2='200' y2='60' stroke='#2563eb' stroke-width='2'/><line x1='30' y1='100' x2='200' y2='100' stroke='#475569'/><text x='42' y='118' font-size='8'>rise 5 m over 100 m</text></svg>"
+      },
       "solution": "**Concept.** Gradient $=\\dfrac{\\text{rise}}{\\text{distance}}\\times100$.\n\n**Working.**\n$$g=\\frac{5}{100}\\times100=5\\%$$\n\n**Answer.** $5\\%$.",
       "archetype": "C"
     },
@@ -2208,7 +2236,11 @@
         "spot height of the summit"
       ],
       "answer": 0,
-      "figure": {"kind": "svg", "caption": "Contour lines", "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><g fill='none' stroke='#16a34a'><ellipse cx='100' cy='80' rx='70' ry='45'/><ellipse cx='100' cy='80' rx='48' ry='30'/><ellipse cx='100' cy='80' rx='26' ry='16'/></g><text x='38' y='142' font-size='8'>lines of equal elevation</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Contour lines",
+        "markup": "<svg viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'><g fill='none' stroke='#16a34a'><ellipse cx='100' cy='80' rx='70' ry='45'/><ellipse cx='100' cy='80' rx='48' ry='30'/><ellipse cx='100' cy='80' rx='26' ry='16'/></g><text x='38' y='142' font-size='8'>lines of equal elevation</text></svg>"
+      },
       "solution": "**Concept.** Contour definitions.\n\n**Reasoning.** Each contour joins points of equal elevation; the fixed vertical difference between successive contours is the contour interval, distinct from the horizontal map spacing.\n\n**Answer.** Contour interval, the constant vertical distance between successive contours.",
       "archetype": "C"
     },
@@ -2223,7 +2255,11 @@
       "options": [],
       "answer": 28.87,
       "tolerance": 0.1,
-      "figure": {"kind": "svg", "caption": "Vertical angle to a mast top", "markup": "<svg viewBox='0 0 220 160' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='130' x2='40' y2='50' stroke='#a16207' stroke-width='3'/><line x1='40' y1='130' x2='180' y2='130' stroke='#475569'/><line x1='180' y1='130' x2='40' y2='50' stroke='#dc2626' stroke-width='2'/><text x='92' y='145' font-size='8'>D=50</text><text x='128' y='112' font-size='8'>angle 30 deg</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Vertical angle to a mast top",
+        "markup": "<svg viewBox='0 0 220 160' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='130' x2='40' y2='50' stroke='#a16207' stroke-width='3'/><line x1='40' y1='130' x2='180' y2='130' stroke='#475569'/><line x1='180' y1='130' x2='40' y2='50' stroke='#dc2626' stroke-width='2'/><text x='92' y='145' font-size='8'>D=50</text><text x='128' y='112' font-size='8'>angle 30 deg</text></svg>"
+      },
       "solution": "**Concept.** $h=D\\tan(\\text{vertical angle})$.\n\n**Working.**\n$$h=50\\tan30^\\circ=50\\times0.5774=28.87\\ \\text{m}$$\n\n**Answer.** $28.87$ m.",
       "archetype": "C"
     },
@@ -2238,7 +2274,11 @@
       "options": [],
       "answer": 0.5,
       "tolerance": 0.01,
-      "figure": {"kind": "svg", "caption": "Traverse misclosure", "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><polygon points='40,130 160,130 130,40 50,60' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='40' y1='130' x2='52' y2='118' stroke='#dc2626' stroke-width='3'/><text x='28' y='150' font-size='8'>dE=0.3, dN=0.4</text></svg>"},
+      "figure": {
+        "kind": "svg",
+        "caption": "Traverse misclosure",
+        "markup": "<svg viewBox='0 0 200 160' xmlns='http://www.w3.org/2000/svg'><polygon points='40,130 160,130 130,40 50,60' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='40' y1='130' x2='52' y2='118' stroke='#dc2626' stroke-width='3'/><text x='28' y='150' font-size='8'>dE=0.3, dN=0.4</text></svg>"
+      },
       "solution": "**Concept.** Closing error $=\\sqrt{\\Delta E^2+\\Delta N^2}$.\n\n**Working.**\n$$e=\\sqrt{0.3^2+0.4^2}=\\sqrt{0.25}=0.5\\ \\text{m}$$\n\n**Answer.** $0.5$ m.",
       "archetype": "C"
     }
