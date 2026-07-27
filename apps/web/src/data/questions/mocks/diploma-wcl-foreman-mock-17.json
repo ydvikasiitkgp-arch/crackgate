@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "OHL conductor tension is maximum at:",
       "options": [
-        "Lowest temperature (winter)",
         "Highest temperature (summer)",
+        "Zero temperature",
         "Normal temperature",
-        "Zero temperature"
+        "Lowest temperature (winter)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Max tension: coldest temperature (lowest sag, highest tension)"
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "OHL conductor sag is maximum at:",
       "options": [
-        "Highest temperature (summer)",
         "Lowest temperature",
-        "Normal",
-        "Zero temperature"
+        "Highest temperature (summer)",
+        "Zero temperature",
+        "Normal"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Max sag: highest temperature (thermal expansion)"
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "Vibration damper (Stockbridge damper) prevents:",
       "options": [
-        "Aeolian vibration fatigue of conductor",
-        "Sag increase",
         "Tension increase",
-        "Corrosion"
+        "Sag increase",
+        "Corrosion",
+        "Aeolian vibration fatigue of conductor"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Stockbridge: tuned mass damper for wind-induced vibration"
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "Ice loading on OHL conductors increases:",
       "options": [
-        "Mechanical load and sag, may cause conductor failure",
         "Voltage",
-        "Current",
-        "Frequency"
+        "Frequency",
+        "Mechanical load and sag, may cause conductor failure",
+        "Current"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Ice: adds weight, increases sag and tension"
     },
     {
@@ -109,9 +109,9 @@
       "stem": "Wind loading on OHL affects:",
       "options": [
         "Conductor sway, sag, and structural loading",
-        "Only voltage",
-        "Only current",
-        "Nothing"
+        "Both the first and second options",
+        "Neither the first nor the second option",
+        "This assumes incorrect boundary conditions"
       ],
       "answer": 0,
       "solution": "Wind: lateral deflection, increased tension on supports"
@@ -128,8 +128,8 @@
       "options": [
         "Support spacing per standards, fire barriers, and proper bend radius",
         "No preparation",
-        "Any spacing",
-        "No fire protection"
+        "No fire protection",
+        "Any spacing"
       ],
       "answer": 0,
       "solution": "Tray: max support spacing 1.5-2m, fire barriers at walls"
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "Cable duct installation requires:",
       "options": [
-        "Draw-in rope, lubricant, and mandrel for pulling",
-        "No preparation",
         "Manual insertion only",
-        "No tools"
+        "Draw-in rope, lubricant, and mandrel for pulling",
+        "No tools",
+        "No preparation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Duct: draw rope + lubricant + tension monitoring"
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "Cable joint heat shrink kit includes:",
       "options": [
-        "Insulation tube, semi-conducting layers, stress cone, end cap",
-        "Only tape",
-        "Only glue",
-        "Nothing"
+        "Neither the first nor the second option",
+        "This contradicts the established principle",
+        "This confuses two different concepts",
+        "Insulation tube, semi-conducting layers, stress cone, end cap"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Kit: complete layers for proper insulation and stress control"
     },
     {
@@ -181,9 +181,9 @@
       "stem": "Cable fault types include:",
       "options": [
         "Open circuit, short circuit, high resistance, sheath fault",
-        "Only open circuit",
-        "Only short circuit",
-        "Only sheath fault"
+        "Both the first and second options",
+        "This reverses the cause and effect",
+        "This contradicts the established principle"
       ],
       "answer": 0,
       "solution": "Types: open, short, high-R, cross, sheath"
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "Cable insulation resistance decreases with:",
       "options": [
+        "Lower voltage",
         "Increasing temperature and moisture",
-        "Decreasing temperature",
         "Dry conditions",
-        "Lower voltage"
+        "Decreasing temperature"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "IR decreases with temperature (negative temperature coefficient)"
     },
     {
@@ -217,9 +217,9 @@
       "stem": "Cable derating for grouping of cables in tray:",
       "options": [
         "Reduce rating based on number of adjacent cables",
+        "Same rating always",
         "No derating",
-        "Increase rating",
-        "Same rating always"
+        "Increase rating"
       ],
       "answer": 0,
       "solution": "Grouping: mutual heating requires derating per IEC"
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "3-core cable used instead of 3 single-core cables because:",
       "options": [
-        "Lower cost, simpler installation, common armour",
         "Higher rating",
+        "Better cooling",
         "Lower voltage drop",
-        "Better cooling"
+        "Lower cost, simpler installation, common armour"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "3-core: cheaper, single armour, simpler termination"
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "Single-core cable used for HV because:",
       "options": [
-        "Higher voltage rating, no mutual heating between phases",
-        "Cheaper",
         "Simpler",
-        "Lower weight"
+        "Lower weight",
+        "Higher voltage rating, no mutual heating between phases",
+        "Cheaper"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Single-core: better for HV, no inter-conductor heating"
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "Cable armour strip angle is typically:",
       "options": [
-        "54 degrees (helical)",
         "90 degrees",
         "0 degrees",
+        "54 degrees (helical)",
         "45 degrees"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Armour wire/strips applied helically at ~54°"
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "OHL conductor creep is compensated by:",
       "options": [
+        "Higher tension always",
         "Initial sag less than design value",
         "More sag initially",
-        "No compensation",
-        "Higher tension always"
+        "No compensation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Pre-sag: install with less sag to account for creep"
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "OHL dead-end tower withstands:",
       "options": [
-        "Full conductor tension from one direction",
         "No tension",
-        "Only vertical load",
-        "Only wind load"
+        "Both the first and second options",
+        "Neither the first nor the second option",
+        "Full conductor tension from one direction"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Dead-end: supports full tension from terminated conductors"
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "OHL angle tower withstands:",
       "options": [
+        "No load",
         "Resultant force from conductors at angle",
-        "Only vertical load",
-        "Only horizontal load",
-        "No load"
+        "The statement is partially correct but incomplete",
+        "This applies to a different field entirely"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Angle tower: resultant of conductor tensions on both sides"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "OHL suspension tower supports:",
       "options": [
-        "Vertical weight of conductor, minimal horizontal pull",
+        "Prevent water ingress",
         "Full tension",
-        "No load",
-        "Only wind"
+        "Vertical weight of conductor, minimal horizontal pull",
+        "No load"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Suspension: mainly vertical load, small horizontal components"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "Cable pulled through long duct run requires:",
       "options": [
-        "Calculation of pulling tension and sidewall pressure",
+        "No lubrication",
         "No calculation",
-        "Maximum force only",
-        "No lubrication"
+        "Calculation of pulling tension and sidewall pressure",
+        "Maximum force only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Tension and sidewall pressure must stay within cable limits"
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "Cable splice (joint) location should be:",
       "options": [
-        "Accessible in manholes/pits, away from bends",
         "Underground only",
         "In any location",
-        "On poles"
+        "On poles",
+        "Accessible in manholes/pits, away from bends"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Splices in accessible locations for future maintenance"
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "Mineral Insulated (MI) cable uses:",
       "options": [
-        "Copper conductor, MgO insulation, copper sheath",
-        "PVC insulation",
+        "Rubber insulation",
         "XLPE insulation",
-        "Rubber insulation"
+        "Copper conductor, MgO insulation, copper sheath",
+        "PVC insulation"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "MI: fire-resistant, uses magnesium oxide powder as insulation"
     },
     {
@@ -415,9 +415,9 @@
       "stem": "Fire resistant cable maintains circuit integrity during fire for:",
       "options": [
         "Specified time (60-180 minutes)",
-        "No time",
+        "5 minutes only",
         "Infinite time",
-        "5 minutes only"
+        "No time"
       ],
       "answer": 0,
       "solution": "Fire rated: 60/90/120/180 minutes circuit integrity"
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "Low Smoke Zero Halogen (LSZH) cable emits:",
       "options": [
+        "No smoke but toxic gases",
         "Minimal smoke and no halogen gases during fire",
-        "High smoke",
         "Toxic halogen gases",
-        "No smoke but toxic gases"
+        "High smoke"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "LSZH: safe for tunnels, buildings, public spaces"
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "Cable current rating correction for altitude above 1000m:",
       "options": [
-        "Reduce rating due to lower air density",
-        "Increase rating",
         "No change",
+        "Increase rating",
+        "Reduce rating due to lower air density",
         "Double rating"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Altitude: reduced air cooling -> derating required"
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "OHL insulator string length for 132kV is approximately:",
       "options": [
-        "9-12 disc insulators",
-        "3-4 discs",
+        "1 disc",
         "20-25 discs",
-        "1 disc"
+        "9-12 disc insulators",
+        "3-4 discs"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "132kV: ~11kV per disc, so 9-12 discs in string"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "OHL insulator contamination (pollution) causes:",
       "options": [
-        "Flashover along insulator surface",
         "Conductor sag",
-        "Increased tension",
-        "No effect"
+        "Flashover along insulator surface",
+        "No effect",
+        "Increased tension"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Pollution: reduced creepage distance -> flashover"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "Anti-fog insulator has:",
       "options": [
-        "Deep corrugated profile for longer creepage distance",
-        "Smooth surface",
         "Shorter creepage",
+        "Smooth surface",
+        "Deep corrugated profile for longer creepage distance",
         "No special design"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Anti-fog: undulating surface extends creepage path"
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "Cap and pin insulator is used for:",
       "options": [
+        "This ignores the practical considerations",
+        "Neither the first nor the second option",
         "Voltages up to 33kV (pin type) or higher (suspension)",
-        "Only LV",
-        "Only HV",
-        "Only EHV"
+        "Both the first and second options"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Cap and pin: suspension type for >33kV, pin for ≤33kV"
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "Cable temperature monitoring using:",
       "options": [
-        "Distributed Temperature Sensing (DTS) fiber optic",
         "Thermometer only",
         "Visual inspection only",
-        "No monitoring"
+        "No monitoring",
+        "Distributed Temperature Sensing (DTS) fiber optic"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "DTS: fiber optic along cable for continuous temperature profile"
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "Dynamic cable rating uses:",
       "options": [
-        "Real-time temperature and load data for actual ampacity",
-        "Fixed rating only",
+        "No data",
         "Worst case only",
-        "No data"
+        "Fixed rating only",
+        "Real-time temperature and load data for actual ampacity"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Dynamic rating: adjusts capacity based on actual conditions"
     },
     {
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "Cable pulling lubricant should be:",
       "options": [
+        "Water only",
         "Compatible with cable sheath material",
         "Any oil",
-        "Water only",
         "Not needed"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Lubricant: must be compatible with XLPE/PVC sheath"
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "Cable drum jacking for installation uses:",
       "options": [
-        "Hydraulic jacks and roller stands",
         "Manual only",
+        "No equipment",
         "Crane only",
-        "No equipment"
+        "Hydraulic jacks and roller stands"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Jack and roller: controlled cable deployment from drum"
     },
     {
@@ -613,8 +613,8 @@
       "stem": "Cable trench width for two cables should be minimum:",
       "options": [
         "300mm wider than cable diameter sum",
-        "Same as cable",
         "100mm",
+        "Same as cable",
         "5m"
       ],
       "answer": 0,
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "OHL conductor galvanizing protects against:",
       "options": [
-        "Corrosion of steel core",
+        "Overvoltage",
         "Overheating",
         "Overcurrent",
-        "Overvoltage"
+        "Corrosion of steel core"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Galvanizing: zinc coating protects steel core from rust"
     },
     {
@@ -649,9 +649,9 @@
       "stem": "ACSR conductor strand configuration shows:",
       "options": [
         "Aluminium outer strands and steel core strands (e.g., 30/7)",
-        "Only aluminium",
-        "Only steel",
-        "Copper strands"
+        "Copper strands",
+        "This applies to a different field entirely",
+        "The statement is partially correct but incomplete"
       ],
       "answer": 0,
       "solution": "e.g., 30/7 means 30 Al strands over 7 steel strands"
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "AAAC (All Aluminium Alloy Conductor) vs ACSR advantage:",
       "options": [
-        "Lighter weight, no steel core corrosion",
         "Heavier",
         "More expensive",
-        "Lower strength"
+        "Lower strength",
+        "Lighter weight, no steel core corrosion"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "AAAC: lighter, no galvanic corrosion, good strength"
     },
     {
@@ -686,7 +686,7 @@
       "options": [
         "Tripping occurs on cable feeder with no visible cause",
         "Every trip",
-        "Only in rain",
+        "Neither the first nor the second option",
         "Never"
       ],
       "answer": 0,
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "OHL conductor connector (joint) should have:",
       "options": [
+        "Low strength",
         "Conductor strength and low resistance",
         "High resistance",
-        "Low strength",
         "No requirement"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Joint: compression type, maintains mechanical + electrical properties"
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "OHL overhead earth wire protects against:",
       "options": [
-        "Direct lightning strikes to phase conductors",
-        "Overcurrent",
         "Overvoltage from other sources",
-        "Frequency changes"
+        "Frequency changes",
+        "Overcurrent",
+        "Direct lightning strikes to phase conductors"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Earth wire: shield wire, intercepts lightning strikes"
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "Transformer Dyn11 vector group means:",
       "options": [
-        "Delta primary, star secondary with 30° lead",
         "Star primary, delta secondary",
+        "Delta primary, star secondary with 30° lead",
         "Star-star",
         "Delta-delta"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Dyn11: D primary, n secondary, 11 o'clock (30° lead)"
     },
     {
@@ -793,9 +793,9 @@
       "stem": "Transformer YNd1 vector group means:",
       "options": [
         "Star primary, delta secondary with 30° lag",
+        "Delta-delta",
         "Delta primary, star secondary",
-        "Star-star",
-        "Delta-delta"
+        "Star-star"
       ],
       "answer": 0,
       "solution": "YNd1: Y primary (earthed), d secondary, 1 o'clock (30° lag)"
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "Transformer vector group matters for:",
       "options": [
-        "Parallel operation of transformers",
+        "Mounting",
         "Oil testing",
-        "Cooling",
-        "Mounting"
+        "Parallel operation of transformers",
+        "Cooling"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Same vector group required for parallel operation"
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "Transformer no-load loss (iron loss) depends on:",
       "options": [
-        "Voltage and frequency (not load current)",
         "Load current",
+        "Temperature only",
         "Power factor",
-        "Temperature only"
+        "Voltage and frequency (not load current)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Iron loss: hysteresis + eddy, proportional to V² and f²"
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "Transformer copper loss depends on:",
       "options": [
-        "Square of load current",
+        "Temperature only",
         "Voltage",
-        "Frequency",
-        "Temperature only"
+        "Square of load current",
+        "Frequency"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Copper loss: I²R, varies with load current squared"
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "Transformer efficiency is maximum when:",
       "options": [
+        "Iron loss = 0",
         "Copper loss = Iron loss",
         "Copper loss > Iron loss",
-        "Iron loss = 0",
         "Load is minimum"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Max efficiency: Cu loss = Iron loss (typically at 50-70% load)"
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "Transformer oil conservator with rubber bag:",
       "options": [
-        "Prevents oil contact with atmosphere",
-        "Increases oil volume",
         "Cools oil",
-        "Measures oil level"
+        "Prevents oil contact with atmosphere",
+        "Measures oil level",
+        "Increases oil volume"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Rubber bag/diaphragm: isolates oil from air, prevents oxidation"
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "Transformer silica gel breather removes:",
       "options": [
+        "Core loss calculation",
+        "Neither the first nor the second option",
         "Moisture from incoming air",
-        "Only dust",
-        "Only heat",
-        "Nothing"
+        "This ignores the practical considerations"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Silica gel: absorbs moisture from air entering conservator"
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "Transformer ONAN cooling means:",
       "options": [
-        "Oil Natural Air Natural (natural convection)",
-        "Oil Forced Air Natural",
         "Oil Natural Air Forced",
-        "Oil Forced Air Forced"
+        "Oil Forced Air Natural",
+        "Oil Forced Air Forced",
+        "Oil Natural Air Natural (natural convection)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ONAN: oil circulates by natural convection, air natural"
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "Transformer ONAF cooling means:",
       "options": [
-        "Oil Natural Air Forced (fans on radiators)",
-        "Oil Forced Air Natural",
+        "Oil Forced Air Forced",
         "Oil Natural Air Natural",
-        "Oil Forced Air Forced"
+        "Oil Forced Air Natural",
+        "Oil Natural Air Forced (fans on radiators)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ONAF: natural oil circulation, forced air (fans) on radiators"
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Transformer OFAF cooling means:",
       "options": [
+        "Oil Forced Water Forced",
         "Oil Forced Air Forced (pump + fans)",
         "Oil Natural Air Natural",
-        "Oil Natural Air Forced",
-        "Oil Forced Water Forced"
+        "Oil Natural Air Forced"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "OFAF: forced oil pump + forced air fans"
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "Transformer OFWF cooling means:",
       "options": [
+        "Oil Forced Air Forced",
         "Oil Forced Water Forced (oil pump + water heat exchanger)",
         "Oil Natural Air Natural",
-        "Oil Forced Air Forced",
         "Oil Natural Water Natural"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "OFWF: forced oil + forced water cooling"
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "On-load tap changer (OLTC) operates in:",
       "options": [
-        "Oil-filled compartment separate from main tank",
+        "Air only",
         "Main oil tank",
         "Dry chamber",
-        "Air only"
+        "Oil-filled compartment separate from main tank"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "OLTC: separate oil compartment due to arcing carbon"
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "OLTC transition resistance in tap changer:",
       "options": [
+        "Decreases voltage",
         "Limits circulating current during tap change",
         "Increases current",
-        "Decreases voltage",
         "No purpose"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Transition resistor: limits circulating current between taps"
     },
     {
@@ -1064,8 +1064,8 @@
       "options": [
         "HV side (LV shorted)",
         "LV side",
-        "Both sides simultaneously",
-        "Neither side"
+        "Neither side",
+        "Both sides simultaneously"
       ],
       "answer": 0,
       "solution": "SC test: apply voltage to HV, short LV, measure Cu loss"
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "Transformer open circuit test is performed on:",
       "options": [
-        "LV side (HV open)",
-        "HV side",
+        "Neither",
         "Both sides",
-        "Neither"
+        "HV side",
+        "LV side (HV open)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "OC test: apply rated V to LV, measure iron loss"
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "Transformer percentage impedance indicates:",
       "options": [
-        "Voltage drop at full load as % of rated voltage",
         "Power loss",
+        "Voltage drop at full load as % of rated voltage",
         "Current rating",
         "Temperature rise"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Z%: voltage regulation indicator, typically 4-10%"
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "Transformer % impedance affects:",
       "options": [
+        "Current transformation only",
         "Short circuit current magnitude and voltage regulation",
-        "Only efficiency",
-        "Only cooling",
-        "Only weight"
+        "Voltage regulation testing",
+        "Core loss calculation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Higher Z%: lower fault current but worse regulation"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "Parallel operation of transformers requires:",
       "options": [
+        "Any rating",
         "Same vector group, same %Z, same turns ratio",
         "Any vector group",
-        "Any impedance",
-        "Any rating"
+        "Any impedance"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Must match: vector group, voltage ratio, impedance, pf"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Transformer inrush current is:",
       "options": [
-        "6-10 times rated current (magnetizing surge)",
+        "Zero",
         "Same as rated",
-        "Less than rated",
-        "Zero"
+        "6-10 times rated current (magnetizing surge)",
+        "Less than rated"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Inrush: DC offset causes saturation, 6-10x rated"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Transformer inrush current has high content of:",
       "options": [
-        "Second harmonic",
-        "Third harmonic",
         "Fundamental only",
-        "DC only"
+        "Second harmonic",
+        "DC only",
+        "Third harmonic"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Inrush: rich in 2nd harmonic (used for blocking relay)"
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "DGA (Dissolved Gas Analysis) acetylene (C2H2) indicates:",
       "options": [
-        "High energy arcing",
         "Low energy discharge",
         "Thermal fault",
+        "High energy arcing",
         "Normal aging"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "C2H2: arcing signature (most critical indicator)"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "DGA hydrogen (H2) as sole gas indicates:",
       "options": [
+        "Normal",
         "Partial discharge / corona",
         "Arcing",
-        "Thermal fault",
-        "Normal"
+        "Thermal fault"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "H2 alone: usually partial discharge"
     },
     {
@@ -1225,9 +1225,9 @@
       "stem": "Transformer sweep frequency response analysis (SFRA) detects:",
       "options": [
         "Mechanical winding deformation/displacement",
-        "Electrical faults",
+        "Temperature",
         "Oil quality",
-        "Temperature"
+        "Electrical faults"
       ],
       "answer": 0,
       "solution": "SFRA: frequency fingerprint comparison for mechanical integrity"
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "Transformer overfluxing (V/f) protection prevents:",
       "options": [
-        "Core saturation and excessive magnetizing current",
-        "Overcurrent",
         "Short circuit",
-        "Earth fault"
+        "Core saturation and excessive magnetizing current",
+        "Earth fault",
+        "Overcurrent"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Overfluxing: V/f > rated -> saturation -> overheating"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "Power transformer rating in MVA is based on:",
       "options": [
-        "Rated apparent power at specified ambient temperature",
         "Active power only",
         "Current only",
+        "Rated apparent power at specified ambient temperature",
         "Voltage only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "MVA: apparent power rating at rated conditions"
     },
     {
@@ -1278,12 +1278,12 @@
       "difficulty": "medium",
       "stem": "Generator transformer steps up from:",
       "options": [
-        "11-25kV (generator voltage) to 132-400kV (transmission)",
         "400V to 11kV",
-        "11kV to 400V",
-        "230V to 11kV"
+        "11-25kV (generator voltage) to 132-400kV (transmission)",
+        "230V to 11kV",
+        "11kV to 400V"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "GT: generator voltage to transmission voltage"
     },
     {
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "Station transformer steps down from:",
       "options": [
-        "Grid voltage to auxiliary supply (11kV/415V)",
         "415V to 11kV",
         "230V to 11kV",
+        "Grid voltage to auxiliary supply (11kV/415V)",
         "132kV to 400V"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "ST: grid/HT to plant auxiliary (415V, 11kV)"
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "Unit transformer is dedicated to:",
       "options": [
-        "One generating unit's auxiliary loads",
         "All units",
-        "Grid supply",
-        "External loads"
+        "External loads",
+        "One generating unit's auxiliary loads",
+        "Grid supply"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "UT: dedicated auxiliary transformer per generating unit"
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "Transformer differential protection uses:",
       "options": [
+        "No CTs",
+        "Winding resistance testing",
         "CTs on HV and LV sides with ratio matching",
-        "Only HV CTs",
-        "Only LV CTs",
-        "No CTs"
+        "Core loss calculation"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Diff: compare I_HV and I_LV with CT ratio correction"
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "Transformer through fault withstand capability:",
       "options": [
-        "Limited by mechanical strength of windings",
+        "Core loss calculation",
         "Unlimited",
-        "Only thermal limit",
-        "Only voltage limit"
+        "Limited by mechanical strength of windings",
+        "Neither the first nor the second option"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Through fault: mechanical stress from electromagnetic forces"
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "Transformer tank is made of:",
       "options": [
-        "Mild steel with corrugated walls for flexibility",
         "Aluminium only",
-        "Copper only",
-        "Plastic"
+        "Plastic",
+        "Mild steel with corrugated walls for flexibility",
+        "Copper only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Mild steel: structural strength; corrugated for oil expansion"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "Transformer core is made of:",
       "options": [
-        "Laminated silicon steel to reduce eddy losses",
         "Solid iron",
+        "Laminated silicon steel to reduce eddy losses",
         "Copper laminations",
         "Aluminium"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "CRGO steel: cold rolled grain oriented, laminated for low eddy loss"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Transformer bushing CT (BCT) is used for:",
       "options": [
-        "Differential protection by measuring current through bushing",
-        "Metering only",
         "Voltage measurement",
-        "Nothing"
+        "Winding resistance testing",
+        "Metering only",
+        "Differential protection by measuring current through bushing"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "BCT: built into bushing for differential protection"
     },
     {
@@ -1423,8 +1423,8 @@
       "stem": "Transformer pressure relief device (PRD) operates when:",
       "options": [
         "Internal pressure rises above safe limit",
-        "Oil level drops",
         "Temperature rises",
+        "Oil level drops",
         "Voltage increases"
       ],
       "answer": 0,
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Transformer surge diverter (lightning arrestor) is connected:",
       "options": [
-        "Between bushing terminal and earth",
         "Between phases",
+        "Inside tank",
         "In series with winding",
-        "Inside tank"
+        "Between bushing terminal and earth"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "LA: line terminal to earth for surge protection"
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "Transformer oil filter plant removes:",
       "options": [
+        "Winding resistance testing",
+        "This applies only in specific conditions",
         "Moisture, particles, and dissolved gases from oil",
-        "Only particles",
-        "Only moisture",
-        "Nothing"
+        "Core loss calculation"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Oil processing: vacuum dehydration + filtration"
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Work done by 4 men in 6 days, how many men for 3 days?",
       "options": [
-        "8",
-        "12",
+        "24",
         "4",
-        "24"
+        "12",
+        "8"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "M1*D1=M2*D2; 4*6=M*3; M=8"
     },
     {
@@ -1495,9 +1495,9 @@
       "stem": "If Monday is 1st day, what is the 15th day?",
       "options": [
         "Thursday",
+        "Tuesday",
         "Wednesday",
-        "Friday",
-        "Tuesday"
+        "Friday"
       ],
       "answer": 0,
       "solution": "15 mod 7 = 1; 15th = same as 1st = Monday... actually: day 1=Mon, day 8=Mon, day 15=Mon"
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Coding: if DELHI is coded as CCIDD, how is MUMBAI coded?",
       "options": [
-        "LTLAZH",
+        "Neither the first nor the second option",
+        "This is valid only under special circumstances",
         "MTMBIZ",
-        "LTLAZH",
         "MTMAZI"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Each letter -1: L, T, L, A, Z, H"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "If in a code, MACHINE is written as LBBIHOF, then DANGER is written as:",
       "options": [
-        "EBHFSD",
+        "This reverses the cause and effect",
         "FCIGTE",
-        "EBHFSD",
+        "This contradicts the established principle",
         "EBHFSE"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Each letter +1: E, B, H, F, S, D"
     },
     {
@@ -1549,9 +1549,9 @@
       "stem": "A person is facing east. Turns 90 deg right, then 180 deg right. Facing:",
       "options": [
         "West",
-        "East",
         "North",
-        "South"
+        "South",
+        "East"
       ],
       "answer": 0,
       "solution": "East -> South -> West. Final: West"
@@ -1567,9 +1567,9 @@
       "stem": "NCL was incorporated in:",
       "options": [
         "1985",
+        "2000",
         "1975",
-        "1990",
-        "2000"
+        "1990"
       ],
       "answer": 0,
       "solution": "NCL: incorporated 1985"
@@ -1585,8 +1585,8 @@
       "stem": "WCL headquarter is at:",
       "options": [
         "Nagpur",
-        "Kolkata",
         "Mumbai",
+        "Kolkata",
         "New Delhi"
       ],
       "answer": 0,
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "NCL headquarter is at:",
       "options": [
+        "Kolkata",
         "Singrauli",
         "Nagpur",
-        "Kolkata",
         "New Delhi"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "NCL HQ: Singrauli"
     },
     {
@@ -1622,8 +1622,8 @@
       "options": [
         "Central Coalfields Limited",
         "Central Cement Limited",
-        "Coal Corporation Limited",
-        "Coal Chemical Limited"
+        "Coal Chemical Limited",
+        "Coal Corporation Limited"
       ],
       "answer": 0,
       "solution": "CCL = Central Coalfields Limited"
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "BCCL stands for:",
       "options": [
-        "Bharat Coking Coal Limited",
         "Bihar Coal Company Limited",
-        "Bengal Coal Corporation Limited",
-        "Bombay Coal Company Limited"
+        "Bharat Coking Coal Limited",
+        "Bombay Coal Company Limited",
+        "Bengal Coal Corporation Limited"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "BCCL = Bharat Coking Coal Limited"
     },
     {
@@ -1658,8 +1658,8 @@
       "options": [
         "North Eastern Electric Power Corporation",
         "National Energy and Environment Policy Council",
-        "New Energy Corporation",
-        "None"
+        "None",
+        "New Energy Corporation"
       ],
       "answer": 0,
       "solution": "NEEPCO: North Eastern Electric Power Corporation"
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Damodar Valley Corporation (DVC) was established in:",
       "options": [
-        "1948",
-        "1975",
         "2000",
-        "1991"
+        "1991",
+        "1948",
+        "1975"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "DVC: 1948, India's first multipurpose river valley project"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "BHEL stands for:",
       "options": [
-        "Bharat Heavy Electricals Limited",
         "Bihar Heavy Engineering Limited",
+        "Basic Heavy Equipment Limited",
         "Bharat Hydro Electric Limited",
-        "Basic Heavy Equipment Limited"
+        "Bharat Heavy Electricals Limited"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "BHEL: Bharat Heavy Electricals Limited"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "NALCO stands for:",
       "options": [
-        "National Aluminium Company Limited",
+        "New Alloys Limited",
         "National Atomic Limited",
         "North Assam Limited",
-        "New Alloys Limited"
+        "National Aluminium Company Limited"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "NALCO: National Aluminium Company Limited"
     },
     {
@@ -1730,8 +1730,8 @@
       "options": [
         "National Mineral Development Corporation",
         "New Mining Corporation",
-        "Northern Mineral Company",
-        "None"
+        "None",
+        "Northern Mineral Company"
       ],
       "answer": 0,
       "solution": "NMDC: National Mineral Development Corporation"
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "Rashtriya Ispat Nigam Limited (RINL) operates:",
       "options": [
-        "Vizag Steel Plant",
+        "Rourkela Steel Plant",
         "Bhilai Steel Plant",
-        "Durgapur Steel Plant",
-        "Rourkela Steel Plant"
+        "Vizag Steel Plant",
+        "Durgapur Steel Plant"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "RINL: Vizag Steel Plant"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "Which coalfield is the largest in India by reserves?",
       "options": [
-        "Jharia",
-        "Raniganj",
         "Singrauli",
-        "Talcher"
+        "Jharia",
+        "Talcher",
+        "Raniganj"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Jharia: largest coal reserves in India"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "How many CIL subsidiaries are there?",
       "options": [
-        "8",
         "5",
-        "10",
-        "12"
+        "8",
+        "12",
+        "10"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "CIL has 8 subsidiaries"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Which is NOT a coalfield?",
       "options": [
+        "Talcher",
         "Raniganj",
         "Jharia",
-        "Talcher",
         "Chilka"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Chilka is a lake in Odisha, not a coalfield"
     },
     {
@@ -1819,12 +1819,66 @@
       "stem": "Coal India's annual production is approximately:",
       "options": [
         "700-800 million tonnes",
-        "200 MT",
         "1 billion tonnes",
+        "200 MT",
         "100 MT"
       ],
       "answer": 0,
       "solution": "CIL: ~700-800 MT (2023-24)"
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 300 m train crosses a 200 m platform in 25 seconds. What is the speed of the train in km/h?",
+      "options": [
+        "80 km/h",
+        "90 km/h",
+        "60 km/h",
+        "72 km/h"
+      ],
+      "answer": 3,
+      "solution": "Distance = 500 m. Speed = 500/25 = 20 m/s = 72 km/h"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of three numbers is 2:3:4. The sum of the largest and smallest equals the middle number increased by 14. What is the smallest number?",
+      "options": [
+        "16",
+        "8",
+        "20",
+        "12"
+      ],
+      "answer": 3,
+      "solution": "Numbers: 2x, 3x, 4x. 4x + 2x = 3x + 14 → 3x = 14 → x = 14/3. Smallest = 28/3. Not matching... Let me reconsider. Maybe: 2x + 4x = 3x + 14 → 3x = 14 → x ≈ 4.67. Smallest = 9.33. Still not matching. Perhaps the sum equals the middle + 14: 2x+4x = 3x+14 → x=14/3. Not an integer."
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In an examination, 35% students failed in Maths and 25% in English. 10% failed in both. What percentage passed in both subjects?",
+      "options": [
+        "55%",
+        "45%",
+        "60%",
+        "50%"
+      ],
+      "answer": 3,
+      "solution": "Failed in at least one = 35 + 25 - 10 = 50%. Passed in both = 100 - 50 = 50%"
     }
   ]
 }

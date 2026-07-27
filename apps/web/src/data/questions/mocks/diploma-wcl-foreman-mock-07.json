@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "Earthing grid in a substation is made of:",
       "options": [
-        "Copper strip/rod buried in earth",
-        "Aluminium only",
         "Steel pipe",
-        "Plastic rod"
+        "Aluminium only",
+        "Plastic rod",
+        "Copper strip/rod buried in earth"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Copper: low resistance, corrosion resistant"
     },
     {
@@ -55,9 +55,9 @@
       "stem": "The resistance of earth electrode depends on:",
       "options": [
         "Soil resistivity, size, and depth",
-        "Only soil type",
-        "Only depth",
-        "Only material"
+        "Neither the first nor the second option",
+        "This is valid only under special circumstances",
+        "This confuses two different concepts"
       ],
       "answer": 0,
       "solution": "R depends on resistivity (ohm-m), electrode size, depth"
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "Soil resistivity is measured using:",
       "options": [
-        "Wenner's four pin method",
         "Megger only",
-        "Ohmmeter",
-        "Voltmeter"
+        "Wenner's four pin method",
+        "Voltmeter",
+        "Ohmmeter"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Wenner: 4 pins equally spaced in soil"
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "Parallel earth pits reduce total resistance because:",
       "options": [
+        "Current increases",
         "Resistances are in parallel",
         "They are in series",
-        "Current increases",
         "Voltage increases"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Parallel: Req = R/n for n equal pits"
     },
     {
@@ -110,8 +110,8 @@
       "options": [
         "Connecting metallic parts to earth system",
         "Insulating metallic parts",
-        "Disconnecting earth",
-        "Using plastic pipes"
+        "Using plastic pipes",
+        "Disconnecting earth"
       ],
       "answer": 0,
       "solution": "Bonding: ensures all metalwork is at earth potential"
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "Neutral earthing and body earthing are kept:",
       "options": [
-        "Separate",
         "Same pit",
+        "Separate",
         "Same wire",
         "Connected together"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Separate pits to avoid mutual interference"
     },
     {
@@ -145,9 +145,9 @@
       "stem": "Earth fault current path includes:",
       "options": [
         "Phase conductor, fault, earth, earth electrode, neutral",
-        "Only phase conductor",
-        "Only neutral",
-        "Only earth"
+        "Chemical resistance of components",
+        "Both the first and second options",
+        "Acoustic properties of surfaces"
       ],
       "answer": 0,
       "solution": "Complete path: phase -> fault -> earth -> electrode -> neutral"
@@ -163,9 +163,9 @@
       "stem": "The earth continuity conductor is connected to:",
       "options": [
         "All exposed metallic parts of equipment",
-        "Only live conductor",
-        "Only neutral",
-        "Plastic parts"
+        "Plastic parts",
+        "This requires additional verification",
+        "Neither the first nor the second option"
       ],
       "answer": 0,
       "solution": "ECC connects to all exposed metal parts"
@@ -181,9 +181,9 @@
       "stem": "Chemical earthing reduces resistance by:",
       "options": [
         "Improving soil conductivity around electrode",
+        "All of these",
         "Increasing electrode size",
-        "Deepening electrode",
-        "All of these"
+        "Deepening electrode"
       ],
       "answer": 0,
       "solution": "Chemical compound improves local soil conductivity"
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "Earth mat in HV substations is designed to limit:",
       "options": [
-        "Step and touch potential to safe values",
-        "Current only",
         "Voltage only",
-        "Frequency only"
+        "Frequency only",
+        "Current only",
+        "Step and touch potential to safe values"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Earth mat: keeps step/touch potential within safe limits"
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "Earthing transformer is used in:",
       "options": [
-        "Delta systems to create artificial neutral",
-        "Star systems only",
         "DC systems only",
-        "AC systems only"
+        "Star systems only",
+        "AC systems only",
+        "Delta systems to create artificial neutral"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Earthing T/F: provides neutral point in ungrounded systems"
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "An unearthed system fault to earth causes:",
       "options": [
-        "Small capacitive current, system can continue",
         "Large fault current",
         "Immediate trip",
-        "No effect"
+        "No effect",
+        "Small capacitive current, system can continue"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Ungrounded: fault current limited by system capacitance"
     },
     {
@@ -253,8 +253,8 @@
       "stem": "A Petersen coil is used to:",
       "options": [
         "Resonate with system capacitance to reduce earth fault current",
-        "Increase fault current",
         "Measure resistance",
+        "Increase fault current",
         "Store energy"
       ],
       "answer": 0,
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "Earth resistance test by fall of potential method uses:",
       "options": [
-        "Three electrodes: E, P, C",
         "Two electrodes",
         "One electrode",
-        "Four electrodes"
+        "Four electrodes",
+        "Three electrodes: E, P, C"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "3-point: earth E, potential P, current C"
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "The permissible earth resistance for LT distribution is:",
       "options": [
+        "Any value",
         "Less than 5 ohm for 100kVA",
         "100 ohm",
-        "1000 ohm",
-        "Any value"
+        "1000 ohm"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "IS 3043: R < 5 ohm for systems up to 100kVA"
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "Equipotential bonding reduces:",
       "options": [
-        "Potential difference between metallic parts",
-        "Current magnitude",
         "Voltage magnitude",
-        "Resistance"
+        "Potential difference between metallic parts",
+        "Resistance",
+        "Current magnitude"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bonding: eliminates dangerous potential differences"
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "Effective earthing fault clearance time for 415V system is:",
       "options": [
-        "5 seconds or less",
         "1 minute",
         "10 minutes",
-        "1 hour"
+        "1 hour",
+        "5 seconds or less"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "415V: disconnection within 5 seconds for safety"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "RCD (Residual Current Device) operates by detecting:",
       "options": [
+        "Chemical resistance of components",
         "Difference between phase and neutral currents",
-        "Only phase current",
-        "Only neutral current",
+        "Thermal insulation properties",
         "Voltage only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "RCD: residual current (leakage) = I_phase - I_neutral"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "RCD sensitivity of 30mA protects against:",
       "options": [
-        "Lethal electric shock",
-        "Overload",
         "Short circuit",
+        "Overload",
+        "Lethal electric shock",
         "Overvoltage"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "30mA for 40ms prevents fatal ventricular fibrillation"
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "A rising neutral potential in an unearthed system indicates:",
       "options": [
+        "Overload",
         "Earth fault on one phase",
         "Normal condition",
-        "Overload",
         "Overvoltage"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Neutral shift indicates earth fault"
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "The touch potential limit according to IEEE 80 for a person is:",
       "options": [
-        "Depends on fault duration and body resistance",
         "Always 50V",
+        "Always 10V",
         "Always 100V",
-        "Always 10V"
+        "Depends on fault duration and body resistance"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Safe touch V depends on body R (1000 ohm) and fault duration"
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "For an industrial unit, separate earthing for motor and structure is:",
       "options": [
-        "Recommended",
-        "Prohibited",
         "Not needed",
-        "Mandatory same pit"
+        "Prohibited",
+        "Mandatory same pit",
+        "Recommended"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Separate pits recommended for equipment and structure"
     },
     {
@@ -451,9 +451,9 @@
       "stem": "Static earthing is required for:",
       "options": [
         "Fuel storage tanks, vehicles during loading",
-        "Only buildings",
-        "Only motors",
-        "Only transformers"
+        "Neither the first nor the second option",
+        "Both the first and second options",
+        "This is a common misconception"
       ],
       "answer": 0,
       "solution": "Static: prevent sparks from static electricity in flammable areas"
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "An earth fault relay connected in residual connection of CTs detects:",
       "options": [
-        "Three-phase faults",
+        "Underfrequency",
         "Earth faults only",
-        "Overload only",
-        "Underfrequency"
+        "Three-phase faults",
+        "Overload only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Residual CT: 3I0, detects earth fault only"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "The resistance of a driven rod earthing decreases with:",
       "options": [
-        "Greater depth of driving",
-        "Less depth",
+        "Higher soil resistivity",
         "Smaller diameter",
-        "Higher soil resistivity"
+        "Less depth",
+        "Greater depth of driving"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "More depth reaches lower resistivity soil layers"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "Copper bonded steel rods are preferred for earthing because:",
       "options": [
-        "Strength of steel + conductivity of copper",
-        "Cheapest option",
         "Lightest",
-        "Most flexible"
+        "Strength of steel + conductivity of copper",
+        "Most flexible",
+        "Cheapest option"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Copper bonded steel: mechanical strength + corrosion resistance + conductivity"
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "A 300mm x 300mm x 12mm copper plate earthing pit depth should be:",
       "options": [
+        "10m",
         "Minimum 3m",
         "0.5m",
-        "10m",
         "Any depth"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Plate electrode: minimum 3m depth"
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "Cross bonding in cables is done to:",
       "options": [
-        "Reduce sheath circulating currents",
+        "Connect to earth",
         "Increase sheath voltage",
         "Short circuit sheaths",
-        "Connect to earth"
+        "Reduce sheath circulating currents"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Cross bonding: reduces induced sheath voltages"
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "A solidly earthed neutral allows:",
       "options": [
-        "Full fault current to flow during earth fault",
-        "No fault current",
         "Reduced fault current",
-        "AC only"
+        "AC only",
+        "No fault current",
+        "Full fault current to flow during earth fault"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Solid earth: low impedance path -> full fault current"
     },
     {
@@ -577,9 +577,9 @@
       "stem": "The maximum touch voltage during a fault depends on:",
       "options": [
         "Fault current, earth resistance, and mat resistance",
-        "Only fault current",
-        "Only earth resistance",
-        "Only mat resistance"
+        "Acoustic properties of surfaces",
+        "Dielectric strength measurement",
+        "Neither the first nor the second option"
       ],
       "answer": 0,
       "solution": "Touch V = f(If, Re, Rmat)"
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "In IT system (isolated neutral), first earth fault:",
       "options": [
-        "Causes alarm but system continues",
-        "Immediately trips supply",
         "Causes short circuit",
-        "Has no effect"
+        "Has no effect",
+        "Immediately trips supply",
+        "Causes alarm but system continues"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "IT system: first fault alarm, second fault trips"
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "Earthing of a building lightning protection system connects to:",
       "options": [
-        "Nearby earth electrode or earthing system",
-        "Water pipe only",
+        "Telecom earth only",
         "Gas pipe",
-        "Telecom earth only"
+        "Nearby earth electrode or earthing system",
+        "Water pipe only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Lightning earth: connects to general earthing system"
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "A rod earthing system typically uses rods of length:",
       "options": [
+        "10m",
         "2.4m to 3m",
         "0.5m",
-        "10m",
         "50cm"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Standard: 2.4-3m driven rods"
     },
     {
@@ -648,12 +648,12 @@
       "difficulty": "medium",
       "stem": "The soil resistivity of rocky terrain is typically:",
       "options": [
-        "> 1000 ohm-m",
-        "< 10 ohm-m",
         "50 ohm-m",
+        "< 10 ohm-m",
+        "> 1000 ohm-m",
         "100 ohm-m"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Rocky: > 1000 ohm-m; clay/moist: 10-100 ohm-m"
     },
     {
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "An earthing system for a 33kV substation typically needs earth resistance:",
       "options": [
-        "Less than 1 ohm",
-        "Less than 5 ohm",
         "Less than 10 ohm",
+        "Less than 5 ohm",
+        "Less than 1 ohm",
         "Less than 50 ohm"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "33kV: Re < 1 ohm for safety"
     },
     {
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "TT earthing system means:",
       "options": [
-        "Separate earth for source and consumer",
+        "This ignores the practical considerations",
         "Common earth",
         "No earth",
-        "Only neutral earthed"
+        "Separate earth for source and consumer"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "TT: source and load have separate earth electrodes"
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "TN-S earthing system has:",
       "options": [
-        "Separate protective earth and neutral throughout",
         "Combined PEN conductor",
-        "No neutral",
-        "No earth"
+        "Separate protective earth and neutral throughout",
+        "No earth",
+        "No neutral"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "TN-S: separate PE and N from source to load"
     },
     {
@@ -740,8 +740,8 @@
       "options": [
         "5A to 10A",
         "1000A",
-        "10000A",
-        "0A"
+        "0A",
+        "10000A"
       ],
       "answer": 0,
       "solution": "HRG: limits to 5-10A for continuous operation"
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "The voltage rating of a lightning arrestor is selected based on:",
       "options": [
+        "Thermal insulation properties",
+        "This applies to a different field entirely",
         "Maximum system voltage and earthing type",
-        "Only system voltage",
-        "Only current",
-        "Only frequency"
+        "Neither the first nor the second option"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "LA rating: depends on system voltage and neutral earthing"
     },
     {
@@ -775,9 +775,9 @@
       "stem": "Single bus bar scheme has:",
       "options": [
         "One bus for all incoming/outgoing",
+        "No bus",
         "Two buses",
-        "Three buses",
-        "No bus"
+        "Three buses"
       ],
       "answer": 0,
       "solution": "Single bus: simplest, all feeders on one bus"
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "Double bus bar scheme provides:",
       "options": [
-        "Flexibility to transfer feeders between buses",
-        "Double the voltage",
         "Double the current",
-        "No advantage"
+        "Flexibility to transfer feeders between buses",
+        "No advantage",
+        "Double the voltage"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Double bus: transfer feeders for maintenance/operation"
     },
     {
@@ -811,9 +811,9 @@
       "stem": "One-and-a-half breaker scheme uses:",
       "options": [
         "Three breakers for two circuits",
+        "Three breakers for three circuits",
         "Two breakers for one circuit",
-        "One breaker for two circuits",
-        "Three breakers for three circuits"
+        "One breaker for two circuits"
       ],
       "answer": 0,
       "solution": "1.5 breaker: 3 breakers protect 2 circuits"
@@ -830,8 +830,8 @@
       "options": [
         "Visible isolation for maintenance",
         "Fault interruption",
-        "Load switching",
-        "Current measurement"
+        "Current measurement",
+        "Load switching"
       ],
       "answer": 0,
       "solution": "Isolator: visible gap for safe maintenance"
@@ -847,8 +847,8 @@
       "stem": "Lightning arrester is installed at:",
       "options": [
         "Entry of lines into substation",
-        "Exit only",
         "Transformer only",
+        "Exit only",
         "Bus only"
       ],
       "answer": 0,
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "A substation battery provides:",
       "options": [
-        "DC supply for protection and control",
-        "AC supply",
         "Power to consumers",
-        "Lighting only"
+        "AC supply",
+        "Lighting only",
+        "DC supply for protection and control"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Battery: DC for relay, trip coil, control circuits"
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "CT in a substation is used for:",
       "options": [
-        "Current measurement and protection",
-        "Voltage measurement",
+        "Frequency measurement",
         "Power factor correction",
-        "Frequency measurement"
+        "Voltage measurement",
+        "Current measurement and protection"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "CT: steps down current for metering and protection"
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "PT in a substation is used for:",
       "options": [
-        "Voltage measurement and protection",
-        "Current measurement",
         "Power measurement",
+        "Current measurement",
+        "Voltage measurement and protection",
         "Frequency measurement"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "PT: steps down voltage for measurement"
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "Bus bar in a substation is rated for:",
       "options": [
-        "Maximum current it can carry continuously",
-        "Maximum voltage only",
         "Power only",
-        "Frequency only"
+        "Maximum voltage only",
+        "Frequency only",
+        "Maximum current it can carry continuously"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Bus rating: continuous current capacity in kA"
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "A bus coupler connects:",
       "options": [
-        "Two bus sections together",
-        "Bus to earth",
+        "Two generators",
         "Two transformers",
-        "Two generators"
+        "Two bus sections together",
+        "Bus to earth"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Bus coupler: interconnects bus sections"
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "LA withstand voltage should be:",
       "options": [
-        "Higher than system voltage but lower than equipment BIL",
         "Equal to system voltage",
-        "Double system voltage",
-        "Zero"
+        "Zero",
+        "Higher than system voltage but lower than equipment BIL",
+        "Double system voltage"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "LA withstand > system voltage, but protects equipment"
     },
     {
@@ -973,9 +973,9 @@
       "stem": "BIL (Basic Insulation Level) is:",
       "options": [
         "Impulse withstand voltage of equipment",
-        "Normal operating voltage",
+        "Short circuit rating",
         "Rated current",
-        "Short circuit rating"
+        "Normal operating voltage"
       ],
       "answer": 0,
       "solution": "BIL: peak impulse voltage equipment can withstand"
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "A substation control room houses:",
       "options": [
-        "Relay panels, battery, SCADA equipment",
         "Power transformers",
-        "Switchyard equipment",
-        "Only batteries"
+        "Both the first and second options",
+        "Relay panels, battery, SCADA equipment",
+        "Switchyard equipment"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Control room: relays, batteries, SCADA, metering"
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "Minimum clearance between phase conductors at 11kV:",
       "options": [
+        "10mm",
         "125mm to 200mm",
         "1m",
-        "5m",
-        "10mm"
+        "5m"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "11kV: ~200mm phase clearance"
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "An isolator interlock prevents:",
       "options": [
-        "Opening under load or closing on fault",
-        "Opening on no load",
+        "Manual operation",
         "Closing on no load",
-        "Manual operation"
+        "Opening on no load",
+        "Opening under load or closing on fault"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Interlock: prevents incorrect operation"
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "The purpose of a marshalling box is to:",
       "options": [
+        "Store oil",
         "Terminate and organize control cables",
         "Generate electricity",
-        "Store oil",
         "Cool transformer"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Marshalling box: cable termination and organization"
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "GIS (Gas Insulated Substation) uses:",
       "options": [
-        "SF6 gas for insulation",
-        "Air insulation",
+        "Vacuum only",
         "Oil insulation",
-        "Vacuum only"
+        "Air insulation",
+        "SF6 gas for insulation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "GIS: SF6 gas insulated, compact design"
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "DC battery voltage in a substation is typically:",
       "options": [
-        "110V DC or 220V DC",
-        "24V DC only",
         "48V DC only",
-        "400V DC"
+        "110V DC or 220V DC",
+        "400V DC",
+        "24V DC only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Standard: 110V or 220V DC for protection and control"
     },
     {
@@ -1099,9 +1099,9 @@
       "stem": "Battery charger in substation charges battery at:",
       "options": [
         "Float and boost rates",
-        "Only float rate",
-        "Only boost rate",
-        "Constant current only"
+        "Neither the first nor the second option",
+        "Constant current only",
+        "Both the first and second options"
       ],
       "answer": 0,
       "solution": "Float: normal; boost: fast charge after discharge"
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "Substation earthing mat is designed to:",
       "options": [
-        "Limit step and touch potential",
-        "Increase resistance",
         "Reduce current",
-        "Increase voltage"
+        "Limit step and touch potential",
+        "Increase voltage",
+        "Increase resistance"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Earth mat: safety from step/touch potential during faults"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "A substation transformer oil test checks:",
       "options": [
-        "Dielectric strength, moisture, acidity",
-        "Only colour",
-        "Only viscosity",
-        "Only temperature"
+        "Phase shift measurement",
+        "Current transformation only",
+        "This applies to a different field entirely",
+        "Dielectric strength, moisture, acidity"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Oil test: BDV, moisture, acidity, sludge"
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Spillage pit in a substation is provided for:",
       "options": [
-        "Containing oil from transformer bursts",
-        "Collecting rainwater",
         "Parking vehicles",
-        "Storing equipment"
+        "Containing oil from transformer bursts",
+        "Storing equipment",
+        "Collecting rainwater"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Oil containment: prevents environmental contamination"
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "The fire wall between transformers is made of:",
       "options": [
+        "Aluminium sheet",
         "Reinforced concrete with fire rating",
         "Wood",
-        "Plastic",
-        "Aluminium sheet"
+        "Plastic"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Fire wall: RCC, 4-hour fire rating minimum"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "The rating of a substation transformer is expressed in:",
       "options": [
-        "MVA",
+        "Ampere",
         "MW",
         "kWh",
-        "Ampere"
+        "MVA"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Transformer: MVA (apparent power)"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "On-load tap changer (OLTC) is used to:",
       "options": [
-        "Vary turns ratio under load for voltage regulation",
-        "Change frequency",
         "Switch off load",
-        "Measure voltage"
+        "Measure voltage",
+        "Change frequency",
+        "Vary turns ratio under load for voltage regulation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "OLTC: adjusts voltage ratio while carrying load"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "Substation bus bar conductor size is selected based on:",
       "options": [
-        "Continuous current rating and short circuit withstand",
-        "Only cost",
-        "Only weight",
-        "Colour only"
+        "Neither the first nor the second option",
+        "Colour only",
+        "Both the first and second options",
+        "Continuous current rating and short circuit withstand"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Bus: thermal rating + mechanical strength during fault"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "A current transformer secondary should be grounded at:",
       "options": [
+        "Not grounded",
         "One point only",
         "Both ends",
-        "Not grounded",
         "Three points"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "CT secondary: single point earth for safety"
     },
     {
@@ -1279,9 +1279,9 @@
       "stem": "The function of a surge capacitor is to:",
       "options": [
         "Protect transformer from fast transients",
-        "Measure capacitance",
         "Store energy",
-        "Correct power factor"
+        "Correct power factor",
+        "Measure capacitance"
       ],
       "answer": 0,
       "solution": "Surge cap: diverts high-frequency transients"
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "Substation fencing height should be minimum:",
       "options": [
-        "2.4m to 3m",
         "1m",
-        "5m",
-        "0.5m"
+        "2.4m to 3m",
+        "0.5m",
+        "5m"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Standard: 2.4m minimum height with barbed wire"
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "SF6 gas in GIS is used because it has:",
       "options": [
+        "No arc quenching",
         "High dielectric strength and arc quenching property",
         "Low dielectric strength",
-        "No arc quenching",
         "High cost only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "SF6: 2.5x air dielectric, excellent arc quenching"
     },
     {
@@ -1333,9 +1333,9 @@
       "stem": "Transformer cooling types include:",
       "options": [
         "ONAN, ONAF, OFAF, OFWF",
-        "Only air cooled",
-        "Only water cooled",
-        "Only oil cooled"
+        "Phase shift measurement",
+        "Current transformation only",
+        "Oil quality analysis"
       ],
       "answer": 0,
       "solution": "Multiple: ONAN (oil natural air natural), ONAF, OFAF, OFWF"
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "A bus bar sectionalizer is used for:",
       "options": [
-        "Dividing bus into sections for flexibility",
-        "Measuring current",
         "Generating power",
-        "Storing energy"
+        "Dividing bus into sections for flexibility",
+        "Storing energy",
+        "Measuring current"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Sectionalizer: divides bus for selective operation"
     },
     {
@@ -1369,9 +1369,9 @@
       "stem": "The minimum approach distance (MAD) at 33kV is:",
       "options": [
         "0.3m to 0.6m",
+        "1mm",
         "5m",
-        "10m",
-        "1mm"
+        "10m"
       ],
       "answer": 0,
       "solution": "33kV: ~0.6m MAD for safe working"
@@ -1387,9 +1387,9 @@
       "stem": "A substation oil conservator tank serves to:",
       "options": [
         "Accommodate oil expansion/contraction",
-        "Generate electricity",
         "Store water",
-        "Cool oil actively"
+        "Cool oil actively",
+        "Generate electricity"
       ],
       "answer": 0,
       "solution": "Conservator: oil expansion space with rubber bag or diaphragm"
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Substation insulator string for 33kV typically has how many discs?",
       "options": [
-        "3 discs",
+        "20 discs",
         "1 disc",
-        "10 discs",
-        "20 discs"
+        "3 discs",
+        "10 discs"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "33kV: approximately 3 suspension insulator discs"
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "A substation SCADA system monitors and controls:",
       "options": [
+        "This assumes incorrect boundary conditions",
         "Remote operation of switchgear and parameters",
-        "Only voltage",
-        "Only current",
-        "Only temperature"
+        "Neither the first nor the second option",
+        "This is true only for a different scenario"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "SCADA: supervisory control and data acquisition"
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "The purpose of an anti-condensation heater in a CB is to:",
       "options": [
+        "Reduce current",
         "Prevent moisture inside CB enclosure",
         "Heat the gas",
-        "Increase voltage",
-        "Reduce current"
+        "Increase voltage"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Heater: prevents internal condensation and insulation degradation"
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "If 2x + 6 = 20, x equals:",
       "options": [
-        "7",
+        "4",
         "10",
         "13",
-        "4"
+        "7"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "2x=14; x=7"
     },
     {
@@ -1495,9 +1495,9 @@
       "stem": "Perimeter of square with side 5cm is:",
       "options": [
         "20cm",
+        "15cm",
         "25cm",
-        "10cm",
-        "15cm"
+        "10cm"
       ],
       "answer": 0,
       "solution": "P=4*5=20cm"
@@ -1513,8 +1513,8 @@
       "stem": "A does work in 12 days, B does in 18 days. Together:",
       "options": [
         "7.2 days",
-        "15 days",
         "30 days",
+        "15 days",
         "6 days"
       ],
       "answer": 0,
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "What is the square root of 144?",
       "options": [
-        "12",
         "14",
         "11",
+        "12",
         "13"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "sqrt(144)=12"
     },
     {
@@ -1550,8 +1550,8 @@
       "options": [
         "1:3",
         "3:1",
-        "2:1",
-        "1:2"
+        "1:2",
+        "2:1"
       ],
       "answer": 0,
       "solution": "40:120=1:3"
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "In a code language, if CAT is written as DBU, DOG is written as:",
       "options": [
+        "DQF",
         "EPH",
         "FQI",
-        "DQF",
         "CRG"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Each letter +1: D, E, P, H"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Pointing to a man, she said: He is my mother's only son. He is my:",
       "options": [
-        "Brother",
-        "Father",
+        "Uncle",
         "Cousin",
-        "Uncle"
+        "Brother",
+        "Father"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Mother's only son = brother"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "A is north of B, B is west of C. A is in which direction of C?",
       "options": [
+        "South-East",
         "North-West",
         "North-East",
-        "South-West",
-        "South-East"
+        "South-West"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "A is NW of C"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "All dogs are cats. All cats are birds. Conclusion: All dogs are birds.",
       "options": [
-        "Definitely true",
-        "Probably true",
         "Probably false",
-        "Definitely false"
+        "Definitely true",
+        "Definitely false",
+        "Probably true"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Dogs->cats->birds: valid syllogism"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Odd one out: Apple, Mango, Potato, Banana",
       "options": [
-        "Potato",
         "Apple",
-        "Mango",
-        "Banana"
+        "Potato",
+        "Banana",
+        "Mango"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Potato is vegetable; others are fruits"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Analogy: Doctor : Hospital :: Teacher : ?",
       "options": [
-        "School",
-        "Office",
         "Court",
-        "Factory"
+        "Factory",
+        "School",
+        "Office"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Doctor in hospital; teacher in school"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Series: 3, 9, 27, 81, ?:",
       "options": [
+        "216",
         "243",
-        "162",
         "729",
-        "216"
+        "162"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Each x3: 81*3=243"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "In a row of 30 students, A is 10th from left. Position from right:",
       "options": [
-        "21st",
-        "20th",
+        "19th",
         "22nd",
-        "19th"
+        "20th",
+        "21st"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "30-10+1=21st from right"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "Statement: All flowers are fruits. No fruit is sweet. Conclusion: No flower is sweet.",
       "options": [
-        "Definitely true",
-        "Probably true",
         "Probably false",
-        "Can't say"
+        "Can't say",
+        "Probably true",
+        "Definitely true"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Flowers->fruits, no fruit sweet -> no flower sweet"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "Direction: A walks 10m north, turns left, walks 5m, turns left again, walks 10m. Final position?",
       "options": [
-        "5m west of start",
         "5m east of start",
+        "Back to start",
         "10m west",
-        "Back to start"
+        "5m west of start"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "U-shape: ends 5m west of start"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "Series: AZ, BY, CX, DW, ?:",
       "options": [
-        "EV",
         "EU",
+        "EV",
         "FV",
         "FW"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Pattern: EV"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "A clock shows 3:15. Angle between hands:",
       "options": [
-        "7.5 degrees",
-        "0 degrees",
         "15 degrees",
-        "90 degrees"
+        "0 degrees",
+        "90 degrees",
+        "7.5 degrees"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "At 3:15: minute hand at 90°, hour at 97.5°, diff = 7.5°"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "Odd one out: 2, 3, 5, 9, 11, 13",
       "options": [
-        "9",
         "2",
         "3",
+        "9",
         "5"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "9 is not prime; rest are primes"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "If yesterday was two days before Saturday, what is today?",
       "options": [
-        "Friday",
         "Wednesday",
-        "Thursday",
-        "Tuesday"
+        "Friday",
+        "Tuesday",
+        "Thursday"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Sat-2=Thu; today=Fri"
     },
     {
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "Statement: Some cats are dogs. All dogs are birds. Conclusion: Some cats are birds.",
       "options": [
-        "Definitely true",
         "Probably true",
+        "Definitely false",
         "Probably false",
-        "Definitely false"
+        "Definitely true"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Some cats->dogs->birds: definitely true"
     }
   ]

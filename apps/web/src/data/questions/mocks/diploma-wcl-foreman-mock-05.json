@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "Damper windings in a synchronous motor are used to:",
       "options": [
+        "Both A and B",
         "Provide starting torque",
         "Reduce hunting",
-        "Both A and B",
         "Improve efficiency"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Damper windings provide starting torque (induction motor principle) and damp oscillations."
     },
     {
@@ -55,11 +55,11 @@
       "stem": "The starting methods for a synchronous motor include:",
       "options": [
         "Pony motor (small prime mover)",
-        "Damper winding (induction motor start)",
         "Both A and B",
+        "Damper winding (induction motor start)",
         "None"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Both methods are used: pony motor brings rotor near sync speed, damper windings act as squirrel cage."
     },
     {
@@ -73,11 +73,11 @@
       "stem": "The torque angle (δ) of a synchronous motor is the angle between:",
       "options": [
         "Stator and rotor MMFs",
-        "Supply voltage and back EMF",
         "Both A and B are equivalent",
+        "Supply voltage and back EMF",
         "Speed and voltage"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Torque angle is the angle between rotor and stator fields (or equivalently between V and Eb)."
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "The maximum torque of a synchronous motor occurs at torque angle:",
       "options": [
+        "90°",
         "0°",
         "45°",
-        "90°",
         "180°"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Maximum torque (pull-out torque) occurs at δ = 90°."
     },
     {
@@ -109,11 +109,11 @@
       "stem": "If the load on a synchronous motor exceeds pull-out torque:",
       "options": [
         "Motor continues at sync speed",
-        "Motor loses synchronism (pulls out)",
+        "Motor stops instantly",
         "Motor speed increases",
-        "Motor stops instantly"
+        "Motor loses synchronism (pulls out)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Motor pulls out of synchronism and stalls."
     },
     {
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "The excitation of a synchronous motor affects:",
       "options": [
+        "Torque",
         "Speed",
         "Power factor",
-        "Torque",
         "All of these"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Excitation affects power factor (leading/lagging/unity) but not speed (constant) or torque (depends on load)."
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "A synchronous motor operating at leading power factor is equivalent to:",
       "options": [
-        "An inductor",
         "A capacitor",
+        "An inductor",
         "A resistor",
         "A transformer"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Leading power factor means it supplies reactive power, like a capacitor."
     },
     {
@@ -163,11 +163,11 @@
       "stem": "The power consumed by a synchronous motor is proportional to:",
       "options": [
         "sin δ",
-        "cos δ",
+        "sin 2δ",
         "tan δ",
-        "sin 2δ"
+        "cos δ"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "P = (3V Eb / Xs) × sin δ, but torque ∝ sin δ, and power ∝ torque × speed (constant)."
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "In a synchronous motor, if excitation is increased at constant load:",
       "options": [
-        "Speed increases",
-        "Power factor improves (towards unity from lagging)",
         "Torque increases",
-        "Current decreases to minimum then increases"
+        "Current decreases to minimum then increases",
+        "Power factor improves (towards unity from lagging)",
+        "Speed increases"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "V-curve shows current decreases to minimum at unity PF then increases as motor becomes over-excited."
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "A stepper motor converts:",
       "options": [
-        "DC to AC",
         "Electrical pulses to discrete mechanical steps",
-        "Analog to digital",
-        "AC to DC"
+        "DC to AC",
+        "AC to DC",
+        "Analog to digital"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Stepper motor moves in fixed angular steps in response to electrical pulses."
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "The step angle of a stepper motor is determined by:",
       "options": [
-        "Number of stator phases and rotor teeth",
+        "Load torque",
         "Supply voltage",
-        "Frequency only",
-        "Load torque"
+        "Number of stator phases and rotor teeth",
+        "Frequency only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Step angle = 360° / (number of phases × number of rotor teeth × gear ratio)."
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "A BLDC (Brushless DC) motor differs from a DC motor in that:",
       "options": [
-        "It has a commutator",
         "Electronic commutation replaces mechanical commutator",
         "It uses brushes",
-        "It runs only on AC"
+        "It runs only on AC",
+        "It has a commutator"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "BLDC uses electronic commutation (Hall sensors + MOSFETs/IGBTs) instead of brushes."
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "A universal motor can operate on:",
       "options": [
-        "DC only",
         "AC only",
         "Both AC and DC",
+        "DC only",
         "Neither AC nor DC"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Universal motor is a series-wound motor designed to run on both AC and DC supply."
     },
     {
@@ -288,10 +288,10 @@
       "difficulty": "medium",
       "stem": "A repulsion motor works on the principle of:",
       "options": [
-        "Electromagnetic induction",
-        "Repulsion between stator field and rotor poles",
         "Mutual induction",
-        "Self induction"
+        "Repulsion between stator field and rotor poles",
+        "Self induction",
+        "Electromagnetic induction"
       ],
       "answer": 1,
       "solution": "Repulsion between stator magnetic field and induced rotor poles produces torque."
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "The speed of a universal motor on no load tends to:",
       "options": [
-        "Synchronous speed",
-        "Zero",
+        "Half of rated speed",
         "Dangerously high value",
-        "Half of rated speed"
+        "Synchronous speed",
+        "Zero"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Like a series DC motor, universal motor speed rises dangerously high at no load."
     },
     {
@@ -325,8 +325,8 @@
       "stem": "A hysteresis motor works on the principle of:",
       "options": [
         "Hysteresis and eddy current losses in rotor",
-        "Reluctance torque",
         "Induction",
+        "Reluctance torque",
         "Reaction torque"
       ],
       "answer": 0,
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "A reluctance motor runs at:",
       "options": [
-        "Any speed",
         "Synchronous speed",
-        "Below synchronous speed",
-        "Twice synchronous speed"
+        "Twice synchronous speed",
+        "Any speed",
+        "Below synchronous speed"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Reluctance motor runs at synchronous speed due to reluctance torque."
     },
     {
@@ -360,10 +360,10 @@
       "difficulty": "medium",
       "stem": "A shaded pole motor is used in:",
       "options": [
-        "High power applications",
+        "Traction",
         "Fans and small appliances",
         "Industrial drives",
-        "Traction"
+        "High power applications"
       ],
       "answer": 1,
       "solution": "Shaded pole motor is cheap, low torque, used in fans, blowers, small appliances."
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "The starting torque of a shaded pole motor is:",
       "options": [
-        "High",
         "Low",
         "Zero",
-        "Very high"
+        "Very high",
+        "High"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Starting torque is low due to weak rotating field from shading coil."
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "A permanent magnet synchronous motor (PMSM) uses:",
       "options": [
-        "Wound rotor with DC supply",
-        "Permanent magnets on rotor",
         "Squirrel cage rotor",
-        "Damper windings only"
+        "Wound rotor with DC supply",
+        "Damper windings only",
+        "Permanent magnets on rotor"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "PMSM uses permanent magnets (rare earth) on rotor for excitation."
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "The main advantage of PMSM over induction motor is:",
       "options": [
-        "Lower cost",
         "Higher efficiency (no rotor copper loss)",
-        "Simpler construction",
-        "Higher starting torque"
+        "Higher starting torque",
+        "Lower cost",
+        "Simpler construction"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "PMSM has no rotor copper loss, giving higher efficiency."
     },
     {
@@ -433,11 +433,11 @@
       "stem": "The hunting in a synchronous motor can be reduced by:",
       "options": [
         "Increasing load",
-        "Adding damper windings",
+        "Increasing excitation",
         "Reducing supply voltage",
-        "Increasing excitation"
+        "Adding damper windings"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Damper windings damp oscillations by producing opposing torque during hunting."
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "A synchronous motor can be used for power factor correction by:",
       "options": [
-        "Under-exciting it",
-        "Over-exciting it",
         "Running it at no load",
-        "Adding capacitors"
+        "Adding capacitors",
+        "Under-exciting it",
+        "Over-exciting it"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Over-excited synchronous motor draws leading current, acting as a synchronous condenser."
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "The field winding of a synchronous motor is supplied by:",
       "options": [
-        "AC supply",
         "DC supply (via slip rings or brushless exciter)",
         "Self-excitation",
-        "Permanent magnets only"
+        "Permanent magnets only",
+        "AC supply"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Rotor field winding is excited by DC through slip rings or brushless exciter."
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "The starting current of a synchronous motor is typically:",
       "options": [
-        "5–7 times rated current",
         "2–3 times rated current",
         "Equal to rated current",
+        "5–7 times rated current",
         "10 times rated current"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Synchronous motor draws 5–7× rated current at DOL start."
     },
     {
@@ -504,10 +504,10 @@
       "difficulty": "medium",
       "stem": "A brushless DC motor uses which type of rotor?",
       "options": [
-        "Wound rotor",
+        "Salient pole rotor",
         "Permanent magnet rotor",
         "Squirrel cage rotor",
-        "Salient pole rotor"
+        "Wound rotor"
       ],
       "answer": 1,
       "solution": "BLDC uses permanent magnet rotor with electronic commutation."
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "The torque in a stepper motor is proportional to:",
       "options": [
-        "Step angle",
-        "Number of phases",
+        "All of these",
         "Current in stator windings",
-        "All of these"
+        "Number of phases",
+        "Step angle"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Torque is proportional to stator current (up to magnetic saturation)."
     },
     {
@@ -542,8 +542,8 @@
       "options": [
         "Zero when stopped",
         "Maximum torque the motor can produce at standstill",
-        "Same as running torque",
-        "Zero at all times"
+        "Zero at all times",
+        "Same as running torque"
       ],
       "answer": 1,
       "solution": "Holding torque is the maximum torque the motor can resist when energized but not rotating."
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "A servo system typically uses which feedback device?",
       "options": [
-        "Tachometer",
-        "Encoder or resolver",
         "Stroboscope",
-        "None"
+        "None",
+        "Encoder or resolver",
+        "Tachometer"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Encoders or resolvers provide position/speed feedback for closed-loop servo control."
     },
     {
@@ -577,11 +577,11 @@
       "stem": "The rotor of a hysteresis motor is made of:",
       "options": [
         "Copper bars",
-        "Hard magnetic material (Alnico, Cobalt-steel)",
+        "Aluminum",
         "Laminated steel",
-        "Aluminum"
+        "Hard magnetic material (Alnico, Cobalt-steel)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Hard magnetic material with high hysteresis loss is used for the rotor."
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "A single-phase induction motor is not self-starting because:",
       "options": [
-        "It has no rotating field",
-        "It has no rotor",
         "It has high resistance",
-        "It has high inductance"
+        "It has high inductance",
+        "It has no rotating field",
+        "It has no rotor"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Single-phase produces pulsating (not rotating) field, so no starting torque."
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "The starting methods for a single-phase induction motor include:",
       "options": [
+        "All of these",
         "Capacitor start",
-        "Resistance start (split phase)",
         "Shaded pole",
-        "All of these"
+        "Resistance start (split phase)"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "All methods are used to create a pseudo-rotating field for starting."
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "A capacitor-start capacitor-run motor uses:",
       "options": [
-        "One capacitor for starting, removed after start",
         "One capacitor always in circuit",
-        "Two capacitors (one for start, one for run)",
-        "No capacitor"
+        "No capacitor",
+        "One capacitor for starting, removed after start",
+        "Two capacitors (one for start, one for run)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Starting capacitor (large) is disconnected by centrifugal switch; run capacitor stays."
     },
     {
@@ -648,9 +648,9 @@
       "difficulty": "medium",
       "stem": "The direction of rotation of a single-phase motor can be reversed by:",
       "options": [
-        "Reversing supply terminals",
-        "Reversing main winding connections",
         "Reversing starting winding connections",
+        "Reversing main winding connections",
+        "Reversing supply terminals",
         "Either B or C"
       ],
       "answer": 3,
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "A repulsion-start induction-run motor starts as:",
       "options": [
-        "Induction motor",
-        "Repulsion motor",
         "Synchronous motor",
-        "DC motor"
+        "Induction motor",
+        "DC motor",
+        "Repulsion motor"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Starts as repulsion motor (high torque), runs as induction motor after centrifugal switch."
     },
     {
@@ -686,8 +686,8 @@
       "options": [
         "750 rpm",
         "1000 rpm",
-        "1500 rpm",
-        "3000 rpm"
+        "3000 rpm",
+        "1500 rpm"
       ],
       "answer": 0,
       "solution": "Ns = 120 × 50 / 8 = 750 rpm."
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "A synchronous motor will fail to start if:",
       "options": [
-        "Damper windings are absent and no pony motor",
         "Supply voltage is too low",
-        "Excitation is zero",
-        "All of these"
+        "Damper windings are absent and no pony motor",
+        "All of these",
+        "Excitation is zero"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Without damper windings or pony motor, zero excitation, or very low voltage, motor won't start."
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "The pull-out torque of a synchronous motor is typically:",
       "options": [
-        "1.5–2 times rated torque",
+        "5 times rated torque",
         "0.5 times rated torque",
         "Equal to rated torque",
-        "5 times rated torque"
+        "1.5–2 times rated torque"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Pull-out torque is typically 1.5–2 times rated torque."
     },
     {
@@ -739,11 +739,11 @@
       "stem": "A brushless DC motor is basically a:",
       "options": [
         "DC motor without brushes",
-        "Permanent magnet synchronous motor with electronic commutation",
         "Induction motor",
+        "Permanent magnet synchronous motor with electronic commutation",
         "Stepper motor"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "BLDC is a PMSM with electronic commutation (trapezoidal back-EMF)."
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "A synchronous motor can be started as an induction motor using:",
       "options": [
-        "Damper windings",
-        "Field winding only",
         "Stator winding only",
-        "None of these"
+        "None of these",
+        "Damper windings",
+        "Field winding only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Damper windings act as squirrel cage rotor for induction motor starting."
     },
     {
@@ -793,11 +793,11 @@
       "stem": "The efficiency of a synchronous motor is generally:",
       "options": [
         "Lower than induction motor",
-        "Higher than induction motor",
         "Same as induction motor",
+        "Higher than induction motor",
         "Zero"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Synchronous motor has no rotor copper loss (DC excited), giving higher efficiency."
     },
     {
@@ -811,11 +811,11 @@
       "stem": "A permanent magnet stepper motor has step angle of 1.8°. How many steps per revolution?",
       "options": [
         "100",
-        "200",
         "360",
+        "200",
         "400"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Steps per revolution = 360° / 1.8° = 200 steps."
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "A Variable Frequency Drive (VFD) controls motor speed by:",
       "options": [
-        "Varying voltage only",
-        "Varying frequency only",
         "Varying both voltage and frequency (V/f)",
-        "Varying rotor resistance"
+        "Varying frequency only",
+        "Varying rotor resistance",
+        "Varying voltage only"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "V/f control maintains constant flux for optimal motor performance."
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "The PWM (Pulse Width Modulation) in a VFD is used to:",
       "options": [
-        "Control frequency",
-        "Control voltage amplitude by varying pulse width",
+        "Control flux only",
         "Control current only",
-        "Control flux only"
+        "Control voltage amplitude by varying pulse width",
+        "Control frequency"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "PWM varies pulse width to control effective voltage amplitude."
     },
     {
@@ -864,10 +864,10 @@
       "difficulty": "medium",
       "stem": "The DC bus in a VFD converts:",
       "options": [
-        "AC to DC (rectifier)",
+        "AC to AC directly",
         "DC to AC (inverter)",
         "Both AC to DC and DC to AC",
-        "AC to AC directly"
+        "AC to DC (rectifier)"
       ],
       "answer": 2,
       "solution": "VFD: Rectifier (AC→DC) → DC Bus → Inverter (DC→AC with V/f control)."
@@ -882,10 +882,10 @@
       "difficulty": "medium",
       "stem": "A soft starter reduces motor starting current by:",
       "options": [
-        "Reducing frequency",
+        "Reducing flux",
         "Gradually increasing voltage using thyristors",
         "Adding resistance in rotor",
-        "Reducing flux"
+        "Reducing frequency"
       ],
       "answer": 1,
       "solution": "Soft starter uses back-to-back thyristors to ramp voltage from low to full."
@@ -901,11 +901,11 @@
       "stem": "The main advantage of a VFD over a soft starter is:",
       "options": [
         "Lower cost",
+        "Higher starting torque",
         "Continuous speed control",
-        "Simpler design",
-        "Higher starting torque"
+        "Simpler design"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "VFD provides continuous speed control; soft starter only reduces starting current."
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "A PLC (Programmable Logic Controller) uses which programming language for basic logic?",
       "options": [
-        "Ladder logic",
-        "Python",
         "C++",
-        "Assembly"
+        "Ladder logic",
+        "Assembly",
+        "Python"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Ladder logic is the most common PLC programming language, mimicking relay logic."
     },
     {
@@ -936,10 +936,10 @@
       "difficulty": "medium",
       "stem": "The input module of a PLC receives signals from:",
       "options": [
-        "Actuators",
+        "Valves only",
         "Sensors (push buttons, limit switches, proximity sensors)",
-        "Motors",
-        "Valves only"
+        "Actuators",
+        "Motors"
       ],
       "answer": 1,
       "solution": "Input modules receive field signals from sensors and switches."
@@ -954,10 +954,10 @@
       "difficulty": "medium",
       "stem": "The output module of a PLC sends signals to:",
       "options": [
-        "Sensors",
+        "CPU only",
         "Actuators (motors, valves, lights)",
         "Power supply",
-        "CPU only"
+        "Sensors"
       ],
       "answer": 1,
       "solution": "Output modules drive actuators based on program logic."
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "SCADA stands for:",
       "options": [
-        "Supervisory Control and Data Acquisition",
         "System Control and Data Analysis",
+        "None of these",
         "Supervisory Control and Digital Automation",
-        "None of these"
+        "Supervisory Control and Data Acquisition"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SCADA provides supervisory monitoring and control of industrial processes."
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "DCS stands for:",
       "options": [
+        "Dynamic Control System",
         "Distributed Control System",
         "Direct Control System",
-        "Digital Control System",
-        "Dynamic Control System"
+        "Digital Control System"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "DCS distributes control functions across multiple controllers for process plants."
     },
     {
@@ -1008,10 +1008,10 @@
       "difficulty": "medium",
       "stem": "The difference between SCADA and DCS is:",
       "options": [
-        "SCADA is for monitoring, DCS for control",
+        "SCADA is for DC, DCS for AC",
         "SCADA is for large distributed systems, DCS for continuous processes",
-        "There is no difference",
-        "SCADA is for DC, DCS for AC"
+        "SCADA is for monitoring, DCS for control",
+        "There is no difference"
       ],
       "answer": 1,
       "solution": "SCADA monitors distributed sites; DCS controls continuous processes locally."
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "An AC drive (VFD) for an induction motor typically includes:",
       "options": [
-        "Rectifier, DC bus, inverter",
-        "Transformer and switchgear",
+        "All of these",
         "Capacitor bank",
-        "All of these"
+        "Rectifier, DC bus, inverter",
+        "Transformer and switchgear"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "AC drive: Rectifier (AC→DC) → DC bus capacitor → Inverter (DC→AC)."
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "A DC drive controls DC motor speed by:",
       "options": [
-        "Varying armature voltage",
-        "Varying field current",
         "Both A and B",
-        "Varying frequency"
+        "Varying frequency",
+        "Varying armature voltage",
+        "Varying field current"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "DC drive varies armature voltage (below base speed) and field current (above base speed)."
     },
     {
@@ -1062,10 +1062,10 @@
       "difficulty": "medium",
       "stem": "The regenerative braking in a VFD returns energy to:",
       "options": [
-        "Motor",
+        "Capacitor only",
         "Supply grid",
         "Braking resistor",
-        "Capacitor only"
+        "Motor"
       ],
       "answer": 1,
       "solution": "In regenerative braking, inverter feeds power back to supply through the rectifier (which must be a bidirectional converter)."
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "The dynamic braking in a VFD dissipates energy in:",
       "options": [
-        "Supply grid",
-        "Braking resistor",
         "Motor windings",
-        "Capacitor"
+        "Capacitor",
+        "Braking resistor",
+        "Supply grid"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "DC bus energy is dissipated as heat in an external braking resistor via a chopper."
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "The slip power recovery drive is used with:",
       "options": [
-        "Squirrel cage motor",
         "Wound rotor (slip ring) motor",
         "Synchronous motor",
+        "Squirrel cage motor",
         "BLDC motor"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Slip power recovery captures rotor slip energy and feeds it back to supply."
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "The Kramer drive is a type of:",
       "options": [
-        "VFD",
+        "DC drive",
         "Soft starter",
-        "Slip power recovery drive",
-        "DC drive"
+        "VFD",
+        "Slip power recovery drive"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Kramer drive converts slip power to mechanical power and feeds it back to shaft."
     },
     {
@@ -1134,10 +1134,10 @@
       "difficulty": "medium",
       "stem": "The Scherbius drive is a type of:",
       "options": [
-        "VFD",
+        "DC drive",
         "Soft starter",
         "Slip power recovery (electrical feedback)",
-        "DC drive"
+        "VFD"
       ],
       "answer": 2,
       "solution": "Scherbius drive converts slip power to electrical power and feeds it back to supply."
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "The energy savings from using a VFD on a centrifugal pump/fan application follows:",
       "options": [
-        "Cube law (power ∝ speed³)",
         "Square law (power ∝ speed²)",
-        "Linear law (power ∝ speed)",
-        "No savings"
+        "Cube law (power ∝ speed³)",
+        "No savings",
+        "Linear law (power ∝ speed)"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "For centrifugal loads: Power ∝ N³, so small speed reduction gives large power savings."
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "The V/f ratio of a VFD is kept constant to:",
       "options": [
-        "Maintain constant flux in motor",
+        "Reduce current only",
         "Reduce noise",
-        "Increase torque",
-        "Reduce current only"
+        "Maintain constant flux in motor",
+        "Increase torque"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Constant V/f maintains constant air gap flux, preventing saturation at low frequency."
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "At very low frequencies (below 5 Hz), VFD applies:",
       "options": [
+        "Zero voltage",
         "Constant V/f ratio",
-        "Voltage boost to overcome stator IR drop",
         "Reduced voltage",
-        "Zero voltage"
+        "Voltage boost to overcome stator IR drop"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Voltage boost compensates for stator resistance voltage drop at low frequencies."
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "A VFD's torque capability in the constant torque region (below base speed) is:",
       "options": [
-        "Constant torque",
         "Constant power",
-        "Decreasing torque",
-        "Zero torque"
+        "Zero torque",
+        "Constant torque",
+        "Decreasing torque"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Below base speed, both V and f increase proportionally, maintaining constant flux and torque."
     },
     {
@@ -1242,9 +1242,9 @@
       "difficulty": "medium",
       "stem": "In the field weakening region (above base speed), a VFD provides:",
       "options": [
-        "Constant torque",
-        "Constant power",
         "Increasing torque",
+        "Constant power",
+        "Constant torque",
         "Zero power"
       ],
       "answer": 1,
@@ -1261,11 +1261,11 @@
       "stem": "A VFD with vector control provides:",
       "options": [
         "V/f control only",
-        "Independent control of flux and torque components",
-        "Only speed control",
-        "Only voltage control"
+        "Both the first and second options",
+        "This is valid only under special circumstances",
+        "Independent control of flux and torque components"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Vector control decouples flux and torque current components for better dynamic response."
     },
     {
@@ -1279,11 +1279,11 @@
       "stem": "Direct Torque Control (DTC) in a VFD controls:",
       "options": [
         "Voltage and frequency",
-        "Torque and flux directly using motor model",
-        "Only speed",
-        "Only current"
+        "This is a common misconception",
+        "Both the first and second options",
+        "Torque and flux directly using motor model"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "DTC estimates torque and flux from motor model and directly controls them."
     },
     {
@@ -1314,10 +1314,10 @@
       "difficulty": "medium",
       "stem": "An active front end (AFE) in a VFD enables:",
       "options": [
-        "Only rectification",
+        "Lower cost",
         "Bidirectional power flow (regenerative braking)",
         "Higher voltage",
-        "Lower cost"
+        "Both the first and second options"
       ],
       "answer": 1,
       "solution": "AFE uses controlled rectifier (IGBT-based) for bidirectional power flow."
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "The harmonic distortion caused by a VFD can be reduced by:",
       "options": [
+        "None of these",
         "Adding line reactor or input filter",
         "Increasing DC bus voltage",
-        "Reducing motor speed",
-        "None of these"
+        "Reducing motor speed"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Line reactors and filters reduce harmonics drawn from supply by the rectifier."
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "A 12-pulse rectifier in a VFD is used to:",
       "options": [
-        "Reduce harmonics",
-        "Increase voltage",
         "Increase current",
-        "Reduce cost"
+        "Reduce cost",
+        "Reduce harmonics",
+        "Increase voltage"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "12-pulse rectifier reduces 5th and 7th harmonics compared to 6-pulse."
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "The communication protocol commonly used between VFD and PLC is:",
       "options": [
+        "USB",
         "Modbus",
         "RS-232 only",
-        "USB",
         "HDMI"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Modbus RTU/TCP is the most common industrial communication protocol for VFDs."
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "A PLC scan cycle consists of:",
       "options": [
-        "Input scan, program execution, output scan, housekeeping",
-        "Only program execution",
-        "Only input/output",
-        "All at once"
+        "Both the first and second options",
+        "All at once",
+        "This is valid only under special circumstances",
+        "Input scan, program execution, output scan, housekeeping"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "PLC scan: Read inputs → Execute program → Update outputs → Diagnostics."
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "The memory of a PLC where input/output status is stored is called:",
       "options": [
-        "Program memory",
-        "Data memory (image table)",
         "Stack",
-        "Register"
+        "Register",
+        "Program memory",
+        "Data memory (image table)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Input/output image table stores the status of all I/O points during scan."
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "A PLC timer function used for delay-on is called:",
       "options": [
-        "TON (Timer On-Delay)",
-        "TOF (Timer Off-Delay)",
         "TP (Pulse Timer)",
-        "CTU (Counter Up)"
+        "CTU (Counter Up)",
+        "TON (Timer On-Delay)",
+        "TOF (Timer Off-Delay)"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "TON generates output after input is true for preset time."
     },
     {
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "A PLC counter function that counts rising edges is:",
       "options": [
-        "CTU (Count Up)",
         "CTD (Count Down)",
         "CTUD (Count Up/Down)",
+        "CTU (Count Up)",
         "All of these"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "CTU counts rising edges of input signal."
     },
     {
@@ -1458,12 +1458,12 @@
       "difficulty": "medium",
       "stem": "The HMI (Human Machine Interface) in an industrial system is used for:",
       "options": [
-        "Process visualization and operator interaction",
         "Motor control only",
-        "Power distribution",
-        "None"
+        "Process visualization and operator interaction",
+        "None",
+        "Power distribution"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "HMI provides graphical display of process status and allows operator commands."
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Synonym of EVANESCENT:",
       "options": [
+        "Lasting",
         "Fleeting",
-        "Permanent",
         "Eternal",
-        "Lasting"
+        "Permanent"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Evanescent: quickly fading, fleeting"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "Antonym of TRANSPARENT:",
       "options": [
-        "Opaque",
         "Clear",
+        "Opaque",
         "Translucent",
         "Lucid"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Transparent: clear; antonym: opaque"
     },
     {
@@ -1513,8 +1513,8 @@
       "stem": "Idiom 'Piece of cake' means:",
       "options": [
         "Something easy",
-        "A dessert",
         "A fight",
+        "A dessert",
         "Small portion"
       ],
       "answer": 0,
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "Idiom 'To break the ice' means:",
       "options": [
-        "To initiate conversation",
-        "To break something",
         "To start a fight",
-        "To cool down"
+        "To initiate conversation",
+        "To cool down",
+        "To break something"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Break the ice: initiate social interaction"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "Idiom 'A bolt from the blue' means:",
       "options": [
+        "Blue colour",
         "Unexpected event",
         "Lightning strike",
-        "Blue colour",
         "Stormy weather"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bolt from blue: completely unexpected"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "Fill in blank: She has been absent ___ Monday.",
       "options": [
-        "since",
-        "from",
+        "by",
         "for",
-        "by"
+        "since",
+        "from"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Since + point of time"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "Fill in blank: He is senior ___ me.",
       "options": [
-        "to",
         "than",
         "from",
-        "by"
+        "by",
+        "to"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Senior to (not senior than)"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "Fill in blank: Neither he ___ I am going.",
       "options": [
-        "nor",
+        "but",
         "or",
         "and",
-        "but"
+        "nor"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Neither...nor (correlative conjunction)"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Correct spelling:",
       "options": [
-        "Accommodation",
-        "Acomodation",
         "Accomadation",
-        "Accommadation"
+        "Accommadation",
+        "Acomodation",
+        "Accommodation"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Accommodation (double c, double m)"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Identify error: He don't know the answer.",
       "options": [
-        "don't",
-        "know",
         "the answer",
-        "He"
+        "He",
+        "don't",
+        "know"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "'He' takes 'doesn't' (third person singular)"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "Synonym of CAPRICIOUS:",
       "options": [
-        "Fickle",
-        "Stable",
         "Constant",
+        "Stable",
+        "Fickle",
         "Steady"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Capricious: unpredictable, fickle"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Synonym of PERSEVERE:",
       "options": [
-        "Persist",
         "Quit",
-        "Abandon",
-        "Surrender"
+        "Surrender",
+        "Persist",
+        "Abandon"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Persevere = persist, continue"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "Antonym of COURAGEOUS:",
       "options": [
-        "Cowardly",
         "Brave",
-        "Valiant",
-        "Bold"
+        "Bold",
+        "Cowardly",
+        "Valiant"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Courageous: brave; antonym: cowardly"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "Voice change: She sings a song. (Passive)",
       "options": [
+        "A song has been sung by her",
         "A song is sung by her",
-        "A song was sung by her",
         "Song is singing by her",
-        "A song has been sung by her"
+        "A song was sung by her"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Present simple passive: is/are + V3"
     },
     {
@@ -1729,9 +1729,9 @@
       "stem": "Fill in blank: He goes to school ___ foot.",
       "options": [
         "on",
-        "by",
         "in",
-        "with"
+        "with",
+        "by"
       ],
       "answer": 0,
       "solution": "On foot (idiomatic)"
@@ -1747,9 +1747,9 @@
       "stem": "20% of 250 is:",
       "options": [
         "50",
-        "25",
         "100",
-        "125"
+        "125",
+        "25"
       ],
       "answer": 0,
       "solution": "20/100 * 250 = 50"
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "Simple interest on 1000 at 5% for 3 years:",
       "options": [
-        "150",
         "100",
-        "50",
-        "200"
+        "200",
+        "150",
+        "50"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "SI = 1000*5*3/100 = 150"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "A can do work in 10 days, B in 15 days. Together in:",
       "options": [
-        "6 days",
         "12 days",
+        "6 days",
         "25 days",
         "8 days"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "1/10+1/15=1/6; together 6 days"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Speed 60 km/h, time 2.5h. Distance:",
       "options": [
-        "150 km",
         "120 km",
         "200 km",
-        "25 km"
+        "25 km",
+        "150 km"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "D=60*2.5=150 km"
     },
     {
@@ -1818,12 +1818,12 @@
       "difficulty": "medium",
       "stem": "LCM of 12 and 18 is:",
       "options": [
-        "36",
-        "72",
         "24",
-        "54"
+        "54",
+        "36",
+        "72"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "LCM(12,18)=36"
     }
   ]

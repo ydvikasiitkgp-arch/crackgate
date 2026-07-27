@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "The EMF equation of a transformer is E = 4.44 f N Φm. What does Φm represent?",
       "options": [
+        "Total flux linkage",
         "Maximum flux per pole",
-        "RMS flux",
         "Average flux",
-        "Total flux linkage"
+        "RMS flux"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Φm is the maximum flux in the core per cycle."
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "The turns ratio of a transformer is defined as:",
       "options": [
+        "Winding resistance testing",
         "N₁/N₂",
-        "V₁/V₂",
         "I₂/I₁",
-        "All of the above are equivalent for an ideal transformer"
+        "V₁/V₂"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "For an ideal transformer, N₁/N₂ = V₁/V₂ = I₂/I₁."
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "Voltage regulation of a transformer is given by:",
       "options": [
+        "(V_full_load / V_no_load) × 100",
         "(V_no_load − V_full_load) / V_full_load × 100",
         "(V_full_load − V_no_load) / V_no_load × 100",
-        "(V_full_load / V_no_load) × 100",
         "V_no_load × V_full_load"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "VR = (E₂ − V₂) / V₂ × 100 at rated current and given PF."
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "In an open-circuit (OC) test on a transformer, which losses are measured?",
       "options": [
-        "Copper losses",
         "Iron (core) losses",
-        "Stray losses",
-        "Mechanical losses"
+        "Copper losses",
+        "Mechanical losses",
+        "Stray losses"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "OC test is conducted at rated voltage and rated frequency to measure core losses."
     },
     {
@@ -109,11 +109,11 @@
       "stem": "In a short-circuit (SC) test on a transformer, which losses are measured?",
       "options": [
         "Iron losses",
-        "Copper losses",
         "Dielectric losses",
+        "Copper losses",
         "Friction losses"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SC test is conducted at rated current to measure copper losses."
     },
     {
@@ -128,8 +128,8 @@
       "options": [
         "Copper losses = Iron losses",
         "Copper losses > Iron losses",
-        "Copper losses < Iron losses",
-        "Copper losses = 0"
+        "Copper losses = 0",
+        "Copper losses < Iron losses"
       ],
       "answer": 0,
       "solution": "Maximum efficiency occurs when variable copper losses equal fixed iron losses."
@@ -145,11 +145,11 @@
       "stem": "An auto-transformer has a transformation ratio of 0.8. If the input is 400 V, the output is:",
       "options": [
         "500 V",
-        "320 V",
+        "440 V",
         "360 V",
-        "440 V"
+        "320 V"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "V₂ = k × V₁ = 0.8 × 400 = 320 V."
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "A current transformer (CT) is used to:",
       "options": [
-        "Step up voltage",
         "Step down current for measurement",
+        "Step up voltage",
         "Step up current",
         "Convert DC to AC"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CT steps down high currents to measurable levels (typically 1A or 5A secondary)."
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "A potential transformer (PT) is used to:",
       "options": [
-        "Step up current",
-        "Step down voltage for measurement",
         "Convert AC to DC",
-        "Increase power"
+        "Step up current",
+        "Increase power",
+        "Step down voltage for measurement"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "PT steps down high voltages to safe measurable levels (typically 110V secondary)."
     },
     {
@@ -199,11 +199,11 @@
       "stem": "Which cooling method is used for large power transformers?",
       "options": [
         "ONAN",
-        "ONAF",
+        "All of these are used depending on rating",
         "OFAF / OFWF",
-        "All of these are used depending on rating"
+        "ONAF"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Oil Natural Air Natural, Oil Natural Air Forced, Oil Forced Air/Water Forced are progressively used for higher ratings."
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "Transformer oil is used for:",
       "options": [
-        "Cooling only",
-        "Insulation only",
+        "Lubrication of core",
         "Both cooling and insulation",
-        "Lubrication of core"
+        "Cooling only",
+        "Insulation only"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Transformer oil provides both dielectric insulation and heat transfer."
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "An on-load tap changer (OLTC) is used to:",
       "options": [
-        "Change turns ratio under load",
         "Disconnect transformer under load",
         "Short-circuit the transformer",
+        "Change turns ratio under load",
         "Measure no-load losses"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "OLTC adjusts the turns ratio while the transformer is carrying load to regulate voltage."
     },
     {
@@ -252,10 +252,10 @@
       "difficulty": "medium",
       "stem": "The no-load current of a transformer is typically what percentage of rated current?",
       "options": [
-        "1–2%",
+        "20–30%",
         "2–5%",
-        "10–15%",
-        "20–30%"
+        "1–2%",
+        "10–15%"
       ],
       "answer": 1,
       "solution": "No-load current is small (2–5%), needed to supply core losses and magnetizing flux."
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "The phase displacement between primary and secondary in a Dyn11 vector group is:",
       "options": [
+        "180°",
         "0°",
         "30°",
-        "180°",
         "150°"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Dyn11: D (delta primary), y (star secondary), n (neutral), 11 means +30° lead."
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "Hysteresis loss in a transformer core depends on:",
       "options": [
+        "Winding resistance testing",
         "Frequency only",
         "Frequency and Bmax",
-        "Frequency, Bmax, and volume of core",
-        "All of the above and material properties"
+        "Frequency, Bmax, and volume of core"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "Ph = η × f × Bmax^n × V, where η is Steinmetz coefficient, n ≈ 1.6–2."
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "Eddy current loss in a transformer core is proportional to:",
       "options": [
+        "f × Bmax",
         "f²",
         "f",
-        "f × Bmax",
         "f^0.5"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Pe = Ke × Bmax² × f² × t² × V (t = lamination thickness)."
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "The short-circuit test is usually performed on which side?",
       "options": [
-        "LV side",
         "HV side",
         "Either side",
+        "LV side",
         "Both sides"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "SC test is done on HV side (rated current at low voltage, easier to arrange on HV)."
     },
     {
@@ -378,10 +378,10 @@
       "difficulty": "medium",
       "stem": "If the supply frequency of a transformer is doubled while flux is halved, the EMF:",
       "options": [
-        "Doubles",
-        "Remains same",
         "Halves",
-        "Quadruples"
+        "Remains same",
+        "Quadruples",
+        "Doubles"
       ],
       "answer": 1,
       "solution": "E ∝ f × Φm. If f doubles and Φm halves, product stays same."
@@ -398,8 +398,8 @@
       "options": [
         "Determine transformation ratio",
         "Determine relative polarity of windings",
-        "Measure losses",
-        "Determine vector group"
+        "Determine vector group",
+        "Measure losses"
       ],
       "answer": 1,
       "solution": "Polarity test identifies additive or subtractive polarity for correct parallel operation."
@@ -414,10 +414,10 @@
       "difficulty": "medium",
       "stem": "Two transformers can operate in parallel only if they have:",
       "options": [
-        "Same kVA rating",
+        "Same brand",
         "Same polarity and same voltage ratio",
-        "Same impedance",
-        "Same brand"
+        "Same kVA rating",
+        "Same impedance"
       ],
       "answer": 1,
       "solution": "Same polarity, voltage ratio, and compatible impedance for load sharing."
@@ -433,11 +433,11 @@
       "stem": "Percent impedance of a transformer is determined from:",
       "options": [
         "OC test",
+        "Neither",
         "SC test",
-        "Both OC and SC tests",
-        "Neither"
+        "Both OC and SC tests"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "%Z = (SC voltage / rated voltage) × 100, measured from SC test data."
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "In a transformer, the leakage reactance is:",
       "options": [
-        "Proportional to load current",
-        "Proportional to frequency",
         "Independent of load",
+        "Proportional to frequency",
+        "Proportional to load current",
         "Zero at no load"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Leakage reactance is a design parameter that remains constant (approximately) regardless of load."
     },
     {
@@ -469,11 +469,11 @@
       "stem": "Which of the following is NOT a cause of transformer failure?",
       "options": [
         "Overloading",
-        "Insulation breakdown",
         "Correct voltage regulation",
-        "Moisture in oil"
+        "Moisture in oil",
+        "Insulation breakdown"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Correct voltage regulation is normal operation, not a cause of failure."
     },
     {
@@ -486,10 +486,10 @@
       "difficulty": "medium",
       "stem": "Buchholz relay is used in transformers for:",
       "options": [
-        "Overcurrent protection",
+        "Earth fault protection",
         "Internal fault gas detection",
         "Overvoltage protection",
-        "Earth fault protection"
+        "Overcurrent protection"
       ],
       "answer": 1,
       "solution": "Buchholz relay detects gas accumulation from internal faults (incipient faults)."
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "The surge diverger on a transformer is used for:",
       "options": [
-        "Current limiting",
-        "Lightning and switching surge protection",
         "Voltage measurement",
-        "Power factor correction"
+        "Power factor correction",
+        "Lightning and switching surge protection",
+        "Current limiting"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Surge diverters (lightning arresters) protect against transient overvoltages."
     },
     {
@@ -522,12 +522,12 @@
       "difficulty": "medium",
       "stem": "An earth fault relay on a transformer is connected through:",
       "options": [
-        "CT",
-        "PT",
         "Neutral earthing resistor",
-        "Both CT on phases and CT on neutral"
+        "Both CT on phases and CT on neutral",
+        "PT",
+        "CT"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Earth fault relay operates using differential current from phase CTs and neutral CT."
     },
     {
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "The kVA rating of a transformer is limited by:",
       "options": [
-        "Core flux density",
-        "Winding current density (heating)",
         "Supply frequency",
-        "Transformation ratio"
+        "Transformation ratio",
+        "Core flux density",
+        "Winding current density (heating)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "kVA is limited by the heating effect of current (copper loss and insulation temperature)."
     },
     {
@@ -558,12 +558,12 @@
       "difficulty": "medium",
       "stem": "Skin effect in transformer windings increases with:",
       "options": [
-        "Decreasing frequency",
         "Increasing frequency",
-        "Decreasing conductor size",
-        "Increasing temperature only"
+        "Decreasing frequency",
+        "Increasing temperature only",
+        "Decreasing conductor size"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Skin effect increases with frequency due to current concentrating near conductor surface."
     },
     {
@@ -578,8 +578,8 @@
       "options": [
         "Increasing kVA rating",
         "Providing neutral for unbalanced loads",
-        "Reducing cost",
-        "Increasing voltage"
+        "Increasing voltage",
+        "Reducing cost"
       ],
       "answer": 1,
       "solution": "Tertiary winding provides path for zero-sequence currents from unbalanced loads."
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "In a Scott connection, two single-phase transformers are used to convert:",
       "options": [
-        "3-phase to 3-phase",
-        "3-phase to 2-phase",
+        "Single-phase to 3-phase",
         "DC to AC",
-        "Single-phase to 3-phase"
+        "3-phase to 2-phase",
+        "3-phase to 3-phase"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Scott connection converts 3-phase to 2-phase (or vice versa) for furnace supplies."
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "The transformer tap usually operates on which winding?",
       "options": [
-        "HV winding",
         "LV winding",
+        "Tertiary winding",
         "Both windings",
-        "Tertiary winding"
+        "HV winding"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Tap changer is usually on HV winding because current is lower, reducing contact wear."
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "Oil temperature indicator in a transformer measures temperature at:",
       "options": [
-        "Top of the tank",
         "Bottom of the tank",
-        "Inside the winding",
-        "In the conservator"
+        "Top of the tank",
+        "In the conservator",
+        "Inside the winding"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Oil temperature is measured at the top of the tank (hottest oil rises)."
     },
     {
@@ -650,8 +650,8 @@
       "options": [
         "Increasing oil volume",
         "Providing space for oil expansion and contraction",
-        "Cooling the oil",
-        "Filtering the oil"
+        "Filtering the oil",
+        "Cooling the oil"
       ],
       "answer": 1,
       "solution": "Conservator accommodates oil expansion/contraction with temperature changes."
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "The breathers in a transformer are filled with:",
       "options": [
-        "Silica gel",
         "Activated charcoal",
         "Calcium chloride",
-        "All of these"
+        "All of these",
+        "Silica gel"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Desiccants like silica gel absorb moisture from incoming air."
     },
     {
@@ -684,12 +684,12 @@
       "difficulty": "medium",
       "stem": "The impedance matching in a transformer is important for:",
       "options": [
-        "Maximum power transfer",
-        "Voltage regulation",
+        "All of these",
         "Efficiency",
-        "All of these"
+        "Voltage regulation",
+        "Maximum power transfer"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Transformers match impedance between source and load for maximum power transfer."
     },
     {
@@ -703,11 +703,11 @@
       "stem": "The copper loss in a transformer at half load is:",
       "options": [
         "Half of full load copper loss",
+        "Double full load",
         "One-fourth of full load copper loss",
-        "Same as full load",
-        "Double full load"
+        "Same as full load"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Copper loss ∝ I², so at half load it is (½)² = ¼ of full load copper loss."
     },
     {
@@ -721,11 +721,11 @@
       "stem": "Which of the following affects voltage regulation of a transformer?",
       "options": [
         "Resistance and reactance of windings",
-        "Load power factor",
         "Both A and B",
-        "None of these"
+        "None of these",
+        "Load power factor"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "VR depends on impedance drop (R and X) and load power factor."
     },
     {
@@ -738,10 +738,10 @@
       "difficulty": "medium",
       "stem": "Zero voltage regulation occurs at what power factor?",
       "options": [
+        "Zero",
         "Unity",
-        "Lagging",
         "Leading (specific value)",
-        "Zero"
+        "Lagging"
       ],
       "answer": 2,
       "solution": "At a certain leading PF, the capacitive reactance drop cancels the resistance drop."
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "In an auto-transformer, the power transferred inductively is:",
       "options": [
-        "Equal to input power",
-        "Greater than (1−k) × input",
         "Less than the total power transferred",
-        "Zero"
+        "Zero",
+        "Equal to input power",
+        "Greater than (1−k) × input"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Only a fraction (1−k) of power is transferred inductively; rest is conducted."
     },
     {
@@ -774,12 +774,12 @@
       "difficulty": "medium",
       "stem": "The magnetizing current in a transformer contains mainly:",
       "options": [
-        "Fundamental and odd harmonics",
+        "All harmonics equally",
         "Even harmonics",
         "DC component",
-        "All harmonics equally"
+        "Fundamental and odd harmonics"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Magnetizing current contains fundamental and 3rd, 5th, 7th harmonics (odd harmonics)."
     },
     {
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "In a transformer, the iron losses are also called:",
       "options": [
-        "Variable losses",
-        "Constant losses",
+        "Stray losses",
         "Copper losses",
-        "Stray losses"
+        "Constant losses",
+        "Variable losses"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Iron losses are constant because they depend on voltage and frequency, not load."
     },
     {
@@ -811,8 +811,8 @@
       "stem": "The maximum flux density in a transformer core is limited by:",
       "options": [
         "Saturation of the core material",
-        "Cooling arrangement",
         "Winding resistance",
+        "Cooling arrangement",
         "Frequency"
       ],
       "answer": 0,
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "The type of transformer used in a distribution system for stepping down to 415V is:",
       "options": [
-        "Power transformer",
         "Distribution transformer",
+        "Special purpose transformer",
         "Instrument transformer",
-        "Special purpose transformer"
+        "Power transformer"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Distribution transformers operate at high efficiency at partial loads for 24/7 service."
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "The short-circuit impedance of a transformer limits:",
       "options": [
-        "No-load current",
-        "Fault current",
+        "Temperature rise",
         "Core losses",
-        "Temperature rise"
+        "Fault current",
+        "No-load current"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Short-circuit impedance limits the maximum fault current during secondary short-circuit."
     },
     {
@@ -864,9 +864,9 @@
       "difficulty": "medium",
       "stem": "The tertiary winding in a three-winding transformer is usually connected in:",
       "options": [
-        "Star",
-        "Delta",
         "Open delta",
+        "Delta",
+        "Star",
         "Zigzag"
       ],
       "answer": 1,
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "Oil filtering in a transformer is done to:",
       "options": [
-        "Increase oil volume",
-        "Remove moisture and impurities",
         "Increase dielectric strength only",
-        "Reduce oil temperature"
+        "Reduce oil temperature",
+        "Increase oil volume",
+        "Remove moisture and impurities"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Filtering removes moisture, sludge, and impurities to restore dielectric strength."
     },
     {
@@ -902,8 +902,8 @@
       "options": [
         "Increasing structural strength",
         "Increasing oil surface area for natural cooling",
-        "Holding the transformer",
-        "None of these"
+        "None of these",
+        "Holding the transformer"
       ],
       "answer": 1,
       "solution": "Cooling tubes increase oil surface area exposed to air for better heat dissipation."
@@ -919,11 +919,11 @@
       "stem": "The efficiency of a distribution transformer at no load is approximately:",
       "options": [
         "50%",
+        "100%",
         "Zero",
-        "Very low (core losses only)",
-        "100%"
+        "Very low (core losses only)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "At no load, only core losses occur, so efficiency is very low."
     },
     {
@@ -938,8 +938,8 @@
       "options": [
         "Less than 1",
         "Greater than 1",
-        "Equal to 1",
-        "Infinite"
+        "Infinite",
+        "Equal to 1"
       ],
       "answer": 0,
       "solution": "For step-down, V₂ < V₁, so k = V₂/V₁ < 1."
@@ -956,10 +956,10 @@
       "options": [
         "OC and SC tests only",
         "Load test only",
-        "OC, SC, and load tests",
-        "Only SC test"
+        "Current transformation only",
+        "OC, SC, and load tests"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "OC test gives iron losses, SC test gives copper losses, load test gives total losses under load."
     },
     {
@@ -972,10 +972,10 @@
       "difficulty": "medium",
       "stem": "The EMF equation of a DC motor/generator is E = (ΦZN/60) × P/A. What is Z?",
       "options": [
-        "Number of poles",
-        "Number of armature conductors",
         "Number of commutator segments",
-        "Number of brushes"
+        "Number of armature conductors",
+        "Number of brushes",
+        "Number of poles"
       ],
       "answer": 1,
       "solution": "Z is the total number of armature conductors (active conductors on armature periphery)."
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "Back EMF in a DC motor is given by:",
       "options": [
-        "Eb = V − Ia × Ra",
         "Eb = V + Ia × Ra",
-        "Eb = V × Ia",
-        "Eb = V / Ia"
+        "Eb = V / Ia",
+        "Eb = V − Ia × Ra",
+        "Eb = V × Ia"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Back EMF opposes the supply: Eb = V − IaRa (motor equation)."
     },
     {
@@ -1008,12 +1008,12 @@
       "difficulty": "medium",
       "stem": "The torque equation of a DC motor is T = (ΦZIa × P) / (2πA). If flux is halved and armature current is doubled:",
       "options": [
-        "Torque remains same",
+        "Torque becomes 4×",
         "Torque halves",
-        "Torque doubles",
-        "Torque becomes 4×"
+        "Torque remains same",
+        "Torque doubles"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "T ∝ Φ × Ia. Halving Φ and doubling Ia gives same torque."
     },
     {
@@ -1026,12 +1026,12 @@
       "difficulty": "medium",
       "stem": "In a DC shunt motor, speed is approximately:",
       "options": [
+        "Zero",
         "Constant",
         "Proportional to torque",
-        "Inversely proportional to torque",
-        "Zero"
+        "Inversely proportional to torque"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "DC shunt motor has nearly constant speed due to the self-regulating nature."
     },
     {
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "A DC series motor has torque proportional to:",
       "options": [
-        "Ia²",
         "Ia",
-        "Ia³",
-        "√Ia"
+        "Ia²",
+        "√Ia",
+        "Ia³"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "In series motor, Φ ∝ Ia (unsaturated), so T ∝ ΦIa ∝ Ia²."
     },
     {
@@ -1063,11 +1063,11 @@
       "stem": "A DC series motor should never be started on no-load because:",
       "options": [
         "High current",
+        "High back EMF",
         "Dangerously high speed",
-        "Zero torque",
-        "High back EMF"
+        "Zero torque"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "At no load, flux is very small, speed becomes dangerously high (runaway)."
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "The 3-point starter is used for which type of DC motor?",
       "options": [
-        "Series motor",
+        "Shunt and compound motors",
         "Shunt motor",
         "Compound motor",
-        "Shunt and compound motors"
+        "Series motor"
       ],
-      "answer": 3,
+      "answer": 0,
       "solution": "3-point starter works for shunt and compound motors (holding coil connected to shunt field)."
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "The no-volt release coil in a DC motor starter prevents:",
       "options": [
-        "Overcurrent",
-        "Restarting after power failure while load is connected",
         "Overvoltage",
-        "Overfluxing"
+        "Overcurrent",
+        "Overfluxing",
+        "Restarting after power failure while load is connected"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "No-volt release de-energizes if supply fails, preventing dangerous restart."
     },
     {
@@ -1116,9 +1116,9 @@
       "difficulty": "medium",
       "stem": "The overload release in a DC motor starter operates on:",
       "options": [
-        "High voltage",
-        "High current (bimetallic or magnetic)",
         "Low voltage",
+        "High current (bimetallic or magnetic)",
+        "High voltage",
         "High speed"
       ],
       "answer": 1,
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "Regenerative braking in a DC motor is possible when the motor acts as:",
       "options": [
+        "Capacitor",
         "Motor",
-        "Generator (back EMF > supply)",
         "Transformer",
-        "Capacitor"
+        "Generator (back EMF > supply)"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In regenerative braking, motor speed exceeds no-load speed, back EMF exceeds supply, and energy feeds back."
     },
     {
@@ -1152,12 +1152,12 @@
       "difficulty": "medium",
       "stem": "Dynamic braking of a DC motor involves:",
       "options": [
-        "Disconnecting supply and connecting resistor across armature",
-        "Reversing supply",
         "Short-circuiting field",
-        "None of these"
+        "None of these",
+        "Reversing supply",
+        "Disconnecting supply and connecting resistor across armature"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Armature is disconnected from supply and connected across a braking resistor; stored KE is dissipated."
     },
     {
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Plugging (reverse current braking) of a DC motor involves:",
       "options": [
-        "Reversing armature connections while running",
-        "Disconnecting supply",
+        "Reducing flux",
         "Adding resistance",
-        "Reducing flux"
+        "Reversing armature connections while running",
+        "Disconnecting supply"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Reversing armature supply terminals creates opposite torque, causing rapid deceleration."
     },
     {
@@ -1189,8 +1189,8 @@
       "stem": "The speed of a DC motor can be controlled by:",
       "options": [
         "Armature resistance control",
-        "Field flux control",
         "Armature voltage control",
+        "Field flux control",
         "All of these"
       ],
       "answer": 3,
@@ -1207,11 +1207,11 @@
       "stem": "The commutator in a DC machine converts:",
       "options": [
         "AC to DC",
-        "DC to AC (armature current is AC)",
         "DC to DC",
+        "DC to AC (armature current is AC)",
         "AC to AC"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Armature current is AC; commutator rectifies it at brushes for DC output (generator) or DC input (motor)."
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "Interpoles in a DC machine are used to:",
       "options": [
-        "Increase flux",
         "Neutralize armature reaction and improve commutation",
         "Reduce speed",
-        "Increase torque"
+        "Increase torque",
+        "Increase flux"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Interpoles produce flux opposing armature reaction flux in the neutral zone."
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "A DC cumulative compound motor has speed characteristics between:",
       "options": [
-        "Shunt and series motors",
-        "Shunt and permanent magnet motors",
         "Series and differential compound motors",
-        "None"
+        "Shunt and permanent magnet motors",
+        "None",
+        "Shunt and series motors"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Cumulative compound motor has speed regulation between shunt (constant speed) and series (variable speed)."
     },
     {
@@ -1260,10 +1260,10 @@
       "difficulty": "medium",
       "stem": "In a DC generator, the critical resistance is the resistance of the field circuit above which:",
       "options": [
-        "Voltage builds up normally",
+        "Speed is zero",
         "Voltage does not build up",
-        "Current is maximum",
-        "Speed is zero"
+        "Voltage builds up normally",
+        "Current is maximum"
       ],
       "answer": 1,
       "solution": "If field resistance exceeds critical value, the field resistance line intersects the OCC below the knee, preventing voltage buildup."
@@ -1279,11 +1279,11 @@
       "stem": "The critical speed of a DC generator is the speed below which:",
       "options": [
         "Voltage builds up",
-        "Voltage does not build up",
         "Current is maximum",
+        "Voltage does not build up",
         "Efficiency is maximum"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Below critical speed, the magnetization curve is too low to build up voltage."
     },
     {
@@ -1297,9 +1297,9 @@
       "stem": "A differential compound motor has a speed that:",
       "options": [
         "Increases with load",
-        "Decreases with load",
+        "Drops to zero",
         "Remains constant",
-        "Drops to zero"
+        "Decreases with load"
       ],
       "answer": 0,
       "solution": "In differential compound, flux decreases with load (series flux opposes shunt flux), so speed rises."
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "The armature reaction in a DC generator causes:",
       "options": [
-        "Shift of magnetic neutral axis",
-        "Demagnetization and cross-magnetization",
         "Both A and B",
-        "None of these"
+        "None of these",
+        "Demagnetization and cross-magnetization",
+        "Shift of magnetic neutral axis"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Armature reaction both reduces net flux (demagnetization) and shifts MNA (cross-magnetization)."
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "A DC motor's speed drops with load primarily because:",
       "options": [
-        "Supply voltage drops",
         "Back EMF decreases as Ia increases (IR drop)",
+        "Supply voltage drops",
         "Field weakens",
         "Friction increases"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "As load increases, Ia increases, Eb = V − IaRa decreases, causing speed to drop."
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "The starting torque of a DC shunt motor is:",
       "options": [
+        "Zero",
         "Very high",
         "Moderate",
-        "Zero",
         "Same as full load torque"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Starting torque is moderate (T ∝ ΦIa, Φ is constant, Ia is limited by starter resistance)."
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "The starting torque of a DC series motor is:",
       "options": [
+        "Moderate",
         "Very high",
-        "Low",
         "Zero",
-        "Moderate"
+        "Low"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "T ∝ Ia², so at high starting current, torque is very high."
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "In a DC motor, the air gap flux density affects:",
       "options": [
+        "Neither speed nor torque",
         "Speed and torque",
-        "Only speed",
-        "Only torque",
-        "Neither speed nor torque"
+        "Efficiency calculation",
+        "Torque measurement"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Flux affects both speed (N ∝ Eb/Φ) and torque (T ∝ ΦIa)."
     },
     {
@@ -1405,11 +1405,11 @@
       "stem": "The direction of rotation of a DC motor can be reversed by:",
       "options": [
         "Reversing armature current",
+        "Reversing both simultaneously",
         "Reversing field current",
-        "Reversing either armature or field current",
-        "Reversing both simultaneously"
+        "Reversing either armature or field current"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Reversing either reverses torque. Reversing both leaves torque unchanged."
     },
     {
@@ -1422,12 +1422,12 @@
       "difficulty": "medium",
       "stem": "The field weakening method of speed control is suitable for:",
       "options": [
+        "All speeds",
         "Below base speed",
         "Above base speed",
-        "All speeds",
         "Starting only"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Field weakening reduces flux, increasing speed above base speed (constant power region)."
     },
     {
@@ -1459,11 +1459,11 @@
       "stem": "A DC shunt motor running at no load suddenly loses its field connection. What happens?",
       "options": [
         "Motor stops",
-        "Motor speed increases dangerously",
         "Motor runs at same speed",
-        "Motor reverses"
+        "Motor reverses",
+        "Motor speed increases dangerously"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Loss of field means very low flux, speed tries to go to infinity (runaway)."
     },
     {
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "The Indian Constitution came into effect on:",
       "options": [
+        "15 January 1950",
         "26 January 1950",
         "15 August 1947",
-        "26 November 1949",
-        "15 January 1950"
+        "26 November 1949"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Republic Day: 26 January 1950"
     },
     {
@@ -1495,9 +1495,9 @@
       "stem": "Dr. B.R. Ambedkar is known as:",
       "options": [
         "Father of Indian Constitution",
-        "Father of the Nation",
         "Netaji",
-        "Iron Man"
+        "Iron Man",
+        "Father of the Nation"
       ],
       "answer": 0,
       "solution": "Dr. Ambedkar: Chairman of Drafting Committee"
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Which is the longest river in India?",
       "options": [
+        "Godavari",
         "Ganga",
         "Yamuna",
-        "Godavari",
         "Brahmaputra"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Ganga: longest river in India (2525 km)"
     },
     {
@@ -1530,12 +1530,12 @@
       "difficulty": "medium",
       "stem": "Which is the highest peak in India?",
       "options": [
-        "Kangchenjunga",
+        "Kamet",
         "K2",
         "Nanda Devi",
-        "Kamet"
+        "Kangchenjunga"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Kangchenjunga: 8586m (highest in India)"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "India won Cricket World Cup in:",
       "options": [
-        "1983 and 2011",
-        "1983 only",
         "2011 only",
-        "2003"
+        "2003",
+        "1983 only",
+        "1983 and 2011"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "India won: 1983 and 2011"
     },
     {
@@ -1567,9 +1567,9 @@
       "stem": "Which state has the longest coastline in India?",
       "options": [
         "Gujarat",
-        "Maharashtra",
+        "Andhra Pradesh",
         "Tamil Nadu",
-        "Andhra Pradesh"
+        "Maharashtra"
       ],
       "answer": 0,
       "solution": "Gujarat: longest coastline (~1600 km)"
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "RBI was established in:",
       "options": [
-        "1935",
+        "1969",
         "1947",
-        "1950",
-        "1969"
+        "1935",
+        "1950"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "RBI: 1935 (central bank of India)"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "Lok Sabha elections are held every:",
       "options": [
-        "5 years",
+        "3 years",
         "4 years",
         "6 years",
-        "3 years"
+        "5 years"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "General elections: every 5 years"
     },
     {
@@ -1620,12 +1620,12 @@
       "difficulty": "medium",
       "stem": "Rajya Sabha members are elected for:",
       "options": [
+        "3 years",
         "6 years",
         "5 years",
-        "4 years",
-        "3 years"
+        "4 years"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Rajya Sabha: 6-year term, 1/3 retire every 2 years"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "Indian Army Day is celebrated on:",
       "options": [
-        "15 January",
         "26 January",
         "15 August",
-        "5 September"
+        "5 September",
+        "15 January"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Army Day: 15 January"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "NITI Aayog CEO is appointed by:",
       "options": [
+        "Parliament",
         "Prime Minister",
-        "President",
         "RBI Governor",
-        "Parliament"
+        "President"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "NITI Aayog: CEO appointed by PM"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Which organization regulates space activities in India?",
       "options": [
+        "BARC",
         "ISRO",
         "DRDO",
-        "BARC",
         "DAE"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "ISRO: Indian Space Research Organisation"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "Pokhran-II nuclear tests were conducted in:",
       "options": [
-        "1998",
-        "1974",
         "1990",
-        "2000"
+        "2000",
+        "1998",
+        "1974"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Pokhran-II: May 1998"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "India's first satellite Aryabhata was launched with help of:",
       "options": [
+        "France",
         "Soviet Union (USSR)",
         "USA",
-        "France",
         "Self"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Aryabhata: launched by Soviet Kosmos-3M (1975)"
     },
     {
@@ -1728,12 +1728,12 @@
       "difficulty": "medium",
       "stem": "Green Revolution in India was led by:",
       "options": [
-        "M.S. Swaminathan",
         "Verghese Kurien",
+        "M.S. Swaminathan",
         "C. Subramaniam",
         "M. Visvesvaraya"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "M.S. Swaminathan: Father of Green Revolution in India"
     },
     {
@@ -1748,8 +1748,8 @@
       "options": [
         "Verghese Kurien",
         "M.S. Swaminathan",
-        "C. Subramaniam",
-        "None"
+        "None",
+        "C. Subramaniam"
       ],
       "answer": 0,
       "solution": "Verghese Kurien: Father of White Revolution (Operation Flood)"
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "India's first nuclear power plant was at:",
       "options": [
-        "Tarapur (Maharashtra)",
-        "Rajasthan",
         "Kudankulam",
+        "Rajasthan",
+        "Tarapur (Maharashtra)",
         "Kalpakkam"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Tarapur: India's first nuclear power station (1969)"
     },
     {
@@ -1782,12 +1782,12 @@
       "difficulty": "medium",
       "stem": "Which Indian city is called Silicon Valley of India?",
       "options": [
-        "Bengaluru",
         "Hyderabad",
+        "Bengaluru",
         "Pune",
         "Chennai"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bengaluru: IT hub, Silicon Valley of India"
     },
     {
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Which is the largest state by population in India?",
       "options": [
+        "West Bengal",
         "Uttar Pradesh",
         "Maharashtra",
-        "Bihar",
-        "West Bengal"
+        "Bihar"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "UP: most populous state (~240M)"
     },
     {
@@ -1819,12 +1819,84 @@
       "stem": "Dedicated Freight Corridor (DFC) connects:",
       "options": [
         "JNPT (Mumbai) to Delhi, and Ludhiana to Howrah",
-        "Chennai to Kolkata",
+        "Delhi to Bengaluru",
         "Mumbai to Chennai",
-        "Delhi to Bengaluru"
+        "Chennai to Kolkata"
       ],
       "answer": 0,
       "solution": "DFC: Eastern (Ludhiana-Howrah) and Western (JNPT-Delhi)"
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "At what time between 4 and 5 o'clock will the hands coincide?",
+      "options": [
+        "4:21 min",
+        "4:20 min",
+        "4:24 min",
+        "4:22 min"
+      ],
+      "answer": 3,
+      "solution": "θ = (60×4 - 5.5×0) / 5.5 = 240/5.5 = 43.64 min past 4. Approximately 4:21:49, closest to 4:22"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What was the day of the week on 15th August 1947?",
+      "options": [
+        "Saturday",
+        "Sunday",
+        "Thursday",
+        "Friday"
+      ],
+      "answer": 3,
+      "solution": "Using odd day method: 1947 Aug 15 → odd days = 1. Hence Friday"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Average",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average of 5 numbers is 20. If one number is excluded, the average becomes 18. What is the excluded number?",
+      "options": [
+        "26",
+        "24",
+        "30",
+        "28"
+      ],
+      "answer": 3,
+      "solution": "Sum of 5 = 100. Sum of 4 = 72. Excluded = 100 - 72 = 28"
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is the angle between the hands of a clock at 3:30?",
+      "options": [
+        "90°",
+        "80°",
+        "85°",
+        "75°"
+      ],
+      "answer": 3,
+      "solution": "Hour hand at 3:30 = 3×30 + 30×0.5 = 105°. Minute hand = 30×6 = 180°. Angle = |180 - 105| = 75°"
     }
   ]
 }

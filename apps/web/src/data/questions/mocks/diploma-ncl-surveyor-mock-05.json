@@ -33,8 +33,8 @@
       "options": [
         "Sum",
         "Mean",
-        "Product",
-        "Nothing"
+        "Both the first and second options",
+        "Product"
       ],
       "answer": 1,
       "solution": "Mean."
@@ -49,12 +49,12 @@
       "difficulty": "medium",
       "stem": "The standard deviation measures",
       "options": [
-        "Nothing",
         "The dispersion of observations around the mean",
-        "Only the mean",
-        "Nothing"
+        "Resistance measurement only",
+        "This requires additional verification",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Dispersion of observations around the mean."
     },
     {
@@ -67,12 +67,12 @@
       "difficulty": "medium",
       "stem": "The variance is the",
       "options": [
-        "Square root of standard deviation",
         "Square of standard deviation",
         "Double of standard deviation",
-        "Nothing"
+        "Square root of standard deviation",
+        "The statement is partially correct but incomplete"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Square of standard deviation."
     },
     {
@@ -85,12 +85,12 @@
       "difficulty": "medium",
       "stem": "The precision of measurements is expressed by",
       "options": [
-        "Only the mean",
-        "Standard deviation or variance",
-        "Only the range",
-        "Nothing"
+        "Current measurement only",
+        "Resistance measurement only",
+        "Voltage measurement only",
+        "Standard deviation or variance"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Standard deviation or variance."
     },
     {
@@ -104,11 +104,11 @@
       "stem": "The weight of an observation is",
       "options": [
         "Always 1",
-        "Proportional to the number of observations or inversely proportional to variance",
         "Zero",
-        "Nothing"
+        "Proportional to the number of observations or inversely proportional to variance",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Proportional to number or inversely to variance."
     },
     {
@@ -121,12 +121,12 @@
       "difficulty": "medium",
       "stem": "The law of weight propagation states that",
       "options": [
-        "Nothing specific",
-        "The weight of a computed quantity depends on weights of observations used",
+        "Neither the first nor the second option",
         "Weights are always equal",
-        "Nothing"
+        "The weight of a computed quantity depends on weights of observations used",
+        "Nothing specific"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Weight of computed quantity depends on input weights."
     },
     {
@@ -139,12 +139,12 @@
       "difficulty": "medium",
       "stem": "The sum of weights of independent observations is used to determine",
       "options": [
-        "Nothing",
         "The weight of the mean",
-        "Only individual weights",
-        "Nothing"
+        "This assumes incorrect boundary conditions",
+        "Neither the first nor the second option",
+        "This is true only for a different scenario"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The weight of the mean."
     },
     {
@@ -157,12 +157,12 @@
       "difficulty": "medium",
       "stem": "The least squares method minimizes the",
       "options": [
+        "Sum of residuals",
         "Sum of observations",
         "Sum of squares of residuals",
-        "Sum of residuals",
-        "Nothing"
+        "This ignores the practical considerations"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Sum of squares of residuals."
     },
     {
@@ -178,7 +178,7 @@
         "True value minus measured value",
         "Measured value minus the most probable value",
         "Mean minus median",
-        "Nothing"
+        "Both the first and second options"
       ],
       "answer": 1,
       "solution": "Measured value minus the most probable value."
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "The condition that the sum of residuals equals zero applies to",
       "options": [
-        "Only weighted observations",
-        "Unweighted observations with equal weights",
         "All observations",
-        "Nothing"
+        "This reverses the cause and effect",
+        "Unweighted observations with equal weights",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Unweighted observations with equal weights."
     },
     {
@@ -213,8 +213,8 @@
       "options": [
         "Nothing specific",
         "sigma_f squared equals partial derivatives squared times variances",
-        "Only addition",
-        "Nothing"
+        "This applies only in specific conditions",
+        "Both the first and second options"
       ],
       "answer": 1,
       "solution": "Partial derivatives squared times variances."
@@ -229,12 +229,12 @@
       "difficulty": "medium",
       "stem": "The adjustment of a triangulation figure involves",
       "options": [
-        "Nothing specific",
         "Distributing misclosure according to least squares",
         "Ignoring misclosure",
-        "Nothing"
+        "Both the first and second options",
+        "Nothing specific"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Distributing misclosure by least squares."
     },
     {
@@ -247,12 +247,12 @@
       "difficulty": "medium",
       "stem": "The mean error is defined as",
       "options": [
-        "Sum of errors divided by number",
         "Sum of absolute errors divided by number",
-        "Square root of sum of squares",
-        "Nothing"
+        "Neither the first nor the second option",
+        "Sum of errors divided by number",
+        "Square root of sum of squares"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Sum of absolute errors divided by number."
     },
     {
@@ -265,12 +265,12 @@
       "difficulty": "medium",
       "stem": "The probable error is approximately",
       "options": [
-        "0.6745 times standard deviation",
         "2 times standard deviation",
-        "Half of standard deviation",
-        "Nothing"
+        "0.6745 times standard deviation",
+        "This is true only for a different scenario",
+        "Half of standard deviation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "0.6745 times standard deviation."
     },
     {
@@ -283,10 +283,10 @@
       "difficulty": "medium",
       "stem": "The relative error is",
       "options": [
-        "Absolute error only",
-        "Absolute error divided by the measured value",
         "Square of error",
-        "Nothing"
+        "Absolute error divided by the measured value",
+        "This reverses the cause and effect",
+        "Absolute error only"
       ],
       "answer": 1,
       "solution": "Absolute error divided by measured value."
@@ -301,12 +301,12 @@
       "difficulty": "medium",
       "stem": "The maximum permissible error in a survey depends on",
       "options": [
+        "Record temperature variations",
         "Nothing specific",
         "The purpose and accuracy requirements of the survey",
-        "Only the instrument",
-        "Nothing"
+        "Monitor gas concentrations"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Purpose and accuracy requirements."
     },
     {
@@ -320,11 +320,11 @@
       "stem": "In adjustment of observations, degrees of freedom is",
       "options": [
         "Number of unknowns",
-        "Number of observations minus number of unknowns",
         "Always zero",
-        "Nothing"
+        "Number of observations minus number of unknowns",
+        "Neither the first nor the second option"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Number of observations minus number of unknowns."
     },
     {
@@ -337,10 +337,10 @@
       "difficulty": "medium",
       "stem": "The reference standard deviation is computed from",
       "options": [
-        "Nothing specific",
+        "This is true only for a different scenario",
         "Residuals divided by degrees of freedom",
         "All observations",
-        "Nothing"
+        "Nothing specific"
       ],
       "answer": 1,
       "solution": "Residuals divided by degrees of freedom."
@@ -356,11 +356,11 @@
       "stem": "An observation with higher weight is considered",
       "options": [
         "Less reliable",
-        "More reliable",
         "Same as others",
-        "Nothing"
+        "This reverses the cause and effect",
+        "More reliable"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "More reliable."
     },
     {
@@ -373,12 +373,12 @@
       "difficulty": "medium",
       "stem": "The chi-square test is used to",
       "options": [
-        "Nothing specific",
         "Test the goodness of fit of observations to a distribution",
-        "Only measure",
-        "Nothing"
+        "Nothing specific",
+        "Neither the first nor the second option",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Test goodness of fit to a distribution."
     },
     {
@@ -391,12 +391,12 @@
       "difficulty": "medium",
       "stem": "The normal distribution of errors is characterized by",
       "options": [
-        "Nothing specific",
-        "Bell-shaped curve symmetric about the mean",
         "Uniform distribution",
-        "Nothing"
+        "This contradicts the established principle",
+        "Nothing specific",
+        "Bell-shaped curve symmetric about the mean"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Bell-shaped curve symmetric about mean."
     },
     {
@@ -410,11 +410,11 @@
       "stem": "The sum of positive residuals should equal the sum of negative residuals when",
       "options": [
         "Weights are unequal",
-        "Observations have equal weights",
         "Errors are systematic",
-        "Nothing"
+        "This is not applicable in this context",
+        "Observations have equal weights"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "When observations have equal weights."
     },
     {
@@ -427,12 +427,12 @@
       "difficulty": "medium",
       "stem": "The adjustment of a level network by least squares involves",
       "options": [
+        "Record temperature variations",
+        "This requires additional verification",
         "Nothing specific",
-        "Minimizing the sum of weighted squared corrections to observations",
-        "Only adding",
-        "Nothing"
+        "Minimizing the sum of weighted squared corrections to observations"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Minimizing weighted squared corrections."
     },
     {
@@ -445,10 +445,10 @@
       "difficulty": "medium",
       "stem": "In the adjustment of triangulation, the conditions include",
       "options": [
-        "Nothing specific",
+        "Neither the first nor the second option",
         "Angle condition and side condition",
-        "Only one condition",
-        "Nothing"
+        "The statement is partially correct but incomplete",
+        "Nothing specific"
       ],
       "answer": 1,
       "solution": "Angle condition and side condition."
@@ -465,8 +465,8 @@
       "options": [
         "Nothing specific",
         "A geometric or physical condition that must be satisfied",
-        "Only error",
-        "Nothing"
+        "Measure air velocity",
+        "Test roof stability"
       ],
       "answer": 1,
       "solution": "A condition that must be satisfied."
@@ -481,10 +481,10 @@
       "difficulty": "medium",
       "stem": "The 'observation equation' in least squares relates",
       "options": [
-        "Nothing specific",
-        "An observation to the unknown parameters",
         "Two observations",
-        "Nothing"
+        "An observation to the unknown parameters",
+        "Nothing specific",
+        "This reverses the cause and effect"
       ],
       "answer": 1,
       "solution": "An observation to unknown parameters."
@@ -499,10 +499,10 @@
       "difficulty": "medium",
       "stem": "The matrix approach to least squares uses the",
       "options": [
-        "Nothing specific",
+        "Both the first and second options",
         "Normal equations: (A transpose WA)x = A transpose Wl",
-        "Only addition",
-        "Nothing"
+        "This applies only in specific conditions",
+        "Nothing specific"
       ],
       "answer": 1,
       "solution": "Normal equations: (A'WA)x = A'Wl."
@@ -517,12 +517,12 @@
       "difficulty": "medium",
       "stem": "Outliers in observations should be",
       "options": [
+        "Neither the first nor the second option",
         "Ignored",
         "Investigated and potentially removed if gross errors",
-        "Always kept",
-        "Nothing"
+        "Always kept"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Investigated and potentially removed."
     },
     {
@@ -535,12 +535,12 @@
       "difficulty": "medium",
       "stem": "The covariance between two variables measures",
       "options": [
-        "Nothing",
         "The degree to which they vary together",
-        "Only individual variance",
-        "Nothing"
+        "Voltage measurement only",
+        "Current measurement only",
+        "Power measurement only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Degree to which they vary together."
     },
     {
@@ -553,12 +553,12 @@
       "difficulty": "medium",
       "stem": "Correlation coefficient ranges from",
       "options": [
-        "0 to 1",
         "-1 to +1",
         "-1 to 0",
-        "Nothing"
+        "0 to 1",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "-1 to +1."
     },
     {
@@ -571,12 +571,12 @@
       "difficulty": "medium",
       "stem": "The law of propagation of errors for f(x) where x has error sigma_x is",
       "options": [
+        "Neither the first nor the second option",
         "Nothing specific",
         "sigma_f = df/dx times sigma_x",
-        "sigma_f = sigma_x squared",
-        "Nothing"
+        "sigma_f = sigma_x squared"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "sigma_f = df/dx times sigma_x."
     },
     {
@@ -589,12 +589,12 @@
       "difficulty": "medium",
       "stem": "The 'accidental error' is another name for",
       "options": [
-        "Gross error",
         "Random error",
         "Systematic error",
-        "Nothing"
+        "Gross error",
+        "Increase production rate"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Random error."
     },
     {
@@ -607,10 +607,10 @@
       "difficulty": "medium",
       "stem": "The trapezoidal rule for area calculation assumes",
       "options": [
-        "Nothing specific",
-        "Boundaries between offsets are straight lines",
         "Boundaries are curved",
-        "Nothing"
+        "Boundaries between offsets are straight lines",
+        "Nothing specific",
+        "This ignores the practical considerations"
       ],
       "answer": 1,
       "solution": "Boundaries between offsets are straight lines."
@@ -628,7 +628,7 @@
         "Nothing specific",
         "Boundaries between offsets are parabolic arcs",
         "Boundaries are straight lines",
-        "Nothing"
+        "Both the first and second options"
       ],
       "answer": 1,
       "solution": "Boundaries are parabolic arcs."
@@ -643,10 +643,10 @@
       "difficulty": "medium",
       "stem": "Simpsons rule requires",
       "options": [
-        "Any number of offsets",
-        "An odd number of offsets (even number of segments)",
         "Even number of offsets",
-        "Nothing"
+        "An odd number of offsets (even number of segments)",
+        "Neither the first nor the second option",
+        "Any number of offsets"
       ],
       "answer": 1,
       "solution": "Odd number of offsets (even segments)."
@@ -661,10 +661,10 @@
       "difficulty": "medium",
       "stem": "The coordinate method for area calculation uses",
       "options": [
-        "Nothing specific",
+        "This is outdated information",
         "Coordinates of vertices of a closed polygon",
-        "Only lengths",
-        "Nothing"
+        "Nothing specific",
+        "Neither the first nor the second option"
       ],
       "answer": 1,
       "solution": "Coordinates of vertices of a closed polygon."
@@ -679,12 +679,12 @@
       "difficulty": "medium",
       "stem": "The planimeter is used to measure",
       "options": [
-        "Volume",
-        "Area of an irregular figure on a map",
         "Distance",
-        "Nothing"
+        "Current measurement only",
+        "Area of an irregular figure on a map",
+        "Volume"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Area of an irregular figure on a map."
     },
     {
@@ -699,8 +699,8 @@
       "options": [
         "Nothing specific",
         "Tracing the boundary and counting wheel revolutions",
-        "Only counting",
-        "Nothing"
+        "Power measurement only",
+        "Current measurement only"
       ],
       "answer": 1,
       "solution": "Tracing boundary and counting wheel revolutions."
@@ -715,12 +715,12 @@
       "difficulty": "medium",
       "stem": "The volume of earthwork between two sections can be calculated by",
       "options": [
-        "Nothing specific",
         "Mean area method, prismoidal formula, or Simpson's rule",
-        "Only one method",
-        "Nothing"
+        "Neither the first nor the second option",
+        "Nothing specific",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Mean area, prismoidal formula, or Simpson's rule."
     },
     {
@@ -734,11 +734,11 @@
       "stem": "The prismoidal formula for volume is V = L/6(A1 + 4Am + A2) where Am is",
       "options": [
         "Mean of A1 and A2",
-        "Area at the middle section",
         "Sum of A1 and A2",
-        "Nothing"
+        "Area at the middle section",
+        "This reverses the cause and effect"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Area at the middle section."
     },
     {
@@ -751,12 +751,12 @@
       "difficulty": "medium",
       "stem": "The mean area method for volume is V = L x (A1+A2)/2, which is also called",
       "options": [
-        "Prismoidal formula",
-        "Trapezoidal formula",
+        "Both the first and second options",
         "Simpsons formula",
-        "Nothing"
+        "Trapezoidal formula",
+        "Prismoidal formula"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Trapezoidal formula."
     },
     {
@@ -769,12 +769,12 @@
       "difficulty": "medium",
       "stem": "A contour plan shows",
       "options": [
-        "Nothing specific",
+        "Neither the first nor the second option",
+        "This applies to a different field entirely",
         "Lines of equal elevation on the surface",
-        "Only peaks",
-        "Nothing"
+        "Nothing specific"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Lines of equal elevation."
     },
     {
@@ -789,8 +789,8 @@
       "options": [
         "Nothing specific",
         "Trapezoidal or prismoidal formula with contour areas",
-        "Only one formula",
-        "Nothing"
+        "This ignores the practical considerations",
+        "Both the first and second options"
       ],
       "answer": 1,
       "solution": "Trapezoidal or prismoidal formula."
@@ -806,11 +806,11 @@
       "stem": "The curve for haul road layout is typically a",
       "options": [
         "Parabola",
-        "Circular curve or transition curve",
+        "This contradicts the established principle",
         "Straight line",
-        "Nothing"
+        "Circular curve or transition curve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Circular curve or transition curve."
     },
     {
@@ -823,10 +823,10 @@
       "difficulty": "medium",
       "stem": "The degree of a circular curve is defined as",
       "options": [
-        "Nothing specific",
+        "Both the first and second options",
         "The central angle subtended by a chord of standard length",
-        "Only the radius",
-        "Nothing"
+        "Nothing specific",
+        "This is not applicable in this context"
       ],
       "answer": 1,
       "solution": "Central angle per standard chord length."
@@ -841,12 +841,12 @@
       "difficulty": "medium",
       "stem": "A transition curve is used to",
       "options": [
+        "Neither the first nor the second option",
         "Nothing specific",
-        "Provide a gradual change in radius between straight and circular curve",
-        "Only mark",
-        "Nothing"
+        "This is theoretically possible but impractical",
+        "Provide a gradual change in radius between straight and circular curve"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Gradual change in radius."
     },
     {
@@ -859,10 +859,10 @@
       "difficulty": "medium",
       "stem": "The earthwork estimation for a road involves calculating",
       "options": [
-        "Nothing specific",
+        "The statement is partially correct but incomplete",
         "Volumes of cut and fill along the alignment",
-        "Only length",
-        "Nothing"
+        "Nothing specific",
+        "Neither the first nor the second option"
       ],
       "answer": 1,
       "solution": "Volumes of cut and fill."
@@ -878,11 +878,11 @@
       "stem": "The determination of azimuth from coordinates uses",
       "options": [
         "Nothing specific",
+        "This is true only for a different scenario",
         "Inverse trigonometric functions of latitude and departure",
-        "Only compass",
-        "Nothing"
+        "This assumes incorrect boundary conditions"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Inverse trigonometric functions of lat/departure."
     },
     {
@@ -896,11 +896,11 @@
       "stem": "Latitude of a line is its projection on the",
       "options": [
         "East-west axis",
-        "North-south axis",
         "Any axis",
-        "Nothing"
+        "North-south axis",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Projection on north-south axis."
     },
     {
@@ -916,7 +916,7 @@
         "North-south axis",
         "East-west axis",
         "Any axis",
-        "Nothing"
+        "This ignores the practical considerations"
       ],
       "answer": 1,
       "solution": "Projection on east-west axis."
@@ -931,12 +931,12 @@
       "difficulty": "medium",
       "stem": "The area by coordinate method is given by",
       "options": [
-        "Nothing specific",
         "Half the absolute value of sum of cross products",
-        "Only one product",
-        "Nothing"
+        "Nothing specific",
+        "This contradicts the established principle",
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Half the absolute value of cross products."
     },
     {
@@ -949,10 +949,10 @@
       "difficulty": "medium",
       "stem": "For a closed traverse, the sum of latitudes should theoretically be",
       "options": [
-        "100",
-        "Zero",
         "Equal to departures",
-        "Nothing"
+        "Zero",
+        "Both the first and second options",
+        "100"
       ],
       "answer": 1,
       "solution": "Zero."
@@ -967,12 +967,12 @@
       "difficulty": "medium",
       "stem": "For a closed traverse, the sum of departures should theoretically be",
       "options": [
-        "100",
-        "Equal to latitudes",
         "Zero",
-        "Nothing"
+        "Neither the first nor the second option",
+        "Equal to latitudes",
+        "100"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Zero."
     },
     {
@@ -986,11 +986,11 @@
       "stem": "The determination of latitude and longitude of a point uses",
       "options": [
         "Nothing specific",
+        "This ignores the practical considerations",
         "Astronomical observations or GPS measurements",
-        "Only compass",
-        "Nothing"
+        "Both the first and second options"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Astronomical observations or GPS."
     },
     {
@@ -1004,11 +1004,11 @@
       "stem": "The volume of a cone is",
       "options": [
         "pi*r^2*h",
-        "pi*r^2*h/3",
         "2*pi*r*h",
-        "Nothing"
+        "This applies only in specific conditions",
+        "pi*r^2*h/3"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "pi*r^2*h/3."
     },
     {
@@ -1021,12 +1021,12 @@
       "difficulty": "medium",
       "stem": "The volume of a cylinder is",
       "options": [
-        "pi*r^2*h/3",
-        "2*pi*r*h",
+        "Both the first and second options",
         "pi*r^2*h",
-        "Nothing"
+        "2*pi*r*h",
+        "pi*r^2*h/3"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "pi*r^2*h."
     },
     {
@@ -1039,12 +1039,12 @@
       "difficulty": "medium",
       "stem": "The volume of earthwork in a borrow pit is calculated by",
       "options": [
+        "Neither the first nor the second option",
         "Nothing specific",
-        "Sum of corner depths multiplied by area of each block",
-        "Only one depth",
-        "Nothing"
+        "The statement is partially correct but incomplete",
+        "Sum of corner depths multiplied by area of each block"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Sum of corner depths times block area."
     },
     {
@@ -1057,10 +1057,10 @@
       "difficulty": "medium",
       "stem": "The building estimation for masonry work is done in",
       "options": [
-        "Cubic meters",
+        "This is true only for a different scenario",
         "Square meters for walls, cubic meters for foundations",
-        "Only square meters",
-        "Nothing"
+        "Cubic meters",
+        "Neither the first nor the second option"
       ],
       "answer": 1,
       "solution": "Square meters for walls, cubic meters for foundations."
@@ -1077,8 +1077,8 @@
       "options": [
         "Any value",
         "Constant and suitable for the scale and terrain",
-        "Variable",
-        "Nothing"
+        "This reverses the cause and effect",
+        "Variable"
       ],
       "answer": 1,
       "solution": "Constant and suitable for scale and terrain."
@@ -1093,12 +1093,12 @@
       "difficulty": "medium",
       "stem": "The characteristics of contours include",
       "options": [
+        "Neither the first nor the second option",
         "Nothing specific",
         "Contours do not cross, are close together for steep slopes",
-        "Always cross",
-        "Nothing"
+        "Always cross"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Do not cross, close together for steep slopes."
     },
     {
@@ -1111,12 +1111,12 @@
       "difficulty": "medium",
       "stem": "The cross-sectional area at a chainage is measured to calculate",
       "options": [
-        "Nothing specific",
         "Volume of earthwork at that section",
-        "Only distance",
-        "Nothing"
+        "Nothing specific",
+        "Voltage measurement only",
+        "Current measurement only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Volume of earthwork at that section."
     },
     {
@@ -1129,12 +1129,12 @@
       "difficulty": "medium",
       "stem": "The prismoidal correction is applied to",
       "options": [
-        "Nothing specific",
+        "This applies only in specific conditions",
+        "Both the first and second options",
         "Correct the trapezoidal formula for curvature of surface",
-        "Only area",
-        "Nothing"
+        "Nothing specific"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Correct trapezoidal formula for surface curvature."
     },
     {
@@ -1147,12 +1147,12 @@
       "difficulty": "medium",
       "stem": "In borehole surveying, the inclination of a borehole from the vertical is called:",
       "options": [
+        "Plunge",
         "Dip",
-        "Deviation",
         "Azimuth",
-        "Plunge"
+        "Deviation"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Borehole deviation is the angular displacement of the borehole from the vertical axis."
     },
     {
@@ -1165,12 +1165,12 @@
       "difficulty": "medium",
       "stem": "A borehole is drilled vertically but drifts to a bearing of N45°E with an inclination of 15° from vertical. The horizontal displacement at 300 m depth is approximately:",
       "options": [
-        "52 m",
-        "78 m",
         "103 m",
-        "130 m"
+        "52 m",
+        "130 m",
+        "78 m"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Horizontal displacement = depth × tan(inclination) = 300 × tan(15°) ≈ 300 × 0.2679 ≈ 80 m; closest is 78 m."
     },
     {
@@ -1183,12 +1183,12 @@
       "difficulty": "medium",
       "stem": "The instrument commonly used for measuring borehole deviation at shallow depths is:",
       "options": [
-        "Gyro-theodolite",
-        "Clinometer",
+        "Total station",
         "Multi-shot survey tool",
-        "Total station"
+        "Clinometer",
+        "Gyro-theodolite"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Multi-shot survey tools record deviation at multiple depths in a single run."
     },
     {
@@ -1201,10 +1201,10 @@
       "difficulty": "medium",
       "stem": "Strike of a rock bed is defined as:",
       "options": [
-        "The angle of dip of the bed",
+        "The direction perpendicular to the true dip",
         "The line of intersection of the bed with a horizontal plane",
-        "The direction of maximum slope",
-        "The direction perpendicular to the true dip"
+        "The angle of dip of the bed",
+        "The direction of maximum slope"
       ],
       "answer": 1,
       "solution": "Strike is the line formed by the intersection of a bedding plane with a horizontal surface."
@@ -1219,9 +1219,9 @@
       "difficulty": "medium",
       "stem": "If the dip of a coal seam is 25° and the borehole is vertical, the apparent dip in a direction at 60° to the strike will be:",
       "options": [
-        "12.5°",
-        "21.7°",
         "25°",
+        "21.7°",
+        "12.5°",
         "22.9°"
       ],
       "answer": 3,
@@ -1237,12 +1237,12 @@
       "difficulty": "medium",
       "stem": "An outcrop is defined as:",
       "options": [
-        "The point where a borehole intersects a coal seam",
         "The surface exposure of a rock formation or mineral deposit",
+        "The intersection of a fault plane with the surface",
         "The lowest point of a geological fold",
-        "The intersection of a fault plane with the surface"
+        "The point where a borehole intersects a coal seam"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Outcrop refers to the portion of a rock formation that is exposed at the earth's surface without being covered by soil or alluvium."
     },
     {
@@ -1255,12 +1255,12 @@
       "difficulty": "medium",
       "stem": "A vertical fault with a horizontal displacement is classified as:",
       "options": [
+        "Reverse fault",
         "Dip-slip fault",
-        "Strike-slip fault",
         "Oblique-slip fault",
-        "Reverse fault"
+        "Strike-slip fault"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Strike-slip faults involve primarily horizontal movement parallel to the strike of the fault plane."
     },
     {
@@ -1274,11 +1274,11 @@
       "stem": "In borehole core logging, the Rock Quality Designation (RQD) is the percentage of core recovery consisting of intact pieces longer than:",
       "options": [
         "5 cm",
-        "10 cm",
         "15 cm",
-        "20 cm"
+        "20 cm",
+        "10 cm"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "RQD is defined as the percentage of borehole core comprising intact pieces measuring 10 cm (4 inches) or longer."
     },
     {
@@ -1291,10 +1291,10 @@
       "difficulty": "medium",
       "stem": "The purpose of a borehole survey is primarily to:",
       "options": [
-        "Determine the chemical composition of coal",
+        "Determine the groundwater table level",
         "Determine the actual path and position of the borehole at various depths",
         "Measure the temperature at depth",
-        "Determine the groundwater table level"
+        "Determine the chemical composition of coal"
       ],
       "answer": 1,
       "solution": "Borehole surveying determines the actual trajectory and position of the borehole to establish true depth and position of intersected formations."
@@ -1309,10 +1309,10 @@
       "difficulty": "medium",
       "stem": "A three-point problem in structural geology is used to determine:",
       "options": [
-        "The thickness of a coal seam",
-        "The strike and dip of a planar geological surface",
         "The depth of the water table",
-        "The composition of the overburden"
+        "The strike and dip of a planar geological surface",
+        "The composition of the overburden",
+        "The thickness of a coal seam"
       ],
       "answer": 1,
       "solution": "The three-point problem uses elevations of a planar surface at three non-collinear points to determine its strike and dip."
@@ -1328,8 +1328,8 @@
       "stem": "If two coal seams are encountered in a borehole at depths of 120 m and 185 m respectively, and both seams are horizontal, the true thickness of the intervening rock is:",
       "options": [
         "65 m",
-        "More than 65 m if the borehole is inclined",
         "Less than 65 m if the borehole is inclined",
+        "More than 65 m if the borehole is inclined",
         "Cannot be determined without dip information"
       ],
       "answer": 0,
@@ -1345,12 +1345,12 @@
       "difficulty": "medium",
       "stem": "A normal fault is characterized by:",
       "options": [
+        "No displacement of strata",
         "The hanging wall has moved up relative to the footwall",
-        "The footwall has moved up relative to the hanging wall",
         "Horizontal displacement only",
-        "No displacement of strata"
+        "The footwall has moved up relative to the hanging wall"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "In a normal fault, the hanging wall moves downward relative to the footwall (or footwall moves up), typically due to extensional forces."
     },
     {
@@ -1363,12 +1363,12 @@
       "difficulty": "medium",
       "stem": "The gyroscope theodolite is used in borehole surveying to determine:",
       "options": [
+        "Diameter of the borehole",
         "Dip of the borehole",
-        "True north direction for azimuth measurement",
         "Depth of the borehole",
-        "Diameter of the borehole"
+        "True north direction for azimuth measurement"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A gyro-theodolite determines true north by sensing earth's rotation, providing accurate azimuth in boreholes where magnetic surveys are unreliable."
     },
     {
@@ -1382,9 +1382,9 @@
       "stem": "In a vertical cross-section, if a fault displaces a horizontal coal seam such that the seam on the east side is 30 m lower than on the west side, and the fault plane dips 60° towards the east, the fault is a:",
       "options": [
         "Normal fault with 30 m throw",
-        "Reverse fault with 30 m heave",
         "Normal fault with 34.6 m throw",
-        "Reverse fault with 30 m throw"
+        "Reverse fault with 30 m throw",
+        "Reverse fault with 30 m heave"
       ],
       "answer": 0,
       "solution": "The vertical displacement (throw) is 30 m. The hanging wall (east side) has moved down relative to the footwall, indicating a normal fault."
@@ -1399,12 +1399,12 @@
       "difficulty": "medium",
       "stem": "Borehole deviation can be caused by all of the following EXCEPT:",
       "options": [
-        "Variation in rock hardness",
-        "Incorrect bit alignment",
+        "Gravitational forces on the drill string",
         "Use of a casing",
-        "Gravitational forces on the drill string"
+        "Incorrect bit alignment",
+        "Variation in rock hardness"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "Casing is installed after drilling and does not cause deviation. Deviation results from geological factors, drilling parameters, and equipment alignment."
     },
     {
@@ -1418,11 +1418,11 @@
       "stem": "The 'throw' of a fault is defined as:",
       "options": [
         "The horizontal displacement of a bed across the fault",
-        "The vertical displacement of a bed across the fault",
+        "The width of the fault zone",
         "The total displacement along the fault plane",
-        "The width of the fault zone"
+        "The vertical displacement of a bed across the fault"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Throw is the vertical component of fault displacement, measured as the vertical distance between the two parts of the displaced bed."
     },
     {
@@ -1436,11 +1436,11 @@
       "stem": "A borehole intersects a coal seam dipping at 20° in the direction N30°E. The borehole is vertical and the seam is 3 m thick. The length of borehole passing through the seam will be:",
       "options": [
         "3.00 m",
-        "3.19 m",
+        "4.20 m",
         "3.52 m",
-        "4.20 m"
+        "3.19 m"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Length through seam = true thickness / cos(dip) = 3 / cos(20°) = 3 / 0.9397 ≈ 3.19 m."
     },
     {
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "In borehole survey, the 'clino shot' measures:",
       "options": [
-        "Magnetic bearing",
         "Inclination from vertical or horizontal",
         "Temperature at depth",
+        "Magnetic bearing",
         "Rock hardness"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A clinometer shot (clino shot) measures the inclination angle of the borehole from the vertical or horizontal."
     },
     {
@@ -1471,12 +1471,12 @@
       "difficulty": "medium",
       "stem": "The SAARC summit is held every how many years?",
       "options": [
-        "A. 1 year",
-        "B. 2 years",
         "C. 3 years",
-        "D. 4 years"
+        "D. 4 years",
+        "B. 2 years",
+        "A. 1 year"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SAARC summit is held every two years."
     },
     {
@@ -1489,12 +1489,12 @@
       "difficulty": "medium",
       "stem": "Which country is India's largest trading partner?",
       "options": [
-        "A. China",
-        "B. USA",
         "C. UAE",
-        "D. Saudi Arabia"
+        "A. China",
+        "D. Saudi Arabia",
+        "B. USA"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "USA has been India's largest trading partner in recent years."
     },
     {
@@ -1507,12 +1507,12 @@
       "difficulty": "medium",
       "stem": "India shares the longest international border with which country?",
       "options": [
-        "A. Pakistan",
         "B. China",
         "C. Bangladesh",
-        "D. Nepal"
+        "D. Nepal",
+        "A. Pakistan"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "India shares the longest border (4,096 km) with Bangladesh."
     },
     {
@@ -1527,8 +1527,8 @@
       "options": [
         "A. India, USA, Japan, Australia",
         "B. India, China, Japan, USA",
-        "C. India, Russia, USA, UK",
-        "D. India, France, Germany, Japan"
+        "D. India, France, Germany, Japan",
+        "C. India, Russia, USA, UK"
       ],
       "answer": 0,
       "solution": "Quad includes India, USA, Japan, and Australia."
@@ -1543,12 +1543,12 @@
       "difficulty": "medium",
       "stem": "BRICS New Development Bank headquarters is in which city?",
       "options": [
+        "D. New Delhi",
         "A. Beijing",
         "B. Mumbai",
-        "C. Shanghai",
-        "D. New Delhi"
+        "C. Shanghai"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "NDB headquarters is in Shanghai, China."
     },
     {
@@ -1562,11 +1562,11 @@
       "stem": "Which country became the newest member of BRICS in 2024?",
       "options": [
         "A. Turkey",
-        "B. Iran",
         "C. Indonesia",
-        "D. Bangladesh"
+        "D. Bangladesh",
+        "B. Iran"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Iran joined BRICS in January 2024."
     },
     {
@@ -1579,12 +1579,12 @@
       "difficulty": "medium",
       "stem": "India's 'Act East Policy' was announced in which year?",
       "options": [
+        "D. 2020",
         "A. 1991",
         "B. 2001",
-        "C. 2014",
-        "D. 2020"
+        "C. 2014"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Act East Policy was announced in 2014, replacing the Look East Policy of 1991."
     },
     {
@@ -1599,8 +1599,8 @@
       "options": [
         "A. New Delhi",
         "B. Gurugram",
-        "C. Bengaluru",
-        "D. Mumbai"
+        "D. Mumbai",
+        "C. Bengaluru"
       ],
       "answer": 1,
       "solution": "ISA headquarters is in Gurugram, Haryana."
@@ -1616,11 +1616,11 @@
       "stem": "Which Indian city hosted the G20 Summit in 2023?",
       "options": [
         "A. Mumbai",
-        "B. Bengaluru",
         "C. New Delhi",
+        "B. Bengaluru",
         "D. Kolkata"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "New Delhi hosted the G20 Summit in September 2023."
     },
     {
@@ -1633,12 +1633,12 @@
       "difficulty": "medium",
       "stem": "India signed a free trade agreement with which bloc in 2022?",
       "options": [
-        "A. EU",
+        "D. Mercosur",
         "B. ASEAN",
-        "C. UAE (CEPA)",
-        "D. Mercosur"
+        "A. EU",
+        "C. UAE (CEPA)"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "India-UAE CEPA (Comprehensive Economic Partnership Agreement) came into effect in May 2022."
     },
     {
@@ -1651,12 +1651,12 @@
       "difficulty": "medium",
       "stem": "Which country is NOT a member of SAARC?",
       "options": [
-        "A. Bangladesh",
         "B. Myanmar",
+        "A. Bangladesh",
         "C. Sri Lanka",
         "D. Bhutan"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Myanmar is not a member of SAARC."
     },
     {
@@ -1669,12 +1669,12 @@
       "difficulty": "medium",
       "stem": "The headquarters of the World Trade Organization (WTO) is in:",
       "options": [
-        "A. New York",
         "B. Geneva",
         "C. Paris",
+        "A. New York",
         "D. Vienna"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "WTO headquarters is in Geneva, Switzerland."
     },
     {
@@ -1688,11 +1688,11 @@
       "stem": "Which Indian state shares a border with Myanmar?",
       "options": [
         "A. Assam",
+        "D. Meghalaya",
         "B. Manipur",
-        "C. Tripura",
-        "D. Meghalaya"
+        "C. Tripura"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Manipur shares an international border with Myanmar."
     },
     {
@@ -1705,12 +1705,12 @@
       "difficulty": "medium",
       "stem": "India's relationship with which country is described as 'All-Weather Friendship'?",
       "options": [
-        "A. Russia",
-        "B. Japan",
+        "D. Nepal",
         "C. Bhutan",
-        "D. Nepal"
+        "B. Japan",
+        "A. Russia"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "India-Russia strategic partnership is often described as 'all-weather'."
     },
     {
@@ -1723,10 +1723,10 @@
       "difficulty": "medium",
       "stem": "Which company is the largest coal producer in India?",
       "options": [
-        "A. NTPC",
+        "D. Tata Power",
         "B. Coal India Limited",
         "C. Singareni Collieries",
-        "D. Tata Power"
+        "A. NTPC"
       ],
       "answer": 1,
       "solution": "Coal India Limited (CIL) is the largest coal producer in India."
@@ -1741,12 +1741,12 @@
       "difficulty": "medium",
       "stem": "The headquarters of Coal India Limited is in which city?",
       "options": [
-        "A. Ranchi",
         "B. Kolkata",
-        "C. New Delhi",
-        "D. Nagpur"
+        "D. Nagpur",
+        "A. Ranchi",
+        "C. New Delhi"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "CIL headquarters is in Kolkata, West Bengal."
     },
     {
@@ -1759,12 +1759,12 @@
       "difficulty": "medium",
       "stem": "Which of the following is the largest coalfield in India?",
       "options": [
-        "A. Raniganj",
-        "B. Jharia",
+        "D. Singrauli",
         "C. Talcher",
-        "D. Singrauli"
+        "A. Raniganj",
+        "B. Jharia"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Jharia coalfield in Jharkhand is one of the largest and most important coalfields."
     },
     {
@@ -1777,12 +1777,12 @@
       "difficulty": "medium",
       "stem": "Coal India Limited was formed in which year?",
       "options": [
-        "A. 1955",
-        "B. 1965",
         "C. 1975",
+        "B. 1965",
+        "A. 1955",
         "D. 1985"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "CIL was formed on 1 November 1975."
     },
     {
@@ -1797,10 +1797,10 @@
       "options": [
         "A. Lignite",
         "B. Bituminous",
-        "C. Anthracite",
-        "D. Peat"
+        "D. Peat",
+        "C. Anthracite"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Anthracite has the highest carbon content (86-97%)."
     },
     {
@@ -1813,13 +1813,85 @@
       "difficulty": "medium",
       "stem": "The Singareni Collieries Company Limited (SCCL) is located in which state?",
       "options": [
-        "A. Jharkhand",
+        "D. Chhattisgarh",
         "B. Odisha",
         "C. Telangana",
-        "D. Chhattisgarh"
+        "A. Jharkhand"
       ],
       "answer": 2,
       "solution": "SCCL is a government coal mining company in Telangana."
+    },
+    {
+      "id": 81,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The cost price of 20 articles equals the selling price of 15 articles. What is the profit percentage?",
+      "options": [
+        "33.33%",
+        "20%",
+        "15%",
+        "25%"
+      ],
+      "answer": 0,
+      "solution": "20CP = 15SP → SP/CP = 20/15 = 4/3. Profit = SP - CP = CP/3. Profit% = (1/3) × 100 = 33.33%"
+    },
+    {
+      "id": 82,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A boat goes 20 km upstream in 5 hours and 20 km downstream in 2 hours. What is the speed of the current?",
+      "options": [
+        "2 km/h",
+        "4 km/h",
+        "5 km/h",
+        "3 km/h"
+      ],
+      "answer": 3,
+      "solution": "Upstream = 4 km/h, Downstream = 10 km/h. Speed of current = (10-4)/2 = 3 km/h"
+    },
+    {
+      "id": 83,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If A:B = 2:3 and B:C = 4:5, what is A:B:C?",
+      "options": [
+        "6:9:12",
+        "10:15:12",
+        "4:6:5",
+        "8:12:15"
+      ],
+      "answer": 3,
+      "solution": "A:B = 2:3 = 8:12. B:C = 4:5 = 12:15. So A:B:C = 8:12:15"
+    },
+    {
+      "id": 84,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Divide ₹1200 among A, B, C in the ratio 3:5:4.",
+      "options": [
+        "₹350, ₹450, ₹400",
+        "₹300, ₹450, ₹450",
+        "₹250, ₹500, ₹450",
+        "₹300, ₹500, ₹400"
+      ],
+      "answer": 3,
+      "solution": "Total parts = 12. A = 3/12 × 1200 = 300. B = 5/12 × 1200 = 500. C = 4/12 × 1200 = 400"
     }
   ]
 }

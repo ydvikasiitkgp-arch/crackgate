@@ -31,12 +31,12 @@
       "difficulty": "medium",
       "stem": "The 'ground-to-grid' (G2G) correction accounts for:",
       "options": [
+        "Magnetic variation",
         "Map projection distortion and elevation difference",
         "Temperature effects",
-        "Magnetic variation",
         "Instrumental errors"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "G2G = grid factor × combined factor; it converts measured ground distance/bearing to grid values."
     },
     {
@@ -49,12 +49,12 @@
       "difficulty": "medium",
       "stem": "An error that has a definite sign and magnitude is called:",
       "options": [
+        "Blunder",
         "Random error",
-        "Systematic error",
         "Gross error",
-        "Blunder"
+        "Systematic error"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Systematic errors follow a physical law and can be corrected (e.g., collimation error)."
     },
     {
@@ -68,11 +68,11 @@
       "stem": "Random errors are also known as:",
       "options": [
         "Gross errors",
-        "Accidental errors",
         "Systematic errors",
-        "Blunders"
+        "Blunders",
+        "Accidental errors"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Random (accidental) errors arise from unpredictable fluctuations and follow the normal distribution."
     },
     {
@@ -85,10 +85,10 @@
       "difficulty": "medium",
       "stem": "A 'blunder' in surveying is:",
       "options": [
-        "A small random error",
+        "An unavoidable error",
         "A mistake due to carelessness, e.g., misreading a tape",
-        "A systematic error",
-        "An unavoidable error"
+        "A small random error",
+        "A systematic error"
       ],
       "answer": 1,
       "solution": "Blunders (gross errors) are mistakes from human carelessness and should be detected and removed."
@@ -105,10 +105,10 @@
       "options": [
         "The median",
         "The mode",
-        "The mean",
-        "All of these (for normal distribution)"
+        "All of these (for normal distribution)",
+        "The mean"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "For a perfectly normal distribution, mean = median = mode, and the curve is symmetric about this central value."
     },
     {
@@ -121,12 +121,12 @@
       "difficulty": "medium",
       "stem": "The 'standard deviation' of a set of observations measures:",
       "options": [
+        "The maximum error",
         "The mean value",
         "The spread or dispersion of observations about the mean",
-        "The systematic error",
-        "The maximum error"
+        "The systematic error"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Standard deviation σ quantifies the scatter of observations; smaller σ means more precise measurements."
     },
     {
@@ -139,12 +139,12 @@
       "difficulty": "medium",
       "stem": "For n observations, the 'degrees of freedom' in computing standard deviation is:",
       "options": [
-        "n",
         "n - 1",
+        "n / 2",
         "n + 1",
-        "n / 2"
+        "n"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Using n-1 (Bessel's correction) gives an unbiased estimate of the population variance from a sample."
     },
     {
@@ -158,11 +158,11 @@
       "stem": "The 'most probable value' of a set of equal-precision observations is their:",
       "options": [
         "Median",
+        "Geometric mean",
         "Mode",
-        "Arithmetic mean",
-        "Geometric mean"
+        "Arithmetic mean"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "For equal-weight observations, the arithmetic mean minimises the sum of squared residuals."
     },
     {
@@ -193,12 +193,12 @@
       "difficulty": "medium",
       "stem": "The 'sum of residuals' for a set of observations is always:",
       "options": [
-        "Maximum",
-        "Minimum",
         "Zero",
-        "Equal to the mean"
+        "Maximum",
+        "Equal to the mean",
+        "Minimum"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "By definition, Σv = Σ(lᵢ - x̄) = 0 when x̄ is the arithmetic mean."
     },
     {
@@ -211,12 +211,12 @@
       "difficulty": "medium",
       "stem": "The 'variance' is the square of:",
       "options": [
-        "Mean error",
         "Standard deviation",
-        "Residual",
-        "Median"
+        "Mean error",
+        "Median",
+        "Residual"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Variance σ² = (Σv²)/(n-1); standard deviation σ = √(variance)."
     },
     {
@@ -229,12 +229,12 @@
       "difficulty": "medium",
       "stem": "The 'standard error of the mean' is:",
       "options": [
-        "σ",
         "σ/√n",
+        "σ",
         "σ × √n",
         "σ/n"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Standard error of the mean = σ/√n; it decreases as more observations are taken."
     },
     {
@@ -247,12 +247,12 @@
       "difficulty": "medium",
       "stem": "According to the '68-95-99.7 rule', approximately 95% of observations lie within:",
       "options": [
-        "±1σ of the mean",
         "±2σ of the mean",
-        "±3σ of the mean",
-        "±0.5σ of the mean"
+        "±1σ of the mean",
+        "±0.5σ of the mean",
+        "±3σ of the mean"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "About 95.4% of normally distributed data falls within ±2σ of the mean."
     },
     {
@@ -265,10 +265,10 @@
       "difficulty": "medium",
       "stem": "The 'probable error' of a single observation is approximately:",
       "options": [
-        "0.5σ",
-        "0.6745σ",
         "1.0σ",
-        "2.0σ"
+        "0.6745σ",
+        "2.0σ",
+        "0.5σ"
       ],
       "answer": 1,
       "solution": "Probable error = 0.6745σ; it divides the distribution into equal halves."
@@ -285,10 +285,10 @@
       "options": [
         "There is a 95% chance the true value lies in the interval",
         "95% of observations are in the interval",
-        "The interval covers 95% of the area under the normal curve",
-        "All of the above in the frequentist sense"
+        "This is valid only under special circumstances",
+        "The interval covers 95% of the area under the normal curve"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "A 95% CI means that if we repeated the procedure many times, ~95% of such intervals would contain the true value."
     },
     {
@@ -301,12 +301,12 @@
       "difficulty": "medium",
       "stem": "In least squares adjustment, the quantity minimised is:",
       "options": [
-        "Sum of absolute residuals",
         "Sum of squared residuals",
+        "Maximum residual",
         "Sum of residuals",
-        "Maximum residual"
+        "Sum of absolute residuals"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Least squares minimises Σv², giving the best-fit solution in the minimum squares sense."
     },
     {
@@ -319,12 +319,12 @@
       "difficulty": "medium",
       "stem": "The 'chi-square' test is used to test:",
       "options": [
-        "Whether observations follow a normal distribution",
         "The goodness of fit of a distribution",
+        "This is true only for a different scenario",
         "Whether variance differs from a hypothesised value",
-        "All of the above"
+        "Whether observations follow a normal distribution"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Chi-square tests can assess normality, goodness of fit, and variance hypotheses."
     },
     {
@@ -337,12 +337,12 @@
       "difficulty": "medium",
       "stem": "A 't-distribution' is used instead of the normal distribution when:",
       "options": [
-        "The sample size is large",
-        "The population standard deviation is unknown and the sample is small",
         "The data is skewed",
-        "There is no random error"
+        "There is no random error",
+        "The population standard deviation is unknown and the sample is small",
+        "The sample size is large"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "The t-distribution accounts for the additional uncertainty when σ is estimated from a small sample."
     },
     {
@@ -355,9 +355,9 @@
       "difficulty": "medium",
       "stem": "As the sample size increases, the t-distribution approaches:",
       "options": [
-        "A uniform distribution",
-        "The normal distribution",
         "A binomial distribution",
+        "The normal distribution",
+        "A uniform distribution",
         "An exponential distribution"
       ],
       "answer": 1,
@@ -373,10 +373,10 @@
       "difficulty": "medium",
       "stem": "The 'number of degrees of freedom' in a least squares adjustment is:",
       "options": [
+        "Number of observations plus number of unknowns",
         "Number of observations",
-        "Number of unknowns",
         "Number of observations minus number of unknowns",
-        "Number of observations plus number of unknowns"
+        "Number of unknowns"
       ],
       "answer": 2,
       "solution": "DOF = n - u; redundancy (DOF) must be ≥ 1 for adjustment."
@@ -391,12 +391,12 @@
       "difficulty": "medium",
       "stem": "A 'misclosure' in a traverse is the:",
       "options": [
-        "Difference between the starting and ending coordinates",
-        "Total length of the traverse",
+        "Sum of interior angles",
         "Average angle",
-        "Sum of interior angles"
+        "Total length of the traverse",
+        "Difference between the starting and ending coordinates"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Misclosure = difference between computed and known end position; it quantifies the traverse error."
     },
     {
@@ -409,12 +409,12 @@
       "difficulty": "medium",
       "stem": "The 'precision' of measurements refers to:",
       "options": [
-        "Closeness to the true value",
-        "Closeness of repeated measurements to each other",
         "Correctness of the result",
-        "Absence of systematic error"
+        "Absence of systematic error",
+        "Closeness of repeated measurements to each other",
+        "Closeness to the true value"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Precision is the reproducibility of measurements; accuracy is closeness to truth."
     },
     {
@@ -427,12 +427,12 @@
       "difficulty": "medium",
       "stem": "A measurement can be precise but not accurate if:",
       "options": [
-        "Random errors are large",
-        "A systematic error is present",
+        "The mean is correct",
         "The sample size is small",
-        "The mean is correct"
+        "Random errors are large",
+        "A systematic error is present"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Systematic errors cause biased (inaccurate) results even when random scatter is small (high precision)."
     },
     {
@@ -445,12 +445,12 @@
       "difficulty": "medium",
       "stem": "To detect systematic errors, one should:",
       "options": [
+        "Ignore outliers",
         "Increase the number of observations",
         "Calibrate instruments and use independent methods",
-        "Take the mean",
-        "Ignore outliers"
+        "Take the mean"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Calibration, independent checks, and different methods reveal systematic errors that averaging cannot eliminate."
     },
     {
@@ -463,12 +463,12 @@
       "difficulty": "medium",
       "stem": "An 'outlier' is an observation that:",
       "options": [
-        "Is the largest value",
         "Differs significantly from other observations",
+        "Is the largest value",
         "Has zero residual",
         "Is the mean value"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "An outlier is a value that deviates markedly from the majority, suggesting a possible blunder."
     },
     {
@@ -481,12 +481,12 @@
       "difficulty": "medium",
       "stem": "The 'Chauvenet criterion' is used to:",
       "options": [
-        "Detect outliers and decide whether to reject them",
-        "Calculate standard deviation",
         "Apply least squares",
-        "Compute confidence intervals"
+        "Compute confidence intervals",
+        "Detect outliers and decide whether to reject them",
+        "Calculate standard deviation"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Chauvenet's criterion provides a probabilistic threshold for rejecting suspected outliers."
     },
     {
@@ -499,10 +499,10 @@
       "difficulty": "medium",
       "stem": "The 'propagation of errors' law states that for z = f(x, y), the variance of z is:",
       "options": [
-        "σ²_z = σ²_x + σ²_y",
+        "σ²_z = σ_x / σ_y",
         "σ²_z = (∂f/∂x)²σ²_x + (∂f/∂y)²σ²_y",
         "σ²_z = σ_x × σ_y",
-        "σ²_z = σ_x / σ_y"
+        "σ²_z = σ²_x + σ²_y"
       ],
       "answer": 1,
       "solution": "The general law of propagation of variances: σ²_z = Σ(∂f/∂xᵢ)²σ²_xᵢ for independent variables."
@@ -517,10 +517,10 @@
       "difficulty": "medium",
       "stem": "If two measurements are correlated, the covariance term in error propagation:",
       "options": [
-        "Is always zero",
-        "Must be included in the variance computation",
         "Can be ignored",
-        "Is always positive"
+        "Must be included in the variance computation",
+        "Is always positive",
+        "Is always zero"
       ],
       "answer": 1,
       "solution": "For correlated observations: σ²_z = Σ(∂f/∂xᵢ)²σ²_xᵢ + 2Σ(∂f/∂xᵢ)(∂f/∂xⱼ)Cov(xᵢ,xⱼ)."
@@ -553,12 +553,12 @@
       "difficulty": "medium",
       "stem": "In weighted least squares, the weighted mean is:",
       "options": [
-        "Simple arithmetic mean",
-        "Σ(pᵢ × lᵢ) / Σpᵢ",
+        "Σ(pᵢ × lᵢ) / n",
         "Σlᵢ / n",
-        "Σ(pᵢ × lᵢ) / n"
+        "Σ(pᵢ × lᵢ) / Σpᵢ",
+        "Simple arithmetic mean"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Weighted mean x̄ = Σ(pᵢlᵢ)/Σpᵢ; observations with higher weight contribute more."
     },
     {
@@ -573,8 +573,8 @@
       "options": [
         "The number of unknowns",
         "The number of observations minus the number of unknowns",
-        "The total number of observations",
-        "The number of stations"
+        "The number of stations",
+        "The total number of observations"
       ],
       "answer": 1,
       "solution": "Redundancy = DOF = n - u; it allows error detection and adjustment."
@@ -589,12 +589,12 @@
       "difficulty": "medium",
       "stem": "A 'free network' adjustment differs from a 'constrained' adjustment by:",
       "options": [
-        "Having no fixed points; the network is allowed to 'float'",
-        "Using fewer observations",
         "Being less accurate",
+        "Using fewer observations",
+        "Having no fixed points; the network is allowed to 'float'",
         "Not using least squares"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "In a free (inner-condition) network, no points are held fixed; the datum is defined by minimising the trace of the covariance matrix."
     },
     {
@@ -607,12 +607,12 @@
       "difficulty": "medium",
       "stem": "The 'a priori' standard deviation is:",
       "options": [
-        "Computed from the adjustment residuals",
         "Assumed before the adjustment based on expected accuracy",
-        "The true standard deviation",
-        "Always 1.0"
+        "Always 1.0",
+        "Computed from the adjustment residuals",
+        "The true standard deviation"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A priori σ₀ is estimated from expected instrument accuracy before the adjustment."
     },
     {
@@ -625,12 +625,12 @@
       "difficulty": "medium",
       "stem": "The 'a posteriori' standard deviation is:",
       "options": [
+        "The instrument accuracy",
         "Assumed before the adjustment",
         "Computed from the adjustment residuals after the least squares solution",
-        "The instrument accuracy",
         "Always equal to the a priori value"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "A posteriori σ₀ = √(v̂ᵀPv̂/DOF); it reflects the actual residuals from the adjustment."
     },
     {
@@ -643,12 +643,12 @@
       "difficulty": "medium",
       "stem": "The 'reference variance factor' (σ²₀) in least squares is estimated as:",
       "options": [
-        "v̂ᵀPv̂ / n",
         "v̂ᵀPv̂ / (n - u)",
+        "Σv / n",
         "v̂ᵀPv̂ × (n - u)",
-        "Σv / n"
+        "v̂ᵀPv̂ / n"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "σ̂²₀ = v̂ᵀPv̂ / DOF, where DOF = n - u."
     },
     {
@@ -661,12 +661,12 @@
       "difficulty": "medium",
       "stem": "A 'blunder detection' method based on redundancy is:",
       "options": [
-        "Data snooping (Baarda method)",
         "Mean computation",
-        "Standard deviation check",
-        "Range check"
+        "Range check",
+        "Data snooping (Baarda method)",
+        "Standard deviation check"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Baarda's data snooping tests each residual against a threshold to detect gross errors."
     },
     {
@@ -679,12 +679,12 @@
       "difficulty": "medium",
       "stem": "The 'internal reliability' of a network refers to:",
       "options": [
-        "Its ability to detect blunders",
+        "Its scale",
         "Its accuracy",
         "Its redundancy",
-        "Its scale"
+        "Its ability to detect blunders"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Internal reliability is the network's ability to detect its own gross errors through redundancy."
     },
     {
@@ -697,12 +697,12 @@
       "difficulty": "medium",
       "stem": "The 'external reliability' of a network refers to:",
       "options": [
+        "Its precision",
         "Its ability to detect blunders",
         "The impact of undetected blunders on the coordinates",
-        "Its precision",
         "Its scale accuracy"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "External reliability quantifies how much an undetected blunder would distort the final result."
     },
     {
@@ -715,12 +715,12 @@
       "difficulty": "medium",
       "stem": "In error propagation, if z = 2x + 3y and x, y are independent with σ_x = 1, σ_y = 2, then σ_z =:",
       "options": [
-        "√(4 + 36)",
-        "√(2 + 6)",
         "√(4 + 12)",
-        "√(4 + 6)"
+        "√(4 + 6)",
+        "√(2 + 6)",
+        "√(4 + 36)"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "σ²_z = (2)²σ²_x + (3)²σ²_y = 4(1) + 9(4) = 4 + 36 = 40; σ_z = √40. Wait: (2)²(1)² + (3)²(2)² = 4 + 36 = 40. Actually: σ_z² = 4(1) + 9(4) = 40. Correct answer is √40. Let me recheck: option A = √40. Hmm."
     },
     {
@@ -733,12 +733,12 @@
       "difficulty": "medium",
       "stem": "The 'law of propagation of covariances' in matrix form is:",
       "options": [
+        "Cov(Z) = Cov(X) / J",
         "Cov(Z) = J × Cov(X) × Jᵀ",
-        "Cov(Z) = Cov(X) × J",
         "Cov(Z) = J × Cov(X)",
-        "Cov(Z) = Cov(X) / J"
+        "Cov(Z) = Cov(X) × J"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Where J is the Jacobian matrix of partial derivatives ∂f/∂x."
     },
     {
@@ -752,11 +752,11 @@
       "stem": "A 'weighted residual' is:",
       "options": [
         "v × √p",
-        "v × p",
         "v / p",
-        "v² × p"
+        "v² × p",
+        "v × p"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Weighted residual = vᵢ × pᵢ; in data snooping, the normalised residual is vᵢ√pᵢ / σ₀."
     },
     {
@@ -769,12 +769,12 @@
       "difficulty": "medium",
       "stem": "The 'Baarda data snooping' test statistic is:",
       "options": [
-        "w_i = v_i√p_i / σ₀",
         "w_i = v_i × p_i",
+        "w_i = v_i√p_i / σ₀",
         "w_i = v_i / σ",
         "w_i = v_i² × p_i"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "w_i = v̂_i√p_i / σ̂₀ is compared against a critical value from the normal distribution."
     },
     {
@@ -805,12 +805,12 @@
       "difficulty": "medium",
       "stem": "The 'F-test' in least squares is used to:",
       "options": [
+        "Detect outliers",
         "Compare two variance estimates",
         "Test normality",
-        "Detect outliers",
         "Compute confidence intervals"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "The F-test compares two variance ratios; it is used to test if two populations have equal variances."
     },
     {
@@ -823,12 +823,12 @@
       "difficulty": "medium",
       "stem": "In a traverse, the 'angular misclosure' is distributed by:",
       "options": [
+        "Both the first and second options",
         "Applying the Bowditch rule",
         "Adjusting angles equally (Compass rule for angles)",
-        "Ignoring it",
-        "Only to the longest side"
+        "Ignoring it"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Angular misclosure is typically distributed equally among all measured angles."
     },
     {
@@ -842,11 +842,11 @@
       "stem": "The 'Bowditch rule' (Compass rule) for traverse adjustment distributes the:",
       "options": [
         "Angular misclosure equally",
-        "Linear misclosure proportional to side lengths",
         "Coordinates equally",
+        "Linear misclosure proportional to side lengths",
         "Errors randomly"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Bowditch: correction to latitude/proportion of a side = (side length / total perimeter) × total misclosure."
     },
     {
@@ -861,8 +861,8 @@
       "options": [
         "Proportional to side lengths",
         "Proportional to the latitude/projection of each side",
-        "Equally",
-        "To the last side only"
+        "To the last side only",
+        "Equally"
       ],
       "answer": 1,
       "solution": "Transit rule: correction ∝ latitude (or departure) of each side, rather than its length."
@@ -877,10 +877,10 @@
       "difficulty": "medium",
       "stem": "The 'Crandall rule' is a method for:",
       "options": [
-        "Adjusting level loops",
+        "Computing areas",
         "Adjusting trilateration networks",
         "Adjusting EDM distance measurements",
-        "Computing areas"
+        "Adjusting level loops"
       ],
       "answer": 2,
       "solution": "Crandall's method adjusts measured distances by applying corrections for slope, temperature, pressure, etc."
@@ -895,12 +895,12 @@
       "difficulty": "medium",
       "stem": "The 'correction' to an observation has the same magnitude but opposite sign as the:",
       "options": [
-        "Residual",
-        "Mean",
         "Standard deviation",
-        "Weight"
+        "Weight",
+        "Mean",
+        "Residual"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "True error = correction + residual (in practice, correction ≈ -residual for small errors)."
     },
     {
@@ -913,12 +913,12 @@
       "difficulty": "medium",
       "stem": "Photogrammetry is the science of making measurements from:",
       "options": [
+        "Field notes only",
         "Maps only",
         "Photographs or other sensory data",
-        "Field notes only",
         "Satellite signals"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Photogrammetry extracts 3D information from 2D images."
     },
     {
@@ -931,12 +931,12 @@
       "difficulty": "medium",
       "stem": "A 'metric camera' is calibrated to have:",
       "options": [
-        "Variable focal length",
-        "Known and stable interior orientation parameters",
+        "Automatic focus",
         "No lens",
-        "Automatic focus"
+        "Known and stable interior orientation parameters",
+        "Variable focal length"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Metric cameras have precisely known focal length, principal point, and lens distortion parameters."
     },
     {
@@ -949,12 +949,12 @@
       "difficulty": "medium",
       "stem": "The 'focal length' of a camera lens is the distance from the:",
       "options": [
-        "Front element to the subject",
         "Centre of the lens to the focal plane (image)",
+        "Two nodal points of the lens",
         "Camera body to the ground",
-        "Two nodal points of the lens"
+        "Front element to the subject"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Focal length f is the distance from the optical centre to the image plane when focused at infinity."
     },
     {
@@ -967,9 +967,9 @@
       "difficulty": "medium",
       "stem": "The 'principal point' of a photograph is:",
       "options": [
-        "The centre of the photograph",
-        "The intersection of the perpendicular from the lens centre to the image plane",
         "The corner of the photo",
+        "The intersection of the perpendicular from the lens centre to the image plane",
+        "The centre of the photograph",
         "The nadir point"
       ],
       "answer": 1,
@@ -986,11 +986,11 @@
       "stem": "The 'fiducial marks' on a metric camera are used to:",
       "options": [
         "Enhance the photo",
-        "Define the coordinate system of the photograph",
         "Measure distances",
-        "Focus the lens"
+        "Focus the lens",
+        "Define the coordinate system of the photograph"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Fiducial marks (typically 4 or 8) define the photo coordinate system."
     },
     {
@@ -1003,12 +1003,12 @@
       "difficulty": "medium",
       "stem": "The 'nadir point' on a photograph is the point directly:",
       "options": [
-        "Above the camera",
         "Below the camera on the ground",
+        "At the principal point",
         "At the horizon",
-        "At the principal point"
+        "Above the camera"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "The nadir is the ground point vertically below the camera; on an tilted photo it differs from the principal point."
     },
     {
@@ -1021,10 +1021,10 @@
       "difficulty": "medium",
       "stem": "A 'vertical photograph' has the camera axis:",
       "options": [
-        "Perfectly vertical",
+        "At 45°",
         "As nearly vertical as possible, within ~3° of plumb",
         "Horizontal",
-        "At 45°"
+        "Perfectly vertical"
       ],
       "answer": 1,
       "solution": "A 'vertical' photo is nominally vertical but may have a slight tilt (typically < 3°)."
@@ -1039,12 +1039,12 @@
       "difficulty": "medium",
       "stem": "Tilt on a photograph causes:",
       "options": [
-        "Uniform scale everywhere",
-        "Scale variation across the photo",
+        "This contradicts the established principle",
         "No distortion",
-        "Only color distortion"
+        "Scale variation across the photo",
+        "Uniform scale everywhere"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Tilt introduces scale variations and displacements proportional to the tilt angle and distance from the axis."
     },
     {
@@ -1058,11 +1058,11 @@
       "stem": "The 'scale' of a vertical photograph at a point is:",
       "options": [
         "f / H",
+        "(H - h) / f",
         "f / (H - h)",
-        "H / f",
-        "(H - h) / f"
+        "H / f"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Scale s = f / (H - h), where f = focal length, H = flying height above datum, h = ground elevation."
     },
     {
@@ -1075,12 +1075,12 @@
       "difficulty": "medium",
       "stem": "The flying height H in the scale formula is measured from:",
       "options": [
+        "Sea level to the aircraft",
         "Ground level",
         "Mean sea level (datum)",
-        "The camera to the ground vertically",
-        "Sea level to the aircraft"
+        "The camera to the ground vertically"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "H is the height of the exposure station above the datum (usually MSL)."
     },
     {
@@ -1093,12 +1093,12 @@
       "difficulty": "medium",
       "stem": "A 'parallax' in stereo vision is the:",
       "options": [
-        "Difference in position of a point on two overlapping photos",
-        "Brightness difference",
         "Color difference",
+        "Brightness difference",
+        "Difference in position of a point on two overlapping photos",
         "Focus difference"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Parallax p = x_left - x_right; it is used to determine height (relative elevation)."
     },
     {
@@ -1111,12 +1111,12 @@
       "difficulty": "medium",
       "stem": "The 'parallax formula' for elevation is:",
       "options": [
-        "h = H × p / B",
-        "h = H - Bf / p",
         "h = B × p / f",
-        "h = f / B × p"
+        "h = f / B × p",
+        "h = H - Bf / p",
+        "h = H × p / B"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Elevation h = H - Bf/p, where B = air base, f = focal length, p = parallax."
     },
     {
@@ -1129,10 +1129,10 @@
       "difficulty": "medium",
       "stem": "The 'air base' (B) is the:",
       "options": [
-        "Distance between two ground points",
+        "Height of the aircraft",
         "Distance between two successive exposure stations",
         "Width of the photograph",
-        "Height of the aircraft"
+        "Distance between two ground points"
       ],
       "answer": 1,
       "solution": "Air base B is the horizontal distance between consecutive camera stations."
@@ -1147,12 +1147,12 @@
       "difficulty": "medium",
       "stem": "For stereo overlap, the standard forward overlap is:",
       "options": [
+        "10%",
         "30%",
-        "50-60%",
         "90%",
-        "10%"
+        "50-60%"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "60% forward overlap (and 30% side overlap) is standard for aerial photography."
     },
     {
@@ -1165,12 +1165,12 @@
       "difficulty": "medium",
       "stem": "The 'stereoscope' is used to:",
       "options": [
-        "Measure photo coordinates",
         "View two overlapping photos in 3D (stereo model)",
+        "Measure photo coordinates",
         "Develop photographs",
         "Print maps"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "A stereoscope creates a 3D perception from a stereo pair of overlapping photographs."
     },
     {
@@ -1183,12 +1183,12 @@
       "difficulty": "medium",
       "stem": "An 'anaglyph' is a stereo pair viewed with:",
       "options": [
+        "Naked eye",
         "Red-green (or red-cyan) filtered glasses",
         "Polarised glasses",
-        "Naked eye",
         "Magnifying glasses"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Anaglyphs use colour-filtered glasses (typically red/cyan) to separate left and right images."
     },
     {
@@ -1201,12 +1201,12 @@
       "difficulty": "medium",
       "stem": "The 'collinearity condition' in photogrammetry states that:",
       "options": [
-        "Object point, lens centre, and image point are collinear",
-        "Two photos must be parallel",
         "The ground must be flat",
-        "The camera must be vertical"
+        "The camera must be vertical",
+        "Two photos must be parallel",
+        "Object point, lens centre, and image point are collinear"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "The collinearity equations: the exposure station, image point, and ground point all lie on a straight line."
     },
     {
@@ -1219,12 +1219,12 @@
       "difficulty": "medium",
       "stem": "A 'digital elevation model' (DEM) is:",
       "options": [
-        "A 2D map",
-        "A regular grid of elevation values",
+        "A satellite image",
         "A photograph",
-        "A satellite image"
+        "A 2D map",
+        "A regular grid of elevation values"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "A DEM is a raster (grid) of elevation values representing the terrain surface."
     },
     {
@@ -1237,9 +1237,9 @@
       "difficulty": "medium",
       "stem": "A 'digital surface model' (DSM) includes:",
       "options": [
-        "Only bare earth",
-        "Bare earth plus buildings and vegetation",
         "Water bodies only",
+        "Bare earth plus buildings and vegetation",
+        "This is valid only under special circumstances",
         "Underground features"
       ],
       "answer": 1,
@@ -1256,11 +1256,11 @@
       "stem": "An 'orthophoto' is:",
       "options": [
         "A regular aerial photo",
-        "A photograph corrected for terrain displacement and tilt to have uniform scale",
         "A satellite image",
-        "A scanned map"
+        "A scanned map",
+        "A photograph corrected for terrain displacement and tilt to have uniform scale"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Orthorectification removes terrain and tilt distortions, creating a photo with map-like geometry."
     },
     {
@@ -1273,12 +1273,12 @@
       "difficulty": "medium",
       "stem": "LiDAR stands for:",
       "options": [
-        "Light Detection And Ranging",
-        "Laser Distance And Range",
         "Light Data And Recording",
-        "Laser Direction And Range"
+        "Laser Direction And Range",
+        "Laser Distance And Range",
+        "Light Detection And Ranging"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "LiDAR = Light Detection And Ranging; uses laser pulses to measure distances."
     },
     {
@@ -1291,12 +1291,12 @@
       "difficulty": "medium",
       "stem": "A LiDAR point cloud is:",
       "options": [
-        "A single point",
         "A large collection of 3D points from laser returns",
         "A 2D image",
-        "A vector map"
+        "A vector map",
+        "A single point"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "LiDAR produces dense 3D point clouds with x, y, z and intensity values."
     },
     {
@@ -1309,12 +1309,12 @@
       "difficulty": "medium",
       "stem": "The 'ground sampling distance' (GSD) in aerial photography is:",
       "options": [
-        "The height of the camera",
         "The ground area represented by one pixel",
+        "The focal length",
         "The photo overlap",
-        "The focal length"
+        "The height of the camera"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "GSD is the ground distance between pixel centres; smaller GSD = higher resolution."
     },
     {
@@ -1327,12 +1327,12 @@
       "difficulty": "medium",
       "stem": "For drone survey planning, the GSD is determined by:",
       "options": [
-        "Camera resolution only",
         "Flying height, focal length, and sensor pixel size",
+        "Ground features",
         "Weather only",
-        "Ground features"
+        "Camera resolution only"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "GSD = (pixel size × flying height) / focal length."
     },
     {
@@ -1345,12 +1345,12 @@
       "difficulty": "medium",
       "stem": "A 'bundle adjustment' in photogrammetry adjusts:",
       "options": [
-        "Only the camera positions",
+        "Both the first and second options",
+        "This is theoretically possible but impractical",
         "Image coordinates, camera orientation, and object coordinates simultaneously",
-        "Only the ground control points",
-        "Only the DEM"
+        "This reverses the cause and effect"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Bundle adjustment is a rigorous simultaneous adjustment of all parameters using the collinearity condition."
     },
     {
@@ -1363,9 +1363,9 @@
       "difficulty": "medium",
       "stem": "The 'interior orientation' parameters of a camera include:",
       "options": [
-        "Latitude and longitude",
-        "Focal length, principal point, and lens distortion",
         "Flying height and speed",
+        "Focal length, principal point, and lens distortion",
+        "Latitude and longitude",
         "Ground control coordinates"
       ],
       "answer": 1,
@@ -1381,12 +1381,12 @@
       "difficulty": "medium",
       "stem": "The 'exterior orientation' of a photo specifies:",
       "options": [
-        "Camera internal parameters",
         "The position and orientation of the camera in space at exposure",
-        "Ground coordinates",
-        "Photo scale"
+        "Photo scale",
+        "Camera internal parameters",
+        "Ground coordinates"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Exterior orientation = 3 position (X₀, Y₀, Z₀) and 3 rotation (ω, φ, κ) parameters."
     },
     {
@@ -1399,12 +1399,12 @@
       "difficulty": "medium",
       "stem": "The six exterior orientation parameters are:",
       "options": [
-        "Three positions and three rotations",
         "Three scales and three offsets",
         "Three focal lengths and three distortions",
+        "Three positions and three rotations",
         "Three latitudes and three longitudes"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "X₀, Y₀, Z₀ (position) and ω, φ, κ (rotation angles about the axes)."
     },
     {
@@ -1417,12 +1417,12 @@
       "difficulty": "medium",
       "stem": "The 'Omega-Phi-Kappa' rotation system rotates the photo about:",
       "options": [
+        "An arbitrary axis",
+        "Both the first and second options",
         "X, Y, Z axes of the photo coordinate system",
-        "Only the Z axis",
-        "The ground axes",
-        "An arbitrary axis"
+        "The ground axes"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "ω (roll) about X-axis, φ (pitch) about Y-axis, κ (yaw) about Z-axis."
     },
     {
@@ -1453,12 +1453,12 @@
       "difficulty": "medium",
       "stem": "In drone photogrammetry, 'structure from motion' (SfM) is:",
       "options": [
+        "A GPS technique",
         "A technique to measure building heights",
         "A method to reconstruct 3D structure from overlapping 2D images",
-        "A type of camera",
-        "A GPS technique"
+        "A type of camera"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "SfM automatically matches features across images to build 3D point clouds and camera positions."
     },
     {
@@ -1472,11 +1472,11 @@
       "stem": "Seven people A, B, C, D, E, F, G are standing in a line. A is third from left. B is to the right of A. C is immediately to the left of B. D is at the extreme right. E is between A and B. Who is immediately to the right of E?",
       "options": [
         "B",
-        "C",
         "F",
+        "C",
         "G"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Arrangement: _,_,A,E,_,B,C with D at right end. B is right of E."
     },
     {
@@ -1489,10 +1489,10 @@
       "difficulty": "medium",
       "stem": "Which river is known as the 'Sorrow of Bihar'?",
       "options": [
-        "A. Ganga",
-        "B. Kosi",
         "C. Gandak",
-        "D. Son"
+        "B. Kosi",
+        "D. Son",
+        "A. Ganga"
       ],
       "answer": 1,
       "solution": "Kosi river is known as the Sorrow of Bihar due to frequent floods."
@@ -1507,12 +1507,12 @@
       "difficulty": "medium",
       "stem": "The southernmost point of India is located in which state/UT?",
       "options": [
-        "A. Kerala",
         "B. Tamil Nadu",
-        "C. Lakshadweep",
-        "D. Andaman & Nicobar Islands"
+        "A. Kerala",
+        "D. Andaman & Nicobar Islands",
+        "C. Lakshadweep"
       ],
-      "answer": 3,
+      "answer": 2,
       "solution": "Indira Point in Great Nicobar is the southernmost point of India."
     },
     {
@@ -1526,11 +1526,11 @@
       "stem": "Which pass connects Srinagar with Leh?",
       "options": [
         "A. Rohtang Pass",
-        "B. Zoji La",
         "C. Banihal Pass",
-        "D. Khardung La"
+        "D. Khardung La",
+        "B. Zoji La"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Zoji La connects Srinagar with Leh in Jammu & Kashmir."
     },
     {
@@ -1545,10 +1545,10 @@
       "options": [
         "A. Rajasthan",
         "B. Madhya Pradesh",
-        "C. Odisha",
-        "D. West Bengal"
+        "D. West Bengal",
+        "C. Odisha"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Tropic of Cancer passes through Rajasthan, MP, Gujarat, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram — but not Odisha."
     },
     {
@@ -1562,9 +1562,9 @@
       "stem": "Which is the largest saltwater lake in India?",
       "options": [
         "A. Chilika Lake",
-        "B. Pulicat Lake",
+        "D. Wular Lake",
         "C. Sambhar Lake",
-        "D. Wular Lake"
+        "B. Pulicat Lake"
       ],
       "answer": 0,
       "solution": "Chilika Lake in Odisha is the largest saltwater lake in India."
@@ -1579,12 +1579,12 @@
       "difficulty": "medium",
       "stem": "Which Indian state has the longest coastline?",
       "options": [
-        "A. Gujarat",
-        "B. Maharashtra",
         "C. Tamil Nadu",
-        "D. Andhra Pradesh"
+        "A. Gujarat",
+        "D. Andhra Pradesh",
+        "B. Maharashtra"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Gujarat has the longest coastline among Indian states."
     },
     {
@@ -1597,12 +1597,12 @@
       "difficulty": "medium",
       "stem": "The Jog Falls is formed by which river?",
       "options": [
+        "D. Tungabhadra",
         "A. Krishna",
         "B. Kaveri",
-        "C. Sharavathi",
-        "D. Tungabhadra"
+        "C. Sharavathi"
       ],
-      "answer": 2,
+      "answer": 3,
       "solution": "Jog Falls is formed by the Sharavathi River in Karnataka."
     },
     {
@@ -1615,12 +1615,12 @@
       "difficulty": "medium",
       "stem": "Which of the following is the highest peak in South India?",
       "options": [
-        "A. Anamudi",
         "B. Doddabetta",
+        "D. Kudremukh",
         "C. Mahendragiri",
-        "D. Kudremukh"
+        "A. Anamudi"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Anamudi (2,695 m) in Kerala is the highest peak in South India."
     },
     {
@@ -1633,12 +1633,12 @@
       "difficulty": "medium",
       "stem": "Which canal connects the Bay of Bengal with the Arabian Sea through India?",
       "options": [
-        "A. Indira Gandhi Canal",
         "B. Suez Canal",
         "C. Grand Anicut Canal",
-        "D. Narmada Canal"
+        "D. Narmada Canal",
+        "A. Indira Gandhi Canal"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Indira Gandhi Canal is the longest canal in India."
     },
     {
@@ -1652,8 +1652,8 @@
       "stem": "The Sundarbans delta is formed by which rivers?",
       "options": [
         "A. Ganga and Brahmaputra",
-        "B. Ganga and Yamuna",
         "C. Brahmaputra and Meghna",
+        "B. Ganga and Yamuna",
         "D. Ganga and Son"
       ],
       "answer": 0,
@@ -1669,12 +1669,12 @@
       "difficulty": "medium",
       "stem": "Which soil type is most suitable for cotton cultivation in India?",
       "options": [
-        "A. Alluvial soil",
         "B. Black (regur) soil",
+        "D. Laterite soil",
         "C. Red soil",
-        "D. Laterite soil"
+        "A. Alluvial soil"
       ],
-      "answer": 1,
+      "answer": 0,
       "solution": "Black (regur) soil is ideal for cotton cultivation."
     },
     {
@@ -1687,12 +1687,12 @@
       "difficulty": "medium",
       "stem": "The Palk Strait separates India from which country?",
       "options": [
+        "D. Bangladesh",
         "A. Maldives",
         "B. Sri Lanka",
-        "C. Myanmar",
-        "D. Bangladesh"
+        "C. Myanmar"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Palk Strait separates India (Tamil Nadu) from Sri Lanka."
     },
     {
@@ -1705,12 +1705,12 @@
       "difficulty": "medium",
       "stem": "Which pass is known as the 'Gateway to the North-East'?",
       "options": [
-        "A. Nathu La",
-        "B. Varsity Pass",
         "C. Siliguri Corridor",
-        "D. Banihal Pass"
+        "B. Varsity Pass",
+        "D. Banihal Pass",
+        "A. Nathu La"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Siliguri Corridor (Chicken's Neck) connects mainland India to the North-East."
     },
     {
@@ -1723,12 +1723,12 @@
       "difficulty": "medium",
       "stem": "Which Indian state receives rainfall from both the Southwest and Northeast monsoons?",
       "options": [
+        "D. Rajasthan",
         "A. Kerala",
         "B. Tamil Nadu",
-        "C. Karnataka",
-        "D. Rajasthan"
+        "C. Karnataka"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Tamil Nadu receives rainfall from both Southwest (partial) and Northeast monsoons."
     },
     {
@@ -1743,8 +1743,8 @@
       "options": [
         "A. Arunachal Pradesh",
         "B. Madhya Pradesh",
-        "C. Maharashtra",
-        "D. Chhattisgarh"
+        "D. Chhattisgarh",
+        "C. Maharashtra"
       ],
       "answer": 1,
       "solution": "Madhya Pradesh has the largest forest cover in India by area."
@@ -1759,12 +1759,12 @@
       "difficulty": "medium",
       "stem": "Who was the first President of India?",
       "options": [
+        "C. S. Radhakrishnan",
         "A. Jawaharlal Nehru",
         "B. Dr. Rajendra Prasad",
-        "C. S. Radhakrishnan",
         "D. Zakir Husain"
       ],
-      "answer": 1,
+      "answer": 2,
       "solution": "Dr. Rajendra Prasad was the first President of India (1950-1962)."
     },
     {
@@ -1777,12 +1777,12 @@
       "difficulty": "medium",
       "stem": "The fundamental rights are enshrined in which part of the Indian Constitution?",
       "options": [
-        "A. Part II",
-        "B. Part III",
+        "D. Part V",
         "C. Part IV",
-        "D. Part V"
+        "A. Part II",
+        "B. Part III"
       ],
-      "answer": 1,
+      "answer": 3,
       "solution": "Fundamental Rights are in Part III (Articles 12-35) of the Indian Constitution."
     },
     {
@@ -1795,12 +1795,12 @@
       "difficulty": "medium",
       "stem": "How many fundamental duties are listed in the Indian Constitution?",
       "options": [
-        "A. 9",
         "B. 10",
         "C. 11",
+        "A. 9",
         "D. 12"
       ],
-      "answer": 2,
+      "answer": 1,
       "solution": "There are 11 fundamental duties under Article 51A."
     },
     {
@@ -1813,13 +1813,85 @@
       "difficulty": "medium",
       "stem": "Which Article of the Indian Constitution abolishes untouchability?",
       "options": [
+        "C. Article 17",
         "A. Article 14",
         "B. Article 15",
-        "C. Article 17",
         "D. Article 19"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Article 17 abolishes untouchability in all forms."
+    },
+    {
+      "id": 81,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A product is bought at 10% discount on marked price and sold at 10% above marked price. What is the gain percent on the cost price?",
+      "options": [
+        "22.22%",
+        "25%",
+        "18%",
+        "20%"
+      ],
+      "answer": 0,
+      "solution": "CP = 0.90 × MP, SP = 1.10 × MP. Gain = 0.20 × MP. Gain% = (0.20MP / 0.90MP) × 100 = 22.22%"
+    },
+    {
+      "id": 82,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of present ages of A and B is 5:7. If B is 28 years old, what is A's age?",
+      "options": [
+        "20",
+        "24",
+        "22",
+        "18"
+      ],
+      "answer": 0,
+      "solution": "5/7 = A/28 → A = 20"
+    },
+    {
+      "id": 83,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "How many times do the hands of a clock form a right angle in a day?",
+      "options": [
+        "48",
+        "22",
+        "24",
+        "44"
+      ],
+      "answer": 3,
+      "solution": "The hands are at right angle 22 times in 12 hours. So 44 times in 24 hours"
+    },
+    {
+      "id": 84,
+      "subject": "Technical (Mining)",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "How many times does the 29th of a month occur in 400 years?",
+      "options": [
+        "4500",
+        "4490",
+        "4400",
+        "4497"
+      ],
+      "answer": 3,
+      "solution": "In 400 years: 97 leap years. So 29 Feb occurs 97 times. Total 29th of any month = 12×400 - 97 = 4497... Actually: 400 years have 4800 months. 97 of those are Feb in leap years. So 29th occurs 4800 - 97 = 4703... Let me recalculate. Every month has a 29th. In 400 years = 4800 months. But Feb in non-leap years only has 28 days. Non-leap Feb = 400 - 97 = 303. So 29th occurs 4800 - 303 = 4497 times."
     }
   ]
 }

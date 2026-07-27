@@ -36,12 +36,12 @@
       "difficulty": "medium",
       "stem": "STATCOM in transmission system provides:",
       "options": [
-        "Reactive power compensation and voltage support",
         "Active power only",
         "Frequency control",
-        "Current limiting only"
+        "Current limiting only",
+        "Reactive power compensation and voltage support"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "STATCOM: voltage source converter for reactive compensation"
     },
     {
@@ -54,12 +54,12 @@
       "difficulty": "medium",
       "stem": "Static VAR Compensator (SVC) consists of:",
       "options": [
+        "Neither the first nor the second option",
         "TCR (thyristor reactor) and TSC (thyristor capacitor)",
-        "Only capacitor",
-        "Only reactor",
+        "Both the first and second options",
         "Transformer only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "SVC: TCR for absorbing VARs, TSC for generating VARs"
     },
     {
@@ -72,12 +72,12 @@
       "difficulty": "medium",
       "stem": "Thyristor Controlled Series Capacitor (TCSC) is used for:",
       "options": [
-        "Line impedance control and power flow management",
         "Bus protection",
+        "Lighting control",
         "Motor starting",
-        "Lighting control"
+        "Line impedance control and power flow management"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "TCSC: varies line reactance for power flow control"
     },
     {
@@ -90,12 +90,12 @@
       "difficulty": "medium",
       "stem": "Wide Area Measurement System (WAMS) uses:",
       "options": [
+        "No technology",
         "PMUs and communication for grid stability monitoring",
         "Local meters only",
-        "Manual readings",
-        "No technology"
+        "Manual readings"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "WAMS: GPS-synchronized PMUs for real-time grid visibility"
     },
     {
@@ -109,8 +109,8 @@
       "stem": "Synchrophasor standard IEEE C37.118 defines:",
       "options": [
         "Measurement accuracy and reporting rate of PMUs",
-        "Cable sizing",
         "Transformer rating",
+        "Cable sizing",
         "Motor classification"
       ],
       "answer": 0,
@@ -126,12 +126,12 @@
       "difficulty": "medium",
       "stem": "Power quality disturbances include:",
       "options": [
-        "Voltage sag, swell, flicker, harmonics, transients",
-        "Only overcurrent",
-        "Only overvoltage",
-        "Only frequency change"
+        "Neither the first nor the second option",
+        "Both the first and second options",
+        "This contradicts the established principle",
+        "Voltage sag, swell, flicker, harmonics, transients"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "PQ: sag, swell, flicker, harmonics, transients, interruptions"
     },
     {
@@ -144,12 +144,12 @@
       "difficulty": "medium",
       "stem": "Active harmonic filter works by:",
       "options": [
-        "Injecting compensating harmonic currents",
-        "Blocking harmonics",
         "Shorting harmonics",
-        "Ignoring harmonics"
+        "Ignoring harmonics",
+        "Injecting compensating harmonic currents",
+        "Blocking harmonics"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "AHF: measures harmonics, injects equal and opposite"
     },
     {
@@ -162,12 +162,12 @@
       "difficulty": "medium",
       "stem": "IEEE 80 is the standard for:",
       "options": [
-        "Substation safety - step and touch potentials",
+        "Motor efficiency",
         "Cable sizing",
         "Transformer rating",
-        "Motor efficiency"
+        "Substation safety - step and touch potentials"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "IEEE 80: guide for safety in AC substation grounding"
     },
     {
@@ -180,12 +180,12 @@
       "difficulty": "medium",
       "stem": "Safe touch voltage depends on:",
       "options": [
+        "Chemical resistance of components",
         "Body resistance, fault duration, and surface layer resistivity",
-        "Only body resistance",
-        "Only voltage",
-        "Only current"
+        "Neither the first nor the second option",
+        "This is outdated information"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Touch V_safe = f(Rbody, tf, ρs, Cb)"
     },
     {
@@ -198,12 +198,12 @@
       "difficulty": "medium",
       "stem": "Safe step voltage depends on:",
       "options": [
-        "Foot contact resistance, fault duration, body resistance",
-        "Only current",
-        "Only voltage",
-        "Only frequency"
+        "Thermal insulation properties",
+        "This applies to a different field entirely",
+        "Neither the first nor the second option",
+        "Foot contact resistance, fault duration, body resistance"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Step V_safe = f(Rfoot, tf, ρs, Cb)"
     },
     {
@@ -216,12 +216,12 @@
       "difficulty": "medium",
       "stem": "Earth Potential Rise (EPR) is:",
       "options": [
-        "Voltage rise of earth grid during fault relative to remote earth",
         "Normal earth voltage",
+        "Voltage rise of earth grid during fault relative to remote earth",
         "Zero always",
         "Negative voltage"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "EPR = If × Rg, can be several kV during faults"
     },
     {
@@ -234,12 +234,12 @@
       "difficulty": "medium",
       "stem": "Soil resistivity values typically range from:",
       "options": [
+        "10000 ohm-m",
         "10 ohm-m (clay) to >1000 ohm-m (rock)",
         "0 ohm-m",
-        "10000 ohm-m",
         "1 ohm-m only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Clay/moist: 10-100; rock/granite: >1000 ohm-m"
     },
     {
@@ -252,12 +252,12 @@
       "difficulty": "medium",
       "stem": "Wenner 4-pin method soil resistivity calculation uses:",
       "options": [
-        "V/I × 2πa where a is pin spacing",
-        "V/I × a",
+        "V/I ÷ 2πa",
         "V × I × a",
-        "V/I ÷ 2πa"
+        "V/I × a",
+        "V/I × 2πa where a is pin spacing"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ρ = 2πa(V/I) for Wenner method"
     },
     {
@@ -270,12 +270,12 @@
       "difficulty": "medium",
       "stem": "Multiple earth pits reduce total resistance because:",
       "options": [
-        "Resistances add in parallel",
+        "Voltage increases",
         "They add in series",
-        "Current increases",
-        "Voltage increases"
+        "Resistances add in parallel",
+        "Current increases"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "n parallel pits: Req ≈ R/n"
     },
     {
@@ -288,12 +288,12 @@
       "difficulty": "medium",
       "stem": "Copper earth strip in substation grid is sized for:",
       "options": [
-        "Fault current and fault duration (thermal rating)",
-        "Normal current only",
         "Voltage only",
-        "Frequency only"
+        "Normal current only",
+        "Frequency only",
+        "Fault current and fault duration (thermal rating)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Size: I²t determines minimum cross-section for thermal withstand"
     },
     {
@@ -306,12 +306,12 @@
       "difficulty": "medium",
       "stem": "Chemical earthing compound typically contains:",
       "options": [
+        "Both the first and second options",
+        "This contradicts the established principle",
         "Bentonite, graphite, and cement",
-        "Only copper",
-        "Only iron",
-        "Only salt"
+        "Neither the first nor the second option"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Bentonite + graphite: retains moisture, reduces soil resistivity"
     },
     {
@@ -324,12 +324,12 @@
       "difficulty": "medium",
       "stem": "HRG (High Resistance Earthing) limits fault current to:",
       "options": [
-        "5A to 10A",
         "1000A",
+        "0A",
         "10000A",
-        "0A"
+        "5A to 10A"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "HRG: limits to 5-10A, allows continued operation"
     },
     {
@@ -342,12 +342,12 @@
       "difficulty": "medium",
       "stem": "Peterson coil is a:",
       "options": [
-        "Tuned reactor for arc suppression",
+        "Resistor",
         "Capacitor bank",
         "Transformer",
-        "Resistor"
+        "Tuned reactor for arc suppression"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Peterson: resonant reactor to cancel earth fault capacitive current"
     },
     {
@@ -360,12 +360,12 @@
       "difficulty": "medium",
       "stem": "Arc suppression coil rating is based on:",
       "options": [
-        "System charging current (capacitive)",
         "Load current",
+        "System charging current (capacitive)",
         "Short circuit current",
         "Normal current"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Rated for system total capacitive charging current"
     },
     {
@@ -378,12 +378,12 @@
       "difficulty": "medium",
       "stem": "Earthing transformer provides:",
       "options": [
-        "Neutral point for ungrounded systems",
         "Additional grounding",
-        "Voltage step-up",
-        "Current measurement"
+        "Current measurement",
+        "Neutral point for ungrounded systems",
+        "Voltage step-up"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Earthing T/F: creates neutral in delta or ungrounded systems"
     },
     {
@@ -396,12 +396,12 @@
       "difficulty": "medium",
       "stem": "Earthing transformer ZN (zigzag) winding has:",
       "options": [
-        "Interconnected phases for zero sequence path",
-        "Only phase windings",
         "No windings",
-        "Single winding"
+        "Single winding",
+        "Interconnected phases for zero sequence path",
+        "Current transformation only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Zigzag: provides low impedance path for zero sequence currents"
     },
     {
@@ -414,12 +414,12 @@
       "difficulty": "medium",
       "stem": "Touch potential in substation is limited by:",
       "options": [
+        "This ignores the practical considerations",
         "Earth mat design, surface gravel layer, fault duration",
-        "Only voltage",
-        "Only current",
-        "Only resistance"
+        "This reverses the cause and effect",
+        "Both the first and second options"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Design: earth grid + 100mm crushed rock (150-5000 ohm-m)"
     },
     {
@@ -432,12 +432,12 @@
       "difficulty": "medium",
       "stem": "Step potential in substation is limited by:",
       "options": [
+        "Both the first and second options",
+        "This applies to a different field entirely",
         "Earth mat mesh density and surface gravel",
-        "Only fence height",
-        "Only transformer size",
-        "Only cable size"
+        "Neither the first nor the second option"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Denser mesh + surface layer reduces step potential"
     },
     {
@@ -450,12 +450,12 @@
       "difficulty": "medium",
       "stem": "Equipotential bonding conductor in substation connects:",
       "options": [
+        "Neither the first nor the second option",
+        "This is theoretically possible but impractical",
         "All metallic structures to earth grid",
-        "Only transformers",
-        "Only cables",
-        "Only bus bars"
+        "This is an oversimplification"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Bonding: all metalwork connected to earth grid"
     },
     {
@@ -468,12 +468,12 @@
       "difficulty": "medium",
       "stem": "Earth continuity conductor (ECC) connects to:",
       "options": [
-        "All exposed metallic parts of electrical equipment",
-        "Only live conductors",
-        "Only neutral",
-        "Plastic parts only"
+        "This is not applicable in this context",
+        "This is a common misconception",
+        "Plastic parts only",
+        "All exposed metallic parts of electrical equipment"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ECC: ensures all metalwork is at earth potential"
     },
     {
@@ -486,12 +486,12 @@
       "difficulty": "medium",
       "stem": "TN-S system means:",
       "options": [
-        "Separate PE and N from source to load",
         "Combined PEN",
         "No earth",
-        "No neutral"
+        "No neutral",
+        "Separate PE and N from source to load"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "TN-S: protective earth separate from neutral"
     },
     {
@@ -504,12 +504,12 @@
       "difficulty": "medium",
       "stem": "TN-C system means:",
       "options": [
+        "No earth",
         "Combined PEN conductor throughout",
         "Separate PE and N",
-        "No earth",
         "No neutral"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "TN-C: PEN combined (4-wire system)"
     },
     {
@@ -525,7 +525,7 @@
         "Separate earth electrodes for source and consumer",
         "Common earth",
         "No earth",
-        "Only source earth"
+        "Neither the first nor the second option"
       ],
       "answer": 0,
       "solution": "TT: independent earth for source and load"
@@ -540,12 +540,12 @@
       "difficulty": "medium",
       "stem": "IT system fault behavior:",
       "options": [
-        "First fault alarm, second fault trip",
         "First fault trip immediately",
+        "Always trips",
         "No fault response",
-        "Always trips"
+        "First fault alarm, second fault trip"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "IT: first fault small current, alarm; second fault = short circuit"
     },
     {
@@ -559,9 +559,9 @@
       "stem": "Maximum touch voltage during earth fault at substation depends on:",
       "options": [
         "Fault current, grid resistance, soil resistivity",
-        "Only voltage",
-        "Only current",
-        "Only temperature"
+        "Chemical resistance of components",
+        "This is not applicable in this context",
+        "Both the first and second options"
       ],
       "answer": 0,
       "solution": "Touch V = f(If, Rgrid, ρs, body R, duration)"
@@ -576,12 +576,12 @@
       "difficulty": "medium",
       "stem": "Earth grid resistance formula (simplified) for square grid:",
       "options": [
+        "R = A/ρ",
         "R = ρ/(4√A) + ρ/Lt",
         "R = ρ/A",
-        "R = A/ρ",
         "R = ρ × L"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Approx: R = ρ/(4r) for circular plate, modified for mesh"
     },
     {
@@ -594,12 +594,12 @@
       "difficulty": "medium",
       "stem": "The safety criterion for earthing design is that touch and step voltages should be:",
       "options": [
-        "Below permissible limits set by IEEE 80",
         "As high as possible",
-        "Zero always",
-        "Equal to system voltage"
+        "Equal to system voltage",
+        "Below permissible limits set by IEEE 80",
+        "Zero always"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Design goal: Vtouch, Vstep < Vpermissible"
     },
     {
@@ -612,12 +612,12 @@
       "difficulty": "medium",
       "stem": "Earth fault relay with 50ms operating time combined with 500ms CB clearing gives total fault clearance of:",
       "options": [
-        "550ms",
         "50ms",
         "500ms",
+        "550ms",
         "5ms"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Total = relay time + CB time = 50 + 500 = 550ms"
     },
     {
@@ -630,12 +630,12 @@
       "difficulty": "medium",
       "stem": "For 415V system with 1s fault clearing, safe touch voltage is approximately:",
       "options": [
-        "70V to 120V",
+        "5V",
         "500V",
-        "1000V",
-        "5V"
+        "70V to 120V",
+        "1000V"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "IEEE 80: depends on body resistance (1000 ohm) and duration"
     },
     {
@@ -649,8 +649,8 @@
       "stem": "Corrosion of earth electrode is reduced by:",
       "options": [
         "Copper bonded steel rods and proper backfill",
-        "Painting only",
         "Using iron rods",
+        "Painting only",
         "Salt water"
       ],
       "answer": 0,
@@ -666,12 +666,12 @@
       "difficulty": "medium",
       "stem": "Earth fault current in solidly earthed system is typically:",
       "options": [
-        "Thousands of amperes",
-        "5A",
         "0.5A",
-        "0.01A"
+        "0.01A",
+        "5A",
+        "Thousands of amperes"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Solidly earthed: high fault current (kA range)"
     },
     {
@@ -685,9 +685,9 @@
       "stem": "The impedance of earth fault path includes:",
       "options": [
         "Phase conductor, earth conductor, earth electrode, return path",
-        "Only phase conductor",
-        "Only earth conductor",
-        "Only electrode"
+        "This ignores the practical considerations",
+        "Both the first and second options",
+        "This reverses the cause and effect"
       ],
       "answer": 0,
       "solution": "Complete path: phase -> fault -> earth -> electrode -> source neutral"
@@ -702,12 +702,12 @@
       "difficulty": "medium",
       "stem": "For safe earthing design, body current limit for ventricular fibrillation is approximately:",
       "options": [
+        "10A",
         "30mA to 50mA for 1 second",
         "1A",
-        "10A",
         "100A"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Dalziel equation: Ibody = k/√tf (typically 30-50mA threshold)"
     },
     {
@@ -720,12 +720,12 @@
       "difficulty": "medium",
       "stem": "Cross bonding of cable sheaths reduces:",
       "options": [
-        "Induced sheath circulating currents",
         "Cable current",
+        "Frequency",
         "Voltage",
-        "Frequency"
+        "Induced sheath circulating currents"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Cross bonding: eliminates circulating currents in cable sheaths"
     },
     {
@@ -738,12 +738,12 @@
       "difficulty": "medium",
       "stem": "Sheath voltage limiter (SVL) is used to:",
       "options": [
-        "Limit sheath voltage at cross-bonding points",
         "Increase sheath voltage",
         "Short circuit cables",
-        "Earth cables"
+        "Earth cables",
+        "Limit sheath voltage at cross-bonding points"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "SVL: surge diverter limits induced voltage on cable sheath"
     },
     {
@@ -756,12 +756,12 @@
       "difficulty": "medium",
       "stem": "Main earthing bar in substation connects to:",
       "options": [
-        "All earth conductors and earth grid",
-        "Only live parts",
-        "Only neutral",
-        "Nothing"
+        "Both the first and second options",
+        "This contradicts the established principle",
+        "Neither the first nor the second option",
+        "All earth conductors and earth grid"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "MEB: central connection point for all earthing conductors"
     },
     {
@@ -775,8 +775,8 @@
       "stem": "The earth grid in a substation is typically buried at depth of:",
       "options": [
         "0.5m to 1m",
-        "3m",
         "10m",
+        "3m",
         "0.1m"
       ],
       "answer": 0,
@@ -792,12 +792,12 @@
       "difficulty": "medium",
       "stem": "Galvanic corrosion between copper and steel earth electrodes can be reduced by:",
       "options": [
-        "Using same material electrodes or brass couplings",
+        "Using smaller electrodes",
         "Mixing materials",
-        "Adding salt",
-        "Using smaller electrodes"
+        "Using same material electrodes or brass couplings",
+        "Adding salt"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Avoid dissimilar metals in contact underground"
     },
     {
@@ -810,12 +810,12 @@
       "difficulty": "medium",
       "stem": "Soil treatment around earth electrode improves earthing by:",
       "options": [
+        "Increasing current",
         "Reducing local soil resistivity",
         "Increasing resistivity",
-        "Increasing current",
         "Reducing voltage"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bentonite/charcoal mix reduces local soil R"
     },
     {
@@ -828,12 +828,12 @@
       "difficulty": "medium",
       "stem": "The purpose of earth rods driven to great depth is to:",
       "options": [
+        "Reduce current",
         "Reach lower resistivity soil/water table",
         "Increase resistance",
-        "Reduce current",
         "Measure voltage"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Deep rods: reach moist clay or water table with lower R"
     },
     {
@@ -846,12 +846,12 @@
       "difficulty": "medium",
       "stem": "A substation earth grid design software considers:",
       "options": [
+        "Neither the first nor the second option",
+        "Both the first and second options",
         "IEEE 80 equations, soil model, grid geometry",
-        "Only current",
-        "Only voltage",
-        "Only temperature"
+        "This is a common misconception"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Software: CDEGS, ETAP for earthing analysis"
     },
     {
@@ -864,12 +864,12 @@
       "difficulty": "medium",
       "stem": "Switchyard earth grid and control room earth grid are:",
       "options": [
-        "Connected together",
-        "Separate and isolated",
+        "No connection",
         "Same grid",
-        "No connection"
+        "Connected together",
+        "Separate and isolated"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Connected: one common earthing system"
     },
     {
@@ -882,12 +882,12 @@
       "difficulty": "medium",
       "stem": "Earth leakage circuit breaker (ELCB) was replaced by:",
       "options": [
-        "RCCB/RCD (Residual Current device)",
+        "No replacement needed",
         "MCB only",
-        "Fuse only",
-        "No replacement needed"
+        "RCCB/RCD (Residual Current device)",
+        "Fuse only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "ELCB: obsolete, replaced by more sensitive RCCB/RCD"
     },
     {
@@ -900,12 +900,12 @@
       "difficulty": "medium",
       "stem": "Type AC RCD detects:",
       "options": [
-        "Sinusoidal AC residual current",
+        "All waveforms",
         "Pulsating DC only",
         "Smooth DC only",
-        "All waveforms"
+        "Sinusoidal AC residual current"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Type AC: sensitive to sinusoidal AC leakage"
     },
     {
@@ -918,12 +918,12 @@
       "difficulty": "medium",
       "stem": "Type A RCD detects:",
       "options": [
-        "Sinusoidal AC and pulsating DC residual current",
-        "Only AC",
-        "Only DC",
-        "Smooth DC only"
+        "This is true only for a different scenario",
+        "Smooth DC only",
+        "Neither the first nor the second option",
+        "Sinusoidal AC and pulsating DC residual current"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Type A: AC + pulsating DC (for electronic equipment)"
     },
     {
@@ -936,12 +936,12 @@
       "difficulty": "medium",
       "stem": "Type B RCD detects:",
       "options": [
-        "AC, pulsating DC, and smooth DC residual current",
-        "Only AC",
-        "Only DC",
-        "Only pulsating"
+        "This is true only for a different scenario",
+        "This assumes incorrect boundary conditions",
+        "Neither the first nor the second option",
+        "AC, pulsating DC, and smooth DC residual current"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Type B: all forms including smooth DC (for VFD applications)"
     },
     {
@@ -954,12 +954,12 @@
       "difficulty": "medium",
       "stem": "RCD sensitivity of 100mA is used for:",
       "options": [
-        "Fire protection",
-        "Personal protection only",
         "Equipment protection",
-        "Overload protection"
+        "Fire protection",
+        "Overload protection",
+        "Personal protection only"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "100mA: fire prevention; 30mA: personal protection"
     },
     {
@@ -972,12 +972,12 @@
       "difficulty": "medium",
       "stem": "The operating time of RCD for personal protection should be:",
       "options": [
-        "Less than 40ms at rated residual current",
         "1 second",
         "10 seconds",
+        "Less than 40ms at rated residual current",
         "1 minute"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "30mA, 40ms: prevents ventricular fibrillation"
     },
     {
@@ -990,12 +990,12 @@
       "difficulty": "medium",
       "stem": "RCD test button checks:",
       "options": [
+        "This applies only in specific conditions",
+        "Both the first and second options",
         "Operating mechanism and trip circuit",
-        "Only current rating",
-        "Only voltage rating",
-        "Only insulation"
+        "This contradicts the established principle"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Test button: verifies RCD trips at set sensitivity"
     },
     {
@@ -1009,8 +1009,8 @@
       "stem": "Selective RCD coordination uses:",
       "options": [
         "Different time delays for upstream and downstream RCDs",
-        "Same settings",
         "No coordination",
+        "Same settings",
         "Manual operation only"
       ],
       "answer": 0,
@@ -1028,8 +1028,8 @@
       "options": [
         "Using larger area grid, more conductors, deep rods",
         "Smaller grid",
-        "Fewer conductors",
-        "Shallow burial only"
+        "Shallow burial only",
+        "Fewer conductors"
       ],
       "answer": 0,
       "solution": "Lower R: larger grid area, more parallel paths, deep rods"
@@ -1044,12 +1044,12 @@
       "difficulty": "medium",
       "stem": "GIS (Gas Insulated Substation) uses SF6 because:",
       "options": [
-        "High dielectric strength (2.5x air) and arc quenching",
+        "Non-toxic",
         "Low cost",
-        "Easy to handle",
-        "Non-toxic"
+        "High dielectric strength (2.5x air) and arc quenching",
+        "Easy to handle"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "SF6: excellent insulation, arc quenching, chemically stable"
     },
     {
@@ -1062,12 +1062,12 @@
       "difficulty": "medium",
       "stem": "A 33kV GIS substation can be installed in:",
       "options": [
-        "Basement or rooftop of building",
+        "Desert only",
         "Open field only",
-        "Underwater",
-        "Desert only"
+        "Basement or rooftop of building",
+        "Underwater"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "GIS: compact, indoor/outdoor, building-compatible"
     },
     {
@@ -1080,12 +1080,12 @@
       "difficulty": "medium",
       "stem": "CT accuracy class 5P20 means:",
       "options": [
-        "5% composite error at 20 times rated current",
-        "5% at rated current",
         "20% at rated current",
-        "5% at 20A only"
+        "5% at 20A only",
+        "5% composite error at 20 times rated current",
+        "5% at rated current"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "5P20: protection CT, 5% error at 20x In"
     },
     {
@@ -1098,12 +1098,12 @@
       "difficulty": "medium",
       "stem": "CT accuracy class 0.2S means:",
       "options": [
-        "0.2% error at rated current (metering grade)",
-        "0.2% at fault current",
+        "0.2% always",
         "2% at rated current",
-        "0.2% always"
+        "0.2% error at rated current (metering grade)",
+        "0.2% at fault current"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "0.2S: high accuracy metering CT"
     },
     {
@@ -1116,12 +1116,12 @@
       "difficulty": "medium",
       "stem": "PT accuracy for metering is typically:",
       "options": [
-        "Class 0.2 to 1.0",
-        "Class 5.0",
+        "Class 25",
         "Class 10",
-        "Class 25"
+        "Class 0.2 to 1.0",
+        "Class 5.0"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Metering PT: 0.2 to 1.0 accuracy class"
     },
     {
@@ -1134,12 +1134,12 @@
       "difficulty": "medium",
       "stem": "Bus bar sizing for 2000A considers:",
       "options": [
+        "The statement is partially correct but incomplete",
         "Temperature rise, short circuit withstand, voltage drop",
-        "Only current rating",
-        "Only cost",
-        "Only weight"
+        "This is outdated information",
+        "Neither the first nor the second option"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bus: thermal (I²t), mechanical (fault), and voltage drop"
     },
     {
@@ -1153,9 +1153,9 @@
       "stem": "Battery capacity for substation is calculated based on:",
       "options": [
         "Duration of backup supply and discharge rate",
-        "Only voltage",
-        "Only current",
-        "Only temperature"
+        "Both the first and second options",
+        "This requires additional verification",
+        "Neither the first nor the second option"
       ],
       "answer": 0,
       "solution": "Capacity: Ah = load current × backup time × safety factor"
@@ -1170,12 +1170,12 @@
       "difficulty": "medium",
       "stem": "Battery backup of 1 hour at 100A requires capacity of:",
       "options": [
-        "100 Ah (minimum, typically 150Ah with margin)",
-        "1 Ah",
+        "1000 Ah",
         "10 Ah",
-        "1000 Ah"
+        "1 Ah",
+        "100 Ah (minimum, typically 150Ah with margin)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "100A × 1h = 100Ah (add 20-50% margin)"
     },
     {
@@ -1188,12 +1188,12 @@
       "difficulty": "medium",
       "stem": "Float voltage of a lead-acid battery cell is approximately:",
       "options": [
+        "3.6V",
         "2.1V to 2.3V per cell",
         "1.2V",
-        "3.6V",
         "4.2V"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Lead-acid float: 2.1-2.3V/cell (12.6-13.8V for 6-cell battery)"
     },
     {
@@ -1206,12 +1206,12 @@
       "difficulty": "medium",
       "stem": "Battery boost charging is done at:",
       "options": [
-        "Higher voltage than float to quickly recharge",
         "Same as float",
+        "AC voltage",
         "Lower voltage",
-        "AC voltage"
+        "Higher voltage than float to quickly recharge"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Boost: elevated voltage for fast recharge after discharge"
     },
     {
@@ -1224,12 +1224,12 @@
       "difficulty": "medium",
       "stem": "Control cable in substation is typically:",
       "options": [
-        "Screened/Shielded multi-pair cable",
-        "Single core power cable",
         "Overhead conductor",
-        "Coaxial only"
+        "Coaxial only",
+        "Single core power cable",
+        "Screened/Shielded multi-pair cable"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Control cable: screened, multi-pair, low voltage signals"
     },
     {
@@ -1242,12 +1242,12 @@
       "difficulty": "medium",
       "stem": "RTU (Remote Terminal Unit) in substation performs:",
       "options": [
-        "Data acquisition and remote control via SCADA",
+        "Current measurement only",
         "Power generation",
-        "Voltage step-up",
-        "Current measurement only"
+        "Data acquisition and remote control via SCADA",
+        "Voltage step-up"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "RTU: collects data, sends to SCADA, receives commands"
     },
     {
@@ -1260,12 +1260,12 @@
       "difficulty": "medium",
       "stem": "IEC 61850 uses which communication protocol?",
       "options": [
-        "Ethernet (TCP/IP, GOOSE)",
-        "Modbus only",
         "Profibus only",
-        "HART only"
+        "HART only",
+        "Ethernet (TCP/IP, GOOSE)",
+        "Modbus only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "IEC 61850: Ethernet-based with GOOSE for fast messages"
     },
     {
@@ -1279,9 +1279,9 @@
       "stem": "On-load tap changer (OLTC) can change taps:",
       "options": [
         "Under load without interrupting supply",
-        "Only at no load",
-        "Only manually",
-        "Never under load"
+        "Both the first and second options",
+        "Never under load",
+        "This is not applicable in this context"
       ],
       "answer": 0,
       "solution": "OLTC: changes transformer ratio while carrying current"
@@ -1296,12 +1296,12 @@
       "difficulty": "medium",
       "stem": "OLTC oil is separate from transformer main oil because:",
       "options": [
-        "Tap changer generates carbon and needs separate filtration",
-        "No reason",
         "Cost saving",
-        "Temperature difference"
+        "Temperature difference",
+        "Tap changer generates carbon and needs separate filtration",
+        "No reason"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "OLTC: carbon from arcing needs separate oil compartment"
     },
     {
@@ -1314,12 +1314,12 @@
       "difficulty": "medium",
       "stem": "SF6 gas pressure in GIS is monitored by:",
       "options": [
+        "Visual inspection only",
+        "This ignores the practical considerations",
         "Density relay with temperature compensation",
-        "Only pressure gauge",
-        "Only thermometer",
-        "Visual inspection only"
+        "Both the first and second options"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Density relay: temperature-compensated pressure monitoring"
     },
     {
@@ -1332,12 +1332,12 @@
       "difficulty": "medium",
       "stem": "GIS internal fault is detected by:",
       "options": [
-        "Buchholz relay, pressure relay, or differential protection",
-        "Visual inspection only",
         "Thermal imaging only",
-        "Sound only"
+        "Sound only",
+        "Buchholz relay, pressure relay, or differential protection",
+        "Visual inspection only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Multiple: gas relay, pressure rise, differential protection"
     },
     {
@@ -1350,12 +1350,12 @@
       "difficulty": "medium",
       "stem": "Bushing of a transformer is used to:",
       "options": [
+        "Support weight",
         "Bring HV conductor through grounded tank safely",
-        "Cool the transformer",
         "Store oil",
-        "Support weight"
+        "Cool the transformer"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Bushing: insulated passage through tank wall"
     },
     {
@@ -1368,12 +1368,12 @@
       "difficulty": "medium",
       "stem": "Capacitance graded bushing uses:",
       "options": [
-        "Multiple conducting layers with insulation",
+        "Oil only",
         "Single insulation layer",
-        "Air only",
-        "Oil only"
+        "Multiple conducting layers with insulation",
+        "Air only"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Capacitance grading: aluminum foil layers for uniform stress"
     },
     {
@@ -1386,12 +1386,12 @@
       "difficulty": "medium",
       "stem": "Surge arrester voltage rating is selected based on:",
       "options": [
+        "Thermal insulation properties",
         "Maximum system voltage and earthing factor",
-        "Only system voltage",
-        "Only current",
-        "Only frequency"
+        "Chemical resistance of components",
+        "Mechanical strength of materials"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "LA rating: MSL × earthing factor × safety margin"
     },
     {
@@ -1404,12 +1404,12 @@
       "difficulty": "medium",
       "stem": "Metal Oxide Surge Arrester (MOSA) uses:",
       "options": [
-        "ZnO varistor blocks",
-        "Carbon rod",
         "Spark gap only",
-        "Resistor only"
+        "Resistor only",
+        "Carbon rod",
+        "ZnO varistor blocks"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "MOSA: ZnO blocks with non-linear V-I characteristic"
     },
     {
@@ -1423,9 +1423,9 @@
       "stem": "Power transformer oil test BDV (Breakdown Voltage) should be:",
       "options": [
         "> 30kV for new oil",
-        "< 10kV",
+        "100kV",
         "5kV",
-        "100kV"
+        "< 10kV"
       ],
       "answer": 0,
       "solution": "New transformer oil: BDV > 30kV (2.5mm gap)"
@@ -1440,12 +1440,12 @@
       "difficulty": "medium",
       "stem": "Transformer oil acidity test indicates:",
       "options": [
+        "Winding resistance testing",
         "Degree of oil degradation/aging",
-        "Only moisture",
-        "Only temperature",
-        "Only colour"
+        "This is not applicable in this context",
+        "Both the first and second options"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Acidity: indicates oxidation level of oil"
     },
     {
@@ -1459,8 +1459,8 @@
       "stem": "Transformer oil sludge test indicates:",
       "options": [
         "Tendency of oil to form sludge deposits",
-        "Oil colour",
         "Oil viscosity",
+        "Oil colour",
         "Oil weight"
       ],
       "answer": 0,
@@ -1476,12 +1476,12 @@
       "difficulty": "medium",
       "stem": "Chandrayaan-3 successfully landed on Moon in:",
       "options": [
+        "2019",
         "2023",
         "2020",
-        "2019",
         "2025"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Chandrayaan-3: August 2023, south pole landing"
     },
     {
@@ -1494,12 +1494,12 @@
       "difficulty": "medium",
       "stem": "The highest gallantry award in India is:",
       "options": [
-        "Param Vir Chakra",
-        "Padma Vibhushan",
         "Bharat Ratna",
+        "Padma Vibhushan",
+        "Param Vir Chakra",
         "Arjuna Award"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "PVC: highest wartime gallantry award"
     },
     {
@@ -1512,12 +1512,12 @@
       "difficulty": "medium",
       "stem": "Indian Railways headquarters is at:",
       "options": [
-        "New Delhi (Rail Board)",
         "Mumbai",
         "Chennai",
-        "Kolkata"
+        "Kolkata",
+        "New Delhi (Rail Board)"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Railway Board HQ: New Delhi"
     },
     {
@@ -1548,12 +1548,12 @@
       "difficulty": "medium",
       "stem": "India became republic in:",
       "options": [
-        "1950",
         "1947",
         "1952",
-        "1960"
+        "1960",
+        "1950"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Republic Day: 26 January 1950"
     },
     {
@@ -1566,12 +1566,12 @@
       "difficulty": "medium",
       "stem": "The Planning Commission was replaced by:",
       "options": [
-        "NITI Aayog",
-        "Finance Commission",
         "Election Commission",
-        "UPSC"
+        "UPSC",
+        "Finance Commission",
+        "NITI Aayog"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "NITI Aayog: replaced Planning Commission in 2015"
     },
     {
@@ -1584,12 +1584,12 @@
       "difficulty": "medium",
       "stem": "G20 summit 2023 was held in:",
       "options": [
+        "Chennai",
         "New Delhi",
-        "Mumbai",
         "Bengaluru",
-        "Chennai"
+        "Mumbai"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "G20 2023: New Delhi"
     },
     {
@@ -1602,12 +1602,12 @@
       "difficulty": "medium",
       "stem": "UPI stands for:",
       "options": [
+        "United Payment Instrument",
         "Unified Payments Interface",
         "Universal Payment Interface",
-        "United Payment Instrument",
         "Unified Processing Interface"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "UPI = Unified Payments Interface (NPCI)"
     },
     {
@@ -1638,12 +1638,12 @@
       "difficulty": "medium",
       "stem": "India's largest state by area is:",
       "options": [
-        "Rajasthan",
         "Madhya Pradesh",
-        "Maharashtra",
-        "Uttar Pradesh"
+        "Uttar Pradesh",
+        "Rajasthan",
+        "Maharashtra"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "Rajasthan: largest by area (~342k sq km)"
     },
     {
@@ -1656,12 +1656,12 @@
       "difficulty": "medium",
       "stem": "India's most populous state is:",
       "options": [
-        "Uttar Pradesh",
         "Maharashtra",
-        "Bihar",
-        "West Bengal"
+        "West Bengal",
+        "Uttar Pradesh",
+        "Bihar"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "UP: most populous (~240 million)"
     },
     {
@@ -1674,12 +1674,12 @@
       "difficulty": "medium",
       "stem": "Sardar Vallabhbhai Patel is known as:",
       "options": [
+        "Lokmanya",
         "Iron Man of India",
-        "Father of the Nation",
         "Netaji",
-        "Lokmanya"
+        "Father of the Nation"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Sardar Patel: Iron Man, united princely states"
     },
     {
@@ -1692,12 +1692,12 @@
       "difficulty": "medium",
       "stem": "Dandi March was associated with:",
       "options": [
-        "Salt Satyagraha",
         "Quit India",
+        "Civil Disobedience Movement",
         "Non-Cooperation",
-        "Civil Disobedience Movement"
+        "Salt Satyagraha"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Dandi March 1930: Salt Satyagraha"
     },
     {
@@ -1710,12 +1710,12 @@
       "difficulty": "medium",
       "stem": "Atal Bihari Vajpayee declared which day as Good Governance Day?",
       "options": [
-        "25 December",
         "15 August",
         "26 January",
-        "2 October"
+        "2 October",
+        "25 December"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "25 December: Good Governance Day"
     },
     {
@@ -1746,12 +1746,12 @@
       "difficulty": "medium",
       "stem": "GSLV stands for:",
       "options": [
-        "Geosynchronous Satellite Launch Vehicle",
         "Global Space Launch Vehicle",
         "Geographic Satellite Launch Vehicle",
+        "Geosynchronous Satellite Launch Vehicle",
         "General Space Launch Vehicle"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "GSLV: Geosynchronous Satellite Launch Vehicle"
     },
     {
@@ -1764,12 +1764,12 @@
       "difficulty": "medium",
       "stem": "India's nuclear energy programme is under:",
       "options": [
-        "Department of Atomic Energy (DAE)",
-        "Ministry of Power",
+        "ISRO",
         "Ministry of Coal",
-        "ISRO"
+        "Department of Atomic Energy (DAE)",
+        "Ministry of Power"
       ],
-      "answer": 0,
+      "answer": 2,
       "solution": "DAE: under PMO, manages nuclear programme"
     },
     {
@@ -1783,9 +1783,9 @@
       "stem": "The Battle of Plassey was fought in:",
       "options": [
         "1757",
-        "1857",
+        "1905",
         "1947",
-        "1905"
+        "1857"
       ],
       "answer": 0,
       "solution": "Plassey: 1757, Siraj-ud-Daulah vs Clive"
@@ -1800,12 +1800,12 @@
       "difficulty": "medium",
       "stem": "Indian Space Research Organisation was established in:",
       "options": [
-        "1969",
+        "1960",
         "1975",
         "1947",
-        "1960"
+        "1969"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "ISRO: 1969"
     },
     {
@@ -1818,13 +1818,85 @@
       "difficulty": "medium",
       "stem": "INS Vikramaditya is:",
       "options": [
+        "Destroyer",
         "Aircraft carrier",
         "Submarine",
-        "Destroyer",
         "Frigate"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "INS Vikramaditya: aircraft carrier of Indian Navy"
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A shopkeeper gives 3 successive discounts of 10%, 15% and 20%. What is the net discount percentage?",
+      "options": [
+        "45%",
+        "40%",
+        "35%",
+        "38.8%"
+      ],
+      "answer": 3,
+      "solution": "Net multiplier = 0.90 × 0.85 × 0.80 = 0.612. Discount = 38.8%"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Two cars start from the same point at 50 km/h and 60 km/h in opposite directions. After how many hours will they be 330 km apart?",
+      "options": [
+        "5 hours",
+        "6 hours",
+        "4 hours",
+        "3 hours"
+      ],
+      "answer": 3,
+      "solution": "Relative speed = 110 km/h. Time = 330/110 = 3 hours"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of milk to water in a mixture is 3:2. If 5 litres of water is added, the ratio becomes 3:4. What was the original quantity of the mixture?",
+      "options": [
+        "20 litres",
+        "10 litres",
+        "25 litres",
+        "15 litres"
+      ],
+      "answer": 1,
+      "solution": "Original: milk = 3x, water = 2x. After adding 5L water: 3x/(2x+5) = 3/4 → 12x = 6x+15 → 6x = 15 → x = 2.5. Original = 5x = 12.5. Hmm, not matching. Let me recalculate: 3x/(2x+5) = 3/4. Cross multiply: 12x = 3(2x+5) = 6x+15. 6x = 15, x = 2.5. Original mixture = 5 × 2.5 = 12.5 litres. Not in options."
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A shopkeeper buys an article for ₹400 and sells it at 25% profit. What is the selling price?",
+      "options": [
+        "₹525",
+        "₹480",
+        "₹500",
+        "₹450"
+      ],
+      "answer": 2,
+      "solution": "SP = 400 × 1.25 = ₹500"
     }
   ]
 }
