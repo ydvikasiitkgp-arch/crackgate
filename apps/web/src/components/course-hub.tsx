@@ -10,15 +10,20 @@ export type CourseStats = {
 };
 
 const TRACK_ACCENTS: Record<string, { border: string; gradient: string; badge: string }> = {
-  mining:      { border: "border-l-indigo-500", gradient: "from-indigo-500/5",   badge: "bg-indigo-500/15 text-indigo-300" },
-  civil:       { border: "border-l-sky-500",    gradient: "from-sky-500/5",      badge: "bg-sky-500/15 text-sky-300" },
-  geology:     { border: "border-l-cyan-500",   gradient: "from-cyan-500/5",     badge: "bg-cyan-500/15 text-cyan-300" },
-  environment: { border: "border-l-emerald-500",gradient: "from-emerald-500/5",  badge: "bg-emerald-500/15 text-emerald-300" },
-  electrical:  { border: "border-l-amber-500",  gradient: "from-amber-500/5",    badge: "bg-amber-500/15 text-amber-300" },
-  mechanical:  { border: "border-l-orange-500", gradient: "from-orange-500/5",   badge: "bg-orange-500/15 text-orange-300" },
-  system:      { border: "border-l-purple-500", gradient: "from-purple-500/5",   badge: "bg-purple-500/15 text-purple-300" },
-  "e-and-t":   { border: "border-l-pink-500",   gradient: "from-pink-500/5",     badge: "bg-pink-500/15 text-pink-300" },
-  geomatics:   { border: "border-l-teal-500",   gradient: "from-teal-500/5",     badge: "bg-teal-500/15 text-teal-300" },
+  mining:              { border: "border-l-indigo-500", gradient: "from-indigo-500/5",   badge: "bg-indigo-500/15 text-indigo-300" },
+  civil:               { border: "border-l-sky-500",    gradient: "from-sky-500/5",      badge: "bg-sky-500/15 text-sky-300" },
+  geology:             { border: "border-l-cyan-500",   gradient: "from-cyan-500/5",     badge: "bg-cyan-500/15 text-cyan-300" },
+  environment:         { border: "border-l-emerald-500",gradient: "from-emerald-500/5",  badge: "bg-emerald-500/15 text-emerald-300" },
+  electrical:          { border: "border-l-amber-500",  gradient: "from-amber-500/5",    badge: "bg-amber-500/15 text-amber-300" },
+  mechanical:          { border: "border-l-orange-500", gradient: "from-orange-500/5",   badge: "bg-orange-500/15 text-orange-300" },
+  system:              { border: "border-l-purple-500", gradient: "from-purple-500/5",   badge: "bg-purple-500/15 text-purple-300" },
+  "e-and-t":           { border: "border-l-pink-500",   gradient: "from-pink-500/5",     badge: "bg-pink-500/15 text-pink-300" },
+  geomatics:           { border: "border-l-teal-500",   gradient: "from-teal-500/5",     badge: "bg-teal-500/15 text-teal-300" },
+  "ncl-mining-sirdar": { border: "border-l-indigo-500", gradient: "from-indigo-500/5",   badge: "bg-indigo-500/15 text-indigo-300" },
+  "ncl-surveyor":      { border: "border-l-cyan-500",   gradient: "from-cyan-500/5",     badge: "bg-cyan-500/15 text-cyan-300" },
+  "wcl-sirdar":        { border: "border-l-sky-500",    gradient: "from-sky-500/5",      badge: "bg-sky-500/15 text-sky-300" },
+  "wcl-af-electrical": { border: "border-l-amber-500",  gradient: "from-amber-500/5",    badge: "bg-amber-500/15 text-amber-300" },
+  "coal-sirdar-overman":{ border: "border-l-orange-500", gradient: "from-orange-500/5",  badge: "bg-orange-500/15 text-orange-300" },
 };
 
 function trackStyle(subject: string) {
@@ -57,8 +62,6 @@ export function CourseHub({
   stats: Record<string, CourseStats>;
   firstName: string;
 }) {
-  const activeTrack = tracks.find((t) => t.key === activeKey);
-
   return (
     <section className="space-y-4">
       {/* ── Header ── */}
@@ -75,17 +78,6 @@ export function CourseHub({
               : `${tracks.length} courses · Select one to dive in.`}
           </p>
         </div>
-
-        {/* Quick summary */}
-        {activeTrack && (
-          <Link
-            href={`/dashboard?track=${activeTrack.key}`}
-            className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand/90 transition shadow-sm"
-          >
-            Continue
-            <span aria-hidden>→</span>
-          </Link>
-        )}
       </div>
 
       {/* ── Course cards grid ── */}
@@ -126,33 +118,42 @@ export function CourseHub({
 
               {/* Stats row */}
               {s ? (
-                <div className="mt-4 flex items-end justify-between gap-3">
-                  <div className="space-y-1">
-                    <div className="text-2xl font-extrabold tabular-nums leading-none">
-                      {s.accuracy}
-                      <span className="text-sm font-semibold text-muted">%</span>
+                <div className="mt-4 space-y-3">
+                  <div className="flex items-end justify-between gap-3">
+                    <div className="space-y-1">
+                      <div className="text-2xl font-extrabold tabular-nums leading-none">
+                        {s.accuracy}
+                        <span className="text-sm font-semibold text-muted">%</span>
+                      </div>
+                      <div className="text-[11px] text-muted">
+                        {s.attempts} attempt{s.attempts !== 1 ? "s" : ""} · {relativeTime(s.lastPracticed)}
+                      </div>
                     </div>
-                    <div className="text-[11px] text-muted">
-                      {s.attempts} attempt{s.attempts !== 1 ? "s" : ""}
-                    </div>
-                    <div className="text-[11px] text-muted">
-                      {relativeTime(s.lastPracticed)}
-                    </div>
+                    {s.sparkline.some((v) => v > 0) && (
+                      <div className="shrink-0 opacity-60 group-hover:opacity-100 transition-opacity">
+                        <Sparkline values={s.sparkline} width={80} height={28} stroke="var(--brand)" />
+                      </div>
+                    )}
                   </div>
-                  {s.sparkline.some((v) => v > 0) && (
-                    <div className="shrink-0 opacity-60 group-hover:opacity-100 transition-opacity">
-                      <Sparkline values={s.sparkline} width={80} height={28} stroke="var(--brand)" />
-                    </div>
-                  )}
+                  {/* Progress bar */}
+                  <div className="h-1.5 w-full rounded-full bg-line overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-brand transition-all duration-500"
+                      style={{ width: `${Math.max(s.accuracy, 2)}%` }}
+                    />
+                  </div>
                 </div>
               ) : (
-                <div className="mt-4">
-                  <div className="text-sm text-muted mb-2">No attempts yet</div>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand">
-                    Start your first mock <span aria-hidden>→</span>
-                  </span>
-                </div>
+                <div className="mt-4 text-sm text-muted">No attempts yet</div>
               )}
+
+              {/* Action button */}
+              <div className="mt-4">
+                <span className="flex items-center justify-center gap-2 w-full rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white group-hover:bg-brand/90 transition">
+                  {s ? "Continue" : "Start"}
+                  <span aria-hidden>→</span>
+                </span>
+              </div>
             </Link>
           );
         })}
