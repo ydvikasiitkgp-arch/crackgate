@@ -184,13 +184,6 @@ export function UserMenu({
                   })
                 )}
               </div>
-              <Link
-                href="/dashboard"
-                onClick={() => setOpen(false)}
-                className="block px-4 py-2 text-xs font-semibold text-brand hover:bg-brand/5 text-center border-t border-line"
-              >
-                View all courses
-              </Link>
             </div>
           )}
 
