@@ -35,23 +35,15 @@ export default async function MocksIndex() {
   const attempts = userId
     ? await db.attempt.findMany({
         where: { userId, kind: "mock" },
-        select: { refId: true, score: true, total: true, takenAt: true },
+        select: { refId: true, id: true, score: true, total: true, takenAt: true },
         orderBy: { takenAt: "desc" },
       })
     : [];
 
-  const bestByMock = new Map<string, { score: number; total: number; takenAt: Date; attempts: number }>();
+  const bestByMock = new Map<string, { score: number; total: number; takenAt: Date; attemptId: string }>();
   for (const a of attempts) {
-    const existing = bestByMock.get(a.refId);
-    if (!existing) {
-      bestByMock.set(a.refId, { score: a.score, total: a.total, takenAt: a.takenAt, attempts: 1 });
-    } else {
-      existing.attempts += 1;
-      if (a.score > existing.score) {
-        existing.score = a.score;
-        existing.total = a.total;
-        existing.takenAt = a.takenAt;
-      }
+    if (!bestByMock.has(a.refId)) {
+      bestByMock.set(a.refId, { score: a.score, total: a.total, takenAt: a.takenAt, attemptId: a.id });
     }
   }
 
@@ -130,7 +122,7 @@ function MockCard({
   duration: number;
   qCount: number;
   unlocked: boolean;
-  best?: { score: number; total: number; takenAt: Date; attempts: number };
+  best?: { score: number; total: number; takenAt: Date; attemptId: string };
 }) {
   const badge = tierBadge(tier);
   const attempted = !!best;
@@ -158,12 +150,12 @@ function MockCard({
             <div className="flex items-center gap-2">
               <span className="text-ok">✓</span>
               <span>
-                Best: <b className="text-ink">{best!.score.toFixed(1)} / {best!.total}</b>
+                Score: <b className="text-ink">{best!.score.toFixed(1)} / {best!.total}</b>
                 <span className="text-muted"> · {((best!.score / best!.total) * 100).toFixed(0)}%</span>
               </span>
             </div>
             <div className="text-xs text-muted">
-              {best!.attempts} attempt{best!.attempts > 1 ? "s" : ""} · last on {best!.takenAt.toLocaleDateString("en-IN", { day: "numeric", month: "short" })}
+              Completed on {best!.takenAt.toLocaleDateString("en-IN", { day: "numeric", month: "short" })}
             </div>
           </div>
         ) : (
@@ -178,7 +170,7 @@ function MockCard({
         {!unlocked ? (
           <Link href="/pricing" className="btn btn-ghost w-full" data-track="mock:upgrade">Upgrade to unlock</Link>
         ) : attempted ? (
-          <Link href={`/mocks/${id}`} className="btn btn-ghost w-full" data-track="mock:retake">Retake</Link>
+          <Link href={`/result/${best!.attemptId}`} className="btn btn-ghost w-full" data-track="mock:review">Review Answers →</Link>
         ) : (
           <Link href={`/mocks/${id}`} className="btn btn-primary w-full" data-track="mock:start">Start →</Link>
         )}

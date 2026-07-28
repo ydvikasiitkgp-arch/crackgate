@@ -9,6 +9,30 @@ import { buildCilResultData } from "@/lib/cil-analytics";
 
 export const dynamic = "force-dynamic";
 
+function getListUrl(refId: string): string {
+  if (refId.startsWith("cil-")) {
+    const slug = refId.replace(/^cil-/, "").replace(/-\d+$/, "");
+    return `/psu/cil/${slug}`;
+  }
+  if (refId.startsWith("ongc-")) {
+    const slug = refId.replace(/-\d+$/, "");
+    return `/psu/ongc/${slug}`;
+  }
+  if (refId.startsWith("diploma-wcl-sirdar-")) return "/diploma/wcl/mining-sirdar";
+  if (refId.startsWith("diploma-wcl-foreman-")) return "/diploma/wcl/assistant-foreman-electrical";
+  if (refId.startsWith("diploma-ncl-sirdar-")) return "/diploma/ncl/mining-sirdar";
+  if (refId.startsWith("diploma-ncl-surveyor-")) return "/diploma/ncl/surveyor";
+  return "/mocks";
+}
+
+function getNextMockId(refId: string): string | null {
+  const match = refId.match(/^(.*?)(\d+)$/);
+  if (!match) return null;
+  const [, prefix, numStr] = match;
+  const nextId = `${prefix}${String(Number(numStr) + 1).padStart(numStr.length, "0")}`;
+  return resolveMock(nextId) ? nextId : null;
+}
+
 type Answer = number | number[] | string | null | undefined;
 
 /** Re-load the source question bank for an attempt so we can show the answer
@@ -19,23 +43,6 @@ function loadBank(kind: string, refId: string): unknown[] | null {
     return resolveMock(refId)?.questions ?? null;
   }
   return null;
-}
-
-function getNextMockId(refId: string): string | null {
-  const match = refId.match(/^(.+)-(\d{2})$/);
-  if (!match) return null;
-  const prefix = match[1];
-  const num = parseInt(match[2]);
-  if (num >= 20) return null;
-  return `${prefix}-${String(num + 1).padStart(2, "0")}`;
-}
-
-function getListUrl(refId: string): string {
-  if (refId.startsWith("diploma-wcl-sirdar")) return "/diploma/wcl/mining-sirdar";
-  if (refId.startsWith("diploma-wcl-foreman")) return "/diploma/wcl/assistant-foreman-electrical";
-  if (refId.startsWith("diploma-ncl-sirdar")) return "/diploma/ncl/mining-sirdar";
-  if (refId.startsWith("diploma-ncl-surveyor")) return "/diploma/ncl/surveyor";
-  return "/mocks";
 }
 
 export default async function ResultPage(props: { params: Promise<{ id: string }> }) {
@@ -60,20 +67,17 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
   const listUrl = getListUrl(att.refId);
   const nextMockId = getNextMockId(att.refId);
 
-  const navButtons = (
-    <div className="flex flex-wrap justify-center gap-3">
-      {nextMockId && (
-        <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">
-          Try Next Mock →
-        </Link>
-      )}
-      <Link href={listUrl} className="btn btn-ghost">View All Mocks</Link>
-      <Link href="/dashboard" className="btn btn-ghost">Dashboard</Link>
-    </div>
-  );
-
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-5 py-8 sm:py-12">
+      {/* Top nav buttons */}
+      <div className="flex flex-wrap justify-center gap-3 mb-6">
+        {nextMockId && (
+          <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">Try Next Mock →</Link>
+        )}
+        <Link href={listUrl} className="btn btn-ghost">View All Mocks</Link>
+        <Link href="/dashboard" className="btn btn-ghost">Dashboard</Link>
+      </div>
+
       <div className="card p-6 sm:p-10 text-center">
         <p className="text-xs uppercase tracking-wide text-muted">{att.kind.toUpperCase()} · Result</p>
         <h1 className="text-xl sm:text-2xl font-extrabold mt-1">{att.refTitle}</h1>
@@ -109,14 +113,27 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
           </div>
         </div>
 
-        <div className="mt-8">{navButtons}</div>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {nextMockId && (
+            <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">Try Next Mock →</Link>
+          )}
+          <Link href={listUrl} className="btn btn-ghost">View All Mocks</Link>
+          <Link href="/dashboard" className="btn btn-ghost">Dashboard</Link>
+        </div>
       </div>
 
       {cilData && <CilResultAnalytics data={cilData} />}
 
       {bank && <ResultReview questions={bank as never} answers={answers} itemStats={cilData?.itemStats ?? null} mockRefId={att.refId} />}
 
-      <div className="mt-10">{navButtons}</div>
+      {/* Bottom nav buttons */}
+      <div className="flex flex-wrap justify-center gap-3 mt-8">
+        {nextMockId && (
+          <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">Try Next Mock →</Link>
+        )}
+        <Link href={listUrl} className="btn btn-ghost">View All Mocks</Link>
+        <Link href="/dashboard" className="btn btn-ghost">Dashboard</Link>
+      </div>
     </div>
   );
 }
