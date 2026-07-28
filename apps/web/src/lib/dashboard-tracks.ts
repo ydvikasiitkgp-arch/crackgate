@@ -16,7 +16,7 @@ import { getExam, subjectLabel, type ExamTrack } from "@/data/catalog";
 import { cilLiveSetNos } from "@/data/cil-mock-bank";
 import { getCilDiscipline } from "@/data/cil";
 
-export type DashboardTrackKind = "mining" | "cil" | "civil" | "soon";
+export type DashboardTrackKind = "mining" | "cil" | "civil" | "diploma" | "soon";
 
 export type DashboardTrack = {
   /** URL-safe key used in `?track=`, e.g. "gate-mining", "psu-electrical". */
@@ -40,6 +40,7 @@ function kindFor(exam: string, subject: string): DashboardTrackKind {
   if (exam === "GATE" && subject === "mining") return "mining";
   if (exam === "GATE" && subject === "civil") return "civil";
   if (exam === "PSU" && cilLiveSetNos(subject).size > 0) return "cil";
+  if (exam === "DIPLOMA") return "diploma";
   return "soon";
 }
 

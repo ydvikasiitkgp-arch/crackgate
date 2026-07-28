@@ -40,6 +40,7 @@ import { ChooseExam } from "@/components/choose-exam";
 import { CilDashboard, type CilAttempt } from "@/components/cil-dashboard";
 import { CivilDashboard, type CivilAttempt } from "@/components/civil-dashboard";
 import { CourseHub, type CourseStats } from "@/components/course-hub";
+import { DiplomaDashboard, type DiplomaAttempt } from "@/components/diploma-dashboard";
 
 export const dynamic = "force-dynamic";
 
@@ -136,6 +137,29 @@ export default async function DashboardPage({
         <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
         <CivilDashboard track={activeTrack} attempts={ceAttempts} />
+      </div>
+    );
+  }
+
+  // ── Diploma track — dedicated view, return early. ──────────────────
+  if (activeTrack.kind === "diploma") {
+    const diplomaPrefixes = ["diploma-ncl-sirdar-mock-", "diploma-ncl-surveyor-mock-", "diploma-wcl-sirdar-mock-", "diploma-wcl-foreman-mock-", "diploma-coal-sirdar-mock-", "diploma-coal-overman-mock-"];
+    const diplomaAttempts: DiplomaAttempt[] = allAttempts
+      .filter((a) => a.kind === "mock" && diplomaPrefixes.some((p) => a.refId.startsWith(p)))
+      .map((a) => ({
+        id: a.id,
+        refId: a.refId,
+        refTitle: a.refTitle,
+        score: a.score,
+        total: a.total,
+        takenAt: a.takenAt,
+        breakdown: (a.breakdown as Record<string, { scored: number; total: number }>) ?? {},
+      }));
+    return (
+      <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
+        <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
+        <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
+        <DiplomaDashboard track={activeTrack} attempts={diplomaAttempts} />
       </div>
     );
   }
@@ -611,7 +635,13 @@ const TRACK_PREFIX_MAP: Record<string, string> = {
   "cil-industrial-engineering": "PSU-industrial-engineering", "cil-mining": "PSU-mining",
   "ce-mock": "GATE-civil", "gg-mock": "GATE-geology", "es-mock": "GATE-environment",
   "mn-mock": "GATE-mining", "mn-pyq": "GATE-mining", "mock": "GATE-mining",
-  "pyq": "GATE-mining", "diploma": "DIPLOMA-general", "state": "STATE-general",
+  "pyq": "GATE-mining", "state": "STATE-general",
+  "diploma-ncl-sirdar-mock": "DIPLOMA-ncl-mining-sirdar",
+  "diploma-ncl-surveyor-mock": "DIPLOMA-ncl-surveyor",
+  "diploma-wcl-sirdar-mock": "DIPLOMA-wcl-sirdar",
+  "diploma-wcl-foreman-mock": "DIPLOMA-wcl-af-electrical",
+  "diploma-coal-sirdar-mock": "DIPLOMA-coal-sirdar-overman",
+  "diploma-coal-overman-mock": "DIPLOMA-coal-sirdar-overman",
 };
 
 function resolveTrackKey(refId: string): string | null {
