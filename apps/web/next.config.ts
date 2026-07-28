@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
       "default-src 'self'",
       `script-src 'self' 'unsafe-inline' ${isDev ? "'unsafe-eval' " : ""}https://checkout.razorpay.com`,
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: https://lh3.googleusercontent.com https://ui-avatars.com https://*.razorpay.com",
+      "img-src 'self' data: https:",
       "font-src 'self' data:",
       "connect-src 'self' https://*.razorpay.com https://*.posthog.com",
       "frame-src https://checkout.razorpay.com https://api.razorpay.com",
