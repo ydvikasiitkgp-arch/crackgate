@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type SendMode = "instant" | "schedule";
 
@@ -26,6 +26,53 @@ export default function NewsletterComposer({
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  const [drafts, setDrafts] = useState<string[]>([]);
+  const [selectedDraft, setSelectedDraft] = useState("");
+  const [loadingDraft, setLoadingDraft] = useState(false);
+  const [assets, setAssets] = useState<{ name: string; url: string }[]>([]);
+  const [copiedAsset, setCopiedAsset] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("/api/admin/newsletter/drafts")
+      .then((r) => r.json())
+      .then((data) => setDrafts(data.drafts ?? []))
+      .catch(() => {});
+    fetch("/api/admin/newsletter/assets")
+      .then((r) => r.json())
+      .then((data) => setAssets(data.assets ?? []))
+      .catch(() => {});
+  }, []);
+
+  async function loadDraft() {
+    if (!selectedDraft) return;
+    setLoadingDraft(true);
+    try {
+      const res = await fetch(`/email/drafts/${selectedDraft}`);
+      const content = await res.text();
+
+      const titleMatch = content.match(/<title>([^<]+)<\/title>/i);
+      if (titleMatch && !subject.trim()) {
+        setSubject(titleMatch[1].trim());
+      }
+
+      setHtml(content);
+    } catch {
+      setError("Failed to load draft.");
+    } finally {
+      setLoadingDraft(false);
+    }
+  }
+
+  async function copyUrl(url: string) {
+    try {
+      await navigator.clipboard.writeText(window.location.origin + url);
+      setCopiedAsset(url);
+      setTimeout(() => setCopiedAsset(null), 2000);
+    } catch {
+      /* fallback */
+    }
+  }
 
   function minSchedule() {
     const d = new Date(Date.now() + 3600_000);
@@ -99,6 +146,50 @@ export default function NewsletterComposer({
         </div>
 
         <div className="mt-4 space-y-4">
+
+          <div className="flex gap-4 flex-wrap">
+            <div className="flex items-end gap-2">
+              <div>
+                <span className="text-xs text-muted font-medium">Load draft</span>
+                <select
+                  value={selectedDraft}
+                  onChange={(e) => setSelectedDraft(e.target.value)}
+                  className="input mt-1 text-sm"
+                >
+                  <option value="">— Select —</option>
+                  {drafts.map((d) => (
+                    <option key={d} value={d}>{d}</option>
+                  ))}
+                </select>
+              </div>
+              <button
+                onClick={loadDraft}
+                disabled={!selectedDraft || loadingDraft}
+                className="btn btn-accent text-sm px-4"
+              >
+                {loadingDraft ? "Loading…" : "Load"}
+              </button>
+            </div>
+
+            {assets.length > 0 && (
+              <div>
+                <span className="text-xs text-muted font-medium">Assets</span>
+                <div className="mt-1 flex flex-wrap gap-2">
+                  {assets.map((a) => (
+                    <button
+                      key={a.name}
+                      onClick={() => copyUrl(a.url)}
+                      className="text-xs font-mono bg-canvas border border-line rounded px-2 py-1 hover:border-brand transition-colors"
+                      title="Click to copy URL"
+                    >
+                      {copiedAsset === a.url ? "Copied!" : a.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
           <label className="block">
             <span className="text-xs text-muted">Subject</span>
             <input
