@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getAdminSession } from "@/lib/auth";
+import { getAdminSession } from "@/lib/admin";
 import fs from "fs";
 import path from "path";
 
