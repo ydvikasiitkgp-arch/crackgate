@@ -22,6 +22,8 @@ function getListUrl(refId: string): string {
   if (refId.startsWith("diploma-wcl-foreman-")) return "/diploma/wcl/assistant-foreman-electrical";
   if (refId.startsWith("diploma-ncl-sirdar-")) return "/diploma/ncl/mining-sirdar";
   if (refId.startsWith("diploma-ncl-surveyor-")) return "/diploma/ncl/surveyor";
+  if (refId.startsWith("state-")) return "/state";
+  if (refId.startsWith("diploma-")) return "/diploma";
   return "/mocks";
 }
 
@@ -64,6 +66,39 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
     ? await buildCilResultData(att, bank as never)
     : null;
 
+  // ponytail: approximation — avg marks per question, not per-question weights
+  const mockInfo = resolveMock(att.refId);
+  const negativeMarking = mockInfo?.negativeMarking ?? true;
+  const attempted = att.correct + att.wrong;
+  const marksPerQ = attempted > 0 ? att.total / attempted : 0;
+  const negMarksLost = (negativeMarking && att.wrong > 0)
+    ? +(att.wrong * marksPerQ / 3).toFixed(2)
+    : 0;
+  const attemptAccuracy = attempted > 0
+    ? Math.round((att.correct / attempted) * 100)
+    : 0;
+  const actionItems: { type: "warn" | "good" | "info"; text: string }[] = [];
+  for (const [subject, v] of Object.entries(breakdown)) {
+    const p = v.total ? (v.scored / v.total) * 100 : 0;
+    if (p < 40) {
+      actionItems.push({ type: "warn", text: `${subject}: ${Math.round(p)}% — focus here` });
+    } else if (p >= 70) {
+      actionItems.push({ type: "good", text: `${subject}: strong at ${Math.round(p)}%` });
+    }
+  }
+  if (negativeMarking && negMarksLost > 0) {
+    actionItems.push({ type: "info", text: `Lost ${negMarksLost} marks to negative marking — attempt only when sure` });
+  }
+
+  const prevAtt = await db.attempt.findFirst({
+    where: { userId: session.user.id, refId: att.refId, id: { not: att.id } },
+    orderBy: { takenAt: "desc" },
+    select: { score: true, total: true },
+  });
+  const prevPct = prevAtt?.total ? Math.round((prevAtt.score / prevAtt.total) * 100) : null;
+  const scoreDelta = prevAtt ? att.score - prevAtt.score : null;
+  const pctDelta = prevAtt && prevPct != null ? pct - prevPct : null;
+
   const listUrl = getListUrl(att.refId);
   const nextMockId = getNextMockId(att.refId);
 
@@ -76,11 +111,19 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
         <div className="text-5xl sm:text-6xl font-extrabold text-accent mt-6">{att.score} <span className="text-2xl text-muted">/ {att.total}</span></div>
         <div className="text-lg mt-2">{pct}% accuracy</div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
-          <Cell label="Correct" value={att.correct} color="text-ok" bg="bg-emerald-50 dark:bg-emerald-500/15" />
-          <Cell label="Wrong" value={att.wrong} color="text-bad" bg="bg-rose-50 dark:bg-rose-500/15" />
-          <Cell label="Skipped" value={att.skipped} color="text-muted" bg="bg-slate-50 dark:bg-slate-700/40" />
-          <Cell label="Time" value={Math.round(att.durationSec / 60) + "m"} color="text-brand" bg="bg-blue-50 dark:bg-blue-500/15" />
+        <div className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-muted">
+          <span>
+            Attempt accuracy:{" "}
+            <strong className={attemptAccuracy >= 70 ? "text-ok" : attemptAccuracy >= 40 ? "text-accent" : "text-bad"}>
+              {attemptAccuracy}%
+            </strong>
+          </span>
+          {negativeMarking && negMarksLost > 0 && (
+            <span>
+              Lost to guessing:{" "}
+              <strong className="text-bad">−{negMarksLost}</strong>
+            </span>
+          )}
         </div>
 
         <div className="mt-8 text-left">
@@ -105,6 +148,64 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
           </div>
         </div>
 
+        {actionItems.length > 0 && (
+          <div className="mt-8 text-left">
+            <h3 className="font-bold mb-3">Action Items</h3>
+            <div className="space-y-2">
+              {actionItems.map((item) => (
+                <div key={item.text} className="flex items-center gap-3 rounded-lg bg-canvas p-3">
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded ${
+                    item.type === "warn"
+                      ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300"
+                      : item.type === "good"
+                        ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300"
+                        : "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                  }`}>
+                    {item.type === "warn" ? "WEAK" : item.type === "good" ? "STRONG" : "TIP"}
+                  </span>
+                  <span className="text-sm">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {prevAtt ? (
+          <div className="mt-8 text-left">
+            <h3 className="font-bold mb-3">Your Progress</h3>
+            <div className="rounded-lg bg-canvas p-4">
+              <div className="flex items-center justify-between gap-4">
+                <div className="text-center">
+                  <p className="text-xs text-muted">Previous</p>
+                  <p className="text-lg font-bold tabular-nums">{prevAtt.score} / {prevAtt.total}</p>
+                  <p className="text-xs text-muted">({prevPct}%)</p>
+                </div>
+                <div className="text-2xl text-muted">→</div>
+                <div className="text-center">
+                  <p className="text-xs text-muted">This attempt</p>
+                  <p className="text-lg font-bold tabular-nums">{att.score} / {att.total}</p>
+                  <p className="text-xs text-muted">({pct}%)</p>
+                </div>
+              </div>
+              {scoreDelta != null && (
+                <p className={`mt-2 text-center text-sm font-semibold tabular-nums ${
+                  scoreDelta > 0 ? "text-emerald-600 dark:text-emerald-400" : scoreDelta < 0 ? "text-red-600 dark:text-red-400" : "text-muted"
+                }`}>
+                  {scoreDelta > 0 ? "↑" : scoreDelta < 0 ? "↓" : "—"} {scoreDelta > 0 ? "+" : ""}{scoreDelta} marks{" "}
+                  {pctDelta != null ? `(${pctDelta > 0 ? "+" : ""}${pctDelta}%)` : ""}
+                </p>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="mt-8 text-left">
+            <h3 className="font-bold mb-3">Your Progress</h3>
+            <p className="rounded-lg bg-canvas p-4 text-sm text-muted">
+              First attempt for this mock — take another to track improvement.
+            </p>
+          </div>
+        )}
+
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           {nextMockId && (
             <Link href={`/mocks/${nextMockId}`} className="btn btn-primary">Try Next Mock →</Link>
@@ -116,7 +217,7 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
 
       {cilData && <CilResultAnalytics data={cilData} />}
 
-      {bank && <ResultReview questions={bank as never} answers={answers} itemStats={cilData?.itemStats ?? null} mockRefId={att.refId} />}
+      {bank && <ResultReview questions={bank as never} answers={answers} itemStats={cilData?.itemStats ?? null} mockRefId={att.refId} correct={att.correct} wrong={att.wrong} skipped={att.skipped} />}
 
       <div className="flex flex-wrap justify-center gap-3 mt-8">
         {nextMockId && (
@@ -129,11 +230,3 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
   );
 }
 
-function Cell({ label, value, color, bg }: { label: string; value: string | number; color: string; bg: string }) {
-  return (
-    <div className={`${bg} rounded-xl p-3 sm:p-4`}>
-      <div className={`text-xl sm:text-2xl font-extrabold ${color}`}>{value}</div>
-      <div className="text-xs text-muted mt-0.5">{label}</div>
-    </div>
-  );
-}
