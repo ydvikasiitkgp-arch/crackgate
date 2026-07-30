@@ -49,6 +49,7 @@ export default async function MockPage(props: { params: Promise<{ id: string }> 
   const isPsu = m.gate.type === "entitlement" && m.gate.exam === "PSU";
   const isOngc = isPsu && m.id.startsWith("ongc-");
   const isCil = isPsu && m.id.startsWith("cil-");
+  const isDiploma = m.gate.type === "entitlement" && m.gate.exam === "DIPLOMA";
 
   return (
     <ExamPortal
@@ -58,7 +59,7 @@ export default async function MockPage(props: { params: Promise<{ id: string }> 
       questions={m.questions as never}
       durationSec={m.durationSec}
       negativeMarking={m.negativeMarking}
-      showCalculator={!isPsu}
+      showCalculator={!isPsu && !isDiploma}
       examLabel={
         isOngc
           ? "ONGC — Oil and Natural Gas Corporation"

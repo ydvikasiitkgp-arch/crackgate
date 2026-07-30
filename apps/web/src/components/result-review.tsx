@@ -55,15 +55,19 @@ function deltaFor(q: ReviewQuestion, a: Answer): number {
  * answer and the full worked solution (GATE pattern).
  */
 export function ResultReview({
-  questions, answers, itemStats, mockRefId,
+  questions, answers, itemStats, mockRefId, correct, wrong, skipped,
 }: {
   questions: ReviewQuestion[];
   answers: Record<string, Answer>;
   itemStats?: (CilItemStat | undefined)[] | null;
   mockRefId: string;
+  correct: number;
+  wrong: number;
+  skipped: number;
 }) {
-  const [filter, setFilter] = useState<"all" | "wrong" | "skipped">("all");
+  const [filter, setFilter] = useState<"all" | "correct" | "wrong" | "skipped">("all");
   const [reportKey, setReportKey] = useState<string | null>(null);
+  const total = correct + wrong + skipped;
 
   const rows = questions.map((q, i) => {
     const a = answers[String(i)];
@@ -72,27 +76,21 @@ export function ResultReview({
   });
 
   const shown = rows.filter((r) =>
-    filter === "all" ? true : filter === "wrong" ? r.answered && !r.correct : !r.answered
+    filter === "all" ? true : filter === "correct" ? r.answered && r.correct : filter === "wrong" ? r.answered && !r.correct : !r.answered
   );
 
   return (
     <div className="mt-8">
       <div className="flex items-center gap-2 flex-wrap mb-4">
         <h3 className="font-bold text-lg mr-auto">Answer key &amp; solutions</h3>
-        {(["all", "wrong", "skipped"] as const).map((f) => (
-          <button
-            key={f}
-            onClick={() => setFilter(f)}
-            className={cn(
-              "rounded-md px-3 py-1.5 text-xs font-semibold capitalize transition",
-              filter === f ? "bg-brand text-white" : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600"
-            )}
-          >{f}</button>
-        ))}
+        <button onClick={() => setFilter("all")} className={cn("rounded-md px-3 py-1.5 text-xs font-bold transition", filter === "all" ? "bg-brand text-white" : "bg-blue-50 dark:bg-blue-500/15 text-brand hover:bg-blue-100 dark:hover:bg-blue-500/25")}>All {total}</button>
+        <button onClick={() => setFilter("correct")} className={cn("rounded-md px-3 py-1.5 text-xs font-bold transition", filter === "correct" ? "bg-emerald-600 text-white" : "bg-emerald-50 dark:bg-emerald-500/15 text-ok hover:bg-emerald-100 dark:hover:bg-emerald-500/25")}>Correct {correct}</button>
+        <button onClick={() => setFilter("wrong")} className={cn("rounded-md px-3 py-1.5 text-xs font-bold transition", filter === "wrong" ? "bg-rose-600 text-white" : "bg-rose-50 dark:bg-rose-500/15 text-bad hover:bg-rose-100 dark:hover:bg-rose-500/25")}>Wrong {wrong}</button>
+        <button onClick={() => setFilter("skipped")} className={cn("rounded-md px-3 py-1.5 text-xs font-bold transition", filter === "skipped" ? "bg-slate-600 text-white" : "bg-slate-50 dark:bg-slate-700/40 text-muted hover:bg-slate-100 dark:hover:bg-slate-700/60")}>Skipped {skipped}</button>
       </div>
 
       <div className="space-y-5">
-        {shown.map(({ q, a, i, answered, correct, delta }) => (
+        {shown.map(({ q, a, i, answered, correct: isCorrect, delta }) => (
           <article key={i} className="bg-surface rounded-xl border border-line p-5 text-left">
             <div className="flex items-center gap-2 flex-wrap text-sm mb-3">
               <span className="badge bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-200 font-bold">Q{i + 1}</span>
@@ -114,9 +112,9 @@ export function ResultReview({
               )}
               <span className={cn(
                 "ml-auto px-2 py-0.5 rounded text-xs font-bold tabular-nums",
-                !answered ? "bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300" : correct ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200" : "bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-200"
+                !answered ? "bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300" : isCorrect ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200" : "bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-200"
               )}>
-                {!answered ? "Not attempted" : `${correct ? "✓ Correct" : "✗ Incorrect"} · ${delta >= 0 ? "+" : ""}${delta.toFixed(2)}`}
+                {!answered ? "Not attempted" : `${isCorrect ? "✓ Correct" : "✗ Incorrect"} · ${delta >= 0 ? "+" : ""}${delta.toFixed(2)}`}
               </span>
             </div>
 
