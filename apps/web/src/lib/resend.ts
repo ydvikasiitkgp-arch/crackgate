@@ -14,6 +14,10 @@ function getClient(): Resend {
 }
 
 export function newsletterHtml(bodyHtml: string): string {
+  const trimmed = bodyHtml.trim();
+  if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html")) {
+    return bodyHtml;
+  }
   return `<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"></head>
