@@ -12,11 +12,13 @@
 // never hidden, but its body shows a "content on the way" placeholder.
 
 import type { UserEntitlement } from "@/lib/entitlements";
-import { getExam, subjectLabel, type ExamTrack } from "@/data/catalog";
+import { getExam, subjectLabel, CATALOG, type ExamTrack } from "@/data/catalog";
 import { cilLiveSetNos } from "@/data/cil-mock-bank";
+import { ongcLiveSetNos } from "@/data/ongc-mock-bank";
 import { getCilDiscipline } from "@/data/cil";
+import { getOngcDiscipline } from "@/data/ongc";
 
-export type DashboardTrackKind = "mining" | "cil" | "civil" | "diploma" | "soon";
+export type DashboardTrackKind = "mining" | "cil" | "civil" | "ongc" | "diploma" | "soon";
 
 export type DashboardTrack = {
   /** URL-safe key used in `?track=`, e.g. "gate-mining", "psu-electrical". */
@@ -40,14 +42,18 @@ function kindFor(exam: string, subject: string): DashboardTrackKind {
   if (exam === "GATE" && subject === "mining") return "mining";
   if (exam === "GATE" && subject === "civil") return "civil";
   if (exam === "PSU" && cilLiveSetNos(subject).size > 0) return "cil";
+  if (exam === "PSU" && ongcLiveSetNos(subject).size > 0) return "ongc";
   if (exam === "DIPLOMA") return "diploma";
   return "soon";
 }
 
 function shortLabelFor(exam: string, subject: string): string {
   if (exam === "PSU") {
-    const disc = getCilDiscipline(subject)?.discipline ?? subject;
-    return `CIL · ${disc}`;
+    const cil = getCilDiscipline(subject);
+    if (cil) return `CIL · ${cil.discipline}`;
+    const ongc = getOngcDiscipline(subject);
+    if (ongc) return `ONGC · ${ongc.discipline}`;
+    return `PSU · ${subject}`;
   }
   const s = getExam(exam)?.subjects.find((x) => x.slug === subject);
   return s?.label ?? subject;
@@ -67,9 +73,11 @@ function toTrack(exam: string, subject: string): DashboardTrack {
 /** Every track that has shipped content (used for admin preview + the chooser). */
 export function allContentTracks(): DashboardTrack[] {
   const tracks: DashboardTrack[] = [toTrack("GATE", "mining"), toTrack("GATE", "civil")];
-  const psu = getExam("PSU");
-  for (const s of psu?.subjects ?? []) {
-    if (cilLiveSetNos(s.slug).size > 0) tracks.push(toTrack("PSU", s.slug));
+  for (const e of CATALOG.filter((x) => x.exam === "PSU")) {
+    for (const s of e.subjects) {
+      if (cilLiveSetNos(s.slug).size > 0 || ongcLiveSetNos(s.slug).size > 0)
+        tracks.push(toTrack("PSU", s.slug));
+    }
   }
   return tracks;
 }

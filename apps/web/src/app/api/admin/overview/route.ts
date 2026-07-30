@@ -112,6 +112,8 @@ export async function GET() {
     `,
   ]);
 
+  const adminIds = new Set((await db.user.findMany({ where: { role: "admin" }, select: { id: true } })).map(u => u.id));
+
   // Build daily signup + attempt + activity + reports series for the last 30 days.
   const signupSeries = fillDailySeries(30);
   const attemptSeries = fillDailySeries(30);
@@ -120,7 +122,7 @@ export async function GET() {
   const dauSet = new Map<string, Set<string>>();
 
   const signups30Rows = await db.user.findMany({
-    where: { createdAt: { gte: since30 } },
+    where: { createdAt: { gte: since30 }, role: { not: "admin" } },
     select: { createdAt: true },
     take: 10_000,
   });
@@ -138,6 +140,7 @@ export async function GET() {
     if (attemptSeries.has(k)) attemptSeries.set(k, (attemptSeries.get(k) ?? 0) + 1);
   }
   for (const r of activity30) {
+    if (adminIds.has(r.userId)) continue;
     const k = dateKey(r.ts);
     if (activitySeries.has(k)) activitySeries.set(k, (activitySeries.get(k) ?? 0) + 1);
     if (!dauSet.has(k)) dauSet.set(k, new Set());

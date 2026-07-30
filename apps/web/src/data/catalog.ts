@@ -147,6 +147,11 @@ export function getExam(exam: string): CatalogExam | undefined {
   return CATALOG.find((e) => e.exam === exam);
 }
 
+/** Find the catalog entry that contains a specific subject within an exam. */
+export function getExamEntry(exam: string, subject: string): CatalogExam | undefined {
+  return CATALOG.find((e) => e.exam === exam && e.subjects.some((s) => s.slug === subject));
+}
+
 /** Look up a subject within an exam by slug. */
 export function getSubject(
   exam: string,
@@ -176,7 +181,7 @@ export function subjectPrice(exam: string, subject: string): SubjectPrice {
 
 /** Human label for an exam+subject pair, e.g. "GATE · Mining (MN)". */
 export function subjectLabel(exam: string, subject: string): string {
-  const e = getExam(exam);
+  const e = getExamEntry(exam, subject) ?? getExam(exam);
   const s = e?.subjects.find((x) => x.slug === subject);
   return `${e?.label ?? exam} · ${s?.label ?? subject}`;
 }

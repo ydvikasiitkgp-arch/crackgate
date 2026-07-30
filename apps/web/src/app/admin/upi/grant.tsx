@@ -30,11 +30,9 @@ export default function GrantAccessForm() {
   const [identifier, setIdentifier] = useState("");
   const [plan, setPlan] = useState<"pro" | "premium">("pro");
   const [months, setMonths] = useState(18);
-  const [exam, setExam] = useState<string>(CATALOG[0].exam);
-  const subjects = useMemo(
-    () => CATALOG.filter((e) => e.exam === exam).flatMap((e) => e.subjects),
-    [exam],
-  );
+  const [examIdx, setExamIdx] = useState(0);
+  const entry = CATALOG[examIdx];
+  const subjects = entry.subjects;
   const [subject, setSubject] = useState<string>(CATALOG[0].subjects[0].slug);
   const [selectedCombo, setSelectedCombo] = useState<string>("");
   const [isTestUser, setIsTestUser] = useState(false);
@@ -46,14 +44,13 @@ export default function GrantAccessForm() {
   const isComboMode = Boolean(selectedCombo);
 
   const resolvedPrice = useMemo(() => {
-    const p = subjectPrice(exam, subject);
+    const p = subjectPrice(entry.exam, subject);
     return { pro: `₹${Math.round(p.proPaise / 100)}`, premium: `₹${Math.round(p.premiumPaise / 100)}` };
-  }, [exam, subject]);
+  }, [entry.exam, subject]);
 
-  function onExamChange(nextExam: string) {
-    setExam(nextExam);
-    const allSubjects = CATALOG.filter((e) => e.exam === nextExam).flatMap((e) => e.subjects);
-    if (allSubjects.length > 0) setSubject(allSubjects[0].slug);
+  function onExamChange(nextIdx: number) {
+    setExamIdx(nextIdx);
+    setSubject(CATALOG[nextIdx].subjects[0].slug);
   }
 
   async function submit() {
@@ -68,7 +65,7 @@ export default function GrantAccessForm() {
           identifier: identifier.trim(),
           plan,
           months,
-          exam: isComboMode ? "DIPLOMA" : exam,
+          exam: isComboMode ? "DIPLOMA" : entry.exam,
           subject: isComboMode ? selectedCombo : subject,
           isTestUser,
         }),
@@ -114,7 +111,8 @@ export default function GrantAccessForm() {
                 // Auto-set exam and subject from combo
                 const combo = COMBOS[e.target.value];
                 if (combo) {
-                  setExam(combo.entitlements[0].exam);
+                  const idx = CATALOG.findIndex((c) => c.exam === combo.entitlements[0].exam);
+                  setExamIdx(idx >= 0 ? idx : 0);
                   setSubject(combo.entitlements[0].subject);
                 }
               }
@@ -142,12 +140,12 @@ export default function GrantAccessForm() {
           <label className="block">
             <span className="text-xs text-muted">Exam</span>
             <select
-              value={exam}
-              onChange={(e) => onExamChange(e.target.value)}
+              value={examIdx}
+              onChange={(e) => onExamChange(Number(e.target.value))}
               className="input mt-1 w-full"
             >
-              {CATALOG.map((e) => (
-                <option key={e.label} value={e.exam}>
+              {CATALOG.map((e, i) => (
+                <option key={e.label} value={i}>
                   {e.label}
                 </option>
               ))}

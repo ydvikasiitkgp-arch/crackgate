@@ -100,6 +100,13 @@ export default async function AdminUpiPage({
       ? subjectLabel(fExam, fSubject)
       : getExam(fExam)?.label ?? fExam
     : "All exams";
+  // For deduplicated exam codes (e.g. PSU has 2 catalog entries), show a
+  // generic label when no specific subject is selected.
+  const chipLabel = fExam
+    ? fSubject
+      ? subjectLabel(fExam, fSubject)
+      : CATALOG.filter((e) => e.exam === fExam).map((e) => e.label).join(" + ")
+    : "All exams";
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-10">
@@ -178,35 +185,58 @@ export default async function AdminUpiPage({
             <span className="text-muted text-sm">({payments.length})</span>
           </h2>
           <span className="text-xs text-muted">
-            Filter: <strong>{filterLabel}</strong>
+            Filter: <strong>{chipLabel}</strong>
           </span>
         </div>
 
         {/* Filter chips */}
         <div className="flex flex-wrap gap-2 mt-3">
           <FilterChip label="All exams" href="/admin/upi" active={!fExam} />
-          {CATALOG.map((e) => (
-            <FilterChip
-              key={e.label}
-              label={e.label}
-              href={`/admin/upi?exam=${e.exam}`}
-              active={fExam === e.exam && !fSubject}
-            />
-          ))}
-        </div>
-        {fExam && (
-          <div className="flex flex-wrap gap-2 mt-2 pl-1">
-            {getExam(fExam)?.subjects.map((s) => (
+          {[...new Map(CATALOG.map((e) => [e.exam, e])).values()].map((e) => {
+            const multi = CATALOG.filter((x) => x.exam === e.exam).length > 1;
+            return (
               <FilterChip
-                key={s.slug}
-                label={`${s.label}${s.live ? "" : " · soon"}`}
-                href={`/admin/upi?exam=${fExam}&subject=${s.slug}`}
-                active={fSubject === s.slug}
-                small
+                key={e.exam}
+                label={multi ? e.exam : e.label}
+                href={`/admin/upi?exam=${e.exam}`}
+                active={fExam === e.exam && !fSubject}
               />
-            ))}
-          </div>
-        )}
+            );
+          })}
+        </div>
+        {fExam && (() => {
+          const entries = CATALOG.filter((e) => e.exam === fExam);
+          const groups = entries.length > 1
+            ? entries.map((e) => ({ label: e.label.replace(/PSU · /, ""), subjects: e.subjects }))
+            : (() => {
+                const subs = entries[0]?.subjects ?? [];
+                const prefixes = new Set(subs.map((s) => s.slug.includes("-") ? s.slug.split("-")[0].toUpperCase() : "OTHER"));
+                return prefixes.size > 1 ? groupByPrefix(subs) : [{ label: entries[0]?.label ?? fExam, subjects: subs }];
+              })();
+          return (
+            <div className="mt-3 pl-1 space-y-2">
+              {groups.map((g) => (
+                <div key={g.label} className="flex flex-wrap items-center gap-1.5">
+                  <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[11px] font-bold bg-brand/[0.06] border border-brand/10 text-brand tracking-wide shrink-0">
+                    {g.label}
+                    <span className="inline-flex items-center justify-center min-w-[14px] h-[14px] px-1 rounded-full text-[9px] font-bold bg-brand/10 text-brand/80 leading-none">
+                      {g.subjects.length}
+                    </span>
+                  </span>
+                  {g.subjects.map((s) => (
+                    <FilterChip
+                      key={s.slug}
+                      label={`${s.label}${s.live ? "" : " · soon"}`}
+                      href={`/admin/upi?exam=${fExam}&subject=${s.slug}`}
+                      active={fSubject === s.slug}
+                      small
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          );
+        })()}
 
         {payments.length === 0 ? (
           <p className="text-muted text-sm mt-3">
@@ -239,7 +269,9 @@ export default async function AdminUpiPage({
                       </td>
                       <td className="p-3 text-xs">{p.user.email}</td>
                       <td className="p-3 text-xs">{p.exam ?? "—"}</td>
-                      <td className="p-3 text-xs">{p.subject ?? "—"}</td>
+                      <td className="p-3 text-xs">
+                        {p.exam && p.subject ? subjectLabel(p.exam, p.subject) : (p.subject ?? "—")}
+                      </td>
                       <td className="p-3 font-semibold">{p.plan}</td>
                       <td className="p-3 font-semibold">{inr(p.amount)}</td>
                       <td className="p-3">
@@ -350,7 +382,7 @@ export default async function AdminUpiPage({
                           <span className="text-muted">{comboLabel(c.subject)}</span>
                         </span>
                       ) : (
-                        c.subject ?? "—"
+                        c.exam && c.subject ? subjectLabel(c.exam, c.subject) : (c.subject ?? "—")
                       )}
                     </td>
                     <td className="p-3 font-semibold">{c.plan}</td>
@@ -407,7 +439,9 @@ export default async function AdminUpiPage({
                       )}
                     </td>
                     <td className="p-3 text-xs">{c.exam ?? "—"}</td>
-                    <td className="p-3 text-xs">{c.subject ?? "—"}</td>
+                    <td className="p-3 text-xs">
+                      {c.exam && c.subject ? subjectLabel(c.exam, c.subject) : (c.subject ?? "—")}
+                    </td>
                     <td className="p-3 text-xs">{c.plan}</td>
                     <td className="p-3 text-xs">
                       ₹{Math.round(c.amountPaise / 100)}
@@ -451,15 +485,29 @@ function FilterChip({
   return (
     <a
       href={href}
-      className={`shrink-0 rounded-full ${
-        small ? "px-2.5 py-1 text-xs" : "px-3 py-1.5 text-sm"
-      } font-medium whitespace-nowrap transition ${
+      className={`shrink-0 rounded-full font-medium whitespace-nowrap transition-all duration-150 ${
+        small ? "px-3 py-1 text-xs" : "px-3.5 py-1.5 text-sm"
+      } ${
         active
-          ? "bg-brand text-white"
-          : "bg-canvas text-ink hover:bg-brand/10 border border-line"
+          ? "bg-brand text-white shadow-[0_0_0_1px_rgba(79,70,229,0.3),0_4px_12px_-4px_rgba(79,70,229,0.4)]"
+          : "bg-surface text-ink/80 border border-line/80 hover:border-brand/30 hover:text-brand hover:bg-brand/[0.04] hover:shadow-sm"
       }`}
     >
       {label}
     </a>
   );
+}
+
+/** Group subjects by their slug prefix (e.g. wcl-*, ncl-*, coal-*). */
+function groupByPrefix(
+  subjects: { slug: string; label: string; live: boolean }[],
+): { label: string; subjects: { slug: string; label: string; live: boolean }[] }[] {
+  const map = new Map<string, { slug: string; label: string; live: boolean }[]>();
+  for (const s of subjects) {
+    const prefix = s.slug.includes("-") ? s.slug.split("-")[0].toUpperCase() : "OTHER";
+    const arr = map.get(prefix) ?? [];
+    arr.push(s);
+    map.set(prefix, arr);
+  }
+  return [...map.entries()].map(([label, subs]) => ({ label, subjects: subs }));
 }
