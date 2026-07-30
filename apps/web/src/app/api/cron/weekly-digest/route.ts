@@ -61,6 +61,10 @@ async function run(req: Request) {
 
   const results: Array<{ userId: string; status: "skipped" | "queued" | "dry"; reason?: string }> = [];
 
+  if (!digestQueue) {
+    return NextResponse.json({ error: "redis_not_configured" }, { status: 500 });
+  }
+
   for (const u of users) {
     if (alreadySent.has(u.id)) {
       results.push({ userId: u.id, status: "skipped", reason: "sent_within_24h" });

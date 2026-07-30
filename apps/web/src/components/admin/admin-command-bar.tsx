@@ -13,6 +13,7 @@ import {
   HelpCircle,
   ExternalLink,
   BarChart3,
+  Users,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -53,6 +54,13 @@ const QUICK_ACTIONS = [
     icon: HelpCircle,
     color: "text-purple-500",
     bg: "bg-purple-500/10 hover:bg-purple-500/15",
+  },
+  {
+    href: "/admin/daily-users",
+    label: "Daily Pulse",
+    icon: Users,
+    color: "text-cyan-500",
+    bg: "bg-cyan-500/10 hover:bg-cyan-500/15",
   },
   {
     href: "https://app.posthog.com",

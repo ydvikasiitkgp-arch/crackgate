@@ -53,6 +53,10 @@ export async function POST(request: Request) {
     jobData.recipients = explicitRecipients;
   }
 
+  if (!newsletterQueue) {
+    return NextResponse.json({ error: "redis_not_configured" }, { status: 500 });
+  }
+
   try {
     await newsletterQueue.add("send", jobData, { delay });
   } catch (err) {

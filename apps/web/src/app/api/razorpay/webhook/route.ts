@@ -107,7 +107,7 @@ export async function POST(req: Request) {
         where: { id: payment.userId },
         select: { phone: true, name: true },
       });
-      if (u?.phone) {
+      if (u?.phone && whatsappQueue) {
         await whatsappQueue.add("payment_receipt", {
           type: "payment_receipt",
           phone: u.phone,

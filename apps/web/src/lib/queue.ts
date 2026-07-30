@@ -1,38 +1,27 @@
-/** Queue infrastructure using BullMQ + Redis.
- *
- *  Setup:
- *   1. Add a `redis` service to docker-compose (see docker-compose.yml).
- *   2. Set REDIS_URL env var (default: redis://redis:6379).
- *   3. Start workers alongside the web process (currently co-located via
- *      `Worker` instantiation in this module; extract to a separate process
- *      when throughput demands it).
- *
- *  Current queues:
- *   - whatsapp   : outbound WhatsApp messages (OTP, receipts, digests)
- *   - digest     : per-user weekly digest computation + send
- *   - newsletter : scheduled newsletter broadcasts via Resend
- */
 import { Queue, Worker, type Job } from "bullmq";
 import IORedis from "ioredis";
 
-// bullmq's internal ioredis version may differ from the workspace install,
-// so we use `as any` for the connection object to avoid type incompatibility.
-const connection = new IORedis(process.env.REDIS_URL ?? "redis://redis:6379", {
-  maxRetriesPerRequest: null,
-  enableOfflineQueue: false,
-}) as any;
+const hasRedis = Boolean(process.env.REDIS_URL);
 
-// ── WhatsApp queue ──────────────────────────────────────────────────────────
+let _redis: any = null;
+function getRedis() {
+  if (!hasRedis) return null;
+  if (!_redis) {
+    _redis = new IORedis(process.env.REDIS_URL!, {
+      maxRetriesPerRequest: null,
+      enableOfflineQueue: false,
+      lazyConnect: true,
+    }) as any;
+    _redis.on("error", () => {});
+  }
+  return _redis;
+}
 
 export interface WhatsappJobData {
   type: "payment_receipt" | "weekly_digest" | "otp";
   phone: string;
   payload: Record<string, unknown>;
 }
-
-export const whatsappQueue = new Queue<WhatsappJobData>("whatsapp", { connection });
-
-// ── Digest queue (one job per user, spawned by the cron endpoint) ───────────
 
 export interface DigestJobData {
   userId: string;
@@ -41,25 +30,28 @@ export interface DigestJobData {
   plan: string;
 }
 
-export const digestQueue = new Queue<DigestJobData>("digest", { connection });
-
-// ── Newsletter queue ────────────────────────────────────────────────────────
-// Recipients are fetched fresh at execution time unless pre-selected by admin.
-
 export interface NewsletterJobData {
   subject: string;
   html: string;
   recipients?: string[];
 }
 
-export const newsletterQueue = new Queue<NewsletterJobData>("newsletter", { connection });
+export const whatsappQueue: Queue<WhatsappJobData> | null = hasRedis
+  ? new Queue("whatsapp", { connection: getRedis() })
+  : null;
 
-// ── Worker setup ────────────────────────────────────────────────────────────
+export const digestQueue: Queue<DigestJobData> | null = hasRedis
+  ? new Queue("digest", { connection: getRedis() })
+  : null;
+
+export const newsletterQueue: Queue<NewsletterJobData> | null = hasRedis
+  ? new Queue("newsletter", { connection: getRedis() })
+  : null;
 
 let workersStarted = false;
 
 export function startWorkers() {
-  if (workersStarted) return;
+  if (workersStarted || !hasRedis) return;
   workersStarted = true;
 
   new Worker<WhatsappJobData>(
@@ -79,7 +71,7 @@ export function startWorkers() {
           break;
       }
     },
-    { connection, concurrency: 5 },
+    { connection: getRedis(), concurrency: 5 },
   );
 
   new Worker<DigestJobData>(
@@ -158,7 +150,7 @@ export function startWorkers() {
         data: { userId, type: "weekly_digest_sent", payload: { totalAttempts, avgAccuracy } },
       });
     },
-    { connection, concurrency: 10 },
+    { connection: getRedis(), concurrency: 10 },
   );
 
   new Worker<NewsletterJobData>(
@@ -184,6 +176,6 @@ export function startWorkers() {
       const wrapped = newsletterHtml(html);
       await sendNewsletter({ subject, html: wrapped, recipients });
     },
-    { connection, concurrency: 1 },
+    { connection: getRedis(), concurrency: 1 },
   );
 }
