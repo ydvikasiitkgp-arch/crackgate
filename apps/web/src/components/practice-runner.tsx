@@ -559,11 +559,11 @@ function PracticePortal({
                   onClick={() => go(i)}
                   className={cn(
                     "min-h-[44px] sm:min-h-[36px] min-w-[44px] sm:min-w-0 text-xs font-semibold rounded transition active:scale-90",
-                    s === "nv"    && "bg-slate-200 text-slate-700",
-                    s === "not"   && "bg-rose-200 text-rose-900",
-                    s === "ans"   && "bg-emerald-500 text-white",
-                    s === "mark"  && "bg-violet-500 text-white",
-                    s === "marka" && "bg-violet-700 text-white ring-2 ring-emerald-400",
+                    s === "nv"    && "bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-300",
+                    s === "not"   && "bg-rose-200 text-rose-900 dark:bg-rose-900/30 dark:text-rose-300",
+                    s === "ans"   && "bg-emerald-500 text-white dark:bg-emerald-600",
+                    s === "mark"  && "bg-violet-500 text-white dark:bg-violet-600",
+                    s === "marka" && "bg-violet-700 text-white ring-2 ring-emerald-400 dark:ring-emerald-500",
                     i === state.idx && "ring-2 ring-brand"
                   )}
                   title={`Question ${i + 1}`}
