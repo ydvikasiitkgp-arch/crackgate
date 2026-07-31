@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Pencil, Trash2, Loader2 } from "lucide-react";
+import { Pencil, Loader2 } from "lucide-react";
 import ViewAsButton from "@/components/admin/view-as-button";
 
 export default function PaymentRowActions({
@@ -17,9 +17,8 @@ export default function PaymentRowActions({
   userEmail?: string;
 }) {
   const router = useRouter();
-  const [busy, setBusy] = useState<null | "edit" | "delete">(null);
+  const [busy, setBusy] = useState<null | "edit">(null);
   const [editOpen, setEditOpen] = useState(false);
-  const [deleteOpen, setDeleteOpen] = useState(false);
   const [months, setMonths] = useState(periodMonths);
   const [error, setError] = useState("");
 
@@ -46,24 +45,6 @@ export default function PaymentRowActions({
       } else {
         const d = await r.json().catch(() => ({}));
         toastError(d.error ?? "Update failed");
-      }
-    } finally {
-      setBusy(null);
-    }
-  }
-
-  async function remove() {
-    setBusy("delete");
-    try {
-      const r = await fetch(`/api/admin/payments/${paymentId}`, {
-        method: "DELETE",
-      });
-      if (r.ok) {
-        setDeleteOpen(false);
-        router.refresh();
-      } else {
-        toastError("Delete failed");
-        setDeleteOpen(false);
       }
     } finally {
       setBusy(null);
@@ -125,65 +106,20 @@ export default function PaymentRowActions({
         </div>
       )}
 
-      {/* Delete dialog */}
-      {deleteOpen && (
-        <div className="fixed inset-0 z-50 grid place-items-center" role="dialog" aria-modal="true">
-          <button
-            className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
-            onClick={() => setDeleteOpen(false)}
-            aria-label="Close"
-          />
-          <div className="relative bg-surface rounded-2xl border border-line shadow-pop w-full max-w-sm mx-4 p-6">
-            <h3 className="font-bold text-lg text-err">Delete payment?</h3>
-            <p className="text-sm text-muted mt-2">
-              Removes this payment record — it drops out of revenue and
-              payment counts.
-            </p>
-            <p className="text-sm text-muted mt-1">
-              The user&apos;s access is <strong>unchanged</strong>.
-            </p>
-            <div className="flex justify-end gap-2 mt-5">
-              <button onClick={() => setDeleteOpen(false)} className="btn btn-ghost text-sm">
-                Cancel
-              </button>
-              <button
-                onClick={remove}
-                disabled={busy !== null}
-                className="btn text-sm px-4 py-2 border border-err text-err hover:bg-err/10"
-              >
-                {busy === "delete" ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                ) : (
-                  "Delete"
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Impersonate dialog */}
-      <ViewAsButton userId={userId} userEmail={userEmail} />
-
+      {/* Row actions */}
       <div className="flex items-center gap-1.5">
+        <ViewAsButton userId={userId} userEmail={userEmail} iconOnly />
         <button
           onClick={() => {
             setMonths(periodMonths);
             setEditOpen(true);
           }}
           disabled={busy !== null}
-          className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold text-brand bg-brand/10 hover:bg-brand/20 transition-colors disabled:opacity-50"
+          title="Change access duration"
+          aria-label="Change access duration"
+          className="inline-flex items-center justify-center rounded-md p-1.5 text-brand bg-brand/10 hover:bg-brand/20 transition-colors disabled:opacity-50"
         >
-          <Pencil className="w-3 h-3" />
-          Edit
-        </button>
-        <button
-          onClick={() => setDeleteOpen(true)}
-          disabled={busy !== null}
-          className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold text-err bg-err/10 hover:bg-err/20 transition-colors disabled:opacity-50"
-        >
-          <Trash2 className="w-3 h-3" />
-          Delete
+          <Pencil className="w-3.5 h-3.5" />
         </button>
       </div>
     </>

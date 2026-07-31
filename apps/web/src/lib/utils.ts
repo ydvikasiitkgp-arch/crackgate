@@ -8,6 +8,18 @@ export function fmtDate(d: Date | string) {
   return dt.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
 }
 
+const IST = "Asia/Kolkata";
+
+export function istDate(d: Date | string) {
+  const dt = typeof d === "string" ? new Date(d) : d;
+  return dt.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric", timeZone: IST });
+}
+
+export function istTime(d: Date | string) {
+  const dt = typeof d === "string" ? new Date(d) : d;
+  return dt.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: IST });
+}
+
 export function secondsToHMS(s: number) {
   const h = String(Math.floor(s / 3600)).padStart(2, "0");
   const m = String(Math.floor((s % 3600) / 60)).padStart(2, "0");

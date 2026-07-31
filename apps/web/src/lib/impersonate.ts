@@ -7,6 +7,7 @@ export const IMPERSONATION_ROLE = "view_only_impersonator";
 
 export type ImpersonationPayload = {
   sub: string;             // target user id
+  targetEmail: string;
   impersonatorId: string;
   impersonatorEmail: string;
   role: typeof IMPERSONATION_ROLE;
@@ -21,10 +22,12 @@ function secret(): Uint8Array {
 
 export async function generateImpersonationToken(
   targetUserId: string,
+  targetUserEmail: string,
   adminId: string,
   adminEmail: string,
 ): Promise<string> {
   return new SignJWT({
+    targetEmail: targetUserEmail,
     impersonatorId: adminId,
     impersonatorEmail: adminEmail,
     role: IMPERSONATION_ROLE,
@@ -44,6 +47,7 @@ export async function verifyImpersonationToken(
     if (payload.role !== IMPERSONATION_ROLE) return null;
     return {
       sub: String(payload.sub ?? ""),
+      targetEmail: String(payload.targetEmail ?? ""),
       impersonatorId: String(payload.impersonatorId ?? ""),
       impersonatorEmail: String(payload.impersonatorEmail ?? ""),
       role: IMPERSONATION_ROLE,

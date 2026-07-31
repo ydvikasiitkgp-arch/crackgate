@@ -7,9 +7,11 @@ import { Eye, Loader2 } from "lucide-react";
 export default function ViewAsButton({
   userId,
   userEmail,
+  iconOnly = false,
 }: {
   userId?: string;
   userEmail?: string;
+  iconOnly?: boolean;
 }) {
   const router = useRouter();
   const [busy, setBusy] = useState(false);
@@ -31,7 +33,8 @@ export default function ViewAsButton({
         body: JSON.stringify({ userId }),
       });
       if (r.ok) {
-        router.push("/dashboard");
+        setOpen(false);
+        router.replace("/dashboard");
       } else {
         const d = await r.json().catch(() => ({}));
         toastError(d.error ?? "Could not start session");
@@ -91,10 +94,15 @@ export default function ViewAsButton({
           onClick={() => setOpen(true)}
           disabled={busy}
           title={`View dashboard as ${userEmail ?? "this user"}`}
-          className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold text-amber-600 bg-amber-500/10 hover:bg-amber-500/20 transition-colors disabled:opacity-50"
+          aria-label="View as user"
+          className={
+            iconOnly
+              ? "inline-flex items-center justify-center rounded-md p-1.5 text-amber-600 bg-amber-500/10 hover:bg-amber-500/20 transition-colors disabled:opacity-50"
+              : "inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold text-amber-600 bg-amber-500/10 hover:bg-amber-500/20 transition-colors disabled:opacity-50"
+          }
         >
-          <Eye className="w-3 h-3" />
-          View As
+          <Eye className="w-3.5 h-3.5" />
+          {!iconOnly && "View As"}
         </button>
       )}
     </>

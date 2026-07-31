@@ -13,16 +13,13 @@ export async function POST(req: NextRequest) {
   if (token) {
     const payload = await verifyImpersonationToken(token);
     if (payload?.sub) {
-      const target = await db.user
-        .findUnique({ where: { id: payload.sub }, select: { email: true } })
-        .catch(() => null);
       await db.auditLog.create({
         data: {
           action: "impersonate_end",
           adminId: payload.impersonatorId,
           adminEmail: payload.impersonatorEmail,
           targetUserId: payload.sub,
-          targetUserEmail: target?.email ?? "",
+          targetUserEmail: payload.targetEmail,
         },
       });
     }
