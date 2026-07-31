@@ -1,12 +1,13 @@
 import { getAdminSession } from "@/lib/admin";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
-import { inr } from "@/lib/utils";
+import { inr, istDate, istTime } from "@/lib/utils";
 import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import UpiReviewActions from "./actions";
 import GrantAccessForm from "./grant";
 import PaymentRowActions from "./payment-actions";
 import ViewAsButton from "@/components/admin/view-as-button";
+import RevokeEntitlementButton from "@/components/admin/revoke-entitlement-button";
 import { CATALOG, subjectLabel, getExam } from "@/data/catalog";
 import { isComboSlug, comboLabel } from "@/lib/combos";
 
@@ -97,7 +98,7 @@ export default async function AdminUpiPage({
         email: true,
         entitlements: {
           where: { source: "test_grant" },
-          select: { exam: true, subject: true, tier: true, expiry: true },
+          select: { id: true, exam: true, subject: true, tier: true, expiry: true, createdAt: true },
         },
       },
       orderBy: { createdAt: "desc" },
@@ -265,6 +266,7 @@ export default async function AdminUpiPage({
               <thead className="text-xs text-muted bg-bg-2">
                 <tr className="text-left">
                   <th className="p-3">Date</th>
+                  <th className="p-3">Time</th>
                   <th className="p-3">User</th>
                   <th className="p-3">Exam</th>
                   <th className="p-3">Subject</th>
@@ -280,10 +282,10 @@ export default async function AdminUpiPage({
                   return (
                     <tr key={p.id} className="border-t border-border/60">
                       <td className="p-3 whitespace-nowrap text-xs">
-                        {(p.capturedAt ?? p.createdAt)
-                          .toISOString()
-                          .slice(0, 16)
-                          .replace("T", " ")}
+                        {istDate(p.capturedAt ?? p.createdAt)}
+                      </td>
+                      <td className="p-3 whitespace-nowrap text-xs">
+                        {istTime(p.capturedAt ?? p.createdAt)}
                       </td>
                       <td className="p-3 text-xs">{p.user.email}</td>
                       <td className="p-3 text-xs">{p.exam ?? "—"}</td>
@@ -353,15 +355,34 @@ export default async function AdminUpiPage({
                 {testUsers.map((u) => (
                   <tr key={u.id} className="border-t border-border/60">
                     <td className="p-3 text-xs select-all">{u.email}</td>
-                    <td className="p-3 text-xs">
-                      <div className="space-y-1">
-                        {u.entitlements.map((e) => (
-                          <span key={`${e.exam}-${e.subject}`}>
-                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent/15 text-accent">
-                              {e.exam} · {e.subject} · {e.tier}
-                            </span>
-                          </span>
-                        ))}
+                    <td className="p-3">
+                      <div className="space-y-2">
+                        {u.entitlements.map((e) => {
+                          const expired = e.expiry && e.expiry < new Date();
+                          return (
+                            <div key={e.id} className="flex items-start gap-1.5">
+                              <div>
+                                <span className="inline-flex items-center gap-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent/15 text-accent">
+                                  {e.exam} · {e.subject} · {e.tier}
+                                </span>
+                                <div className="text-[10px] text-muted mt-0.5">
+                                  granted {istDate(e.createdAt)} · until{" "}
+                                  {e.expiry ? (
+                                    <span className={expired ? "text-err font-semibold" : ""}>
+                                      {istDate(e.expiry)}
+                                    </span>
+                                  ) : (
+                                    "∞"
+                                  )}
+                                </div>
+                              </div>
+                              <RevokeEntitlementButton
+                                entitlementId={e.id}
+                                label={`${e.exam} · ${e.subject}`}
+                              />
+                            </div>
+                          );
+                        })}
                       </div>
                     </td>
                     <td className="p-3">

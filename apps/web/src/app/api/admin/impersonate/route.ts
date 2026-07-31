@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const token = await generateImpersonationToken(user.id, admin.userId, admin.email);
+  const token = await generateImpersonationToken(user.id, user.email, admin.userId, admin.email);
   await db.auditLog.create({
     data: {
       action: "impersonate_start",
