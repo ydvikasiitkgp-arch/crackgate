@@ -8,6 +8,7 @@ import { QuestionTypeTag } from "@/components/question-extras";
 import { OfflineToast } from "@/components/offline-toast";
 import { QuestionFigure, type QuestionFigure as Figure } from "@/components/question-figure";
 import { MathText } from "@/components/math-text";
+import { useImpersonation } from "@/components/impersonation-context";
 
 type Question =
   | { type: "MCQ"; marks: number; subject: string; stem: string; options: string[]; answer: number; solution?: string; figure?: Figure }
@@ -85,6 +86,7 @@ export function ExamPortal({
   const examCaption = examLabel ?? "GATE — Graduate Aptitude Test in Engineering";
   const calculatorAllowed = showCalculator ?? true;
   const router = useRouter();
+  const impersonating = useImpersonation();
   const [state, dispatch] = useReducer(reducer, {
     idx: 0,
     answers: {},
@@ -95,6 +97,12 @@ export function ExamPortal({
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [drill, setDrill] = useState(false);
+  const [viewOnlyToast, setViewOnlyToast] = useState(false);
+
+  function toastViewOnly() {
+    setViewOnlyToast(true);
+    setTimeout(() => setViewOnlyToast(false), 3000);
+  }
 
   // Autosave / resume + pause state
   const storageKey = `cg:exam:${kind}:${refId}`;
@@ -294,6 +302,7 @@ export function ExamPortal({
   useEffect(() => { if (drill && flaggedIdxs.length === 0) setDrill(false); }, [drill, flaggedIdxs.length]);
 
   async function submit(auto = false) {
+    if (impersonating) { toastViewOnly(); return; }
     if (!auto && !confirmOpen) { setConfirmOpen(true); return; }
     setConfirmOpen(false);
     setSubmitting(true);
@@ -559,6 +568,11 @@ export function ExamPortal({
 
       {/* ---------- Pause overlay (timer & progress frozen) ---------- */}
       <OfflineToast />
+      {viewOnlyToast && (
+        <div className="fixed top-4 left-1/2 z-[90] -translate-x-1/2 px-4 py-3 rounded-xl shadow-pop text-sm font-semibold bg-red-600 text-white animate-in slide-in-from-top-2">
+          Action disabled: You are in View-Only Admin Mode
+        </div>
+      )}
       {paused && (
         <div className="fixed inset-0 z-[80] bg-ink/80 backdrop-blur-sm grid place-items-center p-4 text-center">
           <div className="bg-surface rounded-xl max-w-sm w-full p-6">

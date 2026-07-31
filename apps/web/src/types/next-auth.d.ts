@@ -17,5 +17,10 @@ declare module "next-auth" {
         expiry: string | null;
       }>;
     };
+    /** Present only during admin "login as user" mode. */
+    impersonator?: {
+      id: string;
+      email: string;
+    };
   }
 }
