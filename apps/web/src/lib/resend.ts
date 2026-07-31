@@ -46,6 +46,43 @@ export function newsletterHtml(bodyHtml: string): string {
 </html>`;
 }
 
+export interface NewsletterRecipient {
+  email: string;
+  name?: string | null;
+}
+
+/** Escapes a value so it can be safely interpolated into HTML. */
+export function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+/**
+ * Resolves the greeting name for personalization.
+ * Only resolves when `name` is a non-empty string (uses the first word);
+ * otherwise falls back to "Aspirant".
+ */
+export function resolveFirstName(name: string | null | undefined): string {
+  if (typeof name === "string" && name.trim().length > 0) {
+    const first = name.trim().split(/\s+/)[0];
+    return first.slice(0, 100);
+  }
+  return "Aspirant";
+}
+
+/**
+ * Replaces template placeholders (e.g. `{{name}}`) in the HTML for a single
+ * recipient. Unknown/missing values fall back to safe defaults.
+ */
+export function personalizeEmail(html: string, recipient: NewsletterRecipient): string {
+  const name = escapeHtml(resolveFirstName(recipient.name));
+  return html.replaceAll("{{name}}", name);
+}
+
 export interface SendResult {
   sent: number;
   failed: number;
@@ -54,7 +91,7 @@ export interface SendResult {
 export async function sendNewsletter(opts: {
   subject: string;
   html: string;
-  recipients: string[];
+  recipients: NewsletterRecipient[];
 }): Promise<SendResult> {
   const from = process.env.RESEND_FROM_EMAIL ?? "support@crackgate.in";
   const resend = getClient();
@@ -65,12 +102,12 @@ export async function sendNewsletter(opts: {
   for (let i = 0; i < opts.recipients.length; i += CONCURRENCY) {
     const batch = opts.recipients.slice(i, i + CONCURRENCY);
     const results = await Promise.all(
-      batch.map(async (email) => {
+      batch.map(async (recipient) => {
         const { error } = await resend.emails.send({
           from,
-          to: [email],
+          to: [recipient.email],
           subject: opts.subject,
-          html: opts.html,
+          html: personalizeEmail(opts.html, recipient),
         });
         return !error;
       }),

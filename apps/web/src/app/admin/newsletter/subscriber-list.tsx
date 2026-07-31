@@ -12,8 +12,8 @@ interface Subscriber {
 
 interface Props {
   subscribers: Subscriber[];
-  selectedEmails: Set<string>;
-  onSelectionChange: (emails: Set<string>) => void;
+  selectedEmails: Map<string, string | null>;
+  onSelectionChange: (emails: Map<string, string | null>) => void;
 }
 
 type PlanFilter = "all" | "free" | "paid";
@@ -40,22 +40,22 @@ export default function SubscriberList({ subscribers, selectedEmails, onSelectio
 
   function toggleAll() {
     if (allSelected) {
-      const next = new Set(selectedEmails);
+      const next = new Map(selectedEmails);
       filteredEmails.forEach((e) => next.delete(e));
       onSelectionChange(next);
     } else {
-      const next = new Set(selectedEmails);
-      filteredEmails.forEach((e) => next.add(e));
+      const next = new Map(selectedEmails);
+      filteredEmails.forEach((e) => next.set(e, null));
       onSelectionChange(next);
     }
   }
 
   function toggle(email: string) {
-    const next = new Set(selectedEmails);
+    const next = new Map(selectedEmails);
     if (next.has(email)) {
       next.delete(email);
     } else {
-      next.add(email);
+      next.set(email, null);
     }
     onSelectionChange(next);
   }

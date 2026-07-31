@@ -1,5 +1,7 @@
 import { Queue, Worker, type Job } from "bullmq";
 import IORedis from "ioredis";
+import type { NewsletterRecipient } from "@/lib/resend";
+import { fillMissingNames } from "@/lib/newsletter-recipients";
 
 const hasRedis = Boolean(process.env.REDIS_URL);
 
@@ -33,7 +35,7 @@ export interface DigestJobData {
 export interface NewsletterJobData {
   subject: string;
   html: string;
-  recipients?: string[];
+  recipients?: NewsletterRecipient[];
 }
 
 export const whatsappQueue: Queue<WhatsappJobData> | null = hasRedis
@@ -160,7 +162,7 @@ export function startWorkers() {
       const { sendNewsletter, newsletterHtml } = await import("@/lib/resend");
       const { subject, html, recipients: explicitRecipients } = job.data;
 
-      let recipients: string[];
+      let recipients: NewsletterRecipient[];
 
       if (explicitRecipients && explicitRecipients.length > 0) {
         recipients = explicitRecipients;
@@ -170,8 +172,10 @@ export function startWorkers() {
           select: { email: true },
         });
         if (subscribers.length === 0) return;
-        recipients = subscribers.map((s) => s.email);
+        recipients = subscribers.map((s) => ({ email: s.email }));
       }
+
+      recipients = await fillMissingNames(recipients);
 
       const wrapped = newsletterHtml(html);
       await sendNewsletter({ subject, html: wrapped, recipients });

@@ -13,8 +13,8 @@ interface RegisteredUser {
 
 interface Props {
   users: RegisteredUser[];
-  selectedEmails: Set<string>;
-  onSelectionChange: (emails: Set<string>) => void;
+  selectedEmails: Map<string, string | null>;
+  onSelectionChange: (emails: Map<string, string | null>) => void;
 }
 
 type PlanFilter = "all" | "free" | "paid";
@@ -44,22 +44,22 @@ export default function RegisteredUsersList({ users, selectedEmails, onSelection
 
   function toggleAll() {
     if (allSelected) {
-      const next = new Set(selectedEmails);
+      const next = new Map(selectedEmails);
       filteredEmails.forEach((e) => next.delete(e));
       onSelectionChange(next);
     } else {
-      const next = new Set(selectedEmails);
-      filteredEmails.forEach((e) => next.add(e));
+      const next = new Map(selectedEmails);
+      filtered.forEach((u) => next.set(u.email, u.name?.trim() ? u.name : null));
       onSelectionChange(next);
     }
   }
 
-  function toggle(email: string) {
-    const next = new Set(selectedEmails);
-    if (next.has(email)) {
-      next.delete(email);
+  function toggle(user: RegisteredUser) {
+    const next = new Map(selectedEmails);
+    if (next.has(user.email)) {
+      next.delete(user.email);
     } else {
-      next.add(email);
+      next.set(user.email, user.name?.trim() ? user.name : null);
     }
     onSelectionChange(next);
   }
@@ -135,7 +135,7 @@ export default function RegisteredUsersList({ users, selectedEmails, onSelection
                   <input
                     type="checkbox"
                     checked={selectedEmails.has(u.email)}
-                    onChange={() => toggle(u.email)}
+                    onChange={() => toggle(u)}
                     className="accent-brand"
                   />
                 </td>
