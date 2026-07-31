@@ -11,6 +11,7 @@ import { CartIcon } from "@/components/cart-icon";
 export async function SiteHeader() {
   const session = await auth();
   const u = session?.user;
+  const impersonating = !!session?.impersonator;
 
   return (
     <header className="sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-line">
@@ -22,7 +23,7 @@ export async function SiteHeader() {
 
         <div className="ml-auto flex items-center gap-2">
           <CommandPalette />
-          <CartIcon href="/cart" />
+          {!impersonating && <CartIcon href="/cart" />}
           <ThemeToggle />
           {u ? (
             <UserMenu

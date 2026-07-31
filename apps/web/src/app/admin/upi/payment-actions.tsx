@@ -3,13 +3,18 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Pencil, Trash2, Loader2 } from "lucide-react";
+import ViewAsButton from "@/components/admin/view-as-button";
 
 export default function PaymentRowActions({
   paymentId,
   periodMonths,
+  userId,
+  userEmail,
 }: {
   paymentId: string;
   periodMonths: number;
+  userId?: string;
+  userEmail?: string;
 }) {
   const router = useRouter();
   const [busy, setBusy] = useState<null | "edit" | "delete">(null);
@@ -156,6 +161,9 @@ export default function PaymentRowActions({
           </div>
         </div>
       )}
+
+      {/* Impersonate dialog */}
+      <ViewAsButton userId={userId} userEmail={userEmail} />
 
       <div className="flex items-center gap-1.5">
         <button
