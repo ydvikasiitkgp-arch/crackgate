@@ -49,10 +49,11 @@ export async function GET() {
           WHERE "path" = '/pricing' AND "createdAt" >= ${since30}
           AND "userId" IS NOT NULL
         `,
-        // Paid users (captured payments)
+        // Paid users (captured payments, excl. test_grant accounts)
         db.$queryRaw<[{ count: bigint }]>`
           SELECT COUNT(DISTINCT "userId") as count FROM "Payment"
           WHERE "status" = 'captured' AND "capturedAt" >= ${since30}
+          AND "userId" NOT IN (SELECT "userId" FROM "Entitlement" WHERE "source" = 'test_grant')
         `,
       ]);
 

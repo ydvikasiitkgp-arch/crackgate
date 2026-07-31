@@ -5,6 +5,7 @@ import { inr } from "@/lib/utils";
 import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import UpiReviewActions from "./actions";
 import GrantAccessForm from "./grant";
+import PaymentRowActions from "./payment-actions";
 import { CATALOG, subjectLabel, getExam } from "@/data/catalog";
 import { isComboSlug, comboLabel } from "@/lib/combos";
 
@@ -254,6 +255,7 @@ export default async function AdminUpiPage({
                   <th className="p-3">Tier</th>
                   <th className="p-3">Amount</th>
                   <th className="p-3">Source</th>
+                  <th className="p-3">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -286,6 +288,12 @@ export default async function AdminUpiPage({
                         >
                           {src}
                         </span>
+                      </td>
+                      <td className="p-3">
+                        <PaymentRowActions
+                          paymentId={p.id}
+                          periodMonths={p.periodMonths}
+                        />
                       </td>
                     </tr>
                   );
