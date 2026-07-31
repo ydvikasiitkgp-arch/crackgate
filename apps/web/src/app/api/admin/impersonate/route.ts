@@ -41,6 +41,15 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Fail with a readable error instead of a 500 HTML page if the signing key
+  // isn't configured on the server (deploy misconfiguration).
+  if (!process.env.IMPERSONATE_SECRET) {
+    return NextResponse.json(
+      { error: "Impersonation not configured (IMPERSONATE_SECRET missing on server)" },
+      { status: 500 },
+    );
+  }
+
   const token = await generateImpersonationToken(user.id, admin.userId, admin.email);
   await db.auditLog.create({
     data: {
