@@ -336,3 +336,18 @@ model CareerApplication {
   @@index([createdAt])
 }
 
+// Admin "login as user" sessions. Every impersonation start/end is recorded
+// so it can be audited (who impersonated whom, and when).
+model AuditLog {
+  id              String   @id @default(cuid())
+  action          String   // impersonate_start | impersonate_end
+  adminId         String
+  adminEmail      String
+  targetUserId    String
+  targetUserEmail String
+  createdAt       DateTime @default(now())
+
+  @@index([action, createdAt(sort: Desc)])
+  @@index([adminId, createdAt(sort: Desc)])
+}
+

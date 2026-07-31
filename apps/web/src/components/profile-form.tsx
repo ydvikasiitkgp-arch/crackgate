@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { updateProfile, type UpdateProfileState } from "@/app/settings/actions";
+import { useImpersonation } from "@/components/impersonation-context";
 
 const initial: UpdateProfileState = {};
 
@@ -23,6 +24,7 @@ export function ProfileForm({
   phoneVerified: boolean;
 }) {
   const [state, action, pending] = useActionState(updateProfile, initial);
+  const impersonating = useImpersonation();
 
   return (
     <form action={action} className="space-y-4">
@@ -84,8 +86,8 @@ export function ProfileForm({
       </div>
 
       <div className="flex items-center gap-3 pt-2">
-        <button type="submit" disabled={pending} className="btn btn-accent text-sm">
-          {pending ? "Saving…" : "Save changes"}
+        <button type="submit" disabled={pending || impersonating} className="btn btn-accent text-sm">
+          {impersonating ? "Read-only admin mode" : pending ? "Saving…" : "Save changes"}
         </button>
         {state.ok && <span className="text-sm text-ok">✓ Saved</span>}
         {state.error && <span className="text-sm text-bad">{state.error}</span>}

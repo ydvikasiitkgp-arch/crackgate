@@ -1,5 +1,7 @@
 import NextAuth from "next-auth";
 import type { Provider } from "next-auth/providers";
+import type { Session } from "next-auth";
+import { cookies } from "next/headers";
 import { getLimiter, ipFromRequest } from "@/lib/rate-limit";
 import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
@@ -9,6 +11,7 @@ import { db } from "@/lib/db";
 import { isValidPhone, normalizePhone } from "@/lib/whatsapp";
 import { authConfig } from "@/lib/auth.config";
 import { getPostHogClient } from "@/lib/posthog";
+import { IMPERSONATE_COOKIE, verifyImpersonationToken } from "@/lib/impersonate";
 
 // Only register Google if it's actually configured. Otherwise NextAuth crashes
 // at boot trying to discover OAuth endpoints with empty client credentials.
@@ -27,7 +30,7 @@ if (googleConfigured) {
   );
 }
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
+const nextAuth = NextAuth({
   ...authConfig,
   adapter: PrismaAdapter(db),
   // JWT is required because the Credentials provider can't create database sessions.
@@ -259,3 +262,44 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
   pages: { signIn: "/login" },
 });
+
+export const handlers = nextAuth.handlers;
+export const signIn = nextAuth.signIn;
+export const signOut = nextAuth.signOut;
+
+/**
+ * Wrapped auth() — transparently returns the impersonated user's session when
+ * a valid `__impersonate` cookie is present (admin "login as user" mode).
+ * Falls through to normal NextAuth when the cookie is absent/invalid/expired.
+ */
+export async function auth(): Promise<Session | null> {
+  const cookieStore = await cookies();
+  const impCookie = cookieStore.get(IMPERSONATE_COOKIE);
+  if (impCookie?.value) {
+    const payload = await verifyImpersonationToken(impCookie.value);
+    if (payload?.sub) {
+      const user = await db.user.findUnique({
+        where: { id: payload.sub },
+        select: { id: true, email: true, name: true, plan: true, picture: true, role: true },
+      });
+      if (user) {
+        return {
+          user: {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            image: user.picture ?? null,
+            plan: user.plan,
+            role: "user",
+          },
+          expires: new Date((payload.exp ?? Date.now() / 1000) * 1000).toISOString(),
+          impersonator: {
+            id: payload.impersonatorId,
+            email: payload.impersonatorEmail,
+          },
+        };
+      }
+    }
+  }
+  return nextAuth.auth();
+}

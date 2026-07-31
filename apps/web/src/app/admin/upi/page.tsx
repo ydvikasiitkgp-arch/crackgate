@@ -6,6 +6,7 @@ import { AdminKpiCard } from "@/components/admin/admin-kpi-card";
 import UpiReviewActions from "./actions";
 import GrantAccessForm from "./grant";
 import PaymentRowActions from "./payment-actions";
+import ViewAsButton from "@/components/admin/view-as-button";
 import { CATALOG, subjectLabel, getExam } from "@/data/catalog";
 import { isComboSlug, comboLabel } from "@/lib/combos";
 
@@ -50,6 +51,7 @@ export default async function AdminUpiPage({
     statusGroups,
     examRevenue,
     payments,
+    testUsers,
   ] = await Promise.all([
     db.upiPayment.findMany({
       where: { status: "pending" },
@@ -85,7 +87,21 @@ export default async function AdminUpiPage({
       where: payWhere,
       orderBy: { capturedAt: "desc" },
       take: 100,
-      include: { user: { select: { email: true } } },
+      include: { user: { select: { id: true, email: true } } },
+    }),
+    // Test accounts (entitlements granted via the "Is test user" checkbox).
+    db.user.findMany({
+      where: { entitlements: { some: { source: "test_grant" } } },
+      select: {
+        id: true,
+        email: true,
+        entitlements: {
+          where: { source: "test_grant" },
+          select: { exam: true, subject: true, tier: true, expiry: true },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+      take: 50,
     }),
   ]);
 
@@ -293,11 +309,66 @@ export default async function AdminUpiPage({
                         <PaymentRowActions
                           paymentId={p.id}
                           periodMonths={p.periodMonths}
+                          userId={p.user.id}
+                          userEmail={p.user.email}
                         />
                       </td>
                     </tr>
                   );
                 })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      {/* Test accounts (reachable only here — they create no Payment row) */}
+      <section className="mt-10">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-bold text-lg">
+            Test accounts{" "}
+            <span className="text-muted text-sm">({testUsers.length})</span>
+          </h2>
+          <span className="text-xs text-muted">
+            "Is test user" grants — excluded from revenue, impersonable.
+          </span>
+        </div>
+
+        {testUsers.length === 0 ? (
+          <p className="text-muted text-sm mt-3">
+            No test accounts yet. Use the grant form with the "Is test user"
+            checkbox to create one.
+          </p>
+        ) : (
+          <div className="card p-0 overflow-x-auto mt-3">
+            <table className="w-full text-sm">
+              <thead className="text-xs text-muted bg-bg-2">
+                <tr className="text-left">
+                  <th className="p-3">Email</th>
+                  <th className="p-3">Access</th>
+                  <th className="p-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {testUsers.map((u) => (
+                  <tr key={u.id} className="border-t border-border/60">
+                    <td className="p-3 text-xs select-all">{u.email}</td>
+                    <td className="p-3 text-xs">
+                      <div className="space-y-1">
+                        {u.entitlements.map((e) => (
+                          <span key={`${e.exam}-${e.subject}`}>
+                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent/15 text-accent">
+                              {e.exam} · {e.subject} · {e.tier}
+                            </span>
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                    <td className="p-3">
+                      <ViewAsButton userId={u.id} userEmail={u.email} />
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

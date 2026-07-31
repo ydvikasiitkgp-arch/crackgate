@@ -12,6 +12,8 @@ import { PostHogProvider } from "@/components/posthog-dynamic";
 import { PageViewTracker } from "@/components/page-view-tracker";
 import { GlobalClickTracker } from "@/components/global-click-tracker";
 import { GlobalSectionTracker } from "@/components/global-section-tracker";
+import { ImpersonationProvider } from "@/components/impersonation-context";
+import ImpersonationBanner from "@/components/impersonation-banner";
 import { auth } from "@/lib/auth";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -56,6 +58,11 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
   const plan    = (session?.user as { plan?: "free" | "pro" | "premium" } | undefined)?.plan;
+  const impersonator = session?.impersonator;
+  // No tracking (PostHog / page-view / click) while impersonating — those are
+  // mutations the middleware blocks anyway, and the admin shouldn't pollute
+  // the target user's analytics.
+  const tracking = !impersonator;
 
   const gscContent = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -114,15 +121,23 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body>
         <a href="#main" className="skip-link">Skip to main content</a>
-        <PostHogProvider user={session?.user ? { id: session.user.id, email: session.user.email ?? undefined, name: session.user.name ?? undefined } : null}>
-          <PageViewTracker />
-          <GlobalClickTracker />
-          <GlobalSectionTracker />
+        {impersonator && (
+          <ImpersonationBanner
+            targetEmail={session.user.email ?? ""}
+            adminEmail={impersonator.email}
+          />
+        )}
+        <ImpersonationProvider active={!!impersonator}>
+        <PostHogProvider user={tracking && session?.user ? { id: session.user.id, email: session.user.email ?? undefined, name: session.user.name ?? undefined } : null}>
+          {tracking && <PageViewTracker />}
+          {tracking && <GlobalClickTracker />}
+          {tracking && <GlobalSectionTracker />}
           <HideOnMiningSite><SiteHeader /></HideOnMiningSite>
           <ShowOnMiningSite><MiningHeader /></ShowOnMiningSite>
           <main id="main">{children}</main>
           <SiteFooter />
         </PostHogProvider>
+        </ImpersonationProvider>
         {session?.user && <DevPlanSwitcher currentPlan={plan} />}
       </body>
     </html>
