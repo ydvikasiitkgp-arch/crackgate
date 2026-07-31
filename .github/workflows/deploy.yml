@@ -126,6 +126,7 @@ jobs:
           SKIP_MIGRATE: ${{ inputs.skip_migrate || 'false' }}
           ADMIN_EMAILS: ${{ vars.ADMIN_EMAILS }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          IMPERSONATE_SECRET: ${{ secrets.IMPERSONATE_SECRET }}
         run: |
           ssh -i ~/.ssh/id_ed25519 deploy@${{ secrets.EC2_HOST }} bash -se <<EOF
             set -euo pipefail
@@ -156,6 +157,15 @@ jobs:
                 sed -i "s|^RESEND_API_KEY=.*|RESEND_API_KEY=\"${RESEND_API_KEY}\"|" .env.production
               else
                 echo "RESEND_API_KEY=\"${RESEND_API_KEY}\"" >> .env.production
+              fi
+            fi
+
+            # Sync impersonation signing key ("Login as User" view-only mode)
+            if [ -n "${IMPERSONATE_SECRET}" ]; then
+              if grep -q '^IMPERSONATE_SECRET=' .env.production; then
+                sed -i "s|^IMPERSONATE_SECRET=.*|IMPERSONATE_SECRET=\"${IMPERSONATE_SECRET}\"|" .env.production
+              else
+                echo "IMPERSONATE_SECRET=\"${IMPERSONATE_SECRET}\"" >> .env.production
               fi
             fi
 

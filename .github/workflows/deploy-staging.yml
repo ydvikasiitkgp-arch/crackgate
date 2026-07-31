@@ -121,6 +121,7 @@ jobs:
           IMAGE_TAG: ${{ needs.build.outputs.image_tag }}
           SKIP_MIGRATE: ${{ inputs.skip_migrate || 'false' }}
           ADMIN_EMAILS: ${{ vars.ADMIN_EMAILS }}
+          IMPERSONATE_SECRET: ${{ secrets.IMPERSONATE_SECRET }}
         run: |
           ssh -i ~/.ssh/id_ed25519 deploy@${{ secrets.STAGING_EC2_HOST }} bash -se <<EOF
             set -euo pipefail
@@ -138,6 +139,15 @@ jobs:
                 sed -i "s|^ADMIN_EMAILS=.*|ADMIN_EMAILS=\"${ADMIN_EMAILS}\"|" .env.production
               else
                 echo "ADMIN_EMAILS=\"${ADMIN_EMAILS}\"" >> .env.production
+              fi
+            fi
+
+            # Sync impersonation signing key ("Login as User" view-only mode)
+            if [ -n "${IMPERSONATE_SECRET}" ]; then
+              if grep -q '^IMPERSONATE_SECRET=' .env.production; then
+                sed -i "s|^IMPERSONATE_SECRET=.*|IMPERSONATE_SECRET=\"${IMPERSONATE_SECRET}\"|" .env.production
+              else
+                echo "IMPERSONATE_SECRET=\"${IMPERSONATE_SECRET}\"" >> .env.production
               fi
             fi
 
