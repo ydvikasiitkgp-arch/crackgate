@@ -38,20 +38,19 @@ export default function NewsletterPageClient({
   userCount,
   shareholderEmails: SHAREHOLDER_EMAILS,
 }: Props) {
-  const [subscriberSelected, setSubscriberSelected] = useState<Set<string>>(new Set());
-  const [userSelected, setUserSelected] = useState<Set<string>>(new Set());
-  const [additionalEmails, setAdditionalEmails] = useState<Set<string>>(new Set());
+  const [subscriberSelected, setSubscriberSelected] = useState<Map<string, string | null>>(new Map());
+  const [userSelected, setUserSelected] = useState<Map<string, string | null>>(new Map());
+  const [additionalEmails, setAdditionalEmails] = useState<Map<string, string | null>>(new Map());
   const [includeShareholders, setIncludeShareholders] = useState(false);
 
-  const allSelected = useMemo(
-    () => new Set([
-      ...subscriberSelected,
-      ...userSelected,
-      ...additionalEmails,
-      ...(includeShareholders ? SHAREHOLDER_EMAILS : []),
-    ]),
-    [subscriberSelected, userSelected, additionalEmails, includeShareholders, SHAREHOLDER_EMAILS],
-  );
+  const allSelected = useMemo(() => {
+    const merged = new Map<string, string | null>();
+    subscriberSelected.forEach((name, email) => merged.set(email, name));
+    userSelected.forEach((name, email) => merged.set(email, name));
+    additionalEmails.forEach((name, email) => merged.set(email, name));
+    if (includeShareholders) SHAREHOLDER_EMAILS.forEach((email) => merged.set(email, null));
+    return merged;
+  }, [subscriberSelected, userSelected, additionalEmails, includeShareholders, SHAREHOLDER_EMAILS]);
 
   const paidUsers = users.filter((u) => u.isPaid).length;
   const paidSubscribers = subscribers.filter((s) => s.isPaid).length;

@@ -14,6 +14,8 @@
  */
 import { Queue, Worker, type Job } from "bullmq";
 import IORedis from "ioredis";
+import type { NewsletterRecipient } from "@/lib/resend";
+import { fillMissingNames } from "@/lib/newsletter-recipients";
 
 // bullmq's internal ioredis version may differ from the workspace install,
 // so we use `as any` for the connection object to avoid type incompatibility.
@@ -49,7 +51,7 @@ export const digestQueue = new Queue<DigestJobData>("digest", { connection });
 export interface NewsletterJobData {
   subject: string;
   html: string;
-  recipients?: string[];
+  recipients?: NewsletterRecipient[];
 }
 
 export const newsletterQueue = new Queue<NewsletterJobData>("newsletter", { connection });
@@ -168,7 +170,7 @@ export function startWorkers() {
       const { sendNewsletter, newsletterHtml } = await import("@/lib/resend");
       const { subject, html, recipients: explicitRecipients } = job.data;
 
-      let recipients: string[];
+      let recipients: NewsletterRecipient[];
 
       if (explicitRecipients && explicitRecipients.length > 0) {
         recipients = explicitRecipients;
@@ -178,8 +180,10 @@ export function startWorkers() {
           select: { email: true },
         });
         if (subscribers.length === 0) return;
-        recipients = subscribers.map((s) => s.email);
+        recipients = subscribers.map((s) => ({ email: s.email }));
       }
+
+      recipients = await fillMissingNames(recipients);
 
       const wrapped = newsletterHtml(html);
       await sendNewsletter({ subject, html: wrapped, recipients });

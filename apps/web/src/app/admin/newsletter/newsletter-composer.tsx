@@ -13,7 +13,7 @@ export default function NewsletterComposer({
   shareholdersCount = 0,
 }: {
   subscriberCount: number;
-  selectedEmails: Set<string>;
+  selectedEmails: Map<string, string | null>;
   subscriberSelectedCount?: number;
   userSelectedCount?: number;
   additionalCount?: number;
@@ -32,6 +32,16 @@ export default function NewsletterComposer({
   const [loadingDraft, setLoadingDraft] = useState(false);
   const [assets, setAssets] = useState<{ name: string; url: string }[]>([]);
   const [copiedAsset, setCopiedAsset] = useState<string | null>(null);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    const html = document.documentElement;
+    const sync = () => setTheme(html.getAttribute("data-theme") === "dark" ? "dark" : "light");
+    sync();
+    const observer = new MutationObserver(sync);
+    observer.observe(html, { attributes: true, attributeFilter: ["data-theme"] });
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     fetch("/api/admin/newsletter/drafts")
@@ -52,7 +62,7 @@ export default function NewsletterComposer({
       const content = await res.text();
 
       const titleMatch = content.match(/<title>([^<]+)<\/title>/i);
-      if (titleMatch && !subject.trim()) {
+      if (titleMatch) {
         setSubject(titleMatch[1].trim());
       }
 
@@ -94,7 +104,7 @@ export default function NewsletterComposer({
       const body: Record<string, unknown> = {
         subject: subject.trim(),
         html: html.trim(),
-        recipients: Array.from(selectedEmails),
+        recipients: Array.from(selectedEmails.entries()).map(([email, name]) => ({ email, name: name ?? undefined })),
       };
       if (mode === "schedule") body.scheduledAt = new Date(scheduledAt).toISOString();
 
@@ -219,7 +229,7 @@ export default function NewsletterComposer({
                 title="Newsletter preview"
                 sandbox="allow-same-origin"
                 className="mt-2 w-full rounded-lg border border-line bg-white"
-                style={{ height: "400px" }}
+                style={{ height: "400px", colorScheme: theme }}
               />
             ) : (
               <p className="mt-2 text-sm text-muted italic">Type some content above to see a preview.</p>

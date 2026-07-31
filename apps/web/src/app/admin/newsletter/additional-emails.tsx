@@ -5,35 +5,43 @@ import { useState, useMemo } from "react";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 interface Props {
-  additionalEmails: Set<string>;
-  onChange: (emails: Set<string>) => void;
+  additionalEmails: Map<string, string | null>;
+  onChange: (emails: Map<string, string | null>) => void;
 }
 
-function parseEmails(text: string): { valid: string[]; invalid: string[] } {
+interface ParsedEntry {
+  email: string;
+  name: string | null;
+}
+
+function parseEmails(text: string): { valid: ParsedEntry[]; invalid: string[] } {
   const parts = text.split(/[,;\n]+/);
-  const valid: string[] = [];
+  const seen = new Map<string, string | null>();
   const invalid: string[] = [];
 
   for (let part of parts) {
     part = part.trim();
     if (!part) continue;
 
-    const angleMatch = part.match(/<([^>]+)>/);
-    if (angleMatch) part = angleMatch[1].trim();
-
+    let name: string | null = null;
     part = part.replace(/^["']|["']$/g, "").trim();
+    const angleMatch = part.match(/^([^<]+)<([^>]+)>$/);
+    if (angleMatch) {
+      name = angleMatch[1].trim() || null;
+      part = angleMatch[2].trim();
+    }
     if (!part) continue;
 
     const lower = part.toLowerCase();
     if (EMAIL_RE.test(lower)) {
-      valid.push(lower);
+      seen.set(lower, name);
     } else {
       invalid.push(part);
     }
   }
 
   return {
-    valid: [...new Set(valid)],
+    valid: [...seen.entries()].map(([email, name]) => ({ email, name })),
     invalid: [...new Set(invalid)],
   };
 }
@@ -42,25 +50,25 @@ export default function AdditionalEmails({ additionalEmails, onChange }: Props) 
   const [input, setInput] = useState("");
   const parsed = useMemo(() => parseEmails(input), [input]);
 
-  const alreadyAdded = parsed.valid.filter((e) => additionalEmails.has(e));
-  const newValid = parsed.valid.filter((e) => !additionalEmails.has(e));
+  const alreadyAdded = parsed.valid.filter((e) => additionalEmails.has(e.email));
+  const newValid = parsed.valid.filter((e) => !additionalEmails.has(e.email));
 
   function addAll() {
     if (newValid.length === 0) return;
-    const next = new Set(additionalEmails);
-    newValid.forEach((e) => next.add(e));
+    const next = new Map(additionalEmails);
+    newValid.forEach((e) => next.set(e.email, e.name));
     onChange(next);
     setInput("");
   }
 
   function remove(email: string) {
-    const next = new Set(additionalEmails);
+    const next = new Map(additionalEmails);
     next.delete(email);
     onChange(next);
   }
 
   function clearAll() {
-    onChange(new Set());
+    onChange(new Map());
   }
 
   return (
@@ -122,12 +130,12 @@ export default function AdditionalEmails({ additionalEmails, onChange }: Props) 
 
       {additionalEmails.size > 0 && (
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {[...additionalEmails].map((email) => (
+          {[...additionalEmails.entries()].map(([email, name]) => (
             <span
               key={email}
               className="chip-email"
             >
-              {email}
+              {name ? `${name} <${email}>` : email}
               <button
                 type="button"
                 onClick={() => remove(email)}
