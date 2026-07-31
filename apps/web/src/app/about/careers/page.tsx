@@ -1,15 +1,13 @@
-import Link from "next/link";
 import {
   FileCheck,
   Megaphone,
   PenTool,
-  Target,
+  Brain,
   Globe,
   Award,
-  MessageCircle,
   Sparkles,
+  ExternalLink,
 } from "lucide-react";
-import CareersForm from "./careers-form";
 
 export const metadata = {
   title: "Careers — CrackGate",
@@ -20,32 +18,32 @@ export const metadata = {
 
 const positions = [
   {
+    icon: Brain,
+    title: "AI/ML Engineer",
+    description:
+      "Work on recommendation engines, question classification, and personalized learning paths that power CrackGate's smart test prep.",
+    tags: ["Remote", "Flexible hours"],
+  },
+  {
     icon: FileCheck,
     title: "Questions Evaluator",
     description:
       "Review GATE & PSU questions for accuracy, relevance, and difficulty alignment. Help us maintain the quality standard that sets CrackGate apart.",
-    tags: ["Remote", "Flexible hours", "Certificate"],
+    tags: ["Remote", "Flexible hours"],
   },
   {
     icon: Megaphone,
     title: "Marketing & Sales",
     description:
       "Grow CrackGate's user base through social media campaigns, campus outreach, and digital marketing strategies targeting GATE & PSU aspirants.",
-    tags: ["Remote", "Flexible hours", "Certificate"],
+    tags: ["Remote", "Flexible hours"],
   },
   {
     icon: PenTool,
     title: "Content Creator",
     description:
       "Create study notes, exam analysis, blog posts, and educational content that helps GATE & PSU aspirants prepare smarter.",
-    tags: ["Remote", "Portfolio required", "Certificate"],
-  },
-  {
-    icon: Target,
-    title: "Other Roles",
-    description:
-      "Have a skill we haven't listed? We're always open to talented people who want to contribute to India's test prep ecosystem.",
-    tags: ["Flexible", "Any role", "Certificate"],
+    tags: ["Remote", "Flexible hours"],
   },
 ];
 
@@ -157,18 +155,39 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Application form */}
-      <section id="apply" className="max-w-2xl mx-auto px-5 py-16 scroll-mt-24">
-        <div className="text-center mb-8">
-          <span className="badge bg-brand/10 text-brand">Apply</span>
-          <h2 className="mt-3 text-2xl font-extrabold text-ink">
-            Submit your application
-          </h2>
-          <p className="mt-2 text-sm text-muted">
-            Fill in the form below. We review applications within 3-5 working days.
-          </p>
+      {/* Apply — Google Form */}
+      <section id="apply" className="scroll-mt-24">
+        <div className="relative bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-800 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.15),transparent_60%)]" />
+          <div className="relative max-w-2xl mx-auto px-5 py-20 text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand/20 text-brand px-4 py-1.5 text-xs font-bold uppercase tracking-wider border border-brand/30">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
+              </span>
+              We&apos;re hiring
+            </span>
+            <h2 className="mt-6 text-3xl md:text-4xl font-extrabold tracking-tight">
+              Ready to build with us?
+            </h2>
+            <p className="mt-4 text-lg text-slate-300 max-w-lg mx-auto">
+              Applications are open for all roles. Fill our quick application
+              form — we review every submission within 3-5 working days.
+            </p>
+            <a
+              href="https://forms.gle/jqiSv7KGkLq93Ltb7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cg-shimmer mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 px-8 py-4 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all"
+            >
+              Apply Now
+              <ExternalLink className="w-5 h-5" />
+            </a>
+            <p className="mt-4 text-sm text-slate-400">
+              Takes ~2 minutes. Opens Google Form in a new tab.
+            </p>
+          </div>
         </div>
-        <CareersForm />
       </section>
 
       {/* After you apply */}
@@ -198,27 +217,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-white">
-        <div className="max-w-3xl mx-auto px-5 py-16 text-center">
-          <h2 className="text-2xl font-extrabold">
-            Have questions before applying?
-          </h2>
-          <p className="mt-3 text-slate-300 max-w-xl mx-auto">
-            Reach out to us on WhatsApp — we&apos; happy to chat about the roles
-            and what it&apos;s like to work with us.
-          </p>
-          <Link
-            href="https://wa.me/917248556138?text=Hi!%20I%27m%20interested%20in%20the%20internship%20at%20CrackGate."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-accent btn-lg mt-8 inline-flex"
-          >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Chat on WhatsApp
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
