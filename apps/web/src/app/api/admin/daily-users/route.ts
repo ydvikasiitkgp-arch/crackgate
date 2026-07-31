@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getAdminSession } from "@/lib/admin";
+import { getAdminSession, getTestUserIds } from "@/lib/admin";
 import { db } from "@/lib/db";
 
 export const runtime = "nodejs";
@@ -32,6 +32,7 @@ export async function GET() {
     total,
     paidUserIds,
     active7dResult,
+    testUserIds,
   ] = await Promise.all([
     db.$queryRaw<{ date: Date; count: bigint }[]>`
       SELECT DATE("createdAt") as date, COUNT(*)::int as count
@@ -58,6 +59,7 @@ export async function GET() {
       FROM "Activity" a JOIN "User" u ON u.id = a."userId"
       WHERE a.ts >= ${since7} AND u."role" != 'admin'
     `,
+    getTestUserIds(),
   ]);
 
   const signupMap = fillDailySeries(30);
@@ -70,7 +72,9 @@ export async function GET() {
   for (const r of dauRows) dauMap.set(dateKey(new Date(r.date)), Number(r.count));
 
   const todayKey = dateKey(now);
-  const paidUsers = paidUserIds.length;
+  const paidUsers = paidUserIds.filter(
+    (u) => !testUserIds.has(u.userId),
+  ).length;
   const conversionRate = total > 0 ? Math.round((paidUsers / total) * 1000) / 10 : 0;
   const signups30d = Array.from(signupMap.values()).reduce((s, c) => s + c, 0);
   const dau30d = Array.from(dauMap.values()).reduce((s, c) => s + c, 0);

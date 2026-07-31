@@ -14,6 +14,17 @@ export type AdminSession = {
   source: "role" | "env";
 };
 
+/** User IDs flagged as test accounts via the "Is test user" grant flow.
+ *  Excluded from paid-user counts and revenue on admin dashboards. */
+export async function getTestUserIds(): Promise<Set<string>> {
+  const rows = await db.entitlement.findMany({
+    where: { source: "test_grant" },
+    select: { userId: true },
+    distinct: ["userId"],
+  });
+  return new Set(rows.map((r) => r.userId));
+}
+
 export async function getAdminSession(): Promise<AdminSession | null> {
   const session = await auth();
   if (!session?.user?.email) return null;

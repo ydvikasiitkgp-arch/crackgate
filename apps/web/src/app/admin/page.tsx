@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { getAdminSession } from "@/lib/admin";
+import { getAdminSession, getTestUserIds } from "@/lib/admin";
 import { db } from "@/lib/db";
 import { cn, fmtDate, inr } from "@/lib/utils";
 import dynamicImport from "next/dynamic";
@@ -87,6 +87,8 @@ export default async function AdminPage() {
   const since1 = new Date(now.getTime() - 86400_000);
   const prev7 = new Date(now.getTime() - 14 * 86400_000);
 
+  const testUserIds = await getTestUserIds();
+
   const [
     totalUsers,
     usersByPlan,
@@ -134,17 +136,25 @@ export default async function AdminPage() {
     db.attempt.count({ where: { takenAt: { gte: since30 } } }),
     db.attempt.count({ where: { takenAt: { gte: prev7, lt: since7 } } }),
     db.payment.aggregate({
-      where: { status: "captured", capturedAt: { gte: since30 } },
+      where: {
+        status: "captured",
+        userId: { notIn: [...testUserIds] },
+        capturedAt: { gte: since30 },
+      },
       _sum: { amount: true },
       _count: { _all: true },
     }),
     db.payment.aggregate({
-      where: { status: "captured", capturedAt: { gte: prev7, lt: since30 } },
+      where: {
+        status: "captured",
+        userId: { notIn: [...testUserIds] },
+        capturedAt: { gte: prev7, lt: since30 },
+      },
       _sum: { amount: true },
       _count: { _all: true },
     }),
     db.payment.aggregate({
-      where: { status: "captured" },
+      where: { status: "captured", userId: { notIn: [...testUserIds] } },
       _sum: { amount: true },
       _count: { _all: true },
     }),
@@ -224,7 +234,9 @@ export default async function AdminPage() {
   const planMap: Record<string, number> = { free: 0, pro: 0, premium: 0 };
   for (const r of usersByPlan) planMap[r.plan] = r._count._all;
 
-  const paidUsers = usersWithEntitlements.length;
+  const paidUsers = usersWithEntitlements.filter(
+    (u) => !testUserIds.has(u.userId),
+  ).length;
   const freeUsers = totalUsers - paidUsers;
   const conversionPct = totalUsers
     ? Math.round((paidUsers / totalUsers) * 1000) / 10
