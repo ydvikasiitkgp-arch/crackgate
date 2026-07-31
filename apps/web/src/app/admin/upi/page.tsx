@@ -348,48 +348,67 @@ export default async function AdminUpiPage({
                 <tr className="text-left">
                   <th className="p-3">Email</th>
                   <th className="p-3">Access</th>
+                  <th className="p-3">Granted</th>
+                  <th className="p-3">Expires</th>
+                  <th className="p-3">Status</th>
                   <th className="p-3">Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {testUsers.map((u) => (
-                  <tr key={u.id} className="border-t border-border/60">
-                    <td className="p-3 text-xs select-all">{u.email}</td>
-                    <td className="p-3">
-                      <div className="space-y-2">
-                        {u.entitlements.map((e) => {
-                          const expired = e.expiry && e.expiry < new Date();
-                          return (
-                            <div key={e.id} className="flex items-start gap-1.5">
-                              <div>
-                                <span className="inline-flex items-center gap-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent/15 text-accent">
-                                  {e.exam} · {e.subject} · {e.tier}
-                                </span>
-                                <div className="text-[10px] text-muted mt-0.5">
-                                  granted {istDate(e.createdAt)} · until{" "}
-                                  {e.expiry ? (
-                                    <span className={expired ? "text-err font-semibold" : ""}>
-                                      {istDate(e.expiry)}
-                                    </span>
-                                  ) : (
-                                    "∞"
-                                  )}
-                                </div>
-                              </div>
-                              <RevokeEntitlementButton
-                                entitlementId={e.id}
-                                label={`${e.exam} · ${e.subject}`}
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </td>
-                    <td className="p-3">
-                      <ViewAsButton userId={u.id} userEmail={u.email} />
-                    </td>
-                  </tr>
-                ))}
+                {testUsers.flatMap((u) =>
+                  u.entitlements.map((e, i) => {
+                    const expired = e.expiry && e.expiry < new Date();
+                    return (
+                      <tr key={e.id} className="border-t border-border/60 align-top">
+                        {i === 0 && (
+                          <>
+                            <td
+                              className="p-3 text-xs select-all"
+                              rowSpan={u.entitlements.length}
+                            >
+                              {u.email}
+                            </td>
+                            <td className="p-3" rowSpan={u.entitlements.length}>
+                              <ViewAsButton userId={u.id} userEmail={u.email} />
+                            </td>
+                          </>
+                        )}
+                        <td className="p-3">
+                          <span className="inline-flex items-center gap-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent/15 text-accent">
+                            {e.exam} · {e.subject} · {e.tier}
+                          </span>
+                          <RevokeEntitlementButton
+                            entitlementId={e.id}
+                            label={`${e.exam} · ${e.subject}`}
+                          />
+                        </td>
+                        <td className="p-3 text-xs whitespace-nowrap">
+                          {istDate(e.createdAt)}
+                        </td>
+                        <td className="p-3 text-xs whitespace-nowrap">
+                          {e.expiry ? (
+                            <span className={expired ? "text-err font-semibold" : ""}>
+                              {istDate(e.expiry)}
+                            </span>
+                          ) : (
+                            "∞"
+                          )}
+                        </td>
+                        <td className="p-3">
+                          <span
+                            className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                              expired
+                                ? "bg-err/15 text-err"
+                                : "bg-ok/15 text-ok"
+                            }`}
+                          >
+                            {expired ? "Expired" : "Active"}
+                          </span>
+                        </td>
+                      </tr>
+                    );
+                  }),
+                )}
               </tbody>
             </table>
           </div>
