@@ -34,7 +34,7 @@
         "Perpendicular distance from a line to a point",
         "The temperature of the air",
         "The horizontal distance to the prism",
-        "Temperature"
+        "The bearing of the line from the station"
       ],
       "answer": 0,
       "solution": "Offset modes include perpendicular, parallel, and angular offsets from a baseline."
@@ -157,10 +157,10 @@
       "difficulty": "medium",
       "stem": "Atmospheric corrections for EDM require measuring:",
       "options": [
-        "Wind speed",
+        "The wind speed across the line of sight",
         "Temperature and pressure at the instrument",
-        "Rainfall",
-        "Humidity only"
+        "The humidity of the air at the midpoint",
+        "The cloud cover and visibility conditions"
       ],
       "answer": 1,
       "solution": "Temperature and pressure determine the refractive index of air for distance correction."
@@ -319,7 +319,7 @@
       "difficulty": "medium",
       "stem": "Pressure correction for EDM distance is approximately:",
       "options": [
-        "No correction",
+        "A constant correction of one ppm",
         "-1 ppm per hPa deviation from standard",
         "-10 ppm per hPa",
         "+1 ppm per hPa"
@@ -355,7 +355,7 @@
       "difficulty": "medium",
       "stem": "Multiple reflections in EDM cause:",
       "options": [
-        "No effect",
+        "Readings that fluctuate at random with distance",
         "Shorter readings",
         "Correct readings",
         "Erroneous distance readings (too long)"
@@ -411,7 +411,7 @@
       "options": [
         "Angle measurement accuracy only",
         "Maximum measurable range and signal quality",
-        "Battery life",
+        "The horizontal angle accuracy at short range",
         "Instrument weight"
       ],
       "answer": 1,
@@ -500,7 +500,7 @@
       "stem": "The REM function is useful for measuring:",
       "options": [
         "Horizontal distances only",
-        "Water levels",
+        "The area of an irregular face of a bench",
         "Underground temperatures",
         "Height of buildings, trees, or pit walls"
       ],
@@ -608,9 +608,9 @@
       "stem": "A prism with higher reflectivity provides:",
       "options": [
         "Stronger return signal and longer range",
-        "Weaker signal",
-        "No change",
-        "Shorter range"
+        "A weaker signal and a shorter measuring range",
+        "The same signal strength at every range",
+        "A shorter range for a given signal strength"
       ],
       "answer": 0,
       "solution": "Better reflectivity improves signal-to-noise ratio."
@@ -734,8 +734,8 @@
       "stem": "The 2ppm component of EDM accuracy represents:",
       "options": [
         "Temperature error",
-        "Fixed error",
-        "Angular error",
+        "A fixed error in the measured distance",
+        "An error proportional to the square of distance",
         "Scale-dependent error proportional to distance"
       ],
       "answer": 3,
@@ -914,7 +914,7 @@
       "stem": "Collimation error causes the line of sight to be:",
       "options": [
         "Always vertical",
-        "Curved",
+        "Bent sideways by the prism at the eyepiece",
         "Inclined upward or downward from horizontal",
         "Always horizontal"
       ],
@@ -1148,7 +1148,7 @@
       "stem": "In the HI method, the arithmetic check is:",
       "options": [
         "Sigma BS - Sigma FS = Last RL - First RL",
-        "HI = RL",
+        "Sigma BS = Sigma IS + Sigma FS",
         "No check possible",
         "Sigma BS = Sigma FS"
       ],
@@ -1274,8 +1274,8 @@
       "stem": "Curvature makes objects appear:",
       "options": [
         "In the same position",
-        "Closer",
-        "Higher",
+        "Closer than their true distance",
+        "Higher than their true position",
         "Lower than they really are"
       ],
       "answer": 3,
@@ -1291,10 +1291,10 @@
       "difficulty": "medium",
       "stem": "Refraction makes objects appear:",
       "options": [
-        "Farther",
+        "Farther away than their true position",
         "In the same position",
         "Higher than their true position",
-        "Lower"
+        "Lower than their true position"
       ],
       "answer": 2,
       "solution": "Atmospheric refraction bends light downward, making objects appear elevated."
@@ -1309,10 +1309,10 @@
       "difficulty": "medium",
       "stem": "Combined curvature and refraction causes readings to be:",
       "options": [
-        "Unchanged",
+        "Unaffected by the two combined effects",
         "Too large (reading appears higher)",
-        "Correct",
-        "Too small"
+        "Exactly equal to the true staff reading",
+        "Too small by the amount of the combined correction"
       ],
       "answer": 1,
       "solution": "Both effects make the staff reading larger than the true value."
@@ -1346,9 +1346,9 @@
       "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
         "One month of refresher training",
-        "No training",
+        "Refresher training after one year of service",
         "Initial vocational training in the prescribed subjects",
-        "Only a medical test"
+        "A certificate of fitness from a doctor"
       ],
       "answer": 2,
       "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
@@ -1383,7 +1383,7 @@
       "options": [
         "Fresh initial training of 1 month",
         "Retraining in the handling of explosives before resuming such duties",
-        "No retraining",
+        "A practical demonstration at the blasting site",
         "A written test only"
       ],
       "answer": 1,
@@ -1400,9 +1400,9 @@
       "stem": "The check in the rise and fall method is:",
       "options": [
         "Sigma BS = Sigma FS",
-        "No check",
+        "Sigma BS = Sigma FS for every setup",
         "Sigma rises - Sigma falls = Last RL - First RL",
-        "HI = RL"
+        "Sigma IS = Sigma FS + Sigma TP"
       ],
       "answer": 2,
       "solution": "This equality verifies arithmetic in the rise and fall method."

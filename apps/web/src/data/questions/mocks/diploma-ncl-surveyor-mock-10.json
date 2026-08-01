@@ -85,10 +85,10 @@
       "difficulty": "medium",
       "stem": "The staff reading at a point of unknown elevation is called:",
       "options": [
-        "Bench mark",
+        "Bench mark of known reduced level",
         "Foresight (FS) or Intermediate Sight (IS)",
-        "Backsight",
-        "Change point"
+        "Backsight taken on the previous staff position",
+        "Turning point of unknown elevation"
       ],
       "answer": 1,
       "solution": "FS is the last reading before moving the level; IS is any intermediate reading."
@@ -177,7 +177,7 @@
       "options": [
         "Record temperature variations",
         "Used only for horizontal lines",
-        "Random points",
+        "Points selected at every change of slope",
         "Points at regular intervals along a traverse line"
       ],
       "answer": 3,
@@ -232,7 +232,7 @@
         "Horizontal distance between contours",
         "Number of contours",
         "Elevation difference between adjacent contour lines",
-        "Slope angle"
+        "Angle of the steepest slope of the ground"
       ],
       "answer": 2,
       "solution": "Contour interval is constant for a given map (e.g., 1 m, 5 m)."
@@ -265,9 +265,9 @@
       "difficulty": "medium",
       "stem": "Index contour lines are drawn with:",
       "options": [
-        "No labels",
-        "Dashed lines",
-        "Thin lines",
+        "Labels only on alternate contours",
+        "Dashed lines with spot heights interpolated",
+        "Thin continuous lines without any labels",
         "Thick continuous lines and labelled with elevation"
       ],
       "answer": 3,
@@ -463,7 +463,7 @@
       "difficulty": "medium",
       "stem": "When workings extend to within 60 m of the settled boundary with an adjacent mine, the owner/agent/manager shall:",
       "options": [
-        "Only inform the labour union",
+        "Inform the district magistrate and stop workings",
         "Inform the adjacent mine and give its surveyors reasonable facilities for surveys",
         "Stop all work in the mine",
         "Seal the workings"
@@ -481,9 +481,9 @@
       "difficulty": "medium",
       "stem": "The required precision for a triangulation baseline is approximately:",
       "options": [
-        "1 : 10",
+        "1 : 10,000 for minor control points",
         "1 : 100,000 to 1 : 500,000",
-        "1 : 100",
+        "1 : 1,000 for reconnaissance lines",
         "1 : 1,000"
       ],
       "answer": 1,
@@ -517,10 +517,10 @@
       "difficulty": "medium",
       "stem": "A subtense bar measures horizontal distance by:",
       "options": [
-        "Direct taping",
+        "Direct taping with an invar tape",
         "Measuring the angle subtended by a known bar length",
-        "GPS",
-        "Stadia hairs"
+        "Measurement with a surveyor's chain",
+        "Observation of the bar against the skyline"
       ],
       "answer": 1,
       "solution": "D = b/2 x cot(theta/2) where b = bar length, theta = subtended angle."
@@ -608,7 +608,7 @@
       "stem": "If applied pull exceeds standard pull, the tape:",
       "options": [
         "Becomes shorter",
-        "Contracts",
+        "Becomes shorter than its standard length",
         "Stretches and reads too long",
         "Does not change"
       ],
@@ -644,8 +644,8 @@
       "stem": "A tape comparison field is used to:",
       "options": [
         "Determine actual tape length under field conditions",
-        "Calibrate GPS",
-        "Measure angles",
+        "Check the calibration of the prism constant",
+        "Set out points by the intersection method",
         "Determine elevation"
       ],
       "answer": 0,
@@ -790,7 +790,7 @@
         "Depends on temperature",
         "Negative (subtract)",
         "Positive (add to measured distance)",
-        "Zero"
+        "A constant correction for every measurement"
       ],
       "answer": 2,
       "solution": "Long tape reads short, so the correction is positive."
@@ -807,7 +807,7 @@
       "options": [
         "Graduated to mm and read with a thermometer and spring balance",
         "Read to the nearest metre",
-        "Estimated only",
+        "Checked by pacing between the two end marks",
         "Not standardised"
       ],
       "answer": 0,
@@ -823,8 +823,8 @@
       "difficulty": "medium",
       "stem": "Pull correction Cp = (P - Ps)L/(AE) requires knowing:",
       "options": [
-        "Only the applied pull",
-        "Only the tape length",
+        "The standard pull of the spring balance alone",
+        "The temperature of the tape at the time alone",
         "Only the cross-section area",
         "Applied pull, standard pull, tape length, cross-section area, and Youngs modulus"
       ],
@@ -843,7 +843,7 @@
       "options": [
         "The applied pull",
         "Temperature change and tape length",
-        "Pull",
+        "The modulus of elasticity of the tape material",
         "The applied pull"
       ],
       "answer": 1,
@@ -860,7 +860,7 @@
       "stem": "The joint survey plan showing workings near the common boundary with an adjacent mine shall be signed by:",
       "options": [
         "The surveyors and managers of both the mine and the adjacent mine",
-        "Only the surveyor of the mine",
+        "The surveyor and the owner of the mine only",
         "The Chief Inspector only",
         "The district magistrate"
       ],
@@ -931,10 +931,10 @@
       "difficulty": "medium",
       "stem": "A tacheometer measures distance using:",
       "options": [
-        "GPS only",
+        "A subtense bar and an optical plummet",
         "Stadia hairs and the staff intercept",
-        "A tape",
-        "A rangefinder"
+        "An invar tape with a spring balance",
+        "An EDM unit attached to the theodolite"
       ],
       "answer": 1,
       "solution": "Distance = k x s + c where s = staff intercept."
@@ -1095,7 +1095,7 @@
       "options": [
         "Temperature increases or pull increases",
         "Humidity increases",
-        "Pull decreases",
+        "The tape is coiled for storage overnight",
         "Temperature decreases"
       ],
       "answer": 0,
@@ -1129,10 +1129,10 @@
       "difficulty": "medium",
       "stem": "Sag correction is applied when the tape is:",
       "options": [
-        "Vertical",
+        "Held vertical under its own weight",
         "Unsupported between supports (sagging)",
         "Fully supported",
-        "Underwater"
+        "Supported on a series of wooden pegs"
       ],
       "answer": 1,
       "solution": "Sag only occurs when the tape droops under its own weight."
@@ -1148,7 +1148,7 @@
       "stem": "For precise baseline measurement, the tape should be supported:",
       "options": [
         "At 10 m intervals",
-        "Not supported",
+        "Supported only at its two end points",
         "At every tape length or at 3 to 5 m intervals",
         "Support conveyor belts"
       ],
@@ -1381,7 +1381,7 @@
       "difficulty": "medium",
       "stem": "Every mine plan or section under CMR 2017 shall show:",
       "options": [
-        "Only the grid line",
+        "The magnetic meridian without any reference line",
         "The magnetic meridian without date",
         "The railway alignment",
         "The true north, or the magnetic meridian with the date of the latter"
@@ -1435,9 +1435,9 @@
       "difficulty": "medium",
       "stem": "Vertical angles are measured from:",
       "options": [
-        "The target",
+        "The point of intersection of the cross hairs",
         "The vertical axis only",
-        "The ground",
+        "The foot of the staff on the ground",
         "The horizontal plane (or zenith)"
       ],
       "answer": 3,
