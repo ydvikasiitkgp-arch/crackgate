@@ -31,9 +31,9 @@
       "difficulty": "medium",
       "stem": "AutoCAD's 'external reference' (XREF) feature in mine planning allows:",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Merging multiple drawings into one file",
+        "Deleting all unused blocks",
+        "Printing drawings on a single sheet",
         "Referencing external drawings without embedding them, enabling collaborative work"
       ],
       "answer": 3,
@@ -50,9 +50,9 @@
       "stem": "Liscad's 'area calculation' feature computes areas using:",
       "options": [
         "Coordinate geometry methods from boundary coordinates",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The planimeter method",
+        "The graphical method",
+        "The Simpson's rule method"
       ],
       "answer": 0,
       "solution": "Liscad computes areas using coordinate geometry methods (like the shoelace formula) from boundary coordinates."
@@ -150,20 +150,20 @@
     {
       "id": "ncl-surveyor-08-008",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Dump stability monitoring using a laser scanner helps in:",
+      "stem": "In return airways and old workings, the air shall normally contain oxygen not less than ______ and carbon dioxide not more than ______.",
       "options": [
-        "Detecting surface movements and deformations over time by comparing successive scans",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "21% and 2%",
+        "18% and 1%",
+        "20% and 1.5%",
+        "19% and 0.5%"
       ],
-      "answer": 0,
-      "solution": "Repeated laser scanning detects surface movements and deformations by comparing successive point clouds, enabling early warning of instability."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 165: not less than 19% oxygen and not more than 0.5% carbon dioxide."
     },
     {
       "id": "ncl-surveyor-08-009",
@@ -176,9 +176,9 @@
       "stem": "A 'LiDAR' sensor mounted on a drone (UAV) provides:",
       "options": [
         "Dense 3D point cloud data of the terrain, penetrating through vegetation",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "2D imagery of the terrain",
+        "Only the vegetation density",
+        "The temperature of the ground"
       ],
       "answer": 0,
       "solution": "Airborne LiDAR provides dense 3D point cloud data that can penetrate vegetation canopy to map the bare ground surface."
@@ -222,20 +222,20 @@
     {
       "id": "ncl-surveyor-08-012",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "In drone surveying for mines, the 'ground control points' (GCPs) are used to:",
+      "stem": "If the percentage of inflammable gas in the general body of air exceeds ______, persons shall be withdrawn from the working.",
       "options": [
-        "Used only for horizontal lines",
-        "Provide known reference points for georeferencing and accuracy assessment of aerial photographs",
-        "Land the drone",
-        "Measure air velocity"
+        "5%",
+        "1.25%",
+        "0.5%",
+        "2.5%"
       ],
       "answer": 1,
-      "solution": "GCPs are ground features with known coordinates used to georeferenced aerial photographs and assess the accuracy of photogrammetric products."
+      "solution": "CMR 2017 Reg 166: persons are withdrawn when the general body of air exceeds 1.25% inflammable gas."
     },
     {
       "id": "ncl-surveyor-08-013",
@@ -247,10 +247,10 @@
       "difficulty": "medium",
       "stem": "A 'continuous real-time monitoring' system for highwall stability typically uses:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Manual visual inspection",
+        "Photographs taken daily",
         "Automated sensors (prisms, inclinometers) with data loggers and communication systems",
-        "Required only for specific cases"
+        "A single annual survey"
       ],
       "answer": 2,
       "solution": "Continuous monitoring uses automated sensors with data loggers and communication systems to provide real-time data on slope movement."
@@ -266,9 +266,9 @@
       "stem": "The 'accuracy' of a 3D laser scanner is typically expressed as:",
       "options": [
         "As a function of distance (e.g., ±5 mm at 100 m)",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "As a fixed value independent of distance",
+        "As a percentage of the range only",
+        "As a value independent of the instrument"
       ],
       "answer": 0,
       "solution": "Scanner accuracy is specified as a function of distance, e.g., ±5 mm at 100 m, combining ranging error and angular error."
@@ -294,20 +294,20 @@
     {
       "id": "ncl-surveyor-08-016",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A 'drone (UAV) survey' of a mine area can cover large areas because:",
+      "stem": "As per the Mines Act 1952, women may be employed aboveground only between:",
       "options": [
-        "Drones can only fly short distances",
-        "Drones fly at very low altitude only",
-        "Drones are manually controlled only",
-        "Drones can cover large areas quickly with automated flight planning and overlap"
+        "24 hours",
+        "6 a.m. and 7 p.m.",
+        "5 a.m. and 9 p.m.",
+        "8 a.m. and 6 p.m."
       ],
-      "answer": 3,
-      "solution": "Drones with automated flight planning can cover large areas efficiently with programmed routes and required overlap for photogrammetry."
+      "answer": 1,
+      "solution": "Mines Act 1952, s.46: women shall not be employed belowground, and aboveground employment is restricted between 6 a.m. and 7 p.m."
     },
     {
       "id": "ncl-surveyor-08-017",
@@ -330,20 +330,20 @@
     {
       "id": "ncl-surveyor-08-018",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A 'prism-based monitoring system' for dump/highwall stability uses:",
+      "stem": "The maximum working hours in a week for an adult employed belowground in a mine are:",
       "options": [
-        "Required only for specific cases",
-        "Automated total stations or laser scanners measuring positions of installed prisms",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "54 hours",
+        "60 hours",
+        "45 hours",
+        "48 hours"
       ],
-      "answer": 1,
-      "solution": "Prism-based systems use automated total stations or scanners to repeatedly measure positions of prisms installed on the slope surface."
+      "answer": 3,
+      "solution": "Mines Act 1952, s.28: no person shall be employed belowground for more than 48 hours in any week."
     },
     {
       "id": "ncl-surveyor-08-019",
@@ -384,74 +384,74 @@
     {
       "id": "ncl-surveyor-08-021",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'return intensity' of a laser scanner point indicates:",
+      "stem": "Approaching a goaf, probing shall be carried out ahead of the working for at least:",
       "options": [
-        "The weight of the point",
-        "The strength of the reflected laser signal, related to surface reflectivity",
-        "The colour of the surface",
-        "The temperature of the surface"
+        "3 m",
+        "5 m",
+        "1.5 m",
+        "0.5 m"
       ],
-      "answer": 1,
-      "solution": "Return intensity indicates the strength of the reflected laser signal, which depends on surface reflectivity, colour, and angle of incidence."
+      "answer": 2,
+      "solution": "CMR 2017 Reg 147: the working is probed ahead for at least 1.5 m beyond the last support before approaching the goaf."
     },
     {
       "id": "ncl-surveyor-08-022",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A 'multi-station' in monitoring refers to:",
+      "stem": "While driving approaching old or waterlogged workings, advance boreholes shall be kept at least ______ ahead of the face.",
       "options": [
-        "Multiple office computers",
-        "Automated robotic total stations operating continuously without operator intervention",
-        "Multiple manual survey stations",
-        "Multiple printing stations"
+        "0.5 m",
+        "3 m",
+        "1 m",
+        "6 m"
       ],
       "answer": 1,
-      "solution": "Multi-stations are automated robotic total stations that operate continuously, measuring prism positions at regular intervals without operator."
+      "solution": "CMR 2017 Reg 163: at least 3 advance boreholes not less than 3 m ahead of the face, with flank holes within 5 m on either side."
     },
     {
       "id": "ncl-surveyor-08-023",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The main advantage of LiDAR over photogrammetry for mine surveying is:",
+      "stem": "As per CMR 2017, every plan and section at a mine shall be:",
       "options": [
-        "LiDAR is always cheaper",
-        "LiDAR produces better photographs",
-        "LiDAR is lighter",
-        "LiDAR can work in any lighting conditions and penetrate vegetation"
+        "Kept at the surveyor's residence",
+        "Serially numbered and stored flat, with indexed field books kept at the mine",
+        "Stored rolled in the open",
+        "Copied to a private notebook"
       ],
-      "answer": 3,
-      "solution": "LiDAR works in any lighting (including night), can penetrate vegetation, and provides direct 3D measurements without needing image matching."
+      "answer": 1,
+      "solution": "CMR 2017 Reg 68: plans and sections are serially numbered, stored flat, and field books indexed and kept at the mine office."
     },
     {
       "id": "ncl-surveyor-08-024",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "In drone surveying, 'image overlap' is important because:",
+      "stem": "Under CMR 2017, survey instruments at a mine shall be:",
       "options": [
-        "It wastes battery life",
-        "It only makes the flight longer",
-        "It ensures sufficient coverage for photogrammetric processing and 3D reconstruction",
-        "It only increases file size"
+        "Calibrated once a year by the mine",
+        "Replaced every 6 months",
+        "Checked only by the Inspector",
+        "Checked, maintained and calibrated at regular intervals as specified by the manufacturer"
       ],
-      "answer": 2,
-      "solution": "Sufficient image overlap (typically 70-80% forward, 60-70% side) ensures photogrammetric software can match features and reconstruct 3D geometry."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 67(2): survey instruments are checked, maintained and calibrated at intervals specified by the manufacturer."
     },
     {
       "id": "ncl-surveyor-08-025",
@@ -474,74 +474,74 @@
     {
       "id": "ncl-surveyor-08-026",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'scanning speed' of a 3D laser scanner refers to:",
+      "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
-        "The battery charging speed",
-        "The number of points captured per second (e.g., 1 million points/second)",
-        "How fast the scanner can be transported",
-        "The weight of the scanner"
+        "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
+        "Only loss of life",
+        "Only explosions",
+        "Only minor injuries"
       ],
-      "answer": 1,
-      "solution": "Scanning speed is the rate at which points are captured, measured in points per second (e.g., 1 million pts/sec for modern scanners)."
+      "answer": 0,
+      "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
     },
     {
       "id": "ncl-surveyor-08-027",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "GPS 'multipath error' occurs when:",
+      "stem": "When workings extend to within 60 m of the settled boundary with an adjacent mine, the owner/agent/manager shall:",
       "options": [
-        "GPS signals reflect off nearby surfaces before reaching the receiver",
-        "The signal passes through the ionosphere only",
-        "The receiver battery is low",
-        "Too many satellites are visible"
+        "Only inform the labour union",
+        "Inform the adjacent mine and give its surveyors reasonable facilities for surveys",
+        "Stop all work in the mine",
+        "Seal the workings"
       ],
-      "answer": 0,
-      "solution": "Multipath error occurs when GPS signals reflect off nearby surfaces (buildings, ground) before reaching the receiver, causing position errors."
+      "answer": 1,
+      "solution": "CMR 2017 Reg 65(8): the adjacent mine is informed and its surveyors are given reasonable facilities for required surveys and levellings."
     },
     {
       "id": "ncl-surveyor-08-028",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A 'digital zenith camera' in mine surveying is used to determine:",
+      "stem": "Under the Mines Act 1952, an Inspector may, among other powers:",
       "options": [
-        "Test roof stability",
-        "Measure air velocity",
-        "Horizontal angles",
-        "Precise astronomical latitude and azimuth by imaging the stars near the zenith"
+        "Impose fines directly",
+        "Appoint mine officials",
+        "Withdraw certificates of competency",
+        "Enter, inspect and examine a mine, and make inquiries on any matter relating to safety"
       ],
       "answer": 3,
-      "solution": "A digital zenith camera images stars near the zenith to determine precise astronomical position and azimuth for high-accuracy orientation."
+      "solution": "Mines Act 1952, s.22: Inspectors may enter, inspect, examine and inquire into any mine and its records."
     },
     {
       "id": "ncl-surveyor-08-029",
       "subject": "Mine Surveying",
-      "topic": "Modern Equipment",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'georeferencing' of drone photographs involves:",
+      "stem": "When workings approach within 60 m of a water body or waterlogged area, the manager shall:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Assigning real-world coordinates to photographs using GCPs or GPS data",
-        "Required only for specific cases"
+        "Stop working immediately without any plan",
+        "Leave the water body untouched forever",
+        "Only mark it on the board",
+        "Prepare a scheme for protection against inrush and drain the water in a planned manner"
       ],
-      "answer": 2,
-      "solution": "Georeferencing assigns real-world coordinates to photographs using ground control points or on-board GPS data for spatial accuracy."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 149 (danger from surface water) & Ch. XI: within 60 m, protective schemes (drainage, barriers) are implemented."
     },
     {
       "id": "ncl-surveyor-08-030",
@@ -592,7 +592,7 @@
         "Two stations simultaneously",
         "Several stations to one target",
         "One station to several targets observed sequentially",
-        "Applicable in limited scenarios"
+        "The average of two face observations only"
       ],
       "answer": 2,
       "solution": "All directions from a single instrument station are observed; angles = difference of directions."
@@ -697,10 +697,10 @@
       "difficulty": "medium",
       "stem": "Taking Face Left and Face Right readings and averaging eliminates:",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Temperature effects only",
+        "Refraction effects only",
         "Both collimation and horizontal axis errors",
-        "Eccentricity only"
+        "Instrument centring errors"
       ],
       "answer": 2,
       "solution": "Both errors reverse sign on plunge; averaging cancels them."
@@ -769,9 +769,9 @@
       "difficulty": "medium",
       "stem": "Eccentricity of verniers is eliminated by:",
       "options": [
-        "Using only A plate",
-        "Repeating the angle",
-        "Using only B plate",
+        "Observing the angle at one face only",
+        "Using a single vernier plate",
+        "Repeating the angle several times",
         "Reading both A and B plates and taking the mean"
       ],
       "answer": 3,
@@ -807,8 +807,8 @@
       "options": [
         "Every new setup",
         "Once per day",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Once a month",
+        "Once a year"
       ],
       "answer": 0,
       "solution": "Centering, levelling, and focusing are repeated at every instrument station."
@@ -1004,9 +1004,9 @@
       "stem": "Plumb bob offset causes the measured horizontal angle to be affected by:",
       "options": [
         "Offset direction and distance relative to sighted points",
-        "Resistance measurement only",
-        "Voltage measurement only",
-        "Current measurement only"
+        "The height of the instrument",
+        "The temperature of the air",
+        "The age of the instrument"
       ],
       "answer": 0,
       "solution": "Angular error depends on the geometry: offset magnitude and angle between sight lines."
@@ -1258,7 +1258,7 @@
         "High accuracy needed for single angle",
         "Distances are also measured",
         "Many directions are observed from one station",
-        "Applicable in limited scenarios"
+        "The instrument is not accurately levelled"
       ],
       "answer": 2,
       "solution": "Reiteration is efficient when multiple directions radiate from one station."
@@ -1454,12 +1454,84 @@
       "stem": "The coordinate measurement mode of a total station determines:",
       "options": [
         "Slope distance only",
-        "Current measurement only",
+        "The slope distance only",
         "X, Y, Z coordinates of the target point",
-        "Resistance measurement only"
+        "The vertical angle only"
       ],
       "answer": 2,
       "solution": "Coordinate mode uses measured angle, distance, and known station data to compute 3D coordinates."
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of three numbers is 2:3:4. The sum of the largest and smallest equals the middle number increased by 14. What is the smallest number?",
+      "options": [
+        "8",
+        "20",
+        "12",
+        "16"
+      ],
+      "answer": 2,
+      "solution": "Numbers: 2x, 3x, 4x. 4x + 2x = 3x + 14 → 3x = 14 → x = 14/3. Smallest = 28/3. Not matching... Let me reconsider. Maybe: 2x + 4x = 3x + 14 → 3x = 14 → x ≈ 4.67. Smallest = 9.33. Still not matching. Perhaps the sum equals the middle + 14: 2x+4x = 3x+14 → x=14/3. Not an integer."
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Two successive discounts of 10% and 20% are equivalent to a single discount of:",
+      "options": [
+        "30%",
+        "28%",
+        "25%",
+        "27%"
+      ],
+      "answer": 1,
+      "solution": "Equivalent = 1 - (0.90 × 0.80) = 1 - 0.72 = 28%"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Two cars start from the same point at 50 km/h and 60 km/h in opposite directions. After how many hours will they be 330 km apart?",
+      "options": [
+        "3 hours",
+        "6 hours",
+        "4 hours",
+        "5 hours"
+      ],
+      "answer": 0,
+      "solution": "Relative speed = 110 km/h. Time = 330/110 = 3 hours"
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If 3A = 4B = 5C, what is A:B:C?",
+      "options": [
+        "4:3:5",
+        "12:15:20",
+        "20:15:12",
+        "15:20:12"
+      ],
+      "answer": 2,
+      "solution": "A = k/3, B = k/4, C = k/5. LCM of 3,4,5 = 60. A:B:C = 20:15:12"
     },
     {
       "id": "ncl-surveyor-08-g001",
@@ -1748,150 +1820,6 @@
       ],
       "answer": 3,
       "solution": "WPI (Wholesale Price Index) measures wholesale price inflation."
-    },
-    {
-      "id": "ncl-surveyor-08-g017",
-      "subject": "General Awareness",
-      "topic": "Reasoning-Synonym",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Choose the synonym of 'BENEVOLENT':",
-      "options": [
-        "A. Malevolent",
-        "C. Cruel",
-        "D. Hostile",
-        "B. Kind"
-      ],
-      "answer": 3,
-      "solution": "Benevolent means kind and generous."
-    },
-    {
-      "id": "ncl-surveyor-08-g018",
-      "subject": "General Awareness",
-      "topic": "Reasoning-Antonym",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Choose the antonym of 'TRANSPARENT':",
-      "options": [
-        "A. Clear",
-        "B. Opaque",
-        "C. Translucent",
-        "D. Visible"
-      ],
-      "answer": 1,
-      "solution": "Opaque is the antonym of transparent."
-    },
-    {
-      "id": "ncl-surveyor-08-g019",
-      "subject": "General Awareness",
-      "topic": "Reasoning-Synonym",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Choose the synonym of 'DILIGENT':",
-      "options": [
-        "D. Indolent",
-        "B. Careful",
-        "A. Lazy",
-        "C. Hardworking"
-      ],
-      "answer": 3,
-      "solution": "Diligent means showing care and effort (hardworking)."
-    },
-    {
-      "id": "ncl-surveyor-08-g020",
-      "subject": "General Awareness",
-      "topic": "Reasoning-Antonym",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Choose the antonym of 'ABUNDANT':",
-      "options": [
-        "C. Ample",
-        "A. Plentiful",
-        "B. Scarce",
-        "D. Copious"
-      ],
-      "answer": 2,
-      "solution": "Scarce is the antonym of abundant."
-    },
-    {
-      "id": 81,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The ratio of three numbers is 2:3:4. The sum of the largest and smallest equals the middle number increased by 14. What is the smallest number?",
-      "options": [
-        "8",
-        "20",
-        "12",
-        "16"
-      ],
-      "answer": 2,
-      "solution": "Numbers: 2x, 3x, 4x. 4x + 2x = 3x + 14 → 3x = 14 → x = 14/3. Smallest = 28/3. Not matching... Let me reconsider. Maybe: 2x + 4x = 3x + 14 → 3x = 14 → x ≈ 4.67. Smallest = 9.33. Still not matching. Perhaps the sum equals the middle + 14: 2x+4x = 3x+14 → x=14/3. Not an integer."
-    },
-    {
-      "id": 82,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Two successive discounts of 10% and 20% are equivalent to a single discount of:",
-      "options": [
-        "30%",
-        "28%",
-        "25%",
-        "27%"
-      ],
-      "answer": 1,
-      "solution": "Equivalent = 1 - (0.90 × 0.80) = 1 - 0.72 = 28%"
-    },
-    {
-      "id": 83,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Speed Time Distance",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Two cars start from the same point at 50 km/h and 60 km/h in opposite directions. After how many hours will they be 330 km apart?",
-      "options": [
-        "3 hours",
-        "6 hours",
-        "4 hours",
-        "5 hours"
-      ],
-      "answer": 0,
-      "solution": "Relative speed = 110 km/h. Time = 330/110 = 3 hours"
-    },
-    {
-      "id": 84,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If 3A = 4B = 5C, what is A:B:C?",
-      "options": [
-        "4:3:5",
-        "12:15:20",
-        "20:15:12",
-        "15:20:12"
-      ],
-      "answer": 2,
-      "solution": "A = k/3, B = k/4, C = k/5. LCM of 3,4,5 = 60. A:B:C = 20:15:12"
     }
   ]
 }

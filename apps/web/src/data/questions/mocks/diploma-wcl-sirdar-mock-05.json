@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -138,8 +138,8 @@
       "difficulty": "hard",
       "stem": "The 'settling of stowing material' in goaf occurs because",
       "options": [
-        "Not important",
-        "Applicable in limited scenarios",
+        "Because the stowing is done only on the surface",
+        "Because the sand is very light",
         "Water drains away and material settles under gravity",
         "No settling"
       ],
@@ -174,10 +174,10 @@
       "difficulty": "hard",
       "stem": "Stowing is particularly important in",
       "options": [
-        "Applicable in limited scenarios",
+        "Open cast mines only",
         "Underground mines near surface structures or water bodies",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Mines with no goaf",
+        "Mines working on thin seams only"
       ],
       "answer": 1,
       "solution": "Underground mines near surface structures or water bodies."
@@ -192,10 +192,10 @@
       "difficulty": "easy",
       "stem": "The 'drift dimensions' are determined by",
       "options": [
-        "Nothing specific",
+        "The whim of the manager",
         "The intended use, equipment size, and ventilation requirements",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The number of workers only",
+        "The season of the year"
       ],
       "answer": 1,
       "solution": "Intended use, equipment size, and ventilation requirements."
@@ -228,10 +228,10 @@
       "difficulty": "medium",
       "stem": "The 'ventilation resistance' in mine airways is affected by",
       "options": [
-        "Works only in surface mines",
+        "The colour of the roadway lining",
         "Regulate air temperature only",
         "Airway dimensions, roughness, and length",
-        "Affects only intake shafts"
+        "The depth of the shaft only"
       ],
       "answer": 2,
       "solution": "Ventilation resistance depends on dimensions, roughness, length."
@@ -246,10 +246,10 @@
       "difficulty": "easy",
       "stem": "The 'backfill' method of stowing involves",
       "options": [
-        "Applicable in limited scenarios",
+        "Blowing air into the goaf",
         "Placing waste material directly into the mined-out area",
-        "Works under ideal conditions only",
-        "Nothing specific"
+        "Spreading sand on the surface",
+        "Filling the sump with sand"
       ],
       "answer": 1,
       "solution": "Placing waste directly into mined-out area."
@@ -265,9 +265,9 @@
       "stem": "A longwall face equipment includes",
       "options": [
         "Shearer, AFC, powered supports, and stage loader",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Shovel, dumper, and dragline",
+        "Surfacer miner and conveyor",
+        "Rope shovel and wagon drill"
       ],
       "answer": 0,
       "solution": "Includes shearer, AFC, powered supports, and stage loader."
@@ -283,9 +283,9 @@
       "stem": "The 'haul road maintenance' includes",
       "options": [
         "Regular grading, watering, and berm maintenance",
-        "Applicable in limited scenarios",
+        "Painting the road signs only",
         "No maintenance needed",
-        "Works under ideal conditions only"
+        "Washing the dumpers only"
       ],
       "answer": 0,
       "solution": "Road maintenance includes grading, watering, and berm maintenance."
@@ -300,8 +300,8 @@
       "difficulty": "hard",
       "stem": "The 'inspection book' in a mine must be kept at",
       "options": [
-        "Underground",
-        "Applicable in limited scenarios",
+        "Underground at the face",
+        "With the winding engineman",
         "Any place",
         "A convenient place near the main entrance for inspection by workers"
       ],
@@ -311,20 +311,20 @@
     {
       "id": 11,
       "subject": "Technical (Mining)",
-      "topic": "Method of Work",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Board and pillar method of working involves",
+      "difficulty": "medium",
+      "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
-        "Driving galleries and leaving pillars for support",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Removing all coal at once"
+        "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
+        "Only loss of life",
+        "Only explosions",
+        "Only minor injuries"
       ],
       "answer": 0,
-      "solution": "Board and pillar involves driving galleries and leaving pillars for roof support."
+      "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
     },
     {
       "id": 12,
@@ -339,7 +339,7 @@
         "Left as is",
         "Not checked",
         "Examined and tested by the operator",
-        "Applicable in limited scenarios"
+        "Examined by the banksman only"
       ],
       "answer": 2,
       "solution": "Examined and tested by the operator before each shift."
@@ -372,9 +372,9 @@
       "difficulty": "hard",
       "stem": "A 'drift' driven at an angle to the horizontal is called",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "A vertical shaft",
+        "A horizontal tunnel",
+        "A crosscut only",
         "A raise or an incline"
       ],
       "answer": 3,
@@ -390,10 +390,10 @@
       "difficulty": "easy",
       "stem": "The 'stowing face' must be",
       "options": [
-        "Works under ideal conditions only",
+        "Kept without any support",
         "Properly ventilated and maintained safe for workers",
         "Any place",
-        "Applicable in limited scenarios"
+        "Closed to inspection"
       ],
       "answer": 1,
       "solution": "Properly ventilated and maintained safe."
@@ -447,7 +447,7 @@
         "Helmet, safety lamp, self-rescuer, safety shoes, and protective clothing",
         "Distance protection",
         "Overcurrent protection only",
-        "Applicable in limited scenarios"
+        "Only a pair of gloves"
       ],
       "answer": 0,
       "solution": "Multiple PPE items are required."
@@ -482,8 +482,8 @@
       "options": [
         "All exposed metal parts of electrical equipment to earth",
         "Specific to star connection",
-        "Applicable in limited scenarios",
-        "Works at rated voltage only"
+        "Only the main switch",
+        "Only the lighting circuit"
       ],
       "answer": 0,
       "solution": "All exposed metal parts to earth."
@@ -535,9 +535,9 @@
       "stem": "The 'stowing dam material' typically includes",
       "options": [
         "Concrete, steel, and timber depending on conditions",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only loose sand",
+        "Only coal dust",
+        "Only clay"
       ],
       "answer": 0,
       "solution": "Dam materials include concrete, steel, and timber."
@@ -573,7 +573,7 @@
         "Voltage regulation only",
         "Automatically break the circuit in case of fault",
         "Transient response testing",
-        "Applicable in limited scenarios"
+        "Amplify the current"
       ],
       "answer": 1,
       "solution": "Automatically breaks the circuit in case of fault."
@@ -589,9 +589,9 @@
       "stem": "When two or more man riding systems operate on the same route, they must have",
       "options": [
         "No special arrangement",
-        "Separate operators",
+        "Identical speed",
         "Proper signaling and coordination arrangements",
-        "Applicable in limited scenarios"
+        "Single common driver"
       ],
       "answer": 2,
       "solution": "Proper signaling and coordination arrangements are required."
@@ -624,9 +624,9 @@
       "difficulty": "easy",
       "stem": "The fire-fighting equipment in a mine must include",
       "options": [
-        "Works under ideal conditions only",
+        "Only a hose pipe at the surface",
         "Nothing specific",
-        "Applicable in limited scenarios",
+        "Only a water tanker",
         "Fire extinguishers, sand buckets, hose pipes, and water supply"
       ],
       "answer": 3,
@@ -643,7 +643,7 @@
       "stem": "The 'support design' for underground mines must consider",
       "options": [
         "Prevent water ingress",
-        "Applicable in limited scenarios",
+        "The colour of the strata",
         "Geology, depth, mining method, and loading conditions",
         "Protect electrical equipment"
       ],
@@ -660,10 +660,10 @@
       "difficulty": "hard",
       "stem": "The 'inundation warning signs' include",
       "options": [
-        "Works under ideal conditions only",
+        "A rise in air temperature",
         "No signs needed",
         "Sudden increase in water inflow, changes in water color",
-        "Applicable in limited scenarios"
+        "A change in wind direction"
       ],
       "answer": 2,
       "solution": "Warning signs include increased inflow and color changes."
@@ -678,9 +678,9 @@
       "difficulty": "hard",
       "stem": "A belt conveyor must have",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only a rubber cover",
         "No safety device",
+        "Only a braking arrangement",
         "Pull cord switches, belt drift switches, and speed switches"
       ],
       "answer": 3,
@@ -696,10 +696,10 @@
       "difficulty": "medium",
       "stem": "The 'registers' that must be maintained in a mine include",
       "options": [
-        "Applicable in limited scenarios",
+        "Only the pay register",
         "Attendance, accident, inspection, and other prescribed registers",
-        "Nothing specific",
-        "Works under ideal conditions only"
+        "Only the store ledger",
+        "Only the leave register"
       ],
       "answer": 1,
       "solution": "Attendance, accident, inspection, and other prescribed registers."
@@ -750,10 +750,10 @@
       "difficulty": "easy",
       "stem": "The 'drift signage' must include",
       "options": [
-        "Works under ideal conditions only",
+        "Only the company name",
         "Directional signs, safety warnings, and distance markers",
         "No signage needed",
-        "Applicable in limited scenarios"
+        "Only the mine's phone number"
       ],
       "answer": 1,
       "solution": "Drift signage includes directions, warnings, distance markers."
@@ -822,10 +822,10 @@
       "difficulty": "easy",
       "stem": "The 'man-riding and haulage' arrangements must be",
       "options": [
-        "Works under ideal conditions only",
+        "Left to the operator's choice",
         "Any arrangement",
         "Safe, efficient, and as per regulations",
-        "Applicable in limited scenarios"
+        "The same for every mine"
       ],
       "answer": 2,
       "solution": "Safe, efficient, and as per regulations."
@@ -859,9 +859,9 @@
       "stem": "The 'breasting' method of working involves",
       "options": [
         "Extracting coal from the face in a horizontal direction",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific"
+        "Sinking a shaft from the surface",
+        "Boring a borehole through the seam",
+        "Dumping waste in the goaf"
       ],
       "answer": 0,
       "solution": "Extracting coal horizontally from the face."
@@ -876,8 +876,8 @@
       "difficulty": "hard",
       "stem": "The main difficulty of hydraulic stowing in steep seams is",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The sand is too costly",
+        "The stowing pipes are too long",
         "Gravity causes uneven distribution of material",
         "No difficulty"
       ],
@@ -894,7 +894,7 @@
       "difficulty": "medium",
       "stem": "The 'gateway' or 'gate road' in longwall mining provides",
       "options": [
-        "Nothing specific",
+        "Only a drainage roadway",
         "Access, ventilation, and transport to the longwall face",
         "Quarrying of granite",
         "Surface mineral extraction"
@@ -982,15 +982,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Under Regulation 118 of CMR 2017, the sirdar must",
+      "stem": "The time of commencement and completion of work in a district is required to be recorded by the sirdar in",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Enter in the report book the time of commencement and completion of work",
-        "Required only for specific cases"
+        "The attendance register of the mine",
+        "The manager's personal diary",
+        "A bound paged report book kept for the purpose",
+        "The shot-firing register"
       ],
       "answer": 2,
-      "solution": "Entry of work commencement and completion times is required."
+      "solution": "The sirdar is required to record the time of commencement and completion of work in the report book kept for the purpose."
     },
     {
       "id": 49,
@@ -1003,7 +1003,7 @@
       "stem": "An 'environmental monitoring report' includes",
       "options": [
         "Include personal opinions",
-        "Used in preliminary drafts only",
+        "The number of workers only",
         "Dust levels, gas concentrations, temperature, and humidity readings",
         "Use informal language"
       ],
@@ -1023,7 +1023,7 @@
         "Not required",
         "Increase temperature",
         "Provide fresh air and remove contaminants",
-        "Control humidity in underground workings"
+        "Provide light in the workings"
       ],
       "answer": 2,
       "solution": "Drift ventilation provides fresh air and removes contaminants."
@@ -1075,9 +1075,9 @@
       "stem": "DGMS circulars are",
       "options": [
         "Mandatory instructions for compliance in mines",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Optional"
+        "Advisory only for big mines",
+        "Optional",
+        "Applicable only to metal mines"
       ],
       "answer": 0,
       "solution": "Mandatory instructions for compliance in mines."
@@ -1110,9 +1110,9 @@
       "difficulty": "hard",
       "stem": "A man riding system must be tested for",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Only at the time of purchase",
+        "Once in five years",
+        "Only after an accident",
         "Load capacity and safety before carrying passengers"
       ],
       "answer": 3,
@@ -1146,10 +1146,10 @@
       "difficulty": "hard",
       "stem": "The sirdar must ensure that the working place is freed from",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the gas at the face",
+        "Only the roof condition",
         "Any danger before allowing persons to work",
-        "Required only for specific cases"
+        "Only the haulage track"
       ],
       "answer": 2,
       "solution": "The working place must be freed from any danger."
@@ -1202,8 +1202,8 @@
       "options": [
         "It is toxic and can cause death even at low concentrations",
         "Not dangerous",
-        "Affects only intake shafts",
-        "Works only in surface mines"
+        "It is heavier than air",
+        "It is beneficial for breathing"
       ],
       "answer": 0,
       "solution": "CO is toxic and can cause death at low concentrations."
@@ -1237,9 +1237,9 @@
       "stem": "Drifting through fault zones requires",
       "options": [
         "Special support and investigation measures",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "No special precautions"
+        "Ordinary timber supports",
+        "No special precautions",
+        "Only a warning sign"
       ],
       "answer": 0,
       "solution": "Fault zones require special support and investigation."
@@ -1254,9 +1254,9 @@
       "difficulty": "medium",
       "stem": "The 'inundation escape routes' in mines must be",
       "options": [
-        "Works under ideal conditions only",
+        "Used only during day shifts",
         "Clearly marked and accessible at all times",
-        "Applicable in limited scenarios",
+        "Locked during working hours",
         "No escape routes needed"
       ],
       "answer": 1,
@@ -1327,9 +1327,9 @@
       "stem": "A 'conveyor system' is preferred when",
       "options": [
         "Distance is long and material volume is high",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Distance is short"
+        "Only the distance is short",
+        "The terrain is very steep",
+        "The material is explosive"
       ],
       "answer": 0,
       "solution": "Conveyors are preferred for long distances with high volumes."
@@ -1344,9 +1344,9 @@
       "difficulty": "medium",
       "stem": "A mine fire can be classified as",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Only the fire in electrical equipment",
+        "Only spontaneous heating",
+        "Only the surface fire",
         "Surface fire and underground fire"
       ],
       "answer": 3,
@@ -1380,9 +1380,9 @@
       "difficulty": "easy",
       "stem": "A 'ventilation deficiency report' should mention",
       "options": [
-        "Used in preliminary drafts only",
-        "Required for statutory reports",
-        "Provide fresh air to working faces",
+        "The manager's opinion only",
+        "The attendance of the shift",
+        "The list of mine officials",
         "Location, nature of deficiency, gas levels, and immediate action taken"
       ],
       "answer": 3,
@@ -1396,15 +1396,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Under Regulation 154, the sirdar must ensure that",
+      "stem": "The means of communication between different parts of a mine must be",
       "options": [
-        "The means of communication are maintained",
-        "Applicable in limited scenarios",
-        "Nothing specific",
-        "Works under ideal conditions only"
+        "Maintained in good working order",
+        "Installed only at the surface",
+        "Tested once every five years",
+        "Optional in developed mines"
       ],
       "answer": 0,
-      "solution": "Means of communication must be maintained."
+      "solution": "Effective means of communication must be maintained in good working order between different parts of a mine to ensure safety."
     },
     {
       "id": 72,
@@ -1416,10 +1416,10 @@
       "difficulty": "hard",
       "stem": "The 'grouting' method in stowing involves",
       "options": [
-        "Applicable in limited scenarios",
+        "Drying the sand in the sun",
         "Nothing specific",
         "Injecting cementitious material into voids",
-        "Works under ideal conditions only"
+        "Filling the voids with air"
       ],
       "answer": 2,
       "solution": "Injecting cementitious material into voids."
@@ -1434,10 +1434,10 @@
       "difficulty": "medium",
       "stem": "A 'haul cycle' includes",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Only the loading of coal",
+        "Only the hauling of waste",
         "Loading, hauling, dumping, returning empty",
-        "Works under ideal conditions only"
+        "Only the dumping of material"
       ],
       "answer": 2,
       "solution": "Haul cycle includes load, haul, dump, return."
@@ -1499,20 +1499,20 @@
     {
       "id": 77,
       "subject": "Technical (Mining)",
-      "topic": "Mine Fires",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'precaution against fire' in mines includes",
+      "difficulty": "medium",
+      "stem": "The maximum working hours in a week for an adult employed belowground in a mine are:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "No precautions",
-        "Fire detection systems, suppression, and escape routes"
+        "54 hours",
+        "60 hours",
+        "45 hours",
+        "48 hours"
       ],
       "answer": 3,
-      "solution": "Fire precautions include detection, suppression, escape routes."
+      "solution": "Mines Act 1952, s.28: no person shall be employed belowground for more than 48 hours in any week."
     },
     {
       "id": 78,
@@ -1579,7 +1579,7 @@
       "stem": "The 'Startup India' initiative supports",
       "options": [
         "Support conveyor belts",
-        "Nothing specific",
+        "Promote coal import",
         "Entrepreneurship and innovation across sectors",
         "Control dust emissions"
       ],
@@ -1668,7 +1668,7 @@
       "difficulty": "medium",
       "stem": "The 'blending of imported coal' with domestic coal is done to",
       "options": [
-        "Nothing specific",
+        "Increase the moisture in coal",
         "Improve quality and reduce ash content for specific users",
         "Dredging of riverbeds",
         "Extraction of iron ore"
@@ -1760,7 +1760,7 @@
       "options": [
         "Mining of bauxite",
         "Processing of limestone",
-        "Nothing specific",
+        "Import of all mining equipment",
         "Indigenous manufacturing of mining equipment"
       ],
       "answer": 3,
@@ -1778,7 +1778,7 @@
       "options": [
         "Specific to metal mines only",
         "Equipment imports, indigenous manufacturing, and R&D",
-        "Nothing specific",
+        "Import of skilled workers",
         "Processing of limestone"
       ],
       "answer": 1,
@@ -1884,9 +1884,9 @@
       "difficulty": "hard",
       "stem": "The 'mine reclamation bond' ensures",
       "options": [
-        "Nothing specific",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Only a licensing fee",
+        "A share of the profit to the workers",
+        "A tax on coal production",
         "Funds for environmental restoration after mine closure"
       ],
       "answer": 3,
@@ -1920,49 +1920,13 @@
       "difficulty": "easy",
       "stem": "The 'PM Gati Shakti' scheme aims to",
       "options": [
-        "Nothing specific",
+        "Only road construction",
         "Integrated planning of multi-modal infrastructure",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios"
+        "Only port development",
+        "A scheme for miners only"
       ],
       "answer": 1,
       "solution": "Integrated multi-modal infrastructure planning."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Two successive discounts of 10% and 20% are equivalent to a single discount of:",
-      "options": [
-        "28%",
-        "30%",
-        "25%",
-        "27%"
-      ],
-      "answer": 0,
-      "solution": "Equivalent = 1 - (0.90 × 0.80) = 1 - 0.72 = 28%"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of 5 numbers is 20. If one number is excluded, the average becomes 18. What is the excluded number?",
-      "options": [
-        "26",
-        "30",
-        "28",
-        "24"
-      ],
-      "answer": 2,
-      "solution": "Sum of 5 = 100. Sum of 4 = 72. Excluded = 100 - 72 = 28"
     }
   ],
   "seed": 37121108
