@@ -41,13 +41,13 @@ export function DiplomaCard({
           ))}
         </ul>
       </Link>
-      <div className="mt-4 flex items-center justify-between">
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
         <Link href={href} className="text-sm font-semibold text-brand">
           Open mock series <span className="transition-transform group-hover:translate-x-0.5">→</span>
         </Link>
         <div className="flex items-center gap-2">
           <span className="text-xs text-muted">{mockCount} mocks · ₹{price}</span>
-          <AddToCartBtn exam={exam} subject={subject} />
+          <AddToCartBtn exam={exam} subject={subject} size="md" />
         </div>
       </div>
     </div>

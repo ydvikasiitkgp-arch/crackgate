@@ -33,7 +33,7 @@ export function NewsletterForm({ source = "landing" }: { source?: string }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 max-w-md">
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md">
       <input
         type="email"
         value={email}

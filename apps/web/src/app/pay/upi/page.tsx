@@ -149,7 +149,7 @@ export default async function PayUpiPage({
 
             <div className="mt-4 text-sm">
               <div className="text-muted">UPI ID</div>
-              <div className="font-mono text-base font-semibold select-all">
+              <div className="font-mono text-base font-semibold select-all break-all">
                 {vpa}
               </div>
             </div>
@@ -168,13 +168,13 @@ export default async function PayUpiPage({
             <div className="mt-5 md:hidden">
               <p className="text-xs font-semibold text-muted mb-2">Pay with</p>
               <div className="flex gap-2">
-                <a href={upiUrl} className="flex-1 rounded-lg bg-[#5f259f] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">
+                <a href={upiUrl} className="flex-1 rounded-lg bg-[#5f259f] px-3 py-3 text-center text-xs font-bold text-white hover:brightness-110 transition">
                   PhonePe
                 </a>
-                <a href={upiUrl} className="flex-1 rounded-lg bg-[#1a73e8] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">
+                <a href={upiUrl} className="flex-1 rounded-lg bg-[#1a73e8] px-3 py-3 text-center text-xs font-bold text-white hover:brightness-110 transition">
                   GPay
                 </a>
-                <a href={upiUrl} className="flex-1 rounded-lg bg-[#00b9f5] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition">
+                <a href={upiUrl} className="flex-1 rounded-lg bg-[#00b9f5] px-3 py-3 text-center text-xs font-bold text-white hover:brightness-110 transition">
                   Paytm
                 </a>
               </div>

@@ -369,7 +369,7 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
                     key={qq.id}
                     onClick={() => { setIdx(i); setPaletteOpen(false); }}
                     className={cn(
-                      "min-h-[44px] min-w-[44px] text-xs font-semibold rounded border transition active:scale-90",
+                      "min-h-[44px] min-w-0 w-full text-xs font-semibold rounded border transition active:scale-90",
                       i === idx && "ring-2 ring-brand",
                       isAnswered ? "bg-emerald-100 dark:bg-emerald-500/20 border-emerald-300 dark:border-emerald-600 text-emerald-900 dark:text-emerald-200" :
                         isSeen ? "bg-amber-50 dark:bg-amber-500/20 border-amber-200 dark:border-amber-600 text-amber-900 dark:text-amber-200" :

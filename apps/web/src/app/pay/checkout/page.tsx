@@ -258,19 +258,19 @@ export default async function CheckoutPage() {
                   <div className="flex gap-2">
                     <a
                       href={upiUrl}
-                      className="flex-1 rounded-lg bg-[#5f259f] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition"
+                      className="flex-1 rounded-lg bg-[#5f259f] px-3 py-3 text-center text-xs font-bold text-white hover:brightness-110 transition"
                     >
                       PhonePe
                     </a>
                     <a
                       href={upiUrl}
-                      className="flex-1 rounded-lg bg-[#1a73e8] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition"
+                      className="flex-1 rounded-lg bg-[#1a73e8] px-3 py-3 text-center text-xs font-bold text-white hover:brightness-110 transition"
                     >
                       GPay
                     </a>
                     <a
                       href={upiUrl}
-                      className="flex-1 rounded-lg bg-[#00b9f5] px-3 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition"
+                      className="flex-1 rounded-lg bg-[#00b9f5] px-3 py-3 text-center text-xs font-bold text-white hover:brightness-110 transition"
                     >
                       Paytm
                     </a>
@@ -455,7 +455,7 @@ export default async function CheckoutPage() {
       </div>
 
       {/* Mobile sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 lg:hidden border-t border-line bg-paper/95 backdrop-blur-md px-5 py-3 z-50">
+      <div className="fixed bottom-0 left-0 right-0 lg:hidden border-t border-line bg-paper/95 backdrop-blur-md px-5 py-3 z-50 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <div className="flex items-center justify-between gap-4">
           <div>
             {comboSavingsPaise > 0 && (

@@ -55,13 +55,13 @@ export default function CartPage() {
       <div className="flex gap-1 p-1 bg-canvas rounded-xl border border-line w-fit mb-8">
         <button
           onClick={() => setTab("browse")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition ${tab === "browse" ? "bg-surface shadow-sm text-ink" : "text-muted hover:text-ink"}`}
+          className={`px-4 py-2.5 rounded-lg text-sm font-medium transition ${tab === "browse" ? "bg-surface shadow-sm text-ink" : "text-muted hover:text-ink"}`}
         >
           Browse Mocks
         </button>
         <button
           onClick={() => setTab("cart")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition ${tab === "cart" ? "bg-surface shadow-sm text-ink" : "text-muted hover:text-ink"}`}
+          className={`px-4 py-2.5 rounded-lg text-sm font-medium transition ${tab === "cart" ? "bg-surface shadow-sm text-ink" : "text-muted hover:text-ink"}`}
         >
           My Cart ({count})
         </button>
@@ -136,7 +136,7 @@ export default function CartPage() {
                               </span>
                               <button
                                 onClick={() => removeItem(item.id)}
-                                className="p-1 rounded-md text-muted/50 hover:text-red-600 hover:bg-red-50 transition opacity-0 group-hover:opacity-100"
+                                className="p-2 rounded-md text-muted/50 hover:text-red-600 hover:bg-red-50 transition opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
                               >
                                 <Trash2 className="w-3.5 h-3.5" />
                               </button>
@@ -400,7 +400,7 @@ function CartContents({
               </span>
               <button
                 onClick={() => removeItem(item.id)}
-                className="p-1.5 rounded-lg text-muted/50 hover:bg-red-50 hover:text-red-600 transition opacity-0 group-hover:opacity-100"
+                className="p-2.5 rounded-lg text-muted/50 hover:bg-red-50 hover:text-red-600 transition opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
               >
                 <Trash2 className="w-4 h-4" />
               </button>

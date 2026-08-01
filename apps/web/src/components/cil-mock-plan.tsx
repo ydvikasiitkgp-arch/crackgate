@@ -141,11 +141,11 @@ function MockCard({
   const refId = `cil-${slug}-${String(mock.no).padStart(2, "0")}`;
   return (
     <div className={`card relative flex flex-col p-5 ${attempt ? "opacity-60" : "opacity-90"}`}>
-      <span className="badge badge-pro absolute right-4 top-4">
+      <span className="badge badge-pro sm:absolute sm:right-4 sm:top-4 self-start">
         {attempt ? "✓ Completed" : live ? (unlocked ? "Ready" : "Locked") : "Coming soon"}
       </span>
       <div className="text-xs font-mono text-brand">Mock {String(mock.no).padStart(2, "0")}</div>
-      <h4 className="mt-1 pr-20 font-bold text-ink leading-snug">{mock.title}</h4>
+      <h4 className="mt-1 sm:pr-20 font-bold text-ink leading-snug">{mock.title}</h4>
 
       <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted">
         <span className="rounded-md bg-canvas px-2 py-1">{mock.questions} Q</span>

@@ -558,7 +558,7 @@ function PracticePortal({
                   key={i}
                   onClick={() => go(i)}
                   className={cn(
-                    "min-h-[44px] sm:min-h-[36px] min-w-[44px] sm:min-w-0 text-xs font-semibold rounded transition active:scale-90",
+                    "min-h-[44px] sm:min-h-[36px] min-w-0 w-full text-xs font-semibold rounded transition active:scale-90",
                     s === "nv"    && "bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-300",
                     s === "not"   && "bg-rose-200 text-rose-900 dark:bg-rose-900/30 dark:text-rose-300",
                     s === "ans"   && "bg-emerald-500 text-white dark:bg-emerald-600",
@@ -641,7 +641,7 @@ function PracticePortal({
                     key={i}
                     onClick={() => { go(i); setPaletteOpen(false); }}
                     className={cn(
-                      "min-h-[44px] min-w-[44px] text-xs font-semibold rounded transition active:scale-90",
+                      "min-h-[44px] min-w-0 w-full text-xs font-semibold rounded transition active:scale-90",
                       s === "nv"    && "bg-slate-200 text-slate-700",
                       s === "not"   && "bg-rose-200 text-rose-900",
                       s === "ans"   && "bg-emerald-500 text-white",

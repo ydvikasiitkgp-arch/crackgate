@@ -95,7 +95,7 @@ export function ReportIssueModal({
       />
 
       {/* Panel */}
-      <div className="relative bg-surface rounded-2xl border border-line shadow-xl w-full max-w-lg mx-4 p-6 text-left">
+      <div className="relative bg-surface rounded-2xl border border-line shadow-xl w-full max-w-lg mx-4 p-6 text-left max-h-[85vh] overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-muted hover:text-ink transition"
