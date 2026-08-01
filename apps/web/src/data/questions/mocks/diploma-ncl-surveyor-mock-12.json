@@ -49,8 +49,8 @@
       "difficulty": "medium",
       "stem": "The vernier on a miner's dial provides:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Whole degrees only",
+        "A reading in minutes only",
         "Temperature readings",
         "Readings to a fraction of a degree"
       ],
@@ -229,9 +229,9 @@
       "difficulty": "medium",
       "stem": "Magnetic declination varies with:",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the season of the year",
+        "Only the latitude of the place",
+        "Only the altitude of the place",
         "Geographic location and time"
       ],
       "answer": 3,
@@ -502,7 +502,7 @@
         "Two or more well-spaced points and compared",
         "No points needed",
         "Random points",
-        "Applicable in limited scenarios"
+        "Only a single well-spaced point"
       ],
       "answer": 0,
       "solution": "Consistent bearings to well-spaced points indicate no local attraction."
@@ -790,7 +790,7 @@
         "Bearings affected by nearby ferrous materials",
         "All bearings equally",
         "No bearings need correction",
-        "Applicable in limited scenarios"
+        "No bearing ever needs correction"
       ],
       "answer": 0,
       "solution": "Only bearings taken in areas with local attraction need correction."
@@ -896,7 +896,7 @@
       "stem": "The 'measure and record' function of a total station:",
       "options": [
         "Takes a reading and stores it in memory",
-        "Power measurement only",
+        "Temperature measurement only",
         "Prints the reading",
         "Sends it to GPS"
       ],
@@ -1039,10 +1039,10 @@
       "difficulty": "medium",
       "stem": "The pulse repetition frequency of an EDM affects:",
       "options": [
-        "Applicable in limited scenarios",
+        "The beam intensity",
         "The unambiguous range and measurement rate",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "The instrument weight",
+        "The measuring time"
       ],
       "answer": 1,
       "solution": "Higher PRF gives faster measurements but shorter unambiguous range."
@@ -1165,10 +1165,10 @@
       "difficulty": "medium",
       "stem": "The latitude of the observer can be determined by measuring the altitude of:",
       "options": [
-        "Any star at elongation",
+        "Any star at any time without correction",
         "Polaris only",
         "Polaris at any time with correction",
-        "Current measurement only"
+        "The sun's altitude at meridian passage"
       ],
       "answer": 2,
       "solution": "Polaris altitude corrected for its small polar distance gives latitude directly."
@@ -1194,38 +1194,38 @@
     {
       "id": "ncl-surveyor-12-066",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'equal altitude' method for determining azimuth uses observations of the same star at:",
+      "stem": "A rescue room is required at a mine where the number of persons employed belowground exceeds 100 and:",
       "options": [
-        "Upper and lower culmination",
-        "Opposite horizons",
-        "Rising and setting",
-        "Any two symmetric positions about the meridian"
+        "The mine produces less than 100 tonnes a day",
+        "There is no electricity",
+        "There is no rescue station within 35 km",
+        "The mine is opencast only"
       ],
-      "answer": 3,
-      "solution": "In the equal altitude method, a star observed at equal altitudes east and west of the meridian yields true azimuth from the bisector of the horizontal angles."
+      "answer": 2,
+      "solution": "MRR 1985: a rescue room is required when more than 100 persons work belowground and no rescue station is within 35 km."
     },
     {
       "id": "ncl-surveyor-12-067",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Sidereal time differs from solar time because:",
+      "stem": "As per DGMS Circular 2/2010, strata and dump slope monitoring is mandatory for dumps exceeding ______ in height.",
       "options": [
-        "Earth revolves faster than it rotates",
-        "Stars do not move",
-        "Earth rotates faster than it revolves",
-        "The Sun is stationary"
+        "30 m",
+        "100 m",
+        "15 m",
+        "60 m"
       ],
-      "answer": 2,
-      "solution": "A sidereal day (~23h 56m) is shorter than a solar day because the Earth's orbital motion requires an extra ~4 minutes of rotation per day."
+      "answer": 3,
+      "solution": "DGMS Circular 2/2010: monitoring (including slope stability radar / real-time monitoring) is made mandatory for dumps exceeding 60 m height."
     },
     {
       "id": "ncl-surveyor-12-068",
@@ -1248,38 +1248,38 @@
     {
       "id": "ncl-surveyor-12-069",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "To determine longitude by astronomical observations, one needs:",
+      "stem": "Under the Mines Rescue Rules 1985, the breathing apparatus kept at a rescue station or rescue room shall:",
       "options": [
-        "Works under ideal conditions only",
-        "Accurate time and azimuth/altitude",
-        "A barometer",
-        "Applicable in limited scenarios"
+        "Be of the same type and make",
+        "Be of different types for flexibility",
+        "Be imported only",
+        "Be replaced every month"
       ],
-      "answer": 1,
-      "solution": "Longitude determination requires comparing local time (from star observations) with a reference time (e.g., Greenwich), hence accurate timekeeping is essential."
+      "answer": 0,
+      "solution": "MRR 1985, Rule 11(4): breathing apparatus at a rescue station/room must be of the same type and make for interchangeability."
     },
     {
       "id": "ncl-surveyor-12-070",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The gyrotheodolite determines true north by:",
+      "stem": "When workings extend to within 60 m of the settled boundary with an adjacent mine, the owner/agent/manager shall:",
       "options": [
-        "Magnetic感应",
-        "A spinning gyroscope aligned to Earth's rotation axis",
-        "Star observations",
-        "Sun shadow"
+        "Only inform the labour union",
+        "Inform the adjacent mine and give its surveyors reasonable facilities for surveys",
+        "Stop all work in the mine",
+        "Seal the workings"
       ],
       "answer": 1,
-      "solution": "A gyrotheodolite uses a rapidly spinning rotor whose angular momentum causes it to seek the geographic meridian."
+      "solution": "CMR 2017 Reg 65(8): the adjacent mine is informed and its surveyors are given reasonable facilities for required surveys and levellings."
     },
     {
       "id": "ncl-surveyor-12-071",
@@ -1302,110 +1302,110 @@
     {
       "id": "ncl-surveyor-12-072",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'astronomical triangle' has vertices at:",
+      "stem": "Under CMR 2017, survey instruments at a mine shall be:",
       "options": [
-        "Three stars",
-        "North, South, Star",
-        "Zenith, Pole, Star",
-        "Equator, Pole, Horizon"
+        "Calibrated once a year by the mine",
+        "Replaced every 6 months",
+        "Checked only by the Inspector",
+        "Checked, maintained and calibrated at regular intervals as specified by the manufacturer"
       ],
-      "answer": 2,
-      "solution": "The PZX triangle (Pole-Zenith-Star) is fundamental in spherical astronomy for reducing observations."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 67(2): survey instruments are checked, maintained and calibrated at intervals specified by the manufacturer."
     },
     {
       "id": "ncl-surveyor-12-073",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The right ascension of a star is measured in:",
+      "stem": "Plans and sections required under CMR 2017 shall be corrected and maintained up-to-date at intervals not exceeding:",
       "options": [
-        "Degrees",
-        "Hours, minutes, seconds",
-        "Gradians",
-        "Radians"
+        "1 month",
+        "6 months",
+        "1 year",
+        "3 months"
       ],
-      "answer": 1,
-      "solution": "Right ascension is conventionally expressed in time units (h, m, s) along the celestial equator from the vernal equinox."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 64(4): plans are kept corrected up-to-date not earlier than 3 months."
     },
     {
       "id": "ncl-surveyor-12-074",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Precession causes the pole star to slowly change its:",
+      "stem": "Unless otherwise approved, mine plans and sections under CMR 2017 shall be prepared on a scale with a representative factor of:",
       "options": [
-        "Distance from Earth",
-        "Color",
-        "Declination over centuries",
-        "Brightness"
+        "10000:1",
+        "2000:1 or 1000:1",
+        "5000:1 or 1000:1",
+        "100:1 or 50:1"
       ],
-      "answer": 2,
-      "solution": "Lunar and solar precession causes the north celestial pole to trace a circle, changing Polaris's declination over ~26,000 years."
+      "answer": 1,
+      "solution": "CMR 2017 Reg 64(1)(d): plans are on a scale with RF 2000:1 or 1000:1, with a scale bar at least 25 cm long."
     },
     {
       "id": "ncl-surveyor-12-075",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'elongation' of a star occurs when its hour angle is such that:",
+      "stem": "DGMS (Tech.) (S&T) Circular No. 02 of 2010 deals with:",
       "options": [
-        "It is on the meridian",
-        "It is rising",
-        "It is at maximum altitude",
-        "Its vertical circle is tangent to the small circle of diurnal motion"
+        "Shaft sinking procedures",
+        "Ventilation planning",
+        "Use of diesel equipment belowground",
+        "Design, control and monitoring of pit and dump slopes in opencast mines"
       ],
       "answer": 3,
-      "solution": "At elongation the star's vertical circle is tangent to its diurnal path, giving maximum horizontal displacement and precise azimuth."
+      "solution": "DGMS (Tech.) (S&T) Circular No. 02 dated 06.07.2010 concerns design, control and monitoring of pit and dump slopes in opencast mines."
     },
     {
       "id": "ncl-surveyor-12-076",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "To find latitude by the meridian altitude method, one observes a star at:",
+      "stem": "A rescue-trained person shall practise with breathing apparatus at least:",
       "options": [
-        "Sunrise",
-        "Any time",
-        "Its upper or lower culmination",
-        "Its transit across the prime vertical"
+        "8 times a year, of which 4 in mines",
+        "Once a month",
+        "12 times a year",
+        "4 times a year, of which 2 in mines"
       ],
-      "answer": 2,
-      "solution": "Meridian altitude (transit) gives the simplest latitude determination: lat = 90° - alt + declination (for upper culmination of a north star)."
+      "answer": 0,
+      "solution": "MRR 1985: rescue-trained persons practise with breathing apparatus at least 8 times a year, including 4 practices in the mine."
     },
     {
       "id": "ncl-surveyor-12-077",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The equation of time accounts for the difference between:",
+      "stem": "The water-danger plan maintained under CMR 2017 shows water bodies existing within ______ of the boundary of the mine.",
       "options": [
-        "Summer and winter time",
-        "Local time and Greenwich time",
-        "Mean solar time and apparent solar time",
-        "Sidereal time and mean solar time"
+        "500 m",
+        "100 m",
+        "200 m",
+        "60 m"
       ],
       "answer": 2,
-      "solution": "Equation of time = apparent solar time - mean solar time, caused by Earth's orbital eccentricity and axial tilt."
+      "solution": "CMR 2017 Reg 65(1)(g): a water-danger plan and section show water bodies existing up to 200 m of the mine boundary."
     },
     {
       "id": "ncl-surveyor-12-078",
@@ -1428,38 +1428,110 @@
     {
       "id": "ncl-surveyor-12-079",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'aberration of starlight' causes an apparent displacement of a star due to:",
+      "stem": "The joint survey plan showing workings near the common boundary with an adjacent mine shall be signed by:",
       "options": [
-        "Gravitational lensing",
-        "Atmospheric refraction",
-        "Stellar proper motion",
-        "Earth's orbital velocity"
+        "The surveyors and managers of both the mine and the adjacent mine",
+        "Only the surveyor of the mine",
+        "The Chief Inspector only",
+        "The district magistrate"
       ],
-      "answer": 3,
-      "solution": "Aberration (~20.5 arcsec max) results from the finite speed of light combined with the observer's orbital velocity."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 65(1)(e): the joint survey plan is signed by the surveyor and the manager of the mine and of adjoining mines whose workings come within 60 m of the common boundary."
     },
     {
       "id": "ncl-surveyor-12-080",
       "subject": "Mine Surveying",
-      "topic": "Field Astronomy",
+      "topic": "Legislation — Mine Plans & Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "For determining the azimuth of a line using Polaris, the correction for polar distance is:",
+      "stem": "Every mine plan or section under CMR 2017 shall show:",
       "options": [
-        "Not needed",
-        "Applied depending on hour angle and latitude",
-        "Always subtracted",
-        "Always added"
+        "Only the grid line",
+        "The magnetic meridian without date",
+        "The railway alignment",
+        "The true north, or the magnetic meridian with the date of the latter"
+      ],
+      "answer": 3,
+      "solution": "CMR 2017 Reg 64(1)(b): plans show true north or magnetic meridian and the date of the later."
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "At what time between 4 and 5 o'clock will the hands coincide?",
+      "options": [
+        "4:22 min",
+        "4:21 min",
+        "4:24 min",
+        "4:20 min"
+      ],
+      "answer": 0,
+      "solution": "θ = (60×4 - 5.5×0) / 5.5 = 240/5.5 = 43.64 min past 4. Approximately 4:21:49, closest to 4:22"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A shopkeeper buys an article for ₹400 and sells it at 25% profit. What is the selling price?",
+      "options": [
+        "₹480",
+        "₹500",
+        "₹450",
+        "₹525"
       ],
       "answer": 1,
-      "solution": "The correction depends on the star's hour angle and the observer's latitude; tables or formulae give the proper sign."
+      "solution": "SP = 400 × 1.25 = ₹500"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A and B share profits in the ratio 3:2. A invested ₹50000 for 12 months. For how many months did B invest ₹40000?",
+      "options": [
+        "10 months",
+        "11 months",
+        "12 months",
+        "9 months"
+      ],
+      "answer": 1,
+      "solution": "Profit ratio = (Investment × Time). 3/2 = (50000×12)/(40000×T) → 3T = (50000×12×2)/(40000×3) = 1200000/120000 = 10. T = 10... Actually: 3/2 = 600000/(40000T) → 3 × 40000T = 2 × 600000 → 120000T = 1200000 → T = 10. So 10 months."
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "What is 15% of 200?",
+      "options": [
+        "25",
+        "30",
+        "20",
+        "35"
+      ],
+      "answer": 1,
+      "solution": "15/100 × 200 = 30"
     },
     {
       "id": "ncl-surveyor-12-g001",
@@ -1748,150 +1820,6 @@
       ],
       "answer": 1,
       "solution": "Same dir: (f-s)=350/70=5. Opp dir: (f+s)=350/10=35. f=(35+5)/2=20 m/s. Wait: f-s=5, f+s=35, f=20. Answer should be A. But checking: 20 m/s = 72 km/h. Let me recheck: relative speed same direction = (f-s), opposite = (f+s). (f-s)=350/70=5. (f+s)=350/10=35. f=20, s=15. Answer A."
-    },
-    {
-      "id": "ncl-surveyor-12-g017",
-      "subject": "General Awareness",
-      "topic": "QA-Speed",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A boat travels 30 km upstream in 6 hours and 30 km downstream in 3 hours. What is the speed of the current?",
-      "options": [
-        "C. 4 km/h",
-        "A. 2.5 km/h",
-        "D. 5 km/h",
-        "B. 3 km/h"
-      ],
-      "answer": 1,
-      "solution": "Upstream speed = 30/6=5. Downstream speed = 30/3=10. Current = (10-5)/2 = 2.5 km/h."
-    },
-    {
-      "id": "ncl-surveyor-12-g018",
-      "subject": "General Awareness",
-      "topic": "QA-Avg",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of 5 numbers is 20. If one number is excluded, the average becomes 18. What is the excluded number?",
-      "options": [
-        "A. 24",
-        "C. 28",
-        "D. 30",
-        "B. 26"
-      ],
-      "answer": 1,
-      "solution": "Sum of 5 = 100. Sum of 4 = 72. Excluded = 100-72 = 28."
-    },
-    {
-      "id": "ncl-surveyor-12-g019",
-      "subject": "General Awareness",
-      "topic": "QA-Avg",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average age of 30 students is 12 years. If the teacher's age is included, the average becomes 13. What is the teacher's age?",
-      "options": [
-        "D. 50",
-        "C. 45",
-        "B. 43",
-        "A. 40"
-      ],
-      "answer": 2,
-      "solution": "Sum of students = 360. Sum with teacher = 31×13 = 403. Teacher = 403-360 = 43."
-    },
-    {
-      "id": "ncl-surveyor-12-g020",
-      "subject": "General Awareness",
-      "topic": "QA-Avg",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of first 10 natural numbers is:",
-      "options": [
-        "C. 6",
-        "B. 5.5",
-        "A. 5",
-        "D. 4.5"
-      ],
-      "answer": 1,
-      "solution": "Average = (1+2+...+10)/10 = 55/10 = 5.5."
-    },
-    {
-      "id": 81,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "At what time between 4 and 5 o'clock will the hands coincide?",
-      "options": [
-        "4:22 min",
-        "4:21 min",
-        "4:24 min",
-        "4:20 min"
-      ],
-      "answer": 0,
-      "solution": "θ = (60×4 - 5.5×0) / 5.5 = 240/5.5 = 43.64 min past 4. Approximately 4:21:49, closest to 4:22"
-    },
-    {
-      "id": 82,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A shopkeeper buys an article for ₹400 and sells it at 25% profit. What is the selling price?",
-      "options": [
-        "₹480",
-        "₹500",
-        "₹450",
-        "₹525"
-      ],
-      "answer": 1,
-      "solution": "SP = 400 × 1.25 = ₹500"
-    },
-    {
-      "id": 83,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A and B share profits in the ratio 3:2. A invested ₹50000 for 12 months. For how many months did B invest ₹40000?",
-      "options": [
-        "10 months",
-        "11 months",
-        "12 months",
-        "9 months"
-      ],
-      "answer": 1,
-      "solution": "Profit ratio = (Investment × Time). 3/2 = (50000×12)/(40000×T) → 3T = (50000×12×2)/(40000×3) = 1200000/120000 = 10. T = 10... Actually: 3/2 = 600000/(40000T) → 3 × 40000T = 2 × 600000 → 120000T = 1200000 → T = 10. So 10 months."
-    },
-    {
-      "id": 84,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "What is 15% of 200?",
-      "options": [
-        "25",
-        "30",
-        "20",
-        "35"
-      ],
-      "answer": 1,
-      "solution": "15/100 × 200 = 30"
     }
   ]
 }

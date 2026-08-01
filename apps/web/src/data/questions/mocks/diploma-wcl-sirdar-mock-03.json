@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -138,10 +138,10 @@
       "difficulty": "medium",
       "stem": "The 'fire water pump' capacity in mines must be",
       "options": [
-        "Any capacity",
-        "Applicable in limited scenarios",
+        "Only for filling water tankers",
+        "The same as a domestic water pump",
         "Sufficient to supply fire points at required pressure",
-        "Not specified"
+        "Not related to the number of fire points"
       ],
       "answer": 2,
       "solution": "Fire pumps must supply adequate pressure to fire points."
@@ -156,10 +156,10 @@
       "difficulty": "hard",
       "stem": "The 'safety factor' of a winding rope for persons is the ratio of",
       "options": [
-        "Enhance surveying accuracy",
-        "Nothing specific",
+        "Rope length to rope diameter",
+        "Maximum working load to breaking load",
         "Breaking load to the maximum working load",
-        "Improve ventilation efficiency"
+        "Depth of shaft to rope diameter"
       ],
       "answer": 2,
       "solution": "Breaking load to maximum working load."
@@ -174,9 +174,9 @@
       "difficulty": "hard",
       "stem": "A self-rescuer is used to",
       "options": [
-        "For drinking water",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Protect the eyes from dust",
+        "Provide illumination at the face",
+        "Cool the mine atmosphere",
         "Provide breathing apparatus in case of mine fire or gas inrush"
       ],
       "answer": 3,
@@ -193,9 +193,9 @@
       "stem": "The 'stage loader' at a longwall face transfers coal from",
       "options": [
         "The AFC to the belt conveyor at the gate end",
-        "Extraction of iron ore",
-        "Specific to metal mines only",
-        "Nothing specific"
+        "The face to the AFC at the tailgate",
+        "The belt conveyor to the surface",
+        "The gate end to the face"
       ],
       "answer": 0,
       "solution": "From AFC to belt conveyor at gate end."
@@ -282,8 +282,8 @@
       "difficulty": "hard",
       "stem": "A 'bord and pillar' panel typically has pillars of",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "A fixed size of 20 m square",
+        "The size of the longest gallery",
         "Any size",
         "Designed size based on depth and seam thickness"
       ],
@@ -318,9 +318,9 @@
       "difficulty": "easy",
       "stem": "Under the Mines Act, a 'mine' includes",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the underground workings",
+        "Only the buildings on the surface",
+        "Only the persons employed in the mine",
         "All works, machinery, and equipment used in connection with mining"
       ],
       "answer": 3,
@@ -337,9 +337,9 @@
       "stem": "A preventive maintenance schedule for face machineries includes",
       "options": [
         "Regular inspection, lubrication, and replacement of worn parts",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Replacement of the machine after every shift",
+        "Repair only after breakdown",
+        "Painting the machine once a year"
       ],
       "answer": 0,
       "solution": "Regular inspection, lubrication, and replacement of worn parts."
@@ -372,10 +372,10 @@
       "difficulty": "hard",
       "stem": "The 'rescue equipment inspection' should be",
       "options": [
-        "Not required",
-        "Never",
+        "Only once a year",
+        "Only after an accident",
         "Before each use and at regular intervals",
-        "Applicable in limited scenarios"
+        "Only when the equipment is new"
       ],
       "answer": 2,
       "solution": "Rescue equipment must be inspected before each use."
@@ -409,9 +409,9 @@
       "stem": "A man riding system operating in a shaft must have a",
       "options": [
         "Device to prevent overwinding",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "No special device"
+        "A louder siren",
+        "A spare cage",
+        "A steam driven winding engine"
       ],
       "answer": 0,
       "solution": "A device to prevent overwinding is required."
@@ -462,9 +462,9 @@
       "difficulty": "easy",
       "stem": "A 'handover report' between shifts should include",
       "options": [
-        "Omit references",
-        "Use informal language",
-        "Include personal opinions",
+        "Only the number of persons employed",
+        "Only the quantity of coal produced",
+        "Only the names of the officials",
         "Safety conditions, pending work, and outstanding issues"
       ],
       "answer": 3,
@@ -534,10 +534,10 @@
       "difficulty": "hard",
       "stem": "The 'pack wall' in stowing is used to",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Support the roof over the pack",
+        "Separate the goaf from the working",
         "Retain stowing material in the goaf",
-        "Works under ideal conditions only"
+        "Ventilate the goaf"
       ],
       "answer": 2,
       "solution": "Retains stowing material in the goaf."
@@ -552,10 +552,10 @@
       "difficulty": "medium",
       "stem": "The 'stowing operations plan' must include",
       "options": [
-        "Works under ideal conditions only",
+        "Only the quantity of coal production",
         "Material source, transport method, dam design, and monitoring",
-        "No plan needed",
-        "Applicable in limited scenarios"
+        "Only the stowing pump rating",
+        "Only the number of workers engaged"
       ],
       "answer": 1,
       "solution": "Operations plan must cover material, transport, dams, and monitoring."
@@ -588,10 +588,10 @@
       "difficulty": "easy",
       "stem": "The 'personal dust sampler' is worn by",
       "options": [
-        "Applicable in limited scenarios",
+        "The ventilation officer only",
         "Individual workers to measure personal exposure",
-        "Works under ideal conditions only",
-        "Not worn by anyone"
+        "The manager only",
+        "The surveyor only"
       ],
       "answer": 1,
       "solution": "Personal dust samplers are worn by workers to measure exposure."
@@ -607,9 +607,9 @@
       "stem": "Under CMR 2017, the 'means of communication' in a mine must include",
       "options": [
         "Telephone, signaling system, or other approved means",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "A public address system on the surface only",
+        "Hand signals alone",
+        "Written messages carried by hand"
       ],
       "answer": 0,
       "solution": "Telephone, signaling system, or other approved means."
@@ -661,9 +661,9 @@
       "stem": "The 'time factor' in report writing is important because",
       "options": [
         "Delays can compromise the effectiveness of corrective actions",
-        "Skip executive summary",
-        "Used in preliminary drafts only",
-        "It is not"
+        "Reports can be written after a month",
+        "Only the final report matters",
+        "Reports need not be dated"
       ],
       "answer": 0,
       "solution": "Delays can compromise the effectiveness of corrective actions."
@@ -697,9 +697,9 @@
       "stem": "The 'underground control survey' must be connected to",
       "options": [
         "The surface control survey at regular intervals",
-        "Monitor gas concentrations",
-        "Used only for horizontal lines",
-        "Nothing specific"
+        "A point chosen by the overman",
+        "Only the underground traverses",
+        "The national grid only on request"
       ],
       "answer": 0,
       "solution": "Connected to surface control survey at regular intervals."
@@ -715,9 +715,9 @@
       "stem": "The 'rescue station' for a mine must be located at",
       "options": [
         "Within the prescribed distance from the mine",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Any place"
+        "On the surface near the pit head",
+        "Underground near the working face",
+        "At the manager's residence"
       ],
       "answer": 0,
       "solution": "Within the prescribed distance from the mine."
@@ -858,10 +858,10 @@
       "difficulty": "medium",
       "stem": "The 'rescue equipment maintenance' includes",
       "options": [
-        "Not required",
-        "No maintenance needed",
+        "Painting the equipment yearly",
+        "Storing the equipment in a damp shed",
         "Regular servicing, testing, and replacement of components",
-        "Applicable in limited scenarios"
+        "Using the equipment until it fails"
       ],
       "answer": 2,
       "solution": "Equipment needs regular servicing, testing, replacement."
@@ -912,10 +912,10 @@
       "difficulty": "easy",
       "stem": "The 'fire water supply' in mines must be",
       "options": [
-        "No supply needed",
+        "Available only during the rainy season",
         "Adequate, accessible, and connected to fire points",
-        "Not required",
-        "Applicable in limited scenarios"
+        "Available only at the shaft bottom",
+        "Provided only in gassy mines"
       ],
       "answer": 1,
       "solution": "Fire water supply must be adequate and accessible."
@@ -930,9 +930,9 @@
       "difficulty": "hard",
       "stem": "The capacity of a belt conveyor depends on",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the length of the belt",
+        "Only the motor rating",
+        "The number of idler rollers only",
         "Belt width, speed, and load per unit length"
       ],
       "answer": 3,
@@ -966,10 +966,10 @@
       "difficulty": "easy",
       "stem": "The 'quality control' in stowing includes",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "Only the water level in the sump",
+        "Only the number of stowing shifts",
         "Checking slurry consistency, fill density, and pipeline integrity",
-        "Works under ideal conditions only"
+        "Only the brand of sand used"
       ],
       "answer": 2,
       "solution": "Checking slurry consistency, fill density, and pipeline integrity."
@@ -1002,8 +1002,8 @@
       "difficulty": "medium",
       "stem": "A 'geological fault' can be a source of water inrush because",
       "options": [
-        "Investigation of mineral deposits",
-        "Applicable in limited scenarios",
+        "It always contains petroleum",
+        "It always shifts the seam upward",
         "It is always dry",
         "It can act as a conduit for groundwater to enter the mine"
       ],
@@ -1013,20 +1013,20 @@
     {
       "id": 50,
       "subject": "Technical (Mining)",
-      "topic": "Support",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'dynamic load' on supports occurs during",
+      "stem": "For charging and stemming shot-holes, the tools used by the shot-firer shall be:",
       "options": [
-        "Applicable in limited scenarios",
-        "Normal operations",
-        "Blasting, roof falls, or seismic events",
-        "Control dust emissions"
+        "Wooden implements and a scraper of brass or wood",
+        "Iron rods and steel scrapers",
+        "Steel implements only",
+        "PVC implements"
       ],
-      "answer": 2,
-      "solution": "Dynamic loads occur during blasting, roof falls, or seismic events."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 197: only wooden implements and a brass or wooden scraper are used, to avoid sparks."
     },
     {
       "id": 51,
@@ -1067,20 +1067,20 @@
     {
       "id": 53,
       "subject": "Technical (Mining)",
-      "topic": "Opencast Working",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A 'dragline bench' is typically",
+      "stem": "Before firing in belowground workings, the shot-firer shall test for inflammable gas within a radius of at least:",
       "options": [
-        "Higher than shovel bench",
-        "Not specified",
-        "Lower than shovel bench",
-        "Same as shovel bench"
+        "18 m",
+        "10 m",
+        "5 m",
+        "30 m"
       ],
       "answer": 0,
-      "solution": "Dragline benches are typically higher due to equipment reach."
+      "solution": "CMR 2017 Reg 198: the shot-firer tests the strata and the surrounding area for gas within a radius of 18 m before firing."
     },
     {
       "id": 54,
@@ -1093,9 +1093,9 @@
       "stem": "A hydraulic excavator is preferred over a rope shovel for",
       "options": [
         "Greater flexibility, mobility, and precision in digging",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "No reason"
+        "Working on very high benches without support",
+        "Higher breakout force in hard rock",
+        "Simpler operation on benches above 15 m"
       ],
       "answer": 0,
       "solution": "Greater flexibility, mobility, and precision in digging."
@@ -1103,20 +1103,20 @@
     {
       "id": 55,
       "subject": "Technical (Mining)",
-      "topic": "Support",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'pillar design' in coal mines considers",
+      "difficulty": "medium",
+      "stem": "Under CMR 2017, a shot-firer shall not be employed:",
       "options": [
-        "Quarrying of granite",
-        "Mining of bauxite",
-        "Extraction of iron ore",
-        "Depth, strength, and safety factor requirements"
+        "Without an assistant",
+        "On any work which makes his earnings depend on the amount of coal produced",
+        "On night shifts",
+        "In more than one section"
       ],
-      "answer": 3,
-      "solution": "Pillar design considers depth, strength, and safety factors."
+      "answer": 1,
+      "solution": "CMR 2017 Reg 190: a shot-firer shall not be employed on work dependent on the quantity of coal/mineral produced, to avoid haste."
     },
     {
       "id": 56,
@@ -1128,10 +1128,10 @@
       "difficulty": "medium",
       "stem": "A 'fire stopping' must be built using",
       "options": [
-        "Applicable in limited scenarios",
+        "Coal dust and timber",
         "Fire-resistant materials as prescribed by regulations",
-        "Any material",
-        "Works under ideal conditions only"
+        "Ordinary paper boards",
+        "Coal and sand mixture only"
       ],
       "answer": 1,
       "solution": "Fire-resistant materials as prescribed by regulations."
@@ -1148,8 +1148,8 @@
       "options": [
         "Air pressure",
         "Groundwater pressure or water table level",
-        "Applicable in limited scenarios",
-        "Power measurement only"
+        "Wind velocity",
+        "Gas concentration"
       ],
       "answer": 1,
       "solution": "Measures groundwater pressure or water table level."
@@ -1182,10 +1182,10 @@
       "difficulty": "hard",
       "stem": "The 'emergency oxygen supply' for mine rescue must be",
       "options": [
-        "Applicable in limited scenarios",
+        "Only for the team leader",
         "Sufficient for at least 2 hours of operation",
-        "Works under ideal conditions only",
-        "Optional"
+        "Sufficient for 30 minutes only",
+        "Stored at the surface only"
       ],
       "answer": 1,
       "solution": "Sufficient for at least 2 hours of operation."
@@ -1201,8 +1201,8 @@
       "stem": "A 'fire extinguisher inspection' must be done",
       "options": [
         "Monthly to ensure it is in working order",
-        "Applicable in limited scenarios",
-        "Never",
+        "Only when the fire station is inspected",
+        "Once every five years",
         "Once a year"
       ],
       "answer": 0,
@@ -1218,9 +1218,9 @@
       "difficulty": "medium",
       "stem": "The 'sand stowing' method uses",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Sand alone without water",
+        "Only coal dust",
+        "Only shales and clays",
         "Sand mixed with water to fill the goaf"
       ],
       "answer": 3,
@@ -1255,9 +1255,9 @@
       "stem": "The man riding system must have a",
       "options": [
         "Emergency braking system",
-        "Applicable in limited scenarios",
-        "Lock system only",
-        "No special device"
+        "A decorative headlight",
+        "A lock system only",
+        "A warning bell only"
       ],
       "answer": 0,
       "solution": "An emergency braking system is required."
@@ -1272,9 +1272,9 @@
       "difficulty": "hard",
       "stem": "Bench stability depends on",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Only the height of the bench",
+        "Only the type of excavator",
+        "Only the width of the haul road",
         "Joint orientation, groundwater, weathering, blast damage"
       ],
       "answer": 3,
@@ -1326,10 +1326,10 @@
       "difficulty": "medium",
       "stem": "The 'water to solids ratio' in hydraulic stowing affects",
       "options": [
-        "Nothing significant",
-        "Applicable in limited scenarios",
+        "Only the colour of the slurry",
+        "Only the height of the dam",
         "Pipeline wear, transport efficiency, and settling",
-        "Works under ideal conditions only"
+        "Only the type of pump"
       ],
       "answer": 2,
       "solution": "Water/solids ratio affects wear, efficiency, and settling."
@@ -1344,9 +1344,9 @@
       "difficulty": "easy",
       "stem": "The 'accuracy' of a report is important because",
       "options": [
-        "Used in preliminary drafts only",
-        "It is not",
-        "Omit references",
+        "Reports are only for record",
+        "Details do not matter in reports",
+        "Only the summary is read",
         "Incorrect information can lead to wrong decisions and safety hazards"
       ],
       "answer": 3,
@@ -1362,10 +1362,10 @@
       "difficulty": "medium",
       "stem": "The 'ventilation' of a drift during driving requires",
       "options": [
-        "Applicable in limited scenarios",
+        "Only natural ventilation",
         "Forcing or exhausting system to provide fresh air to the face",
-        "No special arrangement",
-        "Provide fresh air to working faces"
+        "Ventilation only after the drift is completed",
+        "The same quantity of air as at the shaft bottom"
       ],
       "answer": 1,
       "solution": "Forcing or exhausting system."
@@ -1380,10 +1380,10 @@
       "difficulty": "easy",
       "stem": "The 'friction prop' (e.g., Goodman prop) works by",
       "options": [
-        "Fixed length",
+        "Hydraulic fluid pressure",
         "Friction between inner and outer tubes under load",
-        "Applicable in limited scenarios",
-        "Not adjustable"
+        "Compression of timber blocks",
+        "Expansion of steel wedges"
       ],
       "answer": 1,
       "solution": "Friction props work by friction between nested tubes under load."
@@ -1409,20 +1409,20 @@
     {
       "id": 72,
       "subject": "Technical (Mining)",
-      "topic": "Method of Work",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'gravimetric dust sampler' measures",
+      "stem": "The maximum number of shots a shot-firer may charge and fire in a shift in a gassy seam (first degree) belowground is:",
       "options": [
-        "Dust particle size only",
-        "Dust color",
-        "Dust temperature",
-        "Mass concentration of airborne dust"
+        "40",
+        "80",
+        "100",
+        "60"
       ],
-      "answer": 3,
-      "solution": "Gravimetric samplers measure mass concentration of airborne dust."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 195: 40 shots in gassy seams belowground; 80 shots in other belowground and 100 in opencast workings per shift."
     },
     {
       "id": 73,
@@ -1471,9 +1471,9 @@
       "stem": "Every mine must conduct regular",
       "options": [
         "Safety meetings and toolbox talks",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Production reviews"
+        "Only the quarterly production meetings",
+        "Only statutory inspections",
+        "Only surface staff meetings"
       ],
       "answer": 0,
       "solution": "Regular safety meetings and toolbox talks are required."
@@ -1525,9 +1525,9 @@
       "stem": "The 'depillaring' involves extraction of",
       "options": [
         "Pillars left during the development phase",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "The coal left in the floor",
+        "The roof coal in the main roadway",
+        "The barrier pillars only"
       ],
       "answer": 0,
       "solution": "Extraction of pillars from development phase."
@@ -1542,10 +1542,10 @@
       "difficulty": "hard",
       "stem": "A 'rescue plan' for an emergency must be",
       "options": [
-        "Not needed",
-        "Applicable in limited scenarios",
+        "Kept confidential",
+        "Revised once every ten years",
         "Prepared, communicated, and known to all rescue team members",
-        "Works under ideal conditions only"
+        "Displayed at the surface only"
       ],
       "answer": 2,
       "solution": "Prepared, communicated, and known to all team members."
@@ -1812,9 +1812,9 @@
       "difficulty": "medium",
       "stem": "The 'electrostatic precipitator' (ESP) in power plants removes",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Sulfur dioxide from flue gases",
+        "Oxides of nitrogen from flue gases",
+        "Carbon dioxide from flue gases",
         "Particulate matter from flue gases"
       ],
       "answer": 3,
@@ -1830,10 +1830,10 @@
       "difficulty": "easy",
       "stem": "The 'biodiversity management plan' for mining includes",
       "options": [
-        "Specific to metal mines only",
+        "Only the prevention of land subsidence",
         "Conservation of local flora and fauna",
-        "Extraction of iron ore",
-        "Nothing specific"
+        "Only the management of overburden dumps",
+        "Only the control of dust on haul roads"
       ],
       "answer": 1,
       "solution": "Conservation of local flora and fauna."
@@ -1920,67 +1920,13 @@
       "difficulty": "easy",
       "stem": "The 'CSR (Corporate Social Responsibility)' activities of CIL are funded from",
       "options": [
-        "Applicable in limited scenarios",
+        "The Consolidated Fund of India",
         "2% of average net profit as per Companies Act",
-        "Nothing specific",
-        "Works under ideal conditions only"
+        "Donations from the public",
+        "Grants from foreign countries"
       ],
       "answer": 1,
       "solution": "2% of average net profit."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Divide ₹1200 among A, B, C in the ratio 3:5:4.",
-      "options": [
-        "₹300, ₹450, ₹450",
-        "₹350, ₹450, ₹400",
-        "₹300, ₹500, ₹400",
-        "₹250, ₹500, ₹450"
-      ],
-      "answer": 2,
-      "solution": "Total parts = 12. A = 3/12 × 1200 = 300. B = 5/12 × 1200 = 500. C = 4/12 × 1200 = 400"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "What is the angle between the hands of a clock at 3:30?",
-      "options": [
-        "75°",
-        "90°",
-        "85°",
-        "80°"
-      ],
-      "answer": 0,
-      "solution": "Hour hand at 3:30 = 3×30 + 30×0.5 = 105°. Minute hand = 30×6 = 180°. Angle = |180 - 105| = 75°"
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If the day before yesterday was Thursday, what day will it be three days after tomorrow?",
-      "options": [
-        "Tuesday",
-        "Monday",
-        "Sunday",
-        "Wednesday"
-      ],
-      "answer": 1,
-      "solution": "Day before yesterday = Thursday → Today = Saturday. Tomorrow = Sunday. 3 days after tomorrow = Wednesday. Wait: today = Saturday. Tomorrow = Sunday. 3 days after Sunday = Wednesday. But Monday is listed first... Let me recalculate: If day before yesterday is Thursday, today is Saturday. Tomorrow is Sunday. Three days after tomorrow: Sunday + 3 = Wednesday."
     }
   ],
   "seed": 38876195

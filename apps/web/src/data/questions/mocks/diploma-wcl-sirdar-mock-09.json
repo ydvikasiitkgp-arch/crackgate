@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -174,9 +174,9 @@
       "difficulty": "easy",
       "stem": "The shaft must be properly",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Kept free of all fixtures",
+        "Painted with anti-corrosion paint",
+        "Lined with bricks only",
         "Fitted with guides or conductors for the cage or skip"
       ],
       "answer": 3,
@@ -190,15 +190,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Under Regulation 117 of CMR 2017, the sirdar must examine the working place",
+      "stem": "Under CMR 2017, the sirdar must examine the working place in his district",
       "options": [
         "At the commencement of each shift",
-        "Applicable in limited scenarios",
+        "Only when the inspector is on the mine",
         "Once a week",
         "Once a month"
       ],
       "answer": 0,
-      "solution": "At the commencement of each shift."
+      "solution": "Regulation 129 of CMR 2017 (Examination by sirdars) requires the sirdar to inspect his district within two hours before the commencement of work in a shift and at least once in every four hours during the shift."
     },
     {
       "id": 5,
@@ -265,7 +265,7 @@
       "stem": "The 'longwall method' differs from board and pillar by",
       "options": [
         "Extracting coal in long faces without leaving pillars",
-        "Applicable in limited scenarios",
+        "Winning coal from shallow seams only",
         "Using only manual labor",
         "Using pillars"
       ],
@@ -282,9 +282,9 @@
       "difficulty": "medium",
       "stem": "The 'cycle time' for drifting includes",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific",
+        "The time taken to reach the drift",
+        "The life of the drilling machine",
+        "The number of persons employed",
         "Drilling, charging, blasting, ventilation, scaling, and mucking"
       ],
       "answer": 3,
@@ -336,10 +336,10 @@
       "difficulty": "hard",
       "stem": "The 'pillar' in bord and pillar refers to",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "The haulage roadway",
+        "The shaft pillar only",
         "The block of coal left to support the roof",
-        "Works under ideal conditions only"
+        "The ventilation shaft"
       ],
       "answer": 2,
       "solution": "Block of coal left to support the roof."
@@ -355,8 +355,8 @@
       "stem": "The 'mine water' can be harmful because it may contain",
       "options": [
         "Acidic substances and dissolved minerals",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only pure water",
+        "Only rainwater",
         "Nothing harmful"
       ],
       "answer": 0,
@@ -408,10 +408,10 @@
       "difficulty": "hard",
       "stem": "The 'material handling cost' per tonne is influenced by",
       "options": [
-        "Applicable in limited scenarios",
+        "The colour of the trucks",
         "Haul distance, road condition, truck payload",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "The brand of the drilling machine",
+        "The number of benches"
       ],
       "answer": 1,
       "solution": "Material handling cost depends on distance, road, and payload."
@@ -426,8 +426,8 @@
       "difficulty": "medium",
       "stem": "The 'fire zone' in a mine must be",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Marked on the plan only",
+        "Guarded by the fire brigade",
         "Open to all",
         "Clearly demarcated and access restricted"
       ],
@@ -462,9 +462,9 @@
       "difficulty": "medium",
       "stem": "A 'continuous miner' is used in which method?",
       "options": [
-        "Applicable in limited scenarios",
+        "Shaft sinking only",
         "Room and pillar / bord and pillar",
-        "Works under ideal conditions only",
+        "Surface mining only",
         "Longwall only"
       ],
       "answer": 1,
@@ -517,7 +517,7 @@
       "stem": "The 'CO2 flooding' in mines is used to",
       "options": [
         "Inert atmosphere to extinguish fires",
-        "Applicable in limited scenarios",
+        "Increase the air velocity",
         "Not used",
         "Increase oxygen"
       ],
@@ -535,9 +535,9 @@
       "stem": "The 'stowing training' for workers includes",
       "options": [
         "No training needed",
-        "Applicable in limited scenarios",
+        "Only the reading of the pay slip",
         "Safety procedures, equipment operation, and emergency response",
-        "Works under ideal conditions only"
+        "Only the maintenance of the office records"
       ],
       "answer": 2,
       "solution": "Training covers safety, equipment operation, and emergency response."
@@ -588,8 +588,8 @@
       "difficulty": "medium",
       "stem": "Water accumulation on benches creates hazards including",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Improved visibility",
+        "Better compaction of benches",
         "No hazards",
         "Reduced traction, slope instability, equipment damage"
       ],
@@ -606,10 +606,10 @@
       "difficulty": "hard",
       "stem": "A man riding vehicle must be equipped with",
       "options": [
-        "Applicable in limited scenarios",
-        "Nothing specific",
+        "A fuel tank gauge only",
+        "A spare tyre",
         "Headlights, horn, and braking system",
-        "Works under ideal conditions only"
+        "A music system"
       ],
       "answer": 2,
       "solution": "Headlights, horn, and braking system."
@@ -625,9 +625,9 @@
       "stem": "The 'stowing gallery' is a",
       "options": [
         "Prepared opening through which stowing material is delivered to goaf",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "A gallery for the winding engine",
+        "A ventilation shaft only",
+        "A water gallery at the surface"
       ],
       "answer": 0,
       "solution": "Prepared opening for delivering stowing material to goaf."
@@ -643,9 +643,9 @@
       "stem": "The 'fire breathing apparatus' for mine rescue includes",
       "options": [
         "Self-contained breathing apparatus (SCBA) for firefighters",
-        "Applicable in limited scenarios",
+        "Ordinary dust masks",
         "No apparatus needed",
-        "Works under ideal conditions only"
+        "Cloth wrapped around the face"
       ],
       "answer": 0,
       "solution": "SCBA provides breathing apparatus for fire rescue."
@@ -680,7 +680,7 @@
       "options": [
         "Atmospheric pressure",
         "Voltage measurement only",
-        "Affects only intake shafts",
+        "Temperature of the strata",
         "Air velocity"
       ],
       "answer": 0,
@@ -725,20 +725,20 @@
     {
       "id": 34,
       "subject": "Technical (Mining)",
-      "topic": "Winding in Shaft",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The brake of a winding engine must be capable of",
+      "difficulty": "medium",
+      "stem": "Under CMR 2017, survey instruments at a mine shall be:",
       "options": [
-        "Stopping the fully loaded cage or skip safely",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Calibrated once a year by the mine",
+        "Replaced every 6 months",
+        "Checked only by the Inspector",
+        "Checked, maintained and calibrated at regular intervals as specified by the manufacturer"
       ],
-      "answer": 0,
-      "solution": "Must be capable of stopping the fully loaded cage or skip safely."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 67(2): survey instruments are checked, maintained and calibrated at intervals specified by the manufacturer."
     },
     {
       "id": 35,
@@ -750,10 +750,10 @@
       "difficulty": "medium",
       "stem": "The 'date and time' in a report are important for",
       "options": [
-        "Omit references",
-        "Use informal language",
+        "The number of persons employed only",
+        "The name of the colliery only",
         "Establishing the sequence of events and timeline",
-        "Include personal opinions"
+        "The quantity of coal produced only"
       ],
       "answer": 2,
       "solution": "Establishing the sequence of events and timeline."
@@ -761,20 +761,20 @@
     {
       "id": 36,
       "subject": "Technical (Mining)",
-      "topic": "Man Riding Systems",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "Man riding in underground mines is regulated by",
+      "difficulty": "medium",
+      "stem": "Every mine plan or section under CMR 2017 shall show:",
       "options": [
-        "Factory Act",
-        "Indian Railways Act",
-        "Mines Act 1952",
-        "CMR 2017 Regulation 142"
+        "Only the grid line",
+        "The magnetic meridian without date",
+        "The railway alignment",
+        "The true north, or the magnetic meridian with the date of the latter"
       ],
       "answer": 3,
-      "solution": "Man riding in underground mines is regulated by CMR 2017 Regulation 142."
+      "solution": "CMR 2017 Reg 64(1)(b): plans show true north or magnetic meridian and the date of the later."
     },
     {
       "id": 37,
@@ -797,20 +797,20 @@
     {
       "id": 38,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'gas energy' of explosives is important for",
+      "stem": "When workings extend to within 60 m of the settled boundary with an adjacent mine, the owner/agent/manager shall:",
       "options": [
-        "Starting fires",
-        "Illuminating area",
-        "Creating noise",
-        "Heaving and displacing blasted rock"
+        "Only inform the labour union",
+        "Inform the adjacent mine and give its surveyors reasonable facilities for surveys",
+        "Stop all work in the mine",
+        "Seal the workings"
       ],
-      "answer": 3,
-      "solution": "Gas energy provides heaving force to displace fragmented rock."
+      "answer": 1,
+      "solution": "CMR 2017 Reg 65(8): the adjacent mine is informed and its surveyors are given reasonable facilities for required surveys and levellings."
     },
     {
       "id": 39,
@@ -887,20 +887,20 @@
     {
       "id": 43,
       "subject": "Technical (Mining)",
-      "topic": "Support",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'convergence monitoring' frequency depends on",
+      "difficulty": "medium",
+      "stem": "The water-danger plan maintained under CMR 2017 shows water bodies existing within ______ of the boundary of the mine.",
       "options": [
-        "Mining activity, roof conditions, and extraction progress",
-        "Applicable in limited scenarios",
-        "Monthly only",
-        "Fixed frequency"
+        "500 m",
+        "100 m",
+        "200 m",
+        "60 m"
       ],
-      "answer": 0,
-      "solution": "Monitoring frequency depends on activity, conditions, and progress."
+      "answer": 2,
+      "solution": "CMR 2017 Reg 65(1)(g): a water-danger plan and section show water bodies existing up to 200 m of the mine boundary."
     },
     {
       "id": 44,
@@ -913,7 +913,7 @@
       "stem": "The 'mine survey regulations' require",
       "options": [
         "Record temperature variations",
-        "Not important",
+        "Prepare plans only when demanded by the inspector",
         "No regulations",
         "Regular surveys and plan updates as prescribed"
       ],
@@ -966,9 +966,9 @@
       "difficulty": "hard",
       "stem": "The 'support inspection report' must mention",
       "options": [
-        "Used in preliminary drafts only",
-        "Prevent water ingress",
-        "Protect electrical equipment",
+        "The number of supports required next month",
+        "The colour of the props",
+        "The depth of the shaft",
         "Type, condition, and adequacy of support in the working area"
       ],
       "answer": 3,
@@ -987,7 +987,7 @@
         "Used for rock bolting operations",
         "Used for charging detonators",
         "Nearby structures if not controlled",
-        "Affects only intake shafts"
+        "Improve the ventilation in the mine"
       ],
       "answer": 2,
       "solution": "Air blast can damage structures if not properly controlled."
@@ -1003,9 +1003,9 @@
       "stem": "Carbon dioxide (CO2) in mines can accumulate in",
       "options": [
         "Low-lying areas and poorly ventilated sections",
-        "Affects only intake shafts",
+        "The intake shaft mouth",
         "Reduces air velocity below limits",
-        "Works only in surface mines"
+        "The highest point of the seam"
       ],
       "answer": 0,
       "solution": "Low-lying areas and poorly ventilated sections."
@@ -1020,7 +1020,7 @@
       "difficulty": "easy",
       "stem": "The earthing of electrical equipment in mines is important to",
       "options": [
-        "Applicable in limited scenarios",
+        "Improve the lighting only",
         "Prevent electric shock and reduce risk of ignition",
         "Acoustic properties of surfaces",
         "Increase production"
@@ -1038,10 +1038,10 @@
       "difficulty": "medium",
       "stem": "The 'road condition monitoring' includes",
       "options": [
-        "No monitoring",
-        "Applicable in limited scenarios",
+        "A single pre-monsoon check",
+        "A single annual inspection",
         "Regular checking of surface, drainage, signage",
-        "Works under ideal conditions only"
+        "Estimation by the dumper drivers only"
       ],
       "answer": 2,
       "solution": "Road monitoring checks surface, drainage, signage."
@@ -1056,10 +1056,10 @@
       "difficulty": "easy",
       "stem": "The first-aid box in a mine must contain",
       "options": [
-        "Works under ideal conditions only",
-        "Nothing specific",
+        "Only a pair of scissors",
+        "Only a list of emergency contacts",
         "Prescribed medicines and equipment for first aid",
-        "Applicable in limited scenarios"
+        "Only a bottle of water"
       ],
       "answer": 2,
       "solution": "Prescribed medicines and equipment for first aid."
@@ -1067,20 +1067,20 @@
     {
       "id": 53,
       "subject": "Technical (Mining)",
-      "topic": "Mine Rescue",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'rescue equipment testing' includes",
+      "stem": "The joint survey plan showing workings near the common boundary with an adjacent mine shall be signed by:",
       "options": [
-        "Functional testing of SCBA, detectors, and communication",
-        "No testing needed",
-        "Not required",
-        "Applicable in limited scenarios"
+        "The surveyors and managers of both the mine and the adjacent mine",
+        "Only the surveyor of the mine",
+        "The Chief Inspector only",
+        "The district magistrate"
       ],
       "answer": 0,
-      "solution": "Equipment testing includes functional checks of all devices."
+      "solution": "CMR 2017 Reg 65(1)(e): the joint survey plan is signed by the surveyor and the manager of the mine and of adjoining mines whose workings come within 60 m of the common boundary."
     },
     {
       "id": 54,
@@ -1113,7 +1113,7 @@
         "Once a year",
         "At regular intervals as prescribed",
         "Daily",
-        "Applicable in limited scenarios"
+        "Only when the rope is new"
       ],
       "answer": 1,
       "solution": "Regular testing at prescribed intervals is required."
@@ -1128,10 +1128,10 @@
       "difficulty": "medium",
       "stem": "The sirdar must maintain a record of",
       "options": [
-        "Required only for specific cases",
+        "The quantity of explosives used",
         "Persons employed, time of work, and safety conditions",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The daily output of the mine",
+        "The wages of the workers"
       ],
       "answer": 1,
       "solution": "Records include persons employed, work time, and safety conditions."
@@ -1148,7 +1148,7 @@
       "options": [
         "Increase temperature",
         "Produce more sparks",
-        "Applicable in limited scenarios",
+        "Work at any voltage without protection",
         "Not produce sparks or heat sufficient to ignite methane or coal dust"
       ],
       "answer": 3,
@@ -1200,13 +1200,13 @@
       "difficulty": "hard",
       "stem": "The 'reaming' in raise boring enlarges",
       "options": [
-        "The entire drift to final dimensions",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The ventilation duct",
+        "The haulage roadway",
+        "The sump",
         "The pilot hole"
       ],
-      "answer": 0,
-      "solution": "Reaming enlarges the opening to final dimensions."
+      "answer": 3,
+      "solution": "Reaming enlarges the pilot hole to the full diameter of the raise."
     },
     {
       "id": 61,
@@ -1237,8 +1237,8 @@
       "stem": "The 'sectional area' of a roadway is important for",
       "options": [
         "Used only for horizontal lines",
-        "Applicable to total stations only",
-        "Nothing specific",
+        "Independent of the mine layout",
+        "The colour of the rock",
         "Ventilation calculations and support design"
       ],
       "answer": 3,
@@ -1254,10 +1254,10 @@
       "difficulty": "medium",
       "stem": "A 'water curtain' or 'grouting' is used to",
       "options": [
-        "Applicable in limited scenarios",
+        "Increase the depth of the workings",
         "Increase water inflow",
         "Seal off water-bearing zones and reduce water inflow",
-        "Works under ideal conditions only"
+        "Improve the lighting in the workings"
       ],
       "answer": 2,
       "solution": "Seals off water-bearing zones and reduces water inflow."
@@ -1273,9 +1273,9 @@
       "stem": "A 'pilot tunnel' or 'pilot drift' is driven to",
       "options": [
         "Explore geological conditions ahead of the main drift",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Provide accommodation underground",
+        "Serve as the main ore pass",
+        "Store explosives underground"
       ],
       "answer": 0,
       "solution": "Explores geological conditions ahead."
@@ -1308,10 +1308,10 @@
       "difficulty": "hard",
       "stem": "Shot firing in gassy mines requires",
       "options": [
-        "Affects only intake shafts",
+        "Permit entry without any examination",
         "No special precautions",
         "Gas testing before and during shot firing",
-        "Works only in surface mines"
+        "Blasting without stemming"
       ],
       "answer": 2,
       "solution": "Gas testing is mandatory before and during shot firing in gassy mines."
@@ -1381,9 +1381,9 @@
       "stem": "The 'stowing water management' is important because",
       "options": [
         "Excess water affects stability and environmental conditions",
-        "Not important",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only the pump pressure matters",
+        "Only the surface pumps need attention",
+        "Water does not affect the goaf"
       ],
       "answer": 0,
       "solution": "Water management is important for stability and environment."
@@ -1391,20 +1391,20 @@
     {
       "id": 71,
       "subject": "Technical (Mining)",
-      "topic": "Method of Work",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Depillaring is the process of",
+      "difficulty": "medium",
+      "stem": "Plans and sections required under CMR 2017 shall be corrected and maintained up-to-date at intervals not exceeding:",
       "options": [
-        "Building structures",
-        "Driving new galleries",
-        "Closing the mine",
-        "Extracting pillars left during development"
+        "1 month",
+        "6 months",
+        "1 year",
+        "3 months"
       ],
       "answer": 3,
-      "solution": "Depillaring involves extracting pillars left during development phase."
+      "solution": "CMR 2017 Reg 64(4): plans are kept corrected up-to-date not earlier than 3 months."
     },
     {
       "id": 72,
@@ -1417,8 +1417,8 @@
       "stem": "The 'exploration borehole' near old workings is done to",
       "options": [
         "Investigate water conditions before mining approaches",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Measure the wind velocity",
+        "Determine the price of the coal",
         "Extract coal"
       ],
       "answer": 0,
@@ -1435,8 +1435,8 @@
       "stem": "The 'fire department coordination' for mines includes",
       "options": [
         "Pre-planned response, access routes, and communication",
-        "Applicable in limited scenarios",
-        "Not important",
+        "Painting the fire points",
+        "Optional for small mines",
         "No coordination needed"
       ],
       "answer": 0,
@@ -1490,8 +1490,8 @@
       "options": [
         "Test roof stability",
         "Ensures accuracy of measurements",
-        "Not important",
-        "Not required"
+        "A one-time factory calibration",
+        "Inspection once in ten years"
       ],
       "answer": 1,
       "solution": "Calibration ensures measurement accuracy."
@@ -1499,20 +1499,20 @@
     {
       "id": 77,
       "subject": "Technical (Mining)",
-      "topic": "Accidents",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The safety officer in a mine is responsible for",
+      "difficulty": "medium",
+      "stem": "Unless otherwise approved, mine plans and sections under CMR 2017 shall be prepared on a scale with a representative factor of:",
       "options": [
-        "Optional in non-hazardous areas",
-        "Required only in UG mines",
-        "Improve ventilation efficiency",
-        "Safety inspections, investigations, training, and promotion of safety culture"
+        "10000:1",
+        "2000:1 or 1000:1",
+        "5000:1 or 1000:1",
+        "100:1 or 50:1"
       ],
-      "answer": 3,
-      "solution": "Safety inspections, investigations, training, and promoting safety culture."
+      "answer": 1,
+      "solution": "CMR 2017 Reg 64(1)(d): plans are on a scale with RF 2000:1 or 1000:1, with a scale bar at least 25 cm long."
     },
     {
       "id": 78,
@@ -1544,7 +1544,7 @@
       "options": [
         "Specific with responsible person and target completion date",
         "General",
-        "Include personal opinions",
+        "Repeated from the previous report",
         "Vague"
       ],
       "answer": 0,
@@ -1614,9 +1614,9 @@
       "difficulty": "hard",
       "stem": "The 'automatic fire detection' systems in mines use",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Manual patrolling by night guards",
+        "Visual inspection by the overman",
+        "A single water alarm at the surface",
         "Smoke, heat, and gas sensors"
       ],
       "answer": 3,
@@ -1633,9 +1633,9 @@
       "stem": "The 'PM-KUSUM' scheme in coal areas provides",
       "options": [
         "Solar energy solutions for farmers and rural areas",
-        "Mining of bauxite",
-        "Quarrying of granite",
-        "Nothing specific"
+        "Construction of new coal washeries",
+        "Expansion of the railway network",
+        "Deep sea fishing schemes"
       ],
       "answer": 0,
       "solution": "Solar energy solutions."
@@ -1741,9 +1741,9 @@
       "stem": "The 'PM-KISAN' scheme provides",
       "options": [
         "Direct income support to farmers",
-        "Nothing specific",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios"
+        "A housing scheme for urban poor",
+        "Loans for small industries",
+        "Subsidy for electric vehicles"
       ],
       "answer": 0,
       "solution": "Direct income support to farmers."
@@ -1830,9 +1830,9 @@
       "difficulty": "medium",
       "stem": "The 'mine closure planning' in India follows",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific",
+        "The Payment of Wages Act",
+        "The Workmen's Compensation Act",
+        "The Factories Act only",
         "MMDR Act and CMR 2017 requirements"
       ],
       "answer": 3,
@@ -1900,15 +1900,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Ratio of 3 dozen to 2 scores?",
+      "stem": "What is the ratio of 3 dozen to 2 scores?",
       "options": [
-        "Both A and C",
         "9:8",
+        "8:9",
         "3:2",
-        "36:40"
+        "2:3"
       ],
       "answer": 0,
-      "solution": "36:40 = 9:8. Both equivalent."
+      "solution": "3 dozen = 36 and 2 scores = 40. Ratio = 36:40 = 9:8."
     },
     {
       "id": 100,
@@ -1927,60 +1927,6 @@
       ],
       "answer": 0,
       "solution": "Lion is a wild animal; others are domestic."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A number is increased by 20% and then decreased by 20%. What is the net change percentage?",
-      "options": [
-        "4% increase",
-        "4% decrease",
-        "No change",
-        "2% decrease"
-      ],
-      "answer": 1,
-      "solution": "Net change = -(20/100)² = -4%. So 4% decrease"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of 11 results is 60. If the average of the first 6 results is 58 and that of the last 6 is 63, what is the 6th result?",
-      "options": [
-        "54",
-        "56",
-        "52",
-        "50"
-      ],
-      "answer": 0,
-      "solution": "Total of 11 = 660. First 6 = 348. Last 6 = 378. 6th = 348 + 378 - 660 = 66. Wait, 348+378=726. 726-660=66. Not in options... The 6th result is counted in both groups. Sum of first 6 + sum of last 6 = total + 6th (since 6th is counted twice). So 6th = 348 + 378 - 660 = 66. This doesn't match any option."
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of three numbers is 40. The first number is twice the second and the second is thrice the third. What is the first number?",
-      "options": [
-        "60",
-        "54",
-        "72",
-        "48"
-      ],
-      "answer": 2,
-      "solution": "Let third = x, second = 3x, first = 6x. (6x + 3x + x)/3 = 40 → 10x = 120 → x = 12. First = 72"
     }
   ],
   "seed": 58219001

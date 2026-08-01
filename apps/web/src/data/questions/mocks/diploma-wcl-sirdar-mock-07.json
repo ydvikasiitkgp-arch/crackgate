@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -193,8 +193,8 @@
       "stem": "An 'isolation stopping' in case of fire is built to",
       "options": [
         "Allow ventilation",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Increase the air supply",
+        "Cool the fire area",
         "Cut off air supply to the fire area"
       ],
       "answer": 3,
@@ -221,20 +221,20 @@
     {
       "id": 6,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Electronic detonators have built-in",
+      "stem": "As per the Mines Act 1952, women may be employed aboveground only between:",
       "options": [
-        "Requires special permit",
-        "Used for roof bolting only",
-        "Timing circuit, power source, and communication module",
-        "Applied after stemming only"
+        "24 hours",
+        "6 a.m. and 7 p.m.",
+        "5 a.m. and 9 p.m.",
+        "8 a.m. and 6 p.m."
       ],
-      "answer": 2,
-      "solution": "Electronic detonators have timing circuits, power sources, and communication modules."
+      "answer": 1,
+      "solution": "Mines Act 1952, s.46: women shall not be employed belowground, and aboveground employment is restricted between 6 a.m. and 7 p.m."
     },
     {
       "id": 7,
@@ -248,8 +248,8 @@
       "options": [
         "No special arrangement",
         "Forcing or exhausting air directly to the face",
-        "Provide fresh air to working faces",
-        "Affects only intake shafts"
+        "Ventilation of the goaf only",
+        "A single fan at the surface"
       ],
       "answer": 1,
       "solution": "Forcing or exhausting air directly to the face."
@@ -275,20 +275,20 @@
     {
       "id": 9,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'distance of influence' in blasting refers to",
+      "stem": "A first-aid room is required at a mine where the number of persons employed exceeds:",
       "options": [
-        "Range of blast effects (vibration, air blast, flyrock)",
-        "Borehole length",
-        "Distance to office",
-        "Worker distance"
+        "150",
+        "100",
+        "250",
+        "50"
       ],
       "answer": 0,
-      "solution": "Distance of influence is the zone where blast effects are significant."
+      "solution": "Mines Act 1952, s.21: a first-aid room is required where more than 150 persons are employed."
     },
     {
       "id": 10,
@@ -311,20 +311,20 @@
     {
       "id": 11,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'explosive factor' represents",
+      "difficulty": "medium",
+      "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
-        "Safety factor",
-        "Cost factor",
-        "Kg of explosive per cubic meter or tonne of rock",
-        "Time factor"
+        "One month of refresher training",
+        "No training",
+        "Initial vocational training in the prescribed subjects",
+        "Only a medical test"
       ],
       "answer": 2,
-      "solution": "Explosive factor is explosive weight per unit rock volume or mass."
+      "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
     },
     {
       "id": 12,
@@ -372,10 +372,10 @@
       "difficulty": "medium",
       "stem": "A man riding system must be equipped with a device to prevent",
       "options": [
-        "Applicable in limited scenarios",
+        "Excessive speed during normal operation",
         "Rollback in case of power failure or rope breakage",
-        "Noise",
-        "Dust"
+        "Overloading the motor",
+        "Dust accumulation on the track"
       ],
       "answer": 1,
       "solution": "Rollback prevention in case of failure is required."
@@ -391,9 +391,9 @@
       "stem": "The 'first-aid training' for mine rescue team must cover",
       "options": [
         "Treatment of injuries, burns, gas poisoning, and mine-specific emergencies",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Only the bandaging of wounds",
+        "Only artificial respiration",
+        "Only the use of medicines"
       ],
       "answer": 0,
       "solution": "Injuries, burns, gas poisoning, and mine-specific emergencies."
@@ -428,8 +428,8 @@
       "options": [
         "Specialized training in casualty handling and transport",
         "No special training",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only physical strength",
+        "No knowledge of gases"
       ],
       "answer": 0,
       "solution": "Casualty extraction requires specialized handling training."
@@ -444,10 +444,10 @@
       "difficulty": "hard",
       "stem": "The 'subsidence monitoring' above a stowed area uses",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Only visual estimation",
+        "Only boreholes",
         "Surveying instruments and surface markers",
-        "Works under ideal conditions only"
+        "Only aerial photographs"
       ],
       "answer": 2,
       "solution": "Surveying instruments and surface markers."
@@ -480,10 +480,10 @@
       "difficulty": "medium",
       "stem": "A scraper conveyor is used to",
       "options": [
-        "Applicable in limited scenarios",
+        "Transport men in the mine",
         "Transport coal along the face",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Load coal into railway wagons",
+        "Hoist coal up the shaft"
       ],
       "answer": 1,
       "solution": "Transports coal along the face."
@@ -500,8 +500,8 @@
       "options": [
         "No precaution",
         "Boreholes and risk assessment before approaching",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios"
+        "Blasting the barrier",
+        "Removing the water dams"
       ],
       "answer": 1,
       "solution": "Boreholes and risk assessment before approaching."
@@ -552,10 +552,10 @@
       "difficulty": "easy",
       "stem": "A hydraulic prop is used for",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Permanent support for the main road",
+        "Permanent support for the shaft",
         "Providing temporary support at the face",
-        "Works under ideal conditions only"
+        "Support for the surface buildings"
       ],
       "answer": 2,
       "solution": "Provides temporary support at the face."
@@ -571,7 +571,7 @@
       "stem": "The winding engine must be maintained by",
       "options": [
         "The operator alone",
-        "No maintenance needed",
+        "A helper from the office",
         "Any person",
         "Competent maintenance staff under the manager"
       ],
@@ -588,10 +588,10 @@
       "difficulty": "hard",
       "stem": "The sirdar must ensure that the working place is",
       "options": [
-        "Applicable in limited scenarios",
+        "Left as found by the previous sirdar",
         "Properly examined before work begins",
-        "Works under ideal conditions only",
-        "Free from dust"
+        "Examined only at mid-shift",
+        "Exempt from inspection"
       ],
       "answer": 1,
       "solution": "The working place must be properly examined before work begins."
@@ -624,9 +624,9 @@
       "difficulty": "medium",
       "stem": "Fly ash from thermal power plants can be used as",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Only for building roads",
+        "Only for making bricks",
+        "Used as a roofing material",
         "A stowing material in underground coal mines"
       ],
       "answer": 3,
@@ -662,7 +662,7 @@
       "options": [
         "Used only for horizontal lines",
         "Determine the elevation of points relative to a datum",
-        "Nothing specific",
+        "Measure the width of the seam",
         "Test roof stability"
       ],
       "answer": 1,
@@ -679,7 +679,7 @@
       "stem": "The 'explosive usage register' must contain",
       "options": [
         "Used for roof support",
-        "Nothing specific",
+        "The total explosive in the country",
         "Used for charging detonators",
         "Details of quantity received, used, returned, and destroyed"
       ],
@@ -715,7 +715,7 @@
       "stem": "The 'support' for drifts depends on",
       "options": [
         "Fixed support",
-        "Applicable in limited scenarios",
+        "The colour of the rock",
         "Rock conditions, span, and depth of cover",
         "Prevent water ingress"
       ],
@@ -788,8 +788,8 @@
       "options": [
         "Flameproof or intrinsically safe electrical equipment",
         "No safety features",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Equipment certified for surface use only",
+        "A manual braking system"
       ],
       "answer": 0,
       "solution": "Flameproof or intrinsically safe equipment."
@@ -804,9 +804,9 @@
       "difficulty": "hard",
       "stem": "The 'natural ventilation' in a mine depends on",
       "options": [
-        "Works only in surface mines",
-        "Control humidity in underground workings",
-        "Affects only intake shafts",
+        "The direction of the wind on the surface",
+        "The number of persons in the mine",
+        "The type of coal being mined",
         "Difference in temperature between intake and return air"
       ],
       "answer": 3,
@@ -822,10 +822,10 @@
       "difficulty": "medium",
       "stem": "The 'mucking cycle' in drifting includes",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the drilling of blast holes",
+        "Only the firing of shots",
         "Loading, hauling, and dumping muck",
-        "Required only for specific cases"
+        "Only the support of the drift"
       ],
       "answer": 2,
       "solution": "Mucking cycle includes load, haul, dump."
@@ -838,15 +838,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Under Regulation 150 of CMR 2017, every mine must have",
+      "stem": "The plans and sections of the workings in a mine must be",
       "options": [
-        "Applicable in limited scenarios",
-        "No special requirement",
-        "Works under ideal conditions only",
-        "An approved plan of working as prescribed"
+        "Prepared only after the mine is abandoned",
+        "Approved by the workers' union",
+        "Updated once every ten years",
+        "Prepared, maintained, and kept up-to-date as prescribed"
       ],
       "answer": 3,
-      "solution": "An approved plan of working as prescribed."
+      "solution": "CMR 2017 (Regulations 64 to 68) requires every mine to keep accurate and up-to-date plans and sections of the workings, as prescribed."
     },
     {
       "id": 41,
@@ -895,8 +895,8 @@
       "stem": "The 'profile' of a drift is determined by",
       "options": [
         "Purpose, equipment size, and geological conditions",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The taste of the manager",
+        "The season of the year",
         "Random shape"
       ],
       "answer": 0,
@@ -932,7 +932,7 @@
       "options": [
         "Controlled to prevent electrical hazards and flooding",
         "Never permitted",
-        "Applicable in limited scenarios",
+        "Used only on the surface",
         "Always permitted"
       ],
       "answer": 0,
@@ -948,8 +948,8 @@
       "difficulty": "easy",
       "stem": "The 'hazardous area' demarcation requires",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only a verbal warning",
+        "Only a line on the ground",
         "No demarcation",
         "Clear boundaries, signage, access control"
       ],
@@ -969,7 +969,7 @@
         "Open cast only",
         "Room and pillar mining",
         "Longwall only",
-        "Applicable in limited scenarios"
+        "Shaft sinking"
       ],
       "answer": 1,
       "solution": "Used in room and pillar mining."
@@ -985,9 +985,9 @@
       "stem": "The sirdar is responsible for the proper utilization of",
       "options": [
         "All materials issued for the work",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Only the explosives",
+        "Only the timber",
+        "Only the pumps"
       ],
       "answer": 0,
       "solution": "All materials issued must be properly utilized."
@@ -995,20 +995,20 @@
     {
       "id": 49,
       "subject": "Technical (Mining)",
-      "topic": "Opencast Working",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'working platform' width should accommodate",
+      "difficulty": "medium",
+      "stem": "'Competent person' under the Mines Act 1952 means a person:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
-        "Equipment, haul roads, drains, and safety areas"
+        "Appointed by the Inspector",
+        "Having 10 years of experience",
+        "Appointed by the owner, agent or manager and possessing the prescribed qualifications",
+        "Holding any degree"
       ],
-      "answer": 3,
-      "solution": "Platform width must accommodate equipment, roads, drains, and safety."
+      "answer": 2,
+      "solution": "Mines Act 1952, s.2(1)(c): a competent person is one appointed by the owner, agent or manager with the prescribed qualifications for the purpose."
     },
     {
       "id": 50,
@@ -1074,10 +1074,10 @@
       "difficulty": "hard",
       "stem": "The water bar or stopping in a mine is used to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Ventilate the working faces",
+        "Supply water to the fire points",
         "Direct water away from working areas to the sump",
-        "Required only for specific cases"
+        "Hold back the roof"
       ],
       "answer": 2,
       "solution": "Directs water away from working areas to the sump."
@@ -1093,9 +1093,9 @@
       "stem": "The emergency lighting in underground mines must be",
       "options": [
         "Provided and operational in case of power failure",
-        "Applicable in limited scenarios",
+        "Provided only at the surface",
         "Works at rated voltage only",
-        "Optional"
+        "Provided only in the engine room"
       ],
       "answer": 0,
       "solution": "Provided and operational in case of power failure."
@@ -1147,8 +1147,8 @@
       "stem": "The 'drilling accuracy' in drifting is important because",
       "options": [
         "It is not",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "It reduces the cost of explosives",
+        "It has no effect on the drift",
         "It affects the profile, support requirements, and safety"
       ],
       "answer": 3,
@@ -1167,7 +1167,7 @@
         "No approval needed",
         "Not required",
         "Approval from competent person and documentation",
-        "Provide fresh air to working faces"
+        "Only the fanman's permission"
       ],
       "answer": 2,
       "solution": "Modifications need approval and documentation."
@@ -1182,10 +1182,10 @@
       "difficulty": "hard",
       "stem": "The 'communication system' at faces must be",
       "options": [
-        "Applicable in limited scenarios",
+        "Only in the office",
         "Optional",
         "Available at all work locations for emergency use",
-        "Works under ideal conditions only"
+        "Only at the shaft bottom"
       ],
       "answer": 2,
       "solution": "Communication must be available at all work locations."
@@ -1201,9 +1201,9 @@
       "stem": "The 'foam extinguishing' system in mines is used for",
       "options": [
         "Class A and B fires, especially coal and fuel fires",
-        "Applicable in limited scenarios",
+        "Only electrical fires",
         "Not used",
-        "Works under ideal conditions only"
+        "Fires in the winding engine"
       ],
       "answer": 0,
       "solution": "Foam systems are effective for coal and fuel fires."
@@ -1236,10 +1236,10 @@
       "difficulty": "hard",
       "stem": "A 'barrier pillar' between two workings is used to",
       "options": [
-        "Required only for specific cases",
+        "Increase the ventilation pressure",
         "Prevent water from one area inundating the other",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Support the surface buildings",
+        "Improve the haulage"
       ],
       "answer": 1,
       "solution": "Prevents water from one area inundating the other."
@@ -1326,10 +1326,10 @@
       "difficulty": "easy",
       "stem": "A man riding system using chain haulage must have",
       "options": [
-        "Applicable in limited scenarios",
+        "A loud horn only",
         "Safety catches to prevent cars running back",
         "Nothing special",
-        "No safety features"
+        "A single brake"
       ],
       "answer": 1,
       "solution": "Safety catches to prevent cars running back are required."
@@ -1363,7 +1363,7 @@
       "stem": "The main switch in a mine must have",
       "options": [
         "No special feature",
-        "Applicable in limited scenarios",
+        "A decorative cover",
         "Works at rated voltage only",
         "A facility for isolation and lockout/tagout"
       ],
@@ -1434,9 +1434,9 @@
       "difficulty": "easy",
       "stem": "The 'total recordable injury frequency rate' (TRIFR) includes",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Only fatal accidents",
+        "Only lost-time injuries",
+        "Only minor first-aid cases",
         "All recordable injuries including lost time, medical treatment, and restricted work"
       ],
       "answer": 3,
@@ -1463,38 +1463,38 @@
     {
       "id": 75,
       "subject": "Technical (Mining)",
-      "topic": "Mine Fires",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'fire watch' in mines involves",
+      "difficulty": "medium",
+      "stem": "A shot-firer who has not been employed in blasting duties for more than 6 months shall undergo:",
       "options": [
-        "No watch needed",
-        "Not important",
-        "Applicable in limited scenarios",
-        "Continuous monitoring of fire-prone areas"
+        "Fresh initial training of 1 month",
+        "Retraining in the handling of explosives before resuming such duties",
+        "No retraining",
+        "A written test only"
       ],
-      "answer": 3,
-      "solution": "Fire watches continuously monitor fire-prone areas."
+      "answer": 1,
+      "solution": "MVTR 1966, Rule 13: retraining in handling of explosives is required after an absence from such duties exceeding 6 months."
     },
     {
       "id": 76,
       "subject": "Technical (Mining)",
-      "topic": "Mine Rescue",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'rescue team communication' with surface must be",
+      "difficulty": "medium",
+      "stem": "A person re-employed after an absence exceeding one year from mining work must undergo refresher training within:",
       "options": [
-        "Works under ideal conditions only",
-        "Continuous during underground operations",
-        "No communication needed",
-        "Applicable in limited scenarios"
+        "1 week",
+        "6 months",
+        "1 month of employment",
+        "3 months of employment"
       ],
-      "answer": 1,
-      "solution": "Teams must maintain continuous communication with surface."
+      "answer": 2,
+      "solution": "MVTR 1966, Rule 10: refresher training within 1 month of re-employment after absence over 1 year."
     },
     {
       "id": 77,
@@ -1517,20 +1517,20 @@
     {
       "id": 78,
       "subject": "Technical (Mining)",
-      "topic": "Opencast Working",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'excavator productivity' depends on",
+      "stem": "As per MVTR 1966, refresher vocational training must be given to persons employed in mines at least once in:",
       "options": [
-        "Bucket capacity, material density, operating conditions",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "5 years",
+        "2 years",
+        "1 year",
+        "10 years"
       ],
       "answer": 0,
-      "solution": "Productivity depends on capacity, material, and conditions."
+      "solution": "MVTR 1966, Rule 8: refresher training at least once in every 5 years."
     },
     {
       "id": 79,
@@ -1542,9 +1542,9 @@
       "difficulty": "hard",
       "stem": "A 'borehole monitoring' in inundation prevention involves",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Only the inspection of the sump",
+        "Only the pumping records",
+        "Only the rainfall data",
         "Checking for water inflow and pressure through drilled boreholes"
       ],
       "answer": 3,
@@ -1558,15 +1558,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Under Regulation 105 of CMR 2017, the manager must ensure that",
+      "stem": "Suitable protective equipment and clothing required for safety must be provided to the workers",
       "options": [
-        "Adequate and suitable clothing is provided to workers as prescribed",
-        "Applicable in limited scenarios",
-        "Nothing specific",
-        "Works under ideal conditions only"
+        "At no cost to the worker",
+        "At half the cost to the worker",
+        "Only to workers with more than five years of service",
+        "Only on a written request"
       ],
       "answer": 0,
-      "solution": "Adequate and suitable clothing as prescribed."
+      "solution": "The owner, agent and manager are required to provide and maintain suitable protective equipment and clothing, as necessary, at no cost to the worker."
     },
     {
       "id": 81,
@@ -1651,7 +1651,7 @@
       "stem": "The 'District Mineral Foundation' (DMF) was established under",
       "options": [
         "CMR 2017",
-        "Applicable in limited scenarios",
+        "DGMS Circulars",
         "Mines Act",
         "MMDR Act 2015"
       ],
@@ -1722,8 +1722,8 @@
       "difficulty": "medium",
       "stem": "The 'CIL's production efficiency' depends on",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the number of workers",
+        "Only the depth of the mines",
         "Equipment utilization, manpower deployment, and clearances",
         "Nothing specific"
       ],
@@ -1740,8 +1740,8 @@
       "difficulty": "easy",
       "stem": "The 'renewable energy' adoption by CIL includes",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only diesel generators",
+        "Only imported power",
         "Solar and wind power projects at mine sites",
         "Nothing specific"
       ],
@@ -1927,78 +1927,6 @@
       ],
       "answer": 2,
       "solution": "25% of 20000 = ₹5,000."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A and B share profits in the ratio 3:2. A invested ₹50000 for 12 months. For how many months did B invest ₹40000?",
-      "options": [
-        "12 months",
-        "9 months",
-        "11 months",
-        "10 months"
-      ],
-      "answer": 2,
-      "solution": "Profit ratio = (Investment × Time). 3/2 = (50000×12)/(40000×T) → 3T = (50000×12×2)/(40000×3) = 1200000/120000 = 10. T = 10... Actually: 3/2 = 600000/(40000T) → 3 × 40000T = 2 × 600000 → 120000T = 1200000 → T = 10. So 10 months."
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A loss of 25% is incurred by selling an article for ₹600. For what price should it be sold to gain 20%?",
-      "options": [
-        "₹864",
-        "₹900",
-        "₹960",
-        "₹800"
-      ],
-      "answer": 2,
-      "solution": "CP = 600/0.75 = 800. For 20% profit: SP = 800 × 1.20 = ₹960"
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A student's average marks in 5 subjects is 68. If the marks in Mathematics is not included, the average drops to 65. How many marks did the student get in Mathematics?",
-      "options": [
-        "83",
-        "80",
-        "78",
-        "85"
-      ],
-      "answer": 0,
-      "solution": "Total = 340. Without Math = 260. Math = 340 - 260 = 80. Wait, 340-260=80. But 83 is option A... Let me recalculate: 5×68 = 340. 4×65 = 260. Math = 340-260 = 80."
-    },
-    {
-      "id": 104,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If 3A = 4B = 5C, what is A:B:C?",
-      "options": [
-        "12:15:20",
-        "4:3:5",
-        "20:15:12",
-        "15:20:12"
-      ],
-      "answer": 2,
-      "solution": "A = k/3, B = k/4, C = k/5. LCM of 3,4,5 = 60. A:B:C = 20:15:12"
     }
   ],
   "seed": 51361818
