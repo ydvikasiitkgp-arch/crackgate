@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { whatsappLink } from "@/lib/contact";
+import { useCart } from "@/hooks/use-cart";
 import {
   Tag,
   Check,
@@ -62,6 +63,7 @@ export default function CheckoutForm({
   defaultEmail = "",
 }: Props) {
   const router = useRouter();
+  const { refetch } = useCart();
   const [payerName, setPayerName] = useState(defaultName);
   const [payerPhone, setPayerPhone] = useState(defaultPhone);
   const [payerEmail, setPayerEmail] = useState(defaultEmail);
@@ -155,8 +157,13 @@ export default function CheckoutForm({
         throw new Error(data?.message ?? data?.error ?? `HTTP ${r.status}`);
       }
       setDone(true);
-      await fetch("/api/cart/clear", { method: "POST" });
-      router.refresh();
+      try {
+        await fetch("/api/cart/clear", { method: "POST" });
+        localStorage.removeItem("cg_cart");
+        refetch();
+      } catch {
+        // best-effort cleanup; payment is already recorded
+      }
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -227,9 +234,9 @@ export default function CheckoutForm({
         <div className="mt-7 flex flex-col gap-2.5 max-w-xs mx-auto">
           <button
             className="cg-shimmer w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center gap-2"
-            onClick={() => router.push("/dashboard")}
+            onClick={() => router.push("/")}
           >
-            Go to Dashboard
+            Go to Homepage
           </button>
           <a
             href={whatsappLink(
