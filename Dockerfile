@@ -102,4 +102,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
   CMD curl -fsS http://127.0.0.1:3000/api/healthz || exit 1
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["sh", "-c", "node ./node_modules/prisma/build/index.js migrate deploy --schema=./packages/database/prisma/schema.prisma && node apps/web/server.js"]
+CMD ["node", "apps/web/server.js"]
