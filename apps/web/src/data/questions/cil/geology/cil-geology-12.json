@@ -2146,10 +2146,10 @@
       "difficulty": "hard",
       "stem": "Aeromagnetic survey: reduction to pole (RTP):",
       "options": [
-        "No correction",
+        "Converts the total field to vertical gradient for shallow sources",
         "Recalculates anomalies as if measurement was at magnetic pole",
-        "Reduces data",
-        "Adds noise"
+        "Shifts anomaly peaks to the edges of the source bodies for mapping",
+        "Applies a latitude correction for the normal gradient of the field"
       ],
       "answer": 1,
       "solution": "RTP: removes asymmetry of magnetic anomalies. Anomalies centered over sources. Requires IGRF removal.",
@@ -2165,12 +2165,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Turbidite Bouma sequence division B:",
+      "stem": "Division B of the Bouma sequence of a turbidite bed consists of which structure?",
       "options": [
         "Upper parallel lamination (graded)",
-        "Massive division A",
-        "Rippled division C",
-        "Bottom mudstone E"
+        "Massive structureless lower division A",
+        "Rippled and cross-laminated division C",
+        "Upper structureless pelagic mudstone division E"
       ],
       "answer": 0,
       "solution": "Bouma B: upper parallel lamination. Upper flow regime. Graded bedding often present. Part of complete turbidite.",
@@ -2186,12 +2186,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Gondwana Supergroup:",
+      "stem": "What is the age range, climatic record, and fossil content of the Gondwana Supergroup of India?",
       "options": [
         "Permian to Jurassic. Glacial (Talchir), Coal (Barakar, Raniganj), Plant fossils (Glossopteris)",
-        "Igneous",
-        "Volcanic",
-        "Marine fossils"
+        "Igneous intrusions and lava flows with no sedimentary or fossil record preserved anywhere at all",
+        "Volcanic piles formed entirely by submarine eruptions along a mid-ocean ridge spreading system",
+        "Marine fossils such as ammonites, belemnites and trilobites of open-shelf marine facies"
       ],
       "answer": 0,
       "solution": "Gondwana: rifted basins. Damodar, Son, Mahanadi, Godavari valleys. Major coal in India.",
@@ -2210,9 +2210,9 @@
       "stem": "Yardang is an erosional feature carved by:",
       "options": [
         "Wind abrasion (deflation)",
-        "River erosion",
-        "Glacial scour",
-        "Wave action"
+        "Downcutting by a meandering river channel",
+        "Scouring beneath a moving ice sheet",
+        "Undercutting by storm-driven coastal waves"
       ],
       "answer": 0,
       "solution": "Yardang: streamlined ridge carved by wind. Aligned with prevailing wind. Found in arid regions with fine-grained rock.",
@@ -2228,12 +2228,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Geophysical method — GPR:",
+      "stem": "Which geophysical method offers high resolution but limited shallow depth penetration?",
       "options": [
         "Ground penetrating radar. High resolution, shallow (<10m)",
-        "Magnetic",
-        "Seismic",
-        "Deep exploration (>100m)"
+        "Electromagnetic sounding for deep crustal studies beyond 100 m depth",
+        "Gravity profiling to detect large density contrasts in the bedrock",
+        "Seismic refraction using hammer sources for deep oil exploration"
       ],
       "answer": 0,
       "solution": "GPR: electromagnetic waves. Utility detection, void mapping, archaeology.",
@@ -2249,12 +2249,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "S-C mylonite fabric:",
+      "stem": "In an S-C mylonite fabric, the acute angle between the S and C planes points toward:",
       "options": [
-        "S = shear plane",
-        "Parallel planes",
+        "S planes are the shear planes while C planes are the strain planes, so the two never intersect at an angle",
+        "S and C planes are always exactly parallel to each other",
         "S (schistosity, strain) and C (shear, cisaillement) planes. Acute angle points to shear direction",
-        "C = strain plane"
+        "C planes record strain while S planes record the shear direction"
       ],
       "answer": 2,
       "solution": "S-C: S = elongate grains. C = discrete shear bands. C' (extensional shear bands) also.",
@@ -2270,11 +2270,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Cirque:",
+      "stem": "Which of the following correctly describes a cirque and the lake that may occupy its floor?",
       "options": [
-        "River valley",
-        "Coastal feature",
-        "Aeolian",
+        "Deep narrow valley that was carved by a river and later occupied by a glacier",
+        "Feature formed by wave erosion along a high-energy rocky coastline with cliffs",
+        "Landform produced by wind erosion in an arid desert region of the world where sand is abundant",
         "Armchair-shaped depression at head of glacial valley. Tarn = lake in cirque"
       ],
       "answer": 3,
@@ -2291,11 +2291,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Pegmatite zonation:",
+      "stem": "In a zoned pegmatite, the internal zones from border to core and the inward enrichment of rare elements follow what order?",
       "options": [
-        "Uniform",
-        "No zonation",
-        "Reverse zonation",
+        "Uniform texture and composition throughout the entire pegmatite body, with no variation in grain size or mineralogy",
+        "Absence of zonation because pegmatite crystallizes rapidly at shallow depth",
+        "Reverse zonation in which the margins are coarser than the central core region",
         "Border (fine) → Wall (intermediate) → Intermediate (coarse) → Core (quartz core). Rare-element enrichment inward"
       ],
       "answer": 3,
@@ -2312,12 +2312,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Step-drawdown test:",
+      "stem": "A step-drawdown test, in which pumping is carried out at incrementally higher rates, is used to estimate the:",
       "options": [
-        "No well loss",
+        "Determines aquifer parameters from a single constant rate of pumping",
         "Well loss from incremental pumping rates. C·Q² term",
-        "Single rate",
-        "Constant head"
+        "Measures only the storage coefficient from the initial water level",
+        "Uses recovery data alone to compute the formation loss coefficient"
       ],
       "answer": 1,
       "solution": "Step: s = BQ + CQ². B: formation loss. CQ²: well loss. Well efficiency = BQ/(BQ+CQ²).",
@@ -2354,12 +2354,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Unconformity:",
+      "stem": "What is the general term for a gap in the geologic record, whose types include disconformity, angular unconformity and nonconformity?",
       "options": [
         "Gap in geologic record. Disconformity, angular unconformity, nonconformity",
-        "Continuous sequence",
-        "No gap",
-        "Fault"
+        "A continuous sequence of strata in which no time gap or break is present at all",
+        "A break in the record produced only by faulting, with no erosion ever involved",
+        "A type of sedimentary structure that records a single uninterrupted depositional event"
       ],
       "answer": 0,
       "solution": "Angular: tilted older rocks below horizontal younger. Nonconformity: sedimentary on igneous/metamorphic.",
@@ -2377,9 +2377,9 @@
       "difficulty": "hard",
       "stem": "Isostasy is the principle that the lithosphere:",
       "options": [
-        "Has uniform density everywhere",
-        "Is rigid and fixed in place",
-        "Sinks indefinitely under load",
+        "Has uniform density everywhere, so all blocks stand at the same elevation regardless of thickness",
+        "Is rigid and fixed in place, transmitting no vertical loads to the underlying asthenosphere",
+        "Sinks indefinitely under load, with no restoring force opposing continued downward motion",
         "Floats in buoyant equilibrium on the denser mantle"
       ],
       "answer": 3,
@@ -2396,12 +2396,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Cleavage in mica is:",
+      "stem": "Cleavage in mica minerals is best described as which type of cleavage?",
       "options": [
         "Perfect basal cleavage (one direction)",
-        "Cubic cleavage",
-        "Prismatic cleavage",
-        "No cleavage"
+        "Cubic cleavage (three directions at right angles)",
+        "Prismatic cleavage (two directions at 120 degrees)",
+        "No cleavage at all, breaking with conchoidal fracture"
       ],
       "answer": 0,
       "solution": "Mica: one direction of perfect cleavage. Splits into sheets.",
@@ -2420,9 +2420,9 @@
       "stem": "U-series dating: ²³⁰Th/²³⁴U disequilibrium:",
       "options": [
         "For corals, speleothems, teeth. Range ~500ka",
-        "No range limit",
-        "Only for igneous rocks",
-        "Any mineral"
+        "Applicable with no upper limit to the range of ages measured",
+        "Only for fresh igneous and volcanic rocks with high uranium",
+        "Any mineral phase regardless of its origin or composition"
       ],
       "answer": 0,
       "solution": "²³⁴U decays to ²³⁰Th. Disequilibrium → age. ²³⁰Th/²³⁴U = 1-e^{-λt}. Isochron method.",
@@ -2438,12 +2438,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Liquefaction potential is highest in:",
+      "stem": "During strong seismic shaking, the soil liquefaction hazard is greatest in which of the following ground conditions?",
       "options": [
         "Saturated loose fine sand",
-        "Dense gravel",
-        "Dry clay",
-        "Solid rock"
+        "Densely packed gravel with good drainage",
+        "Dry clay with low moisture content",
+        "Massive solid rock with few discontinuities"
       ],
       "answer": 0,
       "solution": "Liquefaction: saturated loose sand loses strength during shaking. High water table + loose sand + earthquake = high risk.",
@@ -2459,12 +2459,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Well logging — density (FDC):",
+      "stem": "The formation density (FDC) logging tool derives bulk density from Compton scattering, which is then used to calculate:",
       "options": [
-        "Resistivity",
-        "SP",
+        "Spontaneous potential from electrochemical effects at shale-sand contacts for permeable bed identification",
+        "Hydrogen index from neutron moderation used to estimate water filled porosity",
         "Formation bulk density ρ_b from Compton scattering. Porosity: ϕ = (ρ_ma - ρ_b)/(ρ_ma - ρ_f)",
-        "GR"
+        "Natural gamma emission of potassium, uranium and thorium for shale volume and clay typing"
       ],
       "answer": 2,
       "solution": "Density: Cs¹³⁷ source. ρ_ma: sandstone 2.65, limestone 2.71, dolomite 2.87 g/cm³.",
@@ -2480,12 +2480,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Glacial varves consist of couplets of:",
+      "stem": "Glacial varves consist of annual couplets made up of which two contrasting layers?",
       "options": [
         "Coarse (summer) and fine (winter) layers",
-        "Only coarse silt layers",
-        "Only fine clay layers",
-        "Volcanic ash layers"
+        "Alternating sand and gravel meltwater beds",
+        "Volcanic ash and air-fall tephra couplets",
+        "Wind-blown silt alternating with lake clay"
       ],
       "answer": 0,
       "solution": "Varves: annual glacial lake deposits. Summer: coarser meltout. Winter: fine clay settling under ice. Used for dating.",
@@ -2501,11 +2501,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Walther's law of facies:",
+      "stem": "What does Walther's law state about the relationship between vertically adjacent and laterally adjacent facies?",
       "options": [
-        "No relationship",
-        "Same as superposition",
-        "Fossils only",
+        "Facies that overlie each other were always deposited far apart in completely different environments",
+        "The oldest facies in a vertical succession always contains the coarsest sediment at its base",
+        "Facies are recognized only by their fossil content and never by lithology or sedimentary structure",
         "Vertically adjacent facies in a conformable succession were laterally adjacent in deposition"
       ],
       "answer": 3,
@@ -2522,12 +2522,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Boudinage structure indicates:",
+      "stem": "In deformed layered sequences, the sausage-like segmentation of competent beds known as boudinage indicates which strain condition?",
       "options": [
         "Extension parallel to layering",
-        "Compression",
-        "Dextral shear",
-        "Strike-slip movement"
+        "Layer-parallel shortening during compression",
+        "Dextral shear across the rock mass",
+        "Strike-slip displacement along a fault plane"
       ],
       "answer": 0,
       "solution": "Boudinage: layer stretched and broken into sausage-shaped blocks. Indicates extension along layering. Common in metamorphic rocks.",
@@ -2543,12 +2543,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Ophitic texture:",
+      "stem": "In which texture are plagioclase laths enclosed in pyroxene, typical of dolerite?",
       "options": [
-        "Olivine in pyroxene",
+        "Olivine crystals polkilitically enclosed within large pyroxene oikocrysts",
         "Plagioclase laths enclosed in pyroxene. 'Fabric' of dolerite",
-        "Pyroxene in plagioclase",
-        "Glass in plagioclase"
+        "Pyroxene prisms enclosed within laths of plagioclase in volcanic rocks",
+        "Groundmass glass enclosing phenocrysts of quartz and sanidine"
       ],
       "answer": 1,
       "solution": "Ophitic: common in dolerite/gabbro. Subophitic: partial enclosure. Poikilitic: small grains in large.",
@@ -2564,11 +2564,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "P-T-t path — prograde vs retrograde:",
+      "stem": "A clockwise versus counterclockwise P-T-t path in metamorphism distinguishes which facies series?",
       "options": [
-        "No paths",
-        "Clockwise = cooling",
-        "Counterclockwise = thickening",
+        "Prograde path records isobaric cooling without any accompanying burial or crustal thickening during the cycle",
+        "Retrograde path follows exactly the same P-T trajectory as the prograde path with no change in mineral assemblage",
+        "Clockwise loops record rifting-driven heating without crustal thickening and without subsequent erosion",
         "Clockwise (thickening → erosion): Barrovian. Counterclockwise (magmatic underplating): Buchan"
       ],
       "answer": 3,
@@ -2585,11 +2585,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Digital Elevation Model (DEM):",
+      "stem": "What is a digital elevation model and which terrain derivatives such as slope, aspect, and hillshade are computed from it?",
       "options": [
-        "Only contour lines",
-        "Only point spot heights",
-        "Only triangulated surfaces",
+        "A set of contour lines drawn on the map, with elevation labels at regular intervals",
+        "A triangulated irregular network of scattered elevation points, nothing else",
+        "Isolated point spot heights spaced at regular intervals across the whole map",
         "Raster grid of elevation. Slope, aspect, hillshade derived from DEM"
       ],
       "answer": 3,
@@ -2606,12 +2606,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Cement types in sandstone — paragenesis:",
+      "stem": "In sandstone cement paragenesis, the typical order of cement precipitation from early to late is:",
       "options": [
-        "All early",
+        "All cement types form simultaneously during shallow burial before any significant compaction of the sediment has taken place",
         "Early (calcite, pyrite) → Mesogenetic (quartz overgrowth, illite, ankerite) → Telogenetic (kaolinite, Fe-oxides)",
-        "All late",
-        "Random"
+        "All cements form during deep burial late diagenesis after compaction",
+        "Cements precipitate in a random order unrelated to burial history"
       ],
       "answer": 1,
       "solution": "Paragenesis: diagenetic sequence. Relative timing from cross-cutting and texture.",
@@ -2627,12 +2627,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "(U-Th)/He dating of apatite:",
+      "stem": "(U-Th)/He dating of apatite, with a helium closure temperature of about 70°C, is mainly used to study what?",
       "options": [
-        "Low T closure",
+        "Closure at a low temperature of about sixty to seventy degrees centigrade",
         "He diffusion: closure temperature ~70°C. For exhumation studies",
-        "No T dependence",
-        "Very high T closure"
+        "No dependence of the helium retention on temperature whatsoever at any depth",
+        "Very high closure temperature near three hundred degrees centigrade or more"
       ],
       "answer": 1,
       "solution": "AHe: low-T thermochronometer. (U-Th)/He age = time since cooling through ~70°C.",
@@ -2648,12 +2648,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Partial melting:",
+      "stem": "What is incomplete melting of a source rock, where the first melt is more felsic?",
       "options": [
         "Incomplete melting of source rock. First melt is more felsic",
-        "No melt",
-        "Only complete melting",
-        "Complete melting"
+        "Melting that consumes the entire source rock leaving no residual solid",
+        "Complete melting of the source followed by fractional crystallisation",
+        "Process in which the composition of the melt is identical to the source"
       ],
       "answer": 0,
       "solution": "Partial melting of mantle → basaltic magma. Partial melting of crust → granitic melt.",
@@ -2669,12 +2669,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Pleochroism in biotite:",
+      "stem": "In thin section, how does biotite typically display pleochroism?",
       "options": [
-        "Weak",
-        "Red to green",
+        "Weak — pale grey with no visible color change",
+        "Absent — biotite is isotropic under crossed polars",
         "Strong — dark brown to pale yellow (brown mineral)",
-        "None"
+        "Red to green with strong variation in both axes"
       ],
       "answer": 2,
       "solution": "Biotite: strong pleochroism. One cleavage direction. 'Bird's eye' extinction.",
@@ -2690,12 +2690,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Granite is best classified as a(n):",
+      "stem": "Based on texture and composition, granite is best classified as which type of igneous rock?",
       "options": [
         "Coarse-grained intrusive (plutonic) felsic igneous rock",
-        "Clastic sedimentary rock",
-        "Foliated metamorphic rock",
-        "Fine-grained extrusive basic rock"
+        "Fine-grained clastic sedimentary rock with graded bedding and fossils",
+        "Foliated metamorphic rock formed under low-grade regional metamorphism",
+        "Fine-grained extrusive basic rock composed chiefly of pyroxene and olivine"
       ],
       "answer": 0,
       "solution": "Granite cools slowly at depth, producing large crystals; it is felsic and intrusive.",
@@ -2711,12 +2711,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Ammonite suture line evolution:",
+      "stem": "Ammonite suture lines evolved in complexity over time; the order from simple to advanced is:",
       "options": [
-        "Reverse order",
-        "No evolution",
+        "Reverse order. Ammonitic (complex) sutures always precede goniatitic (simple) sutures through the stratigraphic column",
+        "No evolution. Suture complexity stays identical from the Devonian to the end of the Mesozoic",
         "Goniatitic (simple, Devonian) -> Ceratitic (moderate, Triassic) -> Ammonitic (complex, Jurassic-Cretaceous)",
-        "Same throughout"
+        "Same throughout. All ammonoids carry the same suture pattern regardless of their age"
       ],
       "answer": 2,
       "solution": "Suture complexity increases through time. Goniatitic: simple lobes. Ceratitic: tooth-like. Ammonitic: foliate.",
@@ -2732,12 +2732,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Cataclastic metamorphism:",
+      "stem": "Cataclastic metamorphism, dominated by mechanical deformation in fault zones, produces which rock types?",
       "options": [
-        "Thermal",
+        "Thermal recrystallization adjacent to a cooling magmatic intrusion",
         "Mechanical deformation (fault zones). Mylonite, breccia",
-        "Hydrothermal",
-        "Shock"
+        "Hydrous alteration of basalt by circulating hot seawater at ridges",
+        "Impact metamorphism producing shatter cones and coesite"
       ],
       "answer": 1,
       "solution": "Cataclastic: crushing, grinding. Mylonite: fine-grained, foliated. Fault gouge.",
@@ -2753,11 +2753,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Rock mass classification — Q-system:",
+      "stem": "Which rock mass classification system was proposed by Barton?",
       "options": [
-        "Only RQD and Jn",
-        "Only Jr and Ja",
-        "Only Jw and SRF",
+        "Bieniawski. Q = RQD + Jn + Jr + Ja + Jw + SRF",
+        "Terzaghi. Q = RQD × Jn × Jr × Ja (four parameters)",
+        "Q = RQD/Jn + Jr/Ja with only four parameters",
         "Barton. Q = (RQD/Jn)×(Jr/Ja)×(Jw/SRF)"
       ],
       "answer": 3,
@@ -2774,12 +2774,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Mineral color in thin section:",
+      "stem": "Why does the colour of a mineral in thin section vary with crystallographic orientation?",
       "options": [
-        "Only isotropic minerals",
-        "Colorless in all",
+        "Only isotropic minerals display any visible body color in thin section",
+        "Colorless appearance in every orientation for all minerals",
         "Pleochroism — color varies with crystallographic orientation",
-        "Always same color"
+        "A constant color independent of the crystal orientation"
       ],
       "answer": 2,
       "solution": "Pleochroism seen in biotite, hornblende, tourmaline. Property in plane-polarized light.",
@@ -2795,12 +2795,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Artesian well:",
+      "stem": "In an artesian well tapping a confined aquifer under pressure, water:",
       "options": [
         "Water rises above aquifer (confined aquifer under pressure). Flowing if > ground surface",
-        "Water table well",
-        "Injection well",
-        "Dry well"
+        "A well that always requires mechanical pumping to lift the water to the ground surface",
+        "A well completed in an unconfined aquifer lying very close to a river channel course",
+        "A shallow dug well that yields water only during the rainy season of the calendar year each time"
       ],
       "answer": 0,
       "solution": "Artesian: confined aquifer with potentiometric surface above ground. Flowing artesian.",
@@ -2816,12 +2816,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Coal washing (beneficiation):",
+      "stem": "Coal washing, or beneficiation, is mainly carried out in order to achieve which result?",
       "options": [
         "Gravity separation, flotation, dense medium. Reduces ash and sulfur",
-        "Chemical treatment only",
-        "Heating only",
-        "Not possible"
+        "Chemical treatment with acids and alkalis to dissolve all mineral impurities",
+        "Heating of the coal in a kiln to drive off moisture and volatile matter",
+        "Crushing followed by combustion to burn out the ash content completely"
       ],
       "answer": 0,
       "solution": "Washing: removes mineral matter (ash). Dense medium cyclone: main method. Float-and-sink test.",
@@ -2863,12 +2863,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "easy",
-      "stem": "Proximate analysis of coal gives:",
+      "stem": "Proximate analysis of coal provides values for which four parameters?",
       "options": [
-        "Mineral content",
+        "Mineral matter content determined by ashing procedures",
         "Moisture, volatile matter, fixed carbon, ash",
-        "Ultimate analysis",
-        "Calorific value only"
+        "Ultimate analysis including carbon, hydrogen, nitrogen",
+        "Calorific value measured by bomb calorimeter only"
       ],
       "answer": 1,
       "solution": "Proximate: moisture, VM, FC, ash (by difference). Ultimate: C, H, O, N, S.",
@@ -2947,12 +2947,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Garnet group — almandine:",
+      "stem": "What is the chemical composition of almandine, a member of the garnet group of minerals?",
       "options": [
-        "Spessartine",
+        "Mn3Al2(SiO4)3 — manganese garnet variety",
         "Fe3Al2(SiO4)3 — iron garnet",
-        "Pyrope",
-        "Grossular"
+        "Ca3Al2(SiO4)3 — calcium garnet variety",
+        "Mg3Al2(SiO4)3 — magnesium garnet variety"
       ],
       "answer": 1,
       "solution": "Almandine: common in schists and gneisses. Deep red to brown.",
@@ -2968,12 +2968,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Talik:",
+      "stem": "Which of the following correctly defines a talik and its position within permafrost?",
       "options": [
-        "Glacial ice",
-        "Seasonal freeze",
+        "Lens of glacier ice preserved within a body of permafrost that forms when a glacier advances directly over the frozen ground beneath it",
+        "Layer of ground that freezes during the winter and thaws completely during the following summer in response to the seasonal cycle of temperature change",
         "Unfrozen ground within permafrost. Open (through) or closed (isolation). Suprapermafrost, intrapermafrost, subpermafrost",
-        "Frozen all year"
+        "Ground that remains frozen continuously throughout the entire year without ever thawing, as occurs beneath the polar ice sheets and mountain glaciers"
       ],
       "answer": 2,
       "solution": "Talik: groundwater flow thru permafrost. Open talik = talk connection to sub-permafrost water.",
@@ -2989,12 +2989,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Topology in GIS:",
+      "stem": "In GIS, topology describes which spatial relationships between features, and why is it essential for network analysis?",
       "options": [
         "Spatial relationships: connectivity, adjacency, containment. Essential for network analysis",
-        "For raster only",
-        "For display only",
-        "Not needed"
+        "A raster grid data structure, in which each cell of the grid stores only a single attribute value for the layer",
+        "A method for symbolising the data layers, used purely for cartographic display purposes",
+        "An optional processing step that is rarely required for carrying out GIS analysis work"
       ],
       "answer": 0,
       "solution": "Topology: polygon topology (left/right polygons). Network: roads, rivers. Planar enforcement.",
@@ -3031,11 +3031,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Ignimbrite (welded tuff):",
+      "stem": "What is a pyroclastic flow deposit whose glass shards fuse at high temperature?",
       "options": [
-        "Lava flow",
-        "Ash fall only",
-        "Sedimentary",
+        "Lava flow that cools to form a dense aphanitic rock with prominent flow banding",
+        "Air-fall tephra layer that accumulates without any subsequent welding",
+        "Sedimentary deposit of reworked ash and pumice laid down in water",
         "Pyroclastic flow deposit. Welded: glass shards fused at high temperature"
       ],
       "answer": 3,
@@ -3052,12 +3052,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Palaeogene-Neogene boundary (India):",
+      "stem": "Where and around what age is the Palaeogene-Neogene boundary placed in the Indian stratigraphic record?",
       "options": [
         "Around 23-24 Ma. Oligocene-Miocene transition. Siwalik start ~18 Ma",
-        "66 Ma",
-        "56 Ma",
-        "34 Ma"
+        "66 Ma, the K-Pg boundary marked by the Deccan Traps flood basalt eruption",
+        "56 Ma, the Paleocene-Eocene Thermal Maximum with deep-sea benthic extinction",
+        "34 Ma, the Eocene-Oligocene boundary with the onset of Antarctic glaciation"
       ],
       "answer": 0,
       "solution": "Paleogene-Neogene: Kutch and Assam basins (marine). Himalayan foreland basin (Siwalik).",
@@ -3073,12 +3073,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Sedimentary environments:",
+      "stem": "Into which broad categories are continental, transitional, and marine sedimentary environments classified?",
       "options": [
-        "Only continental environments",
-        "Only marine environments",
+        "Only continental environments, excluding fluvial, glacial and desert systems entirely",
+        "Only marine environments, with no transitional or continental systems recognized",
         "Continental (fluvial, aeolian, glacial), Transitional (delta, beach, lagoon), Marine (shelf, deep sea)",
-        "Only transitional environments"
+        "Only transitional environments such as deltas, beaches and lagoons, with continental and marine settings completely excluded"
       ],
       "answer": 2,
       "solution": "Each environment produces diagnostic sedimentary structures and facies.",
@@ -3094,12 +3094,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Kyanite:",
+      "stem": "Kyanite, the high-pressure polymorph of Al2SiO5 with bladed habit, is stable in which facies?",
       "options": [
-        "Sillimanite",
-        "Andalusite",
+        "Low-P polymorph of Al2SiO5. Square section in contact aureoles",
+        "High-T polymorph of Al2SiO5. Needles in granulite facies rocks",
         "High-P polymorph of Al2SiO5. Bladed. Blueschist to amphibolite facies",
-        "Cordierite"
+        "Mg-Al silicate with hexagonal twinning typical of low-pressure metamorphic zones"
       ],
       "answer": 2,
       "solution": "Kyanite: high pressure. Blue color. Hardness varies (4.5 parallel to 7 perpendicular to c-axis).",
@@ -3115,12 +3115,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Electromagnetic (EM) methods:",
+      "stem": "Electromagnetic (EM) geophysical methods, well suited for groundwater due to conductive overburden, operate in which two main domains?",
       "options": [
         "Time-domain (TDEM) and frequency-domain (FDEM). Conductive overburden → good for groundwater",
-        "Resistivity",
-        "Gravity",
-        "Seismic"
+        "Measures dc resistivity with four electrodes expanded about a fixed centre point for vertical sounding",
+        "Uses the travel time of refracted seismic waves to map the depth to the top of bedrock",
+        "Probes the gravity field to identify density contrasts caused by basin fill sediments"
       ],
       "answer": 0,
       "solution": "EM: skin depth δ = 503√(ρ/f). Transient: airborne EM (AEM). VTEM, SkyTEM.",
@@ -3136,11 +3136,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Carlin-type gold deposit:",
+      "stem": "Carlin-type gold deposits are best described as which style of gold mineralization?",
       "options": [
-        "High-grade veins",
-        "Volcanic-hosted",
-        "Placer only",
+        "High-grade quartz veins filling extensional faults in granitic basement rocks",
+        "Volcanic-hosted epithermal vein systems carrying bonanza-grade silver and gold in near-surface settings",
+        "Placer deposits formed by gravity concentration in active river channels",
         "Disseminated, sediment-hosted, arsenian pyrite. Nevada (USA). Low-grade, large-tonnage"
       ],
       "answer": 3,
@@ -3178,11 +3178,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Fold types by hinge shape:",
+      "stem": "On the basis of hinge shape, folds are classified into which three main types?",
       "options": [
-        "Only chevron folds",
-        "Only box folds",
-        "All same",
+        "Only chevron folds exist, and all other shapes are subclasses of the chevron type",
+        "Chevron (rounded), Angular (sharp), Circular (cylindrical hinge)",
+        "All fold hinges are identical in shape regardless of the rock type or stress regime",
         "Chevron (angular), Rounded, Box (double hinge)"
       ],
       "answer": 3,
@@ -3220,12 +3220,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Groundwater recharge:",
+      "stem": "Groundwater recharge can occur through which combination of natural and artificial processes?",
       "options": [
         "Natural (rainfall infiltration) and artificial (recharge wells, ponds, check dams)",
-        "Only rainfall infiltration",
-        "Only artificial recharge",
-        "Only seawater intrusion"
+        "Occurs only through the direct infiltration of seasonal rainfall into the ground surface",
+        "Results only from artificial structures built for the purpose",
+        "Happens only where sea water intrudes into the coastal aquifer"
       ],
       "answer": 0,
       "solution": "Recharge: ~10-20% of rainfall in alluvial areas. Artificial: managed aquifer recharge (MAR).",
@@ -3241,7 +3241,7 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Specific gravity of native gold:",
+      "stem": "What is the approximate specific gravity of gold found in its native form?",
       "options": [
         "~5-8",
         "~15-19",
@@ -3262,12 +3262,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "easy",
-      "stem": "V-shaped valley:",
+      "stem": "Which option correctly describes the cross-profile of a valley produced by fluvial incision during the youthful stage?",
       "options": [
-        "Flat floored",
-        "U-shaped",
+        "Valley with a wide flat floor built of alluvial sediment",
+        "Broad valley with steep walls and a flat floor cut by ice",
         "Fluvial incision (youthful stage). Steep sides, narrow floor",
-        "Braided"
+        "Channel pattern with multiple bars and rapidly shifting unstable channels"
       ],
       "answer": 2,
       "solution": "V-shaped: downcutting > lateral erosion. Rapids and waterfalls common.",
@@ -3283,11 +3283,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Spaceborne sensors — Sentinel-2:",
+      "stem": "Which spaceborne sensor carries the MSI instrument with 13 bands, a 5-day revisit, and is suited to vegetation and agriculture?",
       "options": [
-        "MODIS",
-        "SPOT",
-        "Landsat",
+        "The OLI sensor, with 9 spectral bands at 30m resolution and a 16-day revisit period",
+        "The MODIS sensor, with 36 spectral bands at 250-1000m for daily global coverage",
+        "The ETM+ sensor, with 8 bands, a 15m panchromatic band, and a 16-day revisit period",
         "MSI (13 bands, 10-60m). 5-day revisit. 290km swath. Vegetation, agriculture"
       ],
       "answer": 3,
@@ -3304,11 +3304,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Rip-rap for erosion protection:",
+      "stem": "What type of material is most suitable for rip-rap used in erosion protection?",
       "options": [
-        "Rounded boulders",
-        "Silty clay",
-        "Soft sandstone",
+        "Soft, easily weathered sandstone placed as rounded cobbles without any proper bedding layer",
+        "Silty clay compacted in layers to form a smooth impermeable face",
+        "Uniform rounded boulders of low specific gravity dumped loosely",
         "Hard, durable rock (granite, basalt). Angular, well-graded. Weight: W₅₀ design"
       ],
       "answer": 3,
@@ -3325,12 +3325,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Pegmatite:",
+      "stem": "What is a very coarse-grained igneous rock with crystals over 2.5 cm, enriched in rare elements?",
       "options": [
         "Very coarse-grained igneous rock (>2.5 cm crystals). Enriched in rare elements",
-        "Fine-grained",
-        "Glassy",
-        "Medium-grained"
+        "Fine-grained volcanic rock formed by the rapid quenching of a felsic magma at the surface",
+        "Glassy rock produced by instantaneous chilling of rhyolitic lava",
+        "Medium-grained plutonic rock with crystals between one and five mm"
       ],
       "answer": 0,
       "solution": "Pegmatite: high volatile content (H2O, F, Cl). Source of Li, Be, Cs, rare earths.",
@@ -3346,12 +3346,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Kurnool Group:",
+      "stem": "What is the stratigraphic relation, lithology, and age of the Kurnool Group in peninsular India?",
       "options": [
-        "Archean",
+        "Archean greenstone succession conformably beneath the oldest Dharwar schist belt",
         "Overlies Cuddapah unconformably. Diamictite, limestone, quartzite. Neoproterozoic",
-        "Cretaceous",
-        "Mesozoic"
+        "Cretaceous marine shelf sequence with prolific hydrocarbon source rocks in the Kutch basin",
+        "Mesozoic Gondwana coal measures overlying the Archean basement in the Damodar valley"
       ],
       "answer": 1,
       "solution": "Kurnool: Banganapalle quartzite (diamond-bearing). Owk shale. Narji limestone.",
@@ -3367,12 +3367,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Phosphorite:",
+      "stem": "How is phosphorite, a sedimentary rock rich in phosphate minerals, defined?",
       "options": [
-        "Metamorphic",
+        "Metamorphic rock dominated by quartz and feldspar formed at high temperature",
         "Sedimentary rock >50% phosphate minerals (apatite). Upwelling zones",
-        "Volcanic",
-        "Igneous"
+        "Igneous rock composed chiefly of olivine, pyroxene and calcium plagioclase",
+        "Deep-sea rock made almost entirely of biogenic silica from radiolarian tests"
       ],
       "answer": 1,
       "solution": "Phosphorite: marine sediments, Peru-Chile, Morocco. Phosphorus fertilizer. Guano.",
@@ -3388,11 +3388,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Serpentinite:",
+      "stem": "Serpentinite forms by the alteration of ultramafic rocks and is notorious for which characteristic?",
       "options": [
-        "Evaporite",
-        "Carbonate rock",
-        "Felsic rock",
+        "Carbonate rock formed by metamorphism of pure limestone and dolomite strata",
+        "Felsic rock composed mainly of quartz, alkali feldspar and mica minerals that shows foliation",
+        "Evaporite sequence deposited in arid restricted marine basins and coastal lagoons",
         "Alteration of ultramafic rock (olivine→serpentine). Slip planes — landslide hazard"
       ],
       "answer": 3,
@@ -3412,9 +3412,9 @@
       "stem": "Ground Penetrating Radar (GPR) frequency affects:",
       "options": [
         "Depth penetration and resolution trade-off",
-        "Only the depth penetration",
-        "Only the resolution",
-        "Neither"
+        "Only horizontal resolution at the cost of depth",
+        "Depth and resolution both fixed by the antenna",
+        "Only the colour contrast of the recorded radargram"
       ],
       "answer": 0,
       "solution": "GPR: higher freq = better resolution but less depth. Lower freq = more depth but less resolution. 10 MHz - 2 GHz.",
@@ -3472,12 +3472,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Polymorphism:",
+      "stem": "Which term describes minerals having the same chemical composition but different crystal structures?",
       "options": [
-        "Different composition, different structure",
+        "Two minerals having different chemical compositions and different crystal structures are polymorphs",
         "Same composition, different crystal structure (e.g., graphite/diamond, calcite/aragonite)",
-        "Same composition, same structure",
-        "Same structure, different composition"
+        "Same composition and same structure forming in different habits",
+        "Same structure containing different chemical compositions"
       ],
       "answer": 1,
       "solution": "Polymorphs: diamond (cubic) and graphite (hexagonal) — both C.",
@@ -3493,12 +3493,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Thermal inertia:",
+      "stem": "Which material property, its resistance to temperature change, is mapped remotely using day-night temperature differences?",
       "options": [
         "Resistance to temperature change. High for wet/dense materials. Day-night ΔT for mapping",
-        "Low for rock",
-        "Depends on color",
-        "Same for all"
+        "The rate of heat flow, which depends only upon the surface colour of the material that is involved",
+        "A uniform material property of the ground that is identical for all rock types present",
+        "Low for wet and dense materials such as water, while high for dry loose sand"
       ],
       "answer": 0,
       "solution": "Thermal inertia: √(ρ·k·C_p). Quartz: high. Water: very high. Dry sand: low. Used in geology.",
@@ -3516,10 +3516,10 @@
       "difficulty": "medium",
       "stem": "Rare earth element (REE) patterns: chondrite-normalized. LREE enrichment (La/Sm)_N > 1 indicates:",
       "options": [
-        "Primitive mantle",
+        "Primitive mantle source that has undergone no prior melt extraction",
         "Enriched mantle source or crustal contamination",
-        "Depleted source",
-        "No fractionation"
+        "Depleted source such as the mantle beneath normal mid-ocean ridges",
+        "Source in which no fractionation of rare earth elements has occurred"
       ],
       "answer": 1,
       "solution": "LREE enriched: OIB, arc, continental. LREE depleted: N-MORB. Chondrite normalized: divides by chondrite values.",
@@ -3535,12 +3535,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "easy",
-      "stem": "Metamorphic grade indicators in pelites:",
+      "stem": "Which index minerals mark increasing metamorphic grade in pelitic rocks, and in what order do they appear?",
       "options": [
-        "Same throughout",
+        "A random sequence that has no systematic relation to the metamorphic grade",
         "Chlorite → biotite → garnet → staurolite → kyanite → sillimanite (increasing grade)",
-        "Random order",
-        "Reverse order"
+        "Reverse order: sillimanite → kyanite → staurolite → garnet → biotite with increasing grade",
+        "An identical assemblage at every grade throughout the metamorphic terrane"
       ],
       "answer": 1,
       "solution": "Barrovian index minerals: each stable in specific P-T window. Increasing grade = higher T/P.",
@@ -3580,9 +3580,9 @@
       "stem": "GPS positioning: code-phase accuracy vs carrier-phase:",
       "options": [
         "Code-phase: ~1-10m. Carrier-phase: ~1cm (RTK)",
-        "Code more accurate",
-        "No difference",
-        "Same accuracy"
+        "Code-phase: ~1cm. Carrier-phase: ~1-10m with RTK",
+        "Code and carrier-phase have identical accuracies",
+        "Carrier-phase is less accurate than code-phase"
       ],
       "answer": 0,
       "solution": "Carrier-phase: millimeter precision. RTK: real-time kinematic. Static: post-processed.",
@@ -3598,12 +3598,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Iron-rich sedimentary rocks:",
+      "stem": "Which Precambrian rock type best exemplifies iron-rich sedimentary rocks, and what is its composition?",
       "options": [
-        "Mesozoic",
-        "Cenozoic",
+        "A Phanerozoic deposit of iron oxides formed mostly during the Triassic period, with chert bands absent",
+        "A sedimentary sequence rich in iron deposited mainly during the Cenozoic era",
         "Banded Iron Formation (BIF): Precambrian, chert + iron oxides (hematite, magnetite)",
-        "Phanerozoic"
+        "Modern iron-rich muds accumulating in deep anoxic ocean basins at present"
       ],
       "answer": 2,
       "solution": "BIF: major Fe ore. Algoma-type (volcanic) vs Superior-type (cratonic). Banded: microbands.",
@@ -3619,12 +3619,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Karst — tower karst (fengcong):",
+      "stem": "Steep-sided limestone towers separated by flat plains, also known as peak clusters, characterise which karst landform assemblage?",
       "options": [
         "Steep-sided limestone towers separated by plains. Peak cluster",
-        "Cone karst",
-        "Volcanic",
-        "Glacial"
+        "Cone karst consists of conical limestone hills with sinkholes between them",
+        "Landform built up by repeated eruptions of lava, ash and other volcanic material",
+        "Landform produced by erosion of rock beneath glacier ice"
       ],
       "answer": 0,
       "solution": "Tower karst: Guilin (China), Ha Long Bay. Fenglin: isolated towers. Fengcong: connected peaks.",
@@ -3640,12 +3640,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Chert and radiolarite:",
+      "stem": "What is the origin and composition of deep marine siliceous rocks such as chert and radiolarite?",
       "options": [
-        "Fluvial",
+        "Fluvial gravels with rounded quartz pebbles and chert fragments, but with no siliceous biogenic component at all",
         "Deep marine siliceous ooze. Radiolaria, diatoms, sponge spicules. Recrystallized to microcrystalline quartz",
-        "Deltaic",
-        "Shallow water"
+        "Deltaic sands with heavy mineral placers and abundant carbonaceous plant debris",
+        "Shallow-water carbonate sands with ooids and bioclasts, but without any silica present"
       ],
       "answer": 1,
       "solution": "Chert: SiO₂. Radiolarite: radiolarian tests. Bedded or nodular chert in limestone.",
@@ -3661,12 +3661,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Pediment:",
+      "stem": "Which of the following correctly describes a pediment at the base of a mountain front?",
       "options": [
-        "Depositional plain",
-        "Steep surface",
+        "Surface built entirely of sediment deposited by rivers at the mountain front forming a wide depositional plain",
+        "Very steep cliff face cut into resistant bedrock at the mountain edge by river undercutting",
         "Gently sloping erosional surface at mountain base. Bedrock with thin alluvium",
-        "Valley floor"
+        "Flat floor of a valley filled with thick alluvial sediment deposited by river flood events"
       ],
       "answer": 2,
       "solution": "Pediment: desert piedmont. Pediplain: coalescing pediments. Parallel retreat of slopes (Penck).",
@@ -3706,8 +3706,8 @@
       "stem": "Stream power law: Ω = ρgQS. Incision rate E = K·Ω^m·S^n. For m=1, n=1:",
       "options": [
         "E ∝ Q²",
-        "E ∝ Q",
-        "E ∝ S",
+        "E ∝ S²",
+        "E ∝ Q·S²",
         "E ∝ Q·S"
       ],
       "answer": 3,
@@ -3745,11 +3745,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Stereonet: β-axis of fold determined by:",
+      "stem": "On a stereonet, the β-axis of a fold is determined by the intersection of which features?",
       "options": [
-        "Trend of hinge line",
-        "Average of poles",
-        "Pole to axial plane",
+        "The average of the strike directions of all measured beds on the stereonet",
+        "The pole to the axial plane plotted as a single point on the stereonet",
+        "The maximum concentration of poles to bedding contoured on the projection",
         "Intersection of great circles through two fold limbs"
       ],
       "answer": 3,
@@ -3766,12 +3766,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Storativity S:",
+      "stem": "Storativity S of an aquifer is defined as the volume of water:",
       "options": [
-        "Volume stored",
+        "The total volume of water that an aquifer can store above the level of the water table",
         "Volume released per unit area per unit head drop. Confined: elastic storage (~10⁻⁵-10⁻³)",
-        "Head",
-        "Rate of flow"
+        "The rate at which groundwater flows across a unit cross sectional area of the aquifer formation",
+        "The ratio of the saturated aquifer thickness to the hydraulic conductivity value"
       ],
       "answer": 1,
       "solution": "S = Ss·b (specific storage × thickness). Unconfined: S ~ S_y (specific yield, 0.1-0.3).",
@@ -3829,12 +3829,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Muscovite belongs to:",
+      "stem": "To which structural class of silicates does the mineral muscovite belong?",
       "options": [
-        "Tectosilicates",
-        "Sorosilicates",
+        "Tectosilicates (framework silicates)",
+        "Sorosilicates (paired tetrahedra)",
         "Phyllosilicates (sheet silicates)",
-        "Nesosilicates"
+        "Nesosilicates (independent tetrahedra)"
       ],
       "answer": 2,
       "solution": "Muscovite — white mica. Good electrical insulator. Used in capacitors.",
@@ -3894,10 +3894,10 @@
       "difficulty": "hard",
       "stem": "Radiometric dating works because a radioactive parent isotope decays to a daughter at a rate set by its:",
       "options": [
-        "Depth of burial",
+        "Depth of burial below the Earth's surface",
         "Constant half-life",
-        "Pressure",
-        "Temperature"
+        "Pressure prevailing at the site of formation",
+        "Temperature of the surrounding environment"
       ],
       "answer": 1,
       "solution": "Decay is exponential with a fixed half-life, so the parent/daughter ratio gives an absolute age.",
@@ -3934,12 +3934,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Granulite:",
+      "stem": "Granulite is a high-grade metamorphic rock distinguished by the presence of which mineral assemblage?",
       "options": [
         "High-grade metamorphic. No hydrous minerals (pyroxene + feldspar + garnet)",
-        "Contact metamorphic",
-        "Low grade",
-        "Contains mica"
+        "Low-grade metamorphic rock rich in chlorite, muscovite, biotite and quartz minerals",
+        "Contact metamorphic hornfels formed adjacent to a large igneous intrusion",
+        "Mica-rich rock with a strong foliation formed at low to medium grade"
       ],
       "answer": 0,
       "solution": "Granulite: dry metamorphism. H2O absent. Pyroxene stable, biotite unstable.",
@@ -3976,11 +3976,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Chalk:",
+      "stem": "What is chalk composed of, and what are its characteristic physical properties?",
       "options": [
-        "Coarse limestone",
-        "Dolomite",
-        "Evaporite",
+        "Coarse-grained limestone with abundant large shelly fossils throughout",
+        "Dolomitic limestone formed by magnesium replacement of calcium",
+        "Evaporite deposit of halite and gypsum from a restricted basin",
         "Microscopic coccoliths (marine algae). Soft, white"
       ],
       "answer": 3,
@@ -3997,12 +3997,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Pencil cleavage forms when:",
+      "stem": "Pencil cleavage, which yields slender pencil-shaped rock fragments in deformed rocks, develops under which condition?",
       "options": [
         "Two cleavages intersect at high angle",
-        "Single cleavage",
-        "No deformation",
-        "Volcanic activity"
+        "A single cleavage overprints undeformed strata",
+        "Primary bedding is preserved without any strain",
+        "Shear stress rotates pre-existing fold hinges"
       ],
       "answer": 0,
       "solution": "Pencil cleavage: intersection of two cleavages at ~90°. Rock breaks into pencil-shaped fragments. Common in fold hinges.",
@@ -4039,12 +4039,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Aquitard:",
+      "stem": "An aquitard is a geological unit that yields little water to wells but may store and transmit water slowly; such a unit is:",
       "options": [
-        "Coarse sand",
-        "Water-bearing only",
+        "A coarse grained unit that yields large quantities of water very easily to pumping wells",
+        "A unit that only stores water and never transmits it to wells during pumping",
         "Low permeability unit (silt, clay, shale). Poor yield, may store/transmit slowly",
-        "High permeability"
+        "A highly permeable formation such as clean gravel or heavily fractured rock of granite"
       ],
       "answer": 2,
       "solution": "Aquitard: retards vertical flow. Leakage through aquitard → aquitard-aquifer system.",
@@ -4081,12 +4081,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Laccolith:",
+      "stem": "Which intrusive igneous body is concordant and domes the overlying strata?",
       "options": [
         "Concordant intrusion that domes overlying strata",
-        "Discordant",
-        "Vertical sheet",
-        "Plugs country rock"
+        "Discordant intrusion that cross-cuts the enclosing country rocks",
+        "Concordant intrusion that forms broad flat layers of basaltic composition",
+        "Narrow cylindrical body filling the feeder conduit of a volcano"
       ],
       "answer": 0,
       "solution": "Laccolith: mushroom-shaped. Overlying beds arched upward.",
@@ -4102,12 +4102,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Moho discontinuity depth:",
+      "stem": "The Moho discontinuity, marking the base of the crust, lies at what depths beneath oceanic and continental crust?",
       "options": [
-        "100 km",
-        "2 km",
+        "100 km. A uniform depth beneath oceans and continents, coincident with the top of the asthenosphere",
+        "2 km. The shallow depth at which the Conrad surface truncates the continental upper crust",
         "~5-10 km (oceanic), ~30-50 km (continental). Base of crust. Seismic P-wave jump ~6.7→8.1 km/s",
-        "10 km all"
+        "10 km everywhere. S-wave velocities drop sharply below this universal crustal base"
       ],
       "answer": 2,
       "solution": "Moho: crust-mantle boundary. Defined by Vp. Faster in mafic lower crust.",
@@ -4123,12 +4123,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Aquiclude:",
+      "stem": "An aquiclude is a saturated geological unit that is essentially impermeable and yields no significant water; it is typically composed of:",
       "options": [
         "Impermeable unit (clay, massive shale). No significant yield",
-        "Good aquifer",
-        "Fractured rock",
-        "Some yield"
+        "A saturated permeable unit that yields useful quantities of water",
+        "A fractured rock unit with good storage and moderate transmission",
+        "A coarse sand bed that transmits water with very little resistance"
       ],
       "answer": 0,
       "solution": "Aquiclude: prevents flow. Confining layer in confined aquifer.",
@@ -4144,11 +4144,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Lithostratigraphy:",
+      "stem": "How are rock units classified and ranked in the discipline of lithostratigraphy?",
       "options": [
-        "Based on structure",
-        "Based on age",
-        "Based on fossils",
+        "Division of rocks based only on their structural and tectonic features",
+        "Subdivision of the rock column on the basis of measured absolute ages",
+        "Correlation of strata on the basis of their contained fossil content",
         "Rock units based on lithology (Formation, Member, Group)"
       ],
       "answer": 3,
@@ -4165,11 +4165,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "Uranium deposits — unconformity-related:",
+      "stem": "Unconformity-related uranium deposits, like those in the Athabasca Basin, are characterized by what features?",
       "options": [
-        "Placer",
-        "Sandstone type",
-        "Volcanic",
+        "Placer accumulation of heavy radioactive minerals in mature beach sands",
+        "Sandstone-hosted roll-front uranium precipitated along redox boundaries between oxidized and reduced aquifer zones",
+        "Volcanic-hosted uranium associated with peralkaline rhyolite calderas",
         "Athabasca Basin (Canada). High grade (>1% U₃O₈). Basement + sandstone. U/Pb age ~1.5 Ga"
       ],
       "answer": 3,
@@ -4186,12 +4186,12 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Geological Time Scale:",
+      "stem": "What is the relative duration of the Precambrian, Paleozoic, Mesozoic, and Cenozoic in the geological time scale?",
       "options": [
-        "All equal",
-        "Precambrian shortest",
+        "All eras are of equal duration across the entire geological time scale of the Earth history",
+        "Precambrian is the shortest interval, covering less than 10% of Earth's recorded geological history",
         "Precambrian (88%), Paleozoic (545-251 Ma), Mesozoic (251-66 Ma), Cenozoic (66 Ma-present)",
-        "Cenozoic longest"
+        "Cenozoic is the longest era, spanning nearly half of the total Earth history span recorded"
       ],
       "answer": 2,
       "solution": "Hadean, Archean, Proterozoic (Precambrian). Phanerozoic: Paleo-Meso-Cenozoic.",
@@ -4207,11 +4207,11 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Magnetotelluric (MT) method:",
+      "stem": "The magnetotelluric (MT) method uses what natural source field, and which parameter is measured from it?",
       "options": [
-        "Gravity",
-        "Artificial source",
-        "Seismic waves",
+        "Controlled dc current injected to map resistivity at shallow depth",
+        "Seismic waves generated by an airgun source to image deep crustal reflectors",
+        "Gravity measurements reduced for terrain to model the Moho depth beneath a basin",
         "Natural EM field (lightning, solar wind). Measures impedance Z = E/H"
       ],
       "answer": 3,
@@ -4228,7 +4228,7 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "easy",
-      "stem": "Hardness of corundum on Mohs scale:",
+      "stem": "On the Mohs scale of mineral hardness, what hardness value does the mineral corundum have?",
       "options": [
         "10",
         "8",
