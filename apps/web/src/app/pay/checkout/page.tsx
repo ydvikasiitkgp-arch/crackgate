@@ -7,6 +7,7 @@ import { subjectPrice, subjectLabel } from "@/data/catalog";
 import { calculateComboDiscounts } from "@/lib/combos";
 import CheckoutForm from "./form";
 import CopyCard from "./copy-card";
+import EmptyCart from "./empty-cart";
 import {
   Shield,
   Clock,
@@ -55,7 +56,14 @@ export default async function CheckoutPage() {
   }
 
   if (raw.length === 0) {
-    redirect("/pricing");
+    // Don't bounce to /pricing. The cart may live in localStorage (guest add,
+    // or auth hadn't resolved when the item was added) — EmptyCart pushes it to
+    // db.cart and refreshes so checkout renders with the user's real items.
+    return (
+      <div className="max-w-5xl mx-auto px-5 py-8 pb-32 lg:pb-8">
+        <EmptyCart />
+      </div>
+    );
   }
 
   const items: CartItem[] = raw.map((r) => {
