@@ -121,9 +121,9 @@
       "difficulty": "medium",
       "stem": "Underground bearing measurements require:",
       "options": [
-        "EDM only",
+        "Measurement with a steel tape only",
         "Allowance for local magnetic attraction",
-        "GPS only",
+        "The use of a gyro theodolite for every sight",
         "No special considerations"
       ],
       "answer": 1,
@@ -159,7 +159,7 @@
       "options": [
         "EDM calibration",
         "Geological field mapping and rough bearing measurement",
-        "Levelling",
+        "Precise measurement of vertical angles",
         "Precise theodolite work"
       ],
       "answer": 1,
@@ -175,10 +175,10 @@
       "difficulty": "medium",
       "stem": "The compass box is made of:",
       "options": [
-        "Magnetic alloy",
-        "Iron",
+        "A magnetic alloy of the same material as the needle",
+        "Mild steel to give the box mechanical strength",
         "Non-magnetic material (brass, aluminium, or plastic)",
-        "Steel"
+        "An alloy with a high magnetic permeability"
       ],
       "answer": 2,
       "solution": "Non-magnetic materials prevent interference with the magnetic needle."
@@ -213,8 +213,8 @@
       "options": [
         "Fixed to the sight vane",
         "Clamped to the circle after orientation",
-        "Always free",
-        "Removed"
+        "Left free to swing throughout the observation",
+        "Locked to the sight vane after each reading"
       ],
       "answer": 1,
       "solution": "After initial orientation, the clamped needle maintains the reference."
@@ -266,9 +266,9 @@
       "stem": "The vernier on a miner's dial typically has a least count of:",
       "options": [
         "0 degrees 1 minute",
-        "1 degree",
+        "2 degrees of arc (120 minutes)",
         "0 degrees 6 minutes (6 minutes)",
-        "10 degrees"
+        "5 degrees of arc (300 minutes)"
       ],
       "answer": 2,
       "solution": "Standard miner's dial vernier reads to approximately 6 minutes."
@@ -284,9 +284,9 @@
       "stem": "A miner's dial measures:",
       "options": [
         "Vertical angles only",
-        "Elevations",
+        "Vertical angles and elevations of points",
         "Horizontal bearings (magnetic)",
-        "Distances"
+        "Horizontal distances along the traverse"
       ],
       "answer": 2,
       "solution": "The primary measurement is magnetic bearing of the line of sight."
@@ -337,7 +337,7 @@
       "difficulty": "medium",
       "stem": "Underground iron ore deposits can cause:",
       "options": [
-        "No effect",
+        "A slight change in the ambient temperature",
         "Temperature change",
         "Increased accuracy",
         "Local magnetic attraction deflecting the needle"
@@ -356,7 +356,7 @@
       "stem": "The dipping needle measures vertical angles by:",
       "options": [
         "Measuring distance",
-        "Using GPS",
+        "Measuring the magnetic bearing of the line",
         "Rotating about a horizontal axis and reading the scale",
         "Free swinging in the horizontal plane"
       ],
@@ -392,8 +392,8 @@
       "stem": "The compass box is made non-magnetic to:",
       "options": [
         "Prevent interference with the magnetic needle",
-        "Lower cost",
-        "Reduce weight",
+        "Reduce the cost of the instrument body",
+        "Allow the needle to be seen through the box",
         "Improve aesthetics"
       ],
       "answer": 0,
@@ -430,7 +430,7 @@
         "Orienting the needle to magnetic north and clamping the circle",
         "Setting to true north",
         "Using a theodolite",
-        "Using GPS"
+        "Sighting the dial on the previous station"
       ],
       "answer": 0,
       "solution": "The circle is clamped when the needle reads magnetic north."
@@ -501,7 +501,7 @@
       "options": [
         "Two or more well-spaced points and compared",
         "No points needed",
-        "Random points",
+        "A single point with a known bearing only",
         "Only a single well-spaced point"
       ],
       "answer": 0,
@@ -520,7 +520,7 @@
         "Multiplying by declination",
         "Dividing by declination",
         "Adding or subtracting the declination value from the magnetic bearing",
-        "Ignoring it"
+        "Adding the declination twice to the bearing"
       ],
       "answer": 2,
       "solution": "True bearing = magnetic bearing + east declination (or - west declination)."
@@ -535,10 +535,10 @@
       "difficulty": "medium",
       "stem": "A miner's dial is also called:",
       "options": [
-        "Theodolite",
+        "An optical theodolite of vernier type",
         "Mining compass or dial compass",
-        "Total station",
-        "Level"
+        "An electronic theodolite with a built in EDM",
+        "A dumpy level fitted with a horizontal circle"
       ],
       "answer": 1,
       "solution": "Common names include mining compass, dial compass, or simply dial."
@@ -554,9 +554,9 @@
       "stem": "The compass needle is suspended by:",
       "options": [
         "A sharp pivot point (jewel bearing)",
-        "A spring",
-        "A magnet",
-        "A string"
+        "A coil spring at the base of the box",
+        "A wire mesh supporting the needle assembly",
+        "A counterweighted arm at the centre of the box"
       ],
       "answer": 0,
       "solution": "A jewel bearing allows the needle to swing freely with minimal friction."
@@ -571,9 +571,9 @@
       "difficulty": "medium",
       "stem": "The damping of the compass needle is achieved by:",
       "options": [
-        "Oil only",
-        "A spring",
-        "A magnet",
+        "Oil friction in a sealed chamber",
+        "A steel spring attached to the needle pivot",
+        "A permanent magnet beneath the compass box",
         "Air resistance or a damping cup"
       ],
       "answer": 3,
@@ -627,8 +627,8 @@
       "options": [
         "Vertical angle (dip) of a line",
         "Horizontal bearing only",
-        "Temperature",
-        "Distance"
+        "The temperature of the surrounding strata",
+        "The magnetic bearing of the line of sight"
       ],
       "answer": 0,
       "solution": "The dipping needle indicates the inclination of the line of sight from horizontal."
@@ -643,10 +643,10 @@
       "difficulty": "medium",
       "stem": "A Brunton compass has a:",
       "options": [
-        "Telescope",
-        "GPS receiver",
+        "A telescope with a stadia diaphragm",
+        "A GPS receiver for satellite positioning",
         "Mirror for sighting and a clinometer for vertical angles",
-        "EDM"
+        "An electronic distance measuring unit"
       ],
       "answer": 2,
       "solution": "The mirror allows sighting while reading; clinometer measures dip."
@@ -679,8 +679,8 @@
       "difficulty": "medium",
       "stem": "The clinometer on a Brunton compass measures:",
       "options": [
-        "Temperature",
-        "Distance",
+        "The horizontal angle between the sight lines",
+        "The distance between the observer and the target",
         "Vertical angle (dip or inclination)",
         "Horizontal bearing"
       ],
@@ -697,7 +697,7 @@
       "difficulty": "medium",
       "stem": "The compass needle in a miner's dial is:",
       "options": [
-        "Non-magnetic",
+        "Made of steel and permanently fixed to the box",
         "Heavy and fixed",
         "Made of copper",
         "Lightly magnetized and balanced on a pivot"
@@ -824,7 +824,7 @@
       "stem": "The accuracy of a miner's dial survey is:",
       "options": [
         "Lower than theodolite survey (about 1 in 200 to 1 in 500)",
-        "Infinite",
+        "Equal to that of a vernier theodolite",
         "Higher than theodolite",
         "Same as theodolite"
       ],
@@ -967,10 +967,10 @@
       "difficulty": "medium",
       "stem": "The error due to using a chain that is too long is:",
       "options": [
-        "Zero",
+        "A constant error of the same sign",
         "Positive (measured distances are too long)",
         "Negative (measured distances are too short)",
-        "Random"
+        "An error proportional to the square of the length"
       ],
       "answer": 2,
       "solution": "A long chain covers more ground per reading, so measured values are too short."
@@ -1075,10 +1075,10 @@
       "difficulty": "medium",
       "stem": "In underground surveying, the main disadvantage of a miner's dial is:",
       "options": [
-        "Too heavy",
+        "Requires a clear line of sight to the sun",
         "Susceptibility to local magnetic attraction",
         "Cannot measure angles",
-        "Too expensive"
+        "Needs frequent recalibration of its circles"
       ],
       "answer": 1,
       "solution": "Ferrous materials underground cause local attraction, reducing compass accuracy."
@@ -1273,7 +1273,7 @@
       "difficulty": "medium",
       "stem": "When workings extend to within 60 m of the settled boundary with an adjacent mine, the owner/agent/manager shall:",
       "options": [
-        "Only inform the labour union",
+        "Inform the district magistrate and stop workings",
         "Inform the adjacent mine and give its surveyors reasonable facilities for surveys",
         "Stop all work in the mine",
         "Seal the workings"
@@ -1436,7 +1436,7 @@
       "stem": "The joint survey plan showing workings near the common boundary with an adjacent mine shall be signed by:",
       "options": [
         "The surveyors and managers of both the mine and the adjacent mine",
-        "Only the surveyor of the mine",
+        "The surveyor and the owner of the mine only",
         "The Chief Inspector only",
         "The district magistrate"
       ],
@@ -1453,7 +1453,7 @@
       "difficulty": "medium",
       "stem": "Every mine plan or section under CMR 2017 shall show:",
       "options": [
-        "Only the grid line",
+        "The magnetic meridian without any reference line",
         "The magnetic meridian without date",
         "The railway alignment",
         "The true north, or the magnetic meridian with the date of the latter"

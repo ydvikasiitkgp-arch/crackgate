@@ -91,9 +91,9 @@
       "stem": "The typical secondary voltage of a mine distribution transformer for continuous miners is:",
       "options": [
         "110 V DC",
-        "11 kV",
+        "11 kV primary supply",
         "415 V or 660 V or 1100 V",
-        "230 V"
+        "230 V lighting supply"
       ],
       "answer": 2,
       "solution": "Underground mining equipment commonly operates at 660V or 1100V."
@@ -129,7 +129,7 @@
         "AN (Air Natural) or AF (Air Forced) for dry type",
         "Water cooled only",
         "ONAN (Oil Natural Air Natural)",
-        "Oil forced"
+        "Oil forced cooling"
       ],
       "answer": 0,
       "solution": "Dry-type mine transformers use air natural or air forced cooling."
@@ -146,8 +146,8 @@
       "options": [
         "Visual inspection only",
         "Cable fault locator (thumper), insulation tester, and time domain reflectometer",
-        "Megger only",
-        "Ammeter only"
+        "Megger insulation test alone",
+        "Ammeter load test alone"
       ],
       "answer": 1,
       "solution": "Combination of megger, TDR, and thumper is used."
@@ -183,7 +183,7 @@
         "Using ultrasound",
         "Sending high-voltage DC pulses and detecting the fault discharge sound",
         "Hitting the cable",
-        "Manual digging"
+        "Manual trench excavation"
       ],
       "answer": 1,
       "solution": "Thumper sends high-energy DC pulses causing audible discharge at fault point."
@@ -198,10 +198,10 @@
       "difficulty": "medium",
       "stem": "Pump station electrical in mines typically includes:",
       "options": [
-        "Only a pump cable",
+        "A pump cable only",
         "Pump motor, starter, protection relays, and local control panel",
         "Thermal insulation properties",
-        "Only an isolation switch"
+        "An isolation switch"
       ],
       "answer": 1,
       "solution": "Pump stations include motor, starter, protection, and auto control."
@@ -218,7 +218,7 @@
       "options": [
         "Single-speed motor only",
         "DC motor with rheostat",
-        "Steam engine",
+        "Steam turbine drive",
         "VFD-controlled motor for smooth start and variable speed"
       ],
       "answer": 3,
@@ -252,7 +252,7 @@
       "difficulty": "medium",
       "stem": "A belt conveyor slip detection system uses:",
       "options": [
-        "Gas detector",
+        "Gas detector monitoring",
         "Pressure sensor",
         "Temperature sensor only",
         "Speed sensors on drive and tail pulleys to detect slip"
@@ -306,7 +306,7 @@
       "difficulty": "medium",
       "stem": "Shaft winder (hoist) electrical system uses:",
       "options": [
-        "Stepper motor",
+        "A stepper motor",
         "Wound rotor induction motor or DC motor with Ward-Leonard control",
         "Single-phase motor",
         "Universal motor"
@@ -327,7 +327,7 @@
         "Electromagnetic (fail-safe) spring-applied brake and dynamic braking",
         "No brake needed",
         "Mechanical only",
-        "Hydraulic only"
+        "Hydraulic braking only"
       ],
       "answer": 0,
       "solution": "Safety brakes are spring-applied and electrically/hydraulically released."
@@ -378,10 +378,10 @@
       "difficulty": "medium",
       "stem": "A trolley wire system in mines is used for:",
       "options": [
-        "Lighting",
-        "Pumping",
+        "Lighting along roadways",
+        "Pumping water out",
         "Supplying power to trolley locomotives for haulage",
-        "Communication"
+        "Communication networks"
       ],
       "answer": 2,
       "solution": "Trolley wire provides DC power to mine locomotives."
@@ -486,7 +486,7 @@
       "difficulty": "medium",
       "stem": "A battery charger for mine LHD should have:",
       "options": [
-        "No protection",
+        "No protection features",
         "DC output only",
         "Automatic charging profile with temperature and voltage monitoring",
         "Manual control only"
@@ -543,7 +543,7 @@
         "Capacitor explosion",
         "Ignition of surrounding methane/air mixture",
         "Wire overheating",
-        "Battery damage"
+        "Battery overheating damage"
       ],
       "answer": 1,
       "solution": "IS exploder limits energy below minimum ignition energy of methane."
@@ -595,8 +595,8 @@
       "stem": "A shearer in longwall mining is powered through:",
       "options": [
         "Armored festoon cable system on maingate side",
-        "Trolley wire",
-        "Battery pack",
+        "Trolley wire system",
+        "Battery power pack",
         "Trailing cable only"
       ],
       "answer": 0,
@@ -615,7 +615,7 @@
         "Multi-core cable suspended from trolley wire with sliding contacts",
         "No cable needed",
         "Underground cable",
-        "Single cable"
+        "A single cable"
       ],
       "answer": 0,
       "solution": "Festoon system: flat multi-core cable with C-shaped current collector shoes."
@@ -722,7 +722,7 @@
       "options": [
         "Seal the tank",
         "Relieve internal pressure during fault preventing tank rupture",
-        "Release oil",
+        "Release the transformer oil",
         "Increase pressure"
       ],
       "answer": 1,
@@ -757,7 +757,7 @@
       "stem": "Remote monitoring of mine electrical systems allows:",
       "options": [
         "Manual reading only",
-        "No benefit",
+        "No benefit at all",
         "Real-time monitoring of equipment status, alarms, and energy from surface control room",
         "Chemical resistance of components"
       ],
@@ -793,7 +793,7 @@
       "stem": "Energy monitoring in mines helps to:",
       "options": [
         "Increase consumption",
-        "No benefit",
+        "No benefit at all",
         "Identify waste, optimize usage, and reduce electricity cost",
         "Increase tariff"
       ],
@@ -811,9 +811,9 @@
       "stem": "The main advantage of using 1100V supply (instead of 415V) for mining equipment is:",
       "options": [
         "Lower current for same power, enabling smaller cables and less voltage drop",
-        "Safer voltage",
+        "A safer voltage level",
         "Lower insulation requirement",
-        "Higher speed"
+        "Higher operating speed"
       ],
       "answer": 0,
       "solution": "Higher voltage → lower current → smaller cables and less losses."
@@ -903,7 +903,7 @@
         "Improve aesthetics",
         "Block ventilation",
         "Contain arc flash energy and prevent propagation to adjacent equipment",
-        "Stop people"
+        "Stop persons from entering"
       ],
       "answer": 2,
       "solution": "Arc flash barriers protect adjacent equipment and personnel."
@@ -920,7 +920,7 @@
       "options": [
         "Short-circuit protection only",
         "Overload, short-circuit, phase loss, and earth fault protection",
-        "No protection",
+        "No protection at all",
         "Extraction of iron ore"
       ],
       "answer": 1,
@@ -936,10 +936,10 @@
       "difficulty": "medium",
       "stem": "A phase sequence relay in mine power system protects against:",
       "options": [
-        "Earth fault",
+        "Earth fault protection",
         "Incorrect phase sequence which can cause reverse rotation of motors",
-        "Overvoltage",
-        "Overload"
+        "Overvoltage conditions",
+        "Overload conditions"
       ],
       "answer": 1,
       "solution": "Phase sequence relay detects wrong phase rotation."
@@ -955,9 +955,9 @@
       "stem": "Undervoltage protection in mine motor circuits prevents:",
       "options": [
         "Motor from starting",
-        "Overvoltage",
+        "Overvoltage conditions",
         "Motor from restarting automatically when voltage returns after a power failure",
-        "Overload"
+        "Overload conditions"
       ],
       "answer": 2,
       "solution": "Undervoltage protection prevents automatic restart after power restoration."
@@ -992,7 +992,7 @@
       "options": [
         "Fresh initial training of 1 month",
         "Retraining in the handling of explosives before resuming such duties",
-        "No retraining",
+        "Fresh refresher training of six months",
         "A written test only"
       ],
       "answer": 1,
@@ -1045,9 +1045,9 @@
       "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
         "One month of refresher training",
-        "No training",
+        "Informal training under any senior workman",
         "Initial vocational training in the prescribed subjects",
-        "Only a medical test"
+        "A medical certificate from any private practitioner"
       ],
       "answer": 2,
       "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
@@ -1153,8 +1153,8 @@
       "stem": "Kaplan turbine has:",
       "options": [
         "Fixed blades only",
-        "Pelton cups",
-        "No blades",
+        "Pelton buckets on runner",
+        "No blades at all",
         "Adjustable blades for varying flow"
       ],
       "answer": 3,
@@ -1188,9 +1188,9 @@
       "difficulty": "medium",
       "stem": "Cooling tower in thermal power plant removes:",
       "options": [
-        "Flue gas",
-        "Coal ash",
-        "Steam",
+        "Flue gas emissions",
+        "Coal ash residue",
+        "Steam condensate",
         "Waste heat from condenser cooling water"
       ],
       "answer": 3,
@@ -1206,9 +1206,9 @@
       "difficulty": "medium",
       "stem": "ESP (Electrostatic Precipitator) removes:",
       "options": [
-        "CO2",
-        "SOx only",
-        "NOx only",
+        "Carbon dioxide",
+        "Sulphur oxides only",
+        "Nitrogen oxides only",
         "Particulate matter from flue gas"
       ],
       "answer": 3,
@@ -1225,7 +1225,7 @@
       "stem": "Boiler drum level control maintains:",
       "options": [
         "Temperature only",
-        "Fuel flow",
+        "Fuel flow rate",
         "Steam pressure only",
         "Water level within safe limits"
       ],
@@ -1260,9 +1260,9 @@
       "difficulty": "medium",
       "stem": "Air preheater in thermal plant:",
       "options": [
-        "Preheats fuel",
+        "Preheats the fuel",
         "Cools the air",
-        "Filters air",
+        "Filters the air",
         "Preheats combustion air using flue gas"
       ],
       "answer": 3,
@@ -1278,10 +1278,10 @@
       "difficulty": "medium",
       "stem": "Superheater in boiler:",
       "options": [
-        "Dries steam",
+        "Dries the steam",
         "Condenses steam",
         "Heats steam beyond saturation temperature",
-        "Cools steam"
+        "Cools the steam"
       ],
       "answer": 2,
       "solution": "Superheater: raises steam temperature for higher efficiency"
@@ -1297,9 +1297,9 @@
       "stem": "Reheater in a power plant reheats:",
       "options": [
         "Steam after partial expansion in HP turbine",
-        "Feedwater",
-        "Condensate",
-        "Fuel"
+        "Feedwater supply",
+        "Condensate return",
+        "Boiler fuel supply"
       ],
       "answer": 0,
       "solution": "Reheat: steam returned after HP stage, reheated, sent to IP/LP"
@@ -1315,9 +1315,9 @@
       "stem": "Condenser in steam power plant creates:",
       "options": [
         "Vacuum for turbine exhaust for maximum work extraction",
-        "Fuel flow",
-        "Steam pressure",
-        "Cooling"
+        "Fuel flow regulation",
+        "Steam pressure control",
+        "Cooling water circulation"
       ],
       "answer": 0,
       "solution": "Condenser: maintains vacuum, maximizes turbine expansion ratio"
@@ -1332,8 +1332,8 @@
       "difficulty": "medium",
       "stem": "Feedwater heater is used to:",
       "options": [
-        "Generate steam",
-        "Store water",
+        "Generate additional steam",
+        "Store feedwater reserve",
         "Preheat water before entering boiler using extraction steam",
         "Cool the boiler"
       ],
@@ -1459,9 +1459,9 @@
       "stem": "PHWR nuclear reactor uses:",
       "options": [
         "Heavy water as moderator and coolant",
-        "Gas",
-        "Graphite",
-        "Light water"
+        "Gas coolant system",
+        "Graphite moderator",
+        "Light water coolant"
       ],
       "answer": 0,
       "solution": "PHWR: Pressurised Heavy Water Reactor (CANDU type)"
@@ -1730,7 +1730,7 @@
       "options": [
         "Extracting coal leaving pillars for support",
         "Full extraction",
-        "Dredging",
+        "Dredging coal from surface",
         "Open pit method"
       ],
       "answer": 0,

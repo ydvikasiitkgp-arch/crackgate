@@ -37,9 +37,9 @@
       "stem": "Emergency diesel generator in a power station provides:",
       "options": [
         "Black start and emergency power",
-        "Normal power",
-        "Reactive power",
-        "Peak power"
+        "Normal running power",
+        "Reactive power support",
+        "Peak load power"
       ],
       "answer": 0,
       "solution": "EDG: starts during blackout, powers essential loads"
@@ -55,9 +55,9 @@
       "stem": "Binary cycle geothermal plant uses:",
       "options": [
         "Hot water only",
-        "Steam directly",
+        "Steam directly from wells",
         "Secondary working fluid with lower boiling point",
-        "Coal"
+        "Coal fired boiler"
       ],
       "answer": 2,
       "solution": "Binary: heat exchange with organic fluid (isobutane, isopentane)"
@@ -72,10 +72,10 @@
       "difficulty": "medium",
       "stem": "The function of a steam trap in a power plant is to:",
       "options": [
-        "Cool steam",
-        "Measure flow",
+        "Cool the steam",
+        "Measure the flow",
         "Remove condensate while retaining steam",
-        "Generate steam"
+        "Generate additional steam"
       ],
       "answer": 2,
       "solution": "Steam trap: discharges condensate, prevents steam loss"
@@ -108,9 +108,9 @@
       "difficulty": "medium",
       "stem": "Peak demand is met by:",
       "options": [
-        "Hydro only",
-        "Solar only",
-        "Nuclear only",
+        "Hydro power only",
+        "Solar power only",
+        "Nuclear power only",
         "Gas turbines, pumped hydro, or diesel generators"
       ],
       "answer": 3,
@@ -129,7 +129,7 @@
         "Using batteries",
         "Pumping water to upper reservoir during off-peak",
         "Generating all the time",
-        "Storing coal"
+        "Storing coal reserves"
       ],
       "answer": 1,
       "solution": "Pumped storage: pump up at night, generate at peak"
@@ -144,7 +144,7 @@
       "difficulty": "medium",
       "stem": "Cogeneration means:",
       "options": [
-        "Double voltage",
+        "Double the voltage",
         "Two fuel types",
         "Two generators in parallel",
         "Combined heat and power from same fuel"
@@ -182,7 +182,7 @@
       "options": [
         "Stop working immediately without any plan",
         "Leave the water body untouched forever",
-        "Only mark it on the board",
+        "Install a signal lamp near the water body and continue working",
         "Prepare a scheme for protection against inrush and drain the water in a planned manner"
       ],
       "answer": 3,
@@ -199,8 +199,8 @@
       "stem": "Availability factor of a power plant:",
       "options": [
         "Hours running / Hours available",
-        "Output / Input",
-        "Revenue / Cost",
+        "Output divided by input",
+        "Revenue divided by cost",
         "Hours available / Total hours in period"
       ],
       "answer": 3,
@@ -252,10 +252,10 @@
       "difficulty": "medium",
       "stem": "Gas turbine in Brayton cycle uses which working fluid?",
       "options": [
-        "Mercury",
-        "Steam",
+        "Mercury vapour",
+        "Steam in closed loop",
         "Hot combustion gases",
-        "Water"
+        "Water as working medium"
       ],
       "answer": 2,
       "solution": "Brayton: air/gas as working fluid"
@@ -271,7 +271,7 @@
       "stem": "The function of an exciter in alternator is to:",
       "options": [
         "Generate AC output",
-        "Control speed",
+        "Control the speed",
         "Measure voltage",
         "Supply DC field current to rotor winding"
       ],
@@ -325,8 +325,8 @@
       "stem": "Alternator runs at leading PF when:",
       "options": [
         "At rated excitation",
-        "No load",
-        "Underexcited",
+        "At no load",
+        "When underexcited",
         "Overexcited, supplying reactive power"
       ],
       "answer": 3,
@@ -342,10 +342,10 @@
       "difficulty": "medium",
       "stem": "A standby generator should start within:",
       "options": [
-        "1 minute",
+        "Within 1 minute",
         "10-15 seconds for critical loads",
-        "1 hour",
-        "30 seconds"
+        "Within 1 hour",
+        "Within 30 seconds"
       ],
       "answer": 1,
       "solution": "Emergency: 10-15 seconds start to full load"
@@ -396,7 +396,7 @@
       "difficulty": "medium",
       "stem": "The function of an isolator is to:",
       "options": [
-        "Control load",
+        "Control the load",
         "Interrupt fault current",
         "Measure current",
         "Provide visible break for maintenance safety"
@@ -432,7 +432,7 @@
       "difficulty": "medium",
       "stem": "Hydroelectric power station has:",
       "options": [
-        "Pollution",
+        "Pollution from operations",
         "High fuel cost",
         "High maintenance",
         "Low running cost and long life"
@@ -522,7 +522,7 @@
       "difficulty": "medium",
       "stem": "Rotary UPS uses:",
       "options": [
-        "Batteries only",
+        "Batteries for storage",
         "Motor-generator set for power conditioning",
         "No moving parts",
         "Capacitors only"
@@ -542,8 +542,8 @@
       "options": [
         "Power electronics (rectifier/inverter/battery)",
         "Motor-generator",
-        "Flywheel only",
-        "No electronics"
+        "Flywheel energy storage",
+        "No electronics at all"
       ],
       "answer": 0,
       "solution": "Static UPS: battery + inverter electronics"
@@ -576,9 +576,9 @@
       "difficulty": "medium",
       "stem": "Maximum demand indicator in energy meter records:",
       "options": [
-        "Minimum demand",
+        "Minimum demand period",
         "Instantaneous demand",
-        "Average demand",
+        "Average demand value",
         "Highest kW or kVA during billing period"
       ],
       "answer": 3,
@@ -685,7 +685,7 @@
       "stem": "High impedance bus protection principle:",
       "options": [
         "Current comparison only",
-        "Series CTs",
+        "Series connected CTs",
         "Voltage comparison only",
         "All CTs in parallel with matching burden"
       ],
@@ -739,9 +739,9 @@
       "stem": "Every mechanised outlet (shaft or incline) is examined at least once in every 7 days by:",
       "options": [
         "An engineer, electrical supervisor or foreman, or a competent person authorised by the engineer",
-        "Only the manager",
+        "Any officer of the electrical department",
         "The winding engineman",
-        "Any workman"
+        "Any miner of the mine"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 75(2): mechanised outlets are examined at least once in 7 days by an engineer, electrical supervisor or foreman (or authorised competent person), recorded in a bound paged book."
@@ -793,9 +793,9 @@
       "stem": "Auto-reclosing scheme in transmission lines:",
       "options": [
         "Recloses after 1 hour",
-        "Manual only",
+        "Manual reclosing only",
         "Quickly re-closes CB after transient fault clearance",
-        "Never recloses"
+        "Recloses after manual reset"
       ],
       "answer": 2,
       "solution": "Auto-reclose: recloses within 0.3-1s for transient faults"
@@ -812,7 +812,7 @@
       "options": [
         "Wide area monitoring and stability assessment",
         "Protection only",
-        "Metering only",
+        "Metering and billing",
         "Communication only"
       ],
       "answer": 0,
@@ -830,7 +830,7 @@
       "options": [
         "Normal condition",
         "Voltage is stable",
-        "No fault",
+        "When there is no fault",
         "Primary CB fails to clear fault within time"
       ],
       "answer": 3,
@@ -864,7 +864,7 @@
       "difficulty": "medium",
       "stem": "A relay with IDMT characteristic has:",
       "options": [
-        "Constant time",
+        "Constant operating time",
         "Operating time inversely proportional to fault current",
         "Directly proportional time",
         "No time delay"
@@ -902,7 +902,7 @@
       "options": [
         "Motor protection only",
         "Bus protection only",
-        "Short lines",
+        "Short transmission lines",
         "Fuse coordination and transformer protection"
       ],
       "answer": 3,
@@ -920,7 +920,7 @@
       "options": [
         "45 Hz only",
         "50 Hz exactly",
-        "60 Hz",
+        "60 Hz system frequency",
         "Set threshold (e.g., 49.5 Hz)"
       ],
       "answer": 3,
@@ -973,7 +973,7 @@
       "stem": "Out-of-step (pole slip) protection operates when:",
       "options": [
         "Fault current flows",
-        "Normal load",
+        "Normal load conditions",
         "Voltage is stable",
         "Generator loses synchronism with grid"
       ],
@@ -1008,7 +1008,7 @@
       "difficulty": "medium",
       "stem": "For electrical machinery and plant, the competent person for inspection under CMR 2017 shall be an engineer or electrician holding qualifications specified in:",
       "options": [
-        "IS 732",
+        "The Indian Electricity Rules, 1956",
         "CEA (Measures relating to Safety and Electric Supply) Regulations, 2010",
         "The Electricity Act 2003",
         "The Factories Act 1948"
@@ -1029,7 +1029,7 @@
         "External faults",
         "Internal faults from gas patterns",
         "Ambient temperature",
-        "Load level"
+        "The load level"
       ],
       "answer": 1,
       "solution": "DGA: H2, CH4, C2H2, C2H4 patterns indicate fault type"
@@ -1044,9 +1044,9 @@
       "difficulty": "medium",
       "stem": "Buchholz relay operation indicates:",
       "options": [
-        "Overvoltage",
-        "Overload",
-        "External fault",
+        "Overvoltage surge",
+        "Overload condition",
+        "External line fault",
         "Internal transformer fault with gas/ oil flow"
       ],
       "answer": 3,
@@ -1063,7 +1063,7 @@
       "stem": "Sudden pressure relay in transformer detects:",
       "options": [
         "Temperature change",
-        "Current change",
+        "Current change detection",
         "Rapid pressure rise from internal fault",
         "Slow pressure change"
       ],
@@ -1080,10 +1080,10 @@
       "difficulty": "medium",
       "stem": "Overfluxing (V/f) protection in transformer prevents:",
       "options": [
-        "Overcurrent",
-        "Earth fault",
+        "Overcurrent stress",
+        "Earth fault current",
         "Core saturation from excessive voltage or low frequency",
-        "Short circuit"
+        "Short circuit forces"
       ],
       "answer": 2,
       "solution": "V/f: prevents core saturation, overheating, and damage"
@@ -1099,9 +1099,9 @@
       "stem": "Motor starting current is typically:",
       "options": [
         "5-8 times full load current",
-        "10x FL",
-        "1x FL",
-        "2x FL"
+        "10 times full load",
+        "Equal to full load",
+        "2 times full load"
       ],
       "answer": 0,
       "solution": "DOL start: 5-8x FL current"
@@ -1225,8 +1225,8 @@
       "stem": "Teleprotection sends trip signals via:",
       "options": [
         "Power line only",
-        "Satellite only",
-        "Manual only",
+        "Satellite link channel",
+        "Manual operator call",
         "Communication channel (fiber/microwave/PLC)"
       ],
       "answer": 3,
@@ -1243,7 +1243,7 @@
       "stem": "IEC 61850 is a standard for:",
       "options": [
         "Substation communication and automation",
-        "Cable sizing",
+        "Cable sizing calculation",
         "Transformer design",
         "Motor efficiency"
       ],
@@ -1261,9 +1261,9 @@
       "stem": "Under CMR 2017, a thorough inspection of all machinery and plant in use is required at least once in every:",
       "options": [
         "7 days, recorded in a bound paged book",
-        "14 days",
-        "1 month",
-        "24 hours"
+        "10 days, recorded in the log book",
+        "15 days, verified by the manager",
+        "48 hours when work is in progress"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 213(5): a competent person thoroughly inspects all machinery and plant at least once in 7 days, recording results in a bound paged book."
@@ -1281,7 +1281,7 @@
         "Measurement only",
         "Time synchronization",
         "Client-server communication for monitoring",
-        "Fast tripping"
+        "Fast trip signalling"
       ],
       "answer": 2,
       "solution": "MMS: Manufacturing Message Specification for SCADA"
@@ -1332,10 +1332,10 @@
       "difficulty": "medium",
       "stem": "Process bus in substation replaces:",
       "options": [
-        "Bus bars",
+        "Bus bar arrangement",
         "Copper wiring from CTs/PTs to relays with fiber optic",
-        "Power cables",
-        "Switchgear"
+        "Power cable network",
+        "Switchgear panels"
       ],
       "answer": 1,
       "solution": "Process bus: fiber optic replaces copper analog wiring"
@@ -1386,9 +1386,9 @@
       "difficulty": "medium",
       "stem": "Partial discharge monitoring in cables detects:",
       "options": [
-        "Overvoltage",
+        "Overvoltage surge",
         "Temperature rise",
-        "Overcurrent",
+        "Overcurrent stress",
         "Insulation degradation before failure"
       ],
       "answer": 3,
@@ -1422,10 +1422,10 @@
       "difficulty": "medium",
       "stem": "Partial discharge in GIS is detected by:",
       "options": [
-        "Thermocamera",
+        "Thermal imaging camera",
         "UHF sensors or acoustic emission",
-        "Voltmeter",
-        "Ammeter"
+        "Voltmeter indication",
+        "Ammeter indication"
       ],
       "answer": 1,
       "solution": "UHF/acoustic: detects PD in SF6 insulated equipment"

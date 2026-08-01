@@ -54,10 +54,10 @@
       "difficulty": "medium",
       "stem": "The turns ratio of a transformer is defined as:",
       "options": [
-        "V₁/V₂",
+        "I1/I2",
         "Winding resistance testing",
-        "N₁/N₂",
-        "I₂/I₁"
+        "V2/V1",
+        "R1/R2"
       ],
       "answer": 1,
       "solution": "For an ideal transformer, N₁/N₂ = V₁/V₂ = I₂/I₁."
@@ -199,9 +199,9 @@
       "stem": "Every mechanised outlet (shaft or incline) is examined at least once in every 7 days by:",
       "options": [
         "An engineer, electrical supervisor or foreman, or a competent person authorised by the engineer",
-        "Only the manager",
+        "The district magistrate of the area",
         "The winding engineman",
-        "Any workman"
+        "Any miner of the mine"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 75(2): mechanised outlets are examined at least once in 7 days by an engineer, electrical supervisor or foreman (or authorised competent person), recorded in a bound paged book."
@@ -398,7 +398,7 @@
       "options": [
         "Determine relative polarity of windings",
         "Determine vector group",
-        "Measure losses",
+        "Determine the copper losses",
         "Determine transformation ratio"
       ],
       "answer": 0,
@@ -415,8 +415,8 @@
       "stem": "Two transformers can operate in parallel only if they have:",
       "options": [
         "Same kVA rating",
-        "Same impedance",
-        "Same brand",
+        "Same percentage impedance",
+        "Same manufacturer and year of make",
         "Same polarity and same voltage ratio"
       ],
       "answer": 3,
@@ -522,8 +522,8 @@
       "difficulty": "medium",
       "stem": "An earth fault relay on a transformer is connected through:",
       "options": [
-        "PT",
-        "CT",
+        "Potential transformer",
+        "CT only on one phase",
         "Neutral earthing resistor",
         "Both CT on phases and CT on neutral"
       ],
@@ -577,7 +577,7 @@
       "stem": "The tertiary winding in a three-phase transformer is used for:",
       "options": [
         "Increasing voltage",
-        "Reducing cost",
+        "Reducing the material cost",
         "Increasing kVA rating",
         "Providing neutral for unbalanced loads"
       ],
@@ -739,9 +739,9 @@
       "stem": "Zero voltage regulation occurs at what power factor?",
       "options": [
         "Leading (specific value)",
-        "Lagging",
-        "Zero",
-        "Unity"
+        "Lagging power factor",
+        "Zero power factor",
+        "Unity power factor"
       ],
       "answer": 0,
       "solution": "At a certain leading PF, the capacitive reactance drop cancels the resistance drop."
@@ -758,7 +758,7 @@
       "options": [
         "Greater than (1−k) × input",
         "Less than the total power transferred",
-        "Zero",
+        "Equal to the total copper loss",
         "Equal to input power"
       ],
       "answer": 1,
@@ -810,7 +810,7 @@
       "difficulty": "medium",
       "stem": "The maximum flux density in a transformer core is limited by:",
       "options": [
-        "Frequency",
+        "Supply frequency of the system",
         "Saturation of the core material",
         "Winding resistance",
         "Cooling arrangement"
@@ -919,9 +919,9 @@
       "stem": "The efficiency of a distribution transformer at no load is approximately:",
       "options": [
         "Very low (core losses only)",
-        "50%",
-        "100%",
-        "Zero"
+        "About 50 per cent",
+        "About 100 per cent",
+        "Exactly zero"
       ],
       "answer": 0,
       "solution": "At no load, only core losses occur, so efficiency is very low."
@@ -1098,10 +1098,10 @@
       "difficulty": "medium",
       "stem": "The no-volt release coil in a DC motor starter prevents:",
       "options": [
-        "Overcurrent",
-        "Overfluxing",
+        "Excessive starting current",
+        "Excessive field flux",
         "Restarting after power failure while load is connected",
-        "Overvoltage"
+        "Excessive terminal voltage"
       ],
       "answer": 2,
       "solution": "No-volt release de-energizes if supply fails, preventing dangerous restart."
@@ -1116,9 +1116,9 @@
       "difficulty": "medium",
       "stem": "The overload release in a DC motor starter operates on:",
       "options": [
-        "High voltage",
-        "High speed",
-        "Low voltage",
+        "High terminal voltage",
+        "Overspeeding of the armature",
+        "Low terminal voltage",
         "High current (bimetallic or magnetic)"
       ],
       "answer": 3,
@@ -1136,7 +1136,7 @@
       "options": [
         "Stop working immediately without any plan",
         "Leave the water body untouched forever",
-        "Only mark it on the board",
+        "Install a signal lamp near the water body and continue working",
         "Prepare a scheme for protection against inrush and drain the water in a planned manner"
       ],
       "answer": 3,
@@ -1172,7 +1172,7 @@
       "options": [
         "Reversing armature connections while running",
         "Disconnecting supply",
-        "Reducing flux",
+        "Weakening the field flux",
         "Adding resistance"
       ],
       "answer": 0,
@@ -1225,9 +1225,9 @@
       "stem": "Interpoles in a DC machine are used to:",
       "options": [
         "Increase torque",
-        "Increase flux",
+        "Increase the main field flux",
         "Neutralize armature reaction and improve commutation",
-        "Reduce speed"
+        "Reduce the speed of rotation"
       ],
       "answer": 2,
       "solution": "Interpoles produce flux opposing armature reaction flux in the neutral zone."
@@ -1315,9 +1315,9 @@
       "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
         "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
-        "Only loss of life",
-        "Only explosions",
-        "Only minor injuries"
+        "Loss of life and serious bodily injury only",
+        "Explosion and fire occurring in the opencast part only",
+        "Minor injuries and first-aid cases only"
       ],
       "answer": 0,
       "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
@@ -1332,7 +1332,7 @@
       "difficulty": "medium",
       "stem": "A DC motor's speed drops with load primarily because:",
       "options": [
-        "Field weakens",
+        "The field flux gradually weakens",
         "Friction increases",
         "Back EMF decreases as Ia increases (IR drop)",
         "Supply voltage drops"
@@ -1459,9 +1459,9 @@
       "stem": "A DC shunt motor running at no load suddenly loses its field connection. What happens?",
       "options": [
         "Motor speed increases dangerously",
-        "Motor stops",
+        "The motor comes to rest",
         "Motor runs at same speed",
-        "Motor reverses"
+        "The motor reverses its direction"
       ],
       "answer": 0,
       "solution": "Loss of field means very low flux, speed tries to go to infinity (runaway)."
@@ -1566,10 +1566,10 @@
       "difficulty": "medium",
       "stem": "Dr. B.R. Ambedkar is known as:",
       "options": [
-        "Iron Man",
+        "Iron Man of India",
         "Father of the Nation",
         "Father of Indian Constitution",
-        "Netaji"
+        "Netaji Subhas Chandra Bose"
       ],
       "answer": 2,
       "solution": "Dr. Ambedkar: Chairman of Drafting Committee"
@@ -1782,9 +1782,9 @@
       "difficulty": "medium",
       "stem": "India's first satellite Aryabhata was launched with help of:",
       "options": [
-        "USA",
-        "Self",
-        "France",
+        "United States",
+        "Indigenously made",
+        "France (Ariane)",
         "Soviet Union (USSR)"
       ],
       "answer": 3,

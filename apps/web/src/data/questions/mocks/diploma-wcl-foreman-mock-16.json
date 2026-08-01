@@ -37,9 +37,9 @@
       "stem": "SF6 gas decomposition products are:",
       "options": [
         "Toxic and corrosive (SOF2, SO2F2, HF)",
-        "Odourless only",
-        "Flammable",
-        "Harmless"
+        "Odourless decomposition products",
+        "Flammable gases",
+        "Harmless to humans"
       ],
       "answer": 0,
       "solution": "Decomposition: toxic gases, requires safety precautions"
@@ -72,7 +72,7 @@
       "difficulty": "medium",
       "stem": "For electrical machinery and plant, the competent person for inspection under CMR 2017 shall be an engineer or electrician holding qualifications specified in:",
       "options": [
-        "IS 732",
+        "The Indian Electricity Rules, 1956",
         "CEA (Measures relating to Safety and Electric Supply) Regulations, 2010",
         "The Electricity Act 2003",
         "The Factories Act 1948"
@@ -90,8 +90,8 @@
       "difficulty": "medium",
       "stem": "Transformer thermal model predicts:",
       "options": [
-        "Sound level",
-        "Oil colour",
+        "Sound level emission",
+        "Oil colour changes",
         "Winding hot spot temperature based on load and ambient",
         "Vibration level"
       ],
@@ -126,8 +126,8 @@
       "difficulty": "medium",
       "stem": "DGA pattern of H2 + CH4 + C2H4 indicates:",
       "options": [
-        "Normal",
-        "Arcing",
+        "Normal condition",
+        "Arcing condition",
         "Electrical discharge",
         "Thermal fault (overheating)"
       ],
@@ -145,9 +145,9 @@
       "stem": "DGA pattern of H2 + CH4 + C2H2 indicates:",
       "options": [
         "High energy arcing",
-        "Thermal fault",
+        "Thermal overloading",
         "Low energy electrical discharge (partial discharge)",
-        "Normal"
+        "Normal condition"
       ],
       "answer": 2,
       "solution": "PD: hydrogen + methane dominant"
@@ -163,7 +163,7 @@
       "stem": "Substation SCADA system uses:",
       "options": [
         "Manual operation only",
-        "No technology",
+        "No technology at all",
         "Local control only",
         "Master station + RTUs + communication links"
       ],
@@ -237,7 +237,7 @@
         "Transformer rating",
         "Determining saturation point for protection CT",
         "Metering CT only",
-        "Cable sizing"
+        "Cable sizing calculations"
       ],
       "answer": 1,
       "solution": "Knee point: voltage where CT saturates (10% definition)"
@@ -271,9 +271,9 @@
       "stem": "The purpose of a marshalling kiosk is to:",
       "options": [
         "Cool transformer",
-        "Generate power",
+        "Generate auxiliary power",
         "Terminate and organize control cables from switchyard",
-        "Store oil"
+        "Store transformer oil"
       ],
       "answer": 2,
       "solution": "Marshalling: junction box for control cable termination"
@@ -325,7 +325,7 @@
       "stem": "The function of a surge capacitor in transformer protection is to:",
       "options": [
         "Correct power factor",
-        "Store energy",
+        "Store reactive energy",
         "Divert fast front transients to earth",
         "Measure current"
       ],
@@ -343,9 +343,9 @@
       "stem": "SF6 gas is classified as:",
       "options": [
         "Beneficial to environment",
-        "Harmless",
+        "Harmless to ozone layer",
         "Potent greenhouse gas (high GWP)",
-        "Ozone friendly"
+        "Ozone depleting gas"
       ],
       "answer": 2,
       "solution": "SF6: GWP 23,500 times CO2, must be handled carefully"
@@ -378,9 +378,9 @@
       "difficulty": "medium",
       "stem": "GIS maintenance interval is typically:",
       "options": [
-        "1 year",
-        "Weekly",
-        "Monthly",
+        "1 year interval",
+        "Weekly inspection",
+        "Monthly checkup",
         "5-10 years (much longer than AIS)"
       ],
       "answer": 3,
@@ -417,7 +417,7 @@
         "Direct connection",
         "Bushing type or plug-in type terminations",
         "No termination needed",
-        "Any method"
+        "Any approved method"
       ],
       "answer": 1,
       "solution": "GIS cable: special sealed termination to maintain SF6"
@@ -453,7 +453,7 @@
         "Constant flux by keeping V/f ratio constant",
         "Constant speed only",
         "Constant current",
-        "Constant power"
+        "Constant power output"
       ],
       "answer": 0,
       "solution": "V/f = const maintains constant flux, avoids saturation"
@@ -468,10 +468,10 @@
       "difficulty": "medium",
       "stem": "Vector control (FOC) in VFD provides:",
       "options": [
-        "Only voltage control",
-        "Only speed control",
+        "Voltage control alone",
+        "Speed control alone",
         "Independent control of torque and flux",
-        "Only starting"
+        "Starting the motor alone"
       ],
       "answer": 2,
       "solution": "FOC: Field Oriented Control, decouples torque and flux"
@@ -507,7 +507,7 @@
         "Supply grid via regenerative converter",
         "Nowhere, wasted",
         "Resistor as heat",
-        "Battery only"
+        "Battery storage bank"
       ],
       "answer": 0,
       "solution": "Regen: feeds power back to supply during braking"
@@ -522,10 +522,10 @@
       "difficulty": "medium",
       "stem": "Dynamic braking in VFD dissipates energy in:",
       "options": [
-        "Capacitor",
+        "Capacitor bank storage",
         "Braking resistor (as heat)",
-        "Battery",
-        "Supply grid"
+        "Battery storage",
+        "Supply grid return"
       ],
       "answer": 1,
       "solution": "Dynamic brake: resistor converts braking energy to heat"
@@ -543,7 +543,7 @@
         "Analog control only",
         "Ladder logic or function block programming",
         "No logic control",
-        "No programming"
+        "No programming required"
       ],
       "answer": 1,
       "solution": "PLC: ladder diagram, function block, structured text"
@@ -558,9 +558,9 @@
       "difficulty": "medium",
       "stem": "SCADA system provides:",
       "options": [
-        "Only data logging",
-        "Only alarm annunciation",
-        "Only manual control",
+        "Data logging alone",
+        "Alarm annunciation alone",
+        "Manual control alone",
         "Supervisory control and data acquisition across plant"
       ],
       "answer": 3,
@@ -576,10 +576,10 @@
       "difficulty": "medium",
       "stem": "HMI (Human Machine Interface) displays:",
       "options": [
-        "Only alarms",
+        "Alarms alone",
         "Process variables and operator controls on screen",
-        "Only historical trends",
-        "Only reports"
+        "Historical trends alone",
+        "Reports alone"
       ],
       "answer": 1,
       "solution": "HMI: visual process display for operator interaction"
@@ -594,7 +594,7 @@
       "difficulty": "medium",
       "stem": "DCS (Distributed Control System) differs from PLC by:",
       "options": [
-        "No networking",
+        "No networking capability",
         "Continuous process control with analog I/O",
         "Sequential logic only",
         "Discrete I/O only"
@@ -667,9 +667,9 @@
       "stem": "IE4 motor efficiency is classified as:",
       "options": [
         "Super premium efficiency",
-        "Premium",
-        "Standard",
-        "High"
+        "Premium efficiency class",
+        "Standard efficiency class",
+        "High efficiency class"
       ],
       "answer": 0,
       "solution": "IE4: super premium (highest efficiency class)"
@@ -720,7 +720,7 @@
       "difficulty": "medium",
       "stem": "VFD input harmonic filters are needed because:",
       "options": [
-        "No reason",
+        "No reason at all",
         "For voltage control",
         "VFD draws non-sinusoidal current causing harmonics",
         "For power factor"
@@ -738,9 +738,9 @@
       "difficulty": "medium",
       "stem": "Line reactor on VFD input reduces:",
       "options": [
-        "Motor torque",
-        "Motor speed",
-        "Output voltage",
+        "Motor torque ripple",
+        "Motor speed variation",
+        "Output voltage distortion",
         "Input current harmonics and improves waveform"
       ],
       "answer": 3,
@@ -756,8 +756,8 @@
       "difficulty": "medium",
       "stem": "DC link capacitor in VFD stores:",
       "options": [
-        "Motor flux",
-        "No energy",
+        "Motor flux linkage",
+        "No energy at all",
         "AC energy only",
         "Energy for smooth DC bus voltage"
       ],
@@ -795,7 +795,7 @@
         "Motor flux only",
         "Output voltage and frequency to motor",
         "Output current only",
-        "Input current"
+        "Input supply current"
       ],
       "answer": 1,
       "solution": "PWM: varies pulse width to control V and f output"
@@ -810,10 +810,10 @@
       "difficulty": "medium",
       "stem": "Motor bearing current from VFD is caused by:",
       "options": [
-        "Overvoltage",
-        "Underfrequency",
+        "Overvoltage transient",
+        "Underfrequency operation",
         "Common mode voltage from PWM switching",
-        "Overload"
+        "Overload condition"
       ],
       "answer": 2,
       "solution": "CM voltage: PWM creates shaft voltage -> bearing current"
@@ -828,9 +828,9 @@
       "difficulty": "medium",
       "stem": "Bearing insulation on VFD-driven motors prevents:",
       "options": [
-        "Overload",
-        "Overvoltage",
-        "Overheating",
+        "Overload stress",
+        "Overvoltage stress",
+        "Overheating of bearings",
         "Bearing current damage (fluting/pitting)"
       ],
       "answer": 3,
@@ -865,9 +865,9 @@
       "stem": "Under CMR 2017, a thorough inspection of all machinery and plant in use is required at least once in every:",
       "options": [
         "7 days, recorded in a bound paged book",
-        "14 days",
-        "1 month",
-        "24 hours"
+        "10 days, recorded in the log book",
+        "15 days, verified by the manager",
+        "48 hours when work is in progress"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 213(5): a competent person thoroughly inspects all machinery and plant at least once in 7 days, recording results in a bound paged book."
@@ -918,10 +918,10 @@
       "difficulty": "medium",
       "stem": "4-20mA signal is preferred over 0-20mA because:",
       "options": [
-        "Simpler design",
+        "Simpler circuit design",
         "Higher accuracy",
         "4mA zero allows wire-break detection",
-        "Lower cost"
+        "Lower system cost"
       ],
       "answer": 2,
       "solution": "4mA zero: wire break detected as 0mA (<4mA)"
@@ -938,7 +938,7 @@
       "options": [
         "Analog signal on digital signal",
         "Digital signal on 4-20mA analog signal",
-        "No signal",
+        "No signal at all",
         "Power supply on signal line"
       ],
       "answer": 1,
@@ -954,10 +954,10 @@
       "difficulty": "medium",
       "stem": "Fieldbus (Foundation Fieldbus) is a:",
       "options": [
-        "Analog only",
+        "Analog signal standard",
         "Digital communication protocol for process instruments",
         "No communication",
-        "Power cable"
+        "Power cable system"
       ],
       "answer": 1,
       "solution": "FF: digital, multi-drop, replaces 4-20mA point-to-point"
@@ -1009,9 +1009,9 @@
       "stem": "Modbus TCP uses:",
       "options": [
         "RS-485 only",
-        "USB only",
+        "USB connection interface",
         "Ethernet TCP/IP for communication",
-        "Serial only"
+        "Serial port connection"
       ],
       "answer": 2,
       "solution": "Modbus TCP: Ethernet-based Modbus protocol"
@@ -1026,10 +1026,10 @@
       "difficulty": "medium",
       "stem": "OPC UA is a standard for:",
       "options": [
-        "No standard",
-        "Only within one vendor",
+        "No standard defined",
+        "Within one vendor",
         "Industrial communication interoperability",
-        "Only in substations"
+        "In substations alone"
       ],
       "answer": 2,
       "solution": "OPC UA: platform-independent industrial communication"
@@ -1047,7 +1047,7 @@
         "Short circuit only",
         "Sustained overload causing winding overheating",
         "Earth fault only",
-        "Underfrequency"
+        "Underfrequency operation"
       ],
       "answer": 1,
       "solution": "Thermal: I²t model, protects motor from overheating"
@@ -1098,9 +1098,9 @@
       "difficulty": "medium",
       "stem": "Motor interlock prevents:",
       "options": [
-        "Speed change",
-        "Starting",
-        "Stopping",
+        "Speed change operation",
+        "Starting sequence",
+        "Stopping sequence",
         "Simultaneous forward and reverse operation"
       ],
       "answer": 3,
@@ -1152,9 +1152,9 @@
       "difficulty": "medium",
       "stem": "Motor soft starter bypass contactor is used to:",
       "options": [
-        "Start motor",
-        "Stop motor",
-        "Reverse motor",
+        "Start the motor",
+        "Stop the motor",
+        "Reverse the motor",
         "Bypass starter after motor reaches full speed"
       ],
       "answer": 3,
@@ -1188,10 +1188,10 @@
       "difficulty": "medium",
       "stem": "VFD acceleration ramp time affects:",
       "options": [
-        "Only deceleration",
+        "Deceleration of the drive",
         "How quickly motor reaches target speed",
-        "Only overload",
-        "Only starting torque"
+        "Overload protection",
+        "Starting torque"
       ],
       "answer": 1,
       "solution": "Accel ramp: time to go from 0 to rated speed"
@@ -1333,9 +1333,9 @@
       "stem": "Every mechanised outlet (shaft or incline) is examined at least once in every 7 days by:",
       "options": [
         "An engineer, electrical supervisor or foreman, or a competent person authorised by the engineer",
-        "Only the manager",
+        "Any officer of the electrical department",
         "The winding engineman",
-        "Any workman"
+        "Any miner of the mine"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 75(2): mechanised outlets are examined at least once in 7 days by an engineer, electrical supervisor or foreman (or authorised competent person), recorded in a bound paged book."
@@ -1351,9 +1351,9 @@
       "stem": "Cable ampacity calculation per IEC 60502 considers:",
       "options": [
         "Conductor size, insulation, ambient temp, soil resistivity",
-        "Frequency only",
-        "Voltage only",
-        "Current only"
+        "Frequency of operation",
+        "Voltage level of system",
+        "Current rating of load"
       ],
       "answer": 0,
       "solution": "IEC 60502: thermal analysis with derating factors"
@@ -1368,9 +1368,9 @@
       "difficulty": "medium",
       "stem": "XLPE cable maximum operating temperature is:",
       "options": [
-        "120°C",
-        "50°C",
-        "70°C",
+        "120 deg C",
+        "50 deg C",
+        "70 deg C",
         "90°C continuous, 250°C short circuit"
       ],
       "answer": 3,
@@ -1422,10 +1422,10 @@
       "difficulty": "medium",
       "stem": "Cable sheath insulation test is done at:",
       "options": [
-        "Low voltage",
+        "Low voltage test",
         "No test needed",
         "10kV DC for 1 minute (typical)",
-        "230V AC"
+        "230 V AC"
       ],
       "answer": 2,
       "solution": "Sheath test: HV DC to verify sheath integrity"
@@ -1441,7 +1441,7 @@
       "stem": "Cable high voltage test (hipot) tests:",
       "options": [
         "Insulation integrity between conductor and earth",
-        "Sheath only",
+        "Sheath insulation test",
         "Conductor resistance",
         "Contact resistance"
       ],

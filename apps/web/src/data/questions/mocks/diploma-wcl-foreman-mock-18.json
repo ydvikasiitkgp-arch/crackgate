@@ -37,9 +37,9 @@
       "stem": "Transformer vacuum oil filling prevents:",
       "options": [
         "Air bubble entrapment in winding insulation",
-        "Short circuit",
-        "Oil spill",
-        "Overheating"
+        "Short circuit faults",
+        "Oil spillage",
+        "Overheating during filling"
       ],
       "answer": 0,
       "solution": "Vacuum fill: eliminates air pockets in insulation"
@@ -73,7 +73,7 @@
       "stem": "Transformer oil reclamation restores:",
       "options": [
         "Oil colour only",
-        "Oil volume",
+        "The oil volume",
         "Core loss calculation",
         "Dielectric strength of aged oil"
       ],
@@ -126,7 +126,7 @@
       "difficulty": "medium",
       "stem": "Auto-transformer is more efficient than two-winding when:",
       "options": [
-        "Any ratio",
+        "Any turns ratio",
         "Turns ratio is large",
         "Turns ratio is close to 1 (small voltage change)",
         "Never more efficient"
@@ -144,7 +144,7 @@
       "difficulty": "medium",
       "stem": "K-factor transformer is designed for:",
       "options": [
-        "Lighting loads",
+        "Lighting loads only",
         "Resistive loads only",
         "Linear loads only",
         "Non-linear loads with harmonic content (VFDs, rectifiers)"
@@ -162,10 +162,10 @@
       "difficulty": "medium",
       "stem": "Amorphous metal core transformer has:",
       "options": [
-        "Higher losses",
+        "Higher core losses",
         "Lower core losses than CRGO steel",
         "Higher cost only",
-        "Same losses"
+        "Same core losses"
       ],
       "answer": 1,
       "solution": "Amorphous: 60-70% lower no-load loss than CRGO"
@@ -181,9 +181,9 @@
       "stem": "Motor IE1 efficiency is:",
       "options": [
         "Standard efficiency (lowest in IE classes)",
-        "Premium",
-        "High",
-        "Super premium"
+        "Premium efficiency",
+        "High efficiency",
+        "Super premium efficiency"
       ],
       "answer": 0,
       "solution": "IE1: standard (lowest efficiency class)"
@@ -216,10 +216,10 @@
       "difficulty": "medium",
       "stem": "Motor IE3 efficiency is:",
       "options": [
-        "Super premium",
+        "Super premium class",
         "Premium efficiency",
-        "Standard",
-        "High"
+        "Standard efficiency",
+        "High efficiency"
       ],
       "answer": 1,
       "solution": "IE3: premium efficiency"
@@ -234,9 +234,9 @@
       "difficulty": "medium",
       "stem": "Motor IE4 efficiency is:",
       "options": [
-        "Premium",
-        "Standard",
-        "High",
+        "Premium efficiency",
+        "Standard efficiency",
+        "High efficiency",
         "Super premium efficiency (highest class)"
       ],
       "answer": 3,
@@ -254,8 +254,8 @@
       "options": [
         "Insulated bearing to prevent shaft current",
         "Ball bearing only",
-        "Any bearing",
-        "No bearing"
+        "Any bearing type",
+        "No bearing at all"
       ],
       "answer": 0,
       "solution": "Insulated bearing: breaks shaft current path from VFD"
@@ -271,7 +271,7 @@
       "stem": "Motor vibration standard ISO 10816 defines:",
       "options": [
         "Motor temperature only",
-        "No standard",
+        "No such standard",
         "Efficiency calculation",
         "Acceptable vibration levels for different motor classes"
       ],
@@ -343,9 +343,9 @@
       "stem": "Motor high voltage (hipot) test voltage for 415V motor is:",
       "options": [
         "1000V + 2x rated voltage (about 1830V DC)",
-        "500V",
-        "100V",
-        "415V AC"
+        "500 V",
+        "100 V",
+        "415 V AC"
       ],
       "answer": 0,
       "solution": "Hipot: 1000 + 2×Vrated for 1 minute"
@@ -361,9 +361,9 @@
       "stem": "Motor megger test at 500V for 415V motor should show IR >:",
       "options": [
         "1 MΩ (minimum), typically >100MΩ for new motor",
-        "10 ohm",
-        "1 ohm",
-        "0"
+        "10 ohm resistance",
+        "1 ohm resistance",
+        "Zero megohm reading"
       ],
       "answer": 0,
       "solution": "IR: >1MΩ minimum, >100MΩ for new clean motor"
@@ -380,7 +380,7 @@
       "options": [
         "Equal to 1",
         "> 2.0 for new motor",
-        "Zero",
+        "Zero value ratio",
         "Less than 1"
       ],
       "answer": 1,
@@ -504,10 +504,10 @@
       "difficulty": "medium",
       "stem": "Motor underload (loss of load) protection detects:",
       "options": [
-        "Overvoltage",
-        "Overload",
+        "Overvoltage condition",
+        "Overload condition",
         "Belt breakage, coupling failure, pump dry run",
-        "Overfrequency"
+        "Overfrequency condition"
       ],
       "answer": 2,
       "solution": "Underload: detects sudden drop in current (mechanical failure)"
@@ -524,8 +524,8 @@
       "options": [
         "Insulation testing",
         "Residual connection of three phase CTs",
-        "No CT",
-        "Voltage only"
+        "No CT at all",
+        "Voltage measurement connection"
       ],
       "answer": 1,
       "solution": "Residual CT: 3I0, detects earth fault current"
@@ -541,9 +541,9 @@
       "stem": "Motor space heater prevents:",
       "options": [
         "Moisture condensation in winding during standby",
-        "Overheating",
-        "Overvoltage",
-        "Overload"
+        "Overheating of windings",
+        "Overvoltage stress",
+        "Overload stress"
       ],
       "answer": 0,
       "solution": "Space heater: keeps winding warm to prevent moisture"
@@ -558,7 +558,7 @@
       "difficulty": "medium",
       "stem": "Motor anti-condensation heater operates when:",
       "options": [
-        "Never",
+        "Never operates",
         "Motor is starting",
         "Motor is stopped and at risk of moisture",
         "Motor is running"
@@ -576,10 +576,10 @@
       "difficulty": "medium",
       "stem": "Motor soft starter thyristors are bypassed after start by:",
       "options": [
-        "Fuse",
+        "A fuse",
         "Contactor across thyristors",
         "No bypass needed",
-        "Relay"
+        "A relay"
       ],
       "answer": 1,
       "solution": "Bypass contactor: eliminates thyristor losses at full speed"
@@ -595,7 +595,7 @@
       "stem": "VFD-driven motor derating is needed because:",
       "options": [
         "Torque measurement",
-        "No derating",
+        "No derating at all",
         "Harmonic heating and reduced cooling at low speed",
         "Efficiency calculation"
       ],
@@ -613,9 +613,9 @@
       "stem": "Every mechanised outlet (shaft or incline) is examined at least once in every 7 days by:",
       "options": [
         "An engineer, electrical supervisor or foreman, or a competent person authorised by the engineer",
-        "Only the manager",
+        "Any officer of the electrical department",
         "The winding engineman",
-        "Any workman"
+        "Any miner of the mine"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 75(2): mechanised outlets are examined at least once in 7 days by an engineer, electrical supervisor or foreman (or authorised competent person), recorded in a bound paged book."
@@ -666,9 +666,9 @@
       "difficulty": "medium",
       "stem": "Motor autotransformer starter provides:",
       "options": [
-        "No voltage",
-        "Full voltage",
-        "Fixed voltage",
+        "No voltage at all",
+        "Full line voltage",
+        "Fixed voltage always",
         "Adjustable starting voltage (50%, 65%, 80%)"
       ],
       "answer": 3,
@@ -705,7 +705,7 @@
         "Adds external resistance to rotor circuit for high starting torque",
         "Opens rotor circuit",
         "Short circuits rotor",
-        "No effect"
+        "No effect at all"
       ],
       "answer": 0,
       "solution": "Rotor R: external resistance in rotor for starting torque"
@@ -723,7 +723,7 @@
         "Higher starting torque, speed control via rotor resistance",
         "Simpler construction",
         "Higher efficiency",
-        "Lower cost"
+        "Lower manufacturing cost"
       ],
       "answer": 0,
       "solution": "Slip ring: external rotor access for starting/speed control"
@@ -756,7 +756,7 @@
       "difficulty": "medium",
       "stem": "For electrical machinery and plant, the competent person for inspection under CMR 2017 shall be an engineer or electrician holding qualifications specified in:",
       "options": [
-        "IS 732",
+        "The Indian Electricity Rules, 1956",
         "CEA (Measures relating to Safety and Electric Supply) Regulations, 2010",
         "The Electricity Act 2003",
         "The Factories Act 1948"
@@ -775,9 +775,9 @@
       "stem": "Under CMR 2017, a thorough inspection of all machinery and plant in use is required at least once in every:",
       "options": [
         "7 days, recorded in a bound paged book",
-        "14 days",
-        "1 month",
-        "24 hours"
+        "10 days, recorded in the log book",
+        "15 days, verified by the manager",
+        "48 hours when work is in progress"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 213(5): a competent person thoroughly inspects all machinery and plant at least once in 7 days, recording results in a bound paged book."
@@ -810,9 +810,9 @@
       "difficulty": "medium",
       "stem": "Motor cogging is caused by:",
       "options": [
-        "Under voltage",
-        "Over frequency",
-        "Overload",
+        "Under voltage supply",
+        "Over frequency supply",
+        "Overload condition",
         "Slot harmonics and magnetic locking between stator and rotor teeth"
       ],
       "answer": 3,
@@ -882,7 +882,7 @@
       "difficulty": "medium",
       "stem": "Motor plugging (reverse current braking) is:",
       "options": [
-        "Coasting only",
+        "Coasting to standstill",
         "Reversing supply connections to create braking torque",
         "Mechanical braking only",
         "Normal stopping"
@@ -974,7 +974,7 @@
       "options": [
         "100°C rise",
         "10°C rise above rated temperature",
-        "No effect",
+        "No effect at all",
         "1°C rise"
       ],
       "answer": 1,
@@ -991,7 +991,7 @@
       "stem": "Motor nameplate shows:",
       "options": [
         "Starting current analysis",
-        "Motor colour",
+        "Motor colour code",
         "Rated voltage, current, speed, power, efficiency, duty class",
         "Efficiency calculation"
       ],
@@ -1027,9 +1027,9 @@
       "stem": "Motor duty class S3 means:",
       "options": [
         "Intermittent periodic duty with starting",
-        "Continuous",
+        "Continuous duty",
         "Short-time only",
-        "Constant load"
+        "Constant load operation"
       ],
       "answer": 0,
       "solution": "S3: start-run-stop-restart cycle with specific ED%"
@@ -1064,7 +1064,7 @@
       "options": [
         "Efficiency calculation",
         "Electrical rating",
-        "Weight",
+        "Weight of motor",
         "Mechanical mounting dimensions"
       ],
       "answer": 3,
@@ -1080,8 +1080,8 @@
       "difficulty": "medium",
       "stem": "Motor IP55 rating means:",
       "options": [
-        "Indoor only",
-        "Open type",
+        "Indoor installation",
+        "Open type construction",
         "Protected against dust jets and water jets",
         "Completely enclosed"
       ],
@@ -1100,8 +1100,8 @@
       "options": [
         "Same as IP55",
         "Dust tight and protected against water jets",
-        "Open type",
-        "Indoor only"
+        "Open type construction",
+        "Indoor installation"
       ],
       "answer": 1,
       "solution": "IP65: dust tight + water jet protected"
@@ -1152,10 +1152,10 @@
       "difficulty": "medium",
       "stem": "Flameproof enclosure flame path gap is typically:",
       "options": [
-        "10mm",
+        "10 mm",
         "0.1mm to 0.5mm (very small)",
-        "5mm",
-        "1mm"
+        "5 mm",
+        "1 mm"
       ],
       "answer": 1,
       "solution": "Flamepath: 0.1-0.5mm gap, length 12.5-25mm"
@@ -1172,7 +1172,7 @@
       "options": [
         "Enhance surveying accuracy",
         " sparks, arcs, and excessive temperature in normal operation",
-        "Gas detection",
+        "Gas detection in enclosure",
         "Explosion containment"
       ],
       "answer": 1,
@@ -1190,8 +1190,8 @@
       "options": [
         "Improve ventilation efficiency",
         "Electrical energy to below ignition threshold of explosive atmosphere",
-        "Current only",
-        "Voltage only"
+        "Current limiting factor",
+        "Voltage limiting factor"
       ],
       "answer": 1,
       "solution": "Ex i: limits V, I, L, C to keep energy below ignition level"
@@ -1244,8 +1244,8 @@
       "options": [
         "Stone dusting (limestone), watering, ventilation",
         "Increasing air flow",
-        "Ignoring it",
-        "Using fans"
+        "Ignoring the hazard",
+        "Using extraction fans"
       ],
       "answer": 0,
       "solution": "Stone dust: 65-85% limestone mix inertizes coal dust"
@@ -1280,7 +1280,7 @@
       "options": [
         "Equipment runs normally",
         "Equipment is isolated and cannot be re-energized during work",
-        "Quick start",
+        "Quick starting",
         "No isolation needed"
       ],
       "answer": 1,
@@ -1368,10 +1368,10 @@
       "difficulty": "medium",
       "stem": "Foam fire extinguisher is NOT suitable for:",
       "options": [
-        "General fires",
+        "General Class A fires",
         "Electrical fires (foam is conductive)",
-        "Wood fires",
-        "Liquid fires"
+        "Wood and paper fires",
+        "Liquid fuel fires"
       ],
       "answer": 1,
       "solution": "Foam: water-based, conductive, not for live electrical"
@@ -1386,8 +1386,8 @@
       "difficulty": "medium",
       "stem": "Lightning protection for mine surface installations uses:",
       "options": [
-        "Plastic covers",
-        "No protection",
+        "Plastic protective covers",
+        "No protection at all",
         "Differential protection",
         "Air terminals (rods), down conductors, earth electrodes"
       ],
@@ -1406,7 +1406,7 @@
       "options": [
         "Direct connection to mains",
         "Galvanic isolation, short-circuit proof, current limiting",
-        "No protection",
+        "No protection at all",
         "High current only"
       ],
       "answer": 1,
@@ -1422,9 +1422,9 @@
       "difficulty": "medium",
       "stem": "Maximum voltage allowed in shot firing circuits is:",
       "options": [
-        "400V",
-        "230V AC",
-        "1000V",
+        "400 V",
+        "230 V AC",
+        "1000 V",
         "25V DC or as per regulations"
       ],
       "answer": 3,
@@ -1440,10 +1440,10 @@
       "difficulty": "medium",
       "stem": "Gas detector in mine should be of type:",
       "options": [
-        "Any type",
+        "Any commercial type",
         "Intrinsically safe and flameproof certified",
         "Industrial type only",
-        "Domestic type"
+        "Domestic alarm type"
       ],
       "answer": 1,
       "solution": "IS + Ex certified for coal mine use"
@@ -1459,7 +1459,7 @@
       "stem": "Ex certification for mine equipment in India is done by:",
       "options": [
         "BIS (Bureau of Indian Standards) / PESO",
-        "Any lab",
+        "Any laboratory",
         "Manufacturer only",
         "No certification needed"
       ],
@@ -1710,7 +1710,7 @@
       "difficulty": "medium",
       "stem": "NMDC stands for:",
       "options": [
-        "None",
+        "No full form exists",
         "New Mining Corporation",
         "Northern Mineral Company",
         "National Mineral Development Corporation"
@@ -1800,8 +1800,8 @@
       "difficulty": "medium",
       "stem": "Coal India's annual production is approximately:",
       "options": [
-        "100 MT",
-        "200 MT",
+        "600 million tonnes",
+        "500 million tonnes",
         "700-800 million tonnes",
         "1 billion tonnes"
       ],

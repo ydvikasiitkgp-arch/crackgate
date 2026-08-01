@@ -49,7 +49,7 @@
       "difficulty": "medium",
       "stem": "In EDM, if the prism constant is not applied, the distance measured will have:",
       "options": [
-        "No error",
+        "A random error proportional to the distance",
         "A random error",
         "A constant systematic error equal to the prism constant",
         "An angular error"
@@ -139,7 +139,7 @@
       "difficulty": "medium",
       "stem": "The 'ATR' (Automatic Target Recognition) in robotic total stations uses:",
       "options": [
-        "GPS signal",
+        "A radio signal from the prism unit",
         "Magnetic detection",
         "Visual alignment only",
         "Infrared or laser beam to detect and lock onto the prism"
@@ -195,8 +195,8 @@
       "options": [
         "Measuring a horizontal angle and a distance from a known station",
         "Rectangular offsets only",
-        "GPS only",
-        "Levelling only"
+        "Triangulation from two known stations",
+        "Measurement of vertical angles only"
       ],
       "answer": 0,
       "solution": "Polar layout sets out a point by turning a horizontal angle and measuring a distance from a known station."
@@ -446,7 +446,7 @@
       "stem": "A 'turning point' (TP) in levelling is:",
       "options": [
         "A point where both FS and subsequent BS are taken before moving the level",
-        "A benchmark",
+        "A temporary point whose elevation is known",
         "A point where the instrument is set up",
         "Any intermediate point"
       ],
@@ -483,8 +483,8 @@
       "options": [
         "ΣBS + ΣFS = 0",
         "ΣBS - ΣFS = Last RL - First RL",
-        "ΣBS = ΣFS",
-        "ΣIS = ΣTP"
+        "Sigma BS - Sigma IS = First RL",
+        "Sigma FS - Sigma BS = First RL"
       ],
       "answer": 1,
       "solution": "The check: ΣBS - ΣFS = Last RL - First RL (difference of RLs). If not equal, there is a computational error."
@@ -499,10 +499,10 @@
       "difficulty": "medium",
       "stem": "The arithmetic check in the Rise and Fall method is:",
       "options": [
-        "ΣBS = ΣFS",
-        "ΣRise = ΣFall",
+        "Sigma BS + Sigma FS = 2 x First RL",
+        "Sigma Rise = Last RL - First RL",
         "ΣBS - ΣFS = ΣRise - ΣFall = Last RL - First RL",
-        "ΣIS = ΣTP"
+        "Sigma BS = Sigma FS + Sigma IS"
       ],
       "answer": 2,
       "solution": "In Rise/Fall: ΣBS - ΣFS = ΣRise - ΣFall = Last RL - First RL. All three must be equal."
@@ -643,7 +643,7 @@
       "difficulty": "medium",
       "stem": "Every mine plan or section under CMR 2017 shall show:",
       "options": [
-        "Only the grid line",
+        "The magnetic meridian without any reference line",
         "The magnetic meridian without date",
         "The railway alignment",
         "The true north, or the magnetic meridian with the date of the latter"
@@ -715,9 +715,9 @@
       "difficulty": "medium",
       "stem": "Contours that are widely spaced indicate:",
       "options": [
-        "Ridge only",
-        "Steep slope",
-        "Cliff",
+        "Uniform slope",
+        "Level ground",
+        "Undulating ground",
         "Gentle or flat terrain"
       ],
       "answer": 3,
@@ -1041,7 +1041,7 @@
       "options": [
         "Using a shorter sight distance",
         "Keeping BS and FS distances equal (reciprocal levelling)",
-        "Ignoring it",
+        "Taking both staff readings at the same height",
         "Using a longer staff"
       ],
       "answer": 1,
@@ -1201,10 +1201,10 @@
       "difficulty": "medium",
       "stem": "The additive constant (C) for an internal focusing telescope is:",
       "options": [
-        "50",
-        "100",
+        "15 cm (approximately)",
+        "30 cm for external focusing telescopes",
         "Zero (approximately)",
-        "30"
+        "60 cm for an external focusing telescope"
       ],
       "answer": 2,
       "solution": "For internal focusing telescopes, the additive constant C is approximately zero."
@@ -1292,7 +1292,7 @@
       "stem": "The tangential method of tachometry uses:",
       "options": [
         "Two staff readings at known vertical angles to compute distance",
-        "Stadia hairs",
+        "One staff reading with a horizontal line of sight",
         "An ordinary chain",
         "A subtense bar"
       ],
@@ -1401,7 +1401,7 @@
       "options": [
         "Fresh initial training of 1 month",
         "Retraining in the handling of explosives before resuming such duties",
-        "No retraining",
+        "A practical demonstration at the blasting site",
         "A written test only"
       ],
       "answer": 1,

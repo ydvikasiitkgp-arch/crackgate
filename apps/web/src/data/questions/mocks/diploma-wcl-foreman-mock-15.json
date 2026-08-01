@@ -55,7 +55,7 @@
       "stem": "Static VAR Compensator (SVC) consists of:",
       "options": [
         "TCR (thyristor reactor) and TSC (thyristor capacitor)",
-        "Inductor only",
+        "Inductor bank alone",
         "Transformer only",
         "Capacitor bank only"
       ],
@@ -73,9 +73,9 @@
       "stem": "Thyristor Controlled Series Capacitor (TCSC) is used for:",
       "options": [
         "Line impedance control and power flow management",
-        "Bus protection",
+        "Bus bar protection",
         "Lighting control",
-        "Motor starting"
+        "Motor starting control"
       ],
       "answer": 0,
       "solution": "TCSC: varies line reactance for power flow control"
@@ -92,7 +92,7 @@
       "options": [
         "Local meters only",
         "Manual readings",
-        "No technology",
+        "No technology at all",
         "PMUs and communication for grid stability monitoring"
       ],
       "answer": 3,
@@ -109,7 +109,7 @@
       "stem": "Synchrophasor standard IEEE C37.118 defines:",
       "options": [
         "Transformer rating",
-        "Cable sizing",
+        "Cable sizing standard",
         "Motor classification",
         "Measurement accuracy and reporting rate of PMUs"
       ],
@@ -127,9 +127,9 @@
       "stem": "Power quality disturbances include:",
       "options": [
         "Voltage sag, swell, flicker, harmonics, transients",
-        "Only load shedding",
-        "Only earth faults",
-        "Only neutral imbalance"
+        "Load shedding alone",
+        "Earth faults alone",
+        "Neutral imbalance alone"
       ],
       "answer": 0,
       "solution": "PQ: sag, swell, flicker, harmonics, transients, interruptions"
@@ -162,7 +162,7 @@
       "difficulty": "medium",
       "stem": "IEEE 80 is the standard for:",
       "options": [
-        "Cable sizing",
+        "Cable sizing guide",
         "Transformer rating",
         "Substation safety - step and touch potentials",
         "Motor efficiency"
@@ -217,7 +217,7 @@
       "stem": "Earth Potential Rise (EPR) is:",
       "options": [
         "Voltage rise of earth grid during fault relative to remote earth",
-        "Zero always",
+        "Always zero",
         "Negative voltage",
         "Normal earth voltage"
       ],
@@ -289,9 +289,9 @@
       "stem": "Copper earth strip in substation grid is sized for:",
       "options": [
         "Fault current and fault duration (thermal rating)",
-        "Voltage only",
+        "Voltage class of system",
         "Normal current only",
-        "Frequency only"
+        "Frequency of system"
       ],
       "answer": 0,
       "solution": "Size: I²t determines minimum cross-section for thermal withstand"
@@ -361,8 +361,8 @@
       "stem": "Arc suppression coil rating is based on:",
       "options": [
         "Short circuit current",
-        "Normal current",
-        "Load current",
+        "Normal load current",
+        "Rated load current",
         "System charging current (capacitive)"
       ],
       "answer": 3,
@@ -398,7 +398,7 @@
       "options": [
         "Fresh initial training of 1 month",
         "Retraining in the handling of explosives before resuming such duties",
-        "No retraining",
+        "Fresh refresher training of six months",
         "A written test only"
       ],
       "answer": 1,
@@ -470,8 +470,8 @@
       "options": [
         "Plastic parts only",
         "All exposed metallic parts of electrical equipment",
-        "Only the transformer tank",
-        "Only the earth grid"
+        "The transformer tank",
+        "The earth grid only"
       ],
       "answer": 1,
       "solution": "ECC: ensures all metalwork is at earth potential"
@@ -486,10 +486,10 @@
       "difficulty": "medium",
       "stem": "TN-S system means:",
       "options": [
-        "No earth",
-        "No neutral",
+        "No earth at all",
+        "No neutral at all",
         "Separate PE and N from source to load",
-        "Combined PEN"
+        "Combined PEN conductor"
       ],
       "answer": 2,
       "solution": "TN-S: protective earth separate from neutral"
@@ -504,8 +504,8 @@
       "difficulty": "medium",
       "stem": "TN-C system means:",
       "options": [
-        "No neutral",
-        "No earth",
+        "No neutral conductor",
+        "No earth conductor",
         "Combined PEN conductor throughout",
         "Separate PE and N"
       ],
@@ -522,10 +522,10 @@
       "difficulty": "medium",
       "stem": "TT system earthing requires:",
       "options": [
-        "No earth",
+        "No earthing at all",
         "Earth at consumer end only",
         "Separate earth electrodes for source and consumer",
-        "Common earth"
+        "A single common earth"
       ],
       "answer": 2,
       "solution": "TT: independent earth for source and load"
@@ -596,7 +596,7 @@
       "options": [
         "Equal to system voltage",
         "Below permissible limits set by IEEE 80",
-        "Zero always",
+        "Always zero",
         "As high as possible"
       ],
       "answer": 1,
@@ -649,8 +649,8 @@
       "stem": "Corrosion of earth electrode is reduced by:",
       "options": [
         "Using iron rods",
-        "Painting only",
-        "Salt water",
+        "Painting the rods only",
+        "Salting the backfill",
         "Copper bonded steel rods and proper backfill"
       ],
       "answer": 3,
@@ -667,9 +667,9 @@
       "stem": "Earth fault current in solidly earthed system is typically:",
       "options": [
         "Thousands of amperes",
-        "0.5A",
-        "0.01A",
-        "5A"
+        "About 0.5 A",
+        "About 0.01 A",
+        "About 5 A"
       ],
       "answer": 0,
       "solution": "Solidly earthed: high fault current (kA range)"
@@ -703,9 +703,9 @@
       "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
         "One month of refresher training",
-        "No training",
+        "Informal training under any senior workman",
         "Initial vocational training in the prescribed subjects",
-        "Only a medical test"
+        "A medical certificate from any private practitioner"
       ],
       "answer": 2,
       "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
@@ -738,7 +738,7 @@
       "difficulty": "medium",
       "stem": "Sheath voltage limiter (SVL) is used to:",
       "options": [
-        "Earth cables",
+        "Earth the cables",
         "Limit sheath voltage at cross-bonding points",
         "Increase sheath voltage",
         "Short circuit cables"
@@ -793,7 +793,7 @@
       "stem": "Galvanic corrosion between copper and steel earth electrodes can be reduced by:",
       "options": [
         "Using same material electrodes or brass couplings",
-        "Adding salt",
+        "Adding common salt",
         "Using smaller electrodes",
         "Mixing materials"
       ],
@@ -829,7 +829,7 @@
       "stem": "The purpose of earth rods driven to great depth is to:",
       "options": [
         "Measure voltage",
-        "Reduce current",
+        "Reduce the current",
         "Reach lower resistivity soil/water table",
         "Increase resistance"
       ],
@@ -882,9 +882,9 @@
       "difficulty": "medium",
       "stem": "Earth leakage circuit breaker (ELCB) was replaced by:",
       "options": [
-        "Fuse only",
+        "A fuse only",
         "No replacement needed",
-        "MCB only",
+        "An MCB only",
         "RCCB/RCD (Residual Current device)"
       ],
       "answer": 3,
@@ -972,10 +972,10 @@
       "difficulty": "medium",
       "stem": "The operating time of RCD for personal protection should be:",
       "options": [
-        "10 seconds",
+        "Within 10 seconds",
         "Less than 40ms at rated residual current",
-        "1 minute",
-        "1 second"
+        "Within 1 minute",
+        "Within 1 second"
       ],
       "answer": 1,
       "solution": "30mA, 40ms: prevents ventricular fibrillation"
@@ -1008,7 +1008,7 @@
       "difficulty": "medium",
       "stem": "Selective RCD coordination uses:",
       "options": [
-        "Same settings",
+        "The same settings",
         "Manual operation only",
         "Different time delays for upstream and downstream RCDs",
         "No coordination"
@@ -1026,7 +1026,7 @@
       "difficulty": "medium",
       "stem": "A substation earth mat resistance of less than 1 ohm is achieved by:",
       "options": [
-        "Smaller grid",
+        "A smaller grid",
         "Shallow burial only",
         "Fewer conductors",
         "Using larger area grid, more conductors, deep rods"
@@ -1045,8 +1045,8 @@
       "stem": "GIS (Gas Insulated Substation) uses SF6 because:",
       "options": [
         "Easy to handle",
-        "Non-toxic",
-        "Low cost",
+        "Non toxic nature",
+        "Low installation cost",
         "High dielectric strength (2.5x air) and arc quenching"
       ],
       "answer": 3,
@@ -1063,8 +1063,8 @@
       "stem": "A 33kV GIS substation can be installed in:",
       "options": [
         "Basement or rooftop of building",
-        "Underwater",
-        "Desert only",
+        "Underwater chamber",
+        "Desert terrain",
         "Open field only"
       ],
       "answer": 0,
@@ -1170,10 +1170,10 @@
       "difficulty": "medium",
       "stem": "Battery backup of 1 hour at 100A requires capacity of:",
       "options": [
-        "1 Ah",
+        "1 Ah at rated discharge",
         "100 Ah (minimum, typically 150Ah with margin)",
-        "1000 Ah",
-        "10 Ah"
+        "1000 Ah reserve capacity",
+        "10 Ah at high rate"
       ],
       "answer": 1,
       "solution": "100A × 1h = 100Ah (add 20-50% margin)"
@@ -1208,8 +1208,8 @@
       "options": [
         "Higher voltage than float to quickly recharge",
         "Same as float",
-        "AC voltage",
-        "Lower voltage"
+        "AC voltage source",
+        "Lower charging voltage"
       ],
       "answer": 0,
       "solution": "Boost: elevated voltage for fast recharge after discharge"
@@ -1227,7 +1227,7 @@
         "Single core power cable",
         "Screened/Shielded multi-pair cable",
         "Overhead conductor",
-        "Coaxial only"
+        "Coaxial cable type"
       ],
       "answer": 1,
       "solution": "Control cable: screened, multi-pair, low voltage signals"
@@ -1298,8 +1298,8 @@
       "options": [
         "Temperature difference",
         "Tap changer generates carbon and needs separate filtration",
-        "No reason",
-        "Cost saving"
+        "No reason at all",
+        "Cost saving measure"
       ],
       "answer": 1,
       "solution": "OLTC: carbon from arcing needs separate oil compartment"
@@ -1335,7 +1335,7 @@
         "Buchholz relay, pressure relay, or differential protection",
         "Visual inspection only",
         "Thermal imaging only",
-        "Sound only"
+        "Sound and noise monitoring"
       ],
       "answer": 0,
       "solution": "Multiple: gas relay, pressure rise, differential protection"
@@ -1351,9 +1351,9 @@
       "stem": "Bushing of a transformer is used to:",
       "options": [
         "Bring HV conductor through grounded tank safely",
-        "Store oil",
+        "Store the oil",
         "Cool the transformer",
-        "Support weight"
+        "Support the weight"
       ],
       "answer": 0,
       "solution": "Bushing: insulated passage through tank wall"
@@ -1422,10 +1422,10 @@
       "difficulty": "medium",
       "stem": "Power transformer oil test BDV (Breakdown Voltage) should be:",
       "options": [
-        "< 10kV",
+        "Below 10 kV",
         "> 30kV for new oil",
-        "100kV",
-        "5kV"
+        "100 kV",
+        "5 kV"
       ],
       "answer": 1,
       "solution": "New transformer oil: BDV > 30kV (2.5mm gap)"
@@ -1459,9 +1459,9 @@
       "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
         "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
-        "Only loss of life",
-        "Only explosions",
-        "Only minor injuries"
+        "Loss of life and serious bodily injury only",
+        "Explosion and fire occurring in the opencast part only",
+        "Minor injuries and first-aid cases only"
       ],
       "answer": 0,
       "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
@@ -1584,10 +1584,10 @@
       "difficulty": "medium",
       "stem": "Indian Railways headquarters is at:",
       "options": [
-        "Chennai",
-        "Kolkata",
+        "Chennai central office",
+        "Kolkata zonal office",
         "New Delhi (Rail Board)",
-        "Mumbai"
+        "Mumbai regional office"
       ],
       "answer": 2,
       "solution": "Railway Board HQ: New Delhi"
