@@ -3,6 +3,7 @@ import { ONGC_PATTERN, buildOngcMockPlan, type OngcMock } from "@/data/ongc-mock
 import { ongcLiveSetNos } from "@/data/ongc-mock-bank";
 import { ONGC_PRICE_RUPEES } from "@/data/ongc";
 import { AddToCartBtn } from "@/components/add-to-cart-btn";
+import { UnlockNowBtn } from "@/components/unlock-now-btn";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 
@@ -15,7 +16,6 @@ export async function OngcMockPlan({
   slug: string;
   unlocked: boolean;
 }) {
-  const payHref = `/pay/upi?plan=pro&exam=PSU&subject=${slug}`;
   const plan = buildOngcMockPlan(ongcLiveSetNos(slug));
   const liveCount = plan.filter((m) => m.status === "live").length;
 
@@ -63,14 +63,14 @@ export async function OngcMockPlan({
           </span>
         </div>
       ) : (
-        <OngcPaywall discipline={discipline} slug={slug} payHref={payHref} count={plan.length} />
+        <OngcPaywall discipline={discipline} slug={slug} count={plan.length} />
       )}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {plan.map((m) => {
           const attempt = attemptByNo.get(String(m.no).padStart(2, "0"));
           return (
-            <MockCard key={m.no} mock={m} slug={slug} unlocked={unlocked} payHref={payHref} attempt={attempt ?? null} />
+            <MockCard key={m.no} mock={m} slug={slug} unlocked={unlocked} attempt={attempt ?? null} />
           );
         })}
       </div>
@@ -78,7 +78,7 @@ export async function OngcMockPlan({
   );
 }
 
-function OngcPaywall({ discipline, slug, payHref, count }: { discipline: string; slug: string; payHref: string; count: number }) {
+function OngcPaywall({ discipline, slug, count }: { discipline: string; slug: string; count: number }) {
   return (
     <div className="mt-6 overflow-hidden rounded-2xl border border-blue-400/30 bg-gradient-to-r from-[#003580] to-slate-900 text-white">
       <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
@@ -98,12 +98,13 @@ function OngcPaywall({ discipline, slug, payHref, count }: { discipline: string;
             <span className="text-3xl font-extrabold">₹{ONGC_PRICE_RUPEES}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Link
-              href={payHref}
+            <UnlockNowBtn
+              exam="PSU"
+              subject={slug}
+              plan="pro"
+              label="Unlock now"
               className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-blue-300/70 bg-blue-300/10 px-6 py-3 text-sm font-semibold text-blue-100 transition hover:bg-blue-300/20"
-            >
-              Unlock now <span aria-hidden>→</span>
-            </Link>
+            />
             <AddToCartBtn exam="PSU" subject={slug} variant="light" size="md" />
           </div>
           <span className="text-[11px] text-white/50">Pay via UPI · access in a few hours</span>
@@ -117,13 +118,11 @@ function MockCard({
   mock,
   slug,
   unlocked,
-  payHref,
   attempt,
 }: {
   mock: OngcMock;
   slug: string;
   unlocked: boolean;
-  payHref: string;
   attempt: { id: string; score: number; total: number; takenAt: Date } | null;
 }) {
   const live = mock.status === "live";
@@ -168,13 +167,13 @@ function MockCard({
           Start Mock
         </Link>
       ) : !unlocked ? (
-        <Link
-          href={payHref}
-          title="Unlock to access"
+        <UnlockNowBtn
+          exam="PSU"
+          subject={slug}
+          plan="pro"
+          label="Unlock to access"
           className="btn btn-ghost mt-4 w-full justify-center gap-2"
-        >
-          <span aria-hidden>🔒</span> Unlock to access
-        </Link>
+        />
       ) : (
         <button
           type="button"

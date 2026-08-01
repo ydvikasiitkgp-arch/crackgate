@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { UnlockNowBtn } from "@/components/unlock-now-btn";
 import { getGateSubject } from "@/data/gate/registry";
 import { PracticeRunner } from "@/components/practice-runner";
 import { auth } from "@/lib/auth";
@@ -37,7 +38,6 @@ export default async function SubjectPracticeRunnerPage(
 function PracticeLocked({
   subject, exam, accessSubject, code, label, name, loggedIn,
 }: { subject: string; exam: string; accessSubject: string; code: string; label: string; name: string; loggedIn: boolean }) {
-  const payHref = `/pay/upi?plan=pro&exam=${exam}&subject=${accessSubject}`;
   return (
     <div className="max-w-xl mx-auto px-5 py-20 text-center">
       <div className="text-5xl mb-4">🔒</div>
@@ -47,7 +47,7 @@ function PracticeLocked({
         question bank with instant solutions through GATE 2027.
       </p>
       <div className="flex flex-col sm:flex-row gap-3 justify-center mt-7">
-        <Link href={payHref} className="btn btn-primary">⭐ Unlock {code}</Link>
+        <UnlockNowBtn exam={exam} subject={accessSubject} plan="pro" label={`⭐ Unlock ${code}`} className="btn btn-primary" />
         <Link href={`/gate/${subject}/practice`} className="btn btn-ghost border border-line">← Back to subjects</Link>
       </div>
       {!loggedIn && (

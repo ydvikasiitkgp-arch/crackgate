@@ -5,6 +5,7 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { ShareOnWhatsApp } from "@/components/share-on-whatsapp";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { AddToCartBtn } from "@/components/add-to-cart-btn";
+import { UnlockNowBtn } from "@/components/unlock-now-btn";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { hasEntitlement } from "@/lib/entitlements";
@@ -62,7 +63,6 @@ export default async function WCLAFElectricalPage() {
   const attemptMap = new Map(attempts.map(a => [a.refId, { id: a.id, takenAt: a.takenAt }]));
 
   const liveCount = WCL_AF_MOCKS.length;
-  const payHref = "/pay/upi?plan=pro&exam=DIPLOMA&subject=wcl-af-electrical";
 
   return (
     <>
@@ -162,12 +162,13 @@ export default async function WCLAFElectricalPage() {
                   <span className="text-3xl font-extrabold">₹{WCL_AF_PRICING.pro}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Link
-                    href={payHref}
+                  <UnlockNowBtn
+                    exam="DIPLOMA"
+                    subject="wcl-af-electrical"
+                    plan="pro"
+                    label="Unlock now"
                     className="cg-neon inline-flex items-center justify-center gap-2 rounded-lg border border-emerald-400/70 bg-emerald-400/10 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-400/20"
-                  >
-                    Unlock now <span aria-hidden>→</span>
-                  </Link>
+                  />
                   <AddToCartBtn exam="DIPLOMA" subject="wcl-af-electrical" variant="light" size="md" />
                 </div>
                 <span className="text-[11px] text-white/50">Pay via UPI · access in a few hours</span>
@@ -206,9 +207,13 @@ export default async function WCLAFElectricalPage() {
                     Start Mock
                   </Link>
                 ) : (
-                  <Link href={payHref} title="Unlock to access" className="btn btn-ghost mt-4 w-full justify-center gap-2">
-                    <span aria-hidden>🔒</span> Unlock to access
-                  </Link>
+                  <UnlockNowBtn
+                    exam="DIPLOMA"
+                    subject="wcl-af-electrical"
+                    plan="pro"
+                    label="Unlock to access"
+                    className="btn btn-ghost mt-4 w-full justify-center gap-2"
+                  />
                 )}
               </div>
             );

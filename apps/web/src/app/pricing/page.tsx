@@ -99,6 +99,7 @@ function SectionBadge({ color, children }: { color: "brand" | "amber" | "emerald
 function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; defaultSubject?: string }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const { addItem } = useCart();
   const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
 
   async function buy() {
@@ -123,9 +124,9 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
       }
       return;
     }
-    router.push(defaultSubject
-      ? `/pay/upi?plan=${plan.id}&exam=GATE&subject=${defaultSubject}`
-      : `/pay/upi?plan=${plan.id}&exam=GATE`);
+    setLoading(true);
+    await addItem("GATE", defaultSubject || "mining", plan.id);
+    router.push("/pay/checkout");
   }
 
   const isFree = plan.id === "free";
