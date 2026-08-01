@@ -6,17 +6,18 @@
  *  admins in prod even though this widget is not rendered there. */
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 type Plan = "free" | "pro" | "premium";
 
 export function DevPlanSwitcher({ currentPlan }: { currentPlan?: Plan }) {
   const isDev = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState<Plan | null>(null);
   const router = useRouter();
 
-  if (!isDev) return null;
+  if (!isDev || pathname.startsWith("/pay")) return null;
 
   async function setPlan(plan: Plan) {
     setBusy(plan);

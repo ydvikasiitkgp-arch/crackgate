@@ -48,7 +48,7 @@ export default async function SubjectPracticeIndex(props: { params: Promise<{ su
         </p>
         {!unlocked && (
           <div className="mt-5 inline-block bg-amber-50 border border-amber-200 text-amber-900 rounded-lg px-4 py-2 text-sm">
-            🔒 Subject-wise practice is a <b>premium</b> feature. <UnlockNowBtn exam={meta.accessExam} subject={meta.accessSubject} plan="pro" label={`Unlock all ${totalLabel} ${meta.code} questions`} className="underline font-semibold bg-transparent border-0 p-0 cursor-pointer text-amber-900" />.
+            🔒 Subject-wise practice is a <b>premium</b> feature. <UnlockNowBtn exam={meta.accessExam} subject={meta.accessSubject} plan="pro" label={`Unlock all ${totalLabel} ${meta.code} questions`} className="underline font-semibold bg-transparent border-0 p-1 -m-1 cursor-pointer text-amber-900" />.
           </div>
         )}
       </header>

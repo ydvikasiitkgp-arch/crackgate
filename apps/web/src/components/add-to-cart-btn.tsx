@@ -43,7 +43,7 @@ export function AddToCartBtn({
     }
   }
 
-  const sizeCls = size === "md" ? "px-4 py-2.5 text-sm gap-2" : "px-3 py-1.5 text-xs gap-1.5";
+  const sizeCls = size === "md" ? "px-4 py-2.5 text-sm gap-2" : "px-3 py-2.5 text-xs gap-1.5";
   const iconSize = size === "md" ? "w-4 h-4" : "w-3.5 h-3.5";
 
   const variantCls = error

@@ -640,8 +640,8 @@ function SubmitConfirm({
         </div>
 
         {/* Per-section breakdown */}
-        <div className="mt-5 overflow-hidden rounded-lg border border-line">
-          <table className="w-full text-xs">
+        <div className="mt-5 overflow-x-auto rounded-lg border border-line">
+          <table className="w-full text-xs min-w-[360px]">
             <thead className="bg-canvas text-muted">
               <tr>
                 <th className="text-left font-semibold px-3 py-2">Section</th>
@@ -757,7 +757,7 @@ function PaletteBody({
                     key={i}
                     onClick={() => go(i)}
                     className={cn(
-                      "min-h-[44px] sm:min-h-[36px] min-w-[44px] sm:min-w-0 text-xs font-semibold rounded transition active:scale-90",
+                      "min-h-[44px] sm:min-h-[36px] min-w-0 w-full text-xs font-semibold rounded transition active:scale-90",
                       s === "nv"    && "bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-300",
                       s === "not"   && "bg-rose-200 text-rose-900 dark:bg-rose-900/30 dark:text-rose-300",
                       s === "ans"   && "bg-emerald-500 text-white dark:bg-emerald-600",

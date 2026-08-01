@@ -58,7 +58,7 @@ export function UserMenu({
       </button>
 
       {open && (
-        <div role="menu" className="absolute right-0 mt-2 w-80 bg-surface border border-line rounded-xl shadow-pop overflow-hidden z-50">
+        <div role="menu" className="absolute right-0 mt-2 w-72 max-w-[calc(100vw-2rem)] bg-surface border border-line rounded-xl shadow-pop overflow-y-auto max-h-[80vh] z-50">
           {/* Profile card */}
           <div className="p-4 bg-gradient-to-br from-brand/5 to-accent/5 border-b border-line">
             <div className="flex items-center gap-3">

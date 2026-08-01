@@ -145,7 +145,7 @@ export function HeroCarousel({ practiceQs, mocksCount, subjectsCount, civil, geo
             animate="center"
             exit="exit"
             transition={{ duration: reduceMotion ? 0.3 : 0.8, ease: EASE }}
-            className="absolute inset-0"
+            className="relative"
             aria-roledescription="slide"
             aria-label={SLIDE_LABELS[active]}
           >
