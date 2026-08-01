@@ -99,33 +99,13 @@ function SectionBadge({ color, children }: { color: "brand" | "amber" | "emerald
 function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; defaultSubject?: string }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const devMode = process.env.NEXT_PUBLIC_DEV_TOOLS === "1";
+  const { addItem } = useCart();
 
   async function buy() {
     if (plan.id === "free") return router.push("/login");
-    if (devMode) {
-      setLoading(true);
-      try {
-        const r = await fetch("/api/dev/set-plan", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ plan: plan.id }),
-        });
-        if (r.status === 401) return router.push(`/login?next=/pricing`);
-        const t = await r.text();
-        const data = t ? safeJson(t) : null;
-        if (!r.ok) throw new Error(data?.error ?? data?.message ?? `Dev set-plan failed`);
-        return router.push(`/dashboard?upgrade=success&dev=1`);
-      } catch (e) {
-        alert((e as Error).message);
-      } finally {
-        setLoading(false);
-      }
-      return;
-    }
-    router.push(defaultSubject
-      ? `/pay/upi?plan=${plan.id}&exam=GATE&subject=${defaultSubject}`
-      : `/pay/upi?plan=${plan.id}&exam=GATE`);
+    setLoading(true);
+    await addItem("GATE", defaultSubject || "mining", plan.id);
+    router.push("/pay/checkout");
   }
 
   const isFree = plan.id === "free";
@@ -163,7 +143,7 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
             disabled={loading}
             className={`btn w-full ${plan.id === "premium" ? "btn-accent" : "btn-primary"}`}
           >
-            {loading ? "..." : devMode ? `${plan.name}` : `${plan.cta} — ₹${plan.price}`}
+            {loading ? "..." : `${plan.cta} — ₹${plan.price}`}
           </button>
           <AddToCartButton
             exam="GATE"
@@ -217,10 +197,6 @@ function Cell({ v, highlight, accent }: { v: string | boolean; highlight?: boole
        : <span>{v}</span>}
     </td>
   );
-}
-
-function safeJson(t: string): { error?: string; message?: string } | null {
-  try { return JSON.parse(t); } catch { return null; }
 }
 
 /* ─── Add to Cart Button ─── */

@@ -1,0 +1,1825 @@
+{
+  "id": "diploma-ncl-surveyor-mock-17",
+  "title": "NCL Mine Surveyor Mock 17",
+  "tier": "pro",
+  "duration": 90,
+  "pattern": "100 MCQs, 100 marks, 90 min, NO negative marking",
+  "totalMarks": 100,
+  "sections": [
+    {
+      "name": "Technical",
+      "questionCount": 80,
+      "marks": 80
+    },
+    {
+      "name": "General Awareness",
+      "questionCount": 20,
+      "marks": 20
+    }
+  ],
+  "negativeMarking": false,
+  "seed": 3530726222,
+  "locked": true,
+  "questions": [
+    {
+      "id": "ncl-surveyor-17-001",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'prism' (reflector) on a total station is used to:",
+      "options": [
+        "Amplify the signal",
+        "Record data",
+        "Measure temperature",
+        "Retroreflect the EDM beam back to the instrument"
+      ],
+      "answer": 3,
+      "solution": "A corner-cube prism reflects the EDM signal directly back to the source."
+    },
+    {
+      "id": "ncl-surveyor-17-002",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'robotic total station' can:",
+      "options": [
+        "Applicable in limited scenarios",
+        "Required only for specific cases",
+        "Works under ideal conditions only",
+        "Automatically track and measure to a prism carried by the surveyor"
+      ],
+      "answer": 3,
+      "solution": "Robotic total stations lock onto and follow a prism, allowing one-person operation."
+    },
+    {
+      "id": "ncl-surveyor-17-003",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'GPS time' system is based on:",
+      "options": [
+        "Local solar time",
+        "UTC (with leap seconds)",
+        "A continuous atomic time scale without leap seconds",
+        "Sidereal time"
+      ],
+      "answer": 2,
+      "solution": "GPS time is continuous (no leap seconds) and differs from UTC by a constant offset (currently 18 seconds)."
+    },
+    {
+      "id": "ncl-surveyor-17-004",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'GNSS receiver' tracks satellites from multiple constellations to:",
+      "options": [
+        "Improve availability, accuracy, and reliability of positioning",
+        "Applicable in limited scenarios",
+        "Required only for specific cases",
+        "Works under ideal conditions only"
+      ],
+      "answer": 0,
+      "solution": "Multi-constellation tracking improves satellite availability, geometry, and positioning quality."
+    },
+    {
+      "id": "ncl-surveyor-17-005",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'dilution of precision' (DOP) in GPS indicates:",
+      "options": [
+        "The atmospheric condition",
+        "The number of users",
+        "The battery level",
+        "The quality of satellite geometry"
+      ],
+      "answer": 3,
+      "solution": "DOP quantifies how satellite geometry amplifies position errors; lower DOP = better geometry."
+    },
+    {
+      "id": "ncl-surveyor-17-006",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'GPS mask angle' is used to:",
+      "options": [
+        "Block all satellites",
+        "Increase signal strength",
+        "Reject satellites below a certain elevation to avoid multipath and atmospheric errors",
+        "Change the frequency"
+      ],
+      "answer": 2,
+      "solution": "A mask angle (typically 10-15°) excludes low-elevation satellites with noisy signals."
+    },
+    {
+      "id": "ncl-surveyor-17-007",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'pseudo-range' in GPS is:",
+      "options": [
+        "The wavelength",
+        "The exact distance to the satellite",
+        "The orbital radius",
+        "An estimate of distance based on signal travel time, including clock errors"
+      ],
+      "answer": 3,
+      "solution": "Pseudo-range = c × Δt, where Δt includes receiver and satellite clock biases."
+    },
+    {
+      "id": "ncl-surveyor-17-008",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'carrier phase' measurement in GPS provides:",
+      "options": [
+        "Very precise range measurement (millimetre level) by counting signal cycles",
+        "Current measurement only",
+        "Works under ideal conditions only",
+        "Applicable in limited scenarios"
+      ],
+      "answer": 0,
+      "solution": "Carrier phase measures the phase difference between received and reference signals, yielding mm-level precision."
+    },
+    {
+      "id": "ncl-surveyor-17-009",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'integer ambiguity' in GPS carrier phase must be resolved to:",
+      "options": [
+        "Convert phase to range",
+        "Calculate time",
+        "Measure temperature",
+        "Determine the correct number of whole cycles between receiver and satellite"
+      ],
+      "answer": 3,
+      "solution": "Solving for the integer number of cycles (N) is essential for centimetre-level GPS positioning."
+    },
+    {
+      "id": "ncl-surveyor-17-010",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 'GIS topology' defines:",
+      "options": [
+        "The colour scheme",
+        "Spatial relationships between features (connectivity, adjacency, containment)",
+        "The font size",
+        "The map projection"
+      ],
+      "answer": 1,
+      "solution": "Topology ensures correct spatial relationships: polygons share boundaries, lines connect at nodes."
+    },
+    {
+      "id": "ncl-surveyor-17-011",
+      "subject": "Mine Surveying",
+      "topic": "Software & Modern Equipment",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'coordinate system' of India for mine surveys commonly uses:",
+      "options": [
+        "Measure air velocity",
+        "Latitude/longitude only",
+        "Monitor gas concentrations",
+        "Indian Grid (IG) based on Everest 1830 ellipsoid or WGS 84 UTM zone 43N/44N"
+      ],
+      "answer": 3,
+      "solution": "Indian mining surveys use the Indian Grid (Lambert) or UTM zones 43N and 44N."
+    },
+    {
+      "id": "ncl-surveyor-17-012",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A micro-optic theodolite is primarily used for:",
+      "options": [
+        "Measurement of distances only",
+        "Contouring only",
+        "Measurement of horizontal and vertical angles",
+        "Levelling only"
+      ],
+      "answer": 2,
+      "solution": "Micro-optic theodolites are precision instruments designed for accurate measurement of horizontal and vertical angles."
+    },
+    {
+      "id": "ncl-surveyor-17-013",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The least count of a vernier theodolite is typically:",
+      "options": [
+        "1 degree",
+        "20 minutes",
+        "1 minute",
+        "20 seconds"
+      ],
+      "answer": 3,
+      "solution": "A standard vernier theodolite has a least count of 20 seconds, while a micro-optic theodolite has 1 second or less."
+    },
+    {
+      "id": "ncl-surveyor-17-014",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The least count of a micro-optic theodolite is generally:",
+      "options": [
+        "1 minute",
+        "20 seconds",
+        "1 second",
+        "5 seconds"
+      ],
+      "answer": 2,
+      "solution": "Micro-optic theodolites use optical micrometers achieving least counts of 1 second or even 0.5 seconds."
+    },
+    {
+      "id": "ncl-surveyor-17-015",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The temporary adjustments of a theodolite include all of the following EXCEPT:",
+      "options": [
+        "Calibration of the vernier",
+        "Levelling the instrument",
+        "Centreing over the station",
+        "Focusing the eyepiece"
+      ],
+      "answer": 0,
+      "solution": "Temporary adjustments are done at each setup: centering, levelling, focusing eyepiece and objective. Calibration is a permanent adjustment."
+    },
+    {
+      "id": "ncl-surveyor-17-016",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The process of setting the theodolite exactly over the station point is called:",
+      "options": [
+        "Bisecting",
+        "Focusing",
+        "Levelling",
+        "Centreing"
+      ],
+      "answer": 3,
+      "solution": "Centreing means positioning the theodolite plumb bob (or optical plummet) exactly over the station mark on the ground."
+    },
+    {
+      "id": "ncl-surveyor-17-017",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The process of making the vertical axis truly vertical is called:",
+      "options": [
+        "Focusing",
+        "Centreing",
+        "Levelling",
+        "Orientation"
+      ],
+      "answer": 2,
+      "solution": "Levelling makes the vertical axis truly vertical using plate bubbles and foot screws."
+    },
+    {
+      "id": "ncl-surveyor-17-018",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The plate bubble tube is used for:",
+      "options": [
+        "Making the vertical axis truly vertical",
+        "Measuring horizontal angles",
+        "Focusing the objective",
+        "Centreing over the station"
+      ],
+      "answer": 0,
+      "solution": "The plate bubble tube (circular or tubular) is used during levelling to make the vertical axis truly vertical."
+    },
+    {
+      "id": "ncl-surveyor-17-019",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The striding level is used to check:",
+      "options": [
+        "The optical plummet",
+        "The horizon axis",
+        "The verticality of the vertical axis",
+        "The line of collimation"
+      ],
+      "answer": 2,
+      "solution": "A striding level is placed on the horizontal axis to check whether the vertical axis is truly vertical."
+    },
+    {
+      "id": "ncl-surveyor-17-020",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The optical plummet is used for:",
+      "options": [
+        "Centreing the theodolite over the station",
+        "Levelling the instrument",
+        "Reading the vernier",
+        "Focusing the crosshair"
+      ],
+      "answer": 0,
+      "solution": "The optical plummet provides a downward view through the instrument to assist in centreing over the ground station."
+    },
+    {
+      "id": "ncl-surveyor-17-021",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The line of sight (line of collimation) is the line joining:",
+      "options": [
+        "The eyepiece and the objective",
+        "The vertical axis and the horizontal axis",
+        "The optical centre of the objective and the intersection of the crosshairs",
+        "The trunnion axis and the plumb bob"
+      ],
+      "answer": 2,
+      "solution": "The line of collimation is the imaginary line from the optical centre of the objective through the intersection of the crosshair wires."
+    },
+    {
+      "id": "ncl-surveyor-17-022",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the line of collimation is not parallel to the horizon axis, the error is called:",
+      "options": [
+        "Collimation error",
+        "Parallax error",
+        "Index error",
+        "Eccentricity error"
+      ],
+      "answer": 0,
+      "solution": "Collimation error occurs when the line of sight is not perpendicular to the horizontal (trunnion) axis."
+    },
+    {
+      "id": "ncl-surveyor-17-023",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The condition of the vertical circle being at zero when the line of sight is horizontal is called:",
+      "options": [
+        "Index error adjustment",
+        "Collimation adjustment",
+        "Plate bubble adjustment",
+        "2C adjustment"
+      ],
+      "answer": 0,
+      "solution": "Index error is eliminated by adjusting the vertical circle reading to zero when the line of sight is horizontal."
+    },
+    {
+      "id": "ncl-surveyor-17-024",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the reiteration method of measuring horizontal angles, each angle is measured:",
+      "options": [
+        "By direct and reversed positions only",
+        "Independently from a reference direction",
+        "Resistance measurement only",
+        "From the meridian"
+      ],
+      "answer": 1,
+      "solution": "In reiteration (direction method), directions are observed from a starting reference direction, and angles are derived by subtraction."
+    },
+    {
+      "id": "ncl-surveyor-17-025",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the repetition method of measuring horizontal angles, the angle is measured:",
+      "options": [
+        "Power measurement only",
+        "Using both faces independently",
+        "Repeatedly and accumulated on the circle",
+        "From different reference directions"
+      ],
+      "answer": 2,
+      "solution": "In repetition, the angle is measured multiple times, accumulating the reading on the vernier, then dividing by the number of repetitions."
+    },
+    {
+      "id": "ncl-surveyor-17-026",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The advantage of the repetition method is that:",
+      "options": [
+        "It eliminates instrumental errors by averaging",
+        "It is faster",
+        "It does not require a theodolite",
+        "It measures vertical angles"
+      ],
+      "answer": 0,
+      "solution": "Repetition averages out errors in graduation, eccentricity, and reading, yielding higher accuracy."
+    },
+    {
+      "id": "ncl-surveyor-17-027",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A theodolite is said to be in perfect adjustment when:",
+      "options": [
+        "All permanent adjustments are correctly set",
+        "The vertical axis is parallel to the line of sight",
+        "It has the least count of 1 second",
+        "The instrument is new"
+      ],
+      "answer": 0,
+      "solution": "Perfect adjustment means all permanent adjustments — collimation, horizon axis, vertical circle index — are correctly made."
+    },
+    {
+      "id": "ncl-surveyor-17-028",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The trunnion axis is the axis about which:",
+      "options": [
+        "The telescope rotates in the horizontal plane",
+        "The vernier is read",
+        "The telescope rotates in the vertical plane",
+        "The plate bubble moves"
+      ],
+      "answer": 2,
+      "solution": "The trunnion (horizontal) axis is the axis about which the telescope rotates in the vertical plane."
+    },
+    {
+      "id": "ncl-surveyor-17-029",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the line of sight is inclined upwards, the horizontal angle measured will be:",
+      "options": [
+        "Less than the true value",
+        "Cannot be determined",
+        "Equal to the true value",
+        "More than the true value"
+      ],
+      "answer": 2,
+      "solution": "Horizontal angle measurement is unaffected by the vertical inclination of the line of sight as long as the vertical axis is truly vertical."
+    },
+    {
+      "id": "ncl-surveyor-17-030",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The method of measures used to eliminate errors in horizontal angle measurement by using both face left and face right is called:",
+      "options": [
+        "Reciprocal levelling",
+        "Reiteration",
+        "Two-face observation",
+        "Repetition"
+      ],
+      "answer": 2,
+      "solution": "Face left and face right (two-face) observations eliminate collimation, index, and axis errors."
+    },
+    {
+      "id": "ncl-surveyor-17-031",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Face left and face right observations are taken to eliminate:",
+      "options": [
+        "Errors due to line of collimation, vertical index, and eccentricity",
+        "Temperature effects",
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only"
+      ],
+      "answer": 0,
+      "solution": "Taking mean of face left and face right removes collimation error, vertical index error, and eccentricity of centres."
+    },
+    {
+      "id": "ncl-surveyor-17-032",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The horizontal axis of a theodolite is also known as:",
+      "options": [
+        "Vertical axis",
+        "Plumb line",
+        "Trunnion axis",
+        "Line of sight"
+      ],
+      "answer": 2,
+      "solution": "The horizontal axis about which the telescope rotates vertically is called the trunnion axis or spindle axis."
+    },
+    {
+      "id": "ncl-surveyor-17-033",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the trunnion axis is not perpendicular to the vertical axis, the error affects:",
+      "options": [
+        "Vertical angles only",
+        "Horizontal angles only",
+        "Applicable in limited scenarios",
+        "Both horizontal and vertical angles"
+      ],
+      "answer": 3,
+      "solution": "An inclined trunnion axis introduces errors in both horizontal and vertical angle measurements."
+    },
+    {
+      "id": "ncl-surveyor-17-034",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The permanent adjustment relating the line of sight perpendicular to the horizontal axis is checked by:",
+      "options": [
+        "Collimation test (2C test)",
+        "Two-peg test",
+        "Plate bubble test",
+        "Stadia test"
+      ],
+      "answer": 0,
+      "solution": "The 2C (collimation) test checks that the line of sight is perpendicular to the trunnion axis by observing targets in opposite directions."
+    },
+    {
+      "id": "ncl-surveyor-17-035",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the 2C test, if the theodolite reads 45° 30' 20\" on face left and 225° 30' 40\" on face right for the same target, the 2C error is:",
+      "options": [
+        "20 seconds",
+        "40 seconds",
+        "0 seconds",
+        "10 seconds"
+      ],
+      "answer": 0,
+      "solution": "2C = (Face Left - (Face Right ± 180°)) = 45°30'20\" - (225°30'40\" - 180°) = 45°30'20\" - 45°30'40\" = -20\". Magnitude is 20 seconds."
+    },
+    {
+      "id": "ncl-surveyor-17-036",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The mean horizontal angle from the 2C test readings FL=45°30'20\" and FR=225°30'40\" is:",
+      "options": [
+        "45°30'20\"",
+        "45°30'10\"",
+        "45°30'40\"",
+        "45°30'30\""
+      ],
+      "answer": 3,
+      "solution": "Mean = (FL + FR - 180°)/2 = (45°30'20\" + 45°30'40\")/2 = 45°30'30\"."
+    },
+    {
+      "id": "ncl-surveyor-17-037",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "To eliminate the index error of the vertical circle, one should:",
+      "options": [
+        "Centre the instrument",
+        "Adjust the plate bubble",
+        "Take face left reading only",
+        "Take the mean of face left and face right readings"
+      ],
+      "answer": 3,
+      "solution": "Mean of FL and FR vertical readings eliminates the index error of the vertical circle."
+    },
+    {
+      "id": "ncl-surveyor-17-038",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The theodolite traverse can be classified as:",
+      "options": [
+        "Closed traverse only",
+        "Both open and closed traverses",
+        "Open traverse only",
+        "Applicable in limited scenarios"
+      ],
+      "answer": 1,
+      "solution": "A theodolite traverse may be an open (link) traverse or a closed (loop or connecting) traverse."
+    },
+    {
+      "id": "ncl-surveyor-17-039",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A closed loop traverse starts and ends at:",
+      "options": [
+        "Any two points on a baseline",
+        "The station of origin",
+        "The same point",
+        "Different points"
+      ],
+      "answer": 2,
+      "solution": "A closed loop traverse begins and terminates at the same station, forming a closed polygon."
+    },
+    {
+      "id": "ncl-surveyor-17-040",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The angular misclosure of a closed traverse is distributed by:",
+      "options": [
+        "Ignoring it",
+        "Distributing it equally among all angles (Bowditch rule)",
+        "Adding it to the last angle only",
+        "Multiplying by the number of stations"
+      ],
+      "answer": 1,
+      "solution": "Angular misclosure is distributed equally (or proportional to weights) among all measured angles."
+    },
+    {
+      "id": "ncl-surveyor-17-041",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Bowditch's rule is used for:",
+      "options": [
+        "Curve setting",
+        "Angular adjustment only",
+        "Linear adjustment of traverse closing error",
+        "Levelling adjustment"
+      ],
+      "answer": 2,
+      "solution": "Bowditch's (compass) rule distributes linear closing error in proportion to the length of each traverse leg."
+    },
+    {
+      "id": "ncl-surveyor-17-042",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The transit rule is used for adjustment of:",
+      "options": [
+        "Curves",
+        "Linear misclosure in a closed traverse based on latitudes and departures",
+        "Contour intervals",
+        "Angular misclosure in a closed traverse"
+      ],
+      "answer": 1,
+      "solution": "The transit rule distributes closing error proportional to the latitude or departure of each line."
+    },
+    {
+      "id": "ncl-surveyor-17-043",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The latitude of a traverse line is:",
+      "options": [
+        "L / cos θ",
+        "L × sin θ",
+        "L × tan θ",
+        "L × cos θ"
+      ],
+      "answer": 3,
+      "solution": "Latitude = Length × cos( bearing ), representing the north-south component of the line."
+    },
+    {
+      "id": "ncl-surveyor-17-044",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The departure of a traverse line is:",
+      "options": [
+        "L × sin θ",
+        "L × cos θ",
+        "L × tan θ",
+        "L / sin θ"
+      ],
+      "answer": 0,
+      "solution": "Departure = Length × sin( bearing ), representing the east-west component of the line."
+    },
+    {
+      "id": "ncl-surveyor-17-045",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the algebraic sum of latitudes is +0.30 m and departures is -0.40 m, the linear closing error is:",
+      "options": [
+        "0.50 m",
+        "0.10 m",
+        "0.25 m",
+        "0.70 m"
+      ],
+      "answer": 0,
+      "solution": "Closing error = sqrt(Σlat² + Σdep²) = sqrt(0.30² + 0.40²) = sqrt(0.09 + 0.16) = 0.50 m."
+    },
+    {
+      "id": "ncl-surveyor-17-046",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The bearing of a line measured from the north direction in clockwise sense is called:",
+      "options": [
+        "Reduced bearing (QB)",
+        "Whole circle bearing (WCB)",
+        "Back bearing",
+        "Magnetic bearing"
+      ],
+      "answer": 1,
+      "solution": "Whole Circle Bearing (WCB) is measured from the north direction clockwise through 0° to 360°."
+    },
+    {
+      "id": "ncl-surveyor-17-047",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the WCB of a line is 210°, its reduced bearing (quadrantal bearing) is:",
+      "options": [
+        "S 60° W",
+        "S 30° W",
+        "N 30° W",
+        "N 150° W"
+      ],
+      "answer": 1,
+      "solution": "210° falls in the third quadrant. QB = 210° - 180° = 30°, direction is S 30° W."
+    },
+    {
+      "id": "ncl-surveyor-17-048",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The back bearing of a line with WCB 125° is:",
+      "options": [
+        "55°",
+        "305°",
+        "125°",
+        "235°"
+      ],
+      "answer": 1,
+      "solution": "Back bearing = WCB ± 180°. Since 125° < 180°, BB = 125° + 180° = 305°."
+    },
+    {
+      "id": "ncl-surveyor-17-049",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the reduced bearing of a line is N 45° E, its WCB is:",
+      "options": [
+        "135°",
+        "315°",
+        "45°",
+        "225°"
+      ],
+      "answer": 2,
+      "solution": "NE quadrant: WCB = QB = 45°."
+    },
+    {
+      "id": "ncl-surveyor-17-050",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In a closed traverse, the sum of interior angles should be:",
+      "options": [
+        "(n - 2) × 180°",
+        "(n + 2) × 90°",
+        "n × 180°",
+        "(2n - 4) × 90°"
+      ],
+      "answer": 0,
+      "solution": "For a closed polygon with n sides, sum of interior angles = (n - 2) × 180°."
+    },
+    {
+      "id": "ncl-surveyor-17-051",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The sum of interior angles of a closed traverse with 6 stations is:",
+      "options": [
+        "360°",
+        "900°",
+        "720°",
+        "540°"
+      ],
+      "answer": 2,
+      "solution": "Sum = (6 - 2) × 180° = 4 × 180° = 720°."
+    },
+    {
+      "id": "ncl-surveyor-17-052",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Parallax in a theodolite is eliminated by:",
+      "options": [
+        "Focusing the eyepiece to make crosshair sharp, then focusing objective to make target sharp",
+        "Centreing the instrument",
+        "Adjusting the plate bubble",
+        "Taking face left and face right readings"
+      ],
+      "answer": 0,
+      "solution": "Parallax is eliminated by first focusing the eyepiece on the crosshair, then focusing the objective on the target."
+    },
+    {
+      "id": "ncl-surveyor-17-053",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The cross-hair in a theodolite telescope is placed at:",
+      "options": [
+        "The eyepiece lens",
+        "The optical centre of the objective",
+        "The halfway point between objective and eyepiece",
+        "The focal plane of the objective"
+      ],
+      "answer": 3,
+      "solution": "Cross-hairs are placed at the focal plane of the objective so that they are visible simultaneously with the target."
+    },
+    {
+      "id": "ncl-surveyor-17-054",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Anstad's formula is used to:",
+      "options": [
+        "Interpolate contours from spot heights",
+        "Calculate EDM distance",
+        "Adjust levelling errors",
+        "Adjust traverse misclosure"
+      ],
+      "answer": 0,
+      "solution": "Anstad's formula interpolates intermediate contour positions between two spot heights."
+    },
+    {
+      "id": "ncl-surveyor-17-055",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The telescope of a theodolite is made to plunge (transit) to:",
+      "options": [
+        "Change the horizontal angle",
+        "Eliminate parallax",
+        "Measure vertical angles only",
+        "Continue the line of sight in the same vertical plane but reversed"
+      ],
+      "answer": 3,
+      "solution": "Plunging the telescope reverses the line of sight within the same vertical plane, used in two-face observations."
+    },
+    {
+      "id": "ncl-surveyor-17-056",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The reiteration method is also known as:",
+      "options": [
+        "Direction method",
+        "Repetition method",
+        "Tangential method",
+        "Bowditch method"
+      ],
+      "answer": 0,
+      "solution": "Reiteration is also called the direction method since all directions are observed from a reference line."
+    },
+    {
+      "id": "ncl-surveyor-17-057",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In theodolite traversing, the included angle at a station is calculated as:",
+      "options": [
+        "Back bearing - Fore bearing",
+        "Difference of directions of the two lines",
+        "Sum of two bearings",
+        "Fore bearing - Back bearing"
+      ],
+      "answer": 1,
+      "solution": "The included angle = difference between the directions of the two lines meeting at that station."
+    },
+    {
+      "id": "ncl-surveyor-17-058",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A theodolite with a least count of 1\" is classified as a:",
+      "options": [
+        "Vernier theodolite",
+        "Micro-optic (optical micrometer) theodolite",
+        "Digital theodolite",
+        "Transit theodolite"
+      ],
+      "answer": 1,
+      "solution": "Micro-optic theodolites use an optical micrometer to achieve least counts of 1\" or finer."
+    },
+    {
+      "id": "ncl-surveyor-17-059",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The vertical circle of a theodolite reads 90° when the telescope is horizontal in the:",
+      "options": [
+        "Both positions",
+        "Face right position",
+        "Face left position",
+        "Applicable in limited scenarios"
+      ],
+      "answer": 2,
+      "solution": "In face left, the vertical circle reads 90° (or 0° depending on graduation) when the line of sight is horizontal."
+    },
+    {
+      "id": "ncl-surveyor-17-060",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The essential requirement for the theodolite vertical axis is that it must be:",
+      "options": [
+        "Parallel to the line of sight",
+        "Aligned with the magnetic meridian",
+        "Perpendicular to the horizontal axis",
+        "Truly vertical (aligned with gravity)"
+      ],
+      "answer": 3,
+      "solution": "The vertical axis must be truly vertical for correct angle measurement; this is achieved by levelling."
+    },
+    {
+      "id": "ncl-surveyor-17-061",
+      "subject": "Mine Surveying",
+      "topic": "Theodolite",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the repetition method, if an angle is accumulated 3 times and the total reading is 180°15'30\", the measured angle is:",
+      "options": [
+        "60°05'10\"",
+        "540°46'30\"",
+        "90°07'45\"",
+        "180°15'30\""
+      ],
+      "answer": 0,
+      "solution": "Accumulated reading / number of repetitions = 180°15'30\" / 3 = 60°05'10\"."
+    },
+    {
+      "id": "ncl-surveyor-17-062",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A total station combines the functions of:",
+      "options": [
+        "Theodolite, EDM, and microprocessor",
+        "Level and EDM",
+        "GPS and compass",
+        "Theodolite and level only"
+      ],
+      "answer": 0,
+      "solution": "A total station integrates an electronic theodolite, an Electronic Distance Measurer (EDM), and an onboard microprocessor/data collector."
+    },
+    {
+      "id": "ncl-surveyor-17-063",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The EDM in a total station measures distance using:",
+      "options": [
+        "Magnetic field",
+        "Ultrasonic waves only",
+        "Infrared or laser light waves",
+        "Tape measurement"
+      ],
+      "answer": 2,
+      "solution": "EDM instruments use modulated infrared or laser light to measure distances with high precision."
+    },
+    {
+      "id": "ncl-surveyor-17-064",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The principle of EDM distance measurement is based on:",
+      "options": [
+        "Time of flight of light",
+        "Acoustic wave reflection",
+        "Phase difference or time of flight of modulated electromagnetic waves",
+        "Direct tape measurement"
+      ],
+      "answer": 2,
+      "solution": "EDM works on phase comparison or pulse time-of-flight of modulated electromagnetic waves."
+    },
+    {
+      "id": "ncl-surveyor-17-065",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In a total station, the measurement of slope distance and vertical angle allows calculation of:",
+      "options": [
+        "Both horizontal distance and height difference",
+        "Power measurement only",
+        "Applicable in limited scenarios",
+        "Area"
+      ],
+      "answer": 0,
+      "solution": "From slope distance (S) and vertical angle (α): HD = S cos α and VD = S sin α."
+    },
+    {
+      "id": "ncl-surveyor-17-066",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The range of a typical prism-based EDM total station is approximately:",
+      "options": [
+        "500 m",
+        "50 m",
+        "3-5 km",
+        "50 km"
+      ],
+      "answer": 2,
+      "solution": "Prism-based EDM can typically measure up to 3-5 km with a single prism under good conditions."
+    },
+    {
+      "id": "ncl-surveyor-17-067",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Reflectorless (IR) EDM measurement is useful in mine surveying for:",
+      "options": [
+        "Replacing GPS",
+        "Measuring only horizontal distances",
+        "Levelling only",
+        "Measuring distances to inaccessible or hazardous surfaces"
+      ],
+      "answer": 3,
+      "solution": "Reflectorless EDM can measure distances to rock faces, high walls, and other surfaces where a prism cannot be placed."
+    },
+    {
+      "id": "ncl-surveyor-17-068",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The accuracy of a total station distance measurement is typically expressed as:",
+      "options": [
+        "±0.5 m",
+        "±10 mm",
+        "±1 mm",
+        "±(2 mm + 2 ppm × D)"
+      ],
+      "answer": 3,
+      "solution": "Modern total stations have distance accuracy of ±(2 mm + 2 ppm × D), where D is the measured distance."
+    },
+    {
+      "id": "ncl-surveyor-17-069",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'ppm' in EDM accuracy specification stands for:",
+      "options": [
+        "Power per module",
+        "Parts per minute",
+        "Pulse per metre",
+        "Parts per million"
+      ],
+      "answer": 3,
+      "solution": "Parts per million (ppm) is a proportional error term; 2 ppm at 1 km = 2 mm additional error."
+    },
+    {
+      "id": "ncl-surveyor-17-070",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The atmospheric correction for EDM measurement accounts for:",
+      "options": [
+        "Humidity only",
+        "Gravitational pull",
+        "Temperature and pressure affecting the refractive index of air",
+        "Wind speed"
+      ],
+      "answer": 2,
+      "solution": "Temperature and atmospheric pressure change the refractive index of air, affecting the speed of light and hence EDM distance."
+    },
+    {
+      "id": "ncl-surveyor-17-071",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the temperature is higher than the standard (15°C), the EDM measured distance will be:",
+      "options": [
+        "Shorter than true distance",
+        "Longer than true distance",
+        "Exactly correct",
+        "Unaffected"
+      ],
+      "answer": 1,
+      "solution": "Higher temperature reduces air density, slowing light propagation, making the EDM read longer than the true distance."
+    },
+    {
+      "id": "ncl-surveyor-17-072",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'prism constant' (additive constant) in EDM measurement corrects for:",
+      "options": [
+        "Atmospheric refraction",
+        "Instrument height",
+        "Earth curvature",
+        "The path length through the prism retroreflector"
+      ],
+      "answer": 3,
+      "solution": "The prism constant accounts for the additional optical path through the glass prism compared to a theoretical point reflector."
+    },
+    {
+      "id": "ncl-surveyor-17-073",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A single round of angles on a total station typically includes:",
+      "options": [
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Face left and face right observations",
+        "Face left only"
+      ],
+      "answer": 2,
+      "solution": "Standard practice is to observe face left and face right, then average to eliminate instrumental errors."
+    },
+    {
+      "id": "ncl-surveyor-17-074",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The data storage capability of a total station allows:",
+      "options": [
+        "No storage capability",
+        "Storing only angles",
+        "Storing angles, distances, and coordinates in onboard memory",
+        "Storing only coordinates"
+      ],
+      "answer": 2,
+      "solution": "Total stations store angular and distance measurements, point IDs, and computed coordinates in internal memory or removable cards."
+    },
+    {
+      "id": "ncl-surveyor-17-075",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The coordinate system commonly used in total station surveys is:",
+      "options": [
+        "Galactic coordinates",
+        "Polar coordinates only",
+        "Local grid (Northing, Easting, Elevation)",
+        "Geodetic (lat/lon)"
+      ],
+      "answer": 2,
+      "solution": "Total stations typically work in a local Cartesian system: N (Northing), E (Easting), Z (Elevation)."
+    },
+    {
+      "id": "ncl-surveyor-17-076",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In total station surveying, the 'station' refers to:",
+      "options": [
+        "The target point",
+        "The control point only",
+        "The point where the instrument is set up",
+        "The benchmark"
+      ],
+      "answer": 2,
+      "solution": "The station is the occupied point where the total station is set up over a known or unknown point."
+    },
+    {
+      "id": "ncl-surveyor-17-077",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'backsight' in total station traversing is a measurement taken to:",
+      "options": [
+        "A previously occupied station of known coordinates",
+        "An unknown point ahead",
+        "Any random point",
+        "The sun"
+      ],
+      "answer": 0,
+      "solution": "A backsight is taken to a known point (previous station) to establish the orientation of the instrument."
+    },
+    {
+      "id": "ncl-surveyor-17-078",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'foresight' in total station surveying is taken to:",
+      "options": [
+        "The benchmark only",
+        "The instrument station",
+        "A known point behind",
+        "A new unknown station ahead"
+      ],
+      "answer": 3,
+      "solution": "A foresight is measured to the next station whose coordinates are to be determined."
+    },
+    {
+      "id": "ncl-surveyor-17-079",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A resection in total station surveying determines the instrument station coordinates by:",
+      "options": [
+        "Using GPS only",
+        "Measuring to one known point only",
+        "Measuring distances and/or angles to two or more known points",
+        "Measuring only vertical angles"
+      ],
+      "answer": 2,
+      "solution": "Resection (free station) computes the occupied point's position from observations to multiple known points."
+    },
+    {
+      "id": "ncl-surveyor-17-080",
+      "subject": "Mine Surveying",
+      "topic": "Total Station",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The 'offset' method in total station surveying is used for:",
+      "options": [
+        "Measuring details from a survey line",
+        "Levelling",
+        "GPS base station setup",
+        "Setting out curves"
+      ],
+      "answer": 0,
+      "solution": "Offsets are detail measurements (distance and angle) taken from traverse stations to survey features."
+    },
+    {
+      "id": "ncl-surveyor-17-g001",
+      "subject": "General Awareness",
+      "topic": "Reasoning",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Seven people A, B, C, D, E, F, G are standing in a line. A is third from left. B is to the right of A. C is immediately to the left of B. D is at the extreme right. E is between A and B. Who is immediately to the right of E?",
+      "options": [
+        "B",
+        "F",
+        "G",
+        "C"
+      ],
+      "answer": 3,
+      "solution": "Arrangement: _,_,A,E,_,B,C with D at right end. B is right of E."
+    },
+    {
+      "id": "ncl-surveyor-17-g002",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which river is known as the 'Sorrow of Bihar'?",
+      "options": [
+        "B. Kosi",
+        "A. Ganga",
+        "C. Gandak",
+        "D. Son"
+      ],
+      "answer": 0,
+      "solution": "Kosi river is known as the Sorrow of Bihar due to frequent floods."
+    },
+    {
+      "id": "ncl-surveyor-17-g003",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The southernmost point of India is located in which state/UT?",
+      "options": [
+        "C. Lakshadweep",
+        "D. Andaman & Nicobar Islands",
+        "A. Kerala",
+        "B. Tamil Nadu"
+      ],
+      "answer": 1,
+      "solution": "Indira Point in Great Nicobar is the southernmost point of India."
+    },
+    {
+      "id": "ncl-surveyor-17-g004",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which pass connects Srinagar with Leh?",
+      "options": [
+        "C. Banihal Pass",
+        "A. Rohtang Pass",
+        "D. Khardung La",
+        "B. Zoji La"
+      ],
+      "answer": 3,
+      "solution": "Zoji La connects Srinagar with Leh in Jammu & Kashmir."
+    },
+    {
+      "id": "ncl-surveyor-17-g005",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Tropic of Cancer does NOT pass through which of the following states?",
+      "options": [
+        "A. Rajasthan",
+        "B. Madhya Pradesh",
+        "D. West Bengal",
+        "C. Odisha"
+      ],
+      "answer": 3,
+      "solution": "Tropic of Cancer passes through Rajasthan, MP, Gujarat, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram — but not Odisha."
+    },
+    {
+      "id": "ncl-surveyor-17-g006",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which is the largest saltwater lake in India?",
+      "options": [
+        "C. Sambhar Lake",
+        "A. Chilika Lake",
+        "D. Wular Lake",
+        "B. Pulicat Lake"
+      ],
+      "answer": 1,
+      "solution": "Chilika Lake in Odisha is the largest saltwater lake in India."
+    },
+    {
+      "id": "ncl-surveyor-17-g007",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian state has the longest coastline?",
+      "options": [
+        "D. Andhra Pradesh",
+        "C. Tamil Nadu",
+        "A. Gujarat",
+        "B. Maharashtra"
+      ],
+      "answer": 2,
+      "solution": "Gujarat has the longest coastline among Indian states."
+    },
+    {
+      "id": "ncl-surveyor-17-g008",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Jog Falls is formed by which river?",
+      "options": [
+        "B. Kaveri",
+        "A. Krishna",
+        "C. Sharavathi",
+        "D. Tungabhadra"
+      ],
+      "answer": 2,
+      "solution": "Jog Falls is formed by the Sharavathi River in Karnataka."
+    },
+    {
+      "id": "ncl-surveyor-17-g009",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which of the following is the highest peak in South India?",
+      "options": [
+        "C. Mahendragiri",
+        "D. Kudremukh",
+        "B. Doddabetta",
+        "A. Anamudi"
+      ],
+      "answer": 3,
+      "solution": "Anamudi (2,695 m) in Kerala is the highest peak in South India."
+    },
+    {
+      "id": "ncl-surveyor-17-g010",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which canal connects the Bay of Bengal with the Arabian Sea through India?",
+      "options": [
+        "B. Suez Canal",
+        "A. Indira Gandhi Canal",
+        "C. Grand Anicut Canal",
+        "D. Narmada Canal"
+      ],
+      "answer": 1,
+      "solution": "Indira Gandhi Canal is the longest canal in India."
+    },
+    {
+      "id": "ncl-surveyor-17-g011",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Sundarbans delta is formed by which rivers?",
+      "options": [
+        "B. Ganga and Yamuna",
+        "C. Brahmaputra and Meghna",
+        "A. Ganga and Brahmaputra",
+        "D. Ganga and Son"
+      ],
+      "answer": 2,
+      "solution": "Sundarbans delta is formed by the Ganga and Brahmaputra rivers."
+    },
+    {
+      "id": "ncl-surveyor-17-g012",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which soil type is most suitable for cotton cultivation in India?",
+      "options": [
+        "C. Red soil",
+        "D. Laterite soil",
+        "A. Alluvial soil",
+        "B. Black (regur) soil"
+      ],
+      "answer": 3,
+      "solution": "Black (regur) soil is ideal for cotton cultivation."
+    },
+    {
+      "id": "ncl-surveyor-17-g013",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Palk Strait separates India from which country?",
+      "options": [
+        "D. Bangladesh",
+        "A. Maldives",
+        "C. Myanmar",
+        "B. Sri Lanka"
+      ],
+      "answer": 3,
+      "solution": "Palk Strait separates India (Tamil Nadu) from Sri Lanka."
+    },
+    {
+      "id": "ncl-surveyor-17-g014",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which pass is known as the 'Gateway to the North-East'?",
+      "options": [
+        "D. Banihal Pass",
+        "C. Siliguri Corridor",
+        "B. Varsity Pass",
+        "A. Nathu La"
+      ],
+      "answer": 1,
+      "solution": "Siliguri Corridor (Chicken's Neck) connects mainland India to the North-East."
+    },
+    {
+      "id": "ncl-surveyor-17-g015",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Indian state receives rainfall from both the Southwest and Northeast monsoons?",
+      "options": [
+        "B. Tamil Nadu",
+        "C. Karnataka",
+        "A. Kerala",
+        "D. Rajasthan"
+      ],
+      "answer": 0,
+      "solution": "Tamil Nadu receives rainfall from both Southwest (partial) and Northeast monsoons."
+    },
+    {
+      "id": "ncl-surveyor-17-g016",
+      "subject": "General Awareness",
+      "topic": "GK-Geography",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The maximum area under forest cover in India is in which state?",
+      "options": [
+        "A. Arunachal Pradesh",
+        "C. Maharashtra",
+        "B. Madhya Pradesh",
+        "D. Chhattisgarh"
+      ],
+      "answer": 2,
+      "solution": "Madhya Pradesh has the largest forest cover in India by area."
+    },
+    {
+      "id": "ncl-surveyor-17-g017",
+      "subject": "General Awareness",
+      "topic": "GK-Polity",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Who was the first President of India?",
+      "options": [
+        "C. S. Radhakrishnan",
+        "B. Dr. Rajendra Prasad",
+        "D. Zakir Husain",
+        "A. Jawaharlal Nehru"
+      ],
+      "answer": 1,
+      "solution": "Dr. Rajendra Prasad was the first President of India (1950-1962)."
+    },
+    {
+      "id": "ncl-surveyor-17-g018",
+      "subject": "General Awareness",
+      "topic": "GK-Polity",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The fundamental rights are enshrined in which part of the Indian Constitution?",
+      "options": [
+        "B. Part III",
+        "A. Part II",
+        "C. Part IV",
+        "D. Part V"
+      ],
+      "answer": 0,
+      "solution": "Fundamental Rights are in Part III (Articles 12-35) of the Indian Constitution."
+    },
+    {
+      "id": "ncl-surveyor-17-g019",
+      "subject": "General Awareness",
+      "topic": "GK-Polity",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "How many fundamental duties are listed in the Indian Constitution?",
+      "options": [
+        "B. 10",
+        "D. 12",
+        "C. 11",
+        "A. 9"
+      ],
+      "answer": 2,
+      "solution": "There are 11 fundamental duties under Article 51A."
+    },
+    {
+      "id": "ncl-surveyor-17-g020",
+      "subject": "General Awareness",
+      "topic": "GK-Polity",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Which Article of the Indian Constitution abolishes untouchability?",
+      "options": [
+        "A. Article 14",
+        "B. Article 15",
+        "C. Article 17",
+        "D. Article 19"
+      ],
+      "answer": 2,
+      "solution": "Article 17 abolishes untouchability in all forms."
+    }
+  ]
+}

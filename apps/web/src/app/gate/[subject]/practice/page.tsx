@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { UnlockNowBtn } from "@/components/unlock-now-btn";
 import { getGateSubject } from "@/data/gate/registry";
 import { auth } from "@/lib/auth";
 import { hasEntitlement } from "@/lib/entitlements";
@@ -30,7 +31,6 @@ export default async function SubjectPracticeIndex(props: { params: Promise<{ su
   // General Aptitude is shared across all subjects and lives in its own legacy
   // track — keep the per-subject practice page focused on technical subjects.
   const subjects = meta.practice.filter((s) => s.slug !== "general-aptitude");
-  const payHref = `/pay/upi?plan=pro&exam=${meta.accessExam}&subject=${meta.accessSubject}`;
   const totalQs = subjects.reduce((n, s) => n + s.questions.length, 0);
   const totalLabel = totalQs.toLocaleString("en-IN");
 
@@ -48,7 +48,7 @@ export default async function SubjectPracticeIndex(props: { params: Promise<{ su
         </p>
         {!unlocked && (
           <div className="mt-5 inline-block bg-amber-50 border border-amber-200 text-amber-900 rounded-lg px-4 py-2 text-sm">
-            🔒 Subject-wise practice is a <b>premium</b> feature. <Link href={payHref} className="underline font-semibold">Unlock all {totalLabel} {meta.code} questions</Link>.
+            🔒 Subject-wise practice is a <b>premium</b> feature. <UnlockNowBtn exam={meta.accessExam} subject={meta.accessSubject} plan="pro" label={`Unlock all ${totalLabel} ${meta.code} questions`} className="underline font-semibold bg-transparent border-0 p-0 cursor-pointer text-amber-900" />.
           </div>
         )}
       </header>
@@ -72,9 +72,7 @@ export default async function SubjectPracticeIndex(props: { params: Promise<{ su
                   Practice →
                 </Link>
               ) : (
-                <Link href={payHref} className="btn btn-ghost border border-line w-full mt-5">
-                  🔒 Unlock {meta.code}
-                </Link>
+                <UnlockNowBtn exam={meta.accessExam} subject={meta.accessSubject} plan="pro" label={`🔒 Unlock ${meta.code}`} className="btn btn-ghost border border-line w-full mt-5" />
               )}
             </div>
           );

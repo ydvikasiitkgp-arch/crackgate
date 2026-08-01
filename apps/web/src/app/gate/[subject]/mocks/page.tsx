@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { UnlockNowBtn } from "@/components/unlock-now-btn";
 import { getGateSubject } from "@/data/gate/registry";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -63,7 +64,6 @@ export default async function SubjectMocksIndex(props: { params: Promise<{ subje
 
   const sorted = [...mocks].sort((a, b) => (bestByMock.has(a.id) ? 1 : 0) - (bestByMock.has(b.id) ? 1 : 0));
   const freeCount = mocks.filter((m) => m.tier === "free").length;
-  const payHref = `/pay/upi?plan=premium&exam=${meta.accessExam}&subject=${meta.accessSubject}`;
 
   return (
     <div className="max-w-7xl mx-auto px-5 py-12">
@@ -81,7 +81,7 @@ export default async function SubjectMocksIndex(props: { params: Promise<{ subje
         </ul>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href={`/mocks/${mocks[0].id}`} className="btn btn-primary">Try Mock 1 free →</Link>
-          {!entitled && <Link href={payHref} className="btn btn-ghost">Unlock the full series</Link>}
+          {!entitled && <UnlockNowBtn exam={meta.accessExam} subject={meta.accessSubject} plan="premium" label="Unlock the full series" className="btn btn-ghost" />}
         </div>
         <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted">
           <span><b className="text-ink">{freeCount}</b> free</span>
@@ -101,7 +101,8 @@ export default async function SubjectMocksIndex(props: { params: Promise<{ subje
               title={m.title}
               tier={m.tier}
               code={meta.code}
-              payHref={payHref}
+              exam={meta.accessExam}
+              accessSubject={meta.accessSubject}
               duration={m.duration ?? 180}
               qCount={m.questions.length}
               unlocked={unlocked}
@@ -115,13 +116,14 @@ export default async function SubjectMocksIndex(props: { params: Promise<{ subje
 }
 
 function MockCard({
-  id, title, tier, code, payHref, duration, qCount, unlocked, best,
+  id, title, tier, code, exam, accessSubject, duration, qCount, unlocked, best,
 }: {
   id: string;
   title: string;
   tier: Tier;
   code: string;
-  payHref: string;
+  exam: string;
+  accessSubject: string;
   duration: number;
   qCount: number;
   unlocked: boolean;
@@ -167,7 +169,7 @@ function MockCard({
 
       <div className="mt-4">
         {!unlocked ? (
-          <Link href={payHref} className="btn btn-accent w-full">⭐ Unlock {code}</Link>
+          <UnlockNowBtn exam={exam} subject={accessSubject} plan="premium" label={`⭐ Unlock ${code}`} className="btn btn-accent w-full" />
         ) : attempted ? (
           <Link href={`/mocks/${id}`} className="btn btn-ghost w-full">Retake</Link>
         ) : (

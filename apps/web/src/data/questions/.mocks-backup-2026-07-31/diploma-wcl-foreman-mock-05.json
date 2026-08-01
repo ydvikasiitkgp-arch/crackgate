@@ -1,0 +1,1830 @@
+{
+  "id": "diploma-wcl-foreman-mock-05",
+  "title": "WCL Asst. Foreman (Electrical) — Mock 05",
+  "tier": "pro",
+  "duration": 120,
+  "pattern": "WCL Asst. Foreman (Electrical) CBT (100 Q · 100 marks · 120 min · no −ve)",
+  "totalMarks": 100,
+  "sections": [
+    {
+      "name": "Technical (Electrical)",
+      "count": 80,
+      "marks": 80
+    },
+    {
+      "name": "General Awareness & Aptitude",
+      "count": 20,
+      "marks": 20
+    }
+  ],
+  "negativeMarking": {
+    "mcq1": 0,
+    "mcq2": 0,
+    "nat": 0,
+    "msq": 0
+  },
+  "seed": 14698007,
+  "locked": true,
+  "questions": [
+    {
+      "id": "wcl-afel-05-001",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Damper windings in a synchronous motor are used to:",
+      "options": [
+        "Reduce hunting",
+        "Improve efficiency",
+        "Both A and B",
+        "Provide starting torque"
+      ],
+      "answer": 2,
+      "solution": "Damper windings provide starting torque (induction motor principle) and damp oscillations."
+    },
+    {
+      "id": "wcl-afel-05-002",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The starting methods for a synchronous motor include:",
+      "options": [
+        "None",
+        "Pony motor (small prime mover)",
+        "Both A and B",
+        "Damper winding (induction motor start)"
+      ],
+      "answer": 2,
+      "solution": "Both methods are used: pony motor brings rotor near sync speed, damper windings act as squirrel cage."
+    },
+    {
+      "id": "wcl-afel-05-003",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The torque angle (δ) of a synchronous motor is the angle between:",
+      "options": [
+        "Both A and B are equivalent",
+        "Supply voltage and back EMF",
+        "Speed and voltage",
+        "Stator and rotor MMFs"
+      ],
+      "answer": 0,
+      "solution": "Torque angle is the angle between rotor and stator fields (or equivalently between V and Eb)."
+    },
+    {
+      "id": "wcl-afel-05-004",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The maximum torque of a synchronous motor occurs at torque angle:",
+      "options": [
+        "45°",
+        "180°",
+        "90°",
+        "0°"
+      ],
+      "answer": 2,
+      "solution": "Maximum torque (pull-out torque) occurs at δ = 90°."
+    },
+    {
+      "id": "wcl-afel-05-005",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If the load on a synchronous motor exceeds pull-out torque:",
+      "options": [
+        "Motor loses synchronism (pulls out)",
+        "Motor continues at sync speed",
+        "Motor stops instantly",
+        "Motor speed increases"
+      ],
+      "answer": 0,
+      "solution": "Motor pulls out of synchronism and stalls."
+    },
+    {
+      "id": "wcl-afel-05-006",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The excitation of a synchronous motor affects:",
+      "options": [
+        "Speed",
+        "Power factor",
+        "Applicable in limited scenarios",
+        "Torque"
+      ],
+      "answer": 1,
+      "solution": "Excitation affects power factor (leading/lagging/unity) but not speed (constant) or torque (depends on load)."
+    },
+    {
+      "id": "wcl-afel-05-007",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A synchronous motor operating at leading power factor is equivalent to:",
+      "options": [
+        "A resistor",
+        "A transformer",
+        "A capacitor",
+        "An inductor"
+      ],
+      "answer": 2,
+      "solution": "Leading power factor means it supplies reactive power, like a capacitor."
+    },
+    {
+      "id": "wcl-afel-05-008",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The power consumed by a synchronous motor is proportional to:",
+      "options": [
+        "cos δ",
+        "sin δ",
+        "sin 2δ",
+        "tan δ"
+      ],
+      "answer": 0,
+      "solution": "P = (3V Eb / Xs) × sin δ, but torque ∝ sin δ, and power ∝ torque × speed (constant)."
+    },
+    {
+      "id": "wcl-afel-05-009",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In a synchronous motor, if excitation is increased at constant load:",
+      "options": [
+        "Current decreases to minimum then increases",
+        "Power factor improves (towards unity from lagging)",
+        "Speed increases",
+        "Torque increases"
+      ],
+      "answer": 0,
+      "solution": "V-curve shows current decreases to minimum at unity PF then increases as motor becomes over-excited."
+    },
+    {
+      "id": "wcl-afel-05-010",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A servo motor is characterized by:",
+      "options": [
+        "Constant speed",
+        "Low torque",
+        "High inertia",
+        "Quick response and precise positioning"
+      ],
+      "answer": 3,
+      "solution": "Servo motors are designed for fast response, precise control of position/speed/torque."
+    },
+    {
+      "id": "wcl-afel-05-011",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A stepper motor converts:",
+      "options": [
+        "Analog to digital",
+        "Electrical pulses to discrete mechanical steps",
+        "DC to AC",
+        "AC to DC"
+      ],
+      "answer": 1,
+      "solution": "Stepper motor moves in fixed angular steps in response to electrical pulses."
+    },
+    {
+      "id": "wcl-afel-05-012",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The step angle of a stepper motor is determined by:",
+      "options": [
+        "Supply voltage",
+        "Number of stator phases and rotor teeth",
+        "Frequency only",
+        "Load torque"
+      ],
+      "answer": 1,
+      "solution": "Step angle = 360° / (number of phases × number of rotor teeth × gear ratio)."
+    },
+    {
+      "id": "wcl-afel-05-013",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A BLDC (Brushless DC) motor differs from a DC motor in that:",
+      "options": [
+        "It runs only on AC",
+        "It has a commutator",
+        "Electronic commutation replaces mechanical commutator",
+        "It uses brushes"
+      ],
+      "answer": 2,
+      "solution": "BLDC uses electronic commutation (Hall sensors + MOSFETs/IGBTs) instead of brushes."
+    },
+    {
+      "id": "wcl-afel-05-014",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A universal motor can operate on:",
+      "options": [
+        "Applicable in limited scenarios",
+        "AC only",
+        "Both AC and DC",
+        "DC only"
+      ],
+      "answer": 2,
+      "solution": "Universal motor is a series-wound motor designed to run on both AC and DC supply."
+    },
+    {
+      "id": "wcl-afel-05-015",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A repulsion motor works on the principle of:",
+      "options": [
+        "Repulsion between stator field and rotor poles",
+        "Self induction",
+        "Electromagnetic induction",
+        "Mutual induction"
+      ],
+      "answer": 0,
+      "solution": "Repulsion between stator magnetic field and induced rotor poles produces torque."
+    },
+    {
+      "id": "wcl-afel-05-016",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The speed of a universal motor on no load tends to:",
+      "options": [
+        "Synchronous speed",
+        "Zero",
+        "Half of rated speed",
+        "Dangerously high value"
+      ],
+      "answer": 3,
+      "solution": "Like a series DC motor, universal motor speed rises dangerously high at no load."
+    },
+    {
+      "id": "wcl-afel-05-017",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A hysteresis motor works on the principle of:",
+      "options": [
+        "Reaction torque",
+        "Hysteresis and eddy current losses in rotor",
+        "Induction",
+        "Reluctance torque"
+      ],
+      "answer": 1,
+      "solution": "Hysteresis motor uses hysteresis loss in special rotor material to produce torque."
+    },
+    {
+      "id": "wcl-afel-05-018",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A reluctance motor runs at:",
+      "options": [
+        "Twice synchronous speed",
+        "Any speed",
+        "Below synchronous speed",
+        "Synchronous speed"
+      ],
+      "answer": 3,
+      "solution": "Reluctance motor runs at synchronous speed due to reluctance torque."
+    },
+    {
+      "id": "wcl-afel-05-019",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A shaded pole motor is used in:",
+      "options": [
+        "Industrial drives",
+        "High power applications",
+        "Traction",
+        "Fans and small appliances"
+      ],
+      "answer": 3,
+      "solution": "Shaded pole motor is cheap, low torque, used in fans, blowers, small appliances."
+    },
+    {
+      "id": "wcl-afel-05-020",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The starting torque of a shaded pole motor is:",
+      "options": [
+        "High",
+        "Low",
+        "Zero",
+        "Very high"
+      ],
+      "answer": 1,
+      "solution": "Starting torque is low due to weak rotating field from shading coil."
+    },
+    {
+      "id": "wcl-afel-05-021",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A permanent magnet synchronous motor (PMSM) uses:",
+      "options": [
+        "Wound rotor with DC supply",
+        "Damper windings only",
+        "Permanent magnets on rotor",
+        "Squirrel cage rotor"
+      ],
+      "answer": 2,
+      "solution": "PMSM uses permanent magnets (rare earth) on rotor for excitation."
+    },
+    {
+      "id": "wcl-afel-05-022",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The main advantage of PMSM over induction motor is:",
+      "options": [
+        "Lower cost",
+        "Simpler construction",
+        "Higher efficiency (no rotor copper loss)",
+        "Higher starting torque"
+      ],
+      "answer": 2,
+      "solution": "PMSM has no rotor copper loss, giving higher efficiency."
+    },
+    {
+      "id": "wcl-afel-05-023",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The hunting in a synchronous motor can be reduced by:",
+      "options": [
+        "Adding damper windings",
+        "Increasing load",
+        "Increasing excitation",
+        "Reducing supply voltage"
+      ],
+      "answer": 0,
+      "solution": "Damper windings damp oscillations by producing opposing torque during hunting."
+    },
+    {
+      "id": "wcl-afel-05-024",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A synchronous motor can be used for power factor correction by:",
+      "options": [
+        "Adding capacitors",
+        "Under-exciting it",
+        "Over-exciting it",
+        "Running it at no load"
+      ],
+      "answer": 2,
+      "solution": "Over-excited synchronous motor draws leading current, acting as a synchronous condenser."
+    },
+    {
+      "id": "wcl-afel-05-025",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The field winding of a synchronous motor is supplied by:",
+      "options": [
+        "Permanent magnets only",
+        "AC supply",
+        "DC supply (via slip rings or brushless exciter)",
+        "Self-excitation"
+      ],
+      "answer": 2,
+      "solution": "Rotor field winding is excited by DC through slip rings or brushless exciter."
+    },
+    {
+      "id": "wcl-afel-05-026",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The starting current of a synchronous motor is typically:",
+      "options": [
+        "10 times rated current",
+        "2–3 times rated current",
+        "Equal to rated current",
+        "5–7 times rated current"
+      ],
+      "answer": 3,
+      "solution": "Synchronous motor draws 5–7× rated current at DOL start."
+    },
+    {
+      "id": "wcl-afel-05-027",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A brushless DC motor uses which type of rotor?",
+      "options": [
+        "Permanent magnet rotor",
+        "Squirrel cage rotor",
+        "Wound rotor",
+        "Salient pole rotor"
+      ],
+      "answer": 0,
+      "solution": "BLDC uses permanent magnet rotor with electronic commutation."
+    },
+    {
+      "id": "wcl-afel-05-028",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The torque in a stepper motor is proportional to:",
+      "options": [
+        "Number of phases",
+        "Step angle",
+        "Applicable in limited scenarios",
+        "Current in stator windings"
+      ],
+      "answer": 3,
+      "solution": "Torque is proportional to stator current (up to magnetic saturation)."
+    },
+    {
+      "id": "wcl-afel-05-029",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The holding torque of a stepper motor is:",
+      "options": [
+        "Same as running torque",
+        "Zero when stopped",
+        "Maximum torque the motor can produce at standstill",
+        "Zero at all times"
+      ],
+      "answer": 2,
+      "solution": "Holding torque is the maximum torque the motor can resist when energized but not rotating."
+    },
+    {
+      "id": "wcl-afel-05-030",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A servo system typically uses which feedback device?",
+      "options": [
+        "None",
+        "Encoder or resolver",
+        "Tachometer",
+        "Stroboscope"
+      ],
+      "answer": 1,
+      "solution": "Encoders or resolvers provide position/speed feedback for closed-loop servo control."
+    },
+    {
+      "id": "wcl-afel-05-031",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The rotor of a hysteresis motor is made of:",
+      "options": [
+        "Laminated steel",
+        "Hard magnetic material (Alnico, Cobalt-steel)",
+        "Copper bars",
+        "Aluminum"
+      ],
+      "answer": 1,
+      "solution": "Hard magnetic material with high hysteresis loss is used for the rotor."
+    },
+    {
+      "id": "wcl-afel-05-032",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A single-phase induction motor is not self-starting because:",
+      "options": [
+        "It has no rotor",
+        "It has high resistance",
+        "It has high inductance",
+        "It has no rotating field"
+      ],
+      "answer": 3,
+      "solution": "Single-phase produces pulsating (not rotating) field, so no starting torque."
+    },
+    {
+      "id": "wcl-afel-05-033",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The starting methods for a single-phase induction motor include:",
+      "options": [
+        "Capacitor start",
+        "Shaded pole",
+        "Resistance start (split phase)",
+        "Applicable in limited scenarios"
+      ],
+      "answer": 3,
+      "solution": "All methods are used to create a pseudo-rotating field for starting."
+    },
+    {
+      "id": "wcl-afel-05-034",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A capacitor-start capacitor-run motor uses:",
+      "options": [
+        "One capacitor for starting, removed after start",
+        "Two capacitors (one for start, one for run)",
+        "One capacitor always in circuit",
+        "No capacitor"
+      ],
+      "answer": 1,
+      "solution": "Starting capacitor (large) is disconnected by centrifugal switch; run capacitor stays."
+    },
+    {
+      "id": "wcl-afel-05-035",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The direction of rotation of a single-phase motor can be reversed by:",
+      "options": [
+        "Either B or C",
+        "Reversing starting winding connections",
+        "Reversing main winding connections",
+        "Reversing supply terminals"
+      ],
+      "answer": 0,
+      "solution": "Reversing either main or starting winding connections reverses rotating field direction."
+    },
+    {
+      "id": "wcl-afel-05-036",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A repulsion-start induction-run motor starts as:",
+      "options": [
+        "Induction motor",
+        "DC motor",
+        "Repulsion motor",
+        "Synchronous motor"
+      ],
+      "answer": 2,
+      "solution": "Starts as repulsion motor (high torque), runs as induction motor after centrifugal switch."
+    },
+    {
+      "id": "wcl-afel-05-037",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The synchronous speed of an 8-pole motor at 50 Hz is:",
+      "options": [
+        "3000 rpm",
+        "1500 rpm",
+        "750 rpm",
+        "1000 rpm"
+      ],
+      "answer": 2,
+      "solution": "Ns = 120 × 50 / 8 = 750 rpm."
+    },
+    {
+      "id": "wcl-afel-05-038",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A synchronous motor will fail to start if:",
+      "options": [
+        "Excitation is zero",
+        "Supply voltage is too low",
+        "Damper windings are absent and no pony motor",
+        "Applicable in limited scenarios"
+      ],
+      "answer": 3,
+      "solution": "Without damper windings or pony motor, zero excitation, or very low voltage, motor won't start."
+    },
+    {
+      "id": "wcl-afel-05-039",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The pull-out torque of a synchronous motor is typically:",
+      "options": [
+        "0.5 times rated torque",
+        "Equal to rated torque",
+        "1.5–2 times rated torque",
+        "5 times rated torque"
+      ],
+      "answer": 2,
+      "solution": "Pull-out torque is typically 1.5–2 times rated torque."
+    },
+    {
+      "id": "wcl-afel-05-040",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A brushless DC motor is basically a:",
+      "options": [
+        "Permanent magnet synchronous motor with electronic commutation",
+        "Stepper motor",
+        "DC motor without brushes",
+        "Induction motor"
+      ],
+      "answer": 0,
+      "solution": "BLDC is a PMSM with electronic commutation (trapezoidal back-EMF)."
+    },
+    {
+      "id": "wcl-afel-05-041",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The speed of a stepper motor is controlled by:",
+      "options": [
+        "Pulse amplitude only",
+        "Voltage amplitude",
+        "Frequency of input pulses",
+        "Pulse width"
+      ],
+      "answer": 2,
+      "solution": "Stepper motor speed is directly proportional to pulse frequency."
+    },
+    {
+      "id": "wcl-afel-05-042",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A synchronous motor can be started as an induction motor using:",
+      "options": [
+        "Applicable in limited scenarios",
+        "Damper windings",
+        "Field winding only",
+        "Stator winding only"
+      ],
+      "answer": 1,
+      "solution": "Damper windings act as squirrel cage rotor for induction motor starting."
+    },
+    {
+      "id": "wcl-afel-05-043",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The efficiency of a synchronous motor is generally:",
+      "options": [
+        "Higher than induction motor",
+        "Zero",
+        "Lower than induction motor",
+        "Same as induction motor"
+      ],
+      "answer": 0,
+      "solution": "Synchronous motor has no rotor copper loss (DC excited), giving higher efficiency."
+    },
+    {
+      "id": "wcl-afel-05-044",
+      "subject": "Electrical Engineering",
+      "topic": "Synchronous & Special Motors",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A permanent magnet stepper motor has step angle of 1.8°. How many steps per revolution?",
+      "options": [
+        "400",
+        "100",
+        "360",
+        "200"
+      ],
+      "answer": 3,
+      "solution": "Steps per revolution = 360° / 1.8° = 200 steps."
+    },
+    {
+      "id": "wcl-afel-05-045",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A Variable Frequency Drive (VFD) controls motor speed by:",
+      "options": [
+        "Varying frequency only",
+        "Varying rotor resistance",
+        "Varying voltage only",
+        "Varying both voltage and frequency (V/f)"
+      ],
+      "answer": 3,
+      "solution": "V/f control maintains constant flux for optimal motor performance."
+    },
+    {
+      "id": "wcl-afel-05-046",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The PWM (Pulse Width Modulation) in a VFD is used to:",
+      "options": [
+        "Control voltage amplitude by varying pulse width",
+        "Control frequency",
+        "Control flux only",
+        "Control current only"
+      ],
+      "answer": 0,
+      "solution": "PWM varies pulse width to control effective voltage amplitude."
+    },
+    {
+      "id": "wcl-afel-05-047",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The DC bus in a VFD converts:",
+      "options": [
+        "AC to DC (rectifier)",
+        "AC to AC directly",
+        "DC to AC (inverter)",
+        "Both AC to DC and DC to AC"
+      ],
+      "answer": 3,
+      "solution": "VFD: Rectifier (AC→DC) → DC Bus → Inverter (DC→AC with V/f control)."
+    },
+    {
+      "id": "wcl-afel-05-048",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A soft starter reduces motor starting current by:",
+      "options": [
+        "Gradually increasing voltage using thyristors",
+        "Adding resistance in rotor",
+        "Reducing frequency",
+        "Reducing flux"
+      ],
+      "answer": 0,
+      "solution": "Soft starter uses back-to-back thyristors to ramp voltage from low to full."
+    },
+    {
+      "id": "wcl-afel-05-049",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The main advantage of a VFD over a soft starter is:",
+      "options": [
+        "Continuous speed control",
+        "Simpler design",
+        "Lower cost",
+        "Higher starting torque"
+      ],
+      "answer": 0,
+      "solution": "VFD provides continuous speed control; soft starter only reduces starting current."
+    },
+    {
+      "id": "wcl-afel-05-050",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PLC (Programmable Logic Controller) uses which programming language for basic logic?",
+      "options": [
+        "Python",
+        "C++",
+        "Ladder logic",
+        "Assembly"
+      ],
+      "answer": 2,
+      "solution": "Ladder logic is the most common PLC programming language, mimicking relay logic."
+    },
+    {
+      "id": "wcl-afel-05-051",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The input module of a PLC receives signals from:",
+      "options": [
+        "Sensors (push buttons, limit switches, proximity sensors)",
+        "Actuators",
+        "Motors",
+        "Valves only"
+      ],
+      "answer": 0,
+      "solution": "Input modules receive field signals from sensors and switches."
+    },
+    {
+      "id": "wcl-afel-05-052",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The output module of a PLC sends signals to:",
+      "options": [
+        "Power supply",
+        "Sensors",
+        "CPU only",
+        "Actuators (motors, valves, lights)"
+      ],
+      "answer": 3,
+      "solution": "Output modules drive actuators based on program logic."
+    },
+    {
+      "id": "wcl-afel-05-053",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "SCADA stands for:",
+      "options": [
+        "Supervisory Control and Data Acquisition",
+        "System Control and Data Analysis",
+        "Applicable in limited scenarios",
+        "Supervisory Control and Digital Automation"
+      ],
+      "answer": 0,
+      "solution": "SCADA provides supervisory monitoring and control of industrial processes."
+    },
+    {
+      "id": "wcl-afel-05-054",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "DCS stands for:",
+      "options": [
+        "Distributed Control System",
+        "Direct Control System",
+        "Digital Control System",
+        "Dynamic Control System"
+      ],
+      "answer": 0,
+      "solution": "DCS distributes control functions across multiple controllers for process plants."
+    },
+    {
+      "id": "wcl-afel-05-055",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The difference between SCADA and DCS is:",
+      "options": [
+        "SCADA is for monitoring, DCS for control",
+        "There is no difference",
+        "SCADA is for DC, DCS for AC",
+        "SCADA is for large distributed systems, DCS for continuous processes"
+      ],
+      "answer": 3,
+      "solution": "SCADA monitors distributed sites; DCS controls continuous processes locally."
+    },
+    {
+      "id": "wcl-afel-05-056",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An AC drive (VFD) for an induction motor typically includes:",
+      "options": [
+        "Transformer and switchgear",
+        "Applicable in limited scenarios",
+        "Capacitor bank",
+        "Rectifier, DC bus, inverter"
+      ],
+      "answer": 3,
+      "solution": "AC drive: Rectifier (AC→DC) → DC bus capacitor → Inverter (DC→AC)."
+    },
+    {
+      "id": "wcl-afel-05-057",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A DC drive controls DC motor speed by:",
+      "options": [
+        "Varying frequency",
+        "Varying armature voltage",
+        "Varying field current",
+        "Both A and B"
+      ],
+      "answer": 3,
+      "solution": "DC drive varies armature voltage (below base speed) and field current (above base speed)."
+    },
+    {
+      "id": "wcl-afel-05-058",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The regenerative braking in a VFD returns energy to:",
+      "options": [
+        "Braking resistor",
+        "Motor",
+        "Capacitor only",
+        "Supply grid"
+      ],
+      "answer": 3,
+      "solution": "In regenerative braking, inverter feeds power back to supply through the rectifier (which must be a bidirectional converter)."
+    },
+    {
+      "id": "wcl-afel-05-059",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The dynamic braking in a VFD dissipates energy in:",
+      "options": [
+        "Supply grid",
+        "Motor windings",
+        "Capacitor",
+        "Braking resistor"
+      ],
+      "answer": 3,
+      "solution": "DC bus energy is dissipated as heat in an external braking resistor via a chopper."
+    },
+    {
+      "id": "wcl-afel-05-060",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The slip power recovery drive is used with:",
+      "options": [
+        "Synchronous motor",
+        "Squirrel cage motor",
+        "BLDC motor",
+        "Wound rotor (slip ring) motor"
+      ],
+      "answer": 3,
+      "solution": "Slip power recovery captures rotor slip energy and feeds it back to supply."
+    },
+    {
+      "id": "wcl-afel-05-061",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Kramer drive is a type of:",
+      "options": [
+        "VFD",
+        "Slip power recovery drive",
+        "DC drive",
+        "Soft starter"
+      ],
+      "answer": 1,
+      "solution": "Kramer drive converts slip power to mechanical power and feeds it back to shaft."
+    },
+    {
+      "id": "wcl-afel-05-062",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The Scherbius drive is a type of:",
+      "options": [
+        "VFD",
+        "DC drive",
+        "Soft starter",
+        "Slip power recovery (electrical feedback)"
+      ],
+      "answer": 3,
+      "solution": "Scherbius drive converts slip power to electrical power and feeds it back to supply."
+    },
+    {
+      "id": "wcl-afel-05-063",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The energy savings from using a VFD on a centrifugal pump/fan application follows:",
+      "options": [
+        "Cube law (power ∝ speed³)",
+        "No savings",
+        "Linear law (power ∝ speed)",
+        "Square law (power ∝ speed²)"
+      ],
+      "answer": 0,
+      "solution": "For centrifugal loads: Power ∝ N³, so small speed reduction gives large power savings."
+    },
+    {
+      "id": "wcl-afel-05-064",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If a fan speed is reduced from 100% to 80% using VFD, power consumption reduces to approximately:",
+      "options": [
+        "51%",
+        "20%",
+        "80%",
+        "64%"
+      ],
+      "answer": 0,
+      "solution": "Power ∝ N³, so (0.8)³ = 0.512 = ~51% of full load power."
+    },
+    {
+      "id": "wcl-afel-05-065",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The V/f ratio of a VFD is kept constant to:",
+      "options": [
+        "Increase torque",
+        "Reduce current only",
+        "Reduce noise",
+        "Maintain constant flux in motor"
+      ],
+      "answer": 3,
+      "solution": "Constant V/f maintains constant air gap flux, preventing saturation at low frequency."
+    },
+    {
+      "id": "wcl-afel-05-066",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "At very low frequencies (below 5 Hz), VFD applies:",
+      "options": [
+        "Constant V/f ratio",
+        "Reduced voltage",
+        "Voltage boost to overcome stator IR drop",
+        "Zero voltage"
+      ],
+      "answer": 2,
+      "solution": "Voltage boost compensates for stator resistance voltage drop at low frequencies."
+    },
+    {
+      "id": "wcl-afel-05-067",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A VFD's torque capability in the constant torque region (below base speed) is:",
+      "options": [
+        "Constant torque",
+        "Decreasing torque",
+        "Constant power",
+        "Zero torque"
+      ],
+      "answer": 0,
+      "solution": "Below base speed, both V and f increase proportionally, maintaining constant flux and torque."
+    },
+    {
+      "id": "wcl-afel-05-068",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "In the field weakening region (above base speed), a VFD provides:",
+      "options": [
+        "Zero power",
+        "Increasing torque",
+        "Constant power",
+        "Constant torque"
+      ],
+      "answer": 2,
+      "solution": "Above base speed, V is constant, f increases, flux decreases, so power is constant but torque decreases."
+    },
+    {
+      "id": "wcl-afel-05-069",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A VFD with vector control provides:",
+      "options": [
+        "Applicable in limited scenarios",
+        "Works under ideal conditions only",
+        "Independent control of flux and torque components",
+        "V/f control only"
+      ],
+      "answer": 2,
+      "solution": "Vector control decouples flux and torque current components for better dynamic response."
+    },
+    {
+      "id": "wcl-afel-05-070",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Direct Torque Control (DTC) in a VFD controls:",
+      "options": [
+        "Applicable in limited scenarios",
+        "Torque and flux directly using motor model",
+        "Voltage and frequency",
+        "Works under ideal conditions only"
+      ],
+      "answer": 1,
+      "solution": "DTC estimates torque and flux from motor model and directly controls them."
+    },
+    {
+      "id": "wcl-afel-05-071",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The braking chopper in a VFD is used for:",
+      "options": [
+        "Speed control",
+        "Dynamic braking",
+        "Regenerative braking",
+        "Soft starting"
+      ],
+      "answer": 1,
+      "solution": "Chopper switches braking resistor across DC bus for dynamic braking."
+    },
+    {
+      "id": "wcl-afel-05-072",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "An active front end (AFE) in a VFD enables:",
+      "options": [
+        "Bidirectional power flow (regenerative braking)",
+        "Higher voltage",
+        "Applicable in limited scenarios",
+        "Lower cost"
+      ],
+      "answer": 0,
+      "solution": "AFE uses controlled rectifier (IGBT-based) for bidirectional power flow."
+    },
+    {
+      "id": "wcl-afel-05-073",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The harmonic distortion caused by a VFD can be reduced by:",
+      "options": [
+        "Increasing DC bus voltage",
+        "Reducing motor speed",
+        "Applicable in limited scenarios",
+        "Adding line reactor or input filter"
+      ],
+      "answer": 3,
+      "solution": "Line reactors and filters reduce harmonics drawn from supply by the rectifier."
+    },
+    {
+      "id": "wcl-afel-05-074",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A 12-pulse rectifier in a VFD is used to:",
+      "options": [
+        "Increase voltage",
+        "Increase current",
+        "Reduce cost",
+        "Reduce harmonics"
+      ],
+      "answer": 3,
+      "solution": "12-pulse rectifier reduces 5th and 7th harmonics compared to 6-pulse."
+    },
+    {
+      "id": "wcl-afel-05-075",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The communication protocol commonly used between VFD and PLC is:",
+      "options": [
+        "Modbus",
+        "RS-232 only",
+        "HDMI",
+        "USB"
+      ],
+      "answer": 0,
+      "solution": "Modbus RTU/TCP is the most common industrial communication protocol for VFDs."
+    },
+    {
+      "id": "wcl-afel-05-076",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PLC scan cycle consists of:",
+      "options": [
+        "Applicable in limited scenarios",
+        "Input scan, program execution, output scan, housekeeping",
+        "Works under ideal conditions only",
+        "All at once"
+      ],
+      "answer": 1,
+      "solution": "PLC scan: Read inputs → Execute program → Update outputs → Diagnostics."
+    },
+    {
+      "id": "wcl-afel-05-077",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The memory of a PLC where input/output status is stored is called:",
+      "options": [
+        "Data memory (image table)",
+        "Stack",
+        "Register",
+        "Program memory"
+      ],
+      "answer": 0,
+      "solution": "Input/output image table stores the status of all I/O points during scan."
+    },
+    {
+      "id": "wcl-afel-05-078",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PLC timer function used for delay-on is called:",
+      "options": [
+        "CTU (Counter Up)",
+        "TON (Timer On-Delay)",
+        "TOF (Timer Off-Delay)",
+        "TP (Pulse Timer)"
+      ],
+      "answer": 1,
+      "solution": "TON generates output after input is true for preset time."
+    },
+    {
+      "id": "wcl-afel-05-079",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A PLC counter function that counts rising edges is:",
+      "options": [
+        "CTU (Count Up)",
+        "Applicable in limited scenarios",
+        "CTD (Count Down)",
+        "CTUD (Count Up/Down)"
+      ],
+      "answer": 0,
+      "solution": "CTU counts rising edges of input signal."
+    },
+    {
+      "id": "wcl-afel-05-080",
+      "subject": "Electrical Engineering",
+      "topic": "Drives & Control",
+      "section": "technical",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The HMI (Human Machine Interface) in an industrial system is used for:",
+      "options": [
+        "Power distribution",
+        "Motor control only",
+        "Process visualization and operator interaction",
+        "None"
+      ],
+      "answer": 2,
+      "solution": "HMI provides graphical display of process status and allows operator commands."
+    },
+    {
+      "id": "wcl-afel-05-g001",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Synonym of EVANESCENT:",
+      "options": [
+        "Eternal",
+        "Permanent",
+        "Lasting",
+        "Fleeting"
+      ],
+      "answer": 3,
+      "solution": "Evanescent: quickly fading, fleeting"
+    },
+    {
+      "id": "wcl-afel-05-g002",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Antonym of TRANSPARENT:",
+      "options": [
+        "Lucid",
+        "Clear",
+        "Opaque",
+        "Translucent"
+      ],
+      "answer": 2,
+      "solution": "Transparent: clear; antonym: opaque"
+    },
+    {
+      "id": "wcl-afel-05-g003",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Idiom 'Piece of cake' means:",
+      "options": [
+        "A fight",
+        "A dessert",
+        "Small portion",
+        "Something easy"
+      ],
+      "answer": 3,
+      "solution": "Piece of cake: very easy"
+    },
+    {
+      "id": "wcl-afel-05-g004",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Idiom 'To break the ice' means:",
+      "options": [
+        "To cool down",
+        "To break something",
+        "To start a fight",
+        "To initiate conversation"
+      ],
+      "answer": 3,
+      "solution": "Break the ice: initiate social interaction"
+    },
+    {
+      "id": "wcl-afel-05-g005",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Idiom 'A bolt from the blue' means:",
+      "options": [
+        "Stormy weather",
+        "Blue colour",
+        "Unexpected event",
+        "Lightning strike"
+      ],
+      "answer": 2,
+      "solution": "Bolt from blue: completely unexpected"
+    },
+    {
+      "id": "wcl-afel-05-g006",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Fill in blank: She has been absent ___ Monday.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "by"
+      ],
+      "answer": 1,
+      "solution": "Since + point of time"
+    },
+    {
+      "id": "wcl-afel-05-g007",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Fill in blank: He is senior ___ me.",
+      "options": [
+        "by",
+        "to",
+        "than",
+        "from"
+      ],
+      "answer": 1,
+      "solution": "Senior to (not senior than)"
+    },
+    {
+      "id": "wcl-afel-05-g008",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Fill in blank: Neither he ___ I am going.",
+      "options": [
+        "nor",
+        "but",
+        "or",
+        "and"
+      ],
+      "answer": 0,
+      "solution": "Neither...nor (correlative conjunction)"
+    },
+    {
+      "id": "wcl-afel-05-g009",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Correct spelling:",
+      "options": [
+        "Accommadation",
+        "Acomodation",
+        "Accommodation",
+        "Accomadation"
+      ],
+      "answer": 2,
+      "solution": "Accommodation (double c, double m)"
+    },
+    {
+      "id": "wcl-afel-05-g010",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Identify error: He don't know the answer.",
+      "options": [
+        "don't",
+        "know",
+        "the answer",
+        "He"
+      ],
+      "answer": 0,
+      "solution": "'He' takes 'doesn't' (third person singular)"
+    },
+    {
+      "id": "wcl-afel-05-g011",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Synonym of CAPRICIOUS:",
+      "options": [
+        "Steady",
+        "Constant",
+        "Stable",
+        "Fickle"
+      ],
+      "answer": 3,
+      "solution": "Capricious: unpredictable, fickle"
+    },
+    {
+      "id": "wcl-afel-05-g012",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Synonym of PERSEVERE:",
+      "options": [
+        "Surrender",
+        "Persist",
+        "Abandon",
+        "Quit"
+      ],
+      "answer": 1,
+      "solution": "Persevere = persist, continue"
+    },
+    {
+      "id": "wcl-afel-05-g013",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Antonym of COURAGEOUS:",
+      "options": [
+        "Cowardly",
+        "Valiant",
+        "Brave",
+        "Bold"
+      ],
+      "answer": 0,
+      "solution": "Courageous: brave; antonym: cowardly"
+    },
+    {
+      "id": "wcl-afel-05-g014",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Voice change: She sings a song. (Passive)",
+      "options": [
+        "A song was sung by her",
+        "A song has been sung by her",
+        "A song is sung by her",
+        "Song is singing by her"
+      ],
+      "answer": 2,
+      "solution": "Present simple passive: is/are + V3"
+    },
+    {
+      "id": "wcl-afel-05-g015",
+      "subject": "General Awareness",
+      "topic": "General English",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Fill in blank: He goes to school ___ foot.",
+      "options": [
+        "in",
+        "with",
+        "by",
+        "on"
+      ],
+      "answer": 3,
+      "solution": "On foot (idiomatic)"
+    },
+    {
+      "id": "wcl-afel-05-g016",
+      "subject": "General Awareness",
+      "topic": "Quantitative Aptitude",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "20% of 250 is:",
+      "options": [
+        "125",
+        "25",
+        "50",
+        "100"
+      ],
+      "answer": 2,
+      "solution": "20/100 * 250 = 50"
+    },
+    {
+      "id": "wcl-afel-05-g017",
+      "subject": "General Awareness",
+      "topic": "Quantitative Aptitude",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Simple interest on 1000 at 5% for 3 years:",
+      "options": [
+        "50",
+        "100",
+        "200",
+        "150"
+      ],
+      "answer": 3,
+      "solution": "SI = 1000*5*3/100 = 150"
+    },
+    {
+      "id": "wcl-afel-05-g018",
+      "subject": "General Awareness",
+      "topic": "Quantitative Aptitude",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A can do work in 10 days, B in 15 days. Together in:",
+      "options": [
+        "6 days",
+        "25 days",
+        "8 days",
+        "12 days"
+      ],
+      "answer": 0,
+      "solution": "1/10+1/15=1/6; together 6 days"
+    },
+    {
+      "id": "wcl-afel-05-g019",
+      "subject": "General Awareness",
+      "topic": "Quantitative Aptitude",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Speed 60 km/h, time 2.5h. Distance:",
+      "options": [
+        "25 km",
+        "150 km",
+        "120 km",
+        "200 km"
+      ],
+      "answer": 1,
+      "solution": "D=60*2.5=150 km"
+    },
+    {
+      "id": "wcl-afel-05-g020",
+      "subject": "General Awareness",
+      "topic": "Quantitative Aptitude",
+      "section": "general",
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "LCM of 12 and 18 is:",
+      "options": [
+        "72",
+        "24",
+        "54",
+        "36"
+      ],
+      "answer": 3,
+      "solution": "LCM(12,18)=36"
+    }
+  ]
+}

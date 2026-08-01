@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { UnlockNowBtn } from "@/components/unlock-now-btn";
 import { getGateSubject } from "@/data/gate/registry";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -54,7 +55,6 @@ export default async function SubjectAitsPage(props: { params: Promise<{ subject
   }
 
   const now = new Date();
-  const payHref = `/pay/upi?plan=premium&exam=${meta.accessExam}&subject=${meta.accessSubject}`;
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-12">
@@ -76,7 +76,7 @@ export default async function SubjectAitsPage(props: { params: Promise<{ subject
           <p className="text-sm text-amber-900 mt-2">
             AITS is included with the <b>{meta.code} Premium</b> pass. Upgrade to compete and get All-India percentile.
           </p>
-          <Link href={payHref} className="btn btn-accent mt-3 inline-block">Upgrade to Premium</Link>
+          <UnlockNowBtn exam={meta.accessExam} subject={meta.accessSubject} plan="premium" label="Upgrade to Premium" className="btn btn-accent mt-3 inline-block" />
         </div>
       )}
 
@@ -114,7 +114,7 @@ export default async function SubjectAitsPage(props: { params: Promise<{ subject
                     🔒 Opens {fmt(t.scheduledAt)}
                   </button>
                 ) : !isPremium ? (
-                  <Link href={payHref} className="btn btn-accent w-full">💎 Upgrade to attempt</Link>
+                  <UnlockNowBtn exam={meta.accessExam} subject={meta.accessSubject} plan="premium" label="💎 Upgrade to attempt" className="btn btn-accent w-full" />
                 ) : (
                   <Link href={`/mocks/${t.mockRefId}`} className="btn btn-primary w-full">Start AITS →</Link>
                 )}
