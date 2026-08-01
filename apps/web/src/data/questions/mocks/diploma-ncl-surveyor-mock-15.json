@@ -85,8 +85,8 @@
       "difficulty": "medium",
       "stem": "To compute the height of an object from a single vertical photo, one needs:",
       "options": [
-        "Only the flying height",
-        "Only the focal length",
+        "The scale of the photograph alone",
+        "The length of the shadow of the object alone",
         "The photo, flying height, focal length, and the object's base on the ground",
         "Just the focal length"
       ],
@@ -159,7 +159,7 @@
       "options": [
         "A satellite image",
         "A single photo with a DEM draped on it for 3D visualisation",
-        "A map",
+        "A map with the photographic detail overlaid",
         "A stereo pair"
       ],
       "answer": 1,
@@ -247,9 +247,9 @@
       "difficulty": "medium",
       "stem": "The 'photo coordinate system' origin is at the:",
       "options": [
-        "Nadir point",
+        "The nadir point of the photograph",
         "Principal point (or fiducial mark intersection)",
-        "Camera lens",
+        "The rear nodal point of the lens",
         "Top-left corner"
       ],
       "answer": 1,
@@ -284,8 +284,8 @@
       "stem": "Lens distortion in a metric camera causes:",
       "options": [
         "Systematic displacement of image points from their ideal positions",
-        "No effect",
-        "Colour shifts",
+        "No effect on the positions of the image points",
+        "A change in the colour balance of the image",
         "Focal length changes"
       ],
       "answer": 0,
@@ -304,7 +304,7 @@
         "A ground control point",
         "A point identified in two or more overlapping photos for connection",
         "A GPS point",
-        "A benchmark"
+        "A point fixed on the ground by theodolite"
       ],
       "answer": 1,
       "solution": "Tie points link adjacent photos (and strips) but don't necessarily have known ground coordinates."
@@ -319,10 +319,10 @@
       "difficulty": "medium",
       "stem": "The 'block adjustment' in photogrammetry adjusts:",
       "options": [
-        "Only a single strip of photos",
+        "The photos of a single flight line alone",
         "An entire block of photos simultaneously",
         "A single photo",
-        "Only the camera calibration"
+        "The exterior orientation of one photo alone"
       ],
       "answer": 1,
       "solution": "Block adjustment handles all photos in a block together, improving overall accuracy."
@@ -339,7 +339,7 @@
       "options": [
         "Epipolar lines (lines in each photo corresponding to the same 3D point)",
         "The photo border",
-        "Any line",
+        "The line joining the two perspective centres",
         "The principal axis"
       ],
       "answer": 0,
@@ -409,7 +409,7 @@
       "difficulty": "medium",
       "stem": "Every mine plan or section under CMR 2017 shall show:",
       "options": [
-        "Only the grid line",
+        "The magnetic meridian without any reference line",
         "The magnetic meridian without date",
         "The railway alignment",
         "The true north, or the magnetic meridian with the date of the latter"
@@ -427,7 +427,7 @@
       "difficulty": "medium",
       "stem": "A 'progress plan' shows:",
       "options": [
-        "Only the initial development",
+        "The final layout of the workings after closure",
         "The final layout of the mine",
         "The final abandoned mine",
         "The development and extraction progress at regular intervals"
@@ -465,7 +465,7 @@
       "options": [
         "Surface buildings",
         "Subsurface geological formations along a vertical plane",
-        "Mine equipment",
+        "The plan position of the surface buildings",
         "Topography only"
       ],
       "answer": 1,
@@ -625,9 +625,9 @@
       "difficulty": "medium",
       "stem": "A 'haul road' in a mine is used for:",
       "options": [
-        "Ventilation",
+        "Transport of the overburden by conveyor",
         "Pedestrian access only",
-        "Water drainage",
+        "Carrying water to the working benches",
         "Transport of ore, waste, and equipment by trucks"
       ],
       "answer": 3,
@@ -643,9 +643,9 @@
       "difficulty": "medium",
       "stem": "The 'gradient' of a haul road should be designed to:",
       "options": [
-        "Be zero",
+        "Be kept at one per cent for all loads",
         "Be as steep as possible",
-        "Exceed 20%",
+        "Be limited to two per cent on curves",
         "Allow safe and efficient vehicle operation (typically 8-12%)"
       ],
       "answer": 3,
@@ -680,7 +680,7 @@
       "stem": "The 'overall slope angle' of an opencast pit is:",
       "options": [
         "The angle of a single bench face",
-        "90 degrees",
+        "The angle of the steepest single bench face",
         "The angle from the crest of the top bench to the toe of the bottom bench",
         "The angle of the haul road"
       ],
@@ -752,7 +752,7 @@
       "stem": "The 'coal dust' in underground mines is a hazard because it:",
       "options": [
         "Can cause explosions when dispersed in air with ignition source",
-        "Is radioactive",
+        "Makes the roof strata more difficult to support",
         "Increases visibility",
         "Improves ventilation"
       ],
@@ -788,7 +788,7 @@
       "stem": "A 'shot firer' in mining is responsible for:",
       "options": [
         "Surveying the mine",
-        "Driving trucks",
+        "Maintaining the ventilation stoppings",
         "Operating the ventilation fan",
         "Loading and firing explosive charges safely"
       ],
@@ -805,7 +805,7 @@
       "difficulty": "medium",
       "stem": "When workings extend to within 60 m of the settled boundary with an adjacent mine, the owner/agent/manager shall:",
       "options": [
-        "Only inform the labour union",
+        "Inform the district magistrate and stop workings",
         "Inform the adjacent mine and give its surveyors reasonable facilities for surveys",
         "Stop all work in the mine",
         "Seal the workings"
@@ -823,7 +823,7 @@
       "difficulty": "medium",
       "stem": "The 'Mines Act 1952' is the primary legislation for:",
       "options": [
-        "Coal pricing",
+        "Allotment of coal blocks to private firms",
         "Mineral taxation",
         "Mine auctioning",
         "Safety, health, and welfare of workers in mines"
@@ -861,7 +861,7 @@
       "options": [
         "Filling it with water",
         "Restoring the land to a usable condition after mining",
-        "Ignoring it",
+        "Leaving the area to revert to natural vegetation",
         "Building on it immediately"
       ],
       "answer": 1,
@@ -878,7 +878,7 @@
       "stem": "A 'progressive reclamation' approach means:",
       "options": [
         "Reclaiming only after mine closure",
-        "No reclamation",
+        "Reclaiming the whole area only at final closure",
         "Reclaiming only the surface",
         "Reclaiming areas as they are mined out, concurrently with mining"
       ],
@@ -949,7 +949,7 @@
       "difficulty": "medium",
       "stem": "A 'vertical shaft' in mining is used for:",
       "options": [
-        "Storage",
+        "Storing the mine supplies near the surface",
         "Ventilation only",
         "Haulage of personnel, material, and coal; ventilation; and drainage",
         "Surface exploration only"
@@ -970,7 +970,7 @@
         "1 in 10 to 1 in 8 (10-12.5%)",
         "1 in 3",
         "1 in 1",
-        "0%"
+        "1 in 2 (50 per cent)"
       ],
       "answer": 0,
       "solution": "Underground haulage roads typically have gradients of 1:10 to 1:8."
@@ -985,7 +985,7 @@
       "difficulty": "medium",
       "stem": "A 'man-riding system' in underground mines is used for:",
       "options": [
-        "Ventilation",
+        "Carrying the mine air along the intake",
         "Conveying workers underground efficiently and safely",
         "Transporting coal",
         "Measuring distances"
@@ -1023,7 +1023,7 @@
       "options": [
         "Allow personnel passage",
         "Store equipment",
-        "Block light",
+        "Block the passage of light into the mine",
         "Control airflow by directing air along intended paths"
       ],
       "answer": 3,
@@ -1112,7 +1112,7 @@
       "stem": "The 'height of a seam' is measured by the mine surveyor using:",
       "options": [
         "A ruler only",
-        "GPS",
+        "Aerial photographs of the seam outcrop",
         "A tape or staff from floor to roof of the working",
         "Satellite imagery"
       ],
@@ -1129,7 +1129,7 @@
       "difficulty": "medium",
       "stem": "The 'roof-to-floor' distance in underground mines should be measured at:",
       "options": [
-        "Random points",
+        "Points chosen by the workmen on each shift",
         "Regular intervals as specified in the regulations",
         "Control dust emissions",
         "Support conveyor belts"
@@ -1165,10 +1165,10 @@
       "difficulty": "medium",
       "stem": "The 'mine plan book' is a statutory record that must contain:",
       "options": [
-        "Only the production records",
+        "The production and despatches records alone",
         "All survey data, plans, and sections as prescribed by CMR 2017",
-        "Only the accident register",
-        "Only the equipment list"
+        "The record of accidents and dangerous occurrences alone",
+        "The list of survey equipment in use alone"
       ],
       "answer": 1,
       "solution": "The plan book is a legal document containing survey records, plans, and sections."
@@ -1221,7 +1221,7 @@
       "options": [
         "Different panels or sections of the mine for safety isolation",
         "Two adjacent pillars",
-        "Two mines",
+        "The surface and the underground workings",
         "The shaft from the surface"
       ],
       "answer": 0,
@@ -1310,9 +1310,9 @@
       "stem": "The 'dip' of a formation on a geological map is indicated by:",
       "options": [
         "An arrow with a number (dip angle) pointing in the direction of maximum slope",
-        "A circle",
-        "A triangle",
-        "A square"
+        "A dashed line marking the direction of strike",
+        "A tick mark beside the boundary of the bed",
+        "A small cross showing the position of the bed"
       ],
       "answer": 0,
       "solution": "The dip symbol is an arrow pointing down-dip with the angle of dip annotated."
@@ -1328,7 +1328,7 @@
       "stem": "The joint survey plan showing workings near the common boundary with an adjacent mine shall be signed by:",
       "options": [
         "The surveyors and managers of both the mine and the adjacent mine",
-        "Only the surveyor of the mine",
+        "The surveyor and the owner of the mine only",
         "The Chief Inspector only",
         "The district magistrate"
       ],
@@ -1365,7 +1365,7 @@
       "options": [
         "Stop working immediately without any plan",
         "Leave the water body untouched forever",
-        "Only mark it on the board",
+        "Inform the workmen orally about the danger",
         "Prepare a scheme for protection against inrush and drain the water in a planned manner"
       ],
       "answer": 3,
@@ -1581,8 +1581,8 @@
       "options": [
         "D. Andaman & Nicobar Islands",
         "B. Tamil Nadu",
-        "A. Kerala",
-        "C. Lakshadweep"
+        "A. Puducherry",
+        "C. Karnataka"
       ],
       "answer": 0,
       "solution": "Indira Point in Great Nicobar is the southernmost point of India."

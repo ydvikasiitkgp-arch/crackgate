@@ -121,7 +121,7 @@
       "difficulty": "medium",
       "stem": "A subtense bar is most useful for:",
       "options": [
-        "Levelling",
+        "Measurement of horizontal angles",
         "Measuring vertical angles",
         "Short to medium accurate distance measurement",
         "Long distance measurement"
@@ -158,9 +158,9 @@
       "stem": "The 'stadia constant' K is given by:",
       "options": [
         "f/i, where f = focal length of objective and i = stadia hair interval",
-        "i/f",
-        "f × i",
-        "f + i"
+        "i/f, the ratio of hair interval to focal length",
+        "f x i, the product of focal length and hair interval",
+        "f + i, the sum of focal length and hair interval"
       ],
       "answer": 0,
       "solution": "K = f/i, where f is the focal length of the objective and i is the distance between stadia hairs at the focal plane."
@@ -248,8 +248,8 @@
       "stem": "Tachometric surveying eliminates the need for:",
       "options": [
         "Direct chaining or taping of distances",
-        "Staff readings",
-        "Benchmarks",
+        "Reading of the staff graduations",
+        "Setting out of the traverse stations",
         "Angular measurement"
       ],
       "answer": 0,
@@ -319,9 +319,9 @@
       "difficulty": "medium",
       "stem": "Triangulation is a method of horizontal control that uses:",
       "options": [
-        "GPS only",
+        "Measurement of distances with a subtense bar",
         "Direct distance measurement only",
-        "Taping",
+        "Direct linear measurement of every side",
         "Measurement of angles in a network of triangles"
       ],
       "answer": 3,
@@ -427,10 +427,10 @@
       "difficulty": "medium",
       "stem": "A 'geodetic triangle' on the earth's surface has angles that sum to:",
       "options": [
-        "Exactly 180°",
+        "Exactly 180 degrees at the equator",
         "Slightly less than 180°",
         "Slightly more than 180° (spherical excess)",
-        "Exactly 360°"
+        "Exactly 180 degrees minus the spherical excess"
       ],
       "answer": 2,
       "solution": "On a curved earth, triangle angles sum to 180° + spherical excess; the excess depends on the triangle area."
@@ -448,7 +448,7 @@
         "The amount by which the sum of geodetic triangle angles exceeds 180°",
         "Always negative",
         "Equal to the base line error",
-        "Always ignored"
+        "A constant value for every triangle"
       ],
       "answer": 0,
       "solution": "Spherical excess E = (A × 180°) / (R² × sin 1\"), where A is the triangle area on the ellipsoid."
@@ -482,7 +482,7 @@
       "stem": "The joint survey plan showing workings near the common boundary with an adjacent mine shall be signed by:",
       "options": [
         "The surveyors and managers of both the mine and the adjacent mine",
-        "Only the surveyor of the mine",
+        "The surveyor and the owner of the mine only",
         "The Chief Inspector only",
         "The district magistrate"
       ],
@@ -500,8 +500,8 @@
       "stem": "Trilateration is a method of control survey that uses:",
       "options": [
         "Direct distance measurement between stations",
-        "levelling",
-        "GPS only",
+        "Measurement of vertical distances",
+        "Measurement of horizontal angles only",
         "Angle measurement only"
       ],
       "answer": 0,
@@ -661,7 +661,7 @@
       "difficulty": "medium",
       "stem": "When workings extend to within 60 m of the settled boundary with an adjacent mine, the owner/agent/manager shall:",
       "options": [
-        "Only inform the labour union",
+        "Inform the district magistrate and stop workings",
         "Inform the adjacent mine and give its surveyors reasonable facilities for surveys",
         "Stop all work in the mine",
         "Seal the workings"
@@ -681,7 +681,7 @@
       "options": [
         "A four-sided figure with both diagonals measured, providing strong geometry",
         "A triangle with an extra diagonal",
-        "A circle",
+        "A quadrilateral with only one diagonal measured",
         "A single triangle"
       ],
       "answer": 0,
@@ -698,9 +698,9 @@
       "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
         "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
-        "Only loss of life",
-        "Only explosions",
-        "Only minor injuries"
+        "Loss of life or bodily injury to any workman",
+        "Accidents involving the winding engine only",
+        "Injury to machinery or plant in the mine"
       ],
       "answer": 0,
       "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
@@ -715,10 +715,10 @@
       "difficulty": "medium",
       "stem": "The modern method for base line measurement in control surveys is:",
       "options": [
-        "Subtense bar",
-        "Steel tape",
+        "An invar wire supported on tripods",
+        "A wooden surveyor's staff only",
         "EDM (Electronic Distance Measurement)",
-        "Stadia method"
+        "Optical distance measurement by tachymetry"
       ],
       "answer": 2,
       "solution": "EDM is now the standard for precise base line measurement in control surveys."
@@ -807,7 +807,7 @@
       "options": [
         "Stop working immediately without any plan",
         "Leave the water body untouched forever",
-        "Only mark it on the board",
+        "Inform the workmen orally about the danger",
         "Prepare a scheme for protection against inrush and drain the water in a planned manner"
       ],
       "answer": 3,
@@ -861,7 +861,7 @@
       "options": [
         "The north or south point along the horizon",
         "From the ecliptic",
-        "The zenith",
+        "The point of the horizon nearest the sun",
         "The east point"
       ],
       "answer": 0,
@@ -1165,8 +1165,8 @@
       "difficulty": "medium",
       "stem": "The celestial equator is the projection of",
       "options": [
-        "The ecliptic",
-        "The meridian",
+        "The plane of the orbit of the moon",
+        "The horizon of the observer",
         "Earth's equator onto the celestial sphere",
         "The earth's axis"
       ],
@@ -1183,9 +1183,9 @@
       "difficulty": "medium",
       "stem": "The ecliptic is the apparent path of the",
       "options": [
-        "Moon",
-        "The planets",
-        "Stars",
+        "Moon, relative to the fixed stars",
+        "Planets and the moon combined",
+        "Fixed stars in the constellation of the zodiac",
         "Sun on the celestial sphere"
       ],
       "answer": 3,
@@ -1328,7 +1328,7 @@
       "stem": "The gyro theodolite operates on the principle of",
       "options": [
         "Conservation of angular momentum of a spinning rotor",
-        "Gravity only",
+        "The rotation of the earth about its axis",
         "Monitor gas concentrations",
         "Magnetic attraction"
       ],
@@ -1345,10 +1345,10 @@
       "difficulty": "medium",
       "stem": "The meridian passage of a star occurs when it",
       "options": [
-        "Sets",
+        "Reaches its highest altitude above the horizon",
         "At the horizon",
         "Crosses the observer's meridian",
-        "Rises"
+        "Is at its greatest eastern elongation"
       ],
       "answer": 2,
       "solution": "Crosses the observer's meridian."
@@ -1456,7 +1456,7 @@
         "Diametrically opposite on the celestial sphere",
         "On the celestial equator",
         "On the horizon",
-        "Same point"
+        "Points separated by ninety degrees"
       ],
       "answer": 0,
       "solution": "Diametrically opposite on celestial sphere."

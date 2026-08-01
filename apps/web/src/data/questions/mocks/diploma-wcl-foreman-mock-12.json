@@ -92,8 +92,8 @@
       "options": [
         "Equipment manufacturer",
         "DGMS-approved testing authority",
-        "CEA directly",
-        "BIS only"
+        "CEA directly without testing",
+        "BIS certification alone"
       ],
       "answer": 1,
       "solution": "Equipment must be tested and approved by DGMS-recognized testing laboratory."
@@ -127,7 +127,7 @@
       "stem": "Zone 0 in a gassy mine is defined as:",
       "options": [
         "Area where explosive gas is present continuously or for long periods",
-        "Safe area",
+        "A safe area",
         "Area with occasional gas presence",
         "Area with no gas risk"
       ],
@@ -198,9 +198,9 @@
       "difficulty": "medium",
       "stem": "The flameproof category for underground coal mine equipment is:",
       "options": [
-        "Category 2",
+        "Category 2 protection",
         "No category required",
-        "Category 3",
+        "Category 3 protection",
         "Category 1 (highest protection)"
       ],
       "answer": 3,
@@ -254,8 +254,8 @@
       "options": [
         "Earth fault current by measuring CT residual current",
         "Under frequency",
-        "Overcurrent",
-        "Overvoltage"
+        "Overcurrent conditions",
+        "Overvoltage conditions"
       ],
       "answer": 0,
       "solution": "ELR uses CBCT to detect residual current indicating earth fault."
@@ -309,7 +309,7 @@
         "Measure voltage",
         "Continuously verify the integrity of earth continuity conductor",
         "Measure current",
-        "Control speed"
+        "Control the motor speed"
       ],
       "answer": 1,
       "solution": "ECM verifies earth continuity conductor is intact. If broken, prevents starting."
@@ -451,7 +451,7 @@
       "stem": "Re-energization after maintenance in mines requires:",
       "options": [
         "Just closing the isolator",
-        "No procedure",
+        "No procedure is required",
         "Any worker to switch on",
         "Written authorization from the person who issued the permit to work"
       ],
@@ -469,9 +469,9 @@
       "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
         "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
-        "Only loss of life",
-        "Only explosions",
-        "Only minor injuries"
+        "Loss of life and serious bodily injury only",
+        "Explosion and fire occurring in the opencast part only",
+        "Minor injuries and first-aid cases only"
       ],
       "answer": 0,
       "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
@@ -486,10 +486,10 @@
       "difficulty": "medium",
       "stem": "A switchgear room in an underground mine should have:",
       "options": [
-        "Open windows",
+        "Open windows in the walls",
         "Adequate ventilation, fire-fighting equipment, and restricted access",
         "Storage of explosives",
-        "No ventilation"
+        "No ventilation at all"
       ],
       "answer": 1,
       "solution": "Switchgear rooms need ventilation, fire protection, and access control."
@@ -522,7 +522,7 @@
       "difficulty": "medium",
       "stem": "Emergency exit routes in underground mine electrical areas should be:",
       "options": [
-        "Optional",
+        "Optional requirement",
         "Visible but optional",
         "Mechanical strength of materials",
         "Clearly marked and illuminated at all times"
@@ -596,7 +596,7 @@
       "options": [
         "Stop working immediately without any plan",
         "Leave the water body untouched forever",
-        "Only mark it on the board",
+        "Install a signal lamp near the water body and continue working",
         "Prepare a scheme for protection against inrush and drain the water in a planned manner"
       ],
       "answer": 3,
@@ -614,7 +614,7 @@
       "options": [
         "Continuous checking of earth continuity conductor integrity",
         "Voltage regulation",
-        "Load balancing",
+        "Load balancing between phases",
         "Power factor correction"
       ],
       "answer": 0,
@@ -666,10 +666,10 @@
       "difficulty": "medium",
       "stem": "Galvanic isolation for IS circuits is provided by:",
       "options": [
-        "Fuses only",
-        "Direct wiring",
+        "Fuses and circuit breakers",
+        "Direct copper wiring",
         "Isolating transformers or optical isolators",
-        "Resistors only"
+        "Series resistors in circuit"
       ],
       "answer": 2,
       "solution": "Isolating transformers and opto-couplers provide galvanic isolation."
@@ -684,9 +684,9 @@
       "difficulty": "medium",
       "stem": "A safety shutdown system in mines should operate within:",
       "options": [
-        "Next shift",
-        "1 hour",
-        "30 seconds",
+        "In the next shift",
+        "Within one hour",
+        "Within 30 seconds",
         "Within seconds of detecting dangerous condition"
       ],
       "answer": 3,
@@ -705,7 +705,7 @@
         "A trailing earth conductor connected before power conductor engages",
         "Connected after the power conductor",
         "Connected after power",
-        "Optional"
+        "An optional requirement"
       ],
       "answer": 0,
       "solution": "Trailing earth must make contact first and break last."
@@ -774,10 +774,10 @@
       "difficulty": "medium",
       "stem": "The maximum temperature of flameproof surface in Group I equipment is:",
       "options": [
-        "200°C",
+        "200 deg C",
         "450°C (gas auto-ignition temp dependent)",
-        "500°C",
-        "150°C"
+        "500 deg C",
+        "150 deg C"
       ],
       "answer": 1,
       "solution": "Surface temperature must stay below auto-ignition temperature of the gas."
@@ -846,7 +846,7 @@
       "difficulty": "medium",
       "stem": "The purpose of a circuit interlock in flameproof equipment is to:",
       "options": [
-        "Reduce current",
+        "Reduce the operating current",
         "Increase voltage",
         "Improve efficiency",
         "Prevent opening of enclosure while circuit is live or under load"
@@ -865,7 +865,7 @@
       "stem": "Gas-proof enclosure for electrical equipment in mines means:",
       "options": [
         "Enclosure that prevents entry of methane/air mixture into the equipment",
-        "Open enclosure",
+        "An open type enclosure",
         "Enclosure that allows gas entry",
         "Flameproof enclosure"
       ],
@@ -883,7 +883,7 @@
       "stem": "The inspection interval for flameproof equipment in mines is:",
       "options": [
         "No inspection needed",
-        "Monthly",
+        "Monthly inspection",
         "Quarterly or as specified by DGMS",
         "Once in 5 years"
       ],
@@ -900,7 +900,7 @@
       "difficulty": "medium",
       "stem": "A flame path is defined as a:",
       "options": [
-        "Cable route",
+        "A cable route",
         "Conductor for earthing",
         "Ventilation duct",
         "Path through which gas from inside an enclosure can escape and be cooled"
@@ -918,10 +918,10 @@
       "difficulty": "medium",
       "stem": "The maximum length of a flame path for Group IIA gas is:",
       "options": [
-        "50 mm",
-        "25 mm",
+        "50 mm for plain joint",
+        "25 mm for rectangular joint",
         "12.5 mm (for cylindrical joint)",
-        "5 mm"
+        "5 mm for flange joint"
       ],
       "answer": 2,
       "solution": "For Group IIA: minimum flame path length 12.5 mm."
@@ -1010,7 +1010,7 @@
       "options": [
         "Optional in non-hazardous areas",
         "Severe burns, blast injury, and potential fatality from arc energy",
-        "No injury",
+        "No injury at all",
         "Distance protection"
       ],
       "answer": 1,
@@ -1063,7 +1063,7 @@
       "stem": "Electrical safety audit in mines should be conducted:",
       "options": [
         "Improve ventilation efficiency",
-        "Never",
+        "Never conducted",
         "Every 5 years",
         "At least once a year by competent authority"
       ],
@@ -1117,9 +1117,9 @@
       "stem": "Every mechanised outlet (shaft or incline) is examined at least once in every 7 days by:",
       "options": [
         "An engineer, electrical supervisor or foreman, or a competent person authorised by the engineer",
-        "Only the manager",
+        "Any officer of the electrical department",
         "The winding engineman",
-        "Any workman"
+        "Any miner of the mine"
       ],
       "answer": 0,
       "solution": "CMR 2017 Reg 75(2): mechanised outlets are examined at least once in 7 days by an engineer, electrical supervisor or foreman (or authorised competent person), recorded in a bound paged book."
@@ -1170,7 +1170,7 @@
       "difficulty": "medium",
       "stem": "A continuous miner cutter head is driven by:",
       "options": [
-        "Manual power",
+        "Manual hand power",
         "Pneumatic motor",
         "Hydraulic motor only",
         "Electric motor (AC or DC) through gear reduction"
@@ -1188,9 +1188,9 @@
       "difficulty": "medium",
       "stem": "The electrical supply to a continuous miner in underground coal mine is typically through:",
       "options": [
-        "Overhead lines",
-        "Battery only",
-        "Trolley wire",
+        "Overhead transmission lines",
+        "Battery supply only",
+        "Trolley wire system",
         "Trailing cable from a continuous miner transformer/starter"
       ],
       "answer": 3,
@@ -1206,9 +1206,9 @@
       "difficulty": "medium",
       "stem": "The trailing cable for a continuous miner has how many conductors?",
       "options": [
-        "3 conductors",
-        "2 conductors",
-        "12 conductors",
+        "3 conductors without earth",
+        "2 conductors for single phase",
+        "12 conductors for multi-motor",
         "5–6 conductors (3 phase + earth + pilot + control)"
       ],
       "answer": 3,
@@ -1225,8 +1225,8 @@
       "stem": "The pilot conductor in a mining trailing cable is used for:",
       "options": [
         "Carrying load current",
-        "Communication",
-        "Lighting only",
+        "Communication to surface",
+        "Lighting supply circuit",
         "Monitoring earth continuity and providing interlock"
       ],
       "answer": 3,
@@ -1242,10 +1242,10 @@
       "difficulty": "medium",
       "stem": "A longwall shearer electrical system includes:",
       "options": [
-        "Only a cable coupler",
+        "A cable coupler",
         "Haulage motors, cutting motors, and ranging arm motors with shearer controller",
         "Mechanical strength of materials",
-        "Single motor"
+        "A single motor"
       ],
       "answer": 1,
       "solution": "Shearer has multiple motors: drum cutting, haulage, and ranging arm motors."
@@ -1260,9 +1260,9 @@
       "difficulty": "medium",
       "stem": "The haulage system of a longwall shearer is powered by:",
       "options": [
-        "Hydraulic only",
+        "Hydraulic motors only",
         "Electric motor with variable frequency drive (VFD)",
-        "Manual chain",
+        "Manual chain drive",
         "Pneumatic motor"
       ],
       "answer": 1,
@@ -1335,7 +1335,7 @@
         "Electric motor through trailing cable or battery",
         "Pneumatic motor",
         "Diesel engine only",
-        "Steam engine"
+        "A steam engine"
       ],
       "answer": 0,
       "solution": "Electric LHDs use trailing cable. Battery LHDs use rechargeable packs."
@@ -1442,7 +1442,7 @@
       "options": [
         "Number of cores only",
         "Insulation type, ambient temperature, and installation method",
-        "Cable color",
+        "Cable colour",
         "Cable length only"
       ],
       "answer": 1,
@@ -1460,7 +1460,7 @@
       "options": [
         "Halogen lamps only",
         "LED or flameproof fluorescent luminaires",
-        "Candle light",
+        "Candle lights",
         "Incandescent bulbs only"
       ],
       "answer": 1,

@@ -394,7 +394,7 @@
         "Total length of the traverse",
         "Difference between the starting and ending coordinates",
         "Sum of interior angles",
-        "Average angle"
+        "The angular error of the closing station"
       ],
       "answer": 1,
       "solution": "Misclosure = difference between computed and known end position; it quantifies the traverse error."
@@ -538,7 +538,7 @@
         "Inversely proportional to its variance",
         "Directly proportional to its variance",
         "Equal to its residual",
-        "Its magnitude"
+        "The magnitude of the observation itself"
       ],
       "answer": 0,
       "solution": "Weight pᵢ ∝ 1/σ²_i; more precise observations receive higher weights."
@@ -680,9 +680,9 @@
       "stem": "The 'internal reliability' of a network refers to:",
       "options": [
         "Its ability to detect blunders",
-        "Its scale",
-        "Its accuracy",
-        "Its redundancy"
+        "The scale of the network in the field",
+        "The accuracy with which coordinates are computed",
+        "The strength of its geometric figure"
       ],
       "answer": 0,
       "solution": "Internal reliability is the network's ability to detect its own gross errors through redundancy."
@@ -700,7 +700,7 @@
         "Its ability to detect blunders",
         "The impact of undetected blunders on the coordinates",
         "Its scale accuracy",
-        "Its precision"
+        "The precision of the final adjusted coordinates"
       ],
       "answer": 1,
       "solution": "External reliability quantifies how much an undetected blunder would distort the final result."
@@ -716,9 +716,9 @@
       "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
         "One month of refresher training",
-        "No training",
+        "Refresher training after one year of service",
         "Initial vocational training in the prescribed subjects",
-        "Only a medical test"
+        "A certificate of fitness from a doctor"
       ],
       "answer": 2,
       "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
@@ -824,7 +824,7 @@
       "stem": "In a traverse, the 'angular misclosure' is distributed by:",
       "options": [
         "Adjusting angles equally (Compass rule for angles)",
-        "Ignoring it",
+        "Distributing it in proportion to the side lengths",
         "Distributing the linear misclosure by angles",
         "Applying the Bowditch rule"
       ],
@@ -861,7 +861,7 @@
       "options": [
         "Proportional to the latitude/projection of each side",
         "To the last side only",
-        "Equally",
+        "To the side having the largest latitude only",
         "Proportional to side lengths"
       ],
       "answer": 0,
@@ -913,7 +913,7 @@
       "difficulty": "medium",
       "stem": "Photogrammetry is the science of making measurements from:",
       "options": [
-        "Maps only",
+        "Ground surveys of every point on the site",
         "Photographs or other sensory data",
         "Satellite signals",
         "Field notes only"
@@ -934,7 +934,7 @@
         "Known and stable interior orientation parameters",
         "Variable focal length",
         "Automatic focus",
-        "No lens"
+        "A lens of variable focal length and focus"
       ],
       "answer": 0,
       "solution": "Metric cameras have precisely known focal length, principal point, and lens distortion parameters."
@@ -1005,7 +1005,7 @@
       "options": [
         "Fresh initial training of 1 month",
         "Retraining in the handling of explosives before resuming such duties",
-        "No retraining",
+        "A practical demonstration at the blasting site",
         "A written test only"
       ],
       "answer": 1,
@@ -1022,9 +1022,9 @@
       "stem": "A 'vertical photograph' has the camera axis:",
       "options": [
         "As nearly vertical as possible, within ~3° of plumb",
-        "Horizontal",
+        "Inclined at an angle of about fifteen degrees",
         "Perfectly vertical",
-        "At 45°"
+        "Directed along the direction of the flight line"
       ],
       "answer": 0,
       "solution": "A 'vertical' photo is nominally vertical but may have a slight tilt (typically < 3°)."
@@ -1165,7 +1165,7 @@
       "difficulty": "medium",
       "stem": "The 'stereoscope' is used to:",
       "options": [
-        "Print maps",
+        "Measure the scale of a single photograph",
         "View two overlapping photos in 3D (stereo model)",
         "Measure photo coordinates",
         "Develop photographs"
@@ -1186,7 +1186,7 @@
         "Red-green (or red-cyan) filtered glasses",
         "Polarised glasses",
         "Magnifying glasses",
-        "Naked eye"
+        "Ordinary spectacles with plain glass lenses"
       ],
       "answer": 0,
       "solution": "Anaglyphs use colour-filtered glasses (typically red/cyan) to separate left and right images."
@@ -1221,7 +1221,7 @@
       "options": [
         "A regular grid of elevation values",
         "A satellite image",
-        "A photograph",
+        "A contour drawing on tracing cloth",
         "A 2D map"
       ],
       "answer": 0,
@@ -1330,7 +1330,7 @@
         "Camera resolution only",
         "Flying height, focal length, and sensor pixel size",
         "Ground features",
-        "Weather only"
+        "The number of photos in the survey block"
       ],
       "answer": 1,
       "solution": "GSD = (pixel size × flying height) / focal length."
@@ -1383,7 +1383,7 @@
       "options": [
         "Ground coordinates",
         "The position and orientation of the camera in space at exposure",
-        "Photo scale",
+        "The scale of the photograph at the principal point",
         "Camera internal parameters"
       ],
       "answer": 1,
@@ -1580,9 +1580,9 @@
       "stem": "The southernmost point of India is located in which state/UT?",
       "options": [
         "D. Andaman & Nicobar Islands",
-        "C. Lakshadweep",
+        "C. Puducherry",
         "B. Tamil Nadu",
-        "A. Kerala"
+        "A. Karnataka"
       ],
       "answer": 0,
       "solution": "Indira Point in Great Nicobar is the southernmost point of India."
