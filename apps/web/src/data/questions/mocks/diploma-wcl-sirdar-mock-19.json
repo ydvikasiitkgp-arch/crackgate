@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -246,9 +246,9 @@
       "difficulty": "easy",
       "stem": "A 'sealed area' in a mine fire is created to",
       "options": [
-        "Works under ideal conditions only",
+        "Increase the air velocity",
         "Isolate the fire area and deprive it of oxygen",
-        "Applicable in limited scenarios",
+        "Improve the lighting",
         "Increase ventilation"
       ],
       "answer": 1,
@@ -283,7 +283,7 @@
       "stem": "A man riding system must be examined by a competent person",
       "options": [
         "At intervals prescribed by the manager",
-        "Applicable in limited scenarios",
+        "Only when the system fails",
         "Never",
         "Once every 6 months"
       ],
@@ -300,12 +300,12 @@
       "difficulty": "easy",
       "stem": "The sirdar must check that the fire-fighting equipment",
       "options": [
-        "Is only for show",
+        "Is painted every month",
         "Is available and in working order",
-        "Is not required",
-        "Is stored in the office"
+        "Is counted in the annual stock take",
+        "Is stored in the manager's office"
       ],
-      "answer": 3,
+      "answer": 1,
       "solution": "Fire-fighting equipment must be available and in working order."
     },
     {
@@ -318,8 +318,8 @@
       "difficulty": "medium",
       "stem": "The 'exploration borehole' near old workings is done to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Improve the ventilation",
+        "Determine the coal grade",
         "Extract coal",
         "Investigate water conditions before mining approaches"
       ],
@@ -354,9 +354,9 @@
       "difficulty": "medium",
       "stem": "The 'post-rescue debriefing' covers",
       "options": [
-        "No debriefing needed",
-        "Not important",
-        "Applicable in limited scenarios",
+        "The rescue menu",
+        "The number of visitors",
+        "The shift roster",
         "Lessons learned, equipment performance, and improvements"
       ],
       "answer": 3,
@@ -390,10 +390,10 @@
       "difficulty": "hard",
       "stem": "The sirdar must ensure that the working place is freed from",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The dust on the road",
+        "The noise of the fan",
         "Any danger before allowing persons to work",
-        "Required only for specific cases"
+        "The colour of the coal"
       ],
       "answer": 2,
       "solution": "The working place must be freed from any danger."
@@ -426,10 +426,10 @@
       "difficulty": "easy",
       "stem": "The 'stowing pump selection' depends on",
       "options": [
-        "Applicable in limited scenarios",
+        "The brand of the sand",
         "Any pump",
         "Head, capacity, and material characteristics",
-        "Works under ideal conditions only"
+        "The depth of the mine"
       ],
       "answer": 2,
       "solution": "Pump selection depends on head, capacity, and material."
@@ -463,8 +463,8 @@
       "stem": "The power cable used in underground mines must have",
       "options": [
         "Armored construction with flame-retardant properties",
-        "Applicable in limited scenarios",
-        "Works at rated voltage only",
+        "A cotton-braided cable",
+        "An open-copper busbar",
         "No special requirement"
       ],
       "answer": 0,
@@ -498,9 +498,9 @@
       "difficulty": "easy",
       "stem": "The 'retreating longwall' method involves",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific",
+        "Extraction from the shaft area towards the boundary",
+        "A method used in metal mines only",
+        "A surface mining method",
         "Extracting coal from the boundary towards the shaft"
       ],
       "answer": 3,
@@ -581,20 +581,20 @@
     {
       "id": 26,
       "subject": "Technical (Mining)",
-      "topic": "Danger of Inundation",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'inundation risk assessment' considers",
+      "difficulty": "medium",
+      "stem": "The joint survey plan showing workings near the common boundary with an adjacent mine shall be signed by:",
       "options": [
-        "Applicable in limited scenarios",
-        "Geology, proximity to water, old workings, and pumping capacity",
-        "Works under ideal conditions only",
-        "No assessment needed"
+        "The surveyors and managers of both the mine and the adjacent mine",
+        "Only the surveyor of the mine",
+        "The Chief Inspector only",
+        "The district magistrate"
       ],
-      "answer": 1,
-      "solution": "Risk assessment considers geology, water proximity, old workings, pumping."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 65(1)(e): the joint survey plan is signed by the surveyor and the manager of the mine and of adjoining mines whose workings come within 60 m of the common boundary."
     },
     {
       "id": 27,
@@ -608,8 +608,8 @@
       "options": [
         "A concise overview of key findings and recommendations",
         "Longer than the report",
-        "Include personal opinions",
-        "Detailed"
+        "The list of all visitors",
+        "A full reproduction of the report"
       ],
       "answer": 0,
       "solution": "A concise overview of key findings and recommendations."
@@ -660,9 +660,9 @@
       "difficulty": "easy",
       "stem": "The 'sand stowing' method uses",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Dry sand blown by air",
+        "Stones laid by hand",
+        "Cement poured in the face",
         "Sand mixed with water to fill the goaf"
       ],
       "answer": 3,
@@ -678,9 +678,9 @@
       "difficulty": "hard",
       "stem": "The primary purpose of stowing is to",
       "options": [
-        "Works under ideal conditions only",
+        "Reduce the number of workers",
         "Increase production",
-        "Applicable in limited scenarios",
+        "Improve the lighting",
         "Control subsidence and support the roof"
       ],
       "answer": 3,
@@ -714,8 +714,8 @@
       "difficulty": "hard",
       "stem": "A powered roof support (chock) is used in",
       "options": [
-        "Applicable in limited scenarios",
-        "Protect electrical equipment",
+        "Loading the coal in tubs",
+        "Prevent water inflow",
         "Control dust emissions",
         "Longwall mining for face support"
       ],
@@ -750,10 +750,10 @@
       "difficulty": "medium",
       "stem": "The 'ventilation training' for miners includes",
       "options": [
-        "Affects only intake shafts",
-        "No training needed",
+        "The fan motor ratings",
+        "A one-day picnic",
         "Understanding airflow, gas hazards, and emergency procedures",
-        "Control humidity in underground workings"
+        "The colour of the strata"
       ],
       "answer": 2,
       "solution": "Training covers airflow, gas hazards, emergency procedures."
@@ -768,10 +768,10 @@
       "difficulty": "hard",
       "stem": "The 'date and time' in a report are important for",
       "options": [
-        "Used in preliminary drafts only",
+        "For the typist's convenience",
         "Establishing the sequence of events and timeline",
-        "Omit references",
-        "Skip executive summary"
+        "The mood of the writer",
+        "The length of the report"
       ],
       "answer": 1,
       "solution": "Establishing the sequence of events and timeline."
@@ -841,9 +841,9 @@
       "stem": "The 'easier breakage' in drifting is achieved by",
       "options": [
         "More explosives",
-        "Applicable in limited scenarios",
+        "A longer delay",
         "Proper drill pattern, burden, and spacing",
-        "Works under ideal conditions only"
+        "A larger drill machine"
       ],
       "answer": 2,
       "solution": "Proper drill patterns achieve easier breakage."
@@ -858,9 +858,9 @@
       "difficulty": "medium",
       "stem": "The 'total recordable injury frequency rate' (TRIFR) includes",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only fatal accidents",
+        "Only lost time injuries",
+        "Only first aid cases",
         "All recordable injuries including lost time, medical treatment, and restricted work"
       ],
       "answer": 3,
@@ -876,10 +876,10 @@
       "difficulty": "hard",
       "stem": "The 'foam-based fire suppression' is effective for",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only electrical fires",
+        "Only metal fires",
         "Class A and B fires including coal and oil fires",
-        "Required only for specific cases"
+        "Only spontaneous heating"
       ],
       "answer": 2,
       "solution": "Class A and B fires including coal and oil fires."
@@ -912,10 +912,10 @@
       "difficulty": "easy",
       "stem": "The 'rescue equipment storage' should be",
       "options": [
-        "Applicable in limited scenarios",
+        "Near the sump water",
         "Any location",
         "Clean, dry, and accessible location",
-        "Works under ideal conditions only"
+        "Inside the goaf"
       ],
       "answer": 2,
       "solution": "Equipment must be stored in clean, dry, accessible location."
@@ -967,8 +967,8 @@
       "stem": "The 'stowing material testing' includes",
       "options": [
         "No testing",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "A single visual check",
+        "A test of the pump colour",
         "Grain size, strength, permeability, and compatibility"
       ],
       "answer": 3,
@@ -984,10 +984,10 @@
       "difficulty": "easy",
       "stem": "A 'photographic evidence' in a report helps to",
       "options": [
-        "Write in third person only",
+        "Increase the word count",
         "Provide visual documentation of conditions and evidence",
-        "Use informal language",
-        "Include personal opinions"
+        "Replace the written description",
+        "Express personal views"
       ],
       "answer": 1,
       "solution": "Provides visual documentation of conditions and evidence."
@@ -1002,9 +1002,9 @@
       "difficulty": "medium",
       "stem": "The 'stowing face' must be",
       "options": [
-        "Applicable in limited scenarios",
+        "Dark and wet",
         "Properly ventilated and maintained safe for workers",
-        "Works under ideal conditions only",
+        "Sealed for the shift",
         "Any place"
       ],
       "answer": 1,
@@ -1056,7 +1056,7 @@
       "difficulty": "medium",
       "stem": "The 'medical examination' of mine rescue team members must be conducted",
       "options": [
-        "Applicable in limited scenarios",
+        "Only after a disaster",
         "Once in 5 years",
         "Never",
         "At regular intervals as prescribed"
@@ -1075,9 +1075,9 @@
       "stem": "Carbon dioxide (CO2) in mines can accumulate in",
       "options": [
         "Low-lying areas and poorly ventilated sections",
-        "Reduces air velocity below limits",
-        "Affects only intake shafts",
-        "Works only in surface mines"
+        "The fan drift",
+        "The intake shaft mouth",
+        "The roof of the surface office"
       ],
       "answer": 0,
       "solution": "Low-lying areas and poorly ventilated sections."
@@ -1092,10 +1092,10 @@
       "difficulty": "medium",
       "stem": "The Mines Rescue Rules, 1985 deal with",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "The design of the mine buildings",
+        "The pay of the miners",
         "Organization and training of mine rescue teams",
-        "Works under ideal conditions only"
+        "The colour of the winding ropes"
       ],
       "answer": 2,
       "solution": "Organization and training of mine rescue teams."
@@ -1128,8 +1128,8 @@
       "difficulty": "easy",
       "stem": "A 'near miss report' is important because",
       "options": [
-        "Include personal opinions",
-        "It is not important",
+        "To fill up the files",
+        "A formal requirement only",
         "It helps identify potential hazards before actual accidents occur",
         "For punishment"
       ],
@@ -1164,10 +1164,10 @@
       "difficulty": "medium",
       "stem": "The 'cost of stowing' depends on",
       "options": [
-        "Nothing specific",
+        "The colour of the sand",
         "Material type, transportation distance, and equipment used",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The number of fans",
+        "The depth of the sump"
       ],
       "answer": 1,
       "solution": "Material type, transportation distance, and equipment."
@@ -1182,10 +1182,10 @@
       "difficulty": "medium",
       "stem": "The drill machine used in underground mines for face drilling is",
       "options": [
-        "Applicable in limited scenarios",
+        "Only a hand-held hammer",
         "Jackhammer only",
         "Pneumatic or hydraulic drill machine",
-        "Works under ideal conditions only"
+        "Only a compressor"
       ],
       "answer": 2,
       "solution": "Pneumatic or hydraulic drill machines are used."
@@ -1219,7 +1219,7 @@
       "stem": "Personal Protective Equipment (PPE) in mines includes",
       "options": [
         "Helmet, safety lamp, self-rescuer, safety shoes, and protective clothing",
-        "Applicable in limited scenarios",
+        "A fan and a heater",
         "Overcurrent protection only",
         "Differential protection"
       ],
@@ -1273,9 +1273,9 @@
       "stem": "A man riding vehicle must have its capacity marked as",
       "options": [
         "No marking",
-        "Applicable in limited scenarios",
+        "The date of purchase",
         "Maximum capacity clearly marked",
-        "Works under ideal conditions only"
+        "The name of the driver"
       ],
       "answer": 2,
       "solution": "Maximum capacity clearly marked."
@@ -1290,10 +1290,10 @@
       "difficulty": "medium",
       "stem": "The 'pillar recovery' in depillaring involves",
       "options": [
-        "Applicable in limited scenarios",
+        "Forming fresh pillars",
         "Building pillars",
         "Systematic extraction of coal from pillars",
-        "Works under ideal conditions only"
+        "Extraction from the surface"
       ],
       "answer": 2,
       "solution": "Pillar recovery systematically extracts coal from pillars."
@@ -1344,10 +1344,10 @@
       "difficulty": "easy",
       "stem": "The emergency lighting in underground mines must be",
       "options": [
-        "Applicable in limited scenarios",
+        "Connected only to the main supply",
         "Optional",
         "Provided and operational in case of power failure",
-        "Works at rated voltage only"
+        "Works only at full load"
       ],
       "answer": 2,
       "solution": "Provided and operational in case of power failure."
@@ -1398,10 +1398,10 @@
       "difficulty": "medium",
       "stem": "DGMS circulars are",
       "options": [
-        "Applicable in limited scenarios",
+        "Advisory in nature",
         "Optional",
         "Mandatory instructions for compliance in mines",
-        "Works under ideal conditions only"
+        "Only for private mines"
       ],
       "answer": 2,
       "solution": "Mandatory instructions for compliance in mines."
@@ -1416,9 +1416,9 @@
       "difficulty": "medium",
       "stem": "The 'overhand stoping' method involves working",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Downward from the surface",
+        "Sideways along the strike",
+        "Along the dip of the seam",
         "Upward from a horizontal floor"
       ],
       "answer": 3,
@@ -1436,8 +1436,8 @@
       "options": [
         "Concrete, steel, and fire-treated timber",
         "Any material",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Plain wooden props only",
+        "Untreated jute bags"
       ],
       "answer": 0,
       "solution": "Fire resistant materials include concrete, steel, treated timber."
@@ -1445,20 +1445,20 @@
     {
       "id": 74,
       "subject": "Technical (Mining)",
-      "topic": "Drifting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'drift signage' must include",
+      "difficulty": "medium",
+      "stem": "The water-danger plan maintained under CMR 2017 shows water bodies existing within ______ of the boundary of the mine.",
       "options": [
-        "Applicable in limited scenarios",
-        "No signage needed",
-        "Directional signs, safety warnings, and distance markers",
-        "Works under ideal conditions only"
+        "500 m",
+        "100 m",
+        "200 m",
+        "60 m"
       ],
       "answer": 2,
-      "solution": "Drift signage includes directions, warnings, distance markers."
+      "solution": "CMR 2017 Reg 65(1)(g): a water-danger plan and section show water bodies existing up to 200 m of the mine boundary."
     },
     {
       "id": 75,
@@ -1470,8 +1470,8 @@
       "difficulty": "hard",
       "stem": "The 'rescue team fitness' must be",
       "options": [
-        "Not important",
-        "Applicable in limited scenarios",
+        "A matter of choice",
+        "Only the age matters",
         "Physically fit and medically cleared for rescue operations",
         "Any fitness level"
       ],
@@ -1524,8 +1524,8 @@
       "difficulty": "easy",
       "stem": "The 'hydraulic stowing pipeline' must be made of",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Ordinary glass pipe",
+        "Timber pipes",
         "Any material",
         "Wear-resistant material to handle abrasive slurry"
       ],
@@ -1597,9 +1597,9 @@
       "stem": "The 'mine closure' planning involves",
       "options": [
         "Environmental restoration, rehabilitation, and long-term monitoring",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "The sale of the machinery",
+        "The transfer of the staff",
+        "The demolition of the offices"
       ],
       "answer": 0,
       "solution": "Mine closure planning covers environment, rehabilitation, monitoring."
@@ -1668,10 +1668,10 @@
       "difficulty": "hard",
       "stem": "The 'Ujjwala Yojana' provides",
       "options": [
-        "Applicable in limited scenarios",
-        "Nothing specific",
+        "Loans to mining companies",
+        "A scheme for coal exports",
         "Free LPG connections to BPL families",
-        "Works under ideal conditions only"
+        "Subsidised diesel to haulage"
       ],
       "answer": 2,
       "solution": "Free LPG connections to BPL families."
@@ -1724,7 +1724,7 @@
       "options": [
         "Mining of bauxite",
         "Extraction of iron ore",
-        "Nothing specific",
+        "Reduce the number of mines",
         "Increase competition and production efficiency"
       ],
       "answer": 3,
@@ -1815,7 +1815,7 @@
         "Mining of bauxite",
         "Surface mineral extraction",
         "Safety awareness and training in the mining sector",
-        "Nothing specific"
+        "The promotion of coal exports"
       ],
       "answer": 2,
       "solution": "Safety awareness and training."
@@ -1831,9 +1831,9 @@
       "stem": "The 'explosive charge' in opencast mining depends on",
       "options": [
         "Used for stemming operations",
-        "Nothing specific",
+        "The dumper capacity",
         "Rock/coal properties, blast hole dimensions, and fragmentation requirements",
-        "Used for drilling blast holes"
+        "The number of workers"
       ],
       "answer": 2,
       "solution": "Rock properties, hole dimensions, and fragmentation requirements."

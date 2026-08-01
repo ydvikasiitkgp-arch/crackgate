@@ -182,8 +182,8 @@
       "options": [
         "No schedule",
         "Annual, quarterly, and emergency maintenance",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Breakdown maintenance only",
+        "Only when a failure occurs"
       ],
       "answer": 1,
       "solution": "Scheduled maintenance at defined intervals"
@@ -307,9 +307,9 @@
       "stem": "PVC cable is used for:",
       "options": [
         "Low voltage distribution up to 1.1kV",
-        "Applicable in limited scenarios",
+        "EHV transmission lines only",
         "EHV transmission only",
-        "Works under ideal conditions only"
+        "Only in underground mining"
       ],
       "answer": 0,
       "solution": "PVC: LV applications up to 1.1kV"
@@ -361,7 +361,7 @@
       "stem": "Current rating of a cable depends on:",
       "options": [
         "Conductor size, insulation, and installation method",
-        "Applicable in limited scenarios",
+        "Ambient humidity only",
         "Thermal insulation properties",
         "Mechanical strength of materials"
       ],
@@ -504,10 +504,10 @@
       "difficulty": "medium",
       "stem": "Tension in overhead conductor is limited by:",
       "options": [
-        "Required only for specific cases",
+        "Conductor temperature only",
         "Ultimate tensile strength and safety factor",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Wind direction",
+        "Corona loss only"
       ],
       "answer": 1,
       "solution": "Tension: limited by UTS with safety factor 2-3"
@@ -720,7 +720,7 @@
       "difficulty": "medium",
       "stem": "Armoured cable has:",
       "options": [
-        "Applicable in limited scenarios",
+        "A single thin layer of insulation",
         "Plastic jacket",
         "Steel wire or tape armour for mechanical protection",
         "No protection"
@@ -830,7 +830,7 @@
       "options": [
         "Half the diameter",
         "Zero",
-        "Not less than specified倍 of cable diameter",
+        "Not less than a specified multiple of the cable diameter",
         "As small as possible"
       ],
       "answer": 2,
@@ -918,10 +918,10 @@
       "difficulty": "medium",
       "stem": "Cable derating factor depends on:",
       "options": [
-        "Required only for specific cases",
+        "Ambient pressure",
         "Soil thermal resistivity and ambient temperature",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Frequency of supply",
+        "Length of route only"
       ],
       "answer": 1,
       "solution": "Derating: soil resistivity + ambient temp"
@@ -993,7 +993,7 @@
         "Lubricant and tension monitoring",
         "No preparation",
         "Heat only",
-        "Applicable in limited scenarios"
+        "Lubricant only when the duct is dry"
       ],
       "answer": 0,
       "solution": "Lubricant reduces friction; tension meter prevents damage"
@@ -1117,8 +1117,8 @@
       "stem": "Cable sizing for a motor considers:",
       "options": [
         "Full load current, voltage drop, and starting current",
-        "Works at rated voltage only",
-        "Applicable in limited scenarios",
+        "Insulation colour",
+        "Terminal numbering",
         "Speed regulation only"
       ],
       "answer": 0,
@@ -1173,7 +1173,7 @@
         "Ammeter",
         "Hi-pot (insulation resistance and HV test)",
         "Ohmmeter",
-        "Applicable in limited scenarios"
+        "Magnetic testing"
       ],
       "answer": 1,
       "solution": "Hi-pot test: verify insulation integrity before energizing"
@@ -1199,20 +1199,20 @@
     {
       "id": "wcl-afel-08-066",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The EMF equation of an alternator is E = 4.44 × f × φ × T_ph × K_w. What does K_w represent?",
+      "stem": "As per the Mines Act 1952, women may be employed aboveground only between:",
       "options": [
-        "Kelvin factor",
-        "Wien factor",
-        "Winding factor",
-        "Kurtz factor"
+        "24 hours",
+        "6 a.m. and 7 p.m.",
+        "5 a.m. and 9 p.m.",
+        "8 a.m. and 6 p.m."
       ],
-      "answer": 2,
-      "solution": "K_w is the winding factor (product of pitch and distribution factors) that accounts for the actual winding geometry."
+      "answer": 1,
+      "solution": "Mines Act 1952, s.46: women shall not be employed belowground, and aboveground employment is restricted between 6 a.m. and 7 p.m."
     },
     {
       "id": "wcl-afel-08-067",
@@ -1253,128 +1253,128 @@
     {
       "id": "wcl-afel-08-069",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Voltage regulation of an alternator is defined as:",
+      "stem": "As per MVTR 1966, refresher vocational training must be given to persons employed in mines at least once in:",
       "options": [
-        "(V_no_load − V_full_load) / V_no_load × 100",
-        "(V_no_load − V_full_load) / V_full_load × 100",
-        "V_full_load / V_no_load × 100",
-        "(V_full_load − V_no_load) / V_full_load × 100"
+        "5 years",
+        "2 years",
+        "1 year",
+        "10 years"
       ],
-      "answer": 1,
-      "solution": "Regulation = (E − V)/V × 100 where E is no-load voltage and V is full-load terminal voltage at rated PF."
+      "answer": 0,
+      "solution": "MVTR 1966, Rule 8: refresher training at least once in every 5 years."
     },
     {
       "id": "wcl-afel-08-070",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "For parallel operation of alternators, which condition is NOT required?",
+      "stem": "When workings approach within 60 m of a water body or waterlogged area, the manager shall:",
       "options": [
-        "Same kVA rating",
-        "Same frequency",
-        "Same voltage",
-        "Same phase sequence"
+        "Stop working immediately without any plan",
+        "Leave the water body untouched forever",
+        "Only mark it on the board",
+        "Prepare a scheme for protection against inrush and drain the water in a planned manner"
       ],
-      "answer": 0,
-      "solution": "Alternators of different kVA ratings can operate in parallel. Same voltage, frequency, and phase sequence are mandatory."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 149 (danger from surface water) & Ch. XI: within 60 m, protective schemes (drainage, barriers) are implemented."
     },
     {
       "id": "wcl-afel-08-071",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The process of connecting an alternator to the live bus-bar is called:",
+      "stem": "In return airways and old workings, the air shall normally contain oxygen not less than ______ and carbon dioxide not more than ______.",
       "options": [
-        "Compounding",
-        "Synchronizing",
-        "Loading",
-        "Regulation"
+        "21% and 2%",
+        "18% and 1%",
+        "20% and 1.5%",
+        "19% and 0.5%"
       ],
-      "answer": 1,
-      "solution": "Synchronizing is the process of matching voltage, frequency, phase angle, and phase sequence before closing the breaker."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 165: not less than 19% oxygen and not more than 0.5% carbon dioxide."
     },
     {
       "id": "wcl-afel-08-072",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Hunting in alternators is prevented by using:",
+      "stem": "A person re-employed after an absence exceeding one year from mining work must undergo refresher training within:",
       "options": [
-        "Damper windings",
-        "Field diverters",
-        "Interpoles",
-        "Compensating windings"
+        "1 week",
+        "6 months",
+        "1 month of employment",
+        "3 months of employment"
       ],
-      "answer": 0,
-      "solution": "Damper windings (copper bars in pole faces) provide asynchronous torque to damp oscillations."
+      "answer": 2,
+      "solution": "MVTR 1966, Rule 10: refresher training within 1 month of re-employment after absence over 1 year."
     },
     {
       "id": "wcl-afel-08-073",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Damper windings in a synchronous motor help in:",
+      "stem": "The maximum working hours in a week for an adult employed belowground in a mine are:",
       "options": [
-        "Starting and hunting prevention",
-        "Power factor improvement only",
-        "Voltage regulation only",
-        "Reducing losses only"
+        "54 hours",
+        "60 hours",
+        "45 hours",
+        "48 hours"
       ],
-      "answer": 0,
-      "solution": "Damper windings serve dual purpose: motor starting (as induction motor) and hunting suppression during running."
+      "answer": 3,
+      "solution": "Mines Act 1952, s.28: no person shall be employed belowground for more than 48 hours in any week."
     },
     {
       "id": "wcl-afel-08-074",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "In an alternator, the nature of armature reaction depends on:",
+      "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
-        "Excitation only",
-        "Load current and its power factor",
-        "Number of poles",
-        "Speed only"
+        "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
+        "Only loss of life",
+        "Only explosions",
+        "Only minor injuries"
       ],
-      "answer": 1,
-      "solution": "Armature reaction is magnetizing at lagging PF, demagnetizing at leading PF, and cross-magnetizing at unity PF."
+      "answer": 0,
+      "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
     },
     {
       "id": "wcl-afel-08-075",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Which excitation system uses a separately excited DC generator to supply the rotor field?",
+      "stem": "Under the Mines Act 1952, an Inspector may, among other powers:",
       "options": [
-        "Bass-bar exciter",
-        "DC exciter system",
-        "Brushless excitation",
-        "Static excitation"
+        "Impose fines directly",
+        "Appoint mine officials",
+        "Withdraw certificates of competency",
+        "Enter, inspect and examine a mine, and make inquiries on any matter relating to safety"
       ],
-      "answer": 1,
-      "solution": "A DC exciter is a small DC generator mounted on the same shaft, feeding the main field winding through slip rings."
+      "answer": 3,
+      "solution": "Mines Act 1952, s.22: Inspectors may enter, inspect, examine and inquire into any mine and its records."
     },
     {
       "id": "wcl-afel-08-076",
@@ -1397,74 +1397,146 @@
     {
       "id": "wcl-afel-08-077",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The turbo-alternator normally has how many poles?",
+      "stem": "A shot-firer who has not been employed in blasting duties for more than 6 months shall undergo:",
       "options": [
-        "2 poles",
-        "8 poles",
-        "4 poles",
-        "6 poles"
+        "Fresh initial training of 1 month",
+        "Retraining in the handling of explosives before resuming such duties",
+        "No retraining",
+        "A written test only"
       ],
-      "answer": 0,
-      "solution": "Turbo-alternators are high-speed machines (3000 rpm at 50 Hz), requiring 2 poles."
+      "answer": 1,
+      "solution": "MVTR 1966, Rule 13: retraining in handling of explosives is required after an absence from such duties exceeding 6 months."
     },
     {
       "id": "wcl-afel-08-078",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "In a thermal power plant, the function of a condenser is to:",
+      "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
-        "Store water",
-        "Heat the steam",
-        "Generate electricity",
-        "Condense exhaust steam to improve efficiency"
+        "One month of refresher training",
+        "No training",
+        "Initial vocational training in the prescribed subjects",
+        "Only a medical test"
       ],
-      "answer": 3,
-      "solution": "Condensing exhaust steam creates vacuum at turbine exit, increasing the enthalpy drop and plant efficiency."
+      "answer": 2,
+      "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
     },
     {
       "id": "wcl-afel-08-079",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The Rankine cycle efficiency of a thermal power plant can be improved by:",
+      "stem": "'Competent person' under the Mines Act 1952 means a person:",
       "options": [
-        "Decreasing turbine inlet temperature",
-        "Increasing superheat temperature",
-        "Decreasing boiler pressure",
-        "Increasing condenser pressure"
+        "Appointed by the Inspector",
+        "Having 10 years of experience",
+        "Appointed by the owner, agent or manager and possessing the prescribed qualifications",
+        "Holding any degree"
       ],
-      "answer": 1,
-      "solution": "Higher superheat temperature increases mean temperature of heat addition, improving Rankine cycle efficiency."
+      "answer": 2,
+      "solution": "Mines Act 1952, s.2(1)(c): a competent person is one appointed by the owner, agent or manager with the prescribed qualifications for the purpose."
     },
     {
       "id": "wcl-afel-08-080",
       "subject": "Electrical Engineering",
-      "topic": "Power Generation — Fundamentals",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Which turbine is used in high-head hydro power plants?",
+      "stem": "A first-aid room is required at a mine where the number of persons employed exceeds:",
       "options": [
-        "Francis turbine",
-        "Pelton turbine",
-        "Propeller turbine",
-        "Kaplan turbine"
+        "150",
+        "100",
+        "250",
+        "50"
+      ],
+      "answer": 0,
+      "solution": "Mines Act 1952, s.21: a first-aid room is required where more than 150 persons are employed."
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The population of a town increases by 10% every year. If the present population is 10000, what was the population 2 years ago?",
+      "options": [
+        "8500",
+        "8100",
+        "8264",
+        "8000"
+      ],
+      "answer": 2,
+      "solution": "P × 1.10² = 10000 → P = 10000/1.21 = 8264"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Average",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average of 11 results is 60. If the average of the first 6 results is 58 and that of the last 6 is 63, what is the 6th result?",
+      "options": [
+        "50",
+        "54",
+        "56",
+        "52"
       ],
       "answer": 1,
-      "solution": "Pelton (impulse) turbine is suited for high heads (above 250 m). Francis for medium, Kaplan for low heads."
+      "solution": "Total of 11 = 660. First 6 = 348. Last 6 = 378. 6th = 348 + 378 - 660 = 66. Wait, 348+378=726. 726-660=66. Not in options... The 6th result is counted in both groups. Sum of first 6 + sum of last 6 = total + 6th (since 6th is counted twice). So 6th = 348 + 378 - 660 = 66. This doesn't match any option."
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Calendar",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "If today is Wednesday, what day will it be after 100 days?",
+      "options": [
+        "Thursday",
+        "Saturday",
+        "Wednesday",
+        "Friday"
+      ],
+      "answer": 3,
+      "solution": "100 = 14×7 + 2. Wednesday + 2 = Friday"
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Average",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The average of a committee of 5 members is decreased by 3 years when one member aged 50 years is replaced by a new member. What is the age of the new member?",
+      "options": [
+        "42",
+        "40",
+        "35",
+        "38"
+      ],
+      "answer": 2,
+      "solution": "Total decrease = 5 × 3 = 15. New member age = 50 - 15 = 35"
     },
     {
       "id": "wcl-afel-08-g001",
@@ -1753,150 +1825,6 @@
       ],
       "answer": 0,
       "solution": "Since + point of time"
-    },
-    {
-      "id": "wcl-afel-08-g017",
-      "subject": "General Awareness",
-      "topic": "General English",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Fill in: He is senior ___ me.",
-      "options": [
-        "by",
-        "from",
-        "than",
-        "to"
-      ],
-      "answer": 3,
-      "solution": "Senior to"
-    },
-    {
-      "id": "wcl-afel-08-g018",
-      "subject": "General Awareness",
-      "topic": "General English",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Fill in: Neither he ___ I am going.",
-      "options": [
-        "and",
-        "but",
-        "or",
-        "nor"
-      ],
-      "answer": 3,
-      "solution": "Neither...nor"
-    },
-    {
-      "id": "wcl-afel-08-g019",
-      "subject": "General Awareness",
-      "topic": "General English",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Passive voice: She sings a song.",
-      "options": [
-        "A song is sung by her",
-        "A song was sung by her",
-        "A song has been sung by her",
-        "Song is singing by her"
-      ],
-      "answer": 0,
-      "solution": "Present simple passive"
-    },
-    {
-      "id": "wcl-afel-08-g020",
-      "subject": "General Awareness",
-      "topic": "General English",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Fill in: He goes to school ___ foot.",
-      "options": [
-        "on",
-        "in",
-        "with",
-        "by"
-      ],
-      "answer": 0,
-      "solution": "On foot"
-    },
-    {
-      "id": 81,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Percentage",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The population of a town increases by 10% every year. If the present population is 10000, what was the population 2 years ago?",
-      "options": [
-        "8500",
-        "8100",
-        "8264",
-        "8000"
-      ],
-      "answer": 2,
-      "solution": "P × 1.10² = 10000 → P = 10000/1.21 = 8264"
-    },
-    {
-      "id": 82,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Average",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of 11 results is 60. If the average of the first 6 results is 58 and that of the last 6 is 63, what is the 6th result?",
-      "options": [
-        "50",
-        "54",
-        "56",
-        "52"
-      ],
-      "answer": 1,
-      "solution": "Total of 11 = 660. First 6 = 348. Last 6 = 378. 6th = 348 + 378 - 660 = 66. Wait, 348+378=726. 726-660=66. Not in options... The 6th result is counted in both groups. Sum of first 6 + sum of last 6 = total + 6th (since 6th is counted twice). So 6th = 348 + 378 - 660 = 66. This doesn't match any option."
-    },
-    {
-      "id": 83,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Calendar",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If today is Wednesday, what day will it be after 100 days?",
-      "options": [
-        "Thursday",
-        "Saturday",
-        "Wednesday",
-        "Friday"
-      ],
-      "answer": 3,
-      "solution": "100 = 14×7 + 2. Wednesday + 2 = Friday"
-    },
-    {
-      "id": 84,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Average",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of a committee of 5 members is decreased by 3 years when one member aged 50 years is replaced by a new member. What is the age of the new member?",
-      "options": [
-        "42",
-        "40",
-        "35",
-        "38"
-      ],
-      "answer": 2,
-      "solution": "Total decrease = 5 × 3 = 15. New member age = 50 - 15 = 35"
     }
   ]
 }

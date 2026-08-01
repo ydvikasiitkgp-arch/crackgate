@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -192,8 +192,8 @@
       "difficulty": "hard",
       "stem": "The 'extraction sequence' in depillaring determines",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "The order of filling the sump",
+        "The sequence of drilling in the face",
         "Random extraction",
         "Order of pillar extraction for safety and subsidence control"
       ],
@@ -228,10 +228,10 @@
       "difficulty": "easy",
       "stem": "The safety lamp of a man riding operator must be",
       "options": [
-        "Not required",
+        "Carried by the overman instead",
         "Optional",
         "Always carried",
-        "Reduce equipment maintenance"
+        "Replaced by a torch only"
       ],
       "answer": 2,
       "solution": "A safety lamp must always be carried."
@@ -284,8 +284,8 @@
       "options": [
         "Mandatory for continuous monitoring of methane levels",
         "Optional",
-        "Mining of bauxite",
-        "Not required"
+        "Only for surface mines",
+        "Installed only in metal mines"
       ],
       "answer": 0,
       "solution": "Methane monitors are mandatory for continuous monitoring."
@@ -300,8 +300,8 @@
       "difficulty": "medium",
       "stem": "The 'emergency response drill' frequency should be",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only once in ten years",
+        "Only on request of the inspector",
         "Never",
         "At least twice a year"
       ],
@@ -336,8 +336,8 @@
       "difficulty": "medium",
       "stem": "The winding engine must be equipped with a",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "A separate starting lever",
+        "A spare rope",
         "Device to prevent overspeeding",
         "No special device"
       ],
@@ -409,7 +409,7 @@
       "stem": "The 'refresher training' for mine rescue team members must be conducted",
       "options": [
         "Once in 5 years",
-        "Applicable in limited scenarios",
+        "Only after a mine disaster",
         "At least once a year",
         "Never"
       ],
@@ -498,10 +498,10 @@
       "difficulty": "easy",
       "stem": "The 'layout of a report' should include",
       "options": [
-        "Used in preliminary drafts only",
-        "Nothing specific",
+        "The size of the paper only",
+        "A cover page only",
         "Header, date, subject, body, recommendations, and signature",
-        "Omit references"
+        "The number of words used"
       ],
       "answer": 2,
       "solution": "Header, date, subject, body, recommendations, and signature."
@@ -555,7 +555,7 @@
         "Any person",
         "A competent person at regular intervals",
         "The manager personally",
-        "Applicable in limited scenarios"
+        "The lamp man of the shift"
       ],
       "answer": 1,
       "solution": "By a competent person at regular intervals."
@@ -570,8 +570,8 @@
       "difficulty": "hard",
       "stem": "A man riding system using a locomotive must have",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "A louder horn only",
+        "A brighter headlight",
         "No safety devices",
         "Automatic couplers and safety bars"
       ],
@@ -599,20 +599,20 @@
     {
       "id": 27,
       "subject": "Technical (Mining)",
-      "topic": "Accidents",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'unsafe act' in a mine includes",
+      "difficulty": "medium",
+      "stem": "As per CMR 2017, how often must a sirdar re-examine a place during a shift where work is going on?",
       "options": [
-        "Required only for specific cases",
-        "Not wearing PPE, operating without authority, and bypassing safety devices",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Once at the middle of the shift only",
+        "Once in every 8 hours",
+        "Once in every 4 hours",
+        "Once in every 2 hours"
       ],
-      "answer": 1,
-      "solution": "Not wearing PPE, operating without authority, and bypassing safety devices."
+      "answer": 2,
+      "solution": "CMR 2017 Reg 129: every such place shall be re-examined at least once in every 4 hours."
     },
     {
       "id": 28,
@@ -624,10 +624,10 @@
       "difficulty": "easy",
       "stem": "The daily report by the sirdar must include",
       "options": [
-        "Used in preliminary drafts only",
+        "The provisional figures of the surveyor",
         "Required for statutory reports",
         "Safety conditions, persons employed, work done, and any incidents",
-        "Skip executive summary"
+        "The personal notes of the manager"
       ],
       "answer": 2,
       "solution": "Safety conditions, persons employed, work done, and any incidents."
@@ -660,10 +660,10 @@
       "difficulty": "medium",
       "stem": "The 'gradient' of a drift depends on",
       "options": [
-        "Applicable in limited scenarios",
+        "The season of the year",
         "Fixed gradient",
         "Purpose, geological conditions, and haulage requirements",
-        "Works under ideal conditions only"
+        "The colour of the strata"
       ],
       "answer": 2,
       "solution": "Drift gradient depends on purpose, geology, and haulage needs."
@@ -679,8 +679,8 @@
       "stem": "The 'drill steel' in drifting must be",
       "options": [
         "High-quality steel to withstand impact and abrasion",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Ordinary mild steel rods",
+        "Wooden rods",
         "Any material"
       ],
       "answer": 0,
@@ -714,10 +714,10 @@
       "difficulty": "medium",
       "stem": "The sirdar is responsible for the enforcement of",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "Only the company standing orders",
+        "Only the contractor's instructions",
         "CMR 2017, Mines Act 1952, and DGMS circulars",
-        "Works under ideal conditions only"
+        "Only the pay rules"
       ],
       "answer": 2,
       "solution": "The sirdar enforces CMR 2017, Mines Act 1952, and DGMS circulars."
@@ -786,8 +786,8 @@
       "difficulty": "hard",
       "stem": "The person in charge of a man riding system must maintain a",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The production figures only",
+        "The names of the passengers only",
         "No records",
         "Log book of operations, defects, and maintenance"
       ],
@@ -804,10 +804,10 @@
       "difficulty": "easy",
       "stem": "A winding engine operator must maintain a log book with",
       "options": [
-        "Applicable in limited scenarios",
+        "The list of visitors only",
         "No log",
         "Written log of all operations, faults, and maintenance",
-        "Works under ideal conditions only"
+        "The daily wages of the workers"
       ],
       "answer": 2,
       "solution": "Written log of all operations, faults, and maintenance."
@@ -815,20 +815,20 @@
     {
       "id": 39,
       "subject": "Technical (Mining)",
-      "topic": "Accidents",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The root cause of an accident is typically",
+      "difficulty": "medium",
+      "stem": "The report of a sirdar's examination under CMR 2017 shall be recorded in:",
       "options": [
-        "Equipment failure",
-        "Bad luck",
-        "Systemic failure in management, training, or safety systems",
-        "Worker's fault"
+        "A loose-leaf register",
+        "A digital tablet only",
+        "Any rough notebook",
+        "A bound paged book in the prescribed format"
       ],
-      "answer": 2,
-      "solution": "Systemic failure in management, training, or safety systems."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 129: results are recorded in a bound paged book kept for the purpose, in the prescribed format, signed and dated."
     },
     {
       "id": 40,
@@ -860,8 +860,8 @@
       "options": [
         "It is explosive when mixed with air in certain proportions",
         "It does not",
-        "Affects only intake shafts",
-        "Works only in surface mines"
+        "It reduces the temperature",
+        "It is only harmful on the surface"
       ],
       "answer": 0,
       "solution": "Explosive when mixed with air in certain proportions."
@@ -876,7 +876,7 @@
       "difficulty": "hard",
       "stem": "A stage loader is also known as",
       "options": [
-        "Applicable in limited scenarios",
+        "The main gate end",
         "Face conveyor",
         "Belt tail",
         "Beam stage loader or boot end"
@@ -894,10 +894,10 @@
       "difficulty": "medium",
       "stem": "The 'water dam design' considers",
       "options": [
-        "Applicable in limited scenarios",
+        "The depth of the seam",
         "Water pressure, ground conditions, and drainage provisions",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "The number of workers in the mine",
+        "The brand of the pumps"
       ],
       "answer": 1,
       "solution": "Dam design considers pressure, conditions, and drainage."
@@ -912,10 +912,10 @@
       "difficulty": "hard",
       "stem": "The 'stowing inspection' includes",
       "options": [
-        "Applicable in limited scenarios",
+        "Checking the canteen cleanliness",
         "Checking pipeline conditions, dams, and filling progress",
         "No inspection needed",
-        "Works under ideal conditions only"
+        "Checking the attendance register"
       ],
       "answer": 1,
       "solution": "Inspections check pipelines, dams, and filling progress."
@@ -930,7 +930,7 @@
       "difficulty": "easy",
       "stem": "The sirdar's report book is a",
       "options": [
-        "Include personal opinions",
+        "A scrap book for sketches",
         "Optional document",
         "Mandatory record maintained under CMR 2017",
         "Personal diary"
@@ -969,7 +969,7 @@
         "Loaders, conveyors, or mucking machines",
         "Used for stemming operations",
         "Used for charging detonators",
-        "Not required"
+        "Manual shovelling only"
       ],
       "answer": 0,
       "solution": "Muck removal uses loaders, conveyors, or mucking machines."
@@ -1022,8 +1022,8 @@
       "options": [
         "Specific to metal mines only",
         "Roof conditions, equipment capacity, and support cycle time",
-        "Mining of bauxite",
-        "Nothing specific"
+        "The number of surface fans",
+        "The colour of the coal"
       ],
       "answer": 1,
       "solution": "Roof conditions, equipment capacity, and support cycle."
@@ -1038,10 +1038,10 @@
       "difficulty": "hard",
       "stem": "A 'monitoring well' near a mine is used to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Watering the haul roads",
+        "Measuring the wind velocity",
         "Monitor groundwater levels and quality",
-        "Required only for specific cases"
+        "Cooling the winding engine"
       ],
       "answer": 2,
       "solution": "Monitors groundwater levels and quality."
@@ -1057,9 +1057,9 @@
       "stem": "The 'powers of the Chief Inspector' under the Mines Act include",
       "options": [
         "Issue directions, suspend operations, and ensure compliance",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only levy penalties on workers",
+        "Only approve the pay roll",
+        "Only conduct medical examinations"
       ],
       "answer": 0,
       "solution": "Issue directions, suspend operations, and ensure compliance."
@@ -1074,8 +1074,8 @@
       "difficulty": "medium",
       "stem": "The 'underbreak' in drifting is",
       "options": [
-        "Not important",
-        "Applicable in limited scenarios",
+        "Always beneficial",
+        "Always avoided by overcharging",
         "Rock left within the designed drift profile",
         "Desirable"
       ],
@@ -1200,10 +1200,10 @@
       "difficulty": "hard",
       "stem": "A 'mechanized drilling' method for drifting uses",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Hand-held pick axes",
+        "Manual shovelling only",
         "Jumbo drill rigs or road headers",
-        "Works under ideal conditions only"
+        "Explosives alone"
       ],
       "answer": 2,
       "solution": "Jumbo drill rigs or road headers."
@@ -1219,9 +1219,9 @@
       "stem": "The 'pillar extraction sequence' is designed to",
       "options": [
         "Maximize coal recovery while maintaining safety",
-        "Applicable in limited scenarios",
-        "Nothing specific",
-        "Works under ideal conditions only"
+        "Reduce the ventilation requirement",
+        "Defer the support work",
+        "Increase the number of shafts"
       ],
       "answer": 0,
       "solution": "Maximize coal recovery while maintaining safety."
@@ -1247,20 +1247,20 @@
     {
       "id": 63,
       "subject": "Technical (Mining)",
-      "topic": "Electrical",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The maximum temperature of electrical equipment surface in a mine must not exceed",
+      "stem": "Under CMR 2017, when must a sirdar carry out the first examination of a place before work is commenced in it?",
       "options": [
-        "150°C or the auto-ignition temperature of gas, whichever is lower",
-        "100°C",
-        "200°C",
-        "300°C"
+        "At the exact time of commencement of work",
+        "At least 2 hours before commencement of work",
+        "Within 2 hours before commencement of work",
+        "At least 1 hour before commencement of work"
       ],
-      "answer": 0,
-      "solution": "Must not exceed 150°C or auto-ignition temperature, whichever is lower."
+      "answer": 2,
+      "solution": "CMR 2017 Reg 129: the first examination shall be carried out within 2 hours before the commencement of work in the place."
     },
     {
       "id": 64,
@@ -1273,8 +1273,8 @@
       "stem": "The 'water dam material' selection depends on",
       "options": [
         "Water pressure, ground conditions, and availability",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "The colour of the strata",
+        "The depth of the mine",
         "Any material"
       ],
       "answer": 0,
@@ -1308,10 +1308,10 @@
       "difficulty": "hard",
       "stem": "The 'chain of command' during a mine emergency must be",
       "options": [
-        "Applicable in limited scenarios",
+        "Decided at the time of the emergency",
         "Unclear",
         "Clearly defined and communicated to all personnel",
-        "Works under ideal conditions only"
+        "Kept confidential"
       ],
       "answer": 2,
       "solution": "Clearly defined and communicated to all personnel."
@@ -1344,13 +1344,13 @@
       "difficulty": "hard",
       "stem": "The 'boundary of the mine' must be clearly defined under",
       "options": [
-        "Applicable in limited scenarios",
-        "CMR 2017 Regulation 32",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Regulation 32 only",
+        "Regulations 121 and 122",
+        "Regulation 133",
+        "Regulation 55"
       ],
       "answer": 1,
-      "solution": "CMR 2017 Regulation 32."
+      "solution": "Regulations 121 and 122 of CMR 2017 deal with the fixing of mine boundaries and working near them (belowground and opencast)."
     },
     {
       "id": 69,
@@ -1363,9 +1363,9 @@
       "stem": "A 'misfire report' must detail",
       "options": [
         "Number of misfired holes, probable cause, and action taken",
-        "Omit references",
-        "Used in preliminary drafts only",
-        "Skip executive summary"
+        "Only the names of the drillers",
+        "The quantity of coal produced",
+        "The list of explosives in the magazine"
       ],
       "answer": 0,
       "solution": "Number of misfired holes, probable cause, and action taken."
@@ -1416,10 +1416,10 @@
       "difficulty": "easy",
       "stem": "A sirdar must report to the manager about",
       "options": [
-        "Include photographs only",
-        "Omit references",
+        "The family details of workers only",
+        "The canteen menu",
         "Any unsafe condition or contravention of regulations",
-        "Include personal opinions"
+        "The personal opinions of the overman"
       ],
       "answer": 2,
       "solution": "The sirdar must report any unsafe condition or contravention to the manager."
@@ -1452,9 +1452,9 @@
       "difficulty": "easy",
       "stem": "The 'air sampling' in mines involves",
       "options": [
-        "Affects only intake shafts",
-        "Not required",
-        "No sampling needed",
+        "By the winding engineman",
+        "Only before the annual festival",
+        "Every five years",
         "Collection and analysis of mine atmosphere samples"
       ],
       "answer": 3,
@@ -1463,20 +1463,20 @@
     {
       "id": 75,
       "subject": "Technical (Mining)",
-      "topic": "Mine Surveying",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "A 'total station' in mine surveying combines",
+      "difficulty": "medium",
+      "stem": "Under CMR 2017, a sirdar is required to be posted at a station designated by which person?",
       "options": [
-        "Monitor gas concentrations",
-        "Angle measurement, distance measurement, and data recording",
-        "Test roof stability",
-        "Record temperature variations"
+        "The manager",
+        "The overman",
+        "The assistant manager",
+        "The district magistrate"
       ],
-      "answer": 1,
-      "solution": "Angle measurement, distance measurement, and data recording."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 129: the manager fixes the STATION posts and the sirdar is posted there during his shift."
     },
     {
       "id": 76,
@@ -1525,9 +1525,9 @@
       "stem": "A 'gas ignition report' must include",
       "options": [
         "Type of gas, concentration, source of ignition, and extent of damage",
-        "Include personal opinions",
-        "Skip executive summary",
-        "Use informal language"
+        "The opinions of the bystanders",
+        "The monthly output figures",
+        "The canteen records"
       ],
       "answer": 0,
       "solution": "Type, concentration, source, and extent of damage."
@@ -1544,7 +1544,7 @@
       "options": [
         "Minimum production",
         "Maximum waste extraction",
-        "Applicable in limited scenarios",
+        "Deeper benching only",
         "Mineral quality through selective mining"
       ],
       "answer": 3,
@@ -1561,9 +1561,9 @@
       "stem": "The 'stowing material size' affects",
       "options": [
         "Pipeline wear, transport efficiency, and settling rate",
-        "Applicable in limited scenarios",
+        "The colour of the sand",
         "Nothing significant",
-        "Works under ideal conditions only"
+        "The temperature of the water"
       ],
       "answer": 0,
       "solution": "Material size affects pipeline wear, efficiency, and settling."
@@ -1579,7 +1579,7 @@
       "stem": "The 'coal mining training' institutions in India include",
       "options": [
         "Processing of limestone",
-        "Nothing specific",
+        "A list of private tuition centres",
         "ISM Dhanbad, NITs, and CIL training centers",
         "Extraction of iron ore"
       ],
@@ -1597,7 +1597,7 @@
       "stem": "The 'domestic coal supply' shortage can be met by",
       "options": [
         "Specific to metal mines only",
-        "Nothing specific",
+        "Reducing the washery capacity",
         "Increased production and supplementary imports",
         "Quarrying of granite"
       ],
@@ -1704,10 +1704,10 @@
       "difficulty": "medium",
       "stem": "The 'Jal Jeevan Mission' provides",
       "options": [
-        "Applicable in limited scenarios",
-        "Nothing specific",
+        "Solar lighting in cities",
+        "Loans to urban households",
         "Tap water connections to rural households",
-        "Works under ideal conditions only"
+        "Highway construction"
       ],
       "answer": 2,
       "solution": "Tap water connections to rural households."
@@ -1722,10 +1722,10 @@
       "difficulty": "easy",
       "stem": "The 'Stand-Up India' scheme provides",
       "options": [
-        "Nothing specific",
+        "Grants to foreign investors",
         "Loans to SC/ST and women entrepreneurs",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Subsidies for coal imports",
+        "Loans to large corporations"
       ],
       "answer": 1,
       "solution": "Loans to SC/ST and women entrepreneurs."
@@ -1831,9 +1831,9 @@
       "stem": "The 'green belt' around opencast mines serves to",
       "options": [
         "Increase mining area",
-        "Not required",
+        "Increase the depth of mining",
         "Dust suppression, noise reduction, and aesthetic improvement",
-        "Applicable in limited scenarios"
+        "Storage of overburden"
       ],
       "answer": 2,
       "solution": "Green belts provide dust suppression, noise reduction, aesthetics."
@@ -1885,7 +1885,7 @@
       "stem": "India's 'Mars Orbiter Mission' (Mangalyaan) made India the",
       "options": [
         "Fourth country to orbit Mars",
-        "Applicable in limited scenarios",
+        "First country to land on Venus",
         "First Asian country to reach Mars",
         "First country to reach Mars on first attempt"
       ],
@@ -1927,78 +1927,6 @@
       ],
       "answer": 2,
       "solution": "(1000+1200+1400+1600)/4 = 5200/4 = 1300. Wait, that's 1300."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Speed Time Distance",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A car travels 150 km in 3 hours. What is its speed in m/s?",
-      "options": [
-        "50 m/s",
-        "15 m/s",
-        "13.89 m/s",
-        "12.5 m/s"
-      ],
-      "answer": 2,
-      "solution": "Speed = 150/3 = 50 km/h = 50 × 5/18 = 13.89 m/s"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "By selling 12 articles, a person gains the selling price of 2 articles. What is the profit percentage?",
-      "options": [
-        "14.29%",
-        "16.67%",
-        "20%",
-        "25%"
-      ],
-      "answer": 2,
-      "solution": "SP of 12 - CP of 12 = SP of 2 → SP of 10 = CP of 12 → profit on 12 = SP of 2. Profit% = (SP of 2/CP of 12) × 100. Since SP of 10 = CP of 12, CP = (10/12)SP. Profit = SP - (10/12)SP = (2/12)SP = SP/6 per article. Profit% = (SP/6) / (10SP/12) × 100 = (SP/6) × (12/10SP) × 100 = 20%"
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The price of sugar increases by 25%. By how much percent should a family reduce consumption so that expenditure remains same?",
-      "options": [
-        "20%",
-        "25%",
-        "30%",
-        "15%"
-      ],
-      "answer": 0,
-      "solution": "New consumption = (100/125) × old = 80% of old. Reduction = 20%"
-    },
-    {
-      "id": 104,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A man sells two watches at ₹990 each. One at 10% gain and other at 10% loss. What is his overall gain or loss?",
-      "options": [
-        "₹11 loss",
-        "₹20 loss",
-        "₹10 gain",
-        "No gain no loss"
-      ],
-      "answer": 0,
-      "solution": "CP1 = 990/1.10 = 900, CP2 = 990/0.90 = 1100. Total CP = 2000, Total SP = 1980. Loss = ₹20. Hmm wait, 20 is in the options... actually: loss% = x²/100 = 1%. 1% of avg CP 1000 = ₹10. But exact: Total loss = ₹20. Option ₹20 loss should be there... Let me recalculate: the answer should be ₹20 loss."
     }
   ],
   "seed": 95110541

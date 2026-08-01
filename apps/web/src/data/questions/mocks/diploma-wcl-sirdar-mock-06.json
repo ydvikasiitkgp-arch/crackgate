@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -139,9 +139,9 @@
       "stem": "The 'partial extraction' method leaves",
       "options": [
         "Some pillars for permanent support",
-        "Works under ideal conditions only",
-        "No pillars",
-        "Applicable in limited scenarios"
+        "No pillars at all",
+        "Pillars of any size",
+        "All the coal extracted"
       ],
       "answer": 0,
       "solution": "Partial extraction leaves some pillars for long-term support."
@@ -156,7 +156,7 @@
       "difficulty": "medium",
       "stem": "A 'gas monitoring system' in a mine must be",
       "options": [
-        "Affects only intake shafts",
+        "Installed only on the surface",
         "Optional",
         "Continuous and capable of detecting hazardous gas concentrations",
         "Manual only"
@@ -174,10 +174,10 @@
       "difficulty": "hard",
       "stem": "The 'first-aid' requirements in mines are prescribed under",
       "options": [
-        "Applicable in limited scenarios",
+        "The Companies Act 2013",
         "Mines Act 1952 and CMR 2017",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "The Factories Act only",
+        "The Payment of Wages Act"
       ],
       "answer": 1,
       "solution": "Both Mines Act 1952 and CMR 2017."
@@ -228,8 +228,8 @@
       "difficulty": "easy",
       "stem": "The 'fire risk assessment' for mines evaluates",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Only the type of roof",
+        "Only the depth of the mine",
         "No assessment needed",
         "Ignition sources, fuel, and control measures"
       ],
@@ -265,9 +265,9 @@
       "stem": "The winding rope must be tested for",
       "options": [
         "Tensile strength and endurance",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Tensile strength only"
+        "The colour of the rope only",
+        "Only the length",
+        "Only the diameter"
       ],
       "answer": 0,
       "solution": "Both tensile strength and endurance testing is required."
@@ -302,8 +302,8 @@
       "options": [
         "Collected and either reused or discharged after treatment",
         "Left underground",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios"
+        "Allowed to flood the workings",
+        "Used for cooling the fans"
       ],
       "answer": 0,
       "solution": "Collected and either reused or discharged after treatment."
@@ -318,10 +318,10 @@
       "difficulty": "easy",
       "stem": "The gradient of a drift must be such that",
       "options": [
-        "Applicable in limited scenarios",
-        "Water can be drained and运输 is possible",
+        "It is absolutely level",
+        "Water can be drained and transport is possible",
         "It is very steep",
-        "Works under ideal conditions only"
+        "It is independent of the seam gradient"
       ],
       "answer": 1,
       "solution": "Water can be drained and transport is possible."
@@ -354,10 +354,10 @@
       "difficulty": "easy",
       "stem": "The 'drill pattern' for drifting depends on",
       "options": [
-        "Nothing specific",
-        "Applicable in limited scenarios",
+        "The season of the year",
+        "The number of workers",
         "Rock conditions, drift dimensions, and explosive type",
-        "Works under ideal conditions only"
+        "The brand of the drilling machine"
       ],
       "answer": 2,
       "solution": "Rock conditions, drift dimensions, and explosive type."
@@ -409,9 +409,9 @@
       "stem": "The 'stowing pipeline' must be checked for",
       "options": [
         "Wear, blockages, and leakage at regular intervals",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Only the paint on the pipeline",
+        "Only the length of the pipeline",
+        "The temperature of the slurry"
       ],
       "answer": 0,
       "solution": "Wear, blockages, and leakage regularly."
@@ -481,8 +481,8 @@
       "stem": "The 'fire-resistant doors' in a mine must be",
       "options": [
         "Installed at strategic locations to control ventilation and fire spread",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Installed only at the surface",
+        "Decorated with company logos",
         "Optional"
       ],
       "answer": 0,
@@ -498,8 +498,8 @@
       "difficulty": "medium",
       "stem": "The 'self-contained breathing apparatus' (SCBA) for mine rescue provides",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Air from the mine workings",
+        "Compressed air from the surface",
         "No air supply",
         "Fresh air supply independent of mine atmosphere"
       ],
@@ -534,10 +534,10 @@
       "difficulty": "hard",
       "stem": "The '5W1H' in report writing stands for",
       "options": [
-        "Used in preliminary drafts only",
+        "Word, Writing, Waiting, Watching, Winding, and Washing",
         "Work, Worker, Wage, Welfare, Wellbeing, and Health",
         "Who, What, When, Where, Why, and How",
-        "Omit references"
+        "Wage, Water, Wind, Wall, Wire, and Waste"
       ],
       "answer": 2,
       "solution": "Who, What, When, Where, Why, and How."
@@ -552,9 +552,9 @@
       "difficulty": "medium",
       "stem": "The 'communication system' for mine rescue must include",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only hand signals",
+        "Only loud shouts",
+        "Only visual signalling",
         "Two-way communication between rescue team and surface"
       ],
       "answer": 3,
@@ -626,8 +626,8 @@
       "options": [
         "Provide the primary airflow through the mine",
         "Regulate air temperature only",
-        "Affects only intake shafts",
-        "Provide fresh air to working faces"
+        "Remove water from the workings",
+        "Heat the mine in winter"
       ],
       "answer": 0,
       "solution": "Provides the primary airflow through the mine."
@@ -715,7 +715,7 @@
       "stem": "The 'ventilation records' must include",
       "options": [
         "No records needed",
-        "Affects only intake shafts",
+        "Only the fan details",
         "Air quantity, quality, and fan performance data",
         "Control humidity in underground workings"
       ],
@@ -751,7 +751,7 @@
       "stem": "The 'safe distance' for persons during blasting depends on",
       "options": [
         "Used for roof bolting only",
-        "Nothing specific",
+        "The colour of the explosive",
         "The charge weight and type of explosive used",
         "Used for drilling blast holes"
       ],
@@ -787,8 +787,8 @@
       "stem": "The 'rescue team equipment' includes",
       "options": [
         "SCBA, gas detectors, communication, first aid",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Only a pair of gloves",
+        "Only a torch",
         "No equipment needed"
       ],
       "answer": 0,
@@ -860,7 +860,7 @@
       "options": [
         "Affects only intake shafts",
         "No cause",
-        "Works only in surface mines",
+        "Increased fan speed",
         "Displacement by other gases, oxidation, and poor ventilation"
       ],
       "answer": 3,
@@ -895,9 +895,9 @@
       "stem": "The 'board and pillar' method of working involves",
       "options": [
         "Driving headings and crosscuts to form pillars",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only extraction of the pillars",
+        "Only the surface mining of coal",
+        "Working with a single heading"
       ],
       "answer": 0,
       "solution": "Driving headings and crosscuts to form pillars."
@@ -915,7 +915,7 @@
         "Omit references",
         "Skip executive summary",
         "Provide visual documentation of conditions and evidence",
-        "Use informal language"
+        "Replace all written description"
       ],
       "answer": 2,
       "solution": "Provides visual documentation of conditions and evidence."
@@ -930,9 +930,9 @@
       "difficulty": "easy",
       "stem": "The 'mine waste to stowing' ratio depends on",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific",
+        "The colour of the sand only",
+        "The type of pump only",
+        "The height of the seam only",
         "The volume of voids created and available waste material"
       ],
       "answer": 3,
@@ -1041,7 +1041,7 @@
         "Any unsafe condition, contravention, and corrective action taken",
         "Write without sequential order",
         "Skip executive summary",
-        "Used in preliminary drafts only"
+        "Only the number of workers present"
       ],
       "answer": 0,
       "solution": "Any unsafe condition, contravention, and corrective action taken."
@@ -1075,7 +1075,7 @@
       "stem": "A 'mock drill' for mine rescue must be conducted",
       "options": [
         "Never",
-        "Applicable in limited scenarios",
+        "Only when a fire occurs",
         "Once in 5 years",
         "At regular intervals as prescribed"
       ],
@@ -1094,8 +1094,8 @@
       "options": [
         "Additional training in command and decision-making",
         "No special training",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only physical fitness",
+        "No knowledge of the mine"
       ],
       "answer": 0,
       "solution": "Additional training in command and decision-making."
@@ -1113,7 +1113,7 @@
         "Regular inspection and replacement of damaged signs",
         "Enhance surveying accuracy",
         "Not required",
-        "No maintenance needed"
+        "Painting them once in ten years"
       ],
       "answer": 0,
       "solution": "Safety signs must be regularly inspected and maintained."
@@ -1129,9 +1129,9 @@
       "stem": "The 'penalty for contravention' of provisions of the Mines Act can include",
       "options": [
         "Imprisonment up to 3 months, or fine, or both",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Only a written warning",
+        "Only a verbal warning",
+        "No penalty at all"
       ],
       "answer": 0,
       "solution": "Imprisonment up to 3 months, or fine, or both."
@@ -1147,9 +1147,9 @@
       "stem": "The 'shot firer' in a mine must hold",
       "options": [
         "No certificate",
-        "Applicable in limited scenarios",
+        "A driver's licence",
         "A valid certificate of competency as prescribed",
-        "Works under ideal conditions only"
+        "Only a school certificate"
       ],
       "answer": 2,
       "solution": "A valid certificate of competency as prescribed."
@@ -1165,8 +1165,8 @@
       "stem": "The 'drill steel' used in drifting must be of",
       "options": [
         "The correct length, diameter, and steel grade for the rock",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Any length available",
+        "The cheapest steel available",
         "Any type"
       ],
       "answer": 0,
@@ -1183,8 +1183,8 @@
       "stem": "A feeder breaker is used to",
       "options": [
         "Break only rocks",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Transport men to the face",
+        "Load the coal into dumpers",
         "Break large coal lumps and feed them to the belt conveyor"
       ],
       "answer": 3,
@@ -1200,9 +1200,9 @@
       "difficulty": "easy",
       "stem": "The 'face profiling' in drifting is done to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Measure the temperature of the rock",
+        "Test the ventilation",
+        "Measure the gas content",
         "Check the excavation against the planned profile"
       ],
       "answer": 3,
@@ -1236,10 +1236,10 @@
       "difficulty": "hard",
       "stem": "Under CMR 2017, the 'ventilation plan' must be approved by",
       "options": [
-        "Applicable in limited scenarios",
+        "The workers' union",
         "Any person",
         "The manager and the Regional Inspector of Mines",
-        "Control humidity in underground workings"
+        "The local police"
       ],
       "answer": 2,
       "solution": "The manager and the Regional Inspector of Mines."
@@ -1257,7 +1257,7 @@
         "Between 6 AM and 7 PM as per the Mines Act",
         "At any time",
         "Never",
-        "Applicable in limited scenarios"
+        "Only as the manager decides"
       ],
       "answer": 0,
       "solution": "Between 6 AM and 7 PM."
@@ -1273,9 +1273,9 @@
       "stem": "The condition for approaching water-logged workings under CMR 2017 requires",
       "options": [
         "Boreholes to be drilled to probe the water-logged area",
-        "Applicable in limited scenarios",
+        "Rely on the old plans only",
         "No special precaution",
-        "Works under ideal conditions only"
+        "Only a visual inspection of the workings"
       ],
       "answer": 0,
       "solution": "Boreholes must be drilled to probe the water-logged area."
@@ -1326,9 +1326,9 @@
       "difficulty": "medium",
       "stem": "The main function of a feeder breaker is to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Only load coal into dumpers",
+        "Only break the overburden",
+        "Only transfer coal from the face",
         "Reduce size of coal and feed to belt conveyor"
       ],
       "answer": 3,
@@ -1381,7 +1381,7 @@
       "stem": "The 'drift alignment' is maintained by",
       "options": [
         "Survey control and reference points",
-        "Applicable in limited scenarios",
+        "The manager's judgement",
         "Not maintained",
         "Visual estimation"
       ],
@@ -1398,10 +1398,10 @@
       "difficulty": "medium",
       "stem": "The 'stowing material testing' includes",
       "options": [
-        "Applicable in limited scenarios",
+        "Only the colour of the material",
         "No testing",
         "Grain size, strength, permeability, and compatibility",
-        "Works under ideal conditions only"
+        "Only the source of the material"
       ],
       "answer": 2,
       "solution": "Material testing covers grain size, strength, permeability, and compatibility."
@@ -1416,9 +1416,9 @@
       "difficulty": "easy",
       "stem": "The inspector of mines has the power to",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only examine the registers",
+        "Only question the manager",
+        "Only visit with prior notice",
         "Enter, inspect, and examine any mine at any time"
       ],
       "answer": 3,
@@ -1544,7 +1544,7 @@
       "options": [
         "Explosive",
         "Non-flammable",
-        "Affects only intake shafts",
+        "Invisible to the naked eye",
         "Safe"
       ],
       "answer": 0,
@@ -1594,15 +1594,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "The Indian Parliament consists of",
+      "stem": "The Parliament of India consists of",
       "options": [
-        "Lok Sabha and Rajya Sabha",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Lok Sabha, Rajya Sabha, and President"
+        "The Lok Sabha and the Rajya Sabha",
+        "The Lok Sabha and the President",
+        "The Rajya Sabha and the President",
+        "The President, the Lok Sabha, and the Rajya Sabha"
       ],
       "answer": 3,
-      "solution": "Parliament consists of Lok Sabha, Rajya Sabha, and President."
+      "solution": "Under Article 79 of the Constitution of India, the Parliament consists of the President, the Lok Sabha, and the Rajya Sabha."
     },
     {
       "id": 83,
@@ -1686,8 +1686,8 @@
       "difficulty": "hard",
       "stem": "The 'Startup India' initiative promotes",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only for large industries",
+        "Only for mining companies",
         "Nothing specific",
         "Entrepreneurship and innovation"
       ],
@@ -1740,9 +1740,9 @@
       "difficulty": "hard",
       "stem": "The 'energy security' of India depends on",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only on imported oil",
+        "Only on natural gas",
+        "Only on renewable sources",
         "Domestic coal production and import management"
       ],
       "answer": 3,
@@ -1866,7 +1866,7 @@
       "difficulty": "medium",
       "stem": "The 'coal supply monitoring' system tracks",
       "options": [
-        "Nothing specific",
+        "Only the wages of workers",
         "Processing of limestone",
         "Excavation of overburden only",
         "Production, dispatch, and delivery to consumers"
@@ -1927,78 +1927,6 @@
       ],
       "answer": 3,
       "solution": "Mahatma Gandhi is known as Father of the Indian Nation."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average age of 30 students is 14 years. Including the teacher, the average becomes 15 years. What is the teacher's age?",
-      "options": [
-        "48",
-        "46",
-        "44",
-        "45"
-      ],
-      "answer": 3,
-      "solution": "Total age of students = 420. With teacher = 31 × 15 = 465. Teacher's age = 45"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The ratio of the ages of father and son is 5:1. After 6 years, the ratio becomes 3:1. What is the son's present age?",
-      "options": [
-        "6 years",
-        "10 years",
-        "12 years",
-        "8 years"
-      ],
-      "answer": 2,
-      "solution": "Father = 5x, son = x. (5x+6)/(x+6) = 3/1 → 5x+6 = 3x+18 → 2x = 12 → x = 6. Son's age = 6. Hmm, option D is 6 years. But I labeled A as the answer... Let me fix: the answer should be index 3 (6 years). But I want to provide the options in order where the correct answer is clearly identified."
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If the numerator of a fraction is increased by 200% and denominator by 300%, the fraction becomes 2/5. What is the original fraction?",
-      "options": [
-        "3/5",
-        "2/3",
-        "5/8",
-        "4/7"
-      ],
-      "answer": 0,
-      "solution": "Let fraction = a/b. (3a)/(4b) = 2/5 → a/b = 8/15. Hmm, that doesn't match... 3a/(4b) = 2/5 → 15a = 8b → a/b = 8/15. Not in options."
-    },
-    {
-      "id": 104,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The cost price of 20 articles equals the selling price of 15 articles. What is the profit percentage?",
-      "options": [
-        "15%",
-        "25%",
-        "33.33%",
-        "20%"
-      ],
-      "answer": 2,
-      "solution": "20CP = 15SP → SP/CP = 20/15 = 4/3. Profit = SP - CP = CP/3. Profit% = (1/3) × 100 = 33.33%"
     }
   ],
   "seed": 63798927

@@ -54,10 +54,10 @@
       "difficulty": "medium",
       "stem": "The resistance of earth electrode depends on:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Ambient humidity",
+        "Paint colour of the electrode",
         "Soil resistivity, size, and depth",
-        "Required only for specific cases"
+        "Voltage rating of the electrode"
       ],
       "answer": 2,
       "solution": "R depends on resistivity (ohm-m), electrode size, depth"
@@ -137,20 +137,20 @@
     {
       "id": "wcl-afel-07-007",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Earth fault current path includes:",
+      "stem": "For electrical machinery and plant, the competent person for inspection under CMR 2017 shall be an engineer or electrician holding qualifications specified in:",
       "options": [
-        "Acoustic properties of surfaces",
-        "Phase conductor, fault, earth, earth electrode, neutral",
-        "Chemical resistance of components",
-        "Applicable in limited scenarios"
+        "IS 732",
+        "CEA (Measures relating to Safety and Electric Supply) Regulations, 2010",
+        "The Electricity Act 2003",
+        "The Factories Act 1948"
       ],
       "answer": 1,
-      "solution": "Complete path: phase -> fault -> earth -> electrode -> neutral"
+      "solution": "CMR 2017 Reg 213(6): the competent person for electrical machinery holds qualifications as specified in the CEA Safety & Electric Supply Regulations, 2010."
     },
     {
       "id": "wcl-afel-07-008",
@@ -162,8 +162,8 @@
       "difficulty": "medium",
       "stem": "The earth continuity conductor is connected to:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Neutral of the transformer",
+        "Phase conductors",
         "All exposed metallic parts of equipment",
         "Plastic parts"
       ],
@@ -180,7 +180,7 @@
       "difficulty": "medium",
       "stem": "Chemical earthing reduces resistance by:",
       "options": [
-        "Applicable in limited scenarios",
+        "Coating the electrode with paint",
         "Increasing electrode size",
         "Deepening electrode",
         "Improving soil conductivity around electrode"
@@ -407,20 +407,20 @@
     {
       "id": "wcl-afel-07-022",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The touch potential limit according to IEEE 80 for a person is:",
+      "stem": "Under CMR 2017, a thorough inspection of all machinery and plant in use is required at least once in every:",
       "options": [
-        "Depends on fault duration and body resistance",
-        "Always 50V",
-        "Always 10V",
-        "Always 100V"
+        "7 days, recorded in a bound paged book",
+        "14 days",
+        "1 month",
+        "24 hours"
       ],
       "answer": 0,
-      "solution": "Safe touch V depends on body R (1000 ohm) and fault duration"
+      "solution": "CMR 2017 Reg 213(5): a competent person thoroughly inspects all machinery and plant at least once in 7 days, recording results in a bound paged book."
     },
     {
       "id": "wcl-afel-07-023",
@@ -443,20 +443,20 @@
     {
       "id": "wcl-afel-07-024",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Static earthing is required for:",
+      "stem": "In a gassy seam of the second or third degree, no person shall supervise or operate electrical machinery unless he:",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Fuel storage tanks, vehicles during loading"
+        "Wears a yellow helmet",
+        "Holds a Surveyor's certificate",
+        "Has 5 years of experience",
+        "Holds a gas-testing certificate and carries an approved flame safety lamp"
       ],
       "answer": 3,
-      "solution": "Static: prevent sparks from static electricity in flammable areas"
+      "solution": "CMR 2017 Reg 213(2): in 2nd/3rd-degree gassy seams, operators of electrical machinery (other than telephones/signals/lamps) hold a gas-testing certificate and carry an approved flame safety lamp."
     },
     {
       "id": "wcl-afel-07-025",
@@ -497,20 +497,20 @@
     {
       "id": "wcl-afel-07-027",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Copper bonded steel rods are preferred for earthing because:",
+      "stem": "A rescue-trained person shall practise with breathing apparatus at least:",
       "options": [
-        "Strength of steel + conductivity of copper",
-        "Most flexible",
-        "Cheapest option",
-        "Lightest"
+        "8 times a year, of which 4 in mines",
+        "Once a month",
+        "12 times a year",
+        "4 times a year, of which 2 in mines"
       ],
       "answer": 0,
-      "solution": "Copper bonded steel: mechanical strength + corrosion resistance + conductivity"
+      "solution": "MRR 1985: rescue-trained persons practise with breathing apparatus at least 8 times a year, including 4 practices in the mine."
     },
     {
       "id": "wcl-afel-07-028",
@@ -576,7 +576,7 @@
       "difficulty": "medium",
       "stem": "The maximum touch voltage during a fault depends on:",
       "options": [
-        "Applicable in limited scenarios",
+        "Atmospheric pressure",
         "Fault current, earth resistance, and mat resistance",
         "Acoustic properties of surfaces",
         "Dielectric strength measurement"
@@ -704,7 +704,7 @@
       "options": [
         "No earth",
         "Separate earth for source and consumer",
-        "Applicable in limited scenarios",
+        "Earth at consumer end only",
         "Common earth"
       ],
       "answer": 1,
@@ -757,9 +757,9 @@
       "stem": "The voltage rating of a lightning arrestor is selected based on:",
       "options": [
         "Maximum system voltage and earthing type",
-        "Works under ideal conditions only",
+        "Ambient temperature",
         "Thermal insulation properties",
-        "Applicable in limited scenarios"
+        "Frequency of the supply"
       ],
       "answer": 0,
       "solution": "LA rating: depends on system voltage and neutral earthing"
@@ -990,7 +990,7 @@
       "difficulty": "medium",
       "stem": "A substation control room houses:",
       "options": [
-        "Applicable in limited scenarios",
+        "Earthing grid conductors",
         "Relay panels, battery, SCADA equipment",
         "Switchyard equipment",
         "Power transformers"
@@ -1098,9 +1098,9 @@
       "difficulty": "medium",
       "stem": "Battery charger in substation charges battery at:",
       "options": [
-        "Works under ideal conditions only",
+        "Constant voltage only",
         "Constant current only",
-        "Applicable in limited scenarios",
+        "Trickle charge only",
         "Float and boost rates"
       ],
       "answer": 3,
@@ -1109,20 +1109,20 @@
     {
       "id": "wcl-afel-07-061",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Substation earthing mat is designed to:",
+      "stem": "If the percentage of inflammable gas in the general body of air exceeds ______, persons shall be withdrawn from the working.",
       "options": [
-        "Increase resistance",
-        "Reduce current",
-        "Limit step and touch potential",
-        "Increase voltage"
+        "5%",
+        "1.25%",
+        "0.5%",
+        "2.5%"
       ],
-      "answer": 2,
-      "solution": "Earth mat: safety from step/touch potential during faults"
+      "answer": 1,
+      "solution": "CMR 2017 Reg 166: persons are withdrawn when the general body of air exceeds 1.25% inflammable gas."
     },
     {
       "id": "wcl-afel-07-062",
@@ -1134,7 +1134,7 @@
       "difficulty": "medium",
       "stem": "A substation transformer oil test checks:",
       "options": [
-        "Applicable in limited scenarios",
+        "Oil colour only",
         "Dielectric strength, moisture, acidity",
         "Phase shift measurement",
         "Current transformation only"
@@ -1145,20 +1145,20 @@
     {
       "id": "wcl-afel-07-063",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Spillage pit in a substation is provided for:",
+      "stem": "Approaching a goaf, probing shall be carried out ahead of the working for at least:",
       "options": [
-        "Containing oil from transformer bursts",
-        "Storing equipment",
-        "Collecting rainwater",
-        "Parking vehicles"
+        "3 m",
+        "5 m",
+        "1.5 m",
+        "0.5 m"
       ],
-      "answer": 0,
-      "solution": "Oil containment: prevents environmental contamination"
+      "answer": 2,
+      "solution": "CMR 2017 Reg 147: the working is probed ahead for at least 1.5 m beyond the last support before approaching the goaf."
     },
     {
       "id": "wcl-afel-07-064",
@@ -1235,20 +1235,20 @@
     {
       "id": "wcl-afel-07-068",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Substation bus bar conductor size is selected based on:",
+      "stem": "While driving approaching old or waterlogged workings, advance boreholes shall be kept at least ______ ahead of the face.",
       "options": [
-        "Applicable in limited scenarios",
-        "Continuous current rating and short circuit withstand",
-        "Works under ideal conditions only",
-        "Colour only"
+        "0.5 m",
+        "3 m",
+        "1 m",
+        "6 m"
       ],
       "answer": 1,
-      "solution": "Bus: thermal rating + mechanical strength during fault"
+      "solution": "CMR 2017 Reg 163: at least 3 advance boreholes not less than 3 m ahead of the face, with flank holes within 5 m on either side."
     },
     {
       "id": "wcl-afel-07-069",
@@ -1325,38 +1325,38 @@
     {
       "id": "wcl-afel-07-073",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Transformer cooling types include:",
+      "stem": "Every mechanised outlet (shaft or incline) is examined at least once in every 7 days by:",
       "options": [
-        "Oil quality analysis",
-        "ONAN, ONAF, OFAF, OFWF",
-        "Phase shift measurement",
-        "Current transformation only"
+        "An engineer, electrical supervisor or foreman, or a competent person authorised by the engineer",
+        "Only the manager",
+        "The winding engineman",
+        "Any workman"
       ],
-      "answer": 1,
-      "solution": "Multiple: ONAN (oil natural air natural), ONAF, OFAF, OFWF"
+      "answer": 0,
+      "solution": "CMR 2017 Reg 75(2): mechanised outlets are examined at least once in 7 days by an engineer, electrical supervisor or foreman (or authorised competent person), recorded in a bound paged book."
     },
     {
       "id": "wcl-afel-07-074",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A bus bar sectionalizer is used for:",
+      "stem": "In gassy mines, electric lighting from a source external to the lighting unit may be used on any roadway or place:",
       "options": [
-        "Storing energy",
-        "Measuring current",
-        "Generating power",
-        "Dividing bus into sections for flexibility"
+        "Within 100 m of the face",
+        "In return air only",
+        "At any place without restriction",
+        "Ventilated by intake air or not within 270 m of the nearest face"
       ],
       "answer": 3,
-      "solution": "Sectionalizer: divides bus for selective operation"
+      "solution": "CMR 2017 Reg 176(1): external-source electric lighting is permitted on intake-air roadways or places not within 270 m of the nearest face."
     },
     {
       "id": "wcl-afel-07-075",
@@ -1379,20 +1379,20 @@
     {
       "id": "wcl-afel-07-076",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "A substation oil conservator tank serves to:",
+      "stem": "As per DGMS Circular 2/2010, strata and dump slope monitoring is mandatory for dumps exceeding ______ in height.",
       "options": [
-        "Generate electricity",
-        "Accommodate oil expansion/contraction",
-        "Store water",
-        "Cool oil actively"
+        "30 m",
+        "100 m",
+        "15 m",
+        "60 m"
       ],
-      "answer": 1,
-      "solution": "Conservator: oil expansion space with rubber bag or diaphragm"
+      "answer": 3,
+      "solution": "DGMS Circular 2/2010: monitoring (including slope stability radar / real-time monitoring) is made mandatory for dumps exceeding 60 m height."
     },
     {
       "id": "wcl-afel-07-077",
@@ -1423,9 +1423,9 @@
       "stem": "A substation SCADA system monitors and controls:",
       "options": [
         "Remote operation of switchgear and parameters",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only the lighting load",
+        "Only the fire alarm system",
+        "Only during maintenance"
       ],
       "answer": 0,
       "solution": "SCADA: supervisory control and data acquisition"
@@ -1433,38 +1433,38 @@
     {
       "id": "wcl-afel-07-079",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The purpose of an anti-condensation heater in a CB is to:",
+      "stem": "DGMS (Tech.) (S&T) Circular No. 02 of 2010 deals with:",
       "options": [
-        "Increase voltage",
-        "Reduce current",
-        "Prevent moisture inside CB enclosure",
-        "Heat the gas"
+        "Shaft sinking procedures",
+        "Ventilation planning",
+        "Use of diesel equipment belowground",
+        "Design, control and monitoring of pit and dump slopes in opencast mines"
       ],
-      "answer": 2,
-      "solution": "Heater: prevents internal condensation and insulation degradation"
+      "answer": 3,
+      "solution": "DGMS (Tech.) (S&T) Circular No. 02 dated 06.07.2010 concerns design, control and monitoring of pit and dump slopes in opencast mines."
     },
     {
       "id": "wcl-afel-07-080",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Substation control battery backup should last for:",
+      "stem": "Every engine, motor, transformer and battery-charging room on the surface of a mine shall be provided with at least:",
       "options": [
-        "24 hours",
-        "10 seconds",
-        "Minimum 1 hour full discharge",
-        "5 minutes"
+        "Two exits, properly maintained and kept free from obstruction",
+        "One exit only",
+        "Three doors for ventilation",
+        "An emergency window"
       ],
-      "answer": 2,
-      "solution": "Battery: minimum 1-hour backup at full discharge rate"
+      "answer": 0,
+      "solution": "CMR 2017 Reg 212: such rooms are kept clean and provided with at least two exits, properly maintained and free from obstruction."
     },
     {
       "id": "wcl-afel-07-g001",

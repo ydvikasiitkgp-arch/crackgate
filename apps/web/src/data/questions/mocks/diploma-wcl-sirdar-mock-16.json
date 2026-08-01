@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -192,9 +192,9 @@
       "difficulty": "easy",
       "stem": "The 'fire alarm' in a mine must be",
       "options": [
-        "Optional",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Fitted only in the office",
+        "Connected to the canteen bell",
+        "Audible only at the pit bottom",
         "Clearly audible throughout the mine and tested regularly"
       ],
       "answer": 3,
@@ -210,10 +210,10 @@
       "difficulty": "medium",
       "stem": "An 'emergency fire response plan' must be",
       "options": [
-        "Not needed",
+        "Stored in the manager's drawer",
         "Documented, communicated, and drilled regularly",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Prepared only after a fire",
+        "Kept confidential"
       ],
       "answer": 1,
       "solution": "Documented, communicated, and drilled regularly."
@@ -266,8 +266,8 @@
       "options": [
         "No advantage",
         "Better ground control and reduced surface subsidence",
-        "Less cost",
-        "Applicable in limited scenarios"
+        "It requires no machinery",
+        "It is quicker than caving"
       ],
       "answer": 1,
       "solution": "Better ground control and reduced subsidence."
@@ -300,10 +300,10 @@
       "difficulty": "easy",
       "stem": "The 'borehole survey' is important to determine",
       "options": [
-        "Map underground water flows",
+        "Map the underground water flows",
         "The actual path and position of boreholes underground",
-        "Nothing specific",
-        "Test roof stability"
+        "Determine the coal grade",
+        "Test the winding ropes"
       ],
       "answer": 1,
       "solution": "Actual path and position of boreholes underground."
@@ -357,7 +357,7 @@
         "It is raining",
         "The mine is dry",
         "Working approaches water-logged areas or old workings",
-        "Applicable in limited scenarios"
+        "The fan is running"
       ],
       "answer": 2,
       "solution": "Working approaches water-logged areas or old workings."
@@ -390,9 +390,9 @@
       "difficulty": "hard",
       "stem": "A 'drilling report' should contain",
       "options": [
-        "Omit references",
-        "Use informal language",
-        "Skip executive summary",
+        "The names of the visitors",
+        "The canteen menu",
+        "The leave roster",
         "Location, depth, diameter, strata encountered, and any problems"
       ],
       "answer": 3,
@@ -408,10 +408,10 @@
       "difficulty": "hard",
       "stem": "The 'ventilation monitoring' frequency should be",
       "options": [
-        "Not important",
+        "Only during the annual audit",
         "Continuous for critical areas, regular for others",
         "Never",
-        "Provide fresh air to working faces"
+        "After every ten years"
       ],
       "answer": 1,
       "solution": "Monitoring should be continuous for critical areas."
@@ -462,8 +462,8 @@
       "difficulty": "hard",
       "stem": "The 'drift drainage' system must handle",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the water from the office",
+        "Only the rain water at the portal",
         "No drainage needed",
         "Groundwater and drilling water"
       ],
@@ -481,8 +481,8 @@
       "stem": "A switchboard in a mine must be",
       "options": [
         "Any board",
-        "Applicable in limited scenarios",
-        "Underground",
+        "Painted in bright colours",
+        "Fixed inside the sump",
         "Clearly labeled, protected from damage, and accessible only to authorized persons"
       ],
       "answer": 3,
@@ -498,10 +498,10 @@
       "difficulty": "hard",
       "stem": "The sirdar must ensure proper disposal of",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the office papers",
+        "The slurry from the sump",
         "All waste materials and used cartridges",
-        "Required only for specific cases"
+        "The overburden from the quarry"
       ],
       "answer": 2,
       "solution": "All waste materials and used cartridges must be properly disposed."
@@ -517,7 +517,7 @@
       "stem": "A person winding in a shaft must not exceed the",
       "options": [
         "Any limit",
-        "Applicable in limited scenarios",
+        "The quantity of coal in the tub",
         "Speed limit only",
         "Maximum number of persons or load as specified"
       ],
@@ -570,9 +570,9 @@
       "difficulty": "easy",
       "stem": "The 'sprinkler system' in a mine is used to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Decorate the underground roadways",
+        "Cool the sump water",
+        "Damp the coal dust",
         "Automatically suppress fire in the protected area"
       ],
       "answer": 3,
@@ -624,10 +624,10 @@
       "difficulty": "easy",
       "stem": "The 'underground refuge station' must be stocked with",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "Only a box of matches",
+        "Only a spade and shovel",
         "Water, food, first aid, communication device, and oxygen supply",
-        "Works under ideal conditions only"
+        "Only a bundle of timber"
       ],
       "answer": 2,
       "solution": "Water, food, first aid, communication, and oxygen supply."
@@ -644,7 +644,7 @@
       "options": [
         "Primary air movement through the mine",
         "Control humidity in underground workings",
-        "Not required",
+        "An emergency lighting supply",
         "No air movement"
       ],
       "answer": 0,
@@ -660,9 +660,9 @@
       "difficulty": "medium",
       "stem": "An 'underground mine fire' is more dangerous than a surface fire because of",
       "options": [
-        "Applicable in limited scenarios",
+        "It is easier to reach",
         "Confined space, presence of methane, and limited escape routes",
-        "Works under ideal conditions only",
+        "There is more oxygen available",
         "No difference"
       ],
       "answer": 1,
@@ -725,20 +725,20 @@
     {
       "id": 34,
       "subject": "Technical (Mining)",
-      "topic": "Accidents",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "An accident 'near miss' should be reported because",
+      "difficulty": "medium",
+      "stem": "As per MVTR 1966, refresher vocational training must be given to persons employed in mines at least once in:",
       "options": [
-        "For punishment",
-        "Reduce equipment maintenance",
-        "It is not important",
-        "It helps prevent future actual accidents"
+        "5 years",
+        "2 years",
+        "1 year",
+        "10 years"
       ],
-      "answer": 3,
-      "solution": "Reporting near misses helps prevent future actual accidents."
+      "answer": 0,
+      "solution": "MVTR 1966, Rule 8: refresher training at least once in every 5 years."
     },
     {
       "id": 35,
@@ -804,10 +804,10 @@
       "difficulty": "medium",
       "stem": "The 'drift closure' after completion may require",
       "options": [
-        "Works under ideal conditions only",
+        "Painting the portal",
         "No closure",
         "Sealing, support, or abandonment procedures",
-        "Applicable in limited scenarios"
+        "Leaving the machinery inside"
       ],
       "answer": 2,
       "solution": "Drift closure may require sealing, support, or abandonment."
@@ -824,8 +824,8 @@
       "options": [
         "Rock hardness, abrasiveness, and drilling method",
         "Fixed bit type",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The colour of the rock",
+        "The number of workers"
       ],
       "answer": 0,
       "solution": "Drill bit selection depends on rock properties and method."
@@ -859,9 +859,9 @@
       "stem": "The 'pillar recovery' in depillaring involves",
       "options": [
         "Systematic extraction of coal from pillars",
-        "Applicable in limited scenarios",
+        "Increasing the pillar size",
         "Building pillars",
-        "Works under ideal conditions only"
+        "Extraction of the coal from the surface"
       ],
       "answer": 0,
       "solution": "Pillar recovery systematically extracts coal from pillars."
@@ -894,9 +894,9 @@
       "difficulty": "hard",
       "stem": "A 'fire incident report' must include",
       "options": [
-        "Include personal opinions",
-        "Use informal language",
-        "Skip executive summary",
+        "The wages of the workers",
+        "The attendance of the shift",
+        "The leave roster",
         "Location, time, cause, extent of damage, and actions taken"
       ],
       "answer": 3,
@@ -913,8 +913,8 @@
       "stem": "A 'through borehole' in inundation prevention must be drilled",
       "options": [
         "From the working face towards the suspected water source",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "From the surface office downwards",
+        "Only through the goaf",
         "Underground only"
       ],
       "answer": 0,
@@ -931,8 +931,8 @@
       "stem": "The 'emergency stop' buttons on equipment must be",
       "options": [
         "Accessible from both inside and outside cab",
-        "Optional",
-        "Applicable in limited scenarios",
+        "Fitted only on the roof",
+        "Only on the steering wheel",
         "Inside cab only"
       ],
       "answer": 0,
@@ -948,9 +948,9 @@
       "difficulty": "medium",
       "stem": "The 'development headings' in bord and pillar are driven to",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Form the surface dumps",
+        "Create the ventilation columns",
+        "Store the coal",
         "Create access to the coal panel and form pillars"
       ],
       "answer": 3,
@@ -985,9 +985,9 @@
       "stem": "A SDL is used in",
       "options": [
         "Underground coal mines for loading coal",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Opencast mines for drilling",
+        "Shaft sinking for hoisting",
+        "Surface workshops for maintenance"
       ],
       "answer": 0,
       "solution": "Used in underground coal mines for loading coal."
@@ -1002,8 +1002,8 @@
       "difficulty": "hard",
       "stem": "The 'water drainage' during drifting is important because",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The pump capacity is unlimited",
+        "Water improves the road surface",
         "It is not",
         "Water can weaken the rock and make conditions unsafe"
       ],
@@ -1074,9 +1074,9 @@
       "difficulty": "easy",
       "stem": "The 'smoke detection system' in a mine must be",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
-        "Optional",
+        "Installed only in the lamp room",
+        "Optional in all mines",
+        "Fitted only at the portal",
         "Installed in all important locations and regularly tested"
       ],
       "answer": 3,
@@ -1093,9 +1093,9 @@
       "stem": "A man riding system on a slope must have",
       "options": [
         "An anti-rollback device",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "A spare battery",
+        "A canvas roof only",
+        "A fog lamp"
       ],
       "answer": 0,
       "solution": "An anti-rollback device."
@@ -1110,8 +1110,8 @@
       "difficulty": "hard",
       "stem": "The 'rescue team medical fitness' must be checked",
       "options": [
-        "Applicable in limited scenarios",
-        "Not important",
+        "Only at the time of joining",
+        "Only when the member is ill",
         "Never",
         "At least annually"
       ],
@@ -1129,9 +1129,9 @@
       "stem": "The 'overspeed governor' on a winding engine must",
       "options": [
         "Automatically apply brakes if speed exceeds safe limits",
-        "Applicable in limited scenarios",
-        "Nothing specific",
-        "Works under ideal conditions only"
+        "Increase the winding speed",
+        "A device to cut the coal",
+        "Sound an alarm after the overwind"
       ],
       "answer": 0,
       "solution": "Automatically applies brakes if speed exceeds limits."
@@ -1147,8 +1147,8 @@
       "stem": "The 'refuge chamber' ventilation must provide",
       "options": [
         "Regulate air temperature only",
-        "No ventilation",
-        "Not required",
+        "A single candle",
+        "An auxiliary fan at the entrance",
         "Fresh air supply independent of mine ventilation"
       ],
       "answer": 3,
@@ -1157,20 +1157,20 @@
     {
       "id": 58,
       "subject": "Technical (Mining)",
-      "topic": "Drifting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "Drifting in mining is done to",
+      "difficulty": "medium",
+      "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
-        "Develop access, ventilation, or exploration routes",
-        "Extract coal only",
-        "Plant trees",
-        "Build buildings"
+        "One month of refresher training",
+        "No training",
+        "Initial vocational training in the prescribed subjects",
+        "Only a medical test"
       ],
-      "answer": 0,
-      "solution": "Drifting develops access, ventilation, or exploration routes."
+      "answer": 2,
+      "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
     },
     {
       "id": 59,
@@ -1182,10 +1182,10 @@
       "difficulty": "medium",
       "stem": "The Mines Vocational Training Rules, 1966 prescribe",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The colours of the mine buildings",
+        "The dress code for officials",
         "Training requirements for different categories of mine workers",
-        "Required only for specific cases"
+        "The design of the mine's logo"
       ],
       "answer": 2,
       "solution": "Training requirements for different categories of mine workers."
@@ -1218,9 +1218,9 @@
       "difficulty": "easy",
       "stem": "The 'audience' of a report determines",
       "options": [
-        "Omit references",
-        "Use informal language",
-        "Skip executive summary",
+        "The number of pages",
+        "The length of the appendices",
+        "The colour of the cover",
         "The level of detail, language, and format to be used"
       ],
       "answer": 3,
@@ -1236,10 +1236,10 @@
       "difficulty": "hard",
       "stem": "The 'water dam closure' in emergencies is done by",
       "options": [
-        "Applicable in limited scenarios",
+        "Painting the dam surface",
         "No closure needed",
         "Closing valves and openings to block water flow",
-        "Works under ideal conditions only"
+        "Increasing the pump speed"
       ],
       "answer": 2,
       "solution": "Emergency closure involves blocking water flow through valves."
@@ -1272,9 +1272,9 @@
       "difficulty": "medium",
       "stem": "The 'ventilation pressure' is measured using",
       "options": [
-        "Affects only intake shafts",
-        "Control humidity in underground workings",
-        "Regulate air temperature only",
+        "A tachometer",
+        "A watt meter",
+        "A hydrometer",
         "A manometer or pressure gauge"
       ],
       "answer": 3,
@@ -1290,10 +1290,10 @@
       "difficulty": "hard",
       "stem": "The 'old workings mapping' is important to",
       "options": [
-        "Not important",
+        "Only a formality",
         "Increase production",
         "Identify areas of potential water accumulation",
-        "Applicable in limited scenarios"
+        "Painting the workings white"
       ],
       "answer": 2,
       "solution": "Mapping old workings identifies potential water accumulation areas."
@@ -1309,8 +1309,8 @@
       "stem": "The 'hydraulic prop' in underground mines provides",
       "options": [
         "Yielding support with constant load capacity",
-        "No support",
-        "Applicable in limited scenarios",
+        "A wooden pillar",
+        "A timber chock",
         "Fixed support"
       ],
       "answer": 0,
@@ -1326,10 +1326,10 @@
       "difficulty": "medium",
       "stem": "The sirdar is responsible for the supervision of",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Only the blasting gang",
+        "Only the surface workers",
         "All persons under his charge in the shift",
-        "Required only for specific cases"
+        "Only the new trainees"
       ],
       "answer": 2,
       "solution": "The sirdar is responsible for all persons under his charge during the shift."
@@ -1344,10 +1344,10 @@
       "difficulty": "medium",
       "stem": "The drill machine used in underground mines for face drilling is",
       "options": [
-        "Applicable in limited scenarios",
+        "Only a hand-held hammer",
         "Jackhammer only",
         "Pneumatic or hydraulic drill machine",
-        "Works under ideal conditions only"
+        "Only a compressor"
       ],
       "answer": 2,
       "solution": "Pneumatic or hydraulic drill machines are used."
@@ -1363,9 +1363,9 @@
       "stem": "The man riding system must be capable of operating during",
       "options": [
         "Emergency conditions including power failure",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Only during the day shift",
+        "Only when the manager is present",
+        "Only in dry weather"
       ],
       "answer": 0,
       "solution": "Must operate during emergency conditions including power failure."
@@ -1380,8 +1380,8 @@
       "difficulty": "hard",
       "stem": "A winding engine must have a device to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "A spare winding rope",
+        "An auxiliary fan",
         "No device",
         "Prevent overwinding the cage"
       ],
@@ -1391,38 +1391,38 @@
     {
       "id": 71,
       "subject": "Technical (Mining)",
-      "topic": "Mine Fires",
-      "section": "Section B — Technical",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'fire resistant materials' in mine construction include",
-      "options": [
-        "Any material",
-        "Concrete, steel, and fire-treated timber",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
-      ],
-      "answer": 1,
-      "solution": "Fire resistant materials include concrete, steel, treated timber."
-    },
-    {
-      "id": 72,
-      "subject": "Technical (Mining)",
-      "topic": "Method of Work",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'respirable dust' in coal mines is harmful because",
+      "stem": "'Competent person' under the Mines Act 1952 means a person:",
       "options": [
-        "It can cause coal workers' pneumoconiosis (CWP)",
-        "Quarrying of granite",
-        "Surface mineral extraction",
-        "Not harmful"
+        "Appointed by the Inspector",
+        "Having 10 years of experience",
+        "Appointed by the owner, agent or manager and possessing the prescribed qualifications",
+        "Holding any degree"
       ],
-      "answer": 0,
-      "solution": "Respirable dust can cause CWP (black lung disease)."
+      "answer": 2,
+      "solution": "Mines Act 1952, s.2(1)(c): a competent person is one appointed by the owner, agent or manager with the prescribed qualifications for the purpose."
+    },
+    {
+      "id": 72,
+      "subject": "Technical (Mining)",
+      "topic": "Legal Provisions",
+      "section": "Section B — Technical",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A person re-employed after an absence exceeding one year from mining work must undergo refresher training within:",
+      "options": [
+        "1 week",
+        "6 months",
+        "1 month of employment",
+        "3 months of employment"
+      ],
+      "answer": 2,
+      "solution": "MVTR 1966, Rule 10: refresher training within 1 month of re-employment after absence over 1 year."
     },
     {
       "id": 73,
@@ -1445,20 +1445,20 @@
     {
       "id": 74,
       "subject": "Technical (Mining)",
-      "topic": "Danger of Inundation",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'water dam inspection frequency' should be",
+      "difficulty": "medium",
+      "stem": "A first-aid room is required at a mine where the number of persons employed exceeds:",
       "options": [
-        "Never",
-        "Not important",
-        "Applicable in limited scenarios",
-        "Regular and increased during rainy season"
+        "150",
+        "100",
+        "250",
+        "50"
       ],
-      "answer": 3,
-      "solution": "Dam inspection should be regular, increased during rainy season."
+      "answer": 0,
+      "solution": "Mines Act 1952, s.21: a first-aid room is required where more than 150 persons are employed."
     },
     {
       "id": 75,
@@ -1488,10 +1488,10 @@
       "difficulty": "hard",
       "stem": "The sirdar's shift handover must include",
       "options": [
-        "Applicable in limited scenarios",
+        "The number of tubs hauled",
         "Safety conditions, incomplete work, and outstanding issues",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "The menu of the canteen",
+        "The names of the surface staff"
       ],
       "answer": 1,
       "solution": "Handover must cover safety, incomplete work, and outstanding issues."
@@ -1560,7 +1560,7 @@
       "difficulty": "medium",
       "stem": "The 'winding engine house' must be",
       "options": [
-        "Applicable in limited scenarios",
+        "Made of timber only",
         "Underground",
         "Any building",
         "Fireproof, well-ventilated, and properly illuminated"
@@ -1579,9 +1579,9 @@
       "stem": "The 'bench height' in opencast mining depends on",
       "options": [
         "The type of equipment, geological conditions, and seam thickness",
-        "Processing of limestone",
-        "Specific to metal mines only",
-        "Nothing specific"
+        "The colour of the coal",
+        "The number of workers",
+        "The type of the winding rope"
       ],
       "answer": 0,
       "solution": "Equipment type, geological conditions, and seam thickness."
@@ -1615,9 +1615,9 @@
       "stem": "The 'mine closure bond' is deposited to ensure",
       "options": [
         "Funds for reclamation after mine closure",
-        "Works under ideal conditions only",
-        "Nothing specific",
-        "Applicable in limited scenarios"
+        "A bonus for the management",
+        "Money for the annual picnic",
+        "A loan for new dumpers"
       ],
       "answer": 0,
       "solution": "Funds for reclamation after closure."
@@ -1814,7 +1814,7 @@
       "options": [
         "Quarrying of granite",
         "Extraction of iron ore",
-        "Nothing specific",
+        "The National Mineral Fund",
         "Track coal price movements for auction and policy purposes"
       ],
       "answer": 3,
@@ -1927,78 +1927,6 @@
       ],
       "answer": 0,
       "solution": "ISRO HQ is in Bengaluru."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "In an examination, 35% students failed in Maths and 25% in English. 10% failed in both. What percentage passed in both subjects?",
-      "options": [
-        "60%",
-        "55%",
-        "50%",
-        "45%"
-      ],
-      "answer": 2,
-      "solution": "Failed in at least one = 35 + 25 - 10 = 50%. Passed in both = 100 - 50 = 50%"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "How many times does the 29th of a month occur in 400 years?",
-      "options": [
-        "4490",
-        "4497",
-        "4400",
-        "4500"
-      ],
-      "answer": 1,
-      "solution": "In 400 years: 97 leap years. So 29 Feb occurs 97 times. Total 29th of any month = 12×400 - 97 = 4497... Actually: 400 years have 4800 months. 97 of those are Feb in leap years. So 29th occurs 4800 - 97 = 4703... Let me recalculate. Every month has a 29th. In 400 years = 4800 months. But Feb in non-leap years only has 28 days. Non-leap Feb = 400 - 97 = 303. So 29th occurs 4800 - 303 = 4497 times."
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A shopkeeper buys an article for ₹400 and sells it at 25% profit. What is the selling price?",
-      "options": [
-        "₹450",
-        "₹500",
-        "₹480",
-        "₹525"
-      ],
-      "answer": 1,
-      "solution": "SP = 400 × 1.25 = ₹500"
-    },
-    {
-      "id": 104,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If January 1, 2024 is a Monday, what day is January 1, 2025?",
-      "options": [
-        "Sunday",
-        "Tuesday",
-        "Monday",
-        "Wednesday"
-      ],
-      "answer": 3,
-      "solution": "2024 is a leap year (366 days). 366 = 52×7 + 2. Monday + 2 = Wednesday"
     }
   ],
   "seed": 55332729

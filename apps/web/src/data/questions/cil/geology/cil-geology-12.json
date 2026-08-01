@@ -891,8 +891,8 @@
         "5/12",
         "8/11"
       ],
-      "answer": 3,
-      "solution": "8/11",
+      "answer": 0,
+      "solution": "P(boy)=0.4, P(girl)=0.6. P(passed)=0.4×0.6+0.6×0.8=0.72. P(girl|passed)=0.48/0.72=2/3.",
       "estSec": 120,
       "topicWeight": 0.125,
       "source": "curated"
@@ -1117,12 +1117,12 @@
       "difficulty": "medium",
       "stem": "Statement: The company with the best safety record won the industry award. Conclusion I: The company has zero accidents. II: Safety is valued in the industry.",
       "options": [
-        "Works under ideal conditions",
-        "Depends on material properties",
-        "Suitable for high-rise buildings",
-        "Used for static loading only"
+        "Only I follows",
+        "Only II follows",
+        "Both follow",
+        "Neither follows"
       ],
-      "answer": 0,
+      "answer": 1,
       "solution": "Only II follows",
       "estSec": 90,
       "topicWeight": 0.125,
@@ -1243,12 +1243,12 @@
       "difficulty": "easy",
       "stem": "Statement: The stock market reached an all-time high this quarter. Conclusion I: The economy is performing well. II: All companies are profitable.",
       "options": [
-        "Valid in controlled settings",
-        "Required for specialized cases",
-        "Works under ideal conditions",
-        "Used for static loading only"
+        "Only I follows",
+        "Only II follows",
+        "Both follow",
+        "Neither follows"
       ],
-      "answer": 0,
+      "answer": 3,
       "solution": "Neither follows",
       "estSec": 50,
       "topicWeight": 0.125,
@@ -1369,10 +1369,10 @@
       "difficulty": "easy",
       "stem": "Statement: Several states have announced drought relief packages. Conclusion I: These states are facing drought. II: Central government will also announce relief.",
       "options": [
-        "Works under ideal conditions",
-        "Required for specialized cases",
-        "Used for static loading only",
-        "Works for particular conditions"
+        "Only I follows",
+        "Only II follows",
+        "Both follow",
+        "Neither follows"
       ],
       "answer": 0,
       "solution": "Only I follows",
@@ -2159,7 +2159,7 @@
     },
     {
       "id": 102,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Sedimentology and Stratigraphy",
       "section": "Paper-II",
       "type": "MCQ",
@@ -2201,7 +2201,7 @@
     },
     {
       "id": 104,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Physical Geology and Geomorphology",
       "section": "Paper-II",
       "type": "MCQ",
@@ -2390,7 +2390,7 @@
     },
     {
       "id": 113,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Crystallography and Mineralogy",
       "section": "Paper-II",
       "type": "MCQ",
@@ -2421,7 +2421,7 @@
       "options": [
         "For corals, speleothems, teeth. Range ~500ka",
         "No range limit",
-        "Suitable for peer-to-peer models",
+        "Only for igneous rocks",
         "Any mineral"
       ],
       "answer": 0,
@@ -2432,7 +2432,7 @@
     },
     {
       "id": 115,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Applied Geology and Environmental Geology",
       "section": "Paper-II",
       "type": "MCQ",
@@ -2474,7 +2474,7 @@
     },
     {
       "id": 117,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Sedimentology and Stratigraphy",
       "section": "Paper-II",
       "type": "MCQ",
@@ -2483,8 +2483,8 @@
       "stem": "Glacial varves consist of couplets of:",
       "options": [
         "Coarse (summer) and fine (winter) layers",
-        "Suitable for peer-to-peer models",
-        "Required for specialized cases",
+        "Only coarse silt layers",
+        "Only fine clay layers",
         "Volcanic ash layers"
       ],
       "answer": 0,
@@ -2516,7 +2516,7 @@
     },
     {
       "id": 119,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Structural Geology and Tectonics",
       "section": "Paper-II",
       "type": "MCQ",
@@ -2587,9 +2587,9 @@
       "difficulty": "medium",
       "stem": "Digital Elevation Model (DEM):",
       "options": [
-        "Suitable for peer-to-peer models",
-        "Required for specialized cases",
-        "Varies with scale of operation",
+        "Only contour lines",
+        "Only point spot heights",
+        "Only triangulated surfaces",
         "Raster grid of elevation. Slope, aspect, hillshade derived from DEM"
       ],
       "answer": 3,
@@ -2652,7 +2652,7 @@
       "options": [
         "Incomplete melting of source rock. First melt is more felsic",
         "No melt",
-        "Suitable for peer-to-peer models",
+        "Only complete melting",
         "Complete melting"
       ],
       "answer": 0,
@@ -2755,9 +2755,9 @@
       "difficulty": "hard",
       "stem": "Rock mass classification — Q-system:",
       "options": [
-        "Suitable for peer-to-peer models",
-        "Required for specialized cases",
-        "Varies with scale of operation",
+        "Only RQD and Jn",
+        "Only Jr and Ja",
+        "Only Jw and SRF",
         "Barton. Q = (RQD/Jn)×(Jr/Ja)×(Jw/SRF)"
       ],
       "answer": 3,
@@ -2776,7 +2776,7 @@
       "difficulty": "hard",
       "stem": "Mineral color in thin section:",
       "options": [
-        "Suitable for peer-to-peer models",
+        "Only isotropic minerals",
         "Colorless in all",
         "Pleochroism — color varies with crystallographic orientation",
         "Always same color"
@@ -3075,10 +3075,10 @@
       "difficulty": "medium",
       "stem": "Sedimentary environments:",
       "options": [
-        "Suitable for peer-to-peer models",
-        "Required for specialized cases",
+        "Only continental environments",
+        "Only marine environments",
         "Continental (fluvial, aeolian, glacial), Transitional (delta, beach, lagoon), Marine (shelf, deep sea)",
-        "Varies with scale of operation"
+        "Only transitional environments"
       ],
       "answer": 2,
       "solution": "Each environment produces diagnostic sedimentary structures and facies.",
@@ -3180,8 +3180,8 @@
       "difficulty": "medium",
       "stem": "Fold types by hinge shape:",
       "options": [
-        "Suitable for peer-to-peer models",
-        "Required for specialized cases",
+        "Only chevron folds",
+        "Only box folds",
         "All same",
         "Chevron (angular), Rounded, Box (double hinge)"
       ],
@@ -3223,9 +3223,9 @@
       "stem": "Groundwater recharge:",
       "options": [
         "Natural (rainfall infiltration) and artificial (recharge wells, ponds, check dams)",
-        "Suitable for peer-to-peer models",
-        "Required for specialized cases",
-        "Varies with scale of operation"
+        "Only rainfall infiltration",
+        "Only artificial recharge",
+        "Only seawater intrusion"
       ],
       "answer": 0,
       "solution": "Recharge: ~10-20% of rainfall in alluvial areas. Artificial: managed aquifer recharge (MAR).",
@@ -3403,7 +3403,7 @@
     },
     {
       "id": 161,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Geophysics",
       "section": "Paper-II",
       "type": "MCQ",
@@ -3412,8 +3412,8 @@
       "stem": "Ground Penetrating Radar (GPR) frequency affects:",
       "options": [
         "Depth penetration and resolution trade-off",
-        "Suitable for peer-to-peer models",
-        "Required for specialized cases",
+        "Only the depth penetration",
+        "Only the resolution",
         "Neither"
       ],
       "answer": 0,
@@ -3991,7 +3991,7 @@
     },
     {
       "id": 189,
-      "subject": "Geology",
+      "subject": "Paper-II · Professional Knowledge",
       "topic": "Structural Geology and Tectonics",
       "section": "Paper-II",
       "type": "MCQ",

@@ -55,9 +55,9 @@
       "stem": "Static VAR Compensator (SVC) consists of:",
       "options": [
         "TCR (thyristor reactor) and TSC (thyristor capacitor)",
-        "Applicable in limited scenarios",
+        "Inductor only",
         "Transformer only",
-        "Works under ideal conditions only"
+        "Capacitor bank only"
       ],
       "answer": 0,
       "solution": "SVC: TCR for absorbing VARs, TSC for generating VARs"
@@ -127,9 +127,9 @@
       "stem": "Power quality disturbances include:",
       "options": [
         "Voltage sag, swell, flicker, harmonics, transients",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only load shedding",
+        "Only earth faults",
+        "Only neutral imbalance"
       ],
       "answer": 0,
       "solution": "PQ: sag, swell, flicker, harmonics, transients, interruptions"
@@ -180,10 +180,10 @@
       "difficulty": "medium",
       "stem": "Safe touch voltage depends on:",
       "options": [
-        "Applicable in limited scenarios",
+        "Body resistance only",
         "Chemical resistance of components",
         "Body resistance, fault duration, and surface layer resistivity",
-        "Works under ideal conditions only"
+        "Fault current only"
       ],
       "answer": 2,
       "solution": "Touch V_safe = f(Rbody, tf, ρs, Cb)"
@@ -198,10 +198,10 @@
       "difficulty": "medium",
       "stem": "Safe step voltage depends on:",
       "options": [
-        "Works under ideal conditions only",
+        "Foot contact resistance only",
         "Foot contact resistance, fault duration, body resistance",
-        "Thermal insulation properties",
-        "Applicable in limited scenarios"
+        "Surface layer resistivity only",
+        "Body resistance only"
       ],
       "answer": 1,
       "solution": "Step V_safe = f(Rfoot, tf, ρs, Cb)"
@@ -299,20 +299,20 @@
     {
       "id": "wcl-afel-15-016",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Chemical earthing compound typically contains:",
+      "stem": "A rescue room is required at a mine where the number of persons employed belowground exceeds 100 and:",
       "options": [
-        "Bentonite, graphite, and cement",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The mine produces less than 100 tonnes a day",
+        "There is no electricity",
+        "There is no rescue station within 35 km",
+        "The mine is opencast only"
       ],
-      "answer": 0,
-      "solution": "Bentonite + graphite: retains moisture, reduces soil resistivity"
+      "answer": 2,
+      "solution": "MRR 1985: a rescue room is required when more than 100 persons work belowground and no rescue station is within 35 km."
     },
     {
       "id": "wcl-afel-15-017",
@@ -335,20 +335,20 @@
     {
       "id": "wcl-afel-15-018",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Peterson coil is a:",
+      "stem": "Under the Mines Rescue Rules 1985, the breathing apparatus kept at a rescue station or rescue room shall:",
       "options": [
-        "Tuned reactor for arc suppression",
-        "Resistor",
-        "Capacitor bank",
-        "Transformer"
+        "Be of the same type and make",
+        "Be of different types for flexibility",
+        "Be imported only",
+        "Be replaced every month"
       ],
       "answer": 0,
-      "solution": "Peterson: resonant reactor to cancel earth fault capacitive current"
+      "solution": "MRR 1985, Rule 11(4): breathing apparatus at a rescue station/room must be of the same type and make for interchangeability."
     },
     {
       "id": "wcl-afel-15-019",
@@ -371,38 +371,38 @@
     {
       "id": "wcl-afel-15-020",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Earthing transformer provides:",
+      "stem": "As per the Mines Rescue Rules 1985, a rescue station shall be under the charge of a Superintendent assisted by at least:",
       "options": [
-        "Current measurement",
-        "Neutral point for ungrounded systems",
-        "Voltage step-up",
-        "Additional grounding"
+        "2 instructors and a rescue brigade of at least 18 rescue-trained persons",
+        "1 instructor and 10 persons",
+        "4 instructors and 50 persons",
+        "1 officer and 5 persons"
       ],
-      "answer": 1,
-      "solution": "Earthing T/F: creates neutral in delta or ungrounded systems"
+      "answer": 0,
+      "solution": "MRR 1985: a rescue station has a Superintendent, at least 2 instructors and a rescue brigade of at least 18 rescue-trained persons."
     },
     {
       "id": "wcl-afel-15-021",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Earthing transformer ZN (zigzag) winding has:",
+      "stem": "A shot-firer who has not been employed in blasting duties for more than 6 months shall undergo:",
       "options": [
-        "Current transformation only",
-        "No windings",
-        "Single winding",
-        "Interconnected phases for zero sequence path"
+        "Fresh initial training of 1 month",
+        "Retraining in the handling of explosives before resuming such duties",
+        "No retraining",
+        "A written test only"
       ],
-      "answer": 3,
-      "solution": "Zigzag: provides low impedance path for zero sequence currents"
+      "answer": 1,
+      "solution": "MVTR 1966, Rule 13: retraining in handling of explosives is required after an absence from such duties exceeding 6 months."
     },
     {
       "id": "wcl-afel-15-022",
@@ -414,9 +414,9 @@
       "difficulty": "medium",
       "stem": "Touch potential in substation is limited by:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Earth mat design only",
+        "Surface gravel layer only",
+        "Fault duration only",
         "Earth mat design, surface gravel layer, fault duration"
       ],
       "answer": 3,
@@ -432,10 +432,10 @@
       "difficulty": "medium",
       "stem": "Step potential in substation is limited by:",
       "options": [
-        "Applicable in limited scenarios",
+        "Earth mat mesh density only",
         "Earth mat mesh density and surface gravel",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Surface gravel only",
+        "Fault duration only"
       ],
       "answer": 1,
       "solution": "Denser mesh + surface layer reduces step potential"
@@ -450,9 +450,9 @@
       "difficulty": "medium",
       "stem": "Equipotential bonding conductor in substation connects:",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Only exposed metallic parts",
+        "Only the earth pit",
+        "Only lightning arrestors",
         "All metallic structures to earth grid"
       ],
       "answer": 3,
@@ -470,8 +470,8 @@
       "options": [
         "Plastic parts only",
         "All exposed metallic parts of electrical equipment",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only the transformer tank",
+        "Only the earth grid"
       ],
       "answer": 1,
       "solution": "ECC: ensures all metalwork is at earth potential"
@@ -523,7 +523,7 @@
       "stem": "TT system earthing requires:",
       "options": [
         "No earth",
-        "Applicable in limited scenarios",
+        "Earth at consumer end only",
         "Separate earth electrodes for source and consumer",
         "Common earth"
       ],
@@ -533,20 +533,20 @@
     {
       "id": "wcl-afel-15-029",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "IT system fault behavior:",
+      "stem": "A person re-employed after an absence exceeding one year from mining work must undergo refresher training within:",
       "options": [
-        "Always trips",
-        "No fault response",
-        "First fault alarm, second fault trip",
-        "First fault trip immediately"
+        "1 week",
+        "6 months",
+        "1 month of employment",
+        "3 months of employment"
       ],
       "answer": 2,
-      "solution": "IT: first fault small current, alarm; second fault = short circuit"
+      "solution": "MVTR 1966, Rule 10: refresher training within 1 month of re-employment after absence over 1 year."
     },
     {
       "id": "wcl-afel-15-030",
@@ -558,10 +558,10 @@
       "difficulty": "medium",
       "stem": "Maximum touch voltage during earth fault at substation depends on:",
       "options": [
-        "Applicable in limited scenarios",
+        "Grid resistance only",
         "Fault current, grid resistance, soil resistivity",
-        "Chemical resistance of components",
-        "Works under ideal conditions only"
+        "Soil resistivity only",
+        "Fault duration only"
       ],
       "answer": 1,
       "solution": "Touch V = f(If, Rgrid, ρs, body R, duration)"
@@ -677,56 +677,56 @@
     {
       "id": "wcl-afel-15-037",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The impedance of earth fault path includes:",
+      "stem": "As per MVTR 1966, refresher vocational training must be given to persons employed in mines at least once in:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Phase conductor, earth conductor, earth electrode, return path",
-        "Required only for specific cases"
+        "5 years",
+        "2 years",
+        "1 year",
+        "10 years"
       ],
-      "answer": 2,
-      "solution": "Complete path: phase -> fault -> earth -> electrode -> source neutral"
+      "answer": 0,
+      "solution": "MVTR 1966, Rule 8: refresher training at least once in every 5 years."
     },
     {
       "id": "wcl-afel-15-038",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "For safe earthing design, body current limit for ventricular fibrillation is approximately:",
+      "stem": "Under the Mines Vocational Training Rules 1966, a person before being employed in a mine for the first time must undergo:",
       "options": [
-        "30mA to 50mA for 1 second",
-        "1A",
-        "100A",
-        "10A"
+        "One month of refresher training",
+        "No training",
+        "Initial vocational training in the prescribed subjects",
+        "Only a medical test"
       ],
-      "answer": 0,
-      "solution": "Dalziel equation: Ibody = k/√tf (typically 30-50mA threshold)"
+      "answer": 2,
+      "solution": "MVTR 1966, Rule 6: every person is given initial vocational training before first employment."
     },
     {
       "id": "wcl-afel-15-039",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Cross bonding of cable sheaths reduces:",
+      "stem": "'Competent person' under the Mines Act 1952 means a person:",
       "options": [
-        "Induced sheath circulating currents",
-        "Cable current",
-        "Frequency",
-        "Voltage"
+        "Appointed by the Inspector",
+        "Having 10 years of experience",
+        "Appointed by the owner, agent or manager and possessing the prescribed qualifications",
+        "Holding any degree"
       ],
-      "answer": 0,
-      "solution": "Cross bonding: eliminates circulating currents in cable sheaths"
+      "answer": 2,
+      "solution": "Mines Act 1952, s.2(1)(c): a competent person is one appointed by the owner, agent or manager with the prescribed qualifications for the purpose."
     },
     {
       "id": "wcl-afel-15-040",
@@ -756,10 +756,10 @@
       "difficulty": "medium",
       "stem": "Main earthing bar in substation connects to:",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Only the generator",
+        "Only the transformer",
         "All earth conductors and earth grid",
-        "Works under ideal conditions only"
+        "Only the lightning arrestor"
       ],
       "answer": 2,
       "solution": "MEB: central connection point for all earthing conductors"
@@ -847,9 +847,9 @@
       "stem": "A substation earth grid design software considers:",
       "options": [
         "IEEE 80 equations, soil model, grid geometry",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Manual calculation only",
+        "Approximate rules only",
+        "Formula-free estimation only"
       ],
       "answer": 0,
       "solution": "Software: CDEGS, ETAP for earthing analysis"
@@ -919,9 +919,9 @@
       "stem": "Type A RCD detects:",
       "options": [
         "Smooth DC only",
-        "Works under ideal conditions only",
+        "Smooth DC only",
         "Sinusoidal AC and pulsating DC residual current",
-        "Applicable in limited scenarios"
+        "All fault currents"
       ],
       "answer": 2,
       "solution": "Type A: AC + pulsating DC (for electronic equipment)"
@@ -929,20 +929,20 @@
     {
       "id": "wcl-afel-15-051",
       "subject": "Electrical Engineering",
-      "topic": "Earthing & Neutral — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Type B RCD detects:",
+      "stem": "A first-aid room is required at a mine where the number of persons employed exceeds:",
       "options": [
-        "AC, pulsating DC, and smooth DC residual current",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "150",
+        "100",
+        "250",
+        "50"
       ],
       "answer": 0,
-      "solution": "Type B: all forms including smooth DC (for VFD applications)"
+      "solution": "Mines Act 1952, s.21: a first-aid room is required where more than 150 persons are employed."
     },
     {
       "id": "wcl-afel-15-052",
@@ -990,9 +990,9 @@
       "difficulty": "medium",
       "stem": "RCD test button checks:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "The supply frequency",
+        "The load current",
+        "The ambient temperature",
         "Operating mechanism and trip circuit"
       ],
       "answer": 3,
@@ -1135,9 +1135,9 @@
       "stem": "Bus bar sizing for 2000A considers:",
       "options": [
         "Temperature rise, short circuit withstand, voltage drop",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Insulation thickness only",
+        "Ambient humidity only",
+        "Cable colour only"
       ],
       "answer": 0,
       "solution": "Bus: thermal (I²t), mechanical (fault), and voltage drop"
@@ -1152,10 +1152,10 @@
       "difficulty": "medium",
       "stem": "Battery capacity for substation is calculated based on:",
       "options": [
-        "Required only for specific cases",
+        "Transformer rating only",
         "Duration of backup supply and discharge rate",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Ambient temperature only",
+        "Load power factor only"
       ],
       "answer": 1,
       "solution": "Capacity: Ah = load current × backup time × safety factor"
@@ -1181,20 +1181,20 @@
     {
       "id": "wcl-afel-15-065",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Float voltage of a lead-acid battery cell is approximately:",
+      "stem": "As per the Mines Act 1952, women may be employed aboveground only between:",
       "options": [
-        "2.1V to 2.3V per cell",
-        "1.2V",
-        "4.2V",
-        "3.6V"
+        "24 hours",
+        "6 a.m. and 7 p.m.",
+        "5 a.m. and 9 p.m.",
+        "8 a.m. and 6 p.m."
       ],
-      "answer": 0,
-      "solution": "Lead-acid float: 2.1-2.3V/cell (12.6-13.8V for 6-cell battery)"
+      "answer": 1,
+      "solution": "Mines Act 1952, s.46: women shall not be employed belowground, and aboveground employment is restricted between 6 a.m. and 7 p.m."
     },
     {
       "id": "wcl-afel-15-066",
@@ -1245,7 +1245,7 @@
         "Power generation",
         "Data acquisition and remote control via SCADA",
         "Voltage step-up",
-        "Current measurement only"
+        "Voltage step-down only"
       ],
       "answer": 1,
       "solution": "RTU: collects data, sends to SCADA, receives commands"
@@ -1279,9 +1279,9 @@
       "stem": "On-load tap changer (OLTC) can change taps:",
       "options": [
         "Never under load",
-        "Applicable in limited scenarios",
+        "Only under overload",
         "Under load without interrupting supply",
-        "Works under ideal conditions only"
+        "Only after shutdown"
       ],
       "answer": 2,
       "solution": "OLTC: changes transformer ratio while carrying current"
@@ -1314,9 +1314,9 @@
       "difficulty": "medium",
       "stem": "SF6 gas pressure in GIS is monitored by:",
       "options": [
-        "Affects only intake shafts",
+        "Manual pressure gauge only",
         "Visual inspection only",
-        "Works only in surface mines",
+        "By insulation resistance",
         "Density relay with temperature compensation"
       ],
       "answer": 3,
@@ -1361,20 +1361,20 @@
     {
       "id": "wcl-afel-15-075",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Capacitance graded bushing uses:",
+      "stem": "The maximum working hours in a week for an adult employed belowground in a mine are:",
       "options": [
-        "Air only",
-        "Oil only",
-        "Single insulation layer",
-        "Multiple conducting layers with insulation"
+        "54 hours",
+        "60 hours",
+        "45 hours",
+        "48 hours"
       ],
       "answer": 3,
-      "solution": "Capacitance grading: aluminum foil layers for uniform stress"
+      "solution": "Mines Act 1952, s.28: no person shall be employed belowground for more than 48 hours in any week."
     },
     {
       "id": "wcl-afel-15-076",
@@ -1440,8 +1440,8 @@
       "difficulty": "medium",
       "stem": "Transformer oil acidity test indicates:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Winding insulation only",
+        "Cooling oil level only",
         "Winding resistance testing",
         "Degree of oil degradation/aging"
       ],
@@ -1451,20 +1451,92 @@
     {
       "id": "wcl-afel-15-080",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Transformer oil sludge test indicates:",
+      "stem": "Under the Mines Act 1952, notice of which of the following accidents is required to be given to the prescribed authorities?",
       "options": [
-        "Oil viscosity",
-        "Oil colour",
-        "Oil weight",
-        "Tendency of oil to form sludge deposits"
+        "Loss of life, serious bodily injury, explosion, ignition, fire, inrush of water or other matter",
+        "Only loss of life",
+        "Only explosions",
+        "Only minor injuries"
+      ],
+      "answer": 0,
+      "solution": "Mines Act 1952, s.23: notice is required for loss of life, serious injury, and specified occurrences such as explosion, ignition, fire, inrush of water."
+    },
+    {
+      "id": 81,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Percentage",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A shopkeeper gives 3 successive discounts of 10%, 15% and 20%. What is the net discount percentage?",
+      "options": [
+        "38.8%",
+        "45%",
+        "40%",
+        "35%"
+      ],
+      "answer": 0,
+      "solution": "Net multiplier = 0.90 × 0.85 × 0.80 = 0.612. Discount = 38.8%"
+    },
+    {
+      "id": 82,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Speed Time Distance",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "Two cars start from the same point at 50 km/h and 60 km/h in opposite directions. After how many hours will they be 330 km apart?",
+      "options": [
+        "4 hours",
+        "3 hours",
+        "5 hours",
+        "6 hours"
+      ],
+      "answer": 1,
+      "solution": "Relative speed = 110 km/h. Time = 330/110 = 3 hours"
+    },
+    {
+      "id": 83,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Ratio & Proportion",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "The ratio of milk to water in a mixture is 3:2. If 5 litres of water is added, the ratio becomes 3:4. What was the original quantity of the mixture?",
+      "options": [
+        "10 litres",
+        "25 litres",
+        "15 litres",
+        "20 litres"
+      ],
+      "answer": 0,
+      "solution": "Original: milk = 3x, water = 2x. After adding 5L water: 3x/(2x+5) = 3/4 → 12x = 6x+15 → 6x = 15 → x = 2.5. Original = 5x = 12.5. Hmm, not matching. Let me recalculate: 3x/(2x+5) = 3/4. Cross multiply: 12x = 3(2x+5) = 6x+15. 6x = 15, x = 2.5. Original mixture = 5 × 2.5 = 12.5 litres. Not in options."
+    },
+    {
+      "id": 84,
+      "subject": "General Awareness",
+      "topic": "Quantitative — Profit & Loss",
+      "section": "general",
+      "type": "MCQ",
+      "marks": 1,
+      "difficulty": "medium",
+      "stem": "A shopkeeper buys an article for ₹400 and sells it at 25% profit. What is the selling price?",
+      "options": [
+        "₹450",
+        "₹525",
+        "₹480",
+        "₹500"
       ],
       "answer": 3,
-      "solution": "Sludge: potential to form deposits on windings/cooling surfaces"
+      "solution": "SP = 400 × 1.25 = ₹500"
     },
     {
       "id": "wcl-afel-15-g001",
@@ -1753,150 +1825,6 @@
       ],
       "answer": 3,
       "solution": "GSLV: Geosynchronous Satellite Launch Vehicle"
-    },
-    {
-      "id": "wcl-afel-15-g017",
-      "subject": "General Awareness",
-      "topic": "GA — India & World",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "India's nuclear energy programme is under:",
-      "options": [
-        "Department of Atomic Energy (DAE)",
-        "Ministry of Power",
-        "ISRO",
-        "Ministry of Coal"
-      ],
-      "answer": 0,
-      "solution": "DAE: under PMO, manages nuclear programme"
-    },
-    {
-      "id": "wcl-afel-15-g018",
-      "subject": "General Awareness",
-      "topic": "GA — India & World",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The Battle of Plassey was fought in:",
-      "options": [
-        "1905",
-        "1947",
-        "1857",
-        "1757"
-      ],
-      "answer": 3,
-      "solution": "Plassey: 1757, Siraj-ud-Daulah vs Clive"
-    },
-    {
-      "id": "wcl-afel-15-g019",
-      "subject": "General Awareness",
-      "topic": "GA — India & World",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Indian Space Research Organisation was established in:",
-      "options": [
-        "1969",
-        "1960",
-        "1975",
-        "1947"
-      ],
-      "answer": 0,
-      "solution": "ISRO: 1969"
-    },
-    {
-      "id": "wcl-afel-15-g020",
-      "subject": "General Awareness",
-      "topic": "GA — India & World",
-      "section": "general",
-      "type": "mcq",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "INS Vikramaditya is:",
-      "options": [
-        "Submarine",
-        "Frigate",
-        "Destroyer",
-        "Aircraft carrier"
-      ],
-      "answer": 3,
-      "solution": "INS Vikramaditya: aircraft carrier of Indian Navy"
-    },
-    {
-      "id": 81,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Percentage",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A shopkeeper gives 3 successive discounts of 10%, 15% and 20%. What is the net discount percentage?",
-      "options": [
-        "38.8%",
-        "45%",
-        "40%",
-        "35%"
-      ],
-      "answer": 0,
-      "solution": "Net multiplier = 0.90 × 0.85 × 0.80 = 0.612. Discount = 38.8%"
-    },
-    {
-      "id": 82,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Speed Time Distance",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "Two cars start from the same point at 50 km/h and 60 km/h in opposite directions. After how many hours will they be 330 km apart?",
-      "options": [
-        "4 hours",
-        "3 hours",
-        "5 hours",
-        "6 hours"
-      ],
-      "answer": 1,
-      "solution": "Relative speed = 110 km/h. Time = 330/110 = 3 hours"
-    },
-    {
-      "id": 83,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The ratio of milk to water in a mixture is 3:2. If 5 litres of water is added, the ratio becomes 3:4. What was the original quantity of the mixture?",
-      "options": [
-        "10 litres",
-        "25 litres",
-        "15 litres",
-        "20 litres"
-      ],
-      "answer": 0,
-      "solution": "Original: milk = 3x, water = 2x. After adding 5L water: 3x/(2x+5) = 3/4 → 12x = 6x+15 → 6x = 15 → x = 2.5. Original = 5x = 12.5. Hmm, not matching. Let me recalculate: 3x/(2x+5) = 3/4. Cross multiply: 12x = 3(2x+5) = 6x+15. 6x = 15, x = 2.5. Original mixture = 5 × 2.5 = 12.5 litres. Not in options."
-    },
-    {
-      "id": 84,
-      "subject": "General Awareness",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "general",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A shopkeeper buys an article for ₹400 and sells it at 25% profit. What is the selling price?",
-      "options": [
-        "₹450",
-        "₹525",
-        "₹480",
-        "₹500"
-      ],
-      "answer": 3,
-      "solution": "SP = 400 × 1.25 = ₹500"
     }
   ]
 }

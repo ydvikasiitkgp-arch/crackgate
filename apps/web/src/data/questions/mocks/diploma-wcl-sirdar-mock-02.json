@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -138,9 +138,9 @@
       "difficulty": "medium",
       "stem": "The 'rescue equipment replacement' criteria include",
       "options": [
-        "Applicable in limited scenarios",
-        "Not important",
-        "Never replace",
+        "The colour of the equipment",
+        "Availability of spare parts",
+        "The cost of the equipment",
         "Age, condition, and manufacturer recommendations"
       ],
       "answer": 3,
@@ -192,8 +192,8 @@
       "difficulty": "medium",
       "stem": "The cable testing in mines must be done by",
       "options": [
-        "Applicable in limited scenarios",
-        "Works at rated voltage only",
+        "The shotfirer",
+        "The banksman",
         "Competent persons using approved testing equipment",
         "Any person"
       ],
@@ -228,10 +228,10 @@
       "difficulty": "hard",
       "stem": "The 'water inflow monitoring' in mines involves",
       "options": [
-        "Applicable in limited scenarios",
+        "One-time measurement at the start of a shift",
         "No monitoring",
         "Regular measurement and recording of water inflow rates",
-        "Works under ideal conditions only"
+        "Measuring only during the rainy season"
       ],
       "answer": 2,
       "solution": "Water inflow is monitored regularly for early warning."
@@ -265,9 +265,9 @@
       "stem": "The 'gas detection' in mines uses",
       "options": [
         "Gas detectors and monitoring instruments",
-        "Affects only intake shafts",
-        "Not required",
-        "Works only in surface mines"
+        "Only visual inspection",
+        "Smell and taste",
+        "Only the firing of a shot"
       ],
       "answer": 0,
       "solution": "Gas detection uses detectors and monitoring instruments."
@@ -427,9 +427,9 @@
       "stem": "A continuous miner is used for",
       "options": [
         "Mechanized extraction of coal from the face",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Only roof bolting",
+        "Only stone drifting",
+        "Surface haulage of coal"
       ],
       "answer": 0,
       "solution": "Mechanized extraction of coal from the face."
@@ -463,9 +463,9 @@
       "stem": "The 'rescue communication' underground uses",
       "options": [
         "Intrinsic safety telephones and communication systems",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Ordinary mobile phones",
+        "Open flame signalling",
+        "Public address announcements"
       ],
       "answer": 0,
       "solution": "Rescue communication uses intrinsic safety telephones."
@@ -481,9 +481,9 @@
       "stem": "The 'transport of explosives' in mines must follow",
       "options": [
         "Prescribed regulations for safe handling and storage",
-        "Nothing specific",
-        "Used for drilling blast holes",
-        "Used for roof bolting only"
+        "The shortest route to the face",
+        "Handing over to any worker",
+        "Carrying them together with detonators"
       ],
       "answer": 0,
       "solution": "Prescribed regulations for safe handling."
@@ -568,7 +568,7 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "The permissible limit for quartz content in coal mine dust is",
+      "stem": "As per CMR 2017, the incombustible dust used for dust treatment in a mine shall not contain more than what percentage of free silica?",
       "options": [
         "5%",
         "10%",
@@ -576,7 +576,7 @@
         "1%"
       ],
       "answer": 0,
-      "solution": "The permissible quartz content limit is 5%."
+      "solution": "CMR 2017 Regulation 144(4)(a): incombustible dust used for dust treatment shall not contain more than 5% of free silica."
     },
     {
       "id": 26,
@@ -588,7 +588,7 @@
       "difficulty": "hard",
       "stem": "A motor starter in a mine must have",
       "options": [
-        "Applicable in limited scenarios",
+        "Automatic restart capability",
         "No protection",
         "Overload and short circuit protection",
         "Insulation testing"
@@ -607,9 +607,9 @@
       "stem": "A face pump is used to",
       "options": [
         "Remove water accumulation at the coal face",
-        "Applicable in limited scenarios",
+        "Ventilate the face",
         "Pump water for drinking",
-        "Works under ideal conditions only"
+        "Support the roof at the face"
       ],
       "answer": 0,
       "solution": "Removes water accumulation at the coal face."
@@ -626,7 +626,7 @@
       "options": [
         "Made by competent persons using approved methods",
         "Temporary",
-        "Applicable in limited scenarios",
+        "Sealed with candle wax",
         "Any joint"
       ],
       "answer": 0,
@@ -644,7 +644,7 @@
       "options": [
         "Not tested",
         "Tested by running loaded",
-        "Applicable in limited scenarios",
+        "Checked by the banksman only",
         "Tested by running empty"
       ],
       "answer": 3,
@@ -679,9 +679,9 @@
       "stem": "A loading cycle consists of",
       "options": [
         "Digging, swinging, dumping, returning",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Drilling, blasting, mucking, hauling",
+        "Filling, tamping, stemming, firing",
+        "Cutting, loading, hauling, dumping"
       ],
       "answer": 0,
       "solution": "Loading cycle includes dig, swing, dump, return."
@@ -787,9 +787,9 @@
       "stem": "The 'safety gear' of a man riding system includes",
       "options": [
         "Seat belts or safety chains for each passenger",
-        "Enhance surveying accuracy",
-        "Reduce equipment maintenance",
-        "Nothing specific"
+        "A sun roof on the car",
+        "Improved seat comfort",
+        "Headlights for the surface only"
       ],
       "answer": 0,
       "solution": "Seat belts or safety chains for each passenger."
@@ -804,8 +804,8 @@
       "difficulty": "easy",
       "stem": "A man riding system operating in a gassy mine must use",
       "options": [
-        "Affects only intake shafts",
-        "Works only in surface mines",
+        "A diesel locomotive without a flame trap",
+        "Vehicles certified for surface use only",
         "Any vehicle",
         "Intrinsically safe or flameproof vehicles"
       ],
@@ -822,7 +822,7 @@
       "difficulty": "easy",
       "stem": "A sirdar who notices subsidence must",
       "options": [
-        "Applicable in limited scenarios",
+        "Note it in the daily diary and continue work",
         "Continue work",
         "Wait until next shift",
         "Immediately report and take precautionary measures"
@@ -840,9 +840,9 @@
       "difficulty": "easy",
       "stem": "The inflow of water into a mine can be detected by",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "A rise in wind velocity",
+        "A change in roof colour",
+        "An increase in the temperature of the goaf",
         "Sudden increase in pump load, wet spots, or change in water quality"
       ],
       "answer": 3,
@@ -859,9 +859,9 @@
       "stem": "The 'rescue equipment testing records' must be",
       "options": [
         "Maintained with dates, results, and corrective actions",
-        "No records needed",
-        "Not required",
-        "Applicable in limited scenarios"
+        "Kept in the personal notebook of the sirdar",
+        "Discarded after each quarterly practice",
+        "Maintained only by the equipment manufacturer"
       ],
       "answer": 0,
       "solution": "Testing records must be maintained with dates and results."
@@ -876,10 +876,10 @@
       "difficulty": "medium",
       "stem": "A 'flood gate' in a mine is used to",
       "options": [
-        "Applicable in limited scenarios",
+        "Increase the rate of pumping",
         "Isolate sections in case of water inrush",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Ventilate the workings",
+        "Drain the water from the mine"
       ],
       "answer": 1,
       "solution": "Isolates sections in case of water inrush."
@@ -895,7 +895,7 @@
       "stem": "The sirdar must ensure that the flame safety lamp",
       "options": [
         "Is optional",
-        "Is only for照明",
+        "Is only for illumination",
         "Is not used",
         "Is tested for accuracy before use"
       ],
@@ -912,8 +912,8 @@
       "difficulty": "medium",
       "stem": "The 'mechanical stowing' uses",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Explosive charges",
+        "Hand picking by workers",
         "Mechanical equipment like conveyors and loaders",
         "Water"
       ],
@@ -949,8 +949,8 @@
       "stem": "A 'sump' in a mine is used to",
       "options": [
         "Collect water for pumping to surface",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Store diesel fuel",
+        "Serve as an emergency exit",
         "Store coal"
       ],
       "answer": 0,
@@ -964,15 +964,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The permissible exposure limit for respirable coal dust is",
+      "stem": "As per CMR 2017, in a gassy seam of the second or third degree, precautions against the extension of an ignition or explosion from one part of the mine to another shall be taken by providing",
       "options": [
-        "4 mg/m³",
-        "2 mg/m³",
-        "10 mg/m³",
-        "1 mg/m³"
+        "Stone dust barriers",
+        "Additional auxiliary fans",
+        "Water drenching at the shaft bottom",
+        "Extra stoppings at all junctions"
       ],
       "answer": 0,
-      "solution": "The PEL is 4 mg/m³ for respirable coal dust."
+      "solution": "CMR 2017 Regulation 146 requires stone dust barriers in gassy seams of the second or third degree, and in development workings in a first-degree gassy seam where inflammable gas may occur in dangerous quantities, to prevent an ignition or explosion from extending from one part of the mine to the other."
     },
     {
       "id": 48,
@@ -984,10 +984,10 @@
       "difficulty": "medium",
       "stem": "The 'flame safety lamp' is used to detect",
       "options": [
-        "Affects only intake shafts",
-        "Enhance surveying accuracy",
+        "Only the temperature of the air",
+        "Only the humidity of the air",
         "Presence of methane and oxygen deficiency",
-        "Reduce equipment maintenance"
+        "The velocity of the air current"
       ],
       "answer": 2,
       "solution": "Presence of methane and oxygen deficiency."
@@ -1000,15 +1000,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "The sirdar must check that the fire-fighting equipment",
+      "stem": "The sirdar must see that the fire-fighting equipment in his district is",
       "options": [
-        "Is stored in the office",
-        "Is only for show",
-        "Is not required",
-        "Is available and in working order"
+        "Available and in working order",
+        "Stored in the office and kept locked",
+        "Replaced once every year only",
+        "Counted and reported to the manager daily"
       ],
       "answer": 0,
-      "solution": "Fire-fighting equipment must be available and in working order."
+      "solution": "Fire-fighting equipment must be kept available and maintained in working order at convenient points both on surface and belowground (CMR 2017 Regulation 139)."
     },
     {
       "id": 50,
@@ -1092,10 +1092,10 @@
       "difficulty": "medium",
       "stem": "A 'de-watering plan' for a mine must include",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "The name of the mine manager only",
+        "The number of persons employed on the surface",
         "Pump locations, capacity, piping layout, and emergency procedures",
-        "Works under ideal conditions only"
+        "The blasting schedule for the week"
       ],
       "answer": 2,
       "solution": "Pump locations, capacity, piping, and emergency procedures."
@@ -1149,7 +1149,7 @@
         "Protect electrical equipment",
         "Control dust emissions",
         "Internal explosion without allowing it to escape to the surrounding atmosphere",
-        "Applicable in limited scenarios"
+        "Mechanical shock without any damage"
       ],
       "answer": 2,
       "solution": "Internal explosion without allowing it to escape."
@@ -1165,9 +1165,9 @@
       "stem": "When taking charge, the sirdar must",
       "options": [
         "Check and satisfy himself about the safety conditions",
-        "Applicable in limited scenarios",
+        "Rely on the previous sirdar's report alone",
         "Not check anything",
-        "Works under ideal conditions only"
+        "Wait for the manager's instructions"
       ],
       "answer": 0,
       "solution": "The sirdar must check and satisfy himself about safety conditions."
@@ -1201,7 +1201,7 @@
       "stem": "The 'subsidence' above a stowed area is generally",
       "options": [
         "Less than a caved area",
-        "Applicable in limited scenarios",
+        "Equal to the height of the seam",
         "More than caved area",
         "The same"
       ],
@@ -1219,8 +1219,8 @@
       "stem": "The 'fire emergency communication' in mines must be",
       "options": [
         "No communication needed",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Installed only in the manager's office",
+        "Used only once a month",
         "Reliable, tested, and accessible during emergencies"
       ],
       "answer": 3,
@@ -1255,8 +1255,8 @@
       "stem": "A 'booster fan' is used to",
       "options": [
         "Assist the main fan in boosting air pressure in a section",
-        "Affects only intake shafts",
-        "Works only in surface mines",
+        "Control the roof conditions",
+        "Supply water to the workings",
         "Replace the main fan"
       ],
       "answer": 0,
@@ -1308,10 +1308,10 @@
       "difficulty": "hard",
       "stem": "The 'water dam maintenance' includes",
       "options": [
-        "Not required",
-        "No maintenance needed",
+        "Painting the dam once a year",
+        "Inspecting only after heavy rains",
         "Regular inspection, repair of seepage, and drainage clearing",
-        "Applicable in limited scenarios"
+        "Replacing the dam every five years"
       ],
       "answer": 2,
       "solution": "Dam maintenance includes inspection, repair, drainage clearing."
@@ -1347,7 +1347,7 @@
         "Details of all maintenance activities, tests, and results",
         "Thermal insulation properties",
         "Mechanical strength of materials",
-        "Applicable in limited scenarios"
+        "The personal details of all workers"
       ],
       "answer": 0,
       "solution": "Details of all maintenance activities, tests, and results."
@@ -1360,15 +1360,15 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'reporting of dangerous occurrences' is specified under",
+      "stem": "The notice of a dangerous occurrence or accident in or about a mine is required to be given under",
       "options": [
-        "Omit references",
-        "Include personal opinions",
+        "CMR 2017 Regulation 8",
+        "CMR 2017 Regulation 104",
         "CMR 2017 Regulation 115",
-        "Used in preliminary drafts only"
+        "CMR 2017 Regulation 144"
       ],
-      "answer": 2,
-      "solution": "CMR 2017 Regulation 115."
+      "answer": 0,
+      "solution": "CMR 2017 Regulation 8 (Notice of dangerous occurrence or accident) requires reporting of accidents causing loss of life or serious bodily injury, and of dangerous occurrences, in or about a mine."
     },
     {
       "id": 70,
@@ -1381,9 +1381,9 @@
       "stem": "The 'risk assessment' in a mine involves",
       "options": [
         "Identifying hazards, assessing risks, and implementing controls",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Writing a report after the accident",
+        "Only examining the machinery",
+        "Consulting only the safety officer"
       ],
       "answer": 0,
       "solution": "Identifying hazards, assessing risks, and implementing controls."
@@ -1398,7 +1398,7 @@
       "difficulty": "hard",
       "stem": "The 'maximum duration' a rescue team can operate underground with breathing apparatus is limited by",
       "options": [
-        "Applicable in limited scenarios",
+        "The size of the rescue station",
         "The manager's decision",
         "The oxygen supply capacity of the breathing apparatus",
         "No limit"
@@ -1418,7 +1418,7 @@
       "options": [
         "Regulate air temperature only",
         "Zero",
-        "Not important",
+        "Independent of the quantity of air flowing",
         "The pressure difference created by the fan"
       ],
       "answer": 3,
@@ -1452,9 +1452,9 @@
       "difficulty": "hard",
       "stem": "The 'inundation rescue equipment' in mines must include",
       "options": [
-        "Works under ideal conditions only",
-        "No equipment needed",
-        "Applicable in limited scenarios",
+        "Diesel generators only",
+        "Drilling machines only",
+        "Explosive stores",
         "Pumps, pipes, and communication systems"
       ],
       "answer": 3,
@@ -1471,8 +1471,8 @@
       "stem": "The 'underground refuge chamber' is used to",
       "options": [
         "Provide temporary shelter for miners trapped underground",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Store explosives",
+        "House the ventilation fan",
         "Store equipment"
       ],
       "answer": 0,
@@ -1481,38 +1481,38 @@
     {
       "id": 76,
       "subject": "Technical (Mining)",
-      "topic": "Coal Dust",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The primary source of coal dust in mines is",
+      "difficulty": "medium",
+      "stem": "Under CMR 2017, a shot-firer must hold, in addition to a gas-testing certificate:",
       "options": [
-        "Drilling, blasting, cutting, and transportation of coal",
-        "Ventilation",
-        "Roof falls",
-        "Water"
+        "An Overman's or Sirdar's certificate",
+        "A Manager's First Class certificate only",
+        "An Engine Driver's certificate",
+        "A Surveyor's certificate"
       ],
       "answer": 0,
-      "solution": "Drilling, blasting, cutting, and transportation generate coal dust."
+      "solution": "CMR 2017 Reg 190: a shot-firer holds a gas-testing certificate and an Overman's or Sirdar's certificate."
     },
     {
       "id": 77,
       "subject": "Technical (Mining)",
-      "topic": "Danger of Inundation",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'pumping capacity' in mines must be sufficient to",
+      "difficulty": "medium",
+      "stem": "If a sirdar's district is of such a size that it cannot be examined within the required time, the matter is referred to:",
       "options": [
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
-        "No requirement",
-        "Handle expected water inflow plus safety margin"
+        "The manager",
+        "The overman",
+        "The safety officer",
+        "The Chief Inspector"
       ],
       "answer": 3,
-      "solution": "Pumping capacity must handle expected inflow plus safety margin."
+      "solution": "CMR 2017 Reg 129: if the district is too large to be examined in time, the matter is referred to the Chief Inspector for a decision."
     },
     {
       "id": 78,
@@ -1525,7 +1525,7 @@
       "stem": "The 'fire watch' in a mine after a fire incident must continue until",
       "options": [
         "1 hour",
-        "Applicable in limited scenarios",
+        "The shift ends",
         "24 hours",
         "The area is declared safe by a competent person"
       ],
@@ -1632,10 +1632,10 @@
       "difficulty": "easy",
       "stem": "The 'mine water' treatment and use is important for",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Only for washing the machinery",
+        "Only for dust suppression",
         "Community water supply and irrigation",
-        "Works under ideal conditions only"
+        "Storing in underground sumps permanently"
       ],
       "answer": 2,
       "solution": "Community water supply and irrigation."
@@ -1651,9 +1651,9 @@
       "stem": "The 'CIL's welfare schemes' for workers include",
       "options": [
         "Healthcare, education, housing, and provident fund",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific"
+        "Only festival bonuses",
+        "Only travel allowances",
+        "Only leave encashment"
       ],
       "answer": 0,
       "solution": "Healthcare, education, housing, and provident fund."
@@ -1684,7 +1684,7 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "easy",
-      "stem": "The 'coal's share' in India's primary energy consumption is approximately",
+      "stem": "The share of coal in India's electricity generation is approximately",
       "options": [
         "70%",
         "30%",
@@ -1692,7 +1692,7 @@
         "55%"
       ],
       "answer": 0,
-      "solution": "Approximately 70%."
+      "solution": "Coal accounts for about 70% of India's electricity generation through thermal power plants."
     },
     {
       "id": 88,
@@ -1704,10 +1704,10 @@
       "difficulty": "medium",
       "stem": "The 'carbon capture and storage' (CCS) technology involves",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Burning coal at lower temperatures",
+        "Using only renewable energy",
         "Capturing CO2 emissions and storing them underground",
-        "Required only for specific cases"
+        "Storing coal in sealed silos"
       ],
       "answer": 2,
       "solution": "Capturing CO2 and storing underground."
@@ -1723,9 +1723,9 @@
       "stem": "The 'Polar Satellite Launch Vehicle' (PSLV) is used by ISRO for",
       "options": [
         "Launching satellites into polar orbit",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Sending astronauts to the Moon",
+        "Manned space missions",
+        "Launching rockets from underwater"
       ],
       "answer": 0,
       "solution": "Launching satellites into polar orbit."
@@ -1759,9 +1759,9 @@
       "stem": "The 'CIL's e-Nivaran' portal is for",
       "options": [
         "Online grievance redressal of coal sector issues",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
-        "Nothing specific"
+        "Booking coal rakes online",
+        "e-Auction of coal",
+        "Issuing employee identity cards"
       ],
       "answer": 0,
       "solution": "Online grievance redressal."
@@ -1781,8 +1781,8 @@
         "2010",
         "2014"
       ],
-      "answer": 3,
-      "solution": "Mangalyaan was launched in 2014."
+      "answer": 1,
+      "solution": "Mangalyaan (Mars Orbiter Mission) was launched by ISRO on 5 November 2013; it entered Mars orbit on 24 September 2014."
     },
     {
       "id": 93,
@@ -1920,103 +1920,13 @@
       "difficulty": "easy",
       "stem": "The 'auction of coal mines' for commercial mining was launched under",
       "options": [
-        "Nothing specific",
+        "The Mines and Minerals (Development and Regulation) Act",
         "Extraction of iron ore",
         "Quarrying of granite",
         "The Coal Mines (Special Provisions) Act"
       ],
       "answer": 3,
       "solution": "Under the Coal Mines (Special Provisions) Act."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "An article is sold for ₹600 at a 20% loss. What was the cost price?",
-      "options": [
-        "₹750",
-        "₹680",
-        "₹700",
-        "₹720"
-      ],
-      "answer": 0,
-      "solution": "CP = 600 / 0.80 = ₹750"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of first 10 even numbers is:",
-      "options": [
-        "10",
-        "11",
-        "12",
-        "9"
-      ],
-      "answer": 1,
-      "solution": "First 10 even numbers: 2,4,6,8,10,12,14,16,18,20. Sum = 110. Average = 11"
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Speed Time Distance",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A boat goes 20 km upstream in 5 hours and 20 km downstream in 2 hours. What is the speed of the current?",
-      "options": [
-        "3 km/h",
-        "2 km/h",
-        "4 km/h",
-        "5 km/h"
-      ],
-      "answer": 0,
-      "solution": "Upstream = 4 km/h, Downstream = 10 km/h. Speed of current = (10-4)/2 = 3 km/h"
-    },
-    {
-      "id": 104,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "If today is Wednesday, what day will it be after 100 days?",
-      "options": [
-        "Wednesday",
-        "Saturday",
-        "Thursday",
-        "Friday"
-      ],
-      "answer": 3,
-      "solution": "100 = 14×7 + 2. Wednesday + 2 = Friday"
-    },
-    {
-      "id": 105,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average weight of 8 persons increases by 2.5 kg when a new person comes in. What is the weight of the new person?",
-      "options": [
-        "25 kg",
-        "20 kg",
-        "30 kg",
-        "22 kg"
-      ],
-      "answer": 1,
-      "solution": "Total increase = 8 × 2.5 = 20 kg. But the new person replaces... Actually, if average increases by 2.5 for 9 persons (8 original + 1 new), total increase = 9 × 2.5 = 22.5... This question is poorly constructed. Let me reconsider: If average of 8 increases by 2.5 when new person joins (total 9), new total = old total + 20 (increase of 2.5 for 8 people)... Actually: If average increases from x to x+2.5 with 9 people: (8x + new)/9 = x+2.5 → 8x + new = 9x + 22.5 → new = x + 22.5. Without knowing x this can't be solved. This is a poorly formed question."
     }
   ],
   "seed": 93889081

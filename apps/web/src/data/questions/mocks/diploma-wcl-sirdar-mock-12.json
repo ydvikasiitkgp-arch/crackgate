@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -139,8 +139,8 @@
       "stem": "The sirdar must ensure that all men under his charge",
       "options": [
         "Work at their own pace",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Start work before the examination",
+        "Decide their own workplaces",
         "Are properly briefed about the day's work and hazards"
       ],
       "answer": 3,
@@ -193,7 +193,7 @@
       "stem": "The 'leakage' in ventilation occurs through",
       "options": [
         "Remove harmful gases and dust",
-        "Affects only intake shafts",
+        "The roof strata only",
         "Stoppings, doors, and other openings",
         "No leakage"
       ],
@@ -210,9 +210,9 @@
       "difficulty": "medium",
       "stem": "The signaling system for man riding must include",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "A single bell at the surface",
+        "Hand signals from the driver",
+        "Silence at all stations",
         "Clearly audible signals at all boarding and landing points"
       ],
       "answer": 3,
@@ -221,20 +221,20 @@
     {
       "id": 6,
       "subject": "Technical (Mining)",
-      "topic": "Danger of Inundation",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'borehole logging' near water bodies provides information on",
+      "difficulty": "medium",
+      "stem": "While examining opencast workings, the sirdar must check the highwall and bench edges for:",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
-        "Water-bearing strata, pressure, and quality"
+        "Overhangs and any obstruction, staying at least 3 m away from the edge",
+        "Only the bottom of the pit",
+        "The presence of vehicles",
+        "The quality of coal only"
       ],
-      "answer": 3,
-      "solution": "Borehole logging provides water strata, pressure, quality information."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 129 (opencast duties): the sirdar examines highwall/bench edges for overhangs and loose material, keeping at least 3 m from the edge."
     },
     {
       "id": 7,
@@ -248,8 +248,8 @@
       "options": [
         "Proper drill pattern, burden, and spacing",
         "More explosives",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Longer drill rods",
+        "A wetter drift"
       ],
       "answer": 0,
       "solution": "Proper drill patterns achieve easier breakage."
@@ -264,9 +264,9 @@
       "difficulty": "medium",
       "stem": "The 'unsafe condition' in a mine includes",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Well-maintained machinery",
+        "Fresh ventilation and lighting",
+        "Regular safety inspections",
         "Defective equipment, inadequate ventilation, and poor lighting"
       ],
       "answer": 3,
@@ -320,8 +320,8 @@
       "options": [
         "No plan needed",
         "Evacuation procedures, pumping activation, and communication",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Deployment of extra haulage",
+        "Arrangement of extra timber"
       ],
       "answer": 1,
       "solution": "Emergency plans include evacuation, pumping, communication."
@@ -390,10 +390,10 @@
       "difficulty": "hard",
       "stem": "Under CMR 2017, the manager must ensure that",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "Only a small dewatering arrangement",
+        "Pumping arrangements only in the rainy season",
         "Adequate pumping arrangements are maintained to prevent inundation",
-        "Works under ideal conditions only"
+        "No pumping arrangements"
       ],
       "answer": 2,
       "solution": "Adequate pumping arrangements must be maintained."
@@ -409,7 +409,7 @@
       "stem": "When a sirdar detects water accumulation, he must",
       "options": [
         "Wait for the manager",
-        "Applicable in limited scenarios",
+        "Record it in the annual report",
         "Report immediately and stop work if dangerous",
         "Ignore it"
       ],
@@ -427,8 +427,8 @@
       "stem": "The 'hydraulic stowing pipeline' must be made of",
       "options": [
         "Any material",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Plain wooden pipes",
+        "Copper tubes only",
         "Wear-resistant material to handle abrasive slurry"
       ],
       "answer": 3,
@@ -462,10 +462,10 @@
       "difficulty": "easy",
       "stem": "A 'pilot raise' is driven to",
       "options": [
-        "Required only for specific cases",
+        "Improve the lighting",
         "Establish a raise connection between two levels",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Provide a sump for water",
+        "Store the explosives"
       ],
       "answer": 1,
       "solution": "Establishes a raise connection between two levels."
@@ -534,10 +534,10 @@
       "difficulty": "medium",
       "stem": "A continuous miner is operated from",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "By a lever at the face",
+        "By the fan man",
         "A remote control from a safe distance",
-        "Works under ideal conditions only"
+        "By the surface control room"
       ],
       "answer": 2,
       "solution": "Operated by remote control from a safe distance."
@@ -553,9 +553,9 @@
       "stem": "The winding engine must be capable of being operated from",
       "options": [
         "Both the winding house and the shaft bottom if required",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Only from the surface",
+        "Only by the banksman",
+        "Only in an emergency"
       ],
       "answer": 0,
       "solution": "From both the winding house and shaft bottom if required."
@@ -617,20 +617,20 @@
     {
       "id": 28,
       "subject": "Technical (Mining)",
-      "topic": "Geology",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'coalification process' involves",
+      "stem": "Under CMR 2017, a shot-firer shall not be employed:",
       "options": [
-        "Extraction of iron ore",
-        "Quarrying of granite",
-        "No process",
-        "Biological and geological transformation of plant material"
+        "Without an assistant",
+        "On any work which makes his earnings depend on the amount of coal produced",
+        "On night shifts",
+        "In more than one section"
       ],
-      "answer": 3,
-      "solution": "Coalification involves both biological and geological processes."
+      "answer": 1,
+      "solution": "CMR 2017 Reg 190: a shot-firer shall not be employed on work dependent on the quantity of coal/mineral produced, to avoid haste."
     },
     {
       "id": 29,
@@ -642,10 +642,10 @@
       "difficulty": "medium",
       "stem": "An earth continuity tester is used to",
       "options": [
-        "Applicable in limited scenarios",
-        "Specific to star connection",
+        "Measure the insulation resistance of the windings",
+        "Measure the air velocity",
         "Check the continuity of earth connections in electrical installations",
-        "Works at rated voltage only"
+        "Measure the frequency of the supply"
       ],
       "answer": 2,
       "solution": "Checks continuity of earth connections."
@@ -715,8 +715,8 @@
       "stem": "Stowing is not suitable when",
       "options": [
         "The goaf area is not accessible or the seam is too thin",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The seam is very thick",
+        "The mine is highly mechanized",
         "Any condition"
       ],
       "answer": 0,
@@ -750,9 +750,9 @@
       "difficulty": "medium",
       "stem": "The 'error of closure' in surveying is minimized by",
       "options": [
-        "Measure air velocity",
+        "Throwing away the field books",
         "Ignoring it",
-        "Not important",
+        "Rounding off the figures",
         "Using precise instruments and methods"
       ],
       "answer": 3,
@@ -768,9 +768,9 @@
       "difficulty": "medium",
       "stem": "The 'stowing records' must include",
       "options": [
-        "No records needed",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Stored in the head office",
+        "Only the pump rating",
+        "The number of workers only",
         "Material quantity, water usage, filling progress, and issues"
       ],
       "answer": 3,
@@ -797,20 +797,20 @@
     {
       "id": 38,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'blast vibration' attenuates with distance according to",
+      "difficulty": "medium",
+      "stem": "The maximum number of shots a shot-firer may charge and fire in a shift in a gassy seam (first degree) belowground is:",
       "options": [
-        "Power law (inverse)",
-        "Linear relationship",
-        "Exponential increase",
-        "No relationship"
+        "40",
+        "80",
+        "100",
+        "60"
       ],
       "answer": 0,
-      "solution": "Blast vibration attenuates with distance following power law."
+      "solution": "CMR 2017 Reg 195: 40 shots in gassy seams belowground; 80 shots in other belowground and 100 in opencast workings per shift."
     },
     {
       "id": 39,
@@ -822,10 +822,10 @@
       "difficulty": "easy",
       "stem": "The stowing ratio refers to",
       "options": [
-        "Applicable in limited scenarios",
+        "The ratio of sand to water",
         "The ratio of stowing material to the volume of coal extracted",
-        "Works under ideal conditions only",
-        "Nothing specific"
+        "The ratio of dams to galleries",
+        "The ratio of fines to coal"
       ],
       "answer": 1,
       "solution": "Ratio of stowing material to coal extracted volume."
@@ -861,7 +861,7 @@
         "Dim",
         "Adequate for safe working and maintained in good condition",
         "Optional",
-        "Applicable in limited scenarios"
+        "Confined to the shaft bottom"
       ],
       "answer": 1,
       "solution": "Adequate for safe working and maintained in good condition."
@@ -913,9 +913,9 @@
       "stem": "The 'collar pipe' in drifting prevents",
       "options": [
         "Collapse of the borehole collar area",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Air leakage in the drift",
+        "Overloading of the pump",
+        "Water inflow in the sump"
       ],
       "answer": 0,
       "solution": "Collar pipes prevent borehole collar collapse."
@@ -949,9 +949,9 @@
       "stem": "The 'air distribution' in a mine must be such that",
       "options": [
         "Every working face receives adequate fresh air",
-        "Works only in surface mines",
+        "The main haulage road only",
         "All air goes to one section",
-        "Affects only intake shafts"
+        "The working faces get no air"
       ],
       "answer": 0,
       "solution": "Every working face receives adequate fresh air."
@@ -986,7 +986,7 @@
       "options": [
         "Sufficient capacity to handle the anticipated water inflow",
         "Small capacity",
-        "Applicable in limited scenarios",
+        "The same rating as the winch",
         "Any capacity"
       ],
       "answer": 0,
@@ -1021,8 +1021,8 @@
       "stem": "The sump capacity must be sufficient to",
       "options": [
         "Any amount",
-        "Works under ideal conditions only",
-        "Applicable in limited scenarios",
+        "Only the daily drinking water",
+        "Half a day's inflow only",
         "Store water for at least one shift's inflow as a minimum"
       ],
       "answer": 3,
@@ -1038,9 +1038,9 @@
       "difficulty": "medium",
       "stem": "The power cable used in underground mines must have",
       "options": [
-        "Applicable in limited scenarios",
-        "No special requirement",
-        "Works at rated voltage only",
+        "Plain aluminium wire",
+        "Rated for domestic supply only",
+        "Plain twisted pair wires",
         "Armored construction with flame-retardant properties"
       ],
       "answer": 3,
@@ -1056,10 +1056,10 @@
       "difficulty": "hard",
       "stem": "A 'raise boring' machine is used to",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Cutting timber supports",
+        "Driving the main haulage",
         "Excavate vertical or steep raises mechanically",
-        "Works under ideal conditions only"
+        "Boring water wells on the surface"
       ],
       "answer": 2,
       "solution": "Excavates vertical or steep raises mechanically."
@@ -1075,9 +1075,9 @@
       "stem": "A battery-operated locomotive in mines is used for",
       "options": [
         "Haulage of coal and materials underground",
-        "Applicable in limited scenarios",
-        "Works at rated voltage only",
-        "Specific to star connection"
+        "Hoisting men in the shaft",
+        "Winding the ropes",
+        "Charging the battery banks"
       ],
       "answer": 0,
       "solution": "Haulage of coal and materials underground."
@@ -1175,20 +1175,20 @@
     {
       "id": 59,
       "subject": "Technical (Mining)",
-      "topic": "Opencast Working",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'bench inspection' before work includes",
+      "stem": "Under CMR 2017, a shot-firer must hold, in addition to a gas-testing certificate:",
       "options": [
-        "Checking face conditions, drainage, accessibility",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "No inspection needed"
+        "An Overman's or Sirdar's certificate",
+        "A Manager's First Class certificate only",
+        "An Engine Driver's certificate",
+        "A Surveyor's certificate"
       ],
       "answer": 0,
-      "solution": "Bench inspections check conditions, drainage, accessibility."
+      "solution": "CMR 2017 Reg 190: a shot-firer holds a gas-testing certificate and an Overman's or Sirdar's certificate."
     },
     {
       "id": 60,
@@ -1200,10 +1200,10 @@
       "difficulty": "medium",
       "stem": "The 'face advance rate' depends on",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "The colour of the coal",
+        "The number of benches",
         "Blast results, material handling capacity, weather",
-        "Works under ideal conditions only"
+        "The type of the winding rope"
       ],
       "answer": 2,
       "solution": "Face advance depends on blasting efficiency, capacity, and conditions."
@@ -1218,10 +1218,10 @@
       "difficulty": "medium",
       "stem": "Under the Mines Act, 'working in a mine' includes",
       "options": [
-        "Applicable in limited scenarios",
+        "Only the blasting operations",
         "All operations including prospecting, development, and working",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Only the transportation of coal",
+        "Only the surface workshops"
       ],
       "answer": 1,
       "solution": "All operations including prospecting, development, and working."
@@ -1255,9 +1255,9 @@
       "stem": "A transformer in a mine is used to",
       "options": [
         "Winding resistance testing",
-        "Applicable in limited scenarios",
+        "Amplify the current",
         "Step up or step down voltage as required",
-        "Phase shift measurement"
+        "Store electrical energy"
       ],
       "answer": 2,
       "solution": "Steps up or steps down voltage as required."
@@ -1290,10 +1290,10 @@
       "difficulty": "easy",
       "stem": "The 'cemented stowing' or 'paste fill' uses",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Only dry sand",
+        "Only stone dust",
         "A cement-based mixture for stronger support",
-        "Works under ideal conditions only"
+        "Only coal fines"
       ],
       "answer": 2,
       "solution": "Cement-based mixture for stronger support."
@@ -1309,8 +1309,8 @@
       "stem": "Inundation in underground mines occurs when",
       "options": [
         "Water floods into mine workings from surface or underground sources",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The mine roof falls",
+        "Gas accumulates in the goaf",
         "No water is present"
       ],
       "answer": 0,
@@ -1344,10 +1344,10 @@
       "difficulty": "easy",
       "stem": "The 'breathing apparatus' used by mine rescue teams is called",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "A simple dust mask",
+        "Compressed air hose from the surface",
         "Self-contained breathing apparatus (BG-174 or equivalent)",
-        "SCBA"
+        "An oxygen cylinder with an open mask"
       ],
       "answer": 2,
       "solution": "Self-contained breathing apparatus (BG-174 or equivalent)."
@@ -1363,7 +1363,7 @@
       "stem": "The 'goaf management' in longwall mining involves",
       "options": [
         "Mining of bauxite",
-        "Nothing specific",
+        "Ventilating the goaf",
         "Controlling roof collapse behind the advancing face",
         "Quarrying of granite"
       ],
@@ -1399,7 +1399,7 @@
       "stem": "The 'stowing pump' in hydraulic stowing must have",
       "options": [
         "No specific requirement",
-        "Applicable in limited scenarios",
+        "The same rating as the fan",
         "Sufficient pressure and capacity to transport material",
         "Low pressure"
       ],
@@ -1409,20 +1409,20 @@
     {
       "id": 72,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The 'critical diameter' of an explosive is",
+      "difficulty": "medium",
+      "stem": "During examination in a fiery seam, the sirdar is required to carry:",
       "options": [
-        "Ideal diameter",
-        "Smallest diameter for sustained detonation",
-        "Largest diameter possible",
-        "Borehole diameter"
+        "Only a gas detector",
+        "A waterproof torch",
+        "An approved flame safety lamp and a carbon monoxide detector",
+        "Only an electric torch"
       ],
-      "answer": 1,
-      "solution": "Critical diameter is minimum charge diameter for sustained detonation."
+      "answer": 2,
+      "solution": "CMR 2017 Reg 129: where there is danger of fire or accumulation of gas, the sirdar carries an approved flame safety lamp and a carbon monoxide detector."
     },
     {
       "id": 73,
@@ -1434,10 +1434,10 @@
       "difficulty": "medium",
       "stem": "The 'water logged working' in mines refers to",
       "options": [
-        "Works under ideal conditions only",
+        "A well-ventilated working",
         "Dry working",
         "Working that has been flooded with water",
-        "Applicable in limited scenarios"
+        "A newly developed working"
       ],
       "answer": 2,
       "solution": "Water logged workings are those flooded with water."
@@ -1445,38 +1445,38 @@
     {
       "id": 74,
       "subject": "Technical (Mining)",
-      "topic": "Electrical",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The insulation resistance of electrical equipment must be",
+      "stem": "For charging and stemming shot-holes, the tools used by the shot-firer shall be:",
       "options": [
-        "Low",
-        "Measured regularly and maintained above prescribed limits",
-        "Any value",
-        "Zero"
+        "Wooden implements and a scraper of brass or wood",
+        "Iron rods and steel scrapers",
+        "Steel implements only",
+        "PVC implements"
       ],
-      "answer": 1,
-      "solution": "Measured regularly and maintained above prescribed limits."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 197: only wooden implements and a brass or wooden scraper are used, to avoid sparks."
     },
     {
       "id": 75,
       "subject": "Technical (Mining)",
-      "topic": "Stowing",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'stowing material' commonly used includes",
+      "stem": "If a sirdar's district is of such a size that it cannot be examined within the required time, the matter is referred to:",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Mine reject, sand, fly ash, and other suitable materials",
-        "Works under ideal conditions only"
+        "The manager",
+        "The overman",
+        "The safety officer",
+        "The Chief Inspector"
       ],
-      "answer": 2,
-      "solution": "Stowing materials include mine reject, sand, fly ash, and others."
+      "answer": 3,
+      "solution": "CMR 2017 Reg 129: if the district is too large to be examined in time, the matter is referred to the Chief Inspector for a decision."
     },
     {
       "id": 76,
@@ -1489,8 +1489,8 @@
       "stem": "A powered roof support (chock) is used in",
       "options": [
         "Support conveyor belts",
-        "Applicable in limited scenarios",
-        "Protect electrical equipment",
+        "Hold the coal stock",
+        "Transport coal to the surface",
         "Longwall mining for face support"
       ],
       "answer": 3,
@@ -1499,20 +1499,20 @@
     {
       "id": 77,
       "subject": "Technical (Mining)",
-      "topic": "Face Machineries",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "A belt conveyor in a mine is used to",
+      "difficulty": "medium",
+      "stem": "Before firing in belowground workings, the shot-firer shall test for inflammable gas within a radius of at least:",
       "options": [
-        "Applicable in limited scenarios",
-        "Transport persons",
-        "Transport coal continuously from face to surface",
-        "Works under ideal conditions only"
+        "18 m",
+        "10 m",
+        "5 m",
+        "30 m"
       ],
-      "answer": 2,
-      "solution": "Transports coal continuously from face to surface."
+      "answer": 0,
+      "solution": "CMR 2017 Reg 198: the shot-firer tests the strata and the surrounding area for gas within a radius of 18 m before firing."
     },
     {
       "id": 78,
@@ -1560,10 +1560,10 @@
       "difficulty": "medium",
       "stem": "The 'bench face angle' depends on",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The colour of the rock",
+        "The number of dumpers",
         "Rock mass properties, joint orientation, groundwater",
-        "Required only for specific cases"
+        "The type of the drilling machine"
       ],
       "answer": 2,
       "solution": "Bench face angle depends on geological conditions."
@@ -1596,9 +1596,9 @@
       "difficulty": "medium",
       "stem": "The 'Sagarmala' project is related to",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Rural electrification",
+        "River linking project",
+        "Solar power mission",
         "Port-led development and coastal economic zones"
       ],
       "answer": 3,
@@ -1669,7 +1669,7 @@
       "stem": "The 'coal supply chain' from mine to consumer includes",
       "options": [
         "Quarrying of granite",
-        "Nothing specific",
+        "Only the mining of ore",
         "Extraction of iron ore",
         "Extraction, processing, transport, and dispatch"
       ],
@@ -1686,10 +1686,10 @@
       "difficulty": "medium",
       "stem": "The 'continuous miner' technology in India has been adopted from",
       "options": [
-        "Applicable in limited scenarios",
+        "Developed locally in every mine",
         "No source",
         "International manufacturers and adapted for Indian conditions",
-        "Works under ideal conditions only"
+        "Only from surface miners"
       ],
       "answer": 2,
       "solution": "International manufacturers, adapted for India."
@@ -1705,7 +1705,7 @@
       "stem": "The 'national coal distribution policy' ensures",
       "options": [
         "Equitable allocation of coal to various sectors",
-        "Nothing specific",
+        "Privatisation of all mines",
         "Mining of bauxite",
         "Specific to metal mines only"
       ],
@@ -1795,9 +1795,9 @@
       "stem": "The 'afforestation' on mined-out areas helps in",
       "options": [
         "Carbon sequestration and environmental restoration",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific"
+        "Increasing the coal output",
+        "Raising the dump height",
+        "Promoting coal exports"
       ],
       "answer": 0,
       "solution": "Carbon sequestration and restoration."
@@ -1814,7 +1814,7 @@
       "options": [
         "Remove groundwater for safe working conditions",
         "Increase production",
-        "Not important",
+        "Reduces the output",
         "Quarrying of granite"
       ],
       "answer": 0,
@@ -1849,9 +1849,9 @@
       "stem": "The 'Beti Bachao Beti Padhao' scheme promotes",
       "options": [
         "Girl child education and welfare",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Nothing specific"
+        "Coal mine automation",
+        "Highway development",
+        "Urban transport projects"
       ],
       "answer": 0,
       "solution": "Girl child education and welfare."
@@ -1902,7 +1902,7 @@
       "difficulty": "easy",
       "stem": "The 'Strategic Coal Reserve' concept in India involves",
       "options": [
-        "Nothing specific",
+        "Excess coal allocation to industries",
         "Maintaining coal stockpiles for emergency use",
         "Specific to metal mines only",
         "Mining of bauxite"
@@ -1927,78 +1927,6 @@
       ],
       "answer": 2,
       "solution": "Located in Madhya Pradesh."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Speed Time Distance",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A man walks at 5 km/h for 6 hours and then at 4 km/h for 4 hours. What is his average speed?",
-      "options": [
-        "4.8 km/h",
-        "5 km/h",
-        "4.6 km/h",
-        "4.5 km/h"
-      ],
-      "answer": 2,
-      "solution": "Total distance = 30 + 16 = 46 km. Total time = 10 hours. Average = 4.6 km/h"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Ratio & Proportion",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "₹4200 is divided among A, B, C such that A gets 2/3 of what B gets and B gets 3/4 of what C gets. What is C's share?",
-      "options": [
-        "₹1800",
-        "₹1200",
-        "₹1500",
-        "₹2000"
-      ],
-      "answer": 0,
-      "solution": "A = (2/3)B, B = (3/4)C. A = (2/3)(3/4)C = (1/2)C. Total = (1/2)C + (3/4)C + C = (2+3+4)/4 × C = 9C/4 = 4200. C = 1866.67. Not matching exactly... 9C/4 = 4200 → C = 4200×4/9 = 1866.67. Not in options."
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Percentage",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A shopkeeper gives 3 successive discounts of 10%, 15% and 20%. What is the net discount percentage?",
-      "options": [
-        "45%",
-        "38.8%",
-        "40%",
-        "35%"
-      ],
-      "answer": 1,
-      "solution": "Net multiplier = 0.90 × 0.85 × 0.80 = 0.612. Discount = 38.8%"
-    },
-    {
-      "id": 104,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "What was the day of the week on 15th August 1947?",
-      "options": [
-        "Sunday",
-        "Saturday",
-        "Friday",
-        "Thursday"
-      ],
-      "answer": 2,
-      "solution": "Using odd day method: 1947 Aug 15 → odd days = 1. Hence Friday"
     }
   ],
   "seed": 54589439

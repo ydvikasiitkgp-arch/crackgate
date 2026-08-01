@@ -55,7 +55,7 @@
       "stem": "Vibration analysis of transformer detects:",
       "options": [
         "Loose parts, winding deformation, core issues",
-        "Applicable in limited scenarios",
+        "Winding resistance increase",
         "Phase shift measurement",
         "Magnetic circuit analysis"
       ],
@@ -65,20 +65,20 @@
     {
       "id": "wcl-afel-16-003",
       "subject": "Electrical Engineering",
-      "topic": "Substation Equipment — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Frequency Response Analysis (FRA) of transformer is done to:",
+      "stem": "For electrical machinery and plant, the competent person for inspection under CMR 2017 shall be an engineer or electrician holding qualifications specified in:",
       "options": [
-        "Measure oil quality",
-        "Detect winding deformation or displacement",
-        "Test insulation",
-        "Check connections"
+        "IS 732",
+        "CEA (Measures relating to Safety and Electric Supply) Regulations, 2010",
+        "The Electricity Act 2003",
+        "The Factories Act 1948"
       ],
       "answer": 1,
-      "solution": "FRA: compares frequency fingerprint to detect mechanical changes"
+      "solution": "CMR 2017 Reg 213(6): the competent person for electrical machinery holds qualifications as specified in the CEA Safety & Electric Supply Regulations, 2010."
     },
     {
       "id": "wcl-afel-16-004",
@@ -217,7 +217,7 @@
       "stem": "Protection class CT secondary burden includes:",
       "options": [
         "Relay resistance, cable resistance, and connections",
-        "Applicable in limited scenarios",
+        "CT saturation margin",
         "Distance protection",
         "Over frequency protection"
       ],
@@ -468,10 +468,10 @@
       "difficulty": "medium",
       "stem": "Vector control (FOC) in VFD provides:",
       "options": [
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
+        "Only voltage control",
+        "Only speed control",
         "Independent control of torque and flux",
-        "Works under ideal conditions only"
+        "Only starting"
       ],
       "answer": 2,
       "solution": "FOC: Field Oriented Control, decouples torque and flux"
@@ -540,9 +540,9 @@
       "difficulty": "medium",
       "stem": "PLC (Programmable Logic Controller) uses:",
       "options": [
-        "Applicable in limited scenarios",
+        "Analog control only",
         "Ladder logic or function block programming",
-        "Works under ideal conditions only",
+        "No logic control",
         "No programming"
       ],
       "answer": 1,
@@ -558,9 +558,9 @@
       "difficulty": "medium",
       "stem": "SCADA system provides:",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "Only data logging",
+        "Only alarm annunciation",
+        "Only manual control",
         "Supervisory control and data acquisition across plant"
       ],
       "answer": 3,
@@ -576,10 +576,10 @@
       "difficulty": "medium",
       "stem": "HMI (Human Machine Interface) displays:",
       "options": [
-        "Required only for specific cases",
+        "Only alarms",
         "Process variables and operator controls on screen",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only historical trends",
+        "Only reports"
       ],
       "answer": 1,
       "solution": "HMI: visual process display for operator interaction"
@@ -596,8 +596,8 @@
       "options": [
         "No networking",
         "Continuous process control with analog I/O",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Sequential logic only",
+        "Discrete I/O only"
       ],
       "answer": 1,
       "solution": "DCS: designed for continuous processes, analog-heavy"
@@ -687,7 +687,7 @@
         "Bearing faults, imbalance, misalignment, looseness",
         "Insulation testing",
         "Torque measurement",
-        "Applicable in limited scenarios"
+        "Frequency measurement"
       ],
       "answer": 0,
       "solution": "Vibration: mechanical condition monitoring"
@@ -702,7 +702,7 @@
       "difficulty": "medium",
       "stem": "Motor current signature analysis (MCSA) detects:",
       "options": [
-        "Applicable in limited scenarios",
+        "Cable capacitance",
         "Rotor bar faults, bearing issues, eccentricity from current spectrum",
         "Speed regulation only",
         "Torque measurement"
@@ -738,7 +738,7 @@
       "difficulty": "medium",
       "stem": "Line reactor on VFD input reduces:",
       "options": [
-        "Applicable in limited scenarios",
+        "Motor torque",
         "Motor speed",
         "Output voltage",
         "Input current harmonics and improves waveform"
@@ -756,7 +756,7 @@
       "difficulty": "medium",
       "stem": "DC link capacitor in VFD stores:",
       "options": [
-        "Applicable in limited scenarios",
+        "Motor flux",
         "No energy",
         "AC energy only",
         "Energy for smooth DC bus voltage"
@@ -774,10 +774,10 @@
       "difficulty": "medium",
       "stem": "IGBT in VFD inverter switches:",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Supply voltage directly",
+        "Motor current directly",
         "DC bus voltage to produce variable frequency AC",
-        "Required only for specific cases"
+        "Load torque directly"
       ],
       "answer": 2,
       "solution": "IGBT: fast switching of DC to create PWM AC output"
@@ -792,9 +792,9 @@
       "difficulty": "medium",
       "stem": "PWM (Pulse Width Modulation) in VFD controls:",
       "options": [
-        "Applicable in limited scenarios",
+        "Motor flux only",
         "Output voltage and frequency to motor",
-        "Works under ideal conditions only",
+        "Output current only",
         "Input current"
       ],
       "answer": 1,
@@ -857,20 +857,20 @@
     {
       "id": "wcl-afel-16-047",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "PLC scan cycle consists of:",
+      "stem": "Under CMR 2017, a thorough inspection of all machinery and plant in use is required at least once in every:",
       "options": [
-        "Input scan, program execution, output scan, housekeeping",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "7 days, recorded in a bound paged book",
+        "14 days",
+        "1 month",
+        "24 hours"
       ],
       "answer": 0,
-      "solution": "Scan: read inputs → execute program → write outputs → housekeeping"
+      "solution": "CMR 2017 Reg 213(5): a competent person thoroughly inspects all machinery and plant at least once in 7 days, recording results in a bound paged book."
     },
     {
       "id": "wcl-afel-16-048",
@@ -882,10 +882,10 @@
       "difficulty": "medium",
       "stem": "PLC digital input typically accepts:",
       "options": [
-        "Applicable in limited scenarios",
+        "24V DC signals only",
         "24V DC or 230V AC signals",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "230V DC signals",
+        "Only 5V signals"
       ],
       "answer": 1,
       "solution": "Digital input: 24VDC or 230VAC for discrete signals"
@@ -900,10 +900,10 @@
       "difficulty": "medium",
       "stem": "PLC analog input typically accepts:",
       "options": [
-        "Applicable in limited scenarios",
+        "0-24V signals",
         "4-20mA or 0-10V signals",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "On-off signals",
+        "Pneumatic signals"
       ],
       "answer": 1,
       "solution": "Analog input: 4-20mA (current loop) or 0-10V"
@@ -936,10 +936,10 @@
       "difficulty": "medium",
       "stem": "HART protocol superimposes:",
       "options": [
-        "Applicable in limited scenarios",
+        "Analog signal on digital signal",
         "Digital signal on 4-20mA analog signal",
         "No signal",
-        "Works under ideal conditions only"
+        "Power supply on signal line"
       ],
       "answer": 1,
       "solution": "HART: Frequency Shift Keying on 4-20mA loop"
@@ -965,20 +965,20 @@
     {
       "id": "wcl-afel-16-053",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Profibus is used for:",
+      "stem": "In a gassy seam of the second or third degree, no person shall supervise or operate electrical machinery unless he:",
       "options": [
-        "Factory automation communication",
-        "Works under ideal conditions only",
-        "No purpose",
-        "Applicable in limited scenarios"
+        "Wears a yellow helmet",
+        "Holds a Surveyor's certificate",
+        "Has 5 years of experience",
+        "Holds a gas-testing certificate and carries an approved flame safety lamp"
       ],
-      "answer": 0,
-      "solution": "Profibus: industrial fieldbus for factory/process automation"
+      "answer": 3,
+      "solution": "CMR 2017 Reg 213(2): in 2nd/3rd-degree gassy seams, operators of electrical machinery (other than telephones/signals/lamps) hold a gas-testing certificate and carry an approved flame safety lamp."
     },
     {
       "id": "wcl-afel-16-054",
@@ -1027,9 +1027,9 @@
       "stem": "OPC UA is a standard for:",
       "options": [
         "No standard",
-        "Applicable in limited scenarios",
+        "Only within one vendor",
         "Industrial communication interoperability",
-        "Works under ideal conditions only"
+        "Only in substations"
       ],
       "answer": 2,
       "solution": "OPC UA: platform-independent industrial communication"
@@ -1064,7 +1064,7 @@
       "options": [
         "Overload, short circuit, earth fault, unbalance, underload, temp",
         "Efficiency calculation",
-        "Applicable in limited scenarios",
+        "Frequency conversion",
         "Speed regulation only"
       ],
       "answer": 0,
@@ -1109,38 +1109,38 @@
     {
       "id": "wcl-afel-16-061",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Star-delta starter transition from star to delta causes:",
+      "stem": "As per DGMS Circular 2/2010, strata and dump slope monitoring is mandatory for dumps exceeding ______ in height.",
       "options": [
-        "Voltage drop only",
-        "No effect",
-        "Smooth transition",
-        "Brief interruption and current spike"
+        "30 m",
+        "100 m",
+        "15 m",
+        "60 m"
       ],
       "answer": 3,
-      "solution": "Open transition: momentary interruption causes current spike"
+      "solution": "DGMS Circular 2/2010: monitoring (including slope stability radar / real-time monitoring) is made mandatory for dumps exceeding 60 m height."
     },
     {
       "id": "wcl-afel-16-062",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Closed transition star-delta uses:",
+      "stem": "If the percentage of inflammable gas in the general body of air exceeds ______, persons shall be withdrawn from the working.",
       "options": [
-        "No resistance",
-        "Capacitor",
-        "Resistance during transition to limit current spike",
-        "Inductor"
+        "5%",
+        "1.25%",
+        "0.5%",
+        "2.5%"
       ],
-      "answer": 2,
-      "solution": "Closed transition: resistors limit inrush during switching"
+      "answer": 1,
+      "solution": "CMR 2017 Reg 166: persons are withdrawn when the general body of air exceeds 1.25% inflammable gas."
     },
     {
       "id": "wcl-afel-16-063",
@@ -1163,20 +1163,20 @@
     {
       "id": "wcl-afel-16-064",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "VFD skip frequencies avoid:",
+      "stem": "Approaching a goaf, probing shall be carried out ahead of the working for at least:",
       "options": [
-        "Mechanical resonance of motor/load system",
-        "Electrical resonance only",
-        "Applicable in limited scenarios",
-        "Voltage spikes only"
+        "3 m",
+        "5 m",
+        "1.5 m",
+        "0.5 m"
       ],
-      "answer": 0,
-      "solution": "Skip: avoids frequencies causing mechanical resonance"
+      "answer": 2,
+      "solution": "CMR 2017 Reg 147: the working is probed ahead for at least 1.5 m beyond the last support before approaching the goaf."
     },
     {
       "id": "wcl-afel-16-065",
@@ -1188,10 +1188,10 @@
       "difficulty": "medium",
       "stem": "VFD acceleration ramp time affects:",
       "options": [
-        "Required only for specific cases",
+        "Only deceleration",
         "How quickly motor reaches target speed",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Only overload",
+        "Only starting torque"
       ],
       "answer": 1,
       "solution": "Accel ramp: time to go from 0 to rated speed"
@@ -1207,9 +1207,9 @@
       "stem": "VFD deceleration ramp time affects:",
       "options": [
         "How quickly motor stops from full speed",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Acceleration rate",
+        "Starting torque",
+        "Overload current"
       ],
       "answer": 0,
       "solution": "Decel ramp: time to go from rated speed to 0"
@@ -1224,10 +1224,10 @@
       "difficulty": "medium",
       "stem": "Motor runaway prevention in VFD uses:",
       "options": [
-        "Applicable in limited scenarios",
-        "Speed regulation only",
+        "Rotor position only",
+        "Current limiting only",
         "Overfrequency detection and torque limiting",
-        "Torque measurement"
+        "Output frequency only"
       ],
       "answer": 2,
       "solution": "Overfrequency: detects and limits motor overspeed"
@@ -1253,56 +1253,56 @@
     {
       "id": "wcl-afel-16-069",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Motor power factor correction capacitor should be rated for:",
+      "stem": "While driving approaching old or waterlogged workings, advance boreholes shall be kept at least ______ ahead of the face.",
       "options": [
-        "Lower voltage",
-        "Higher voltage due to harmonics from VFD",
-        "Same as motor",
-        "Normal voltage only"
+        "0.5 m",
+        "3 m",
+        "1 m",
+        "6 m"
       ],
       "answer": 1,
-      "solution": "VFD harmonics: capacitor must handle harmonic voltages"
+      "solution": "CMR 2017 Reg 163: at least 3 advance boreholes not less than 3 m ahead of the face, with flank holes within 5 m on either side."
     },
     {
       "id": "wcl-afel-16-070",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Input filter for VFD in hospital/lab application:",
+      "stem": "DGMS (Tech.) (S&T) Circular No. 02 of 2010 deals with:",
       "options": [
-        "No filter needed",
-        "EMC filter to prevent conducted emissions",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "Shaft sinking procedures",
+        "Ventilation planning",
+        "Use of diesel equipment belowground",
+        "Design, control and monitoring of pit and dump slopes in opencast mines"
       ],
-      "answer": 1,
-      "solution": "EMC: prevents VFD switching noise from affecting sensitive loads"
+      "answer": 3,
+      "solution": "DGMS (Tech.) (S&T) Circular No. 02 dated 06.07.2010 concerns design, control and monitoring of pit and dump slopes in opencast mines."
     },
     {
       "id": "wcl-afel-16-071",
       "subject": "Electrical Engineering",
-      "topic": "Drives & Control — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Motor insulation stress from VFD is caused by:",
+      "stem": "A rescue-trained person shall practise with breathing apparatus at least:",
       "options": [
-        "Applicable in limited scenarios",
-        "Speed regulation only",
-        "dv/dt of PWM pulses and reflected wave phenomenon",
-        "Torque measurement"
+        "8 times a year, of which 4 in mines",
+        "Once a month",
+        "12 times a year",
+        "4 times a year, of which 2 in mines"
       ],
-      "answer": 2,
-      "solution": "High dv/dt + cable reflection -> voltage spikes at motor terminals"
+      "answer": 0,
+      "solution": "MRR 1985: rescue-trained persons practise with breathing apparatus at least 8 times a year, including 4 practices in the mine."
     },
     {
       "id": "wcl-afel-16-072",
@@ -1325,20 +1325,20 @@
     {
       "id": "wcl-afel-16-073",
       "subject": "Electrical Engineering",
-      "topic": "Cables & OHL — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Thump test for cable fault uses:",
+      "stem": "Every mechanised outlet (shaft or incline) is examined at least once in every 7 days by:",
       "options": [
-        "Low voltage only",
-        "High voltage surge to create audible/visible fault location",
-        "Current measurement only",
-        "No equipment"
+        "An engineer, electrical supervisor or foreman, or a competent person authorised by the engineer",
+        "Only the manager",
+        "The winding engineman",
+        "Any workman"
       ],
-      "answer": 1,
-      "solution": "Thump: HV surge arcs at fault, creates sound/flash"
+      "answer": 0,
+      "solution": "CMR 2017 Reg 75(2): mechanised outlets are examined at least once in 7 days by an engineer, electrical supervisor or foreman (or authorised competent person), recorded in a bound paged book."
     },
     {
       "id": "wcl-afel-16-074",
@@ -1351,9 +1351,9 @@
       "stem": "Cable ampacity calculation per IEC 60502 considers:",
       "options": [
         "Conductor size, insulation, ambient temp, soil resistivity",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Frequency only",
+        "Voltage only",
+        "Current only"
       ],
       "answer": 0,
       "solution": "IEC 60502: thermal analysis with derating factors"
@@ -1397,20 +1397,20 @@
     {
       "id": "wcl-afel-16-077",
       "subject": "Electrical Engineering",
-      "topic": "Cables & OHL — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "Flexible trailing cable in mines has:",
+      "stem": "In gassy mines, electric lighting from a source external to the lighting unit may be used on any roadway or place:",
       "options": [
-        "No armour",
-        "Applicable in limited scenarios",
-        "Rigid construction",
-        "Extra flexibility, flame retardant, mechanical protection"
+        "Within 100 m of the face",
+        "In return air only",
+        "At any place without restriction",
+        "Ventilated by intake air or not within 270 m of the nearest face"
       ],
       "answer": 3,
-      "solution": "Mining trailing cable: flexible, FR, steel wire armour"
+      "solution": "CMR 2017 Reg 176(1): external-source electric lighting is permitted on intake-air roadways or places not within 270 m of the nearest face."
     },
     {
       "id": "wcl-afel-16-078",
@@ -1451,20 +1451,20 @@
     {
       "id": "wcl-afel-16-080",
       "subject": "Electrical Engineering",
-      "topic": "Cables & OHL — Advanced",
+      "topic": "Legislation — Electrical Safety",
       "section": "technical",
       "type": "mcq",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "OHL conductor sag calculation formula uses:",
+      "stem": "Every engine, motor, transformer and battery-charging room on the surface of a mine shall be provided with at least:",
       "options": [
-        "Applicable in limited scenarios",
-        "Catenary equation or parabolic approximation",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Two exits, properly maintained and kept free from obstruction",
+        "One exit only",
+        "Three doors for ventilation",
+        "An emergency window"
       ],
-      "answer": 1,
-      "solution": "Sag = wL²/8T (parabolic approximation for small sag/span)"
+      "answer": 0,
+      "solution": "CMR 2017 Reg 212: such rooms are kept clean and provided with at least two exits, properly maintained and free from obstruction."
     },
     {
       "id": "wcl-afel-16-g001",

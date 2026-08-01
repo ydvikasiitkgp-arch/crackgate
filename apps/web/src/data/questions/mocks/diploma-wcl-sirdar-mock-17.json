@@ -11,13 +11,38 @@
     "Duration: 120 minutes",
     "No negative marking",
     "Each question carries 1 mark",
-    "Section A: 20 General Awareness (Q1-Q20)",
-    "Section B: 80 Technical (Q21-Q100)",
+    "Section B: 80 Technical (Q1-Q80)",
+    "Section A: 20 General Awareness (Q81-Q100)",
     "Select the best answer for each question"
   ],
   "sections": [
     {
       "name": "Section A — General Awareness",
+      "questions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Section B — Technical",
       "questions": [
         1,
         2,
@@ -38,12 +63,7 @@
         17,
         18,
         19,
-        20
-      ]
-    },
-    {
-      "name": "Section B — Technical",
-      "questions": [
+        20,
         21,
         22,
         23,
@@ -103,27 +123,7 @@
         77,
         78,
         79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
+        80
       ]
     }
   ],
@@ -174,9 +174,9 @@
       "difficulty": "easy",
       "stem": "The 'slurry concentration' in hydraulic stowing affects",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "The colour of the sand",
+        "The pump brand",
+        "The pipe diameter",
         "The density and settling characteristics of the fill material"
       ],
       "answer": 3,
@@ -194,8 +194,8 @@
       "options": [
         "Floor is stable",
         "Floor rises due to stress redistribution or water",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The roof sinks",
+        "The pillars shrink"
       ],
       "answer": 1,
       "solution": "Floor heave occurs when floor rises due to stress or water."
@@ -211,8 +211,8 @@
       "stem": "The 'ventilation system design' considers",
       "options": [
         "Regulate air temperature only",
-        "Affects only intake shafts",
-        "Works only in surface mines",
+        "The colour of the strata",
+        "The number of benches",
         "Mine layout, gas emissions, and safety requirements"
       ],
       "answer": 3,
@@ -230,8 +230,8 @@
       "options": [
         "No precautions",
         "Casing and pressure monitoring to prevent blowout",
-        "No monitoring",
-        "Applicable in limited scenarios"
+        "Drilling without any record",
+        "Only a paint mark at the collar"
       ],
       "answer": 1,
       "solution": "Boreholes near old workings need casing and pressure monitoring."
@@ -338,7 +338,7 @@
       "options": [
         "Used for charging detonators",
         "Used for roof bolting only",
-        "Nothing specific",
+        "The depth of the mine office",
         "The type of explosive and rock conditions"
       ],
       "answer": 3,
@@ -373,9 +373,9 @@
       "stem": "The 'stowing pipeline wear' is affected by",
       "options": [
         "Material hardness, velocity, and pipeline material",
-        "Required only for specific cases",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "The colour of the slurry",
+        "The number of bends in the shaft",
+        "The depth of the mine"
       ],
       "answer": 0,
       "solution": "Pipeline wear depends on material hardness, velocity, and pipe material."
@@ -391,8 +391,8 @@
       "stem": "A man riding vehicle must have its capacity marked as",
       "options": [
         "Maximum capacity clearly marked",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The name of the driver",
+        "The engine number",
         "No marking"
       ],
       "answer": 0,
@@ -401,20 +401,20 @@
     {
       "id": 16,
       "subject": "Technical (Mining)",
-      "topic": "Support",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'roof monitoring' in SCAMP includes",
+      "stem": "Under the Mines Rescue Rules 1985, the breathing apparatus kept at a rescue station or rescue room shall:",
       "options": [
-        "Control dust emissions",
-        "No monitoring",
-        "Regular observation, convergence measurement, and stress monitoring",
-        "Support conveyor belts"
+        "Be of the same type and make",
+        "Be of different types for flexibility",
+        "Be imported only",
+        "Be replaced every month"
       ],
-      "answer": 2,
-      "solution": "Roof monitoring includes observation, convergence, and stress measurement."
+      "answer": 0,
+      "solution": "MRR 1985, Rule 11(4): breathing apparatus at a rescue station/room must be of the same type and make for interchangeability."
     },
     {
       "id": 17,
@@ -445,9 +445,9 @@
       "stem": "The 'fire hose reel' in mines must be",
       "options": [
         "Accessible and tested regularly",
-        "Optional",
-        "Not required",
-        "Applicable in limited scenarios"
+        "Stored in the head office",
+        "Used only for the annual drill",
+        "Painted over with bitumen"
       ],
       "answer": 0,
       "solution": "Fire hose reels must be accessible and regularly tested."
@@ -462,10 +462,10 @@
       "difficulty": "medium",
       "stem": "The 'ripping height' in underground mines depends on",
       "options": [
-        "Applicable in limited scenarios",
+        "The height of the office ceiling",
         "Fixed height",
         "Seam thickness, equipment height, and ventilation requirements",
-        "Works under ideal conditions only"
+        "The depth of the sump"
       ],
       "answer": 2,
       "solution": "Ripping height depends on seam, equipment, and ventilation needs."
@@ -552,10 +552,10 @@
       "difficulty": "medium",
       "stem": "The 'manual stowing' method involves",
       "options": [
-        "Applicable in limited scenarios",
+        "Blasting the material into the goaf",
         "Workers placing waste material by hand in the goaf",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Pumping sand through pipelines",
+        "Conveying material with loaders"
       ],
       "answer": 1,
       "solution": "Workers placing waste material by hand."
@@ -570,9 +570,9 @@
       "difficulty": "easy",
       "stem": "The 'overhand stoping' method involves working",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "Downward from a vertical shaft",
+        "Sideways along the strike",
+        "From the surface to the seam",
         "Upward from a horizontal floor"
       ],
       "answer": 3,
@@ -588,13 +588,13 @@
       "difficulty": "medium",
       "stem": "The sirdar must ensure that all workers under his charge",
       "options": [
-        "Applicable in limited scenarios",
+        "Are medically examined",
         "Have proper training",
         "Are above 18 years of age",
         "Hold competency certificates"
       ],
-      "answer": 0,
-      "solution": "All requirements must be met."
+      "answer": 1,
+      "solution": "The sirdar must ensure that all workers under his charge have proper training as required under the Mines Vocational Training Rules, 1966."
     },
     {
       "id": 27,
@@ -607,7 +607,7 @@
       "stem": "The 'medical examination' of mine rescue team members must be conducted",
       "options": [
         "Once in 5 years",
-        "Applicable in limited scenarios",
+        "Only when a rescue is reported",
         "Never",
         "At regular intervals as prescribed"
       ],
@@ -624,7 +624,7 @@
       "difficulty": "hard",
       "stem": "The 'canopy support' in continuous miner operations provides",
       "options": [
-        "Applicable in limited scenarios",
+        "Permanent shaft lining",
         "No support",
         "Temporary roof support at the working face",
         "Control dust emissions"
@@ -679,9 +679,9 @@
       "stem": "A 'CO detector' in a mine is used to detect",
       "options": [
         "Carbon monoxide - an indicator of fire or heating",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Oxygen - to enrich the air",
+        "Nitrogen - to cool the face",
+        "Methane - to raise the calorific value"
       ],
       "answer": 0,
       "solution": "Carbon monoxide - indicator of fire or heating."
@@ -696,9 +696,9 @@
       "difficulty": "medium",
       "stem": "The Mines Rescue Rules, 1985 deal with",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only",
+        "The colour of the rescue uniforms",
+        "The wages of the rescue men",
+        "The size of the rescue rooms",
         "Organization and training of mine rescue teams"
       ],
       "answer": 3,
@@ -732,10 +732,10 @@
       "difficulty": "hard",
       "stem": "The 'dust suppression' in ventilation helps to",
       "options": [
-        "Not important",
+        "Increase the air speed",
         "Increase dust",
         "Reduce airborne dust concentration",
-        "Remove harmful gases and dust"
+        "Heat the intake air"
       ],
       "answer": 2,
       "solution": "Dust suppression reduces airborne dust in ventilation."
@@ -750,10 +750,10 @@
       "difficulty": "easy",
       "stem": "A 'stowing pipe' in hydraulic stowing is used to",
       "options": [
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
+        "Cool the underground workings",
+        "Illuminate the stowing face",
         "Transport the stowing mixture from surface to underground",
-        "Works under ideal conditions only"
+        "Hoist coal in the shaft"
       ],
       "answer": 2,
       "solution": "Transports stowing mixture from surface to underground."
@@ -768,9 +768,9 @@
       "difficulty": "easy",
       "stem": "The winding engine must be provided with a",
       "options": [
-        "Works under ideal conditions only",
+        "A device for measuring air velocity",
         "No recording device",
-        "Applicable in limited scenarios",
+        "A device for recording coal output",
         "Speed recording device"
       ],
       "answer": 3,
@@ -797,20 +797,20 @@
     {
       "id": 38,
       "subject": "Technical (Mining)",
-      "topic": "Stowing",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "hard",
-      "stem": "The 'stowing safety' measures include",
+      "difficulty": "medium",
+      "stem": "A shot-firer who has not been employed in blasting duties for more than 6 months shall undergo:",
       "options": [
-        "No safety measures",
-        "Pipeline integrity, dam stability, and personnel safety",
-        "Reduce equipment maintenance",
-        "Improve ventilation efficiency"
+        "Fresh initial training of 1 month",
+        "Retraining in the handling of explosives before resuming such duties",
+        "No retraining",
+        "A written test only"
       ],
       "answer": 1,
-      "solution": "Safety measures include pipeline integrity, dam stability, and personnel safety."
+      "solution": "MVTR 1966, Rule 13: retraining in handling of explosives is required after an absence from such duties exceeding 6 months."
     },
     {
       "id": 39,
@@ -859,8 +859,8 @@
       "stem": "A winding engine must have two independent braking systems that",
       "options": [
         "Can each independently stop and hold the fully loaded cage",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Are operated by the same lever",
+        "Work only on Sundays",
         "Work together"
       ],
       "answer": 0,
@@ -878,8 +878,8 @@
       "options": [
         "No signal",
         "Proper signaling system between the landing and winding engine house",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only"
+        "A single bell at the surface",
+        "A colour code painted on the wall"
       ],
       "answer": 1,
       "solution": "A proper signaling system is required."
@@ -897,7 +897,7 @@
         "Not needed",
         "Increase drilling speed",
         "Prevent borehole collapse and control water inflow",
-        "Applicable in limited scenarios"
+        "Improve the colour of the drill water"
       ],
       "answer": 2,
       "solution": "Casing prevents collapse and controls water inflow."
@@ -933,7 +933,7 @@
         "Any value",
         "As prescribed to prevent contact with roof and sides",
         "Zero",
-        "Applicable in limited scenarios"
+        "Equal to the tub width"
       ],
       "answer": 1,
       "solution": "As prescribed to prevent contact."
@@ -995,20 +995,20 @@
     {
       "id": 49,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
-      "difficulty": "easy",
-      "stem": "The maximum charge per delay in underground coal mines is limited to",
+      "difficulty": "medium",
+      "stem": "As per the Mines Rescue Rules 1985, a rescue station shall be under the charge of a Superintendent assisted by at least:",
       "options": [
-        "10 kg",
-        "20 kg",
-        "5 kg",
-        "1 kg"
+        "2 instructors and a rescue brigade of at least 18 rescue-trained persons",
+        "1 instructor and 10 persons",
+        "4 instructors and 50 persons",
+        "1 officer and 5 persons"
       ],
-      "answer": 2,
-      "solution": "Maximum charge per delay is limited to 5 kg in underground coal mines."
+      "answer": 0,
+      "solution": "MRR 1985: a rescue station has a Superintendent, at least 2 instructors and a rescue brigade of at least 18 rescue-trained persons."
     },
     {
       "id": 50,
@@ -1021,7 +1021,7 @@
       "stem": "Under CMR 2017, the sirdar shall examine the working place",
       "options": [
         "At the commencement of each shift",
-        "Applicable in limited scenarios",
+        "Only when the manager is away",
         "Once a month",
         "Once a week"
       ],
@@ -1075,8 +1075,8 @@
       "stem": "Mine fires can be classified as",
       "options": [
         "Not classified",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "Fires of the first and second class",
+        "Fires of the third and fourth class",
         "Surface fires and underground fires"
       ],
       "answer": 3,
@@ -1110,10 +1110,10 @@
       "difficulty": "hard",
       "stem": "The 'depth indicator' of a winding engine must show",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
+        "The weather forecast",
+        "The fan speed",
         "The position of the cage within 1 meter accuracy",
-        "Nothing specific"
+        "The quantity of coal wound"
       ],
       "answer": 2,
       "solution": "Position of the cage within 1 meter accuracy."
@@ -1129,9 +1129,9 @@
       "stem": "A man riding system must have a signaling system that is",
       "options": [
         "Clearly audible and visible",
-        "Applicable in limited scenarios",
-        "Required only for specific cases",
-        "Works under ideal conditions only"
+        "Fitted only at the pit top",
+        "Operated only by the manager",
+        "Audible only at the pit bottom"
       ],
       "answer": 0,
       "solution": "Clearly audible and visible."
@@ -1147,7 +1147,7 @@
       "stem": "The 'traverse closure' error should be within",
       "options": [
         "Acceptable limits as per survey regulations",
-        "Not important",
+        "A matter of choice",
         "Zero error",
         "No limit"
       ],
@@ -1219,9 +1219,9 @@
       "stem": "The 'storage' of reports in a mine must comply with",
       "options": [
         "CMR 2017 requirements for record retention",
-        "Include personal opinions",
+        "The preference of the typist",
         "No requirement",
-        "Skip executive summary"
+        "The length of the report"
       ],
       "answer": 0,
       "solution": "CMR 2017 requirements for record retention."
@@ -1236,10 +1236,10 @@
       "difficulty": "easy",
       "stem": "The 'fire alarm pull station' in mines must be",
       "options": [
-        "Optional",
-        "Applicable in limited scenarios",
+        "Fitted only in the lamp room",
+        "Painted in the office",
         "Located at strategic points and tested regularly",
-        "Not required"
+        "Fitted only on the surface"
       ],
       "answer": 2,
       "solution": "Pull stations must be at strategic points and tested."
@@ -1247,20 +1247,20 @@
     {
       "id": 63,
       "subject": "Technical (Mining)",
-      "topic": "Danger of Inundation",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'water dam drainage system' is designed to",
+      "stem": "DGMS (Tech.) (S&T) Circular No. 02 of 2010 deals with:",
       "options": [
-        "Applicable in limited scenarios",
-        "Not needed",
-        "Increase water pressure",
-        "Control seepage and prevent uncontrolled drainage"
+        "Shaft sinking procedures",
+        "Ventilation planning",
+        "Use of diesel equipment belowground",
+        "Design, control and monitoring of pit and dump slopes in opencast mines"
       ],
       "answer": 3,
-      "solution": "Drainage systems control seepage and prevent uncontrolled flow."
+      "solution": "DGMS (Tech.) (S&T) Circular No. 02 dated 06.07.2010 concerns design, control and monitoring of pit and dump slopes in opencast mines."
     },
     {
       "id": 64,
@@ -1272,10 +1272,10 @@
       "difficulty": "hard",
       "stem": "The 'mechanical stowing' method uses",
       "options": [
-        "Applicable in limited scenarios",
+        "Hand picking by workers",
         "Water",
         "Conveyors, loaders, and other mechanical equipment",
-        "Works under ideal conditions only"
+        "Blasting the material in"
       ],
       "answer": 2,
       "solution": "Mechanical stowing uses equipment like conveyors and loaders."
@@ -1327,9 +1327,9 @@
       "stem": "The cutting height of a continuous miner depends on",
       "options": [
         "The seam thickness and machine design",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "The number of tubs in the pit",
+        "The colour of the seam",
+        "The depth of the shaft"
       ],
       "answer": 0,
       "solution": "Depends on seam thickness and machine design."
@@ -1381,7 +1381,7 @@
       "stem": "A 'rescue equipment' must be checked",
       "options": [
         "Once a year",
-        "Applicable in limited scenarios",
+        "Only after a major emergency",
         "Before each use and maintained in good condition",
         "Never"
       ],
@@ -1398,9 +1398,9 @@
       "difficulty": "hard",
       "stem": "The 'stowing dam design' must consider",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "Required only for specific cases",
+        "The colour of the slurry",
+        "The pump brand",
+        "The pipe diameter",
         "Water pressure, material load, and stability"
       ],
       "answer": 3,
@@ -1416,10 +1416,10 @@
       "difficulty": "easy",
       "stem": "The 'traffic management plan' must cover",
       "options": [
-        "Applicable in limited scenarios",
+        "Only the main gate",
         "All mine roads, intersections, work areas",
-        "Works under ideal conditions only",
-        "Required only for specific cases"
+        "Only the office car park",
+        "Only the coal stockyard"
       ],
       "answer": 1,
       "solution": "Traffic management covers all roads and work areas."
@@ -1434,9 +1434,9 @@
       "difficulty": "easy",
       "stem": "The 'fire alarm' in mines must be",
       "options": [
-        "Not required",
-        "Applicable in limited scenarios",
-        "Optional",
+        "Fitted only in the office",
+        "Audible only at the pit bottom",
+        "Connected to the canteen bell",
         "Audible throughout the mine and connected to surface"
       ],
       "answer": 3,
@@ -1445,20 +1445,20 @@
     {
       "id": 74,
       "subject": "Technical (Mining)",
-      "topic": "Mine Rescue",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'rescue team training' covers",
+      "stem": "A rescue-trained person shall practise with breathing apparatus at least:",
       "options": [
-        "Gas detection, casualty handling, fire fighting, communication",
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "No training needed"
+        "8 times a year, of which 4 in mines",
+        "Once a month",
+        "12 times a year",
+        "4 times a year, of which 2 in mines"
       ],
       "answer": 0,
-      "solution": "Training covers detection, handling, fighting, communication."
+      "solution": "MRR 1985: rescue-trained persons practise with breathing apparatus at least 8 times a year, including 4 practices in the mine."
     },
     {
       "id": 75,
@@ -1471,7 +1471,7 @@
       "stem": "When the sirdar finds an imminent danger, he must",
       "options": [
         "Order immediate withdrawal of persons and report",
-        "Applicable in limited scenarios",
+        "Complete the shift's production first",
         "Wait for instructions",
         "Continue work"
       ],
@@ -1481,20 +1481,20 @@
     {
       "id": 76,
       "subject": "Technical (Mining)",
-      "topic": "Explosives & Blasting",
+      "topic": "Legal Provisions",
       "section": "Section B — Technical",
       "type": "MCQ",
       "marks": 1,
       "difficulty": "medium",
-      "stem": "The 'explosive density' affects",
+      "stem": "A rescue room is required at a mine where the number of persons employed belowground exceeds 100 and:",
       "options": [
-        "Used for rock bolting operations",
-        "Used for roof support",
-        "Used for roof bolting only",
-        "Energy output per unit volume and borehole loading"
+        "The mine produces less than 100 tonnes a day",
+        "There is no electricity",
+        "There is no rescue station within 35 km",
+        "The mine is opencast only"
       ],
-      "answer": 3,
-      "solution": "Explosive density affects energy output and loading efficiency."
+      "answer": 2,
+      "solution": "MRR 1985: a rescue room is required when more than 100 persons work belowground and no rescue station is within 35 km."
     },
     {
       "id": 77,
@@ -1542,10 +1542,10 @@
       "difficulty": "medium",
       "stem": "The 'ventilation of a longwall face' is typically done using",
       "options": [
-        "Maintain pressure differentials",
-        "Provide fresh air to working faces",
+        "A single ventilation door",
+        "Provide fresh air to the surface offices",
         "A combination of intake airways, return airways, and possibly bleeder systems",
-        "Affects only intake shafts"
+        "One portable fan per face"
       ],
       "answer": 2,
       "solution": "Combination of intake, return, and possibly bleeder systems."
@@ -1558,14 +1558,14 @@
       "type": "MCQ",
       "marks": 1,
       "difficulty": "hard",
-      "stem": "The 'traffic management plan' must cover",
+      "stem": "The 'haul road' in an opencast mine must be",
       "options": [
-        "Applicable in limited scenarios",
-        "Works under ideal conditions only",
-        "All mine roads, intersections, work areas",
-        "Required only for specific cases"
+        "Of adequate width, gradient, and maintenance for safe traffic",
+        "Of the same width as the office road",
+        "Paved with coal fines only",
+        "Used only by pedestrians"
       ],
-      "answer": 2,
+      "answer": 0,
       "solution": "Traffic management covers all roads and work areas."
     },
     {
@@ -1704,10 +1704,10 @@
       "difficulty": "easy",
       "stem": "The 'flue gas desulphurization' (FGD) removes",
       "options": [
-        "Affects only intake shafts",
-        "Reduces air velocity below limits",
+        "Carbon dioxide from the coal face",
+        "Dust from the haul roads",
         "Sulphur dioxide from power plant emissions",
-        "Works only in surface mines"
+        "Methane from the goaf"
       ],
       "answer": 2,
       "solution": "Removes SO2 from power plant emissions."
@@ -1778,7 +1778,7 @@
       "options": [
         "Mining of bauxite",
         "Extraction of iron ore",
-        "Affects only intake shafts",
+        "The Ministry of Defence",
         "Ministry of Coal and CIL"
       ],
       "answer": 3,
@@ -1848,9 +1848,9 @@
       "difficulty": "hard",
       "stem": "The 'Make in India' initiative promotes",
       "options": [
-        "Applicable in limited scenarios",
-        "Nothing specific",
-        "Works under ideal conditions only",
+        "Import of second-hand machinery",
+        "Renting foreign equipment",
+        "Banning domestic production",
         "Indigenous manufacturing of mining equipment"
       ],
       "answer": 3,
@@ -1927,60 +1927,6 @@
       ],
       "answer": 0,
       "solution": "Earth rotates in approximately 24 hours."
-    },
-    {
-      "id": 101,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Profit & Loss",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "A商品被标价高于成本价60%。若给予25%折扣，利润百分比是多少？",
-      "options": [
-        "25%",
-        "10%",
-        "15%",
-        "20%"
-      ],
-      "answer": 3,
-      "solution": "MP = 1.60 × CP, SP = 0.75 × 1.60 × CP = 1.20 × CP → 20% profit"
-    },
-    {
-      "id": 102,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Average",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "The average of 6 observations is 12. If one observation of 15 is replaced by 21, what is the new average?",
-      "options": [
-        "13",
-        "12.5",
-        "13.5",
-        "14"
-      ],
-      "answer": 0,
-      "solution": "Original sum = 72. New sum = 72 - 15 + 21 = 78. New average = 78/6 = 13"
-    },
-    {
-      "id": 103,
-      "subject": "Technical (Mining)",
-      "topic": "Quantitative — Calendar",
-      "section": "Section A — General Awareness",
-      "type": "MCQ",
-      "marks": 1,
-      "difficulty": "medium",
-      "stem": "How many times do the hands of a clock form a right angle in a day?",
-      "options": [
-        "48",
-        "44",
-        "24",
-        "22"
-      ],
-      "answer": 1,
-      "solution": "The hands are at right angle 22 times in 12 hours. So 44 times in 24 hours"
     }
   ],
   "seed": 84300459
