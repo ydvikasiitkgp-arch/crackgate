@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { getAdminSession } from "@/lib/admin";
+import { getAdminSession, getTestUserIds } from "@/lib/admin";
 import { db } from "@/lib/db";
 import NewsletterPageClient from "./newsletter-page-client";
 
@@ -12,7 +12,8 @@ export default async function AdminNewsletterPage() {
     redirect("/login?next=/admin/newsletter");
   }
 
-  const [subRows, userRows, userCount] = await Promise.all([
+  const [testUserIds, subRows, userRows] = await Promise.all([
+    getTestUserIds(),
     db.newsletterSubscriber.findMany({
       where: { unsubscribed: false },
       orderBy: { subscribedAt: "desc" },
@@ -22,6 +23,7 @@ export default async function AdminNewsletterPage() {
       orderBy: { createdAt: "desc" },
       take: 5000,
       select: {
+        id: true,
         email: true,
         name: true,
         phone: true,
@@ -30,15 +32,22 @@ export default async function AdminNewsletterPage() {
         entitlements: { select: { tier: true }, where: { expiry: { gt: new Date() } } },
       },
     }),
-    db.user.count(),
   ]);
 
-  const userEmailToPlan = new Map(userRows.map((u) => [u.email, u.plan]));
-  const userEmailToPaid = new Map(
-    userRows.map((u) => [u.email, u.entitlements.length > 0]),
+  const testEmails = new Set(userRows.filter((u) => testUserIds.has(u.id)).map((u) => u.email));
+
+  const subscriberRows = subRows.filter((r) => !testEmails.has(r.email));
+  const subscriberEmails = new Set(subscriberRows.map((r) => r.email));
+  const userRowsFiltered = userRows.filter(
+    (u) => !testEmails.has(u.email) && !subscriberEmails.has(u.email),
   );
 
-  const subscribers = subRows.map((r) => ({
+  const userEmailToPlan = new Map(userRowsFiltered.map((u) => [u.email, u.plan]));
+  const userEmailToPaid = new Map(
+    userRowsFiltered.map((u) => [u.email, u.entitlements.length > 0]),
+  );
+
+  const subscribers = subscriberRows.map((r) => ({
     email: r.email,
     source: r.source,
     subscribedAt: r.subscribedAt.toISOString(),
@@ -48,7 +57,7 @@ export default async function AdminNewsletterPage() {
     isPaid: userEmailToPaid.get(r.email) ?? false,
   }));
 
-  const users = userRows.map((r) => ({
+  const users = userRowsFiltered.map((r) => ({
     email: r.email,
     name: r.name,
     phone: r.phone,
@@ -78,7 +87,7 @@ export default async function AdminNewsletterPage() {
         subscribers={subscribers}
         subscriberCount={subscribers.length}
         users={users}
-        userCount={userCount}
+        userCount={users.length}
         shareholderEmails={shareholderEmails}
       />
     </div>
