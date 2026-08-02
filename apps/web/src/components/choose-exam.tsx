@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { whatsappLink } from "@/lib/contact";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { type ExamTrack } from "@/data/catalog";
 
 /* ─── Real data, no fabrication ─── */
@@ -364,7 +364,7 @@ export function ChooseExam({ firstName }: { firstName: string }) {
             </p>
           </div>
           <a
-            href={whatsappLink("Hi, I'm interested in CrackGate. Can you help me pick the right exam prep?")}
+            href={WHATSAPP_COMMUNITY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 badge bg-emerald-500 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-emerald-400 transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"

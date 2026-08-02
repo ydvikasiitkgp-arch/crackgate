@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import QRCode from "qrcode";
 import { db } from "@/lib/db";
-import { whatsappLink } from "@/lib/contact";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { subjectPrice, subjectLabel } from "@/data/catalog";
 import { calculateComboDiscounts } from "@/lib/combos";
 import CheckoutForm from "./form";
@@ -432,9 +432,7 @@ export default async function CheckoutPage() {
 
             {/* WhatsApp help — compact */}
             <a
-              href={whatsappLink(
-                `Hi! I need help with my cart checkout (₹${amountRupees}) UPI payment.`,
-              )}
+              href={WHATSAPP_COMMUNITY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="card p-3 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer group"

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { whatsappLink } from "@/lib/contact";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 
 type Props = {
   plan: "pro" | "premium";
@@ -150,9 +150,7 @@ export default function UpiClaimForm({
             Back to dashboard
           </button>
           <a
-            href={whatsappLink(
-              `Hi! I just submitted my ${plan} UPI payment (₹${amountRupees}). My phone: ${payerPhone.trim()}`,
-            )}
+            href={WHATSAPP_COMMUNITY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-ghost w-full text-sm"

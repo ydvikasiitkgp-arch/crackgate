@@ -1,13 +1,11 @@
 "use client";
 
-/** Floating WhatsApp chat button — bottom-right on every page.
- *  Reads NEXT_PUBLIC_WHATSAPP_NUMBER (E.164 without '+'). */
-export function WhatsAppButton() {
-  const num = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-  if (!num) return null;
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 
-  const msg = encodeURIComponent("Hi CrackGate team — I have a question about your prep platform.");
-  const href = `https://wa.me/${num}?text=${msg}`;
+/** Floating WhatsApp chat button — bottom-right on every page.
+ *  Points to the CrackGate WhatsApp community group. */
+export function WhatsAppButton() {
+  const href = WHATSAPP_COMMUNITY_URL;
 
   return (
     <a

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { whatsappLink } from "@/lib/contact";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { useCart } from "@/hooks/use-cart";
 import {
   Tag,
@@ -239,9 +239,7 @@ export default function CheckoutForm({
             Go to Homepage
           </button>
           <a
-            href={whatsappLink(
-              `Hi! I just submitted my cart UPI payment (₹${finalAmountRupees}, ${items.length} items). My phone: ${payerPhone.trim()}`,
-            )}
+            href={WHATSAPP_COMMUNITY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl border border-line bg-surface px-6 py-3 text-sm font-semibold text-ink hover:bg-canvas transition flex items-center justify-center gap-2"

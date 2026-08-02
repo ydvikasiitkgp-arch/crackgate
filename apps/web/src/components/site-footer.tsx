@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/brand";
+import { SocialLinks } from "@/components/social-icons";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-20 bg-slate-900 text-slate-300">
+    <footer className="relative mt-20 bg-slate-900 text-slate-300">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/60 to-transparent" />
       <div className="max-w-7xl mx-auto px-5 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-2 font-extrabold text-white">
@@ -16,6 +18,9 @@ export function SiteFooter() {
           <p className="text-sm mt-3 text-slate-400 max-w-xs">
             India's dedicated GATE &amp; PSU test prep. Full-length mocks, topic-wise practice, SWOT analytics.
           </p>
+          <div className="mt-4">
+            <SocialLinks dark size="sm" />
+          </div>
         </div>
         <FooterCol title="Resources">
           <FooterLink href="/blog">Blog</FooterLink>

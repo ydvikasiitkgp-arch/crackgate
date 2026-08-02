@@ -219,7 +219,7 @@ export default function CartPage() {
 
               {/* Help card */}
               <a
-                href="https://wa.me/919876543210?text=Hi!%20I%20need%20help%20with%20my%20cart."
+                href="https://chat.whatsapp.com/D0bRgzW1YPHH76Gu1PTsUI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card p-4 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer group"
