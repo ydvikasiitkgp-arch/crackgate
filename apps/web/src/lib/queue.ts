@@ -181,6 +181,10 @@ export function startWorkers() {
       const wrapped = newsletterHtml(html);
       const result = await sendNewsletter({ subject, html: wrapped, recipients });
       await persistNewsletterSend(subject, result.items);
+      await db.newsletterSchedule.updateMany({
+        where: { jobId: job.id, status: "scheduled" },
+        data: { status: "processed" },
+      });
     },
     { connection: getRedis(), concurrency: 1 },
   );

@@ -71,15 +71,24 @@ export async function POST(request: Request) {
   }
 
   try {
-    await newsletterQueue.add("send", jobData, { delay });
+    const scheduledJob = await newsletterQueue.add("send", jobData, { delay });
+    const record = await db.newsletterSchedule.create({
+      data: {
+        subject,
+        html,
+        recipients: (jobData.recipients ?? []) as unknown as object[],
+        scheduledAt: scheduledDate,
+        jobId: scheduledJob.id,
+      },
+    });
+    return NextResponse.json({
+      recipients: recipientCount,
+      scheduled: true,
+      scheduledFor: scheduledDate.toISOString(),
+      scheduleId: record.id,
+    });
   } catch (err) {
     console.error("[newsletter/schedule]", err);
     return NextResponse.json({ error: "schedule_failed", sent: 0, failed: recipientCount }, { status: 500 });
   }
-
-  return NextResponse.json({
-    recipients: recipientCount,
-    scheduled: true,
-    scheduledFor: scheduledDate.toISOString(),
-  });
 }

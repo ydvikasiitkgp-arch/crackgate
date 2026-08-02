@@ -288,6 +288,21 @@ model NewsletterSendItem {
   @@index([sendId])
 }
 
+model NewsletterSchedule {
+  id          String   @id @default(cuid())
+  subject     String
+  html        String   @db.Text
+  recipients  Json     // NewsletterRecipient[]: { email, name? }
+  scheduledAt DateTime
+  jobId       String?
+  status      String   @default("scheduled") // scheduled | processed
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([status])
+  @@index([scheduledAt])
+}
+
 model QuestionReport {
   id          String    @id @default(cuid())
   userId      String
