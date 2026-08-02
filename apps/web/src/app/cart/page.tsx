@@ -10,7 +10,6 @@ import {
   Sparkles,
   ShieldCheck,
   Clock,
-  MessageCircle,
   Tag,
   Zap,
 } from "lucide-react";
@@ -216,26 +215,6 @@ export default function CartPage() {
                   </div>
                 )}
               </div>
-
-              {/* Help card */}
-              <a
-                href="https://chat.whatsapp.com/D0bRgzW1YPHH76Gu1PTsUI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card p-4 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer group"
-              >
-                <div className="flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 group-hover:bg-brand/15 transition">
-                  <MessageCircle className="w-4.5 h-4.5 text-brand" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-ink">
-                    Need help choosing?
-                  </p>
-                  <p className="text-[11px] text-muted">
-                    Chat with us on WhatsApp
-                  </p>
-                </div>
-              </a>
             </div>
           </aside>
         )}
