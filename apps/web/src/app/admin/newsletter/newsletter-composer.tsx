@@ -4,6 +4,14 @@ import { useState, useEffect } from "react";
 
 type SendMode = "instant" | "schedule";
 
+interface SendResult {
+  recipients: number;
+  sent: number;
+  failed: number;
+  sendId: string;
+  items: { email: string; ok: boolean; error: string | null }[];
+}
+
 export default function NewsletterComposer({
   subscriberCount,
   selectedEmails,
@@ -11,6 +19,7 @@ export default function NewsletterComposer({
   userSelectedCount = 0,
   additionalCount = 0,
   shareholdersCount = 0,
+  onSent,
 }: {
   subscriberCount: number;
   selectedEmails: Map<string, string | null>;
@@ -18,14 +27,17 @@ export default function NewsletterComposer({
   userSelectedCount?: number;
   additionalCount?: number;
   shareholdersCount?: number;
+  onSent?: () => void;
 }) {
   const [subject, setSubject] = useState("");
   const [html, setHtml] = useState("");
   const [mode, setMode] = useState<SendMode>("instant");
   const [scheduledAt, setScheduledAt] = useState("");
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<string | null>(null);
+  const [result, setResult] = useState<SendResult | null>(null);
+  const [resultMessage, setResultMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [showOnlyFailed, setShowOnlyFailed] = useState(false);
 
   const [drafts, setDrafts] = useState<string[]>([]);
   const [selectedDraft, setSelectedDraft] = useState("");
@@ -92,6 +104,7 @@ export default function NewsletterComposer({
   async function send() {
     setError(null);
     setResult(null);
+    setResultMessage(null);
 
     if (!subject.trim()) { setError("Subject is required."); return; }
     if (!html.trim()) { setError("Content is required."); return; }
@@ -120,14 +133,19 @@ export default function NewsletterComposer({
       }
 
       if (mode === "instant") {
-        setResult(`Sent to ${data.recipients} subscribers · ${data.sent} delivered, ${data.failed} failed.`);
-      } else {
-        setResult(`Scheduled for ${new Date(data.scheduledFor).toLocaleString()} · ${data.recipients} recipients.`);
-      }
-
-      if (mode === "instant") {
+        setResult({
+          recipients: data.recipients,
+          sent: data.sent,
+          failed: data.failed,
+          sendId: data.sendId,
+          items: data.items ?? [],
+        });
+        onSent?.();
         setSubject("");
         setHtml("");
+      } else {
+        setResult(null);
+        setResultMessage(`Scheduled for ${new Date(data.scheduledFor).toLocaleString()} · ${data.recipients} recipients.`);
       }
     } catch {
       setError("Network error. Try again.");
@@ -288,8 +306,76 @@ export default function NewsletterComposer({
           </div>
 
           {error && <p className="text-sm text-bad mt-2">{error}</p>}
-          {result && <p className="text-sm text-ok mt-2">{result}</p>}
+          {resultMessage && <p className="text-sm text-ok mt-2">{resultMessage}</p>}
+          {result && <SendResults result={result} showOnlyFailed={showOnlyFailed} setShowOnlyFailed={setShowOnlyFailed} />}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function SendResults({
+  result,
+  showOnlyFailed,
+  setShowOnlyFailed,
+}: {
+  result: SendResult;
+  showOnlyFailed: boolean;
+  setShowOnlyFailed: (v: boolean) => void;
+}) {
+  const failedItems = result.items.filter((i) => !i.ok);
+  const visible = showOnlyFailed ? failedItems : result.items;
+
+  return (
+    <div className="border-t border-line pt-4">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-3 text-sm">
+          <span className="font-bold text-ok">{result.sent} delivered</span>
+          <span className="text-muted">·</span>
+          <span className={failedItems.length ? "font-bold text-bad" : "font-bold text-ok"}>
+            {result.failed} failed
+          </span>
+          <span className="text-muted">·</span>
+          <span className="text-muted">{result.recipients} recipients</span>
+        </div>
+        <button
+          onClick={() => setShowOnlyFailed(!showOnlyFailed)}
+          className="text-xs font-semibold rounded-lg border border-line px-3 py-1.5 hover:border-brand transition-colors"
+        >
+          {showOnlyFailed ? "Show all" : `Show failed only (${failedItems.length})`}
+        </button>
+      </div>
+
+      <div className="mt-3 max-h-72 overflow-y-auto rounded-lg border border-line">
+        <table className="w-full text-left text-xs">
+          <thead className="sticky top-0 bg-canvas text-muted">
+            <tr>
+              <th className="px-3 py-2 font-semibold">Status</th>
+              <th className="px-3 py-2 font-semibold">Email</th>
+              <th className="px-3 py-2 font-semibold">Error</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-line">
+            {visible.map((i) => (
+              <tr key={i.email} className="align-top">
+                <td className="px-3 py-2 whitespace-nowrap">
+                  {i.ok ? (
+                    <span className="text-ok font-semibold">✓ Delivered</span>
+                  ) : (
+                    <span className="text-bad font-semibold">✗ Failed</span>
+                  )}
+                </td>
+                <td className="px-3 py-2 font-mono break-all">{i.email}</td>
+                <td className="px-3 py-2 text-muted break-words">{i.ok ? "—" : (i.error ?? "unknown error")}</td>
+              </tr>
+            ))}
+            {visible.length === 0 && (
+              <tr>
+                <td colSpan={3} className="px-3 py-4 text-center text-muted italic">No failures 🎉</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </div>
   );
