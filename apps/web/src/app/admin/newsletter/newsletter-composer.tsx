@@ -20,6 +20,7 @@ export default function NewsletterComposer({
   additionalCount = 0,
   shareholdersCount = 0,
   onSent,
+  onScheduled,
 }: {
   subscriberCount: number;
   selectedEmails: Map<string, string | null>;
@@ -28,6 +29,7 @@ export default function NewsletterComposer({
   additionalCount?: number;
   shareholdersCount?: number;
   onSent?: () => void;
+  onScheduled?: () => void;
 }) {
   const [subject, setSubject] = useState("");
   const [html, setHtml] = useState("");
@@ -145,7 +147,10 @@ export default function NewsletterComposer({
         setHtml("");
       } else {
         setResult(null);
-        setResultMessage(`Scheduled for ${new Date(data.scheduledFor).toLocaleString()} · ${data.recipients} recipients.`);
+        setResultMessage(
+          `Email “${subject.trim()}” scheduled for ${new Date(data.scheduledFor).toLocaleString()} · ${data.recipients} recipients.`,
+        );
+        onScheduled?.();
       }
     } catch {
       setError("Network error. Try again.");

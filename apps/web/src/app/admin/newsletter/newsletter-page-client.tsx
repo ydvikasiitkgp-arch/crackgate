@@ -6,6 +6,7 @@ import RegisteredUsersList from "./registered-users-list";
 import AdditionalEmails from "./additional-emails";
 import NewsletterComposer from "./newsletter-composer";
 import SendHistory from "./send-history";
+import ScheduledSends from "./scheduled-sends";
 
 interface Subscriber {
   email: string;
@@ -44,6 +45,7 @@ export default function NewsletterPageClient({
   const [additionalEmails, setAdditionalEmails] = useState<Map<string, string | null>>(new Map());
   const [includeShareholders, setIncludeShareholders] = useState(false);
   const [sendHistoryKey, setSendHistoryKey] = useState(0);
+  const [scheduleKey, setScheduleKey] = useState(0);
 
   const allSelected = useMemo(() => {
     const merged = new Map<string, string | null>();
@@ -131,8 +133,11 @@ export default function NewsletterPageClient({
           additionalCount={additionalEmails.size}
           shareholdersCount={includeShareholders ? SHAREHOLDER_EMAILS.length : 0}
           onSent={() => setSendHistoryKey((k) => k + 1)}
+          onScheduled={() => setScheduleKey((k) => k + 1)}
         />
       </div>
+
+      <ScheduledSends refreshKey={scheduleKey} />
 
       <SendHistory refreshKey={sendHistoryKey} />
     </>
