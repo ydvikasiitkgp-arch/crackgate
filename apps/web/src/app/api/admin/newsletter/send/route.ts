@@ -4,6 +4,7 @@ import { getAdminSession } from "@/lib/admin";
 import { db } from "@/lib/db";
 import { sendNewsletter, newsletterHtml, type NewsletterRecipient } from "@/lib/resend";
 import { fillMissingNames } from "@/lib/newsletter-recipients";
+import { persistNewsletterSend } from "@/lib/newsletter-sends";
 
 export const dynamic = "force-dynamic";
 
@@ -62,7 +63,12 @@ export async function POST(request: Request) {
   try {
     const wrapped = newsletterHtml(html);
     const result = await sendNewsletter({ subject, html: wrapped, recipients });
-    return NextResponse.json({ ...result, recipients: recipients.length });
+    const send = await persistNewsletterSend(subject, result.items);
+    return NextResponse.json({
+      ...result,
+      recipients: recipients.length,
+      sendId: send.id,
+    });
   } catch (err) {
     console.error("[newsletter/send]", err);
     return NextResponse.json({ error: "send_failed", sent: 0, failed: recipients.length }, { status: 500 });

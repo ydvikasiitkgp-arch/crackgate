@@ -160,6 +160,7 @@ export function startWorkers() {
     async (job: Job<NewsletterJobData>) => {
       const { db } = await import("@/lib/db");
       const { sendNewsletter, newsletterHtml } = await import("@/lib/resend");
+      const { persistNewsletterSend } = await import("@/lib/newsletter-sends");
       const { subject, html, recipients: explicitRecipients } = job.data;
 
       let recipients: NewsletterRecipient[];
@@ -178,7 +179,8 @@ export function startWorkers() {
       recipients = await fillMissingNames(recipients);
 
       const wrapped = newsletterHtml(html);
-      await sendNewsletter({ subject, html: wrapped, recipients });
+      const result = await sendNewsletter({ subject, html: wrapped, recipients });
+      await persistNewsletterSend(subject, result.items);
     },
     { connection: getRedis(), concurrency: 1 },
   );

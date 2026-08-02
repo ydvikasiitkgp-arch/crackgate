@@ -83,9 +83,16 @@ export function personalizeEmail(html: string, recipient: NewsletterRecipient): 
   return html.replaceAll("{{name}}", name);
 }
 
+export interface RecipientSendResult {
+  email: string;
+  ok: boolean;
+  error?: string | null;
+}
+
 export interface SendResult {
   sent: number;
   failed: number;
+  items: RecipientSendResult[];
 }
 
 export async function sendNewsletter(opts: {
@@ -96,8 +103,7 @@ export async function sendNewsletter(opts: {
   const from = process.env.RESEND_FROM_EMAIL ?? "support@crackgate.in";
   const resend = getClient();
   const CONCURRENCY = 10;
-  let sent = 0;
-  let failed = 0;
+  const items: RecipientSendResult[] = [];
 
   for (let i = 0; i < opts.recipients.length; i += CONCURRENCY) {
     const batch = opts.recipients.slice(i, i + CONCURRENCY);
@@ -109,13 +115,17 @@ export async function sendNewsletter(opts: {
           subject: opts.subject,
           html: personalizeEmail(opts.html, recipient),
         });
-        return !error;
+        return {
+          email: recipient.email,
+          ok: !error,
+          error: error?.message ?? null,
+        };
       }),
     );
-
-    sent += results.filter(Boolean).length;
-    failed += results.filter((r) => !r).length;
+    items.push(...results);
   }
 
-  return { sent, failed };
+  const sent = items.filter((r) => r.ok).length;
+  const failed = items.length - sent;
+  return { sent, failed, items };
 }

@@ -263,6 +263,31 @@ model NewsletterSubscriber {
   @@index([subscribedAt(sort: Desc)])
 }
 
+model NewsletterSend {
+  id             String                @id @default(cuid())
+  subject        String
+  recipientCount Int
+  sentCount      Int                   @default(0)
+  failedCount    Int                   @default(0)
+  status         String                @default("completed") // completed | partial | failed
+  sentAt         DateTime              @default(now())
+  items          NewsletterSendItem[]
+
+  @@index([sentAt(sort: Desc)])
+}
+
+model NewsletterSendItem {
+  id     String  @id @default(cuid())
+  sendId String
+  email  String
+  status String  // delivered | failed
+  error  String? @db.Text
+
+  send NewsletterSend @relation(fields: [sendId], references: [id], onDelete: Cascade)
+
+  @@index([sendId])
+}
+
 model QuestionReport {
   id          String    @id @default(cuid())
   userId      String
