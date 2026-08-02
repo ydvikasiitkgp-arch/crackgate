@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { type ExamTrack } from "@/data/catalog";
 
 /* ─── Real data, no fabrication ─── */
@@ -341,6 +342,37 @@ export function ChooseExam({ firstName }: { firstName: string }) {
           </div>
         );
       })}
+
+      {/* ── WhatsApp community CTA ── */}
+      <div className="relative overflow-hidden rounded-2xl border border-line bg-gradient-to-r from-emerald-900/20 to-green-900/20 p-6 sm:p-8">
+        {/* Subtle chat bubble pattern */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.03]">
+          <div className="absolute top-4 left-8 w-16 h-10 rounded-2xl rounded-bl-sm border-2 border-current" />
+          <div className="absolute top-8 left-28 w-20 h-10 rounded-2xl rounded-bl-sm border-2 border-current" />
+          <div className="absolute bottom-4 right-12 w-14 h-10 rounded-2xl rounded-br-sm border-2 border-current" />
+          <div className="absolute bottom-8 right-32 w-18 h-10 rounded-2xl rounded-br-sm border-2 border-current" />
+        </div>
+
+        <div className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex-1">
+            <h3 className="text-base font-extrabold flex items-center gap-2">
+              <span className="text-xl">💬</span>
+              Got questions? Talk to us on WhatsApp
+            </h3>
+            <p className="text-sm text-muted mt-1">
+              Doubts about which exam to pick, pricing, or how the platform works — we reply fast.
+            </p>
+          </div>
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 badge bg-emerald-500 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-emerald-400 transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
 
       {/* ── Trust signals — checkmarks ── */}
       <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted pt-2">

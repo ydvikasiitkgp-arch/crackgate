@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth";
 import QRCode from "qrcode";
 import UpiClaimForm from "./form";
 import { db } from "@/lib/db";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { getCilDiscipline } from "@/data/cil";
 import { getOngcDiscipline } from "@/data/ongc";
 import { getSubject, subjectPrice, type ExamTrack } from "@/data/catalog";
@@ -280,16 +281,17 @@ export default async function PayUpiPage({
             <h3 className="font-bold">Need help?</h3>
             <p className="mt-2 text-sm text-muted">
               Payment stuck, paid the wrong amount, or access not unlocked yet?
-              Write to us at&nbsp;
-              <a
-                href="mailto:support@crackgate.in"
-                className="text-brand hover:underline"
-              >
-                support@crackgate.in
-              </a>
-              &nbsp;— we usually reply within a day.
+              Message us on WhatsApp — we usually reply within minutes.
             </p>
           </div>
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary mt-4 w-full"
+          >
+            💬 Chat with us on WhatsApp
+          </a>
         </div>
       </div>
     </div>

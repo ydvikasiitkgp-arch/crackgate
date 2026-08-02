@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import QRCode from "qrcode";
 import { db } from "@/lib/db";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { subjectPrice, subjectLabel } from "@/data/catalog";
 import { calculateComboDiscounts } from "@/lib/combos";
 import CheckoutForm from "./form";
@@ -428,6 +429,24 @@ export default async function CheckoutPage() {
                 </span>
               </div>
             </div>
+
+            {/* WhatsApp help — compact */}
+            <a
+              href={WHATSAPP_COMMUNITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card p-3 flex items-center gap-3 hover:border-brand/30 transition cursor-pointer group"
+            >
+              <div className="flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 group-hover:bg-brand/15 transition shrink-0">
+                <MessageCircle className="w-4 h-4 text-brand" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs font-semibold text-ink">Need help?</p>
+                <p className="text-[11px] text-muted truncate">
+                  Chat with us on WhatsApp
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

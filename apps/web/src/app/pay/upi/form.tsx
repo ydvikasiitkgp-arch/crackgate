@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 
 type Props = {
   plan: "pro" | "premium";
@@ -148,6 +149,14 @@ export default function UpiClaimForm({
           >
             Back to dashboard
           </button>
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost w-full text-sm"
+          >
+            💬 Any questions? Chat with us on WhatsApp
+          </a>
         </div>
       </div>
     );
