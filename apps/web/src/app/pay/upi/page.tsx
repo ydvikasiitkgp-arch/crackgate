@@ -3,7 +3,7 @@ import { auth } from "@/lib/auth";
 import QRCode from "qrcode";
 import UpiClaimForm from "./form";
 import { db } from "@/lib/db";
-import { whatsappLink } from "@/lib/contact";
+import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { getCilDiscipline } from "@/data/cil";
 import { getOngcDiscipline } from "@/data/ongc";
 import { getSubject, subjectPrice, type ExamTrack } from "@/data/catalog";
@@ -285,9 +285,7 @@ export default async function PayUpiPage({
             </p>
           </div>
           <a
-            href={whatsappLink(
-              `Hi! I need help with my ${displayLabel} (₹${amountRupees}) UPI payment.`,
-            )}
+            href={WHATSAPP_COMMUNITY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary mt-4 w-full"

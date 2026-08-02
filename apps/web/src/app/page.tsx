@@ -3,11 +3,9 @@ import { MOCKS } from "@/data/mocks";
 import { PRACTICE } from "@/data/practice";
 import { getGateSubject } from "@/data/gate/registry";
 import dynamic from "next/dynamic";
-import { WhatsAppButton } from "@/components/whatsapp-button";
-
+import { NewsletterForm } from "@/components/newsletter-form";
 
 const HeroCarousel = dynamic(() => import("@/components/hero-carousel").then((m) => m.HeroCarousel));
-import { NewsletterForm } from "@/components/newsletter-form";
 export const metadata = {
   alternates: { canonical: "/" },
 };
@@ -118,9 +116,6 @@ export default async function HomePage() {
           <NewsletterForm source="landing" />
         </div>
       </section>
-
-      {/* Floating WhatsApp chat — landing page only */}
-      <WhatsAppButton />
     </>
   );
 }
