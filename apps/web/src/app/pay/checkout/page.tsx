@@ -195,8 +195,7 @@ export default async function CheckoutPage() {
           </div>
         </div>
         <p className="text-sm text-muted mt-1">
-          Pay once via UPI — get access to all {items.length} mock
-          {items.length > 1 ? "s" : ""} instantly after verification.
+          Pay once via UPI — unlock everything in your cart instantly after verification.
         </p>
       </div>
 
