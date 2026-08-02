@@ -36,6 +36,10 @@ export function CilDashboard({
     .filter((s) => s.slug === track.subject)
     .sort((a, b) => a.no - b.no);
   const attemptedIds = new Set(attempts.map((a) => a.refId));
+  const attemptByRefId = new Map<string, CilAttempt>();
+  for (const a of attempts) {
+    if (!attemptByRefId.has(a.refId)) attemptByRefId.set(a.refId, a);
+  }
 
   const totalAttempts = attempts.length;
   const avgScore = totalAttempts
@@ -143,11 +147,12 @@ export function CilDashboard({
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-4">
           {sets.map((s) => {
-            const done = attemptedIds.has(s.id);
+            const attempt = attemptByRefId.get(s.id);
+            const done = !!attempt;
             return (
               <Link
                 key={s.id}
-                href={`/mocks/${s.id}`}
+                href={done ? `/result/${attempt!.id}` : `/mocks/${s.id}`}
                 className="rounded-xl border border-line p-4 hover:border-brand hover:shadow-pop transition block"
               >
                 <div className="flex items-center justify-between gap-2">
