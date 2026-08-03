@@ -4,15 +4,12 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { useCart } from "@/hooks/use-cart";
+import PromoCodeBox, { type PromoResult } from "@/components/promo-code-box";
 import {
-  Tag,
-  Check,
   Loader2,
-  X,
   CreditCard,
   ShieldCheck,
   MessageCircle,
-  ChevronDown,
 } from "lucide-react";
 
 type CartItem = {
@@ -31,20 +28,13 @@ type ComboDiscount = {
   savingsPaise: number;
 };
 
-type PromoResult = {
-  code: string;
-  discountPaise: number;
-  label: string;
-  type: string;
-  value: number;
-};
-
 type Props = {
   items: CartItem[];
-  amountRupees: number;
+  totalPaise: number;
   rawTotalPaise: number;
   comboSavingsPaise: number;
   comboDiscounts: ComboDiscount[];
+  initialPromo?: PromoResult | null;
   defaultName?: string;
   defaultPhone?: string;
   defaultEmail?: string;
@@ -54,10 +44,11 @@ const APPS = ["PhonePe", "GPay", "Paytm", "BHIM", "Other"] as const;
 
 export default function CheckoutForm({
   items,
-  amountRupees,
+  totalPaise,
   rawTotalPaise,
   comboSavingsPaise,
   comboDiscounts,
+  initialPromo = null,
   defaultName = "",
   defaultPhone = "",
   defaultEmail = "",
@@ -74,46 +65,10 @@ export default function CheckoutForm({
   const [done, setDone] = useState(false);
 
   // Promo code state
-  const [promoOpen, setPromoOpen] = useState(false);
-  const [promoInput, setPromoInput] = useState("");
-  const [promoLoading, setPromoLoading] = useState(false);
-  const [promoError, setPromoError] = useState<string | null>(null);
-  const [promoResult, setPromoResult] = useState<PromoResult | null>(null);
-
-  async function applyPromo() {
-    const code = promoInput.trim().toUpperCase();
-    if (!code) return;
-    setPromoLoading(true);
-    setPromoError(null);
-    try {
-      const r = await fetch("/api/promo/validate", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ code, subtotalPaise: amountRupees * 100 }),
-      });
-      const data = await r.json();
-      if (!r.ok) {
-        setPromoError(data.error ?? "Invalid code");
-        setPromoResult(null);
-      } else {
-        setPromoResult(data);
-        setPromoError(null);
-      }
-    } catch {
-      setPromoError("Failed to verify code");
-    } finally {
-      setPromoLoading(false);
-    }
-  }
-
-  function removePromo() {
-    setPromoResult(null);
-    setPromoInput("");
-    setPromoError(null);
-  }
+  const [promoResult, setPromoResult] = useState<PromoResult | null>(initialPromo);
 
   const promoDiscountPaise = promoResult?.discountPaise ?? 0;
-  const finalTotalPaise = amountRupees * 100 - promoDiscountPaise;
+  const finalTotalPaise = totalPaise - promoDiscountPaise;
   const finalAmountRupees = Math.round(finalTotalPaise / 100);
 
   const phoneDigits = payerPhone.replace(/[^\d]/g, "");
@@ -397,79 +352,12 @@ export default function CheckoutForm({
         </div>
       </div>
 
-      {/* Promo code — collapsible */}
-      <div className="rounded-xl border border-line overflow-hidden">
-        {promoResult ? (
-          <div className="flex items-center justify-between gap-2 bg-ok/10 border border-ok/30 px-3 py-2.5">
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-ok" />
-              <span className="text-sm font-semibold text-ok">
-                {promoResult.label}
-              </span>
-              <span className="text-xs text-ok/70">
-                — ₹{Math.round(promoDiscountPaise / 100)} off
-              </span>
-            </div>
-            <button
-              type="button"
-              onClick={removePromo}
-              className="text-muted hover:text-err transition p-1 rounded"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          </div>
-        ) : (
-          <>
-            <button
-              type="button"
-              onClick={() => setPromoOpen(!promoOpen)}
-              className="w-full px-3 py-2.5 flex items-center gap-2 text-xs font-semibold text-muted hover:bg-surface/50 transition"
-            >
-              <Tag className="w-3.5 h-3.5" />
-              Have a promo code?
-              <ChevronDown
-                className={`w-3.5 h-3.5 ml-auto transition-transform ${promoOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {promoOpen && (
-              <div className="px-3 pb-3 border-t border-line">
-                <div className="flex gap-2 mt-2">
-                  <input
-                    type="text"
-                    value={promoInput}
-                    onChange={(e) =>
-                      setPromoInput(e.target.value.toUpperCase())
-                    }
-                    placeholder="e.g. FIRST10"
-                    className="input flex-1 text-sm uppercase tracking-wider"
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        e.preventDefault();
-                        applyPromo();
-                      }
-                    }}
-                  />
-                  <button
-                    type="button"
-                    onClick={applyPromo}
-                    disabled={promoLoading || !promoInput.trim()}
-                    className="btn btn-ghost text-sm px-3 shrink-0"
-                  >
-                    {promoLoading ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                    ) : (
-                      "Apply"
-                    )}
-                  </button>
-                </div>
-                {promoError && (
-                  <p className="text-xs text-err mt-1.5">{promoError}</p>
-                )}
-              </div>
-            )}
-          </>
-        )}
-      </div>
+      {/* Promo code */}
+      <PromoCodeBox
+        subtotalPaise={totalPaise}
+        value={promoResult}
+        onChange={setPromoResult}
+      />
 
       {error && (
         <div className="text-xs text-err bg-err/10 border border-err/20 px-3 py-2.5 rounded-lg">

@@ -199,6 +199,12 @@ jobs:
                 run --rm -T web node ./node_modules/prisma/build/index.js migrate deploy --schema=packages/database/prisma/schema.prisma </dev/null
             fi
 
+            # Sync DB admin role for every email in ADMIN_EMAILS so the ADMIN
+            # tag also shows in admin user lists (the env allowlist alone only
+            # covers access + the profile-menu badge). Idempotent; promote-only.
+            docker compose -f docker-compose.aws.yml --env-file .env.production \\
+              run --rm -T web node -e 'const { PrismaClient } = require("./packages/database/src/generated/client"); const p = new PrismaClient(); const emails = (process.env.ADMIN_EMAILS || "").split(",").map(e => e.trim().toLowerCase()).filter(Boolean); p.user.updateMany({ where: { email: { in: emails } }, data: { role: "admin" } }).then(r => console.log("admin role synced:", r.count, "of", emails.length)).catch(e => { console.error(e); process.exit(1); }).finally(() => p.\$disconnect());' </dev/null
+
             # Zero-downtime web swap (Caddy keeps serving during ~5s gap)
             docker compose -f docker-compose.aws.yml --env-file .env.production \\
               up -d --no-deps --force-recreate web

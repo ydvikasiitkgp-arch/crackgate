@@ -31,7 +31,11 @@ type CartItem = {
   pricePaise: number;
 };
 
-export default async function CheckoutPage() {
+export default async function CheckoutPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ promo?: string }>;
+}) {
   let session;
   try {
     session = await auth();
@@ -91,7 +95,33 @@ export default async function CheckoutPage() {
     0,
   );
   const totalPaise = rawTotalPaise - comboSavingsPaise;
-  const amountRupees = Math.round(totalPaise / 100);
+
+  // Validate promo code from ?promo= (read-only; usage is counted at submit)
+  let promoDiscountPaise = 0;
+  let initialPromo: { code: string; discountPaise: number; label: string; type: string; value: number } | null = null;
+  const params = await searchParams;
+  const promoCode = params.promo?.trim().toUpperCase();
+  if (promoCode) {
+    try {
+      const promo = await db.promoCode.findUnique({ where: { code: promoCode } });
+      if (promo && promo.active && (!promo.expiresAt || promo.expiresAt > new Date()) && (promo.maxUses == null || promo.usedCount < promo.maxUses)) {
+        if (promo.type === "percent") {
+          promoDiscountPaise = Math.round(totalPaise * (promo.value / 100));
+        } else {
+          promoDiscountPaise = promo.value;
+        }
+        promoDiscountPaise = Math.min(promoDiscountPaise, totalPaise);
+        const label =
+          promo.type === "percent"
+            ? `${promo.code} — ${promo.value}% off`
+            : `${promo.code} — ₹${Math.round(promo.value / 100)} off`;
+        initialPromo = { code: promo.code, discountPaise: promoDiscountPaise, label, type: promo.type, value: promo.value };
+      }
+    } catch (e) {
+      console.error("[checkout] promo validation failed:", e);
+    }
+  }
+  const qrAmountRupees = Math.round((totalPaise - promoDiscountPaise) / 100);
 
   let me = null;
   try {
@@ -108,7 +138,7 @@ export default async function CheckoutPage() {
 
   const note = `cg-cart-${session.user.id.slice(0, 8)}`;
   const upiUrl = vpa
-    ? `upi://pay?pa=${encodeURIComponent(vpa)}&pn=${encodeURIComponent(payeeName)}&am=${amountRupees}&cu=INR&tn=${encodeURIComponent(note)}`
+    ? `upi://pay?pa=${encodeURIComponent(vpa)}&pn=${encodeURIComponent(payeeName)}&am=${qrAmountRupees}&cu=INR&tn=${encodeURIComponent(note)}`
     : "";
 
   let qrSvg = "";
@@ -218,11 +248,11 @@ export default async function CheckoutPage() {
                   </div>
                   <div className="ml-auto text-right">
                     <p className="text-2xl font-extrabold text-ink tabular-nums">
-                      ₹{amountRupees}
+                      ₹{qrAmountRupees}
                     </p>
-                    {comboSavingsPaise > 0 && (
+                    {(comboSavingsPaise > 0 || promoDiscountPaise > 0) && (
                       <p className="text-xs text-ok font-semibold">
-                        Save ₹{Math.round(comboSavingsPaise / 100)}
+                        Save ₹{Math.round((comboSavingsPaise + promoDiscountPaise) / 100)}
                       </p>
                     )}
                   </div>
@@ -292,10 +322,11 @@ export default async function CheckoutPage() {
                 </div>
                 <CheckoutForm
                   items={items}
-                  amountRupees={amountRupees}
+                  totalPaise={totalPaise}
                   rawTotalPaise={rawTotalPaise}
                   comboSavingsPaise={comboSavingsPaise}
                   comboDiscounts={comboDiscounts}
+                  initialPromo={initialPromo}
                   defaultPhone={me?.phone ?? ""}
                   defaultName={me?.name ?? ""}
                   defaultEmail={me?.email ?? ""}
@@ -374,7 +405,7 @@ export default async function CheckoutPage() {
                       You pay
                     </span>
                     <span className="text-xl font-extrabold text-ink tabular-nums">
-                      ₹{amountRupees}
+                      ₹{qrAmountRupees}
                     </span>
                   </div>
                 </div>
@@ -455,13 +486,13 @@ export default async function CheckoutPage() {
       <div className="fixed bottom-0 left-0 right-0 lg:hidden border-t border-line bg-paper/95 backdrop-blur-md px-5 py-3 z-50 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <div className="flex items-center justify-between gap-4">
           <div>
-            {comboSavingsPaise > 0 && (
+            {(comboSavingsPaise > 0 || promoDiscountPaise > 0) && (
               <p className="text-xs text-ok font-semibold">
-                Save ₹{Math.round(comboSavingsPaise / 100)}
+                Save ₹{Math.round((comboSavingsPaise + promoDiscountPaise) / 100)}
               </p>
             )}
             <p className="text-xl font-extrabold text-ink tabular-nums">
-              ₹{amountRupees}
+              ₹{qrAmountRupees}
             </p>
           </div>
           <a
