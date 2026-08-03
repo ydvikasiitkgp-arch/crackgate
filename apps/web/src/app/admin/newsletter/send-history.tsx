@@ -18,6 +18,8 @@ interface SendItem {
   error: string | null;
 }
 
+type ItemFilter = "all" | SendItem["status"];
+
 function statusBadge(status: SendSummary["status"]) {
   if (status === "failed") return <span className="text-xs font-bold text-bad bg-bad/10 rounded-full px-2.5 py-1">Failed</span>;
   if (status === "partial") return <span className="text-xs font-bold text-amber-600 bg-amber-500/10 rounded-full px-2.5 py-1">Partial</span>;
@@ -30,8 +32,13 @@ export default function SendHistory({ refreshKey }: { refreshKey: number }) {
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [items, setItems] = useState<Map<string, SendItem[]>>(new Map());
   const [loadingItems, setLoadingItems] = useState<Set<string>>(new Set());
+  const [itemFilters, setItemFilters] = useState<Map<string, ItemFilter>>(new Map());
   const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  function setItemFilter(id: string, filter: ItemFilter) {
+    setItemFilters((prev) => new Map(prev).set(id, filter));
+  }
 
   const load = useCallback(async () => {
     try {
@@ -173,6 +180,28 @@ export default function SendHistory({ refreshKey }: { refreshKey: number }) {
                   {loadingItems.has(s.id) ? (
                     <p className="text-xs text-muted">Loading…</p>
                   ) : (
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-xs text-muted">Status:</span>
+                      <div className="flex rounded-lg border border-line p-0.5 bg-canvas text-xs font-medium">
+                        {(["all", "delivered", "failed"] as const).map((f) => {
+                          const current = itemFilters.get(s.id) ?? "all";
+                          return (
+                            <button
+                              key={f}
+                              type="button"
+                              onClick={() => setItemFilter(s.id, f)}
+                              className={`px-3 py-1 rounded-md transition capitalize ${
+                                current === f ? "bg-brand text-white shadow-sm" : "text-muted hover:text-ink"
+                              }`}
+                            >
+                              {f}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                  {!loadingItems.has(s.id) && (
                     <div className="max-h-72 overflow-y-auto rounded-lg border border-line">
                       <table className="w-full text-left text-xs">
                         <thead className="sticky top-0 bg-canvas text-muted">
@@ -183,7 +212,9 @@ export default function SendHistory({ refreshKey }: { refreshKey: number }) {
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-line">
-                          {(items.get(s.id) ?? []).map((i) => (
+                          {(items.get(s.id) ?? [])
+                            .filter((i) => (itemFilters.get(s.id) ?? "all") === "all" || i.status === (itemFilters.get(s.id) ?? "all"))
+                            .map((i) => (
                             <tr key={i.email} className="align-top">
                               <td className="px-3 py-2 whitespace-nowrap">
                                 {i.status === "delivered" ? (
