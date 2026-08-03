@@ -102,27 +102,44 @@ export async function sendNewsletter(opts: {
 }): Promise<SendResult> {
   const from = process.env.RESEND_FROM_EMAIL ?? "support@crackgate.in";
   const resend = getClient();
-  const CONCURRENCY = 10;
+  const BATCH_SIZE = 100;
+  const RETRY_LIMIT = 2;
+  const RETRY_DELAY_MS = 1200;
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const items: RecipientSendResult[] = [];
 
-  for (let i = 0; i < opts.recipients.length; i += CONCURRENCY) {
-    const batch = opts.recipients.slice(i, i + CONCURRENCY);
-    const results = await Promise.all(
-      batch.map(async (recipient) => {
-        const { error } = await resend.emails.send({
-          from,
-          to: [recipient.email],
-          subject: opts.subject,
-          html: personalizeEmail(opts.html, recipient),
-        });
-        return {
-          email: recipient.email,
-          ok: !error,
-          error: error?.message ?? null,
-        };
-      }),
-    );
-    items.push(...results);
+  const valid: NewsletterRecipient[] = [];
+  for (const recipient of opts.recipients) {
+    if (EMAIL_RE.test(recipient.email)) {
+      valid.push(recipient);
+    } else {
+      items.push({ email: recipient.email, ok: false, error: "Invalid email format" });
+    }
+  }
+
+  for (let i = 0; i < valid.length; i += BATCH_SIZE) {
+    const chunk = valid.slice(i, i + BATCH_SIZE);
+    const payload = chunk.map((recipient) => ({
+      from,
+      to: [recipient.email],
+      subject: opts.subject,
+      html: personalizeEmail(opts.html, recipient),
+    }));
+
+    for (let attempt = 0; ; attempt++) {
+      const { error } = await resend.batch.send(payload);
+      if (!error) {
+        items.push(...chunk.map((r) => ({ email: r.email, ok: true, error: null })));
+        break;
+      }
+      const isRateLimit = /too many requests/i.test(error.message ?? "");
+      if (isRateLimit && attempt < RETRY_LIMIT) {
+        await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
+        continue;
+      }
+      items.push(...chunk.map((r) => ({ email: r.email, ok: false, error: error.message ?? null })));
+      break;
+    }
   }
 
   const sent = items.filter((r) => r.ok).length;
