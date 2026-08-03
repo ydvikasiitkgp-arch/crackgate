@@ -95,6 +95,60 @@ export interface SendResult {
   items: RecipientSendResult[];
 }
 
+const BATCH_SIZE = 100;
+const MAX_ATTEMPTS = 5;
+const BASE_DELAY_MS = 400;
+const MAX_DELAY_MS = 10_000;
+const BATCH_SPACING_MS = 120;
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+interface BatchError {
+  message: string;
+  statusCode: number | null;
+  name: string;
+}
+
+/** True for 429 (rate limit) and transient 5xx responses that are safe to retry. */
+export function isRetryableError(error: BatchError): boolean {
+  if (error.statusCode === 429 || error.name === "rate_limit_exceeded") return true;
+  return error.statusCode !== null && error.statusCode >= 500;
+}
+
+/** Honors `retry-after` header or a "retry after N seconds" message when present. */
+export function retryAfterMs(
+  headers: Record<string, string> | null,
+  error: BatchError,
+): number | null {
+  const fromHeader = headers?.["retry-after"];
+  const headerMs = fromHeader ? Number(fromHeader) * 1000 : NaN;
+  if (Number.isFinite(headerMs) && headerMs > 0) return headerMs;
+  const match = /retry (?:after )?(\d+)/i.exec(error.message);
+  const messageMs = match ? Number(match[1]) * 1000 : NaN;
+  return Number.isFinite(messageMs) && messageMs > 0 ? messageMs : null;
+}
+
+async function sendBatchWithRetry(
+  resend: Resend,
+  messages: { from: string; to: string[]; subject: string; html: string }[],
+): Promise<{ data: { id: string }[]; errors: { index: number; message: string }[] }> {
+  let lastError: Error = new Error("unknown send failure");
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const res = await resend.batch.send(messages, { batchValidation: "permissive" });
+    if (!res.error) return res.data;
+    lastError = new Error(res.error.message);
+    if (!isRetryableError(res.error)) break;
+    const backoffMs = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS);
+    const waitMs = retryAfterMs(res.headers, res.error) ?? backoffMs + Math.random() * 200;
+    await sleep(waitMs);
+  }
+  throw new Error(
+    `Resend batch send failed after ${MAX_ATTEMPTS} attempts (rate limit / transient error): ${lastError.message}`,
+  );
+}
+
 export async function sendNewsletter(opts: {
   subject: string;
   html: string;
@@ -102,44 +156,25 @@ export async function sendNewsletter(opts: {
 }): Promise<SendResult> {
   const from = process.env.RESEND_FROM_EMAIL ?? "support@crackgate.in";
   const resend = getClient();
-  const BATCH_SIZE = 100;
-  const RETRY_LIMIT = 2;
-  const RETRY_DELAY_MS = 1200;
-  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const items: RecipientSendResult[] = [];
 
-  const valid: NewsletterRecipient[] = [];
-  for (const recipient of opts.recipients) {
-    if (EMAIL_RE.test(recipient.email)) {
-      valid.push(recipient);
-    } else {
-      items.push({ email: recipient.email, ok: false, error: "Invalid email format" });
-    }
-  }
-
-  for (let i = 0; i < valid.length; i += BATCH_SIZE) {
-    const chunk = valid.slice(i, i + BATCH_SIZE);
-    const payload = chunk.map((recipient) => ({
+  for (let i = 0; i < opts.recipients.length; i += BATCH_SIZE) {
+    const chunk = opts.recipients.slice(i, i + BATCH_SIZE);
+    const messages = chunk.map((recipient) => ({
       from,
       to: [recipient.email],
       subject: opts.subject,
       html: personalizeEmail(opts.html, recipient),
     }));
 
-    for (let attempt = 0; ; attempt++) {
-      const { error } = await resend.batch.send(payload);
-      if (!error) {
-        items.push(...chunk.map((r) => ({ email: r.email, ok: true, error: null })));
-        break;
-      }
-      const isRateLimit = /too many requests/i.test(error.message ?? "");
-      if (isRateLimit && attempt < RETRY_LIMIT) {
-        await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
-        continue;
-      }
-      items.push(...chunk.map((r) => ({ email: r.email, ok: false, error: error.message ?? null })));
-      break;
-    }
+    const result = await sendBatchWithRetry(resend, messages);
+    const failures = new Map(result.errors.map((e) => [e.index, e.message]));
+    chunk.forEach((recipient, idx) => {
+      const error = failures.get(idx);
+      items.push(error ? { email: recipient.email, ok: false, error } : { email: recipient.email, ok: true });
+    });
+
+    if (i + BATCH_SIZE < opts.recipients.length) await sleep(BATCH_SPACING_MS);
   }
 
   const sent = items.filter((r) => r.ok).length;

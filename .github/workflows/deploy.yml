@@ -125,6 +125,7 @@ jobs:
           IMAGE_TAG: ${{ needs.build.outputs.image_tag }}
           SKIP_MIGRATE: ${{ inputs.skip_migrate || 'false' }}
           ADMIN_EMAILS: ${{ vars.ADMIN_EMAILS }}
+          ADMIN_SHAREHOLDER_EMAILS: ${{ vars.ADMIN_SHAREHOLDER_EMAILS }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           IMPERSONATE_SECRET: ${{ secrets.IMPERSONATE_SECRET }}
         run: |
@@ -148,6 +149,17 @@ jobs:
                 sed -i "s|^ADMIN_EMAILS=.*|ADMIN_EMAILS=\"${ADMIN_EMAILS}\"|" .env.production
               else
                 echo "ADMIN_EMAILS=\"${ADMIN_EMAILS}\"" >> .env.production
+              fi
+            fi
+
+            # Sync newsletter "Quick add" shareholder list (GitHub repo variable
+            # ADMIN_SHAREHOLDER_EMAILS). Only when non-empty so a missing CI var
+            # never wipes a host-set value.
+            if [ -n "${ADMIN_SHAREHOLDER_EMAILS}" ]; then
+              if grep -q '^ADMIN_SHAREHOLDER_EMAILS=' .env.production; then
+                sed -i "s|^ADMIN_SHAREHOLDER_EMAILS=.*|ADMIN_SHAREHOLDER_EMAILS=\"${ADMIN_SHAREHOLDER_EMAILS}\"|" .env.production
+              else
+                echo "ADMIN_SHAREHOLDER_EMAILS=\"${ADMIN_SHAREHOLDER_EMAILS}\"" >> .env.production
               fi
             fi
 
