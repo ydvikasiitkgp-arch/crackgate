@@ -18,25 +18,32 @@ import { useCart, type ComboDiscount } from "@/hooks/use-cart";
 import { WHATSAPP_COMMUNITY_URL } from "@/lib/contact";
 import { CATALOG } from "@/data/catalog";
 import { AddToCartBtn } from "@/components/add-to-cart-btn";
+import PromoCodeBox, { type PromoResult } from "@/components/promo-code-box";
 
 function formatPrice(paise: number) {
-  return `₹${(paise / 100).toLocaleString("en-IN")}`;
+  return `₹${Math.round(paise / 100).toLocaleString("en-IN")}`;
 }
 
 export default function CartPage() {
   const { items, rawTotalPaise, totalPaise, count, loading, removeItem, clearCart, syncToServer, refetch, comboDiscounts, comboSavingsPaise, loggedIn } = useCart();
   const [tab, setTab] = useState<"cart" | "browse">("browse");
+  const [promo, setPromo] = useState<PromoResult | null>(null);
   const router = useRouter();
 
+  const promoDiscountPaise = promo?.discountPaise ?? 0;
+  const finalTotalPaise = totalPaise - promoDiscountPaise;
+  const promoSubtotalPaise = totalPaise;
+
   function handleCheckout() {
+    const checkoutUrl = `/pay/checkout${promo ? `?promo=${encodeURIComponent(promo.code)}` : ""}`;
     if (!loggedIn) {
-      router.push("/login?next=/cart");
+      router.push(`/login?next=${encodeURIComponent(checkoutUrl)}`);
       return;
     }
     // Don't block navigation on sync — server component validates cart + auth.
     // Items from addItem() already hit the server; this is a safety net.
     syncToServer();
-    router.push("/pay/checkout");
+    router.push(checkoutUrl);
   }
 
   const liveExams = CATALOG.map((exam) => ({
@@ -83,7 +90,10 @@ export default function CartPage() {
               comboDiscounts={comboDiscounts}
               comboSavingsPaise={comboSavingsPaise}
               rawTotalPaise={rawTotalPaise}
-              totalPaise={totalPaise}
+              promo={promo}
+              promoSubtotalPaise={promoSubtotalPaise}
+              onPromoChange={setPromo}
+              finalTotalPaise={finalTotalPaise}
               onCheckout={handleCheckout}
             />
           )}
@@ -186,13 +196,31 @@ export default function CartPage() {
                           </div>
                         </>
                       )}
+                      {promoDiscountPaise > 0 && (
+                        <div className="flex items-center justify-between text-xs text-ok font-medium">
+                          <span className="flex items-center gap-1">
+                            <Tag className="w-3 h-3" /> {promo!.code}
+                          </span>
+                          <span className="tabular-nums">
+                            -{formatPrice(promoDiscountPaise)}
+                          </span>
+                        </div>
+                      )}
                       <div className="flex items-center justify-between pt-1.5 border-t border-line">
                         <span className="text-sm font-bold text-ink">Total</span>
                         <span className="text-xl font-extrabold text-ink tabular-nums">
-                          {formatPrice(totalPaise)}
+                          {formatPrice(finalTotalPaise)}
                         </span>
                       </div>
                     </div>
+
+                    {/* Promo code */}
+                    <PromoCodeBox
+                      subtotalPaise={promoSubtotalPaise}
+                      value={promo}
+                      onChange={setPromo}
+                      compact
+                    />
 
                     {/* Checkout CTA */}
                     <button
@@ -293,7 +321,10 @@ function CartContents({
   comboDiscounts,
   comboSavingsPaise,
   rawTotalPaise,
-  totalPaise,
+  promo,
+  promoSubtotalPaise,
+  onPromoChange,
+  finalTotalPaise,
   onCheckout,
 }: {
   items: { id: string; exam: string; subject: string; label: string; plan: string; pricePaise: number }[];
@@ -304,10 +335,14 @@ function CartContents({
   comboDiscounts: ComboDiscount[];
   comboSavingsPaise: number;
   rawTotalPaise: number;
-  totalPaise: number;
+  promo: PromoResult | null;
+  promoSubtotalPaise: number;
+  onPromoChange: (p: PromoResult | null) => void;
+  finalTotalPaise: number;
   onCheckout: () => void;
 }) {
   const [clearing, setClearing] = useState(false);
+  const promoDiscountPaise = promo?.discountPaise ?? 0;
 
   async function handleClear() {
     setClearing(true);
@@ -428,13 +463,28 @@ function CartContents({
             </div>
           </>
         )}
+        {promoDiscountPaise > 0 && (
+          <div className="flex items-center justify-between text-sm text-ok font-medium">
+            <span className="flex items-center gap-1.5">
+              <Tag className="w-3.5 h-3.5" /> {promo!.code}
+            </span>
+            <span className="tabular-nums">-{formatPrice(promoDiscountPaise)}</span>
+          </div>
+        )}
         <div className="flex items-center justify-between pt-2 border-t border-line">
           <span className="text-sm font-bold text-ink">Total</span>
           <span className="text-xl font-extrabold text-ink tabular-nums">
-            {formatPrice(totalPaise)}
+            {formatPrice(finalTotalPaise)}
           </span>
         </div>
       </div>
+
+      {/* Promo code */}
+      <PromoCodeBox
+        subtotalPaise={promoSubtotalPaise}
+        value={promo}
+        onChange={onPromoChange}
+      />
 
       {/* Checkout CTA */}
       <div className="flex flex-col sm:flex-row gap-3 mt-4">
