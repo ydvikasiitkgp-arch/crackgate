@@ -34,7 +34,8 @@ type Props = {
   rawTotalPaise: number;
   comboSavingsPaise: number;
   comboDiscounts: ComboDiscount[];
-  initialPromo?: PromoResult | null;
+  promoResult: PromoResult | null;
+  onPromoChange: (promo: PromoResult | null) => void;
   defaultName?: string;
   defaultPhone?: string;
   defaultEmail?: string;
@@ -48,7 +49,8 @@ export default function CheckoutForm({
   rawTotalPaise,
   comboSavingsPaise,
   comboDiscounts,
-  initialPromo = null,
+  promoResult,
+  onPromoChange,
   defaultName = "",
   defaultPhone = "",
   defaultEmail = "",
@@ -63,9 +65,6 @@ export default function CheckoutForm({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
-
-  // Promo code state
-  const [promoResult, setPromoResult] = useState<PromoResult | null>(initialPromo);
 
   const promoDiscountPaise = promoResult?.discountPaise ?? 0;
   const finalTotalPaise = totalPaise - promoDiscountPaise;
@@ -356,7 +355,7 @@ export default function CheckoutForm({
       <PromoCodeBox
         subtotalPaise={totalPaise}
         value={promoResult}
-        onChange={setPromoResult}
+        onChange={onPromoChange}
       />
 
       {error && (
