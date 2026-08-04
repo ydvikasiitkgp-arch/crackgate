@@ -107,13 +107,13 @@ export async function GET() {
       take: 10_000,
     }),
     // ponytail: raw SQL with date_trunc — avoids fetching 50K rows for timeseries
-    db.$queryRaw<{ date: string; count: bigint }[]>`
+    db.$queryRaw<{ date: Date; count: bigint }[]>`
       SELECT DATE("createdAt") as date, COUNT(DISTINCT COALESCE("userId", "ip", 'anon')) as count
       FROM "PageView" WHERE "createdAt" >= ${since30}
       GROUP BY DATE("createdAt") ORDER BY date
     `,
     // Total pageviews per day (last 60 days) — all visits, not distinct visitors
-    db.$queryRaw<{ date: string; count: bigint }[]>`
+    db.$queryRaw<{ date: Date; count: bigint }[]>`
       SELECT DATE("createdAt") as date, COUNT(*) as count
       FROM "PageView" WHERE "createdAt" >= ${since60}
       AND ("userId" IS NULL OR "userId" NOT IN (SELECT id FROM "User" WHERE role = 'admin'))
@@ -165,7 +165,7 @@ export async function GET() {
   }));
 
   // ponytail: SQL already returned per-day counts — just convert bigint → number
-  const visitorMap = new Map(pageViews30.map((r) => [String(r.date).slice(0, 10), Number(r.count)]));
+  const visitorMap = new Map(pageViews30.map((r) => [dateKey(new Date(r.date)), Number(r.count)]));
   const visitorSeries = Array.from(signupSeries.keys()).map((d) => ({
     date: d,
     count: visitorMap.get(d) ?? 0,
@@ -173,7 +173,7 @@ export async function GET() {
 
   const pageviewSeries = fillDailySeries(60);
   for (const r of pageViews60) {
-    const k = String(r.date).slice(0, 10);
+    const k = dateKey(new Date(r.date));
     if (pageviewSeries.has(k)) pageviewSeries.set(k, Number(r.count));
   }
 
