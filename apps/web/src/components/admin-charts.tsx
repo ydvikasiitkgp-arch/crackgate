@@ -36,6 +36,19 @@ function shortDate(d: string): string {
   });
 }
 
+function pctChange(
+  a: number,
+  b: number
+): { dir: "up" | "down" | "flat"; label: string } {
+  if (b === 0)
+    return { dir: a > 0 ? "up" : "flat", label: a > 0 ? "+∞" : "—" };
+  const diff = ((a - b) / b) * 100;
+  const rounded = Math.round(Math.abs(diff));
+  if (diff > 0) return { dir: "up", label: `+${rounded}%` };
+  if (diff < 0) return { dir: "down", label: `-${rounded}%` };
+  return { dir: "flat", label: "0%" };
+}
+
 function ChartTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null;
   return (
@@ -95,6 +108,10 @@ export function AdminCharts() {
     ...p,
     label: shortDate(p.date),
   }));
+  const visitors7 = visitors.slice(-7);
+  const prev7Sum = visitors.slice(-14, -7).reduce((s, p) => s + p.count, 0);
+  const cur7Sum = visitors.slice(-7).reduce((s, p) => s + p.count, 0);
+  const visitors7Delta = pctChange(cur7Sum, prev7Sum);
 
   const tickStyle = { fontSize: 11, fill: "rgb(var(--muted-rgb))" };
   const gridStyle = { strokeDasharray: "3 3", stroke: "rgb(var(--line-rgb) / 0.5)" };
@@ -183,6 +200,47 @@ export function AdminCharts() {
                     activeDot={{ r: 4, strokeWidth: 2, stroke: "var(--accent, #f59e0b)", fill: "white" }}
                   />
                 </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        )}
+
+        {/* Visitors 7d */}
+        {visitors7.length > 0 && (
+          <div className="card overflow-hidden">
+            <div className="p-6 pb-2">
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-sm font-semibold text-ink">Visitors (7d)</h3>
+                <span
+                  className={`text-xs font-semibold tabular-nums ${
+                    visitors7Delta.dir === "up"
+                      ? "text-ok"
+                      : visitors7Delta.dir === "down"
+                        ? "text-bad"
+                        : "text-muted"
+                  }`}
+                >
+                  {visitors7Delta.dir === "up" ? "▲" : visitors7Delta.dir === "down" ? "▼" : ""}{" "}
+                  {visitors7Delta.label} vs prev 7d
+                </span>
+              </div>
+              <p className="text-xs text-muted mt-0.5">Unique visitors per day · last 7 days (excl. admins)</p>
+            </div>
+            <div className="w-full h-56 px-2 pb-2">
+              <ResponsiveContainer>
+                <BarChart data={visitors7} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+                  <CartesianGrid {...gridStyle} vertical={false} />
+                  <XAxis dataKey="label" tick={tickStyle} interval={0} axisLine={false} tickLine={false} />
+                  <YAxis tick={tickStyle} allowDecimals={false} axisLine={false} tickLine={false} />
+                  <Tooltip content={<ChartTooltip />} cursor={{ fill: "rgb(var(--accent-rgb, 245 158 11) / 0.05)" }} />
+                  <Bar
+                    dataKey="count"
+                    name="Visitors"
+                    fill="var(--accent, #f59e0b)"
+                    radius={[4, 4, 0, 0]}
+                    maxBarSize={28}
+                  />
+                </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
