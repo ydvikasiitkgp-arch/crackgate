@@ -183,9 +183,6 @@ export default function CareersPage() {
               Apply Now
               <ExternalLink className="w-5 h-5" />
             </a>
-            <p className="mt-4 text-sm text-slate-400">
-              Takes ~2 minutes. Opens Google Form in a new tab.
-            </p>
           </div>
         </div>
       </section>
