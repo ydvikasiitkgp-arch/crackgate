@@ -24,6 +24,7 @@ type Overview = {
     reports: Point[];
     dau: Point[];
     visitors: Point[];
+    pageviews: Point[];
   };
 };
 
@@ -34,6 +35,19 @@ function shortDate(d: string): string {
     month: "short",
     timeZone: "UTC",
   });
+}
+
+function pctChange(
+  a: number,
+  b: number
+): { dir: "up" | "down" | "flat"; label: string } {
+  if (b === 0)
+    return { dir: a > 0 ? "up" : "flat", label: a > 0 ? "+∞" : "—" };
+  const diff = ((a - b) / b) * 100;
+  const rounded = Math.round(Math.abs(diff));
+  if (diff > 0) return { dir: "up", label: `+${rounded}%` };
+  if (diff < 0) return { dir: "down", label: `-${rounded}%` };
+  return { dir: "flat", label: "0%" };
 }
 
 function ChartTooltip({ active, payload, label }: any) {
@@ -95,6 +109,14 @@ export function AdminCharts() {
     ...p,
     label: shortDate(p.date),
   }));
+  const pageviews = (data.series.pageviews ?? []).map((p) => ({
+    ...p,
+    label: shortDate(p.date),
+  }));
+  const pageviews30 = pageviews.slice(-30);
+  const prev30Sum = pageviews.slice(-60, -30).reduce((s, p) => s + p.count, 0);
+  const cur30Sum = pageviews.slice(-30).reduce((s, p) => s + p.count, 0);
+  const pageviews30Delta = pctChange(cur30Sum, prev30Sum);
 
   const tickStyle = { fontSize: 11, fill: "rgb(var(--muted-rgb))" };
   const gridStyle = { strokeDasharray: "3 3", stroke: "rgb(var(--line-rgb) / 0.5)" };
@@ -183,6 +205,47 @@ export function AdminCharts() {
                     activeDot={{ r: 4, strokeWidth: 2, stroke: "var(--accent, #f59e0b)", fill: "white" }}
                   />
                 </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        )}
+
+        {/* All Visits 30d */}
+        {pageviews30.length > 0 && (
+          <div className="card overflow-hidden">
+            <div className="p-6 pb-2">
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-sm font-semibold text-ink">All Visits (30d)</h3>
+                <span
+                  className={`text-xs font-semibold tabular-nums ${
+                    pageviews30Delta.dir === "up"
+                      ? "text-ok"
+                      : pageviews30Delta.dir === "down"
+                        ? "text-bad"
+                        : "text-muted"
+                  }`}
+                >
+                  {pageviews30Delta.dir === "up" ? "▲" : pageviews30Delta.dir === "down" ? "▼" : ""}{" "}
+                  {pageviews30Delta.label} vs prev 30d
+                </span>
+              </div>
+              <p className="text-xs text-muted mt-0.5">Total visits per day · last 30 days (excl. admins)</p>
+            </div>
+            <div className="w-full h-56 px-2 pb-2">
+              <ResponsiveContainer>
+                <BarChart data={pageviews30} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+                  <CartesianGrid {...gridStyle} vertical={false} />
+                  <XAxis dataKey="label" tick={tickStyle} interval={4} axisLine={false} tickLine={false} />
+                  <YAxis tick={tickStyle} allowDecimals={false} axisLine={false} tickLine={false} />
+                  <Tooltip content={<ChartTooltip />} cursor={{ fill: "rgb(var(--accent-rgb, 245 158 11) / 0.05)" }} />
+                  <Bar
+                    dataKey="count"
+                    name="Visits"
+                    fill="var(--accent, #f59e0b)"
+                    radius={[4, 4, 0, 0]}
+                    maxBarSize={24}
+                  />
+                </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
