@@ -24,6 +24,7 @@ type Overview = {
     reports: Point[];
     dau: Point[];
     visitors: Point[];
+    pageviews: Point[];
   };
 };
 
@@ -108,10 +109,14 @@ export function AdminCharts() {
     ...p,
     label: shortDate(p.date),
   }));
-  const visitors7 = visitors.slice(-7);
-  const prev7Sum = visitors.slice(-14, -7).reduce((s, p) => s + p.count, 0);
-  const cur7Sum = visitors.slice(-7).reduce((s, p) => s + p.count, 0);
-  const visitors7Delta = pctChange(cur7Sum, prev7Sum);
+  const pageviews = (data.series.pageviews ?? []).map((p) => ({
+    ...p,
+    label: shortDate(p.date),
+  }));
+  const pageviews30 = pageviews.slice(-30);
+  const prev30Sum = pageviews.slice(-60, -30).reduce((s, p) => s + p.count, 0);
+  const cur30Sum = pageviews.slice(-30).reduce((s, p) => s + p.count, 0);
+  const pageviews30Delta = pctChange(cur30Sum, prev30Sum);
 
   const tickStyle = { fontSize: 11, fill: "rgb(var(--muted-rgb))" };
   const gridStyle = { strokeDasharray: "3 3", stroke: "rgb(var(--line-rgb) / 0.5)" };
@@ -205,40 +210,40 @@ export function AdminCharts() {
           </div>
         )}
 
-        {/* Visitors 7d */}
-        {visitors7.length > 0 && (
+        {/* All Visits 30d */}
+        {pageviews30.length > 0 && (
           <div className="card overflow-hidden">
             <div className="p-6 pb-2">
               <div className="flex items-center justify-between gap-2">
-                <h3 className="text-sm font-semibold text-ink">Visitors (7d)</h3>
+                <h3 className="text-sm font-semibold text-ink">All Visits (30d)</h3>
                 <span
                   className={`text-xs font-semibold tabular-nums ${
-                    visitors7Delta.dir === "up"
+                    pageviews30Delta.dir === "up"
                       ? "text-ok"
-                      : visitors7Delta.dir === "down"
+                      : pageviews30Delta.dir === "down"
                         ? "text-bad"
                         : "text-muted"
                   }`}
                 >
-                  {visitors7Delta.dir === "up" ? "▲" : visitors7Delta.dir === "down" ? "▼" : ""}{" "}
-                  {visitors7Delta.label} vs prev 7d
+                  {pageviews30Delta.dir === "up" ? "▲" : pageviews30Delta.dir === "down" ? "▼" : ""}{" "}
+                  {pageviews30Delta.label} vs prev 30d
                 </span>
               </div>
-              <p className="text-xs text-muted mt-0.5">Unique visitors per day · last 7 days (excl. admins)</p>
+              <p className="text-xs text-muted mt-0.5">Total visits per day · last 30 days (excl. admins)</p>
             </div>
             <div className="w-full h-56 px-2 pb-2">
               <ResponsiveContainer>
-                <BarChart data={visitors7} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+                <BarChart data={pageviews30} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
                   <CartesianGrid {...gridStyle} vertical={false} />
-                  <XAxis dataKey="label" tick={tickStyle} interval={0} axisLine={false} tickLine={false} />
+                  <XAxis dataKey="label" tick={tickStyle} interval={4} axisLine={false} tickLine={false} />
                   <YAxis tick={tickStyle} allowDecimals={false} axisLine={false} tickLine={false} />
                   <Tooltip content={<ChartTooltip />} cursor={{ fill: "rgb(var(--accent-rgb, 245 158 11) / 0.05)" }} />
                   <Bar
                     dataKey="count"
-                    name="Visitors"
+                    name="Visits"
                     fill="var(--accent, #f59e0b)"
                     radius={[4, 4, 0, 0]}
-                    maxBarSize={28}
+                    maxBarSize={24}
                   />
                 </BarChart>
               </ResponsiveContainer>
