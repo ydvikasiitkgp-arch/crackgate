@@ -18,6 +18,7 @@ Audit a CrackGate mock question paper to real-exam (DGMS Mining Sirdar / Overman
 - Remove answer-leaking or eliminable distractors
 - Replace redundant/weak questions with uncovered topics
 - Fix difficulty labels, or find cross-mock duplicate stems
+- Present findings without editing — changes are applied only when the user says so
 
 ## Inputs
 
@@ -53,8 +54,16 @@ npm run --workspace apps/web typecheck
 3. **Redundant / duplicate stems** — replace with a genuinely different question on an under-covered topic.
 4. **Topic coverage** — technical topics for NCL Sirdar: `CMR 2017 & Mines Act 1952`, `Mines Rules 1955 & Related Rules`, `Mines Rescue Rules, 1985`, `Explosives & Shot Firing`, `Mine Gases & Ventilation`, `Mine Surveying`, `Strata Control & Roof Support`, `Opencast Working & Bench Formation`, `Safety in Opencast Workings`, `Safety Management Plan`, `Reclamation in Opencast Mining`, `First Aid & Mine Emergencies`, `Report Writing`. General: `Quantitative Aptitude`, `Reasoning & Verbal Ability`, `General Knowledge`, `General Awareness`.
 5. **Difficulty labels** — apply the rubric below last.
+6. **Present findings — do not edit.** Deliver the findings report (summary line, per-question findings table, coverage table). Make **no file changes** during the audit. Wait for the user to say "apply" (or point at specific items) before touching the JSON.
 
-## Difficulty rubric (anchored to the merged mock-03/04 audits)
+## Difficulty rubric (per-exam target profiles)
+
+Each exam paper has its own difficulty profile — never apply one exam's profile to another. Establish the target from that exam's notification (format, cutoffs, negative marking) and any independent paper analysis; no official easy/medium/hard split is published for CIL Sirdar exams.
+
+| Exam | Target profile | Evidence |
+|---|---|---|
+| NCL Mining Sirdar | easy-to-moderate, recall-dominant; `hard` ≤ 10% | NCL notification (100 Q, 70 tech + 30 GK, 90 min, no -ve marking, UR cutoff 50%); WCL Sirdar 2023 paper analysis |
+| Coal Sirdar / Coal Overman / CE diploma | establish from the paper's own notification + analyses | — (do not reuse NCL numbers) |
 
 | Label | Criteria | Examples |
 |---|---|---|
@@ -62,7 +71,12 @@ npm run --workspace apps/web typecheck
 | `medium` | Arithmetic / synonyms / statutory thresholds / blast concepts | canteen worker threshold, powder factor, haul-road camber %, electronic detonators, "enervate", GPS augmentation system |
 | `hard` | Genuinely complex multi-part / numeric / chemistry items | theodolite least count, blackdamp composition, statutory air-quality limits, filter self-rescuer CO chemistry |
 
-Reference final profiles: mock-04 = **50/38/12**, mock-05 = **44/52/4**. A profile similar to those is expected; do not force a fixed distribution — each label must match the rubric.
+Rules:
+
+- **NCL Sirdar: `hard` at most 10% of the mock (0-10 per 100).** A hard label is a flag to re-check; most flagged items are really medium.
+- No fixed easy/medium split; the bulk of the paper should read recall-dominant (mostly `easy`, with `medium` as the working majority for arithmetic/statutory items).
+- For a non-NCL paper, derive its target profile first; if unknown, default to easy-to-moderate for an entry-level certificate exam until evidence says otherwise.
+- Each label must match the rubric row above — never force a distribution to hit a target profile.
 
 ## Verified statutory facts (from mock-03/04/05 audits)
 
@@ -82,6 +96,8 @@ Reuse these; verify anything not on this list.
 - Near-duplicate stems: same question rephrased across mocks (compare normalized stems; cosmetic rewording still counts). Known historic batches: 167 dupes across mocks 18/19/20; mock-05 had 15 dupes vs mocks 06/18/19/20.
 
 ## Editing rules
+
+Only edit after the user has seen the findings and said "apply" (or selected specific items). Never edit during the audit itself.
 
 - Prefer `edit`/`write` on the mock JSON with 2-space indentation preserved.
 - When reordering options, update `answer` to the new index. Keep `answer` 0-based.
