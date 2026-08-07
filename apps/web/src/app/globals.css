@@ -236,3 +236,6 @@ body {
 /* Fully hidden scrollbar (mobile section pill strip) */
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Exam portal fullscreen: fill the viewport edge-to-edge */
+#cg-exam-root:fullscreen { width: 100%; height: 100%; overflow-y: auto; }
