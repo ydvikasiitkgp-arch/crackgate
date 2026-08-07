@@ -11,9 +11,9 @@ import { MathText } from "@/components/math-text";
 import { useImpersonation } from "@/components/impersonation-context";
 
 type Question =
-  | { type: "MCQ"; marks: number; subject: string; stem: string; options: string[]; answer: number; solution?: string; figure?: Figure }
-  | { type: "MSQ"; marks: number; subject: string; stem: string; options: string[]; answer: number[]; solution?: string; figure?: Figure }
-  | { type: "NAT"; marks: number; subject: string; stem: string; answer: number; tolerance?: number; solution?: string; figure?: Figure };
+  | { type: "MCQ"; marks: number; subject: string; section?: string; stem: string; options: string[]; answer: number; solution?: string; figure?: Figure }
+  | { type: "MSQ"; marks: number; subject: string; section?: string; stem: string; options: string[]; answer: number[]; solution?: string; figure?: Figure }
+  | { type: "NAT"; marks: number; subject: string; section?: string; stem: string; answer: number; tolerance?: number; solution?: string; figure?: Figure };
 
 type Status = "nv" | "not" | "ans" | "mark" | "marka";
 type Answer = number | number[] | string | undefined;
@@ -99,10 +99,25 @@ export function ExamPortal({
   const [leaveOpen, setLeaveOpen] = useState(false);
   const [drill, setDrill] = useState(false);
   const [viewOnlyToast, setViewOnlyToast] = useState(false);
+  // Mocks start behind a "Begin mock" overlay that requests fullscreen; PYQ
+  // Exam Mode keeps its instant start.
+  const [started, setStarted] = useState(kind !== "mock");
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
 
   function toastViewOnly() {
     setViewOnlyToast(true);
     setTimeout(() => setViewOnlyToast(false), 3000);
+  }
+
+  function startMock() {
+    void rootRef.current?.requestFullscreen?.().catch(() => {});
+    setStarted(true);
+  }
+
+  function toggleFullscreen() {
+    if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
+    else void rootRef.current?.requestFullscreen?.().catch(() => {});
   }
 
   // Autosave / resume + pause state
@@ -112,6 +127,8 @@ export function ExamPortal({
   const [paused, setPaused] = useState(false);
   const pausedRef = useRef(false);
   useEffect(() => { pausedRef.current = paused; }, [paused]);
+  const startedRef = useRef(started);
+  useEffect(() => { startedRef.current = started; }, [started]);
   const leavingRef = useRef(false);
   const submittingRef = useRef(false);
   useEffect(() => { submittingRef.current = submitting; }, [submitting]);
@@ -132,6 +149,13 @@ export function ExamPortal({
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = prev; };
   }, [paletteOpen]);
+
+  // Track fullscreen (Esc / browser chrome also exit fullscreen)
+  useEffect(() => {
+    const onFs = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", onFs);
+    return () => document.removeEventListener("fullscreenchange", onFs);
+  }, []);
 
   // Mark first-visit as 'not' on entry
   useEffect(() => {
@@ -182,7 +206,7 @@ export function ExamPortal({
   // Tick timer
   useEffect(() => {
     const t = setInterval(() => {
-      if (pausedRef.current) return;
+      if (!startedRef.current || pausedRef.current) return;
       setSecondsLeft((s) => {
         if (s <= 1) { clearInterval(t); void submit(true); return 0; }
         return s - 1;
@@ -376,18 +400,27 @@ export function ExamPortal({
   }
 
   return (
-    <div className={cn("min-h-screen bg-canvas -mt-px pb-20 lg:pb-0", locked && "select-none")}>
+    <div id="cg-exam-root" ref={rootRef} className={cn("min-h-screen bg-canvas -mt-px pb-20 lg:pb-0", locked && "select-none")}>
       {/* ---------- Top bar ---------- */}
       <header className="bg-gradient-to-r from-brand-2 to-brand text-white px-4 sm:px-5 py-3 flex flex-wrap items-center gap-3 sm:gap-4">
-        <div className="hidden min-[400px]:inline-flex w-9 h-9 bg-white/15 grid place-items-center rounded-lg font-bold shrink-0">CG</div>
         <div className="min-w-0 flex-1">
-          <div className="text-xs sm:text-sm opacity-80">{examCaption}</div>
+          <div className="text-xs sm:text-sm opacity-80 truncate">{isFullscreen ? (q.section ?? q.subject) : examCaption}</div>
           <div className="font-semibold text-sm sm:text-base truncate">{title}</div>
         </div>
         <div className="ml-auto flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Scientific calculator — top bar, like the real TCS iON CBT.
              GATE allows it; CIL MT does not. */}
           {calculatorAllowed && <CalculatorLauncher floating={false} />}
+          {kind === "mock" && (
+            <button
+              type="button"
+              onClick={toggleFullscreen}
+              title={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+              className="bg-white/15 hover:bg-white/25 rounded-md px-3 py-1.5 text-sm font-semibold transition"
+            >
+              {isFullscreen ? "⛶ Exit" : "⛶ Fullscreen"}
+            </button>
+          )}
           <button
             type="button"
             onClick={() => setPaused(true)}
@@ -620,6 +653,32 @@ export function ExamPortal({
           onSubmit={() => { setLeaveOpen(false); submit(false); }}
           onExit={onExitTest}
         />
+      )}
+
+      {/* ---------- Begin-mock overlay (starts timer + fullscreen) ---------- */}
+      {kind === "mock" && !started && (
+        <div className="fixed inset-0 z-[80] bg-ink/80 backdrop-blur-sm grid place-items-center p-4 text-center">
+          <div className="bg-surface rounded-xl max-w-sm w-full p-6">
+            <h2 className="text-xl font-extrabold">{resumed ? "Resume mock" : "Begin mock"}</h2>
+            <p className="text-sm text-muted mt-1">{title}</p>
+            {sections.length > 1 && (
+              <div className="flex flex-wrap justify-center gap-2 mt-3">
+                {sections.map((s) => (
+                  <span key={s.name} className="badge bg-brand/10 text-brand text-xs">{s.name}</span>
+                ))}
+              </div>
+            )}
+            <p className="text-xs text-muted mt-3">
+              {Math.round(durationSec / 60)} minutes · {questions.length} questions
+            </p>
+            <button onClick={startMock} className="btn btn-accent w-full mt-5">
+              {resumed ? "Resume mock" : "Start mock"}
+            </button>
+            <p className="text-[11px] text-muted mt-3">
+              The exam opens in fullscreen with the current section shown in the header.
+            </p>
+          </div>
+        </div>
       )}
 
       {/* ---------- Pause overlay (timer & progress frozen) ---------- */}
