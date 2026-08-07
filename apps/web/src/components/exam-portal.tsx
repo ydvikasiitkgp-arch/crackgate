@@ -96,6 +96,7 @@ export function ExamPortal({
   const [submitting, setSubmitting] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
+  const [leaveOpen, setLeaveOpen] = useState(false);
   const [drill, setDrill] = useState(false);
   const [viewOnlyToast, setViewOnlyToast] = useState(false);
 
@@ -111,6 +112,9 @@ export function ExamPortal({
   const [paused, setPaused] = useState(false);
   const pausedRef = useRef(false);
   useEffect(() => { pausedRef.current = paused; }, [paused]);
+  const leavingRef = useRef(false);
+  const submittingRef = useRef(false);
+  useEffect(() => { submittingRef.current = submitting; }, [submitting]);
 
   // Advisory per-section time tracking (non-blocking): seconds spent in each
   // subject. currentSubjectRef lets the 1s tick attribute time to the section
@@ -193,11 +197,28 @@ export function ExamPortal({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Warn on close
+  // Warn on close (silenced once the candidate has chosen to exit)
   useEffect(() => {
-    const onBeforeUnload = (e: BeforeUnloadEvent) => { e.preventDefault(); e.returnValue = ""; };
+    const onBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (leavingRef.current) return;
+      e.preventDefault();
+      e.returnValue = "";
+    };
     window.addEventListener("beforeunload", onBeforeUnload);
     return () => window.removeEventListener("beforeunload", onBeforeUnload);
+  }, []);
+
+  // Intercept Back: trap navigation behind a guard entry and offer a
+  // leave / proceed / submit choice instead of silently abandoning the attempt.
+  useEffect(() => {
+    window.history.pushState({ cgExamGuard: true }, "");
+    const onPop = () => {
+      if (leavingRef.current || submittingRef.current) return;
+      window.history.pushState({ cgExamGuard: true }, "");
+      setLeaveOpen(true);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
   }, []);
 
   // ---------- Exam-center lockdown ----------
@@ -301,6 +322,32 @@ export function ExamPortal({
   };
   useEffect(() => { if (drill && flaggedIdxs.length === 0) setDrill(false); }, [drill, flaggedIdxs.length]);
 
+  // Drop the back-guard history entry once an attempt is submitted, so the
+  // result page replaces the exam entry and Back returns to the listing page
+  // (not a fresh exam).
+  function dropGuard(cb: () => void) {
+    leavingRef.current = true;
+    const onPop = () => {
+      window.removeEventListener("popstate", onPop);
+      cb();
+    };
+    window.addEventListener("popstate", onPop);
+    window.history.go(-1);
+  }
+
+  // Abandon the attempt for real: back out of the exam page. Autosave keeps
+  // progress so the candidate can resume later.
+  function onExitTest() {
+    leavingRef.current = true;
+    setLeaveOpen(false);
+    // Pop the guard + exam entries to the page the candidate came from; if
+    // there is no such entry (direct URL load), land on the mocks home.
+    window.setTimeout(() => {
+      if (window.location.pathname.startsWith("/mocks/")) window.location.replace("/mocks");
+    }, 700);
+    window.history.go(-2);
+  }
+
   async function submit(auto = false) {
     if (impersonating) { toastViewOnly(); return; }
     if (!auto && !confirmOpen) { setConfirmOpen(true); return; }
@@ -321,7 +368,7 @@ export function ExamPortal({
       const data = await res.json();
       if (!res.ok) throw new Error(JSON.stringify(data?.error));
       try { localStorage.removeItem(storageKey); } catch { /* ignore */ }
-      router.replace(`/result/${data.attempt.id}`);
+      dropGuard(() => router.replace(`/result/${data.attempt.id}`));
     } catch (e) {
       alert((e as Error).message);
       setSubmitting(false);
@@ -566,6 +613,15 @@ export function ExamPortal({
         />
       )}
 
+      {/* Back-navigation guard: leave / proceed / submit */}
+      {leaveOpen && (
+        <LeaveConfirm
+          onContinue={() => setLeaveOpen(false)}
+          onSubmit={() => { setLeaveOpen(false); submit(false); }}
+          onExit={onExitTest}
+        />
+      )}
+
       {/* ---------- Pause overlay (timer & progress frozen) ---------- */}
       <OfflineToast />
       {viewOnlyToast && (
@@ -693,6 +749,28 @@ function SubmitConfirm({
             </div>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+function LeaveConfirm({ onContinue, onSubmit, onExit }: {
+  onContinue: () => void;
+  onSubmit: () => void;
+  onExit: () => void;
+}) {
+  return (
+    <div className="fixed inset-0 z-[85] bg-black/50 grid place-items-center p-4 text-center">
+      <div className="bg-surface rounded-xl max-w-sm w-full p-6">
+        <h2 className="text-xl font-extrabold">Leave test?</h2>
+        <p className="text-sm text-muted mt-1">
+          Your answers are saved — you can resume this attempt later.
+        </p>
+        <div className="mt-5 space-y-2">
+          <button onClick={onContinue} className="btn btn-accent w-full text-sm">Continue test</button>
+          <button onClick={onSubmit} className="btn btn-primary w-full text-sm">Submit test</button>
+          <button onClick={onExit} className="btn btn-ghost w-full text-sm">Exit test</button>
+        </div>
       </div>
     </div>
   );
