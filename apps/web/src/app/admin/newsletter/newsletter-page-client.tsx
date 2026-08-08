@@ -112,13 +112,15 @@ export default function NewsletterPageClient({
               <span className="text-sm font-semibold group-hover:text-brand transition-colors">
                 Include testers / developers / shareholders
               </span>
-              <ul className="mt-2 space-y-0.5">
-                {SHAREHOLDER_EMAILS.map((email) => (
-                  <li key={email} className="text-xs font-mono text-muted truncate">
-                    {email}
-                  </li>
-                ))}
-              </ul>
+              {includeShareholders && (
+                <ul className="mt-2 space-y-0.5">
+                  {SHAREHOLDER_EMAILS.map((email) => (
+                    <li key={email} className="text-xs font-mono text-muted truncate">
+                      {email}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </label>
         </div>

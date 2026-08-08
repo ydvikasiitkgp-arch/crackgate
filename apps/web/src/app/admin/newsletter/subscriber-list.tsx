@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 
 interface Subscriber {
   email: string;
@@ -19,8 +20,11 @@ interface Props {
 type PlanFilter = "all" | "free" | "paid";
 
 export default function SubscriberList({ subscribers, selectedEmails, onSelectionChange }: Props) {
+  const router = useRouter();
   const [planFilter, setPlanFilter] = useState<PlanFilter>("all");
   const [search, setSearch] = useState("");
+  const [deleting, setDeleting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     return subscribers.filter((s) => {
@@ -58,6 +62,27 @@ export default function SubscriberList({ subscribers, selectedEmails, onSelectio
       next.set(email, null);
     }
     onSelectionChange(next);
+  }
+
+  async function deleteSelected() {
+    if (selectedEmails.size === 0) return;
+    if (!confirm(`Remove ${selectedEmails.size} subscriber${selectedEmails.size > 1 ? "s" : ""} from the newsletter list? They can re-subscribe later.`)) return;
+    setDeleting(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/admin/newsletter/subscribers", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ emails: [...selectedEmails.keys()] }),
+      });
+      if (!res.ok) throw new Error("delete failed");
+      onSelectionChange(new Map());
+      router.refresh();
+    } catch {
+      setError("Could not delete. Try again.");
+    } finally {
+      setDeleting(false);
+    }
   }
 
   return (
@@ -98,10 +123,22 @@ export default function SubscriberList({ subscribers, selectedEmails, onSelectio
         </div>
 
         {selectedEmails.size > 0 && (
-          <p className="text-xs text-muted mt-2">
-            {selectedEmails.size} selected{filtered.length !== subscribers.length ? ` (filtered from ${subscribers.length})` : ""}
-          </p>
+          <div className="flex items-center gap-3 mt-2">
+            <p className="text-xs text-muted">
+              {selectedEmails.size} selected{filtered.length !== subscribers.length ? ` (filtered from ${subscribers.length})` : ""}
+            </p>
+            <button
+              type="button"
+              onClick={deleteSelected}
+              disabled={deleting}
+              className="text-xs font-semibold text-bad border border-bad/40 rounded-lg px-3 py-1.5 hover:bg-bad/10 disabled:opacity-40 transition-colors"
+            >
+              {deleting ? "Deleting…" : `Delete selected (${selectedEmails.size})`}
+            </button>
+          </div>
         )}
+
+        {error && <p className="text-xs text-bad mt-2">{error}</p>}
       </div>
 
       <div className="overflow-x-auto max-h-[400px] overflow-y-auto">
