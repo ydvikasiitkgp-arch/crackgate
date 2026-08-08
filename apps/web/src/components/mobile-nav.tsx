@@ -15,14 +15,7 @@ const SECTION_PILLS: Leaf[] = [
   { href: "/psu", label: "PSU" },
   { href: "/state", label: "State Exams" },
   { href: "/diploma", label: "Diploma" },
-  { href: "/prep", label: "Prep" },
   { href: "/resources", label: "Resources" },
-];
-
-const PREP_ITEMS: Leaf[] = [
-  { href: "/mocks", label: "Mock Tests" },
-  { href: "/practice", label: "Practice" },
-  { href: "/learn", label: "Learn Modules" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -331,72 +324,18 @@ function GateSheet({ onClose }: { onClose: () => void }) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Prep bottom-sheet panel                                            */
-/* ------------------------------------------------------------------ */
-
-function PrepSheet({ onClose }: { onClose: () => void }) {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [onClose]);
-
-  const isActive = (href: string) => pathname === href || pathname?.startsWith(href + "/");
-
-  return (
-    <>
-      <div className="fixed inset-0 z-40 bg-black/40 cg-overlay" onClick={onClose} aria-hidden="true" />
-      <div className="fixed bottom-0 left-0 right-0 z-50 max-h-[80dvh] overflow-y-auto rounded-t-2xl border-t border-line bg-surface cg-sheet" role="dialog" aria-label="Prep">
-        <div className="sticky top-0 z-10 flex items-center justify-between bg-surface px-5 pt-3 pb-2 border-b border-line/50">
-          <div className="mx-auto h-1 w-10 rounded-full bg-line/60" />
-          <button type="button" onClick={onClose} className="absolute right-4 top-3 flex h-8 w-8 items-center justify-center rounded-full text-muted hover:bg-canvas transition-colors" aria-label="Close">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
-          </button>
-        </div>
-        <div className="px-5 pt-4 pb-2">
-          <h2 className="text-base font-bold text-ink">Prep</h2>
-          <p className="mt-0.5 text-xs text-muted">Practice, mocks &amp; learning modules</p>
-        </div>
-        <div className="px-3 pb-6 pt-1 space-y-1.5">
-          {PREP_ITEMS.map((item) => (
-            <Link key={item.href} href={item.href} onClick={onClose} className={cn("flex items-center justify-between px-4 py-3 rounded-xl border transition-colors", isActive(item.href) ? "border-brand/20 bg-brand/5" : "border-line/60 active:bg-canvas")}>
-              <div className="flex items-center gap-3 min-w-0">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-canvas text-xs font-bold text-ink border border-line/40">
-                  {item.label[0]}
-                </div>
-                <div className="min-w-0">
-                  <div className="text-sm font-semibold text-ink">{item.label}</div>
-                </div>
-              </div>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-muted/50 shrink-0"><polyline points="9 18 15 12 9 6" /></svg>
-            </Link>
-          ))}
-          <Link href="/pricing" onClick={onClose} className="flex items-center justify-center gap-1 px-4 py-3 rounded-xl border border-brand/20 bg-brand/5 text-sm font-semibold text-brand">
-            ⭐ View Plans &amp; Pricing <span aria-hidden>→</span>
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
-
-/* ------------------------------------------------------------------ */
 /* Mobile section bar + hamburger drawer                              */
 /* ------------------------------------------------------------------ */
 
 export function MobileSectionBar() {
   const pathname = usePathname();
   const [gateOpen, setGateOpen] = useState(false);
-  const [prepOpen, setPrepOpen] = useState(false);
   const [psuOpen, setPsuOpen] = useState(false);
   const [diplomaOpen, setDiplomaOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
   const isPsuActive = pathname?.startsWith("/psu");
   const isDiplomaActive = pathname?.startsWith("/diploma");
-  const isPrepActive = pathname?.startsWith("/mocks") || pathname?.startsWith("/practice") || pathname?.startsWith("/learn");
   const isResourcesActive = pathname?.startsWith("/blog") || pathname?.startsWith("/news") || pathname?.startsWith("/about");
 
   return (
@@ -436,18 +375,6 @@ export function MobileSectionBar() {
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                   </button>
                   {diplomaOpen && typeof window !== "undefined" && createPortal(<DiplomaSheet onClose={() => setDiplomaOpen(false)} />, document.body)}
-                </div>
-              );
-            }
-
-            if (l.href === "/prep") {
-              return (
-                <div key="prep" className="relative">
-                  <button type="button" onClick={() => setPrepOpen(true)} className={cn("shrink-0 rounded-full px-3.5 py-1.5 text-sm font-medium whitespace-nowrap transition inline-flex items-center gap-1", isPrepActive ? "bg-brand text-white" : "bg-canvas text-ink hover:bg-brand/10")} aria-haspopup="dialog" aria-expanded={prepOpen}>
-                    Prep
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
-                  </button>
-                  {prepOpen && typeof window !== "undefined" && createPortal(<PrepSheet onClose={() => setPrepOpen(false)} />, document.body)}
                 </div>
               );
             }
