@@ -5,20 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { PSU_COMPANIES } from "@/data/psu";
+import { GATE_NAV_BRANCHES } from "@/data/gate/nav";
 
 type Branch = { label: string; href: string };
-
-const GATE_BRANCHES: Branch[] = [
-  { label: "Mining Engineering (MN)", href: "/gate/mining" },
-  { label: "Civil Engineering (CE)", href: "/gate/civil" },
-  { label: "Geology and Geophysics (GG)", href: "/gate/geology" },
-  { label: "Environmental Science and Engineering (ES)", href: "/gate/environment" },
-  { label: "Geomatics Engineering (GE)", href: "/gate/geomatics" },
-  { label: "Textile Engineering and Fibre Science (TF)", href: "/gate/textile" },
-  { label: "Life Sciences (XL)", href: "/gate/life-sciences" },
-  { label: "Ecology and Evolution (EY)", href: "/gate/ecology" },
-  { label: "Agricultural Engineering (AG)", href: "/gate/agricultural" },
-];
 
 const RESOURCE_LINKS: Branch[] = [
   { label: "Blog", href: "/blog" },
@@ -116,7 +105,7 @@ export function MegaNav() {
         </button>
         {open === "gate" && (
           <Panel className="w-72">
-            {GATE_BRANCHES.map((b) => (
+            {GATE_NAV_BRANCHES.map((b) => (
               <Link
                 key={b.href}
                 href={b.href}
