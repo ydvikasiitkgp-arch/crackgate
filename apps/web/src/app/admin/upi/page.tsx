@@ -9,7 +9,7 @@ import PaymentRowActions from "./payment-actions";
 import ViewAsButton from "@/components/admin/view-as-button";
 import RevokeEntitlementButton from "@/components/admin/revoke-entitlement-button";
 import { CATALOG, subjectLabel, getExam } from "@/data/catalog";
-import { isComboSlug, comboLabel } from "@/lib/combos";
+import { isComboSlug, comboLabel, getCombo } from "@/lib/combos";
 
 export const dynamic = "force-dynamic";
 
@@ -76,9 +76,10 @@ export default async function AdminUpiPage({
       _count: { _all: true },
     }),
     db.upiPayment.groupBy({ by: ["status"], _count: { _all: true } }),
-    // Captured revenue per exam track (unified Payment table).
+    // Captured revenue per exam+subject (unified Payment table) — grouped by
+    // subject so the two PSU entries (CIL / ONGC) split correctly.
     db.payment.groupBy({
-      by: ["exam"],
+      by: ["exam", "subject"],
       where: { status: "captured" },
       _sum: { amount: true },
       _count: { _all: true },
@@ -125,6 +126,27 @@ export default async function AdminUpiPage({
       ? subjectLabel(fExam, fSubject)
       : CATALOG.filter((e) => e.exam === fExam).map((e) => e.label).join(" + ")
     : "All exams";
+
+  // Resolve captured revenue per catalog entry. Payments are grouped by
+  // exam+subject; combo / cart rows carry a combo slug or comma-joined subjects.
+  const revenueByEntry = new Map<string, { sum: number; count: number }>();
+  for (const r of examRevenue) {
+    const parts = (r.subject ?? "").split(",").filter(Boolean);
+    const slugs = parts.length === 1 && isComboSlug(parts[0])
+      ? getCombo(parts[0])!.entitlements.map((e) => e.subject)
+      : parts;
+    const entry = CATALOG.find(
+      (e) =>
+        e.exam === r.exam &&
+        slugs.length > 0 &&
+        slugs.every((s) => e.subjects.some((x) => x.slug === s)),
+    );
+    if (!entry) continue; // cross-entry cart → visible only in the table below
+    const cur = revenueByEntry.get(entry.label) ?? { sum: 0, count: 0 };
+    cur.sum += r._sum.amount ?? 0;
+    cur.count += r._count._all;
+    revenueByEntry.set(entry.label, cur);
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-10">
@@ -173,9 +195,9 @@ export default async function AdminUpiPage({
         </h2>
         <div className="flex flex-wrap gap-2 mt-2">
           {CATALOG.map((e) => {
-            const row = examRevenue.find((r) => r.exam === e.exam);
-            const sum = row?._sum.amount ?? 0;
-            const n = row?._count._all ?? 0;
+            const rev = revenueByEntry.get(e.label);
+            const sum = rev?.sum ?? 0;
+            const n = rev?.count ?? 0;
             return (
               <span
                 key={e.label}
