@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 
 interface RegisteredUser {
   email: string;
@@ -20,8 +21,11 @@ interface Props {
 type PlanFilter = "all" | "free" | "paid";
 
 export default function RegisteredUsersList({ users, selectedEmails, onSelectionChange }: Props) {
+  const router = useRouter();
   const [planFilter, setPlanFilter] = useState<PlanFilter>("all");
   const [search, setSearch] = useState("");
+  const [deleting, setDeleting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     return users.filter((u) => {
@@ -64,6 +68,27 @@ export default function RegisteredUsersList({ users, selectedEmails, onSelection
     onSelectionChange(next);
   }
 
+  async function deleteSelected() {
+    if (selectedEmails.size === 0) return;
+    if (!confirm(`Permanently delete ${selectedEmails.size} registered user account${selectedEmails.size > 1 ? "s" : ""} and all their data (payments, attempts, entitlements)? This cannot be undone.`)) return;
+    setDeleting(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/admin/newsletter/users", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ emails: [...selectedEmails.keys()] }),
+      });
+      if (!res.ok) throw new Error("delete failed");
+      onSelectionChange(new Map());
+      router.refresh();
+    } catch {
+      setError("Could not delete. Try again.");
+    } finally {
+      setDeleting(false);
+    }
+  }
+
   return (
     <div className="card overflow-hidden">
       <div className="p-5 border-b border-line">
@@ -102,10 +127,22 @@ export default function RegisteredUsersList({ users, selectedEmails, onSelection
         </div>
 
         {selectedEmails.size > 0 && (
-          <p className="text-xs text-muted mt-2">
-            {selectedEmails.size} selected{filtered.length !== users.length ? ` (filtered from ${users.length})` : ""}
-          </p>
+          <div className="flex items-center gap-3 mt-2">
+            <p className="text-xs text-muted">
+              {selectedEmails.size} selected{filtered.length !== users.length ? ` (filtered from ${users.length})` : ""}
+            </p>
+            <button
+              type="button"
+              onClick={deleteSelected}
+              disabled={deleting}
+              className="text-xs font-semibold text-bad border border-bad/40 rounded-lg px-3 py-1.5 hover:bg-bad/10 disabled:opacity-40 transition-colors"
+            >
+              {deleting ? "Deleting…" : `Delete selected (${selectedEmails.size})`}
+            </button>
+          </div>
         )}
+
+        {error && <p className="text-xs text-bad mt-2">{error}</p>}
       </div>
 
       <div className="overflow-x-auto max-h-[400px] overflow-y-auto">
