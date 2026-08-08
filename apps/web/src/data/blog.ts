@@ -5,6 +5,8 @@ export type BlogPost = {
   date: string;
   author: string;
   tags: string[];
+  /** GATE subject slugs (e.g. "mining") this post belongs to. Absent = global blog only. */
+  subjects?: string[];
   body: string;
 };
 
@@ -17,6 +19,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-07-01",
     author: "CrackGate Team",
     tags: ["GATE Mining", "GATE MN", "Study Plan", "Exam Strategy"],
+    subjects: ["mining"],
     body: `GATE Mining Engineering (MN) is one of the most scoring papers in GATE — but only if you know where to focus. With a well-defined syllabus and predictable weightage pattern, a smart strategy matters more than sheer hours.
 
 ## GATE MN 2027 — Exam Pattern
@@ -129,6 +132,7 @@ The CIL mock series on CrackGate is designed to match the actual TCS iON exam pa
     date: "2026-05-20",
     author: "CrackGate Team",
     tags: ["GATE", "PSU", "Career", "Mining Engineering"],
+    subjects: ["mining"],
     body: `Every mining engineering graduate faces this dilemma: should I focus on GATE for MTech or a PSU job? Should I prepare for both? Here's a no-nonsense breakdown.
 
 ## GATE Mining (MN) — For Academics & Research
@@ -189,4 +193,12 @@ The CIL mock series on CrackGate is designed to match the actual TCS iON exam pa
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
+}
+
+export function getBlogPostsForSubject(subject: string): BlogPost[] {
+  return BLOG_POSTS.filter((p) => p.subjects?.includes(subject));
+}
+
+export function isBlogPostInSubject(post: BlogPost, subject: string): boolean {
+  return post.subjects?.includes(subject) ?? false;
 }

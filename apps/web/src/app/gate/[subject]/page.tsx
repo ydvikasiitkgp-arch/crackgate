@@ -105,6 +105,7 @@ export default async function GateSubjectHome(props: { params: Promise<{ subject
     { href: `/gate/${subject}/practice`, icon: "✍️", title: "Practice", desc: `${practiceQs}+ exam-grade questions across ${subjectsCount} subjects, instantly graded with solutions.` },
     { href: `/gate/${subject}/mocks`, icon: "🧪", title: "Mock Tests", desc: `${mocksCount} full-length papers on the official GATE pattern — 65 Q · 100 marks · 3 hours.` },
     { href: `/gate/${subject}/aits`, icon: "💎", title: "All India Test Series", desc: `${aitsCount} scheduled tests with All-India percentile rankings.` },
+    { href: `/gate/${subject}/blog`, icon: "📰", title: "Blog", desc: "Subject-specific strategy guides, study plans and exam tips from IIT Kharagpur alumni." },
   ];
 
   return (
