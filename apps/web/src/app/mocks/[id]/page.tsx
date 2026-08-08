@@ -59,6 +59,10 @@ export default async function MockPage(props: { params: Promise<{ id: string }> 
   const isCil = isPsu && m.id.startsWith("cil-");
   const isDiploma = m.gate.type === "entitlement" && m.gate.exam === "DIPLOMA";
 
+  // GATE mocks (MN, CE, ES, GG) carry granular syllabus subjects per question;
+  // collapse them into the official two-section palette (GA + Technical).
+  const isGate = !isPsu && !isDiploma && !m.id.startsWith("state-");
+
   return (
     <ExamPortal
       kind="mock"
@@ -68,6 +72,14 @@ export default async function MockPage(props: { params: Promise<{ id: string }> 
       durationSec={m.durationSec}
       negativeMarking={m.negativeMarking}
       showCalculator={!isPsu && !isDiploma}
+      sectionOf={
+        isGate
+          ? (q) =>
+              q.subject === "General Aptitude"
+                ? "Section A · General Aptitude"
+                : "Section B · Technical"
+          : undefined
+      }
       examLabel={
         isOngc
           ? "ONGC — Oil and Natural Gas Corporation"
