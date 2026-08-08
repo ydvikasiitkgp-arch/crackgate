@@ -25,6 +25,7 @@ export async function SubjectHeader({ subject }: { subject: string }) {
     { href: `/gate/${subject}/practice`, label: "Practice" },
     { href: `/gate/${subject}/mocks`, label: "Mocks" },
     { href: `/gate/${subject}/aits`, label: "AITS" },
+    { href: `/gate/${subject}/blog`, label: "Blog" },
     { href: `/pricing?subject=${subject}`, label: "Pricing" },
   ];
 

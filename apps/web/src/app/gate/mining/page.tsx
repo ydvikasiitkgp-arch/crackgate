@@ -99,6 +99,14 @@ export default async function GateMiningPage() {
             </div>
             <span className="ml-auto text-brand text-xl shrink-0 group-hover:translate-x-0.5 transition">→</span>
           </Link>
+          <Link href="/gate/mining/blog" className="group card p-6 flex items-start gap-4 hover:border-brand hover:shadow-sm transition">
+            <div className="shrink-0 grid place-items-center w-12 h-12 rounded-xl bg-brand/10 text-2xl">📰</div>
+            <div>
+              <h3 className="font-bold group-hover:text-brand">Blog</h3>
+              <p className="mt-1.5 text-sm text-muted">GATE Mining strategy guides, study plans and exam tips from IIT Kharagpur alumni.</p>
+            </div>
+            <span className="ml-auto text-brand text-xl shrink-0 group-hover:translate-x-0.5 transition">→</span>
+          </Link>
         </div>
       </section>
 
