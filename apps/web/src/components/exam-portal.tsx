@@ -62,7 +62,7 @@ function mmss(total: number): string {
 }
 
 export function ExamPortal({
-  kind, refId, title, questions, durationSec, lockdown, negativeMarking, examLabel, showCalculator, sectionOf,
+  kind, refId, title, questions, durationSec, lockdown, negativeMarking, examLabel, showCalculator, sectionOf, sectionFallback,
 }: {
   kind: "mock" | "pyq";
   refId: string;
@@ -80,10 +80,14 @@ export function ExamPortal({
   /** Whether the on-screen scientific calculator is available. GATE = true;
    *  CIL MT = false. Defaults to true to preserve existing GATE behaviour. */
   showCalculator?: boolean;
-  /** Maps a question to its palette/section group. Defaults to the question's
-   *  subject; GATE passes this to collapse syllabus topics into the two
-   *  official sections (General Aptitude / Technical). */
-  sectionOf?: (q: Question) => string;
+  /** Maps a question's subject to its palette/section group. GATE passes this
+   *  to collapse syllabus topics into the two official sections (General
+   *  Aptitude / Technical). Unmapped subjects fall back to `sectionFallback`
+   *  if set, else the question's subject. Plain data — never a function, so it
+   *  survives the server→client serialization boundary. */
+  sectionOf?: Record<string, string>;
+  /** Section label for subjects not present in `sectionOf`. */
+  sectionFallback?: string;
 }) {
   const locked = lockdown ?? kind === "mock";
   const negMarking = negativeMarking ?? true;
@@ -291,7 +295,7 @@ export function ExamPortal({
   // Sections derived from the questions' subjects, in order of first appearance.
   // Drives the section tabs and the grouped palette. Callers can pass sectionOf
   // to normalize granular subjects into official exam sections (e.g. GATE's two).
-  const sectionOf_ = sectionOf ?? ((qq: Question) => qq.subject);
+  const sectionOf_ = (qq: Question) => sectionOf?.[qq.subject] ?? sectionFallback ?? qq.subject;
   const sections = useMemo(() => {
     const map = new Map<string, number[]>();
     questions.forEach((qq, i) => {
