@@ -62,7 +62,7 @@ function mmss(total: number): string {
 }
 
 export function ExamPortal({
-  kind, refId, title, questions, durationSec, lockdown, negativeMarking, examLabel, showCalculator,
+  kind, refId, title, questions, durationSec, lockdown, negativeMarking, examLabel, showCalculator, sectionOf,
 }: {
   kind: "mock" | "pyq";
   refId: string;
@@ -80,6 +80,10 @@ export function ExamPortal({
   /** Whether the on-screen scientific calculator is available. GATE = true;
    *  CIL MT = false. Defaults to true to preserve existing GATE behaviour. */
   showCalculator?: boolean;
+  /** Maps a question to its palette/section group. Defaults to the question's
+   *  subject; GATE passes this to collapse syllabus topics into the two
+   *  official sections (General Aptitude / Technical). */
+  sectionOf?: (q: Question) => string;
 }) {
   const locked = lockdown ?? kind === "mock";
   const negMarking = negativeMarking ?? true;
@@ -285,16 +289,19 @@ export function ExamPortal({
   }, [state.status]);
 
   // Sections derived from the questions' subjects, in order of first appearance.
-  // Drives the section tabs and the grouped palette (discipline-generic).
+  // Drives the section tabs and the grouped palette. Callers can pass sectionOf
+  // to normalize granular subjects into official exam sections (e.g. GATE's two).
+  const sectionOf_ = sectionOf ?? ((qq: Question) => qq.subject);
   const sections = useMemo(() => {
     const map = new Map<string, number[]>();
     questions.forEach((qq, i) => {
-      const list = map.get(qq.subject);
+      const name = sectionOf_(qq);
+      const list = map.get(name);
       if (list) list.push(i);
-      else map.set(qq.subject, [i]);
+      else map.set(name, [i]);
     });
     return Array.from(map.entries()).map(([name, indices]) => ({ name, indices }));
-  }, [questions]);
+  }, [questions, sectionOf]);
 
   const sectionStats = useMemo(
     () =>
@@ -453,7 +460,7 @@ export function ExamPortal({
         <div className="bg-slate-700 text-slate-100 px-2 sm:px-4 overflow-x-auto">
           <div className="flex gap-1 min-w-max" role="tablist" aria-label="Exam sections">
             {sectionStats.map((sec) => {
-              const active = sec.name === q.subject;
+              const active = sec.name === sectionOf_(q);
               return (
                 <button
                   key={sec.name}
@@ -557,7 +564,7 @@ export function ExamPortal({
             counts={counts}
             sections={sections}
             sectionSecs={sectionSecs}
-            activeSubject={q.subject}
+            activeSubject={sectionOf_(q)}
             currentIdx={state.idx}
             status={state.status}
             go={go}
@@ -620,7 +627,7 @@ export function ExamPortal({
               counts={counts}
               sections={sections}
               sectionSecs={sectionSecs}
-              activeSubject={q.subject}
+              activeSubject={sectionOf_(q)}
               currentIdx={state.idx}
               status={state.status}
               go={(i) => { go(i); setPaletteOpen(false); }}
