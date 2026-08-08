@@ -1,4 +1,4 @@
-import { getAdminSession } from "@/lib/admin";
+import { getAdminSession, getTestUserIds } from "@/lib/admin";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { inr, istDate, istTime } from "@/lib/utils";
@@ -36,6 +36,7 @@ export default async function AdminUpiPage({
 
   const now = new Date();
   const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
+  const testUserIds = await getTestUserIds();
 
   // Attribution filter applied to the unified payments table.
   const payWhere = {
@@ -77,10 +78,11 @@ export default async function AdminUpiPage({
     }),
     db.upiPayment.groupBy({ by: ["status"], _count: { _all: true } }),
     // Captured revenue per exam+subject (unified Payment table) — grouped by
-    // subject so the two PSU entries (CIL / ONGC) split correctly.
+    // subject so the two PSU entries (CIL / ONGC) split correctly. Test users
+    // are excluded so test grants don't inflate the chips.
     db.payment.groupBy({
       by: ["exam", "subject"],
-      where: { status: "captured" },
+      where: { status: "captured", userId: { notIn: [...testUserIds] } },
       _sum: { amount: true },
       _count: { _all: true },
     }),
