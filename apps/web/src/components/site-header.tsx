@@ -53,7 +53,7 @@ const MINING_MODULES = [
   { href: "/mocks", label: "Mocks" },
   { href: "/aits", label: "AITS" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/blog", label: "Blog" },
+  { href: "/gate/mining/blog", label: "Blog" },
 ];
 
 /**

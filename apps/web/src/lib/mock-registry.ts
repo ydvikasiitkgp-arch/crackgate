@@ -29,10 +29,22 @@ export type ResolvedMock = {
   gate: MockGate;
 };
 
+/** Strip a trailing `-vN` version suffix so legacy attempt refIds (e.g. the
+ *  pre-v3 NCL Sirdar mock 02) resolve to the current mock. */
+export function canonicalMockId(id: string): string {
+  return id.replace(/-(v\d+)$/, "");
+}
+
+/** Find a current mock by exact id, falling back to a canonical match so an
+ *  attempt stored under an older versioned id still resolves. */
+function findCurrent<T extends { id: string }>(pool: readonly T[], id: string): T | undefined {
+  return pool.find((x) => x.id === id) ?? pool.find((x) => canonicalMockId(x.id) === canonicalMockId(id));
+}
+
 /** Resolve a mock id to its questions, duration, marking rule and access gate. */
 export function resolveMock(id: string): ResolvedMock | null {
   if (id.startsWith("ce-mock-")) {
-    const m = CE_MOCKS.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(CE_MOCKS, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -47,7 +59,7 @@ export function resolveMock(id: string): ResolvedMock | null {
   }
 
   if (id.startsWith("es-mock-")) {
-    const m = ES_MOCKS.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(ES_MOCKS, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -62,7 +74,7 @@ export function resolveMock(id: string): ResolvedMock | null {
   }
 
   if (id.startsWith("gg-mock-")) {
-    const m = GG_MOCKS.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(GG_MOCKS, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -104,7 +116,7 @@ export function resolveMock(id: string): ResolvedMock | null {
 
   // WCL mocks — entitlement-gated per exam (₹399 unlocks all 19 pro mocks).
   if (id.startsWith("diploma-wcl-sirdar-")) {
-    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(DIPLOMA_MOCKS, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -119,7 +131,7 @@ export function resolveMock(id: string): ResolvedMock | null {
   }
 
   if (id.startsWith("diploma-wcl-foreman-")) {
-    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(DIPLOMA_MOCKS, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -135,7 +147,7 @@ export function resolveMock(id: string): ResolvedMock | null {
 
   // NCL mocks — entitlement-gated per exam (₹399 unlocks all 19 pro mocks).
   if (id.startsWith("diploma-ncl-sirdar-")) {
-    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(DIPLOMA_MOCKS, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -150,7 +162,7 @@ export function resolveMock(id: string): ResolvedMock | null {
   }
 
   if (id.startsWith("diploma-ncl-surveyor-")) {
-    const m = DIPLOMA_MOCKS.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(DIPLOMA_MOCKS, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -168,7 +180,7 @@ export function resolveMock(id: string): ResolvedMock | null {
   if (id.startsWith("state-") || id.startsWith("diploma-")) {
     const isState = id.startsWith("state-");
     const pool = isState ? STATE_MOCKS : DIPLOMA_MOCKS;
-    const m = pool.find((x) => (x as { id: string }).id === id) as
+    const m = findCurrent(pool, id) as
       | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
       | undefined;
     if (!m) return null;
@@ -184,7 +196,7 @@ export function resolveMock(id: string): ResolvedMock | null {
     };
   }
 
-  const m = MOCKS.find((x) => (x as { id: string }).id === id) as
+  const m = findCurrent(MOCKS, id) as
     | { id: string; title: string; tier: "free" | "subject" | "premium"; duration?: number; questions: unknown[] }
     | undefined;
   if (!m) return null;

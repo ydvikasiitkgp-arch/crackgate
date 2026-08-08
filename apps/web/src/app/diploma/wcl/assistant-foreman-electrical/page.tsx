@@ -9,6 +9,7 @@ import { UnlockNowBtn } from "@/components/unlock-now-btn";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { hasEntitlement } from "@/lib/entitlements";
+import { canonicalMockId } from "@/lib/mock-registry";
 
 export const dynamic = "force-dynamic";
 
@@ -57,10 +58,11 @@ export default async function WCLAFElectricalPage() {
     ? await db.attempt.findMany({
         where: { userId, kind: "mock" },
         select: { id: true, refId: true, takenAt: true },
+        orderBy: { takenAt: "desc" },
       })
     : [];
-  const completedIds = new Set(attempts.filter(a => a.refId.startsWith("diploma-wcl-foreman-mock-")).map(a => a.refId));
-  const attemptMap = new Map(attempts.map(a => [a.refId, { id: a.id, takenAt: a.takenAt }]));
+  const completedIds = new Set(attempts.filter(a => a.refId.startsWith("diploma-wcl-foreman-mock-")).map(a => canonicalMockId(a.refId)));
+  const attemptMap = new Map(attempts.map(a => [canonicalMockId(a.refId), { id: a.id, takenAt: a.takenAt }]));
 
   const liveCount = WCL_AF_MOCKS.length;
 
@@ -186,7 +188,7 @@ export default async function WCLAFElectricalPage() {
         {/* Mock card grid */}
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {WCL_AF_MOCKS.map((m) => {
-            const done = completedIds.has(m.id);
+            const done = completedIds.has(canonicalMockId(m.id));
             return (
               <div key={m.id} className="card relative flex flex-col p-5">
                 <span className={`badge absolute right-4 top-4 ${done ? "bg-ok/10 text-ok" : unlocked ? "bg-brand/10 text-brand" : "badge-pro"}`}>
@@ -199,7 +201,7 @@ export default async function WCLAFElectricalPage() {
                   <span className="rounded-md bg-canvas px-2 py-1">{m.totalMarks} marks</span>
                 </div>
                 {done ? (
-                  <Link href={`/result/${attemptMap.get(m.id)!.id}`} className="btn btn-ghost mt-4 w-full justify-center">
+                  <Link href={`/result/${attemptMap.get(canonicalMockId(m.id))!.id}`} className="btn btn-ghost mt-4 w-full justify-center">
                     Review Answers →
                   </Link>
                 ) : unlocked ? (
