@@ -72,14 +72,8 @@ export default async function MockPage(props: { params: Promise<{ id: string }> 
       durationSec={m.durationSec}
       negativeMarking={m.negativeMarking}
       showCalculator={!isPsu && !isDiploma}
-      sectionOf={
-        isGate
-          ? (q) =>
-              q.subject === "General Aptitude"
-                ? "Section A · General Aptitude"
-                : "Section B · Technical"
-          : undefined
-      }
+      sectionOf={isGate ? { "General Aptitude": "Section A · General Aptitude" } : undefined}
+      sectionFallback={isGate ? "Section B · Technical" : undefined}
       examLabel={
         isOngc
           ? "ONGC — Oil and Natural Gas Corporation"
