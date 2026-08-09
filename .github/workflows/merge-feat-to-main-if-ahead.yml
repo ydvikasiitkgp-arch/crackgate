@@ -1,6 +1,6 @@
 name: Sync feat — ahead of main
 
-# Runs when `feat` is AHEAD of `main`: every 6 hours opens a PR (feat → main)
+# Runs when `feat` is AHEAD of `main`: every 8 hours opens a PR (feat → main)
 # and merges it so `main` tracks `feat`.
 #
 # NOTE: the `schedule` trigger only fires when this file exists on the default
@@ -9,7 +9,7 @@ name: Sync feat — ahead of main
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */8 * * *'
   workflow_dispatch:
 
 concurrency:
