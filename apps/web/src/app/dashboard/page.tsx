@@ -35,6 +35,7 @@ import {
 } from "@/lib/dashboard-data";
 import { getUserEntitlements } from "@/lib/entitlements";
 import { resolveDashboardTracks, pickActiveTrack } from "@/lib/dashboard-tracks";
+import { getGateSubject } from "@/data/gate/registry";
 import { TrackSwitcher } from "@/components/track-switcher";
 import { ChooseExam } from "@/components/choose-exam";
 import { CilDashboard, type CilAttempt } from "@/components/cil-dashboard";
@@ -119,10 +120,11 @@ export default async function DashboardPage({
     );
   }
 
-  // ── GATE Civil (CE) track — dedicated view, return early. ───────────
-  if (activeTrack.kind === "civil") {
-    const ceAttempts: CivilAttempt[] = allAttempts
-      .filter((a) => a.refId.startsWith("ce-mock-"))
+  // ── GATE subject track (CE / GG / ES) — dedicated view, return early. ──
+  if (activeTrack.kind === "gate") {
+    const mockPrefix = `${getGateSubject(activeTrack.subject)?.code.toLowerCase() ?? activeTrack.subject}-mock-`;
+    const gateAttempts: CivilAttempt[] = allAttempts
+      .filter((a) => a.refId.startsWith(mockPrefix))
       .map((a) => ({
         id: a.id,
         refId: a.refId,
@@ -136,7 +138,7 @@ export default async function DashboardPage({
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
         <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
-        <CivilDashboard track={activeTrack} attempts={ceAttempts} />
+        <CivilDashboard track={activeTrack} attempts={gateAttempts} />
       </div>
     );
   }
