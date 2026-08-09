@@ -7,6 +7,7 @@ import { NextResponse } from "next/server";
 import crypto from "node:crypto";
 import { whatsappQueue } from "@/lib/queue";
 import { getPostHogClient } from "@/lib/posthog";
+import { normalizePhone } from "@/lib/whatsapp";
 
 export const runtime = "nodejs";
 
@@ -31,6 +32,7 @@ export async function POST(req: Request) {
       order_id: string;
       status: string;
       amount: number;
+      contact?: string;
       notes?: Record<string, string>;
     } } };
   };
@@ -76,6 +78,15 @@ export async function POST(req: Request) {
         where: { id: payment.userId },
         data: { plan: payment.plan, planExpiry: expiry },
       }),
+      ...(p.contact
+        ? [
+            // Backfill the payer's mobile so it shows in the admin console.
+            db.user.updateMany({
+              where: { id: payment.userId, phone: null },
+              data: { phone: normalizePhone(p.contact) },
+            }),
+          ]
+        : []),
       db.activity.create({
         data: {
           userId: payment.userId,
