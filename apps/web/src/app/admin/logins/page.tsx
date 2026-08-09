@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { fmtDate } from "@/lib/utils";
 import { AdminSectionHeader } from "@/components/admin/admin-section-header";
 import { AdminDataTableEmpty } from "@/components/admin/admin-empty-state";
+import { Prisma } from "@crackgate/database";
 
 export const dynamic = "force-dynamic";
 
@@ -85,6 +86,43 @@ export default async function LoginsPage({
 
   const totalPages = Math.ceil(total / pageSize);
 
+  // Last-session duration per page user: first→last pageview of their most
+  // recent active day (IST). One raw query for the whole page, bounded to 90d.
+  const userIds = users.map((u) => u.id);
+  type SessionRow = { userId: string; last_ts: Date; first_ts: Date | null };
+  const sessions: Record<string, number> = {};
+  if (userIds.length > 0) {
+    const rows = await db.$queryRaw<SessionRow[]>`
+      WITH last_ts AS (
+        SELECT "userId", MAX("createdAt") AS ts
+        FROM "PageView"
+        WHERE "userId" IN (${Prisma.join(userIds)})
+          AND "createdAt" > now() - interval '90 days'
+        GROUP BY "userId"
+      )
+      SELECT l."userId",
+             l.ts AS last_ts,
+             (SELECT MIN(p."createdAt") FROM "PageView" p
+              WHERE p."userId" = l."userId"
+                AND p."createdAt" >= date_trunc('day', l.ts AT TIME ZONE 'Asia/Kolkata') AT TIME ZONE 'Asia/Kolkata'
+                AND p."createdAt" <  (date_trunc('day', l.ts AT TIME ZONE 'Asia/Kolkata') + interval '1 day') AT TIME ZONE 'Asia/Kolkata'
+             ) AS first_ts
+      FROM last_ts l
+    `;
+    for (const r of rows) {
+      if (!r.first_ts) continue;
+      const mins = Math.round((r.last_ts.getTime() - r.first_ts.getTime()) / 60_000);
+      if (mins > 0) sessions[r.userId] = mins;
+    }
+  }
+
+  function fmtDuration(mins: number) {
+    if (mins < 60) return `${mins}m`;
+    const h = Math.floor(mins / 60);
+    const m = mins % 60;
+    return m ? `${h}h ${m}m` : `${h}h`;
+  }
+
   return (
     <div className="max-w-[1400px] mx-auto px-3 sm:px-5 py-10">
       <AdminSectionHeader
@@ -122,12 +160,13 @@ export default async function LoginsPage({
                 <th className="px-3 sm:px-6 py-3 text-left">Plan</th>
                 <th className="hidden sm:table-cell px-3 sm:px-6 py-3 text-left">Joined</th>
                 <th className="px-3 sm:px-6 py-3 text-left">Last Login</th>
+                <th className="hidden lg:table-cell px-3 sm:px-6 py-3 text-left">Time on site</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-line/50">
               {users.length === 0 ? (
                 <AdminDataTableEmpty
-                  colSpan={6}
+                  colSpan={7}
                   icon="Users"
                   title="No users found"
                   description={query ? `No users matching "${query}".` : "No users yet."}
@@ -178,6 +217,11 @@ export default async function LoginsPage({
                     <td className="px-3 sm:px-6 py-3 text-muted">
                       {u.lastLoginAt ? fmtDate(u.lastLoginAt) : (
                         <span className="text-xs italic">Never</span>
+                      )}
+                    </td>
+                    <td className="hidden lg:table-cell px-3 sm:px-6 py-3 text-muted tabular-nums">
+                      {sessions[u.id] ? fmtDuration(sessions[u.id]) : (
+                        <span className="text-xs italic">—</span>
                       )}
                     </td>
                   </tr>

@@ -30,10 +30,10 @@ function trackStyle(subject: string) {
   return TRACK_ACCENTS[subject] ?? { border: "border-l-indigo-500", gradient: "from-indigo-500/5", badge: "bg-indigo-500/15 text-indigo-300" };
 }
 
-function examLabel(key: string): string {
-  if (key.startsWith("GATE")) return "GATE";
-  if (key.startsWith("PSU")) return "PSU";
-  if (key.startsWith("DIPLOMA")) return "Diploma";
+function examLabel(exam: string): string {
+  if (exam === "GATE") return "GATE";
+  if (exam === "PSU") return "PSU";
+  if (exam === "DIPLOMA") return "Diploma";
   return "State";
 }
 
@@ -107,7 +107,7 @@ export function CourseHub({
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <span className={`badge text-[10px] font-bold uppercase ${style.badge}`}>
-                      {examLabel(t.key)}
+                      {examLabel(t.exam)}
                     </span>
                   </div>
                   <h3 className="text-sm font-extrabold mt-2 leading-tight line-clamp-2">
