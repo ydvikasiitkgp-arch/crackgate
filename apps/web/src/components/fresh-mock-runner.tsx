@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MathText } from "@/components/math-text";
 import { QuestionFigure, type QuestionFigure as Figure } from "@/components/question-figure";
 import { OfflineToast } from "@/components/offline-toast";
+import { LeaveConfirm } from "@/components/leave-confirm";
 
 type Q = {
   id: string; subject: string; topic: string;
@@ -39,6 +40,8 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
   const [seenIds, setSeenIds] = useState<Set<string>>(new Set());
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [paletteOpen, setPaletteOpen] = useState(false);
+  const [leaveOpen, setLeaveOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
 
   // Load
   useEffect(() => {
@@ -57,6 +60,35 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
   }, [phase]);
 
   useEffect(() => { if (phase === "running" && secondsLeft === 0) setPhase("submitted"); }, [phase, secondsLeft]);
+
+  // Guard header/footer/global nav while running: trap anchor clicks outside
+  // the exam root behind the leave/continue/submit choice.
+  useEffect(() => {
+    if (phase !== "running") return;
+    const onClick = (e: MouseEvent) => {
+      const t = e.target as Element | null;
+      const a = t?.closest?.("a[href]");
+      if (!(a instanceof HTMLAnchorElement)) return;
+      if (a.target === "_blank" || a.getAttribute("href")?.startsWith("#")) return;
+      if (rootRef.current?.contains(a)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      setLeaveOpen(true);
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, [phase]);
+
+  // Warn on close/refresh while running
+  useEffect(() => {
+    if (phase !== "running") return;
+    const onBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = "";
+    };
+    window.addEventListener("beforeunload", onBeforeUnload);
+    return () => window.removeEventListener("beforeunload", onBeforeUnload);
+  }, [phase]);
 
   // Track seen for "skipped" calc
   useEffect(() => {
@@ -230,7 +262,7 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
   }).length;
 
   return (
-    <div className="max-w-5xl mx-auto px-5 py-6">
+    <div ref={rootRef} className="max-w-5xl mx-auto px-5 py-6">
       {/* Top bar */}
       <div className="sticky top-16 bg-bg/95 backdrop-blur z-10 -mx-5 px-5 py-3 border-b border-line flex justify-between items-center text-sm">
         <div className="min-w-0 truncate mr-2"><b>{mock.title}</b> · {q.section}</div>
@@ -389,6 +421,13 @@ export function FreshMockRunner({ initialSeed }: { initialSeed?: number }) {
       </div>
 
       <OfflineToast />
+
+      {leaveOpen && (
+        <LeaveConfirm
+          onContinue={() => setLeaveOpen(false)}
+          onSubmit={() => { setLeaveOpen(false); setPhase("submitted"); }}
+        />
+      )}
     </div>
   );
 }
