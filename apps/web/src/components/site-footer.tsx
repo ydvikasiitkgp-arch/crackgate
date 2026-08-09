@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/brand";
 import { SocialLinks } from "@/components/social-icons";
+import { PricingLink } from "@/components/pricing-link";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -31,7 +32,7 @@ export function SiteFooter() {
         <FooterCol title="Company">
           <FooterLink href="/contact">Contact</FooterLink>
           <FooterLink href="/faq">FAQ</FooterLink>
-          <FooterLink href="/pricing">Pricing</FooterLink>
+          <li><PricingLink className="text-sm text-slate-400 hover:text-white">Pricing</PricingLink></li>
         </FooterCol>
         <FooterCol title="Legal">
           <FooterLink href="/privacy">Privacy Policy</FooterLink>

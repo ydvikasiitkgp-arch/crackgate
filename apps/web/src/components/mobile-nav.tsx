@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
@@ -406,23 +406,29 @@ export function MobileSectionBar() {
 
 const MINING_SITE_PREFIXES = ["/gate/mining", "/learn", "/practice", "/mocks", "/aits", "/pricing"];
 const LIVE_SUBJECT_PREFIXES = ["/gate/civil", "/gate/geology", "/gate/environment"];
+const LIVE_SUBJECT_SLUGS = ["civil", "geology", "environment"];
 
-function isMiningSite(pathname: string | null): boolean {
+function isMiningSite(pathname: string | null, search: URLSearchParams | null): boolean {
   if (!pathname) return false;
   if (/^\/mocks\/(cil-|ongc-|ce-mock-|gg-mock-|es-mock-|state-|diploma-)/.test(pathname)) return false;
+  // /pricing is mining-only unless ?subject= points at a live non-mining subject.
+  if (pathname === "/pricing" && search && LIVE_SUBJECT_SLUGS.includes(search.get("subject") ?? "")) return false;
   return MINING_SITE_PREFIXES.some((p) => pathname === p || pathname.startsWith(p + "/"));
 }
 
-function isLiveSubjectSite(pathname: string | null): boolean {
+function isLiveSubjectSite(pathname: string | null, search: URLSearchParams | null): boolean {
   if (!pathname) return false;
+  // /pricing?subject=<live> carries its own subject header (rendered by the pricing page).
+  if (pathname === "/pricing" && search && LIVE_SUBJECT_SLUGS.includes(search.get("subject") ?? "")) return true;
   return LIVE_SUBJECT_PREFIXES.some((p) => pathname === p || pathname.startsWith(p + "/"));
 }
 
 export function HideOnMiningSite({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  return isMiningSite(pathname) || isLiveSubjectSite(pathname) ? null : <>{children}</>;
+  const search = useSearchParams();
+  return isMiningSite(pathname, search) || isLiveSubjectSite(pathname, search) ? null : <>{children}</>;
 }
 
 export function ShowOnMiningSite({ children }: { children: React.ReactNode }) {
-  return isMiningSite(usePathname()) ? <>{children}</> : null;
+  return isMiningSite(usePathname(), useSearchParams()) ? <>{children}</> : null;
 }
