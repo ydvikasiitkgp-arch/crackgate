@@ -1,6 +1,6 @@
-name: Sync main into feat
+name: Sync feat — behind main
 
-# Keeps `feat` in sync with `main` by fast-forwarding `feat` to `main`'s tip
+# Runs when `feat` is BEHIND `main`: fast-forwards `feat` to `main`'s tip
 # whenever `main` receives commits (PR merges into `main`, hotfixes, etc.).
 #
 # NOTE: the `schedule` trigger only fires when this file exists on the default
@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: sync-main-to-feat
+  group: sync-feat-behind
   cancel-in-progress: false
 
 permissions:
@@ -63,4 +63,4 @@ jobs:
         run: |
           curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
             -H 'Content-Type: application/json' \
-            -d '{"text":":rotating_light: Sync main into feat workflow failed."}'
+            -d '{"text":":rotating_light: Sync feat (behind main) workflow failed."}'

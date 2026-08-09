@@ -1,7 +1,7 @@
-name: Sync feat into main
+name: Sync feat — ahead of main
 
-# Every 6 hours, if `feat` is ahead of `main`, opens a PR (feat → main) and
-# merges it so `main` tracks `feat`.
+# Runs when `feat` is AHEAD of `main`: every 6 hours opens a PR (feat → main)
+# and merges it so `main` tracks `feat`.
 #
 # NOTE: the `schedule` trigger only fires when this file exists on the default
 # branch (`main`), so this becomes active once merged there. Until then use
@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: sync-feat-to-main
+  group: sync-feat-ahead
   cancel-in-progress: false
 
 permissions:
@@ -84,4 +84,4 @@ jobs:
         run: |
           curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
             -H 'Content-Type: application/json' \
-            -d '{"text":":rotating_light: Sync feat into main workflow failed."}'
+            -d '{"text":":rotating_light: Sync feat (ahead of main) workflow failed."}'
