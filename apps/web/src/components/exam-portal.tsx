@@ -6,6 +6,7 @@ import { secondsToHMS, cn } from "@/lib/utils";
 import { CalculatorLauncher } from "@/components/gate-calculator";
 import { QuestionTypeTag } from "@/components/question-extras";
 import { OfflineToast } from "@/components/offline-toast";
+import { LeaveConfirm } from "@/components/leave-confirm";
 import { QuestionFigure, type QuestionFigure as Figure } from "@/components/question-figure";
 import { MathText } from "@/components/math-text";
 import { useImpersonation } from "@/components/impersonation-context";
@@ -119,6 +120,7 @@ export function ExamPortal({
   }
 
   function startMock() {
+    try { localStorage.removeItem(storageKey); } catch { /* ignore */ }
     void rootRef.current?.requestFullscreen?.().catch(() => {});
     setStarted(true);
   }
@@ -128,10 +130,8 @@ export function ExamPortal({
     else void rootRef.current?.requestFullscreen?.().catch(() => {});
   }
 
-  // Autosave / resume + pause state
+  // Autosave / pause state
   const storageKey = `cg:exam:${kind}:${refId}`;
-  const hydrated = useRef(false);
-  const [resumed, setResumed] = useState(false);
   const [paused, setPaused] = useState(false);
   const pausedRef = useRef(false);
   useEffect(() => { pausedRef.current = paused; }, [paused]);
@@ -177,40 +177,6 @@ export function ExamPortal({
     currentSubjectRef.current = questions[state.idx]?.subject ?? "";
   }, [state.idx, questions]);
 
-  // Hydrate a saved attempt from localStorage once on mount (post-render, so
-  // server + client first paint match and there is no hydration mismatch).
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(storageKey);
-      if (raw) {
-        const saved = JSON.parse(raw);
-        if (saved?.answers && saved?.status) {
-          dispatch({ type: "hydrate", state: { idx: saved.idx ?? 0, answers: saved.answers, status: saved.status } });
-          if (typeof saved.secondsLeft === "number") setSecondsLeft(saved.secondsLeft);
-          if (saved.sectionSecs) setSectionSecs(saved.sectionSecs);
-          setResumed(true);
-        }
-      }
-    } catch { /* ignore corrupt/blocked storage */ }
-    hydrated.current = true;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Autosave progress to localStorage on every change (after hydration).
-  useEffect(() => {
-    if (!hydrated.current) return;
-    try {
-      localStorage.setItem(storageKey, JSON.stringify({
-        idx: state.idx,
-        answers: state.answers,
-        status: state.status,
-        secondsLeft,
-        sectionSecs,
-        savedAt: Date.now(),
-      }));
-    } catch { /* ignore quota/blocked storage */ }
-  }, [state, secondsLeft, sectionSecs, storageKey]);
-
   // Tick timer
   useEffect(() => {
     const t = setInterval(() => {
@@ -252,6 +218,25 @@ export function ExamPortal({
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
+
+  // Guard header/footer/global nav: while a test is active, any anchor click
+  // outside the exam root is trapped behind the leave/continue/submit choice.
+  useEffect(() => {
+    if (!started) return;
+    const onClick = (e: MouseEvent) => {
+      if (leavingRef.current || submittingRef.current) return;
+      const t = e.target as Element | null;
+      const a = t?.closest?.("a[href]");
+      if (!(a instanceof HTMLAnchorElement)) return;
+      if (a.target === "_blank" || a.getAttribute("href")?.startsWith("#")) return;
+      if (rootRef.current?.contains(a)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      setLeaveOpen(true);
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, [started]);
 
   // ---------- Exam-center lockdown ----------
   useEffect(() => {
@@ -370,19 +355,6 @@ export function ExamPortal({
     window.history.go(-1);
   }
 
-  // Abandon the attempt for real: back out of the exam page. Autosave keeps
-  // progress so the candidate can resume later.
-  function onExitTest() {
-    leavingRef.current = true;
-    setLeaveOpen(false);
-    // Pop the guard + exam entries to the page the candidate came from; if
-    // there is no such entry (direct URL load), land on the mocks home.
-    window.setTimeout(() => {
-      if (window.location.pathname.startsWith("/mocks/")) window.location.replace("/mocks");
-    }, 700);
-    window.history.go(-2);
-  }
-
   async function submit(auto = false) {
     if (impersonating) { toastViewOnly(); return; }
     if (!auto && !confirmOpen) { setConfirmOpen(true); return; }
@@ -402,7 +374,6 @@ export function ExamPortal({
       if (res.status === 402) { alert("Upgrade required to attempt this paper."); return router.push("/pricing"); }
       const data = await res.json();
       if (!res.ok) throw new Error(JSON.stringify(data?.error));
-      try { localStorage.removeItem(storageKey); } catch { /* ignore */ }
       dropGuard(() => router.replace(`/result/${data.attempt.id}`));
     } catch (e) {
       alert((e as Error).message);
@@ -487,14 +458,6 @@ export function ExamPortal({
               );
             })}
           </div>
-        </div>
-      )}
-
-      {/* ---------- Resumed-attempt banner ---------- */}
-      {resumed && (
-        <div className="bg-emerald-50 text-emerald-900 text-xs px-4 sm:px-5 py-1.5 flex items-center gap-2">
-          <span>↻ Resumed your saved attempt — your answers and timer were restored.</span>
-          <button type="button" onClick={() => setResumed(false)} className="ml-auto underline">Dismiss</button>
         </div>
       )}
 
@@ -662,7 +625,6 @@ export function ExamPortal({
         <LeaveConfirm
           onContinue={() => setLeaveOpen(false)}
           onSubmit={() => { setLeaveOpen(false); submit(false); }}
-          onExit={onExitTest}
         />
       )}
 
@@ -670,7 +632,7 @@ export function ExamPortal({
       {kind === "mock" && !started && (
         <div className="fixed inset-0 z-[80] bg-ink/80 backdrop-blur-sm grid place-items-center p-4 text-center">
           <div className="bg-surface rounded-xl max-w-sm w-full p-6">
-            <h2 className="text-xl font-extrabold">{resumed ? "Resume mock" : "Begin mock"}</h2>
+            <h2 className="text-xl font-extrabold">Begin mock</h2>
             <p className="text-sm text-muted mt-1">{title}</p>
             {sections.length > 1 && (
               <div className="flex flex-wrap justify-center gap-2 mt-3">
@@ -683,7 +645,7 @@ export function ExamPortal({
               {Math.round(durationSec / 60)} minutes · {questions.length} questions
             </p>
             <button onClick={startMock} className="btn btn-accent w-full mt-5">
-              {resumed ? "Resume mock" : "Start mock"}
+              Start mock
             </button>
             <p className="text-[11px] text-muted mt-3">
               The exam opens in fullscreen with the current section shown in the header.
@@ -819,28 +781,6 @@ function SubmitConfirm({
             </div>
           </div>
         )}
-      </div>
-    </div>
-  );
-}
-
-function LeaveConfirm({ onContinue, onSubmit, onExit }: {
-  onContinue: () => void;
-  onSubmit: () => void;
-  onExit: () => void;
-}) {
-  return (
-    <div className="fixed inset-0 z-[85] bg-black/50 grid place-items-center p-4 text-center">
-      <div className="bg-surface rounded-xl max-w-sm w-full p-6">
-        <h2 className="text-xl font-extrabold">Leave test?</h2>
-        <p className="text-sm text-muted mt-1">
-          Your answers are saved — you can resume this attempt later.
-        </p>
-        <div className="mt-5 space-y-2">
-          <button onClick={onContinue} className="btn btn-accent w-full text-sm">Continue test</button>
-          <button onClick={onSubmit} className="btn btn-primary w-full text-sm">Submit test</button>
-          <button onClick={onExit} className="btn btn-ghost w-full text-sm">Exit test</button>
-        </div>
       </div>
     </div>
   );
