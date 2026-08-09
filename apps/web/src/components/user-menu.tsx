@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { PricingLink } from "@/components/pricing-link";
 
 export function UserMenu({
   name, email, image, plan, role,
@@ -78,13 +79,12 @@ export function UserMenu({
               </div>
             </div>
             {plan === "free" && (
-              <Link
-                href="/pricing"
+              <PricingLink
                 onClick={() => setOpen(false)}
                 className="btn btn-accent w-full mt-3 text-xs justify-center"
               >
                 Upgrade your plan
-              </Link>
+              </PricingLink>
             )}
           </div>
 
@@ -92,7 +92,7 @@ export function UserMenu({
           <Section>
             <Item href="/dashboard" icon="📊" onClick={() => setOpen(false)}>Dashboard</Item>
             <Item href="/settings"  icon="⚙️" onClick={() => setOpen(false)}>Account settings</Item>
-            <Item href="/pricing"   icon="💎" onClick={() => setOpen(false)}>Plans & billing</Item>
+            <PricingLink className="flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-canvas text-ink" onClick={() => setOpen(false)}><span className="w-5 text-center">💎</span><span>Plans &amp; billing</span></PricingLink>
             <Item href="/contact"   icon="💬" onClick={() => setOpen(false)}>Help & support</Item>
             {role === "admin" && (
               <Item href="/admin" icon="🛡️" onClick={() => setOpen(false)}>Admin console</Item>
