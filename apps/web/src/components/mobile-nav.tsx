@@ -405,8 +405,8 @@ export function MobileSectionBar() {
 }
 
 const MINING_SITE_PREFIXES = ["/gate/mining", "/learn", "/practice", "/mocks", "/aits", "/pricing"];
-const LIVE_SUBJECT_PREFIXES = ["/gate/civil", "/gate/geology", "/gate/environment"];
-const LIVE_SUBJECT_SLUGS = ["civil", "geology", "environment"];
+const LIVE_SUBJECT_PREFIXES = ["/gate/civil", "/gate/geology", "/gate/environment", "/gate/life-sciences"];
+const LIVE_SUBJECT_SLUGS = ["civil", "geology", "environment", "life-sciences"];
 
 function isMiningSite(pathname: string | null, search: URLSearchParams | null): boolean {
   if (!pathname) return false;
