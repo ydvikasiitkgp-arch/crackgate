@@ -15,8 +15,12 @@ cd "$(dirname "$0")/.."
 BACKUP_DIR="${BACKUP_DIR:-/home/deploy/backups}"
 RETENTION_DAYS="${BACKUP_RETENTION_DAYS:-14}"
 RCLONE_REMOTE="${RCLONE_REMOTE:-}"   # e.g. r2:crackgate-backups   (empty = local only)
+# Which compose file owns the `db` service. Defaults to docker-compose.yml;
+# cloud VMs (Azure/GCP) set docker-compose.cloud.yml.
+COMPOSE_FILE="${COMPOSE_FILE:-docker-compose.yml}"
+COMPOSE=(docker compose -f "$COMPOSE_FILE")
 
-if ! docker compose ps db --status running --quiet | grep -q .; then
+if ! "${COMPOSE[@]}" ps db --status running --quiet | grep -q .; then
   echo "❌ db service is not running. Aborting." >&2
   exit 1
 fi
@@ -27,7 +31,7 @@ OUT="$BACKUP_DIR/crackgate-${STAMP}.sql.gz"
 
 echo "▶ Dumping database → $OUT"
 # Reads $POSTGRES_USER / $POSTGRES_DB from inside the db container's env.
-docker compose exec -T db sh -c \
+"${COMPOSE[@]}" exec -T db sh -c \
   'pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" --no-owner --clean --if-exists' \
   | gzip -9 > "$OUT"
 
