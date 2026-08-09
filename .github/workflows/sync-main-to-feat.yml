@@ -1,0 +1,66 @@
+name: Sync main into feat
+
+# Keeps `feat` in sync with `main` by fast-forwarding `feat` to `main`'s tip
+# whenever `main` receives commits (PR merges into `main`, hotfixes, etc.).
+#
+# NOTE: the `schedule` trigger only fires when this file exists on the default
+# branch (`main`), so this workflow becomes fully active once merged there.
+# The `push` trigger activates from the branch that owns the file, so it only
+# starts firing after the file lands on `main` too.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-main-to-feat
+  cancel-in-progress: false
+
+permissions:
+  contents: write # push the fast-forwarded `feat`
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Determine if feat is behind main
+        id: behind
+        run: |
+          git fetch origin main:refs/remotes/origin/main feat:refs/remotes/origin/feat
+          MAIN_ONLY=$(git rev-list --count origin/feat..origin/main 2>/dev/null || echo 0)
+          FEAT_ONLY=$(git rev-list --count origin/main..origin/feat 2>/dev/null || echo 0)
+          echo "main_only=${MAIN_ONLY} feat_only=${FEAT_ONLY}"
+          if [ "${MAIN_ONLY}" -gt 0 ] && [ "${FEAT_ONLY}" -eq 0 ]; then
+            echo "state=behind" >> "$GITHUB_OUTPUT"
+          elif [ "${FEAT_ONLY}" -gt 0 ] && [ "${MAIN_ONLY}" -gt 0 ]; then
+            echo "state=diverged" >> "$GITHUB_OUTPUT"
+          else
+            echo "state=in-sync" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fast-forward feat to main
+        if: steps.behind.outputs.state == 'behind'
+        run: |
+          git push origin refs/remotes/origin/main:refs/heads/feat
+          echo "feat fast-forwarded to $(git rev-parse --short origin/main)"
+
+      - name: Notify on divergence
+        if: steps.behind.outputs.state == 'diverged'
+        run: |
+          curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d '{"text":":warning: `feat` and `main` have diverged — manual sync required."}'
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d '{"text":":rotating_light: Sync main into feat workflow failed."}'
