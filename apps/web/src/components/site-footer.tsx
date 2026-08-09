@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div className="flex items-center gap-2 font-extrabold text-white">
             <BrandMark size={36} />
             <span>
-              CrackGate<span className="text-accent">.in</span>
+              CrackGate
             </span>
           </div>
           <p className="text-sm mt-3 text-slate-400 max-w-xs">
@@ -40,7 +40,7 @@ export function SiteFooter() {
         </FooterCol>
       </div>
       <div className="border-t border-slate-800 py-5 text-center text-xs text-slate-500">
-        © {year} CrackGate.in · Built for India's GATE &amp; PSU aspirants
+        © {year} CrackGate · Built for India's GATE &amp; PSU aspirants
       </div>
     </footer>
   );
