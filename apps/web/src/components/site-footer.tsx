@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div className="flex items-center gap-2 font-extrabold text-white">
             <BrandMark size={36} />
             <span>
-              CrackGate<span className="text-accent">.in</span>
+              CrackGate
             </span>
           </div>
           <p className="text-sm mt-3 text-slate-400 max-w-xs">
