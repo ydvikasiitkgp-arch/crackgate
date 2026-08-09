@@ -49,7 +49,7 @@ export function BrandMark({ size = 36, className = "" }: { size?: number; classN
 }
 
 /**
- * Wordmark — "CrackGate" with ".in" in the accent colour.
+ * Wordmark — "CrackGate".
  * Use alongside <BrandMark /> in the header.
  */
 export function Wordmark({ className = "" }: { className?: string }) {
@@ -57,7 +57,6 @@ export function Wordmark({ className = "" }: { className?: string }) {
     <span className={`font-extrabold tracking-tight leading-none whitespace-nowrap ${className}`}>
       <span className="text-ink">Crack</span>
       <span className="text-brand">Gate</span>
-      <span className="text-accent">.in</span>
     </span>
   );
 }

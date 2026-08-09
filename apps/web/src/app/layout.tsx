@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { Suspense } from "react";
 import "./globals.css";
 import "katex/dist/katex.min.css";
 import { SiteHeader, MiningHeader } from "@/components/site-header";
@@ -132,8 +133,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {tracking && <PageViewTracker />}
           {tracking && <GlobalClickTracker />}
           {tracking && <GlobalSectionTracker />}
-          <HideOnMiningSite><SiteHeader /></HideOnMiningSite>
-          <ShowOnMiningSite><MiningHeader /></ShowOnMiningSite>
+          <Suspense fallback={null}><HideOnMiningSite><SiteHeader /></HideOnMiningSite></Suspense>
+          <Suspense fallback={null}><ShowOnMiningSite><MiningHeader /></ShowOnMiningSite></Suspense>
           <main id="main">{children}</main>
           <SiteFooter />
         </PostHogProvider>

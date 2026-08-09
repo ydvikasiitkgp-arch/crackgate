@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/brand";
 import { SocialLinks } from "@/components/social-icons";
+import { PricingLink } from "@/components/pricing-link";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -12,7 +13,7 @@ export function SiteFooter() {
           <div className="flex items-center gap-2 font-extrabold text-white">
             <BrandMark size={36} />
             <span>
-              CrackGate<span className="text-accent">.in</span>
+              CrackGate
             </span>
           </div>
           <p className="text-sm mt-3 text-slate-400 max-w-xs">
@@ -31,7 +32,7 @@ export function SiteFooter() {
         <FooterCol title="Company">
           <FooterLink href="/contact">Contact</FooterLink>
           <FooterLink href="/faq">FAQ</FooterLink>
-          <FooterLink href="/pricing">Pricing</FooterLink>
+          <li><PricingLink className="text-sm text-slate-400 hover:text-white">Pricing</PricingLink></li>
         </FooterCol>
         <FooterCol title="Legal">
           <FooterLink href="/privacy">Privacy Policy</FooterLink>
@@ -40,7 +41,7 @@ export function SiteFooter() {
         </FooterCol>
       </div>
       <div className="border-t border-slate-800 py-5 text-center text-xs text-slate-500">
-        © {year} CrackGate.in · Built for India's GATE &amp; PSU aspirants
+        © {year} CrackGate · Built for India's GATE &amp; PSU aspirants
       </div>
     </footer>
   );
