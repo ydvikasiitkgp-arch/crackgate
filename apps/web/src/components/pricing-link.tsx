@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const LIVE_SUBJECT_SLUGS = ["civil", "geology", "environment"];
+const LIVE_SUBJECT_SLUGS = ["civil", "geology", "environment", "life-sciences"];
 
 /**
  * "Pricing" link that carries the current GATE subject through (?subject=).
