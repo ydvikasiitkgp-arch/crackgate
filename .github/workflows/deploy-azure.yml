@@ -42,6 +42,7 @@ jobs:
   # ─── Lint + typecheck + unit tests — fail fast before the build ───────────
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v5
@@ -60,6 +61,7 @@ jobs:
   build:
     needs: verify
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       packages: write       # push image to ghcr.io
       contents: read
@@ -124,13 +126,16 @@ jobs:
       - name: Copy compose + Caddyfile + deploy script
         run: |
           scp -i ~/.ssh/id_ed25519 \
+            -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 \
             docker-compose.cloud.yml Caddyfile \
             ${{ secrets.AZURE_DEPLOY_USER || 'deploy' }}@${{ secrets.AZURE_HOST }}:/opt/crackgate/
           scp -i ~/.ssh/id_ed25519 \
+            -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 \
             scripts/remote-deploy-cloud.sh \
             ${{ secrets.AZURE_DEPLOY_USER || 'deploy' }}@${{ secrets.AZURE_HOST }}:/opt/crackgate/scripts/
 
       - name: Deploy
+        timeout-minutes: 30
         env:
           IMAGE_TAG: ${{ needs.build.outputs.image_tag }}
           SKIP_MIGRATE: ${{ inputs.skip_migrate || 'false' }}
@@ -141,14 +146,22 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           IMPERSONATE_SECRET: ${{ secrets.IMPERSONATE_SECRET }}
         run: |
+          # Secrets ride over SSH stdin (heredoc), never on the remote
+          # command line, so they don't show up in ps/argv on the VM.
+          # shellcheck disable=SC2087 # runner expands step env vars client-side, intentionally
           ssh -i ~/.ssh/id_ed25519 \
+            -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 \
             ${{ secrets.AZURE_DEPLOY_USER || 'deploy' }}@${{ secrets.AZURE_HOST }} \
-            GHCR_REPO="${{ env.GHCR_REPO }}" IMAGE_TAG="${IMAGE_TAG}" \
-            SKIP_MIGRATE="${SKIP_MIGRATE}" \
-            GHCR_USERNAME="${GHCR_USERNAME}" GHCR_TOKEN="${GHCR_TOKEN}" \
-            ADMIN_EMAILS="${ADMIN_EMAILS}" ADMIN_SHAREHOLDER_EMAILS="${ADMIN_SHAREHOLDER_EMAILS}" \
-            RESEND_API_KEY="${RESEND_API_KEY}" IMPERSONATE_SECRET="${IMPERSONATE_SECRET}" \
+            bash -se <<EOF
+            export GHCR_REPO="${{ env.GHCR_REPO }}" \
+                   IMAGE_TAG="${IMAGE_TAG}" SKIP_MIGRATE="${SKIP_MIGRATE}" \
+                   GHCR_USERNAME="${GHCR_USERNAME}" GHCR_TOKEN="${GHCR_TOKEN}" \
+                   ADMIN_EMAILS="${ADMIN_EMAILS}" \
+                   ADMIN_SHAREHOLDER_EMAILS="${ADMIN_SHAREHOLDER_EMAILS}" \
+                   RESEND_API_KEY="${RESEND_API_KEY}" \
+                   IMPERSONATE_SECRET="${IMPERSONATE_SECRET}"
             bash /opt/crackgate/scripts/remote-deploy-cloud.sh
+          EOF
 
       - name: Notify on failure
         if: failure()
@@ -160,7 +173,9 @@ jobs:
   # ─── Post-deploy smoke test against the Azure-hosted site ─────────────────
   smoke:
     needs: deploy
+    if: ${{ vars.AZURE_URL != '' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v5

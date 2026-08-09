@@ -52,6 +52,10 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+      # The postgres entrypoint starts a temporary server during first-init to
+      # create the user/db, then stops it before the real server starts.
+      # pg_isready returns 0 during that window, so wait it out on first boot.
+      start_period: 30s
 
   redis:
     image: redis:7-alpine
@@ -91,6 +95,8 @@ services:
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
       # Founder/admin elevation — comma-separated emails get role=admin on login.
       ADMIN_EMAILS: ${ADMIN_EMAILS:-}
+      # Impersonation signing key ("Login as User" view-only admin mode).
+      IMPERSONATE_SECRET: ${IMPERSONATE_SECRET:-}
       # Razorpay (server-side; public key id is also a build arg)
       RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID}
       RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET}

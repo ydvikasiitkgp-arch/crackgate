@@ -196,9 +196,16 @@ RemainAfterExit=true
 User=$DEPLOY_USER
 WorkingDirectory=$APP_DIR
 ExecStartPre=/usr/local/bin/ghcr-login.sh
+# Fail closed at boot: refuse to start while .env.production still holds
+# CHANGE_ME placeholders. Otherwise Postgres initializes its data dir with the
+# placeholder password (it ignores POSTGRES_PASSWORD after first init), and
+# every later deploy dies on auth with no recovery short of wiping pgdata.
+ExecStartPre=/bin/sh -c 'if grep -q CHANGE_ME '$APP_DIR'/.env.production; then echo "refusing to start: '$APP_DIR'/.env.production still has CHANGE_ME placeholders — fill in real secrets first" >&2; exit 1; fi'
 ExecStart=/usr/bin/docker compose -f $COMPOSE_FILE --env-file .env.production up -d
 ExecStop=/usr/bin/docker compose -f $COMPOSE_FILE --env-file .env.production down
 TimeoutStartSec=5min
+Restart=on-failure
+RestartSec=60
 
 [Install]
 WantedBy=multi-user.target
@@ -251,8 +258,15 @@ Next steps:
   3. Fill in the app secrets (Postgres, Auth, Razorpay, ...):
        ssh ${DEPLOY_USER}@<external-ip>
        nano /opt/crackgate/.env.production
-  4. Add GitHub repo secrets (GCP_HOST, GCP_SSH_KEY, GHCR_USERNAME,
+     ⚠️  Until every CHANGE_ME is replaced, the stack refuses to start at boot.
+  4. Off-box backups (STRONGLY recommended — a single VM is a SPOF and the
+     nightly dump is local-only until you do this):
+       ssh ${DEPLOY_USER}@<external-ip>
+       rclone config            # add a remote, e.g. r2:crackgate-backups
+       nano /opt/crackgate/.env.production   # set RCLONE_REMOTE=r2:crackgate-backups
+       /opt/crackgate/scripts/backup.sh      # verify first upload
+  5. Add GitHub repo secrets (GCP_HOST, GCP_SSH_KEY, GHCR_USERNAME,
      GHCR_TOKEN with read:packages, ...) and vars — see deploy-gcp.yml.
-  5. Trigger "Deploy to GCP" from GitHub Actions (workflow_dispatch).
+  6. Trigger "Deploy to GCP" from GitHub Actions (workflow_dispatch).
 
 EOF
