@@ -126,6 +126,15 @@ export async function POST(
           }),
         ]
       : []),
+    // Backfill the payer's mobile so it shows in the admin console.
+    ...(claim.payerPhone
+      ? [
+          db.user.updateMany({
+            where: { id: claim.userId, phone: null },
+            data: { phone: claim.payerPhone },
+          }),
+        ]
+      : []),
     ...entitlementOps,
     db.payment.create({
       data: {

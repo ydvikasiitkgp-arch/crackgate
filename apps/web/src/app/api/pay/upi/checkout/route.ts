@@ -117,6 +117,11 @@ export async function POST(req: Request) {
     },
   });
 
+  // Backfill User.phone so the admin console shows the payer's mobile number.
+  await db.user
+    .updateMany({ where: { id: session.user.id, phone: null }, data: { phone } })
+    .catch(() => {});
+
   // PostHog event
   try {
     const ph = getPostHogClient();
