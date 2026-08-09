@@ -1,5 +1,22 @@
 # GATE Question Generator
 
+> **Status:** three tiers coexist.
+>
+> 1. **Deterministic port** — `scripts/gate_gen/core.py` (graph, models,
+>    difficulty/quality engines) + `scripts/gate_gen/xl.py` (GATE XL syllabus
+>    registry, 25 formula solvers), CLI `scripts/generate_xl.py`. Fully offline.
+> 2. **LangGraph + Ollama writer agent** — `scripts/gate_gen/agent.py`. Same
+>    graph structure (planner → writer → solver → verifier) but compiled with
+>    real LangGraph (`StateGraph`/`TypedDict`). The planner samples the formula
+>    + parameter values deterministically, the **LLM writes the stem and worked
+>    solution** (natural GATE prose, no formula/equation leaked), and the
+>    deterministic solver remains the source of truth for the answer. The
+>    verifier node cross-checks the LLM's declared answer against the solver
+>    (±2%) and retries the writer on mismatch — the LLM can never publish a
+>    wrong number. Requires a running Ollama server; `--llm` flag on both CLIs
+>    (`qwen2.5:7b` fits 16 GB RAM; the 32B model swaps).
+> 3. **Spec below** — the original full LangGraph design the port is based on.
+
 LangGraph-based agentic pipeline for production-grade GATE question generation,
 with numeric difficulty scoring, multi-stage verification, quality auditing and
 stateful duplicate/topic memory.

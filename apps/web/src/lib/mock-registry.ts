@@ -10,6 +10,7 @@ import { ONGC_MOCK_BANK, ongcMockIds } from "@/data/ongc-mock-bank";
 import { CE_MOCKS } from "@/data/gate/civil/mocks";
 import { ES_MOCKS } from "@/data/gate/environment/mocks";
 import { GG_MOCKS } from "@/data/gate/geology/mocks";
+import { XL_MOCKS } from "@/data/gate/life-sciences/mocks";
 import { STATE_MOCKS } from "@/data/state/mocks";
 import { DIPLOMA_MOCKS } from "@/data/diploma/mocks";
 import type { Question } from "@/lib/grading";
@@ -85,6 +86,21 @@ export function resolveMock(id: string): ResolvedMock | null {
       durationSec: (m.duration ?? 180) * 60,
       negativeMarking: true,
       gate: { type: "entitlement", exam: "GATE", subject: "geology", freeTrial: m.tier === "free" },
+    };
+  }
+
+  if (id.startsWith("xl-mock-")) {
+    const m = findCurrent(XL_MOCKS, id) as
+      | { id: string; title: string; tier?: string; duration?: number; questions: unknown[] }
+      | undefined;
+    if (!m) return null;
+    return {
+      id: m.id,
+      title: m.title,
+      questions: m.questions as unknown as Question[],
+      durationSec: (m.duration ?? 180) * 60,
+      negativeMarking: true,
+      gate: { type: "entitlement", exam: "GATE", subject: "life-sciences", freeTrial: m.tier === "free" },
     };
   }
 
@@ -217,6 +233,7 @@ export function allMockIds(): string[] {
     ...CE_MOCKS.map((m) => (m as { id: string }).id),
     ...ES_MOCKS.map((m) => (m as { id: string }).id),
     ...GG_MOCKS.map((m) => (m as { id: string }).id),
+    ...XL_MOCKS.map((m) => (m as { id: string }).id),
     ...cilMockIds(),
     ...ongcMockIds(),
     ...STATE_MOCKS.map((m) => (m as { id: string }).id),

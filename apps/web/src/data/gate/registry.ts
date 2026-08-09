@@ -28,6 +28,8 @@ import { ES_MOCKS } from "@/data/gate/environment/mocks";
 import { ES_LEARN_TOPICS, getEnvLearnTopic, getEnvLearnSyllabus } from "@/data/gate/environment/learn";
 import { ES_AITS } from "@/data/gate/environment/aits";
 
+import { XL_MOCKS } from "@/data/gate/life-sciences/mocks";
+
 export type GateMock = {
   id: string;
   title: string;
@@ -127,6 +129,21 @@ const SUBJECTS: Record<string, GateSubject> = {
     getLearnSyllabus: getEnvLearnSyllabus,
     aits: ES_AITS,
   },
+  "life-sciences": {
+    slug: "life-sciences",
+    label: "Life Sciences",
+    code: "XL",
+    blurb:
+      "Full GATE Life Sciences (XL) preparation — full-length mocks on the official paper pattern with a compulsory Chemistry section and two electives, plus a scheduled All India Test Series.",
+    accessExam: "GATE",
+    accessSubject: "life-sciences",
+    practice: [],
+    mocks: XL_MOCKS as unknown as readonly GateMock[],
+    learnTopics: [],
+    getLearnTopic: () => undefined,
+    getLearnSyllabus: () => [],
+    aits: [],
+  },
 };
 
 /** Subjects that have a fully-built mini-site at /gate/<slug>. */
@@ -158,5 +175,4 @@ export const KNOWN_COMING_SOON = new Set<string>([
   "textile",             // TF  - Textile Engineering and Fibre Science
   "engineering-sciences",// XE  - Engineering Sciences
   "humanities",          // XH  - Humanities and Social Sciences
-  "life-sciences",       // XL  - Life Sciences
 ]);
