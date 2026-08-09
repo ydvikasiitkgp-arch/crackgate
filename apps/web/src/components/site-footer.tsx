@@ -40,7 +40,7 @@ export function SiteFooter() {
         </FooterCol>
       </div>
       <div className="border-t border-slate-800 py-5 text-center text-xs text-slate-500">
-        © {year} CrackGate.in · Built for India's GATE &amp; PSU aspirants
+        © {year} CrackGate · Built for India's GATE &amp; PSU aspirants
       </div>
     </footer>
   );
