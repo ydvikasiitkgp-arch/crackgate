@@ -22,9 +22,11 @@ permissions:
 
 jobs:
   sync:
+    if: github.repository == 'iamyadavvikas/crackgate'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
           fetch-depth: 0
 
@@ -62,6 +64,10 @@ jobs:
               --title "Sync feat into main" \
               --body "Automated sync: \`feat\` is ahead of \`main\` by ${{ steps.ahead.outputs.feat_only }} commit(s)." \
               --json number --jq '.number')
+            if [ -z "${NUMBER}" ]; then
+              echo "::error::gh pr create returned no PR number — PR creation failed"
+              exit 1
+            fi
             echo "number=${NUMBER}" >> "$GITHUB_OUTPUT"
           fi
 
