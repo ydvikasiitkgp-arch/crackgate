@@ -1,0 +1,138 @@
+# CrackGate cloud-neutral production stack — single-host deploy
+#
+# Variant of docker-compose.yml / docker-compose.aws.yml for a plain Linux VM
+# on any cloud (Azure VM, GCP Compute Engine, ...). Removes every AWS-only
+# coupling so the exact same file works on Azure and GCP:
+#
+#   1. `web` is PULLED from GitHub Container Registry (GHCR), not ECR and not
+#      built on the box — the image is built in GitHub Actions (see
+#      deploy-azure.yml / deploy-gcp.yml). Set GHCR_REPO + IMAGE_TAG in
+#      .env.production (the deploy workflow does this for you).
+#   2. Postgres runs in-stack (`db` service) — no managed-DB dependency. Use a
+#      >= 2 vCPU / 4 GB VM so Next.js + Prisma have headroom.
+#   3. No `awslogs` logging driver (AWS-only). Logs go through the Docker
+#      daemon's json-file rotation configured in the bootstrap scripts.
+#   4. Backups run via scripts/backup.sh (rclone → any object store), not the
+#      aws s3 `pg-backup` sidecar.
+#
+# Run on the VM:
+#   docker compose -f docker-compose.cloud.yml --env-file .env.production pull
+#   docker compose -f docker-compose.cloud.yml --env-file .env.production up -d
+#
+# NOTE on NEXT_PUBLIC_*: those are baked into the client bundle at image BUILD
+# time (build args in the workflow), so they are NOT runtime env vars here.
+
+name: crackgate
+
+networks:
+  crackgate-net:
+    driver: bridge
+
+volumes:
+  pgdata:
+  redis_data:
+  caddy_data:
+  caddy_config:
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-crackgate}
+      POSTGRES_USER: ${POSTGRES_USER:-crackgate}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env.production}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - crackgate-net
+    # Not exposed to the host — only the `web` container can reach it.
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-crackgate} -d ${POSTGRES_DB:-crackgate}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      # The postgres entrypoint starts a temporary server during first-init to
+      # create the user/db, then stops it before the real server starts.
+      # pg_isready returns 0 during that window, so wait it out on first boot.
+      start_period: 30s
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    volumes:
+      - redis_data:/data
+    networks:
+      - crackgate-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  web:
+    image: ${GHCR_REPO:?set GHCR_REPO in .env.production}:${IMAGE_TAG:-latest}
+    pull_policy: always
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      # Server-side secrets only — NEXT_PUBLIC_* are build args, see Dockerfile.
+      DATABASE_URL: postgresql://${POSTGRES_USER:-crackgate}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-crackgate}?schema=public&connection_limit=10&pool_timeout=10
+      # Direct-DB URL for `prisma migrate deploy` (no pool params, allows DDL).
+      DIRECT_URL: postgresql://${POSTGRES_USER:-crackgate}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-crackgate}?schema=public
+      REDIS_URL: redis://redis:6379
+      NODE_ENV: production
+      # NextAuth
+      AUTH_URL: ${AUTH_URL}
+      AUTH_SECRET: ${AUTH_SECRET}
+      AUTH_TRUST_HOST: "true"
+      # Google OAuth (server-side half of NEXT_PUBLIC_GOOGLE_ENABLED)
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      # Founder/admin elevation — comma-separated emails get role=admin on login.
+      ADMIN_EMAILS: ${ADMIN_EMAILS:-}
+      # Impersonation signing key ("Login as User" view-only admin mode).
+      IMPERSONATE_SECRET: ${IMPERSONATE_SECRET:-}
+      # Razorpay (server-side; public key id is also a build arg)
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET}
+      RAZORPAY_WEBHOOK_SECRET: ${RAZORPAY_WEBHOOK_SECRET}
+      # Observability (server-side DSN; PostHog public bits are build args)
+      SENTRY_DSN: ${SENTRY_DSN:-}
+      # Resend (transactional & newsletter email)
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      RESEND_FROM_EMAIL: ${RESEND_FROM_EMAIL:-support@crackgate.in}
+      # CSRF — allowed origins for POST/PUT/DELETE to /api/* (see middleware)
+      APP_ORIGIN: ${APP_ORIGIN:-https://crackgate.in,https://www.crackgate.in}
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/api/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    networks:
+      - crackgate-net
+    # Not exposed on the host; only Caddy reaches it on the docker network.
+
+  caddy:
+    image: caddy:2-alpine
+    restart: always
+    depends_on:
+      web:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      DOMAIN: ${DOMAIN:-crackgate.in}
+      ACME_EMAIL: ${ACME_EMAIL:?set ACME_EMAIL in .env.production}
+    networks:
+      - crackgate-net
