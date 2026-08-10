@@ -16,6 +16,7 @@
 #   GHCR_TOKEN      GHCR read token (PAT with read:packages)
 #   ADMIN_EMAILS, ADMIN_SHAREHOLDER_EMAILS, RESEND_API_KEY,
 #   IMPERSONATE_SECRET   optional CI-managed values synced into .env.production
+#   (ADMIN_SHAREHOLDER_EMAILS defaults to ADMIN_EMAILS when not provided)
 #
 # Reads/writes .env.production on the box (POSTGRES_*, AUTH_*, GOOGLE_*,
 # RAZORPAY_*, ... must be pre-provisioned by the bootstrap, exactly like the
@@ -82,7 +83,7 @@ sed -i "s|^GHCR_REPO=.*|GHCR_REPO=${GHCR_REPO}|" .env.production || \
 
 # ── 3. Sync CI-managed values ───────────────────────────────────
 sync_env ADMIN_EMAILS "${ADMIN_EMAILS:-}"
-sync_env ADMIN_SHAREHOLDER_EMAILS "${ADMIN_SHAREHOLDER_EMAILS:-}"
+sync_env ADMIN_SHAREHOLDER_EMAILS "${ADMIN_SHAREHOLDER_EMAILS:-${ADMIN_EMAILS:-}}"
 sync_env RESEND_API_KEY "${RESEND_API_KEY:-}"
 sync_env IMPERSONATE_SECRET "${IMPERSONATE_SECRET:-}"
 
