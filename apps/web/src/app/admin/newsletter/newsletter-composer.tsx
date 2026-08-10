@@ -45,7 +45,7 @@ export default function NewsletterComposer({
   const [selectedDraft, setSelectedDraft] = useState("");
   const [loadingDraft, setLoadingDraft] = useState(false);
   const [assets, setAssets] = useState<{ name: string; url: string }[]>([]);
-  const [copiedAsset, setCopiedAsset] = useState<string | null>(null);
+  const [insertedAsset, setInsertedAsset] = useState<string | null>(null);
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
@@ -88,14 +88,16 @@ export default function NewsletterComposer({
     }
   }
 
-  async function copyUrl(url: string) {
-    try {
-      await navigator.clipboard.writeText(window.location.origin + url);
-      setCopiedAsset(url);
-      setTimeout(() => setCopiedAsset(null), 2000);
-    } catch {
-      /* fallback */
+  function insertAsset(asset: { name: string; url: string }) {
+    const absUrl = window.location.origin + asset.url;
+    const slotMatch = html.match(/<img\s+src="([^"]+)"[^>]*alt="Campaign image"/i);
+    if (!slotMatch) {
+      setError('No campaign image slot found. The draft must contain an <img> with alt="Campaign image".');
+      return;
     }
+    setHtml(html.replace(slotMatch[1], absUrl));
+    setInsertedAsset(asset.url);
+    setTimeout(() => setInsertedAsset(null), 2000);
   }
 
   function minSchedule() {
@@ -211,11 +213,11 @@ export default function NewsletterComposer({
                   {assets.map((a) => (
                     <button
                       key={a.name}
-                      onClick={() => copyUrl(a.url)}
+                      onClick={() => insertAsset(a)}
                       className="text-xs font-mono bg-canvas border border-line rounded px-2 py-1 hover:border-brand transition-colors"
-                      title="Click to copy URL"
+                      title="Click to insert into the campaign image slot"
                     >
-                      {copiedAsset === a.url ? "Copied!" : a.name}
+                      {insertedAsset === a.url ? "Inserted!" : a.name}
                     </button>
                   ))}
                 </div>
