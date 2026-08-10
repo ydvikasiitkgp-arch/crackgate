@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type SendMode = "instant" | "schedule";
 
@@ -47,6 +47,12 @@ export default function NewsletterComposer({
   const [assets, setAssets] = useState<{ name: string; url: string }[]>([]);
   const [insertedAsset, setInsertedAsset] = useState<string | null>(null);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [previewHeight, setPreviewHeight] = useState(400);
+  const [previewExpanded, setPreviewExpanded] = useState(false);
+  const previewIframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [htmlBoxHeight, setHtmlBoxHeight] = useState(0);
+  const [htmlBoxExpanded, setHtmlBoxExpanded] = useState(false);
+  const htmlTextareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -103,6 +109,65 @@ export default function NewsletterComposer({
   function minSchedule() {
     const d = new Date(Date.now() + 3600_000);
     return d.toISOString().slice(0, 16);
+  }
+
+  function togglePreview() {
+    const doc = previewIframeRef.current?.contentDocument;
+    const contentHeight = Math.max(
+      doc?.body?.scrollHeight ?? 0,
+      doc?.documentElement?.scrollHeight ?? 0,
+    );
+    if (previewExpanded) {
+      setPreviewHeight(400);
+      setPreviewExpanded(false);
+    } else {
+      const next = Math.max(
+        200,
+        Math.min(
+          (contentHeight > 0 ? contentHeight : 600) + 16,
+          Math.floor((window.innerHeight ?? 900) * 0.9),
+        ),
+      );
+      setPreviewHeight(next);
+      setPreviewExpanded(true);
+    }
+  }
+
+  function toggleHtmlBox() {
+    const el = htmlTextareaRef.current;
+    if (!el) return;
+    if (htmlBoxExpanded) {
+      setHtmlBoxHeight(0);
+      setHtmlBoxExpanded(false);
+    } else {
+      const next = Math.max(
+        200,
+        Math.min(
+          (el.scrollHeight > 0 ? el.scrollHeight : 400) + 16,
+          Math.floor((window.innerHeight ?? 900) * 0.9),
+        ),
+      );
+      setHtmlBoxHeight(next);
+      setHtmlBoxExpanded(true);
+    }
+  }
+
+  const resizeDrag = useRef<{ startY: number; startH: number } | null>(null);
+
+  function beginResize(e: React.PointerEvent<HTMLDivElement>, startH: number) {
+    e.preventDefault();
+    resizeDrag.current = { startY: e.clientY, startH };
+    e.currentTarget.setPointerCapture(e.pointerId);
+  }
+
+  function moveResize(e: React.PointerEvent<HTMLDivElement>, apply: (h: number) => void) {
+    if (!resizeDrag.current) return;
+    const next = Math.max(200, resizeDrag.current.startH + (e.clientY - resizeDrag.current.startY));
+    apply(next);
+  }
+
+  function endResize() {
+    resizeDrag.current = null;
   }
 
   async function send() {
@@ -237,25 +302,60 @@ export default function NewsletterComposer({
 
           <label className="block">
             <span className="text-xs text-muted">Content (HTML)</span>
-            <textarea
-              value={html}
-              onChange={(e) => setHtml(e.target.value)}
-              placeholder="<h1>Hello!</h1><p>Your newsletter content here...</p>"
-              rows={12}
-              className="input mt-1 w-full font-mono text-sm"
-            />
+            <div
+              onDoubleClick={toggleHtmlBox}
+              title={htmlBoxExpanded ? "Double-click to collapse HTML box" : "Double-click to expand HTML box to full height"}
+              className="mt-1 w-full overflow-hidden rounded-lg border border-line bg-surface"
+              style={{ height: htmlBoxHeight || undefined, resize: "vertical", minHeight: 200 }}
+            >
+              <textarea
+                ref={htmlTextareaRef}
+                value={html}
+                onChange={(e) => setHtml(e.target.value)}
+                placeholder="<h1>Hello!</h1><p>Your newsletter content here...</p>"
+                rows={12}
+                style={{ height: "calc(100% - 12px)" }}
+                className="block w-full resize-none bg-transparent px-3 py-2.5 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
+              />
+              <div
+                onPointerDown={(e) => beginResize(e, htmlBoxHeight || ((htmlTextareaRef.current?.offsetHeight ?? 0) + 12))}
+                onPointerMove={(e) => moveResize(e, (h) => { setHtmlBoxHeight(h); setHtmlBoxExpanded(true); })}
+                onPointerUp={endResize}
+                onPointerCancel={endResize}
+                className="flex h-3 cursor-ns-resize touch-none select-none items-center justify-center border-t border-line bg-surface"
+              >
+                <span className="h-1 w-10 rounded-full bg-current opacity-30" />
+              </div>
+            </div>
           </label>
 
           <div className="border-t border-line pt-4">
             <span className="text-xs text-muted font-medium">Preview</span>
             {html.trim() ? (
-              <iframe
-                srcDoc={html}
-                title="Newsletter preview"
-                sandbox="allow-same-origin"
-                className="mt-2 w-full rounded-lg border border-line bg-white"
-                style={{ height: "400px", colorScheme: theme }}
-              />
+              <div
+                onDoubleClick={togglePreview}
+                title={previewExpanded ? "Double-click to collapse preview" : "Double-click to expand preview to full height"}
+                className="mt-2 w-full overflow-hidden rounded-lg border border-line bg-white"
+                style={{ height: previewHeight, resize: "vertical", minHeight: 200 }}
+              >
+                <iframe
+                  ref={previewIframeRef}
+                  srcDoc={html}
+                  title="Newsletter preview"
+                  sandbox="allow-same-origin"
+                  className="block w-full"
+                  style={{ colorScheme: theme, height: "calc(100% - 12px)" }}
+                />
+                <div
+                  onPointerDown={(e) => beginResize(e, previewHeight)}
+                  onPointerMove={(e) => moveResize(e, setPreviewHeight)}
+                  onPointerUp={endResize}
+                  onPointerCancel={endResize}
+                  className="flex h-3 cursor-ns-resize touch-none select-none items-center justify-center border-t border-line bg-surface"
+                >
+                  <span className="h-1 w-10 rounded-full bg-current opacity-30" />
+                </div>
+              </div>
             ) : (
               <p className="mt-2 text-sm text-muted italic">Type some content above to see a preview.</p>
             )}

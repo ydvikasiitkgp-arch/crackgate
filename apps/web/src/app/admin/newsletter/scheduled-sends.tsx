@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 interface ScheduledSend {
   id: string;
@@ -19,6 +19,49 @@ export default function ScheduledSends({ refreshKey }: { refreshKey: number }) {
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [previewHeights, setPreviewHeights] = useState<Record<string, number>>({});
+  const previewIframeRefs = useRef<Record<string, HTMLIFrameElement | null>>({});
+
+  function togglePreview(id: string) {
+    const doc = previewIframeRefs.current[id]?.contentDocument;
+    const contentHeight = Math.max(
+      doc?.body?.scrollHeight ?? 0,
+      doc?.documentElement?.scrollHeight ?? 0,
+    );
+    setPreviewHeights((prev) => {
+      if (prev[id] !== undefined) {
+        const next = { ...prev };
+        delete next[id];
+        return next;
+      }
+      const next = Math.max(
+        200,
+        Math.min(
+          (contentHeight > 0 ? contentHeight : 480) + 16,
+          Math.floor((window.innerHeight ?? 900) * 0.9),
+        ),
+      );
+      return { ...prev, [id]: next };
+    });
+  }
+
+  const resizeDrag = useRef<{ startY: number; startH: number } | null>(null);
+
+  function beginResize(e: React.PointerEvent<HTMLDivElement>, startH: number) {
+    e.preventDefault();
+    resizeDrag.current = { startY: e.clientY, startH };
+    e.currentTarget.setPointerCapture(e.pointerId);
+  }
+
+  function moveResize(e: React.PointerEvent<HTMLDivElement>, apply: (h: number) => void) {
+    if (!resizeDrag.current) return;
+    const next = Math.max(200, resizeDrag.current.startH + (e.clientY - resizeDrag.current.startY));
+    apply(next);
+  }
+
+  function endResize() {
+    resizeDrag.current = null;
+  }
 
   const load = useCallback(async () => {
     try {
@@ -148,13 +191,30 @@ export default function ScheduledSends({ refreshKey }: { refreshKey: number }) {
                   </div>
                   <div>
                     <span className="text-xs text-muted font-medium">Email preview</span>
-                    <iframe
-                      srcDoc={s.html}
-                      title={`${s.subject} preview`}
-                      sandbox="allow-same-origin"
-                      className="mt-1 w-full rounded-lg border border-line bg-white"
-                      style={{ height: "320px" }}
-                    />
+                    <div
+                      onDoubleClick={() => togglePreview(s.id)}
+                      title={previewHeights[s.id] !== undefined ? "Double-click to collapse preview" : "Double-click to expand preview to full height"}
+                      className="mt-1 w-full overflow-hidden rounded-lg border border-line bg-white"
+                      style={{ height: previewHeights[s.id] ?? 320, resize: "vertical", minHeight: 200 }}
+                    >
+                      <iframe
+                        ref={(el) => { previewIframeRefs.current[s.id] = el; }}
+                        srcDoc={s.html}
+                        title={`${s.subject} preview`}
+                        sandbox="allow-same-origin"
+                        className="block w-full"
+                        style={{ height: "calc(100% - 12px)" }}
+                      />
+                      <div
+                        onPointerDown={(e) => beginResize(e, previewHeights[s.id] ?? 320)}
+                        onPointerMove={(e) => moveResize(e, (h) => setPreviewHeights((prev) => ({ ...prev, [s.id]: h })))}
+                        onPointerUp={endResize}
+                        onPointerCancel={endResize}
+                        className="flex h-3 cursor-ns-resize touch-none select-none items-center justify-center border-t border-line bg-surface"
+                      >
+                        <span className="h-1 w-10 rounded-full bg-current opacity-30" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
