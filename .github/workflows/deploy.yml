@@ -158,9 +158,11 @@ jobs:
               fi
             fi
 
-            # Sync newsletter "Quick add" shareholder list (GitHub repo variable
-            # ADMIN_SHAREHOLDER_EMAILS). Only when non-empty so a missing CI var
-            # never wipes a host-set value.
+            # Sync newsletter "Quick add" shareholder list. Defaults to
+            # ADMIN_EMAILS (same founders/testers) so it needs no separate repo
+            # variable. Only when non-empty so a missing CI var never wipes a
+            # host-set value.
+            ADMIN_SHAREHOLDER_EMAILS="${ADMIN_SHAREHOLDER_EMAILS:-${ADMIN_EMAILS:-}}"
             if [ -n "${ADMIN_SHAREHOLDER_EMAILS}" ]; then
               if grep -q '^ADMIN_SHAREHOLDER_EMAILS=' .env.production; then
                 sed -i "s|^ADMIN_SHAREHOLDER_EMAILS=.*|ADMIN_SHAREHOLDER_EMAILS=\"${ADMIN_SHAREHOLDER_EMAILS}\"|" .env.production
