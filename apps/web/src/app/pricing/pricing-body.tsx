@@ -111,26 +111,90 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
   }
 
   const isFree = plan.id === "free";
+  const isPremium = plan.id === "premium";
 
   return (
-    <div className={`relative card p-8 flex flex-col transition-all duration-200 hover:shadow-lg ${plan.highlight ? "border-accent shadow-pop ring-2 ring-accent/40" : "hover:-translate-y-0.5"}`}>
+    <div className={`relative card p-8 flex flex-col transition-all duration-300 hover:shadow-xl ${plan.highlight ? "ring-2 ring-accent/30 shadow-pop" : "hover:-translate-y-1 hover:ring-1 hover:ring-brand/20"}`}>
+      {/* Premium highlight ring for indy */}
+      {INDEPENDENCE_DAY_ACTIVE && !isFree && (
+        <div
+          aria-hidden
+          className="absolute inset-0 rounded-xl"
+          style={{
+            border: '1px solid transparent',
+            borderImage: 'linear-gradient(135deg, rgba(255,153,51,0.4) 0%, rgba(255,255,255,0.2) 40%, rgba(19,136,8,0.4) 100%) 1',
+            pointerEvents: 'none'
+          }}
+        />
+      )}
+
+      {/* Subtle corner accent for indy on paying plans */}
+      {INDEPENDENCE_DAY_ACTIVE && !isFree && (
+        <>
+          <div
+            aria-hidden
+            className="absolute top-0 left-0 h-16 w-16"
+            style={{
+              borderTop: '1px solid transparent',
+              borderLeft: '1px solid transparent',
+              borderImage: 'linear-gradient(135deg, rgba(255,153,51,0.5), transparent 60%) 1',
+              borderRadius: '12px 0 0 0',
+              pointerEvents: 'none'
+            }}
+          />
+          <div
+            aria-hidden
+            className="absolute top-0 right-0 h-16 w-16"
+            style={{
+              borderTop: '1px solid transparent',
+              borderRight: '1px solid transparent',
+              borderImage: 'linear-gradient(-135deg, rgba(19,136,8,0.5), transparent 60%) 1',
+              borderRadius: '0 12px 0 0',
+              pointerEvents: 'none'
+            }}
+          />
+        </>
+      )}
+
       {plan.badge && (
-        <div className={`absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${plan.highlight ? "bg-accent text-white" : "bg-brand/15 text-brand"}`}>
+        <div
+          className={`absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${plan.highlight ? "bg-accent text-white" : "bg-brand/15 text-brand"}`}
+          style={plan.highlight ? { boxShadow: "0 4px 12px rgba(245,158,11,0.4)" } : undefined}
+        >
           {plan.badge}
         </div>
       )}
-      {INDEPENDENCE_DAY_ACTIVE && !isFree && (
-        <div aria-hidden className="absolute inset-x-0 top-0 h-1.5 rounded-t-xl bg-gradient-to-r from-[#FF9933] via-white to-[#138808]" />
+
+      {INDEPENDENCE_DAY_ACTIVE && !isFree && isPremium && (
+        <div
+          className="absolute -top-3 right-4 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full"
+          style={{
+            background: 'linear-gradient(135deg, rgba(255,153,51,0.2), rgba(19,136,8,0.2))',
+            color: '#FFD66B',
+            border: '1px solid rgba(255,153,51,0.3)',
+            boxShadow: '0 2px 8px rgba(255,153,51,0.15)'
+          }}
+        >
+          Independence Offer
+        </div>
       )}
+
       <h3 className="text-xl font-bold mt-1">{plan.name}</h3>
       <div className="mt-4 flex items-baseline gap-1">
         <span className="text-4xl font-extrabold">₹{plan.price}</span>
         <span className="text-sm text-muted">{plan.period}</span>
       </div>
       {INDEPENDENCE_DAY_ACTIVE && !isFree && (
-        <div className="mt-2 inline-flex items-center gap-1.5 rounded-md bg-amber-50/80 px-2 py-1 text-[11px] font-semibold text-[#B45309] dark:bg-white/5 dark:text-[#fbbf24]">
-          <AshokaChakra size={12} aria-hidden />
-          {INDEPENDENCE_DAY_DISCOUNT.replace("up to ", "")} with {INDEPENDENCE_DAY_PROMO_CODE}
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-medium"
+          style={{
+            background: 'linear-gradient(135deg, rgba(255,153,51,0.12), rgba(19,136,8,0.12))',
+            color: '#FFB84D',
+            border: '1px solid rgba(255,153,51,0.2)'
+          }}
+        >
+          <span className="h-1.5 w-1.5 rounded-full" style={{ background: '#FF9933' }} aria-hidden />
+          {INDEPENDENCE_DAY_DISCOUNT.replace("up to ", "")} with
+          <span className="font-mono font-bold ml-1">{INDEPENDENCE_DAY_PROMO_CODE}</span>
         </div>
       )}
       <ul className="mt-6 space-y-2.5 text-sm flex-1">
@@ -152,7 +216,8 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
           <button
             onClick={buy}
             disabled={loading}
-            className={`btn w-full ${plan.id === "premium" ? "btn-accent" : "btn-primary"} ${INDEPENDENCE_DAY_ACTIVE ? "btn-indian" : ""}`}
+            className={`btn w-full ${INDEPENDENCE_DAY_ACTIVE ? "btn-indian" : plan.id === "premium" ? "btn-accent" : "btn-primary"}`}
+            style={INDEPENDENCE_DAY_ACTIVE ? undefined : { boxShadow: plan.id === "premium" ? "0 4px 20px -5px rgba(245,158,11,0.4)" : undefined }}
           >
             {loading ? "..." : `${plan.cta} — ₹${plan.price}`}
           </button>

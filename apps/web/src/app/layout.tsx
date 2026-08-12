@@ -123,6 +123,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
       </head>
       <body className={INDEPENDENCE_DAY_ACTIVE ? "indyday" : undefined}>
+        {INDEPENDENCE_DAY_ACTIVE && (
+          <>
+            <div className="indy-edge-top" aria-hidden />
+            <div className="indy-edge-bottom" aria-hidden />
+          </>
+        )}
         <a href="#main" className="skip-link">Skip to main content</a>
         {INDEPENDENCE_DAY_ACTIVE && <IndependenceDayBanner />}
         {impersonator && (

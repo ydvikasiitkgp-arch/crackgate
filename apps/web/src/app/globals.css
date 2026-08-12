@@ -252,18 +252,19 @@ body {
 
 /* ---------- Independence Day tricolour (temporary — revert by deploying main) ---------- */
 
-/* Full tricolour menu bar (soft-fading flag gradient) with dark text for contrast */
+/* Header — refined: subtle saffron/green accent line, keeps theme surfaces */
 body.indyday .site-header {
-  background: linear-gradient(90deg, #FF9933 0%, #FF9933 20%, #ffffff 50%, #138808 80%, #138808 100%);
-  color: #0f172a;
-  border-bottom-color: #fde68a;
+  background: rgb(var(--surface-rgb) / 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(90deg, transparent 10%, #FF9933 20%, #ffffff 40%, #138808 60%, #138808 80%, transparent 90%) 1;
 }
 body.indyday .site-header [class*="text-ink"],
 body.indyday .site-header [class*="text-muted"] {
-  color: #0f172a;
+  color: inherit;
 }
 body.indyday .site-header [class*="text-muted"] {
-  color: #1e293b;
+  color: inherit;
 }
 /* Dropdown panels, popovers and pills carry their own surface (bg-surface /
    bg-canvas). Restore normal theme text on them so dark mode stays readable
@@ -281,47 +282,69 @@ body.indyday .site-header [class~="bg-surface"] [class*="text-muted"],
 body.indyday .site-header [class~="bg-canvas"] [class*="text-muted"] {
   color: rgb(var(--muted-rgb));
 }
-/* Keep icons/actions legible on every stripe, and keep the dark theme's own accents */
+/* Subtle hover warmth on nav items */
 body.indyday .site-header a:hover,
 body.indyday .site-header button:hover {
-  color: #7c2d12;
+  color: rgb(var(--ink-rgb));
 }
 [data-theme="dark"] body.indyday .site-header {
-  /* Deeper, richer tones so the flag reads cleanly on a dark surface */
-  background: linear-gradient(90deg, #e8842a 0%, #f59e3d 22%, #eef2f7 50%, #1e9e0f 78%, #178a08 100%);
-  border-bottom-color: #0f172a;
+  background: rgb(var(--surface-rgb) / 0.95);
+  border-image: linear-gradient(90deg, transparent 10%, #e8842a 20%, #eef2f7 40%, #178a08 60%, #178a08 80%, transparent 90%) 1;
 }
 
-/* Tricolour side strips — saffron left, green right, fading toward center */
+/* Corner glow accents — maximum visibility */
 body.indyday::before,
 body.indyday::after {
   content: "";
   position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 120px;
-  z-index: 9999;
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  z-index: 0;
   pointer-events: none;
+  filter: blur(200px);
+  opacity: 1;
 }
 body.indyday::before {
-  left: 0;
-  background: linear-gradient(90deg, #FF9933 0%, #FF9933 50%, transparent 100%);
-  opacity: 0.5;
+  top: -320px;
+  left: -320px;
+  background: radial-gradient(circle at 30% 30%, #FF9933 0%, transparent 70%);
 }
 body.indyday::after {
-  right: 0;
-  background: linear-gradient(270deg, #138808 0%, #138808 50%, transparent 100%);
-  opacity: 0.5;
+  bottom: -320px;
+  right: -320px;
+  background: radial-gradient(circle at 70% 70%, #138808 0%, transparent 70%);
 }
 
-/* Dark mode: deeper tones */
+/* Dark mode: full visibility */
 [data-theme="dark"] body.indyday::before {
-  background: linear-gradient(90deg, #e8842a 0%, #e8842a 50%, transparent 100%);
-  opacity: 0.35;
+  background: radial-gradient(circle at 30% 30%, #FF9933 0%, transparent 70%);
+  opacity: 1;
 }
 [data-theme="dark"] body.indyday::after {
-  background: linear-gradient(270deg, #178a08 0%, #178a08 50%, transparent 100%);
-  opacity: 0.35;
+  background: radial-gradient(circle at 70% 70%, #138808 0%, transparent 70%);
+  opacity: 1;
+}
+
+/* Subtle top/bottom edge lines */
+body.indyday > .indy-edge-top,
+body.indyday > .indy-edge-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 9999;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 5%, #FF9933 15%, #ffffff 40%, #138808 60%, #138808 85%, transparent 95%);
+  opacity: 0.85;
+}
+body.indyday > .indy-edge-top { top: 0; }
+body.indyday > .indy-edge-bottom { bottom: 0; }
+
+[data-theme="dark"] body.indyday > .indy-edge-top,
+[data-theme="dark"] body.indyday > .indy-edge-bottom {
+  background: linear-gradient(90deg, transparent 5%, #FF9933 15%, #ffffff 40%, #138808 60%, #138808 85%, transparent 95%);
+  opacity: 0.85;
 }
 
 /* Saffron text-selection tint */
