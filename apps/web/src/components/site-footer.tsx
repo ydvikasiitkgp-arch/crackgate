@@ -2,6 +2,8 @@ import Link from "next/link";
 import { BrandMark } from "@/components/brand";
 import { SocialLinks } from "@/components/social-icons";
 import { PricingLink } from "@/components/pricing-link";
+import { AshokaChakra } from "@/components/ashoka-chakra";
+import { INDEPENDENCE_DAY_ACTIVE } from "@/lib/celebration";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -41,8 +43,18 @@ export function SiteFooter() {
         </FooterCol>
       </div>
       <div className="border-t border-slate-800 py-5 text-center text-xs text-slate-500">
-        © {year} CrackGate · Built for India's GATE &amp; PSU aspirants
+        <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+          © {year} CrackGate · Built for India's GATE &amp; PSU aspirants
+          {INDEPENDENCE_DAY_ACTIVE && (
+            <span className="inline-flex items-center gap-1.5 text-[#FFC34D]">
+              <AshokaChakra size={14} aria-hidden /> Happy Independence Day!
+            </span>
+          )}
+        </p>
       </div>
+      {INDEPENDENCE_DAY_ACTIVE && (
+        <div aria-hidden className="h-1.5 w-full bg-gradient-to-r from-[#FF9933] via-white to-[#138808]" />
+      )}
     </footer>
   );
 }

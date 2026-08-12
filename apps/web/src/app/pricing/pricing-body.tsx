@@ -3,6 +3,12 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/hooks/use-cart";
+import { AshokaChakra } from "@/components/ashoka-chakra";
+import {
+  INDEPENDENCE_DAY_ACTIVE,
+  INDEPENDENCE_DAY_DISCOUNT,
+  INDEPENDENCE_DAY_PROMO_CODE,
+} from "@/lib/celebration";
 
 const PLANS = [
   { id: "free",    name: "Free",     price: 0,    period: "forever",    cta: "Current plan", highlight: false, badge: "",
@@ -113,11 +119,20 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
           {plan.badge}
         </div>
       )}
+      {INDEPENDENCE_DAY_ACTIVE && !isFree && (
+        <div aria-hidden className="absolute inset-x-0 top-0 h-1.5 rounded-t-xl bg-gradient-to-r from-[#FF9933] via-white to-[#138808]" />
+      )}
       <h3 className="text-xl font-bold mt-1">{plan.name}</h3>
       <div className="mt-4 flex items-baseline gap-1">
         <span className="text-4xl font-extrabold">₹{plan.price}</span>
         <span className="text-sm text-muted">{plan.period}</span>
       </div>
+      {INDEPENDENCE_DAY_ACTIVE && !isFree && (
+        <div className="mt-2 inline-flex items-center gap-1.5 rounded-md bg-amber-50/80 px-2 py-1 text-[11px] font-semibold text-[#B45309] dark:bg-white/5 dark:text-[#fbbf24]">
+          <AshokaChakra size={12} aria-hidden />
+          {INDEPENDENCE_DAY_DISCOUNT.replace("up to ", "")} with {INDEPENDENCE_DAY_PROMO_CODE}
+        </div>
+      )}
       <ul className="mt-6 space-y-2.5 text-sm flex-1">
         {plan.perks.map((perk) => (
           <li key={perk} className="flex gap-2.5">
@@ -137,7 +152,7 @@ function PlanCard({ plan, defaultSubject = "" }: { plan: typeof PLANS[number]; d
           <button
             onClick={buy}
             disabled={loading}
-            className={`btn w-full ${plan.id === "premium" ? "btn-accent" : "btn-primary"}`}
+            className={`btn w-full ${plan.id === "premium" ? "btn-accent" : "btn-primary"} ${INDEPENDENCE_DAY_ACTIVE ? "btn-indian" : ""}`}
           >
             {loading ? "..." : `${plan.cta} — ₹${plan.price}`}
           </button>

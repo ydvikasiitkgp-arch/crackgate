@@ -4,6 +4,7 @@ import { PRACTICE } from "@/data/practice";
 import { getGateSubject } from "@/data/gate/registry";
 import dynamic from "next/dynamic";
 import { NewsletterForm } from "@/components/newsletter-form";
+import { IndependenceDaySection } from "@/components/independence-day-section";
 
 const HeroCarousel = dynamic(() => import("@/components/hero-carousel").then((m) => m.HeroCarousel));
 export const metadata = {
@@ -50,6 +51,9 @@ export default async function HomePage() {
         geology={geologyStats}
         environment={environmentStats}
       />
+
+      {/* ---------- INDEPENDENCE DAY SALE (temporary) ---------- */}
+      <IndependenceDaySection />
 
       {/* ---------- FEATURES ---------- */}
       <section className="max-w-7xl mx-auto px-5 py-20">

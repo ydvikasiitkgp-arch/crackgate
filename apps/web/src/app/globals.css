@@ -82,6 +82,16 @@ body {
   .btn-primary { @apply bg-brand text-white hover:bg-brand-2; }
   .btn-accent  { @apply bg-accent text-ink hover:brightness-95; }
   .btn-ghost   { @apply bg-surface text-ink border border-line hover:brightness-95; }
+
+  /* Independence Day: saffron→green CTA (works in both themes) */
+  .btn-indian {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3
+           text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+    color: #ffffff;
+    background: linear-gradient(90deg, #FF9933, #f97316 40%, #138808);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+  .btn-indian:hover { filter: brightness(1.07); }
   .btn-lg      { @apply px-6 py-3.5 text-base; }
   .btn-sm      { @apply px-3 py-1.5 text-xs; }
 
@@ -239,3 +249,87 @@ body {
 
 /* Exam portal fullscreen: fill the viewport edge-to-edge */
 #cg-exam-root:fullscreen { width: 100%; height: 100%; overflow-y: auto; }
+
+/* ---------- Independence Day tricolour (temporary — revert by deploying main) ---------- */
+
+/* Full tricolour menu bar (soft-fading flag gradient) with dark text for contrast */
+body.indyday .site-header {
+  background: linear-gradient(90deg, #FF9933 0%, #FF9933 20%, #ffffff 50%, #138808 80%, #138808 100%);
+  color: #0f172a;
+  border-bottom-color: #fde68a;
+}
+body.indyday .site-header [class*="text-ink"],
+body.indyday .site-header [class*="text-muted"] {
+  color: #0f172a;
+}
+body.indyday .site-header [class*="text-muted"] {
+  color: #1e293b;
+}
+/* Dropdown panels, popovers and pills carry their own surface (bg-surface /
+   bg-canvas). Restore normal theme text on them so dark mode stays readable
+   (dark surface + light ink) instead of inheriting the flag's dark text.
+   Exact-token matching avoids false hits from `hover:bg-canvas` variants. */
+body.indyday .site-header [class~="bg-surface"],
+body.indyday .site-header [class~="bg-canvas"] {
+  color: rgb(var(--ink-rgb));
+}
+body.indyday .site-header [class~="bg-surface"] [class*="text-ink"],
+body.indyday .site-header [class~="bg-canvas"] [class*="text-ink"] {
+  color: rgb(var(--ink-rgb));
+}
+body.indyday .site-header [class~="bg-surface"] [class*="text-muted"],
+body.indyday .site-header [class~="bg-canvas"] [class*="text-muted"] {
+  color: rgb(var(--muted-rgb));
+}
+/* Keep icons/actions legible on every stripe, and keep the dark theme's own accents */
+body.indyday .site-header a:hover,
+body.indyday .site-header button:hover {
+  color: #7c2d12;
+}
+[data-theme="dark"] body.indyday .site-header {
+  /* Deeper, richer tones so the flag reads cleanly on a dark surface */
+  background: linear-gradient(90deg, #e8842a 0%, #f59e3d 22%, #eef2f7 50%, #1e9e0f 78%, #178a08 100%);
+  border-bottom-color: #0f172a;
+}
+
+/* Tricolour side strips — saffron left, green right, fading toward center */
+body.indyday::before,
+body.indyday::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 9999;
+  pointer-events: none;
+}
+body.indyday::before {
+  left: 0;
+  background: linear-gradient(90deg, #FF9933 0%, #FF9933 50%, transparent 100%);
+  opacity: 0.5;
+}
+body.indyday::after {
+  right: 0;
+  background: linear-gradient(270deg, #138808 0%, #138808 50%, transparent 100%);
+  opacity: 0.5;
+}
+
+/* Dark mode: deeper tones */
+[data-theme="dark"] body.indyday::before {
+  background: linear-gradient(90deg, #e8842a 0%, #e8842a 50%, transparent 100%);
+  opacity: 0.35;
+}
+[data-theme="dark"] body.indyday::after {
+  background: linear-gradient(270deg, #178a08 0%, #178a08 50%, transparent 100%);
+  opacity: 0.35;
+}
+
+/* Saffron text-selection tint */
+body.indyday ::selection {
+  background: #FF9933;
+  color: #ffffff;
+}
+[data-theme="dark"] body.indyday ::selection {
+  background: #FF9933;
+  color: #0f172a;
+}

@@ -14,7 +14,7 @@ export async function SiteHeader() {
   const impersonating = !!session?.impersonator;
 
   return (
-    <header className="sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-line">
+    <header className="site-header sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-line">
       <nav className="max-w-7xl mx-auto px-4 sm:px-5 h-16 flex items-center gap-3 sm:gap-6">
         <BrandLockup />
 
@@ -66,7 +66,7 @@ export async function MiningHeader() {
   const impersonating = !!session?.impersonator;
 
   return (
-    <header className="sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-line">
+    <header className="site-header sticky top-0 z-40 bg-surface/85 backdrop-blur-md border-b border-line">
       <nav className="max-w-7xl mx-auto px-4 sm:px-5 h-16 flex items-center gap-3 sm:gap-6">
         <BrandLockup href="/" />
         <span className="hidden sm:inline-flex badge border border-brand/30 bg-brand/10 text-brand text-xs font-semibold">
