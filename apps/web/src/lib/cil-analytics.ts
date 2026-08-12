@@ -17,10 +17,7 @@ type DiffQuestion = Question & {
 
 export type CilLeaderboard = {
   peerCount: number;
-  rank: number;
   percentile: number | null;
-  topScore: number;
-  avgScore: number;
 };
 
 export type CilItemStat = {
@@ -121,13 +118,9 @@ export async function buildCilResultData(
   const peerCount = peerScores.length;
   const myBest = bestByUser.get(att.userId) ?? score;
   const below = peerScores.filter((s) => s < myBest).length;
-  const rank = peerScores.filter((s) => s > myBest).length + 1;
   const leaderboard: CilLeaderboard = {
     peerCount,
-    rank,
     percentile: peerCount > 1 ? Math.round((below / (peerCount - 1)) * 100) : null,
-    topScore: peerCount ? Math.max(...peerScores) : myBest,
-    avgScore: peerCount ? +(peerScores.reduce((s, x) => s + x, 0) / peerCount).toFixed(1) : myBest,
   };
 
   // ---- Per-question item analysis (only with a usable sample) ----
