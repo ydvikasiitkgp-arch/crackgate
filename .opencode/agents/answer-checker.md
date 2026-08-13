@@ -138,7 +138,13 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
 
 5. **Write the report** to a temporary path (your choice of `/tmp/...` or
    `os.tmpdir()`), named `<mock-id>-answer-report.json`. Use a Node one-liner
-   to write it; never edit files in the repo.
+   to write it; never edit files in the repo. **Then self-check it**: run a
+   Node one-liner that JSON-parses the written file and asserts the schema —
+   `mockId` string, `checked` equals the paper's question count, `correct +
+   incorrect + unverifiable === checked`, every `fixes` entry has non-empty
+   `id`, `correctAnswer`, `reason`, `source` (one of derived|web|mixed) and
+   `confidence` (high|medium|low). If the self-check fails, rewrite the report
+   until it passes — never hand back a malformed report.
 
    Report schema:
 
@@ -209,6 +215,8 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
 
 - Never modify the mock JSON or any repo file. `edit` is denied to you.
 - Never write the report inside the repo — temp location only.
+- Never hand back a report that fails its own schema self-check — fix it
+  before finishing.
 - Never process more than 10 questions in a single semantic batch — one
   batch at a time, in id order, results accumulated across batches.
 - Never re-search a fact already settled in the ledger; reuse it and cite
