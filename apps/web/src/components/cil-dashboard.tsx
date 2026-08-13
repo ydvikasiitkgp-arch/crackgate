@@ -5,7 +5,6 @@ import { CIL_MOCK_BANK } from "@/data/cil-mock-bank";
 import { getCilDiscipline } from "@/data/cil";
 import { CIL_PATTERN } from "@/data/cil-mocks";
 import type { DashboardTrack } from "@/lib/dashboard-tracks";
-import type { PeerRank } from "@/lib/peer-percentile";
 
 const ScoreTrendChart = dynamic(() => import("@/components/score-trend-chart").then((m) => m.ScoreTrendChart));
 
@@ -29,11 +28,9 @@ export type CilAttempt = {
 export function CilDashboard({
   track,
   attempts,
-  peers,
 }: {
   track: DashboardTrack;
   attempts: CilAttempt[];
-  peers: ReadonlyMap<string, PeerRank>;
 }) {
   const disc = getCilDiscipline(track.subject);
   const sets = [...CIL_MOCK_BANK.values()]
@@ -158,7 +155,6 @@ export function CilDashboard({
             const attempt = attemptByRefId.get(s.id);
             const done = !!attempt;
             const pct = attempt?.total ? Math.round((attempt.score / attempt.total) * 100) : 0;
-            const rank = peers.get(s.id);
             return (
               <Link
                 key={s.id}
@@ -185,15 +181,6 @@ export function CilDashboard({
                   </div>
                 ) : (
                   <div className="text-xs text-muted mt-1">Not started</div>
-                )}
-                {rank && rank.percentile != null && rank.peerCount > 1 && (
-                  <div
-                    className={`text-xs font-semibold mt-1 ${
-                      rank.percentile >= 70 ? "text-ok" : rank.percentile >= 40 ? "text-accent" : "text-bad"
-                    }`}
-                  >
-                    Better than {rank.percentile}%
-                  </div>
                 )}
               </Link>
             );
