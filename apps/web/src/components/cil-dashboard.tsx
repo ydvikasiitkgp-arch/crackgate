@@ -1,6 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { fmtDate } from "@/lib/utils";
+import { fmtDate, fmtMin } from "@/lib/utils";
 import { CIL_MOCK_BANK } from "@/data/cil-mock-bank";
 import { getCilDiscipline } from "@/data/cil";
 import { CIL_PATTERN } from "@/data/cil-mocks";
@@ -15,6 +15,7 @@ export type CilAttempt = {
   score: number;
   total: number;
   takenAt: Date;
+  durationSec: number;
   breakdown: Record<string, { scored: number; total: number }>;
 };
 
@@ -47,6 +48,9 @@ export function CilDashboard({
     : 0;
   const bestScore = totalAttempts
     ? Math.round(Math.max(...attempts.map((a) => (a.total ? (a.score / a.total) * 100 : 0))))
+    : 0;
+  const avgSec = totalAttempts
+    ? Math.round(attempts.reduce((s, a) => s + (a.durationSec ?? 0), 0) / totalAttempts)
     : 0;
 
   // Section accuracy aggregated across this discipline's attempts.
@@ -88,10 +92,11 @@ export function CilDashboard({
       </section>
 
       {/* KPIs */}
-      <div className="grid sm:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard label="Mocks attempted" value={`${attemptedIds.size} / ${sets.length}`} />
         <StatCard label="Avg score" value={`${avgScore}%`} />
         <StatCard label="Best score" value={`${bestScore}%`} />
+        <StatCard label="Avg time" value={fmtMin(avgSec)} />
       </div>
 
       {/* Score trend */}
@@ -149,18 +154,34 @@ export function CilDashboard({
           {sets.map((s) => {
             const attempt = attemptByRefId.get(s.id);
             const done = !!attempt;
+            const pct = attempt?.total ? Math.round((attempt.score / attempt.total) * 100) : 0;
             return (
               <Link
                 key={s.id}
                 href={done ? `/result/${attempt!.id}` : `/mocks/${s.id}`}
-                className="rounded-xl border border-line p-4 hover:border-brand hover:shadow-pop transition block"
+                className={`rounded-xl border p-4 transition block ${
+                  done
+                    ? "border-ok/30 bg-ok/5 opacity-80 hover:opacity-100"
+                    : "border-line hover:border-brand hover:shadow-pop"
+                }`}
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="font-semibold">Set {String(s.no).padStart(2, "0")}</span>
+                  <span className="font-mono text-sm font-bold text-brand">Set {String(s.no).padStart(2, "0")}</span>
                   {s.no >= 11 && <span className="badge">Advanced</span>}
-                  {done && <span className="text-xs font-semibold text-ok">✓ done</span>}
+                  {done ? (
+                    <span className="text-xs font-semibold text-ok">✓ {pct}%</span>
+                  ) : (
+                    <span className="text-xs text-muted">○</span>
+                  )}
                 </div>
-                <div className="text-xs text-muted mt-1 line-clamp-2">{s.title}</div>
+                <div className="text-xs text-muted mt-2 line-clamp-2">{s.title}</div>
+                {done ? (
+                  <div className="text-xs text-muted mt-1">
+                    {attempt!.score}/{attempt!.total} · {fmtMin(attempt!.durationSec)} · {fmtDate(attempt!.takenAt)}
+                  </div>
+                ) : (
+                  <div className="text-xs text-muted mt-1">Not started</div>
+                )}
               </Link>
             );
           })}

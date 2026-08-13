@@ -27,6 +27,12 @@ export function secondsToHMS(s: number) {
   return `${h}:${m}:${sec}`;
 }
 
+export function fmtMin(sec: number): string {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return s ? `${m}m ${s}s` : `${m}m`;
+}
+
 export function inr(paise: number): string {
   return "₹" + Math.round(paise / 100).toLocaleString("en-IN");
 }

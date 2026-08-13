@@ -23,6 +23,7 @@ const Body = z.object({
   payerEmail: z.string().trim().email("Enter a valid email").max(120),
   upiApp: z.enum(["PhonePe", "GPay", "Paytm", "BHIM", "Other"]).optional(),
   payerNote: z.string().trim().max(280).optional(),
+  referralSource: z.string().trim().max(120).optional(),
   promoCode: z.string().trim().max(30).optional(),
   promoDiscountPaise: z.number().int().nonnegative().optional(),
 });
@@ -113,6 +114,7 @@ export async function POST(req: Request) {
       payerEmail: body.payerEmail,
       upiApp: body.upiApp,
       payerNote: body.payerNote,
+      referralSource: body.referralSource,
       promoCode: appliedPromoCode,
     },
   });
@@ -136,6 +138,7 @@ export async function POST(req: Request) {
           combo_savings_paise: comboSavingsPaise,
           promo_discount_paise: promoDiscountPaise,
           promo_code: appliedPromoCode,
+          referral_source: body.referralSource,
           final_total_paise: finalTotalPaise,
           combo_discount: comboDiscounts.length > 0,
           exams: [...new Set(validatedItems.map((i) => i.exam))],

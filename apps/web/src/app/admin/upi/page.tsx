@@ -91,7 +91,7 @@ export default async function AdminUpiPage({
       where: payWhere,
       orderBy: { capturedAt: "desc" },
       take: 100,
-      include: { user: { select: { id: true, email: true } } },
+      include: { user: { select: { id: true, name: true, email: true, phone: true } } },
     }),
     // Test accounts (entitlements granted via the "Is test user" checkbox).
     db.user.findMany({
@@ -311,7 +311,11 @@ export default async function AdminUpiPage({
                       <td className="p-3 whitespace-nowrap text-xs">
                         {istTime(p.capturedAt ?? p.createdAt)}
                       </td>
-                      <td className="p-3 text-xs">{p.user.email}</td>
+                      <td className="p-3 text-xs">
+                        {p.user.name && <div className="font-medium text-ink select-all">{p.user.name}</div>}
+                        {p.user.phone && <div className="text-muted select-all">{p.user.phone}</div>}
+                        <div className="text-muted select-all">{p.user.email}</div>
+                      </td>
                       <td className="p-3 text-xs">{p.exam ?? "—"}</td>
                       <td className="p-3 text-xs">
                         {p.exam && p.subject ? subjectLabel(p.exam, p.subject) : (p.subject ?? "—")}

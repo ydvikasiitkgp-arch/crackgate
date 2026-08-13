@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { fmtDate } from "@/lib/utils";
+import { fmtDate, fmtMin } from "@/lib/utils";
 import type { DashboardTrack } from "@/lib/dashboard-tracks";
 
 export type DiplomaAttempt = {
@@ -9,6 +9,7 @@ export type DiplomaAttempt = {
   score: number;
   total: number;
   takenAt: Date;
+  durationSec: number;
   breakdown: Record<string, { scored: number; total: number }>;
 };
 
@@ -47,6 +48,22 @@ export function DiplomaDashboard({
   const bestScore = totalAttempts
     ? Math.round(Math.max(...attempts.map((a) => (a.total ? (a.score / a.total) * 100 : 0))))
     : 0;
+  const avgSec = totalAttempts
+    ? Math.round(attempts.reduce((s, a) => s + (a.durationSec ?? 0), 0) / totalAttempts)
+    : 0;
+
+  // Section accuracy aggregated across this track's attempts.
+  const sectionMap: Record<string, { scored: number; total: number }> = {};
+  for (const a of attempts) {
+    for (const [name, v] of Object.entries(a.breakdown ?? {})) {
+      sectionMap[name] ??= { scored: 0, total: 0 };
+      sectionMap[name].scored += v.scored;
+      sectionMap[name].total += v.total;
+    }
+  }
+  const sections = Object.entries(sectionMap)
+    .map(([name, v]) => ({ name, ...v, pct: v.total ? Math.round((v.scored / v.total) * 100) : 0 }))
+    .sort((a, b) => a.pct - b.pct);
 
   // Build attempt lookup by refId (first match = most recent from query order)
   const attemptByRefId = new Map<string, DiplomaAttempt>();
@@ -84,11 +101,38 @@ export function DiplomaDashboard({
       </section>
 
       {/* KPIs */}
-      <div className="grid sm:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard label="Mocks completed" value={`${attemptedIds.size} / ${totalMocks}`} />
         <StatCard label="Avg score" value={`${avgScore}%`} />
         <StatCard label="Best score" value={`${bestScore}%`} />
+        <StatCard label="Avg time" value={fmtMin(avgSec)} />
       </div>
+
+      {/* Section accuracy */}
+      {sections.length > 0 && (
+        <div className="card p-6">
+          <h2 className="font-bold text-lg">Section accuracy</h2>
+          <p className="text-sm text-muted">Where you&apos;re strong and where to focus, across attempted mocks.</p>
+          <div className="mt-4 space-y-3">
+            {sections.map((s) => (
+              <div key={s.name}>
+                <div className="flex justify-between text-sm">
+                  <span className="font-medium">{s.name}</span>
+                  <span className={`tabular-nums font-semibold ${s.pct >= 60 ? "text-ok" : s.pct >= 40 ? "text-accent" : "text-bad"}`}>
+                    {s.pct}%
+                  </span>
+                </div>
+                <div className="mt-1 h-2 rounded-full bg-canvas overflow-hidden">
+                  <div
+                    className={`h-full rounded-full ${s.pct >= 60 ? "bg-ok" : s.pct >= 40 ? "bg-accent" : "bg-bad"}`}
+                    style={{ width: `${s.pct}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Mock series grid */}
       <div className="card p-6">
@@ -122,7 +166,7 @@ export function DiplomaDashboard({
                 </div>
                 {done ? (
                   <div className="text-xs text-muted mt-2">
-                    {m.attempt!.score}/{m.attempt!.total} · {fmtDate(m.attempt!.takenAt)}
+                    {m.attempt!.score}/{m.attempt!.total} · {fmtMin(m.attempt!.durationSec)} · {fmtDate(m.attempt!.takenAt)}
                   </div>
                 ) : (
                   <div className="text-xs text-muted mt-2">Not started</div>

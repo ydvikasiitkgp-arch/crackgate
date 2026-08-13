@@ -62,6 +62,7 @@ export default function CheckoutForm({
   const [payerEmail, setPayerEmail] = useState(defaultEmail);
   const [upiApp, setUpiApp] = useState<(typeof APPS)[number]>("PhonePe");
   const [payerNote, setPayerNote] = useState("");
+  const [referralSource, setReferralSource] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
@@ -98,6 +99,7 @@ export default function CheckoutForm({
           payerEmail: payerEmail.trim(),
           upiApp,
           payerNote: payerNote.trim() || undefined,
+          referralSource: referralSource.trim() || undefined,
           promoCode: promoResult?.code,
           promoDiscountPaise: promoDiscountPaise || undefined,
         }),
@@ -346,6 +348,24 @@ export default function CheckoutForm({
             value={payerNote}
             onChange={(e) => setPayerNote(e.target.value)}
             placeholder="Anything we should know — e.g. paid from a different UPI ID"
+            className="input w-full mt-1"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="referralSource"
+            className="block text-xs font-semibold text-muted"
+          >
+            How did you hear about us? (optional)
+          </label>
+          <textarea
+            id="referralSource"
+            rows={2}
+            maxLength={120}
+            value={referralSource}
+            onChange={(e) => setReferralSource(e.target.value)}
+            placeholder="e.g. friend, WhatsApp, Instagram, YouTube, LinkedIn"
             className="input w-full mt-1"
           />
         </div>

@@ -109,6 +109,7 @@ export default async function DashboardPage({
         score: a.score,
         total: a.total,
         takenAt: a.takenAt,
+        durationSec: a.durationSec,
         breakdown: (a.breakdown as Record<string, { scored: number; total: number }>) ?? {},
       }));
     return (
@@ -132,6 +133,7 @@ export default async function DashboardPage({
         score: a.score,
         total: a.total,
         takenAt: a.takenAt,
+        durationSec: a.durationSec,
         breakdown: (a.breakdown as Record<string, { scored: number; total: number }>) ?? {},
       }));
     return (
@@ -155,6 +157,7 @@ export default async function DashboardPage({
         score: a.score,
         total: a.total,
         takenAt: a.takenAt,
+        durationSec: a.durationSec,
         breakdown: (a.breakdown as Record<string, { scored: number; total: number }>) ?? {},
       }));
     return (
