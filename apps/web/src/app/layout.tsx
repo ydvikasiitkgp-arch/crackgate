@@ -15,6 +15,8 @@ import { GlobalClickTracker } from "@/components/global-click-tracker";
 import { GlobalSectionTracker } from "@/components/global-section-tracker";
 import { ImpersonationProvider } from "@/components/impersonation-context";
 import ImpersonationBanner from "@/components/impersonation-banner";
+import { IndependenceDayBanner } from "@/components/independence-day-banner";
+import { INDEPENDENCE_DAY_ACTIVE } from "@/lib/celebration";
 import { auth } from "@/lib/auth";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -25,7 +27,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#4F46E5",
+  themeColor: INDEPENDENCE_DAY_ACTIVE ? "#FF9933" : "#4F46E5",
 };
 
 export const metadata: Metadata = {
@@ -72,7 +74,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#4F46E5" />
+        <meta name="theme-color" content={INDEPENDENCE_DAY_ACTIVE ? "#FF9933" : "#4F46E5"} />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <ThemeScript />
         {gscContent && <meta name="google-site-verification" content={gscContent} />}
@@ -120,8 +122,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           }}
         />
       </head>
-      <body>
+      <body className={INDEPENDENCE_DAY_ACTIVE ? "indyday" : undefined}>
+        {INDEPENDENCE_DAY_ACTIVE && (
+          <>
+            <div className="indy-edge-top" aria-hidden />
+            <div className="indy-edge-bottom" aria-hidden />
+          </>
+        )}
         <a href="#main" className="skip-link">Skip to main content</a>
+        {INDEPENDENCE_DAY_ACTIVE && <IndependenceDayBanner />}
         {impersonator && (
           <ImpersonationBanner
             targetEmail={session.user.email ?? ""}

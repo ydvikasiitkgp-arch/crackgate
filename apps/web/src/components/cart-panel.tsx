@@ -3,6 +3,8 @@
 import { X, Trash2, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "@/hooks/use-cart";
+import { AshokaChakra } from "@/components/ashoka-chakra";
+import { INDEPENDENCE_DAY_ACTIVE, INDEPENDENCE_DAY_PROMO_CODE } from "@/lib/celebration";
 
 function formatPrice(paise: number) {
   return `₹${(paise / 100).toLocaleString("en-IN")}`;
@@ -95,6 +97,17 @@ export function CartPanel({
         {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-line px-5 py-4 space-y-3">
+            {INDEPENDENCE_DAY_ACTIVE && (
+              <div className="flex items-center justify-between gap-2 rounded-lg border border-line bg-gradient-to-r from-[#FF9933]/10 via-transparent to-[#138808]/10 px-3 py-2">
+                <span className="inline-flex items-center gap-1.5 text-xs text-ink">
+                  <AshokaChakra size={14} aria-hidden />
+                  Independence Day sale
+                </span>
+                <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-xs font-bold text-[#B45309] dark:text-[#fbbf24]">
+                  Use {INDEPENDENCE_DAY_PROMO_CODE}
+                </span>
+              </div>
+            )}
             {comboDiscounts.length > 0 && (
               <div className="rounded-lg bg-ok/10 border border-ok/20 px-3 py-2 text-xs text-ok font-medium">
                 Combo discount applied! You save {formatPrice(comboSavingsPaise)}
