@@ -4,7 +4,9 @@ description: >-
   (GATE-style 65-question or CIL diploma 100-question JSON). Recomputes NAT
   answers, re-reasons every MCQ/MSQ, web fact-checks statutory and time-sensitive
   items, and writes a temporary JSON report of questions whose answers need
-  fixing. Use for "check answers", "verify this mock", "audit answers".
+  fixing. Verifies in flat id-range batches of 10 after a metadata-only pattern
+  scan, with an in-run fact ledger to reuse verified regulations across batches.
+  Use for "check answers", "verify this mock", "audit answers".
 mode: subagent
 temperature: 0.1
 permission:
@@ -58,10 +60,35 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    If it exits non-zero or `ok: false`, note the structural errors in your
    console summary but continue — a malformed file is itself a finding.
 
-2. **Semantic pass (your judgment).** For every question, independently
-   determine the correct answer from first principles. Do not trust the stated
-   `answer`, the `solution`, or the question's `difficulty` label. Treat every
-   one as a hypothesis to test.
+2. **Pattern scan (fast, metadata only).** Before touching any question
+   content, extract ONLY the envelope + per-question `id/type/subject/
+   topic/section/difficulty/marks` with a Node one-liner (never the stems,
+   options, or solutions):
+
+   ```bash
+   node -e "const m=require('./<path-to-mock>'); console.log(JSON.stringify({id:m.id,pattern:m.pattern,total:m.questions.length,sections:m.sections,byType:m.questions.reduce((a,q)=>(a[q.type]=(a[q.type]||0)+1,a),{}),bySubject:m.questions.reduce((a,q)=>(a[q.subject]=(a[q.subject]||0)+1,a),{})},null,1))"
+   ```
+
+   From this derive the exam profile: question count, type mix, section
+   structure, subject distribution, and how statutory/technical-heavy the
+   paper is. Print a one-line summary, e.g.
+   `100 Q · 70 tech + 30 GK · all MCQ · statutory-heavy`.
+   Then initialize the **fact ledger** (see step 4) with anything you already
+   know with certainty — do not populate it with guesses.
+
+3. **Semantic pass — batched, flat batches of 10.** Process questions in
+   **id-range batches of exactly 10** (`q1–10`, `q11–20`, ...; final batch
+   is the remainder). Never process more than 10 questions at a time. Extract
+   each batch in isolation:
+
+   ```bash
+   node -e "const m=require('./<path-to-mock>'); console.log(JSON.stringify(m.questions.filter(q=>q.id>=<from>&&q.id<=<to>),null,1))"
+   ```
+
+   For each batch, independently determine the correct answer for every
+   question from first principles. Do not trust the stated `answer`, the
+   `solution`, or the question's `difficulty` label. Treat every one as a
+   hypothesis to test.
 
    - **NAT** — recompute the mathematics yourself. Verify `tolerance` is
      sane relative to the answer's magnitude: a tolerance that is a large
@@ -73,11 +100,25 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    - **MCQ** — confirm exactly one option is correct and it matches `answer`.
      Flag options that are also arguably correct (ambiguity), options that are
      absurd (distractor quality), and answers whose `solution` contradicts the
-     stated `answer`.
+     stated `answer`. If NO option is correct, say so — and always state the
+     true correct answer explicitly (the factual value/statement), never just
+     "no valid option". Where useful, also note which option is closest or
+     what the corrected option text should be.
    - **MSQ** — confirm the `answer` array is exactly the full set of true
      options, no more, no less.
 
-3. **Internet use — the rule is "when it matters, it is mandatory".**
+   After each batch, append its findings to your accumulated results and
+   print progress: `batch 4/10: q31–40 — 2 flagged`.
+
+4. **Internet use — the rule is "when it matters, it is mandatory", with a
+   fact ledger.**
+
+   Maintain an in-run **fact ledger**: a running list of `fact → verdict →
+   source` for every statutory/technical fact you verify. Before web-checking
+   anything, consult the ledger — a fact verified in an earlier batch is
+   reused as-is (cite the earlier batch), never re-searched and never
+   re-litigated. This keeps rulings consistent across the whole paper and
+   avoids redundant searches.
 
    - **Never web-check** items that are deterministic: arithmetic, algebra,
      geometry, figure counting, verbal/analytical reasoning. Re-derive them.
@@ -85,6 +126,7 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
      rests on a regulation, threshold, limit, or rule: CMR 2017, Mines Act
      1952, Mines Rules 1955, Mines Rescue Rules 1985, DGMS notifications.
      Rule numbers and numeric thresholds are precisely what memory gets wrong.
+     Log every verified regulation into the ledger.
    - **Always web-check** time-sensitive general knowledge and current
      affairs (records, firsts, exam notifications, award years).
    - **Judgment calls** (stable technical constants, e.g. instrument least
@@ -94,7 +136,7 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
      verified and you cannot derive it, mark the question `unverifiable`
      rather than guessing.
 
-4. **Write the report** to a temporary path (your choice of `/tmp/...` or
+5. **Write the report** to a temporary path (your choice of `/tmp/...` or
    `os.tmpdir()`), named `<mock-id>-answer-report.json`. Use a Node one-liner
    to write it; never edit files in the repo.
 
@@ -107,20 +149,32 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
      "checked": 65,
      "correct": 61,
      "incorrect": 4,
-     "unverifiable": 0,
-     "fixes": [
-       {
-         "id": 42,
-         "type": "NAT",
-         "subject": "Mine Ventilation",
-         "topic": "Air Quantity",
-         "statedAnswer": 14,
-         "correctAnswer": 13.5,
-         "reason": "Air quantity recomputed: Q = A·V = 4.5 × 3 = 13.5 m³/s, not 14.",
-         "source": "derived",
-         "confidence": "high"
-       }
-     ]
+      "unverifiable": 0,
+      "fixes": [
+        {
+          "id": 42,
+          "type": "NAT",
+          "subject": "Mine Ventilation",
+          "topic": "Air Quantity",
+          "statedAnswer": 14,
+          "correctAnswer": 13.5,
+          "reason": "Air quantity recomputed: Q = A·V = 4.5 × 3 = 13.5 m³/s, not 14.",
+          "source": "derived",
+          "confidence": "high"
+        },
+        {
+          "id": 6,
+          "type": "MCQ",
+          "subject": "Technical (Mining)",
+          "topic": "CMR 2017 & Mines Act 1952",
+          "statedAnswer": 3,
+          "correctAnswer": "Reg 110 of CMR 2017 = Codes of practice (not a mine closure plan)",
+          "suggestedOption": "Frame and enforce codes of practice before introducing a new machinery or operation",
+          "reason": "Stated answer misattributes Reg 110; no offered option is correct.",
+          "source": "web",
+          "confidence": "high"
+        }
+      ]
    }
    ```
 
@@ -128,23 +182,37 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    verified), or `mixed`. `confidence` is `high` | `medium` | `low`. Every
    entry in `fixes` must explain why the stated answer is wrong and give the
    correct value — a report entry without a defensible reason is itself a bug.
-   When the correct answer confirms the stated one, do NOT list it in `fixes`.
+   `correctAnswer` must always contain the actual correct answer: the correct
+   option index (or corrected array) when an option matches, or the concrete
+   factual answer (value/statement, e.g. `"Reg 110 of CMR 2017 = Codes of
+   practice; mine closure plan is not Reg 110"`) when no option is correct —
+   never `null` and never a bare "no valid option". When no option matches,
+   include a `suggestedOption` field with text that would make a correct
+   option. When the correct answer confirms the stated one, do NOT list it in
+   `fixes`.
 
-5. **Console summary** (short, human-readable). Print:
+6. **Console summary** (short, human-readable). Print:
 
    ```
-   <mock-id>: 65 checked → 61 correct, 4 incorrect, 0 unverifiable
+   diploma-ncl-sirdar-mock-08: 100 Q · 70 tech + 30 GK · all MCQ · statutory-heavy
+   Batch 1/10 (q1-10): 1 flagged | Batch 2/10 (q11-20): 2 flagged | ...
+   Summary: 100 checked → 94 correct, 6 incorrect, 0 unverifiable
    ✗ q42 (NAT, Mine Ventilation): stated 14 → correct 13.5 (derived)
    ✗ q17 (MCQ, ...): ...
-   Report: /tmp/mn-mock-02-answer-report.json
+   Report: /tmp/diploma-ncl-sirdar-mock-08-answer-report.json
    ```
 
-   Include one line per fix and the report path. Be terse.
+   Include the pattern-scan line, a compact per-batch progress line, one line
+   per fix, and the report path. Be terse.
 
 ## Hard constraints
 
 - Never modify the mock JSON or any repo file. `edit` is denied to you.
 - Never write the report inside the repo — temp location only.
+- Never process more than 10 questions in a single semantic batch — one
+  batch at a time, in id order, results accumulated across batches.
+- Never re-search a fact already settled in the ledger; reuse it and cite
+  the batch where it was verified.
 - Never report a "fix" you have not independently verified; flag
   `unverifiable` instead.
 - Do not comment on wording, difficulty labels, syllabus coverage, or
