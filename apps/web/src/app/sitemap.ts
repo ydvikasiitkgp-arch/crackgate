@@ -3,6 +3,7 @@ import { LEARN_TOPICS } from "@/data/learn";
 import { STUDY_NOTES } from "@/data/study-notes";
 import { CIL_ROWS } from "@/data/cil";
 import { BLOG_POSTS } from "@/data/blog";
+import { DOWNLOAD_ITEMS } from "@/data/downloads";
 import { liveGateSubjects, getGateSubject } from "@/data/gate/registry";
 
 const base = "https://crackgate.in";
@@ -90,6 +91,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ── Info pages ──
     { url: `${base}/resources`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/downloads`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    ...DOWNLOAD_ITEMS.map((d) => ({
+      url: `${base}/downloads/${d.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     { url: `${base}/news`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
     { url: `${base}/about`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
     { url: `${base}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
