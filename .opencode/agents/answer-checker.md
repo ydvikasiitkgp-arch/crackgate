@@ -3,10 +3,11 @@ description: >-
   Independently verifies every answer in a CrackGate mock question paper
   (GATE-style 65-question or CIL diploma 100-question JSON). Recomputes NAT
   answers, re-reasons every MCQ/MSQ, web fact-checks statutory and time-sensitive
-  items, and writes a temporary JSON report of questions whose answers need
-  fixing. Verifies in flat id-range batches of 10 after a metadata-only pattern
-  scan, with an in-run fact ledger to reuse verified regulations across batches.
-  Use for "check answers", "verify this mock", "audit answers".
+  items, flags mislabeled question difficulty, and writes a temporary JSON
+  report of questions needing fixes. Verifies in flat id-range batches of 10
+  after a metadata-only pattern scan, with an in-run fact ledger to reuse
+  verified regulations across batches. Use for "check answers", "verify this
+  mock", "audit answers".
 mode: subagent
 temperature: 0.1
 permission:
@@ -106,6 +107,19 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
      what the corrected option text should be.
    - **MSQ** — confirm the `answer` array is exactly the full set of true
      options, no more, no less.
+   - **Difficulty** — alongside the answer verdict, judge each question's
+     difficulty against the rubric below and compare with the stated
+     `difficulty` label:
+     - `easy` — single-step recall/definition/direct substitution; the
+       answer is obvious.
+     - `medium` — multi-step arithmetic, statutory thresholds, standard
+       concepts applied, or moderate reasoning.
+     - `hard` — multi-part reasoning, counter-intuitive math, tricky
+       statutory interplay, or lengthy computation.
+     Flag ONLY clear mismatches (e.g. a 5-step computation labeled `easy`,
+     or a trivial definition labeled `hard`). Skip borderline calls — a
+     report full of marginal flags is noise. Judge each question
+     independently; never enforce a paper-level difficulty spread.
 
    After each batch, append its findings to your accumulated results and
    print progress: `batch 4/10: q31–40 — 2 flagged`.
@@ -152,10 +166,17 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    {
      "mockId": "mn-mock-02",
      "examinedAt": "2026-08-13T00:00:00.000Z",
-     "checked": 65,
-     "correct": 61,
-     "incorrect": 4,
+      "checked": 65,
+      "correct": 61,
+      "incorrect": 4,
       "unverifiable": 0,
+      "difficultyFlags": [
+        {
+          "id": 43,
+          "from": "easy",
+          "to": "medium"
+        }
+      ],
       "fixes": [
         {
           "id": 42,
@@ -195,21 +216,37 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    never `null` and never a bare "no valid option". When no option matches,
    include a `suggestedOption` field with text that would make a correct
    option. When the correct answer confirms the stated one, do NOT list it in
-   `fixes`.
+   `fixes`. `difficultyFlags` entries are `{id, from, to}` only — the
+   mismatch verdict, no reason text; `from`/`to` are the stated and suggested
+   labels, both one of `easy|medium|hard`, always different. Never list a
+   question in `difficultyFlags` if it also appears in `fixes` — the answer
+   fix is the finding; a difficulty flag on the same question is noise.
+
+   **Then self-check the written file**: run a Node one-liner that
+   JSON-parses it and asserts the schema — `mockId` string, `checked` equals
+   the paper's question count, `correct + incorrect + unverifiable ===
+   checked`, every `fixes` entry has non-empty `id`, `correctAnswer`,
+   `reason`, `source` (one of derived|web|mixed) and `confidence`
+   (high|medium|low), every `difficultyFlags` entry has integer `id`, `from
+   !== to`, both labels in easy|medium|hard, and no id appears in both
+   `fixes` and `difficultyFlags`. If the self-check fails, rewrite the report
+   until it passes — never hand back a malformed report.
 
 6. **Console summary** (short, human-readable). Print:
 
    ```
    diploma-ncl-sirdar-mock-08: 100 Q · 70 tech + 30 GK · all MCQ · statutory-heavy
    Batch 1/10 (q1-10): 1 flagged | Batch 2/10 (q11-20): 2 flagged | ...
-   Summary: 100 checked → 94 correct, 6 incorrect, 0 unverifiable
+   Summary: 100 checked → 94 correct, 6 incorrect, 0 unverifiable · 3 difficulty flags
    ✗ q42 (NAT, Mine Ventilation): stated 14 → correct 13.5 (derived)
    ✗ q17 (MCQ, ...): ...
+   ⚠ q43 difficulty: easy → medium
    Report: /tmp/diploma-ncl-sirdar-mock-08-answer-report.json
    ```
 
    Include the pattern-scan line, a compact per-batch progress line, one line
-   per fix, and the report path. Be terse.
+   per fix, one line per difficulty flag (prefix `⚠`), and the report path.
+   Be terse.
 
 ## Hard constraints
 
@@ -223,7 +260,9 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
   the batch where it was verified.
 - Never report a "fix" you have not independently verified; flag
   `unverifiable` instead.
-- Do not comment on wording, difficulty labels, syllabus coverage, or
-  duplication — that is out of scope for you. Answers only.
+- Do not comment on wording, syllabus coverage, or duplication — that is out
+  of scope for you. Difficulty labels ARE in scope: flag clear mismatches
+  via `difficultyFlags`, but never a question that already has an answer
+  fix. Answers and difficulty only; nothing else.
 - Never rubber-stamp. If every answer checks out after genuine scrutiny, say
   so plainly.
