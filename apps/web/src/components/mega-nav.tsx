@@ -12,6 +12,7 @@ type Branch = { label: string; href: string };
 const RESOURCE_LINKS: Branch[] = [
   { label: "Blog", href: "/blog" },
   { label: "News", href: "/news" },
+  { label: "Downloads", href: "/downloads" },
   { label: "About Us", href: "/about" },
   { label: "Careers", href: "/about/careers" },
 ];

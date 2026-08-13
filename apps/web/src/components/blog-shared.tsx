@@ -122,6 +122,15 @@ export function BlogArticle({
         <div className="mt-12 border-t border-line pt-8">
           <Link href={indexHref} className="text-sm text-brand hover:underline">← Back to {indexLabel.toLowerCase()}</Link>
         </div>
+
+        {post.cta && (
+          <div className="mt-8 rounded-2xl border border-brand/20 bg-brand/5 p-6 text-center">
+            <h2 className="text-lg font-bold text-ink">{post.cta.label}</h2>
+            <Link href={post.cta.href} className="btn btn-primary mt-4">
+              Start preparing now →
+            </Link>
+          </div>
+        )}
       </article>
 
       <div className="border-t border-line bg-paper/40">

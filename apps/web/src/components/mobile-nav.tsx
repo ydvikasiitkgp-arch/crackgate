@@ -211,6 +211,7 @@ function DiplomaSheet({ onClose }: { onClose: () => void }) {
 const RESOURCE_ITEMS: Leaf[] = [
   { href: "/blog", label: "Blog" },
   { href: "/news", label: "News" },
+  { href: "/downloads", label: "Downloads" },
   { href: "/about", label: "About Us" },
   { href: "/about/careers", label: "Careers" },
 ];
@@ -336,7 +337,7 @@ export function MobileSectionBar() {
 
   const isPsuActive = pathname?.startsWith("/psu");
   const isDiplomaActive = pathname?.startsWith("/diploma");
-  const isResourcesActive = pathname?.startsWith("/blog") || pathname?.startsWith("/news") || pathname?.startsWith("/about");
+  const isResourcesActive = pathname?.startsWith("/blog") || pathname?.startsWith("/news") || pathname?.startsWith("/downloads") || pathname?.startsWith("/about");
 
   return (
     <>
