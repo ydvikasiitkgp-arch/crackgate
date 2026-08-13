@@ -1,8 +1,7 @@
 // Server-side post-test analytics for CIL Management Trainee mock attempts.
-// Computes a peer leaderboard (rank / percentile / top / average), per-section
-// accuracy, time-vs-ideal pacing, and a per-question item analysis
-// (percent-correct + discrimination index) from the pool of all attempts on the
-// same set. Pure data — rendered by <CilResultAnalytics/>.
+// Computes per-section accuracy, time-vs-ideal pacing, and a per-question item
+// analysis (percent-correct + discrimination index) from the pool of all
+// attempts on the same set. Pure data — rendered by <CilResultAnalytics/>.
 
 import { db } from "@/lib/db";
 import { isQuestionCorrect, type Question, type AnswerMap } from "@/lib/grading";
@@ -13,11 +12,6 @@ type DiffQuestion = Question & {
   section?: string;
   estSec?: number;
   difficulty?: "easy" | "medium" | "hard";
-};
-
-export type CilLeaderboard = {
-  peerCount: number;
-  percentile: number | null;
 };
 
 export type CilItemStat = {
@@ -33,7 +27,6 @@ export type CilResultData = {
   total: number;
   pct: number;
   durationSec: number;
-  leaderboard: CilLeaderboard;
   sections: { name: string; scored: number; total: number; pct: number }[];
   time: { spentSec: number; idealSec: number; attempted: number; avgSecPerQ: number };
   itemStats: CilItemStat[] | null;
@@ -102,26 +95,12 @@ export async function buildCilResultData(
     avgSecPerQ: attempted ? Math.round(att.durationSec / attempted) : 0,
   };
 
-  // ---- Peer pool for this set (leaderboard + item analysis) ----
+  // ---- Peer pool for this set (item analysis) ----
   const peers = (await db.attempt.findMany({
     where: { refId: att.refId },
-    select: { userId: true, score: true, answersJson: true },
+    select: { score: true, answersJson: true },
     take: 5000,
-  })) as { userId: string; score: number; answersJson: unknown }[];
-
-  const bestByUser = new Map<string, number>();
-  for (const p of peers) {
-    const prev = bestByUser.get(p.userId);
-    if (prev === undefined || p.score > prev) bestByUser.set(p.userId, p.score);
-  }
-  const peerScores = [...bestByUser.values()];
-  const peerCount = peerScores.length;
-  const myBest = bestByUser.get(att.userId) ?? score;
-  const below = peerScores.filter((s) => s < myBest).length;
-  const leaderboard: CilLeaderboard = {
-    peerCount,
-    percentile: peerCount > 1 ? Math.round((below / (peerCount - 1)) * 100) : null,
-  };
+  })) as { score: number; answersJson: unknown }[];
 
   // ---- Per-question item analysis (only with a usable sample) ----
   let itemStats: CilItemStat[] | null = null;
@@ -157,7 +136,6 @@ export async function buildCilResultData(
     total,
     pct,
     durationSec: att.durationSec,
-    leaderboard,
     sections,
     time,
     itemStats,

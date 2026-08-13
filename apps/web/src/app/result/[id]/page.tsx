@@ -60,7 +60,7 @@ export default async function ResultPage(props: { params: Promise<{ id: string }
   const bank = loadBank(att.kind, att.refId);
   const answers = (att.answersJson as Record<string, Answer>) ?? {};
 
-  // CIL MT attempts get the dedicated cut-off / leaderboard / section analytics.
+  // CIL MT attempts get the dedicated cut-off / section analytics.
   const isCil = att.kind === "mock" && att.refId.startsWith("cil-");
   const cilData = isCil && bank
     ? await buildCilResultData(att, bank as never)
