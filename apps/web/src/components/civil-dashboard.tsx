@@ -1,8 +1,9 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { fmtDate } from "@/lib/utils";
+import { fmtDate, fmtMin } from "@/lib/utils";
 import { getGateSubject } from "@/data/gate/registry";
 import type { DashboardTrack } from "@/lib/dashboard-tracks";
+import type { PeerRank } from "@/lib/peer-percentile";
 
 const ScoreTrendChart = dynamic(() => import("@/components/score-trend-chart").then((m) => m.ScoreTrendChart));
 
@@ -13,6 +14,7 @@ export type CivilAttempt = {
   score: number;
   total: number;
   takenAt: Date;
+  durationSec: number;
   breakdown: Record<string, { scored: number; total: number }>;
 };
 
@@ -24,13 +26,19 @@ export type CivilAttempt = {
 export function CivilDashboard({
   track,
   attempts,
+  peers,
 }: {
   track: DashboardTrack;
   attempts: CivilAttempt[];
+  peers: ReadonlyMap<string, PeerRank>;
 }) {
   const meta = getGateSubject(track.subject);
   const mocks = (meta?.mocks ?? []) as ReadonlyArray<{ id: string; title: string; tier: string; questions: unknown[] }>;
   const attemptedIds = new Set(attempts.map((a) => a.refId));
+  const attemptByRefId = new Map<string, CivilAttempt>();
+  for (const a of attempts) {
+    if (!attemptByRefId.has(a.refId)) attemptByRefId.set(a.refId, a);
+  }
 
   const totalAttempts = attempts.length;
   const avgScore = totalAttempts
@@ -38,6 +46,9 @@ export function CivilDashboard({
     : 0;
   const bestScore = totalAttempts
     ? Math.round(Math.max(...attempts.map((a) => (a.total ? (a.score / a.total) * 100 : 0))))
+    : 0;
+  const avgSec = totalAttempts
+    ? Math.round(attempts.reduce((s, a) => s + (a.durationSec ?? 0), 0) / totalAttempts)
     : 0;
 
   // Section accuracy aggregated across this subject's attempts.
@@ -87,10 +98,11 @@ export function CivilDashboard({
       </section>
 
       {/* KPIs */}
-      <div className="grid sm:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard label="Mocks attempted" value={`${attemptedIds.size} / ${mocks.length}`} />
         <StatCard label="Avg score" value={`${avgScore}%`} />
         <StatCard label="Best score" value={`${bestScore}%`} />
+        <StatCard label="Avg time" value={fmtMin(avgSec)} />
       </div>
 
       {/* Score trend */}
@@ -146,19 +158,46 @@ export function CivilDashboard({
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-4">
           {mocks.map((m, i) => {
-            const done = attemptedIds.has(m.id);
+            const attempt = attemptByRefId.get(m.id);
+            const done = !!attempt;
+            const pct = attempt?.total ? Math.round((attempt.score / attempt.total) * 100) : 0;
+            const rank = peers.get(m.id);
             return (
               <Link
                 key={m.id}
-                href={`/mocks/${m.id}`}
-                className="rounded-xl border border-line p-4 hover:border-brand hover:shadow-pop transition block"
+                href={done ? `/result/${attempt!.id}` : `/mocks/${m.id}`}
+                className={`rounded-xl border p-4 transition block ${
+                  done
+                    ? "border-ok/30 bg-ok/5 opacity-80 hover:opacity-100"
+                    : "border-line hover:border-brand hover:shadow-pop"
+                }`}
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="font-semibold">Mock {String(i + 1).padStart(2, "0")}</span>
+                  <span className="font-mono text-sm font-bold text-brand">Mock {String(i + 1).padStart(2, "0")}</span>
                   {m.tier === "free" && <span className="badge badge-pro">Free</span>}
-                  {done && <span className="text-xs font-semibold text-ok">✓ done</span>}
+                  {done ? (
+                    <span className="text-xs font-semibold text-ok">✓ {pct}%</span>
+                  ) : (
+                    <span className="text-xs text-muted">○</span>
+                  )}
                 </div>
-                <div className="text-xs text-muted mt-1 line-clamp-2">{m.title}</div>
+                <div className="text-xs text-muted mt-2 line-clamp-2">{m.title}</div>
+                {done ? (
+                  <div className="text-xs text-muted mt-1">
+                    {attempt!.score}/{attempt!.total} · {fmtMin(attempt!.durationSec)} · {fmtDate(attempt!.takenAt)}
+                  </div>
+                ) : (
+                  <div className="text-xs text-muted mt-1">Not started</div>
+                )}
+                {rank && rank.percentile != null && rank.peerCount > 1 && (
+                  <div
+                    className={`text-xs font-semibold mt-1 ${
+                      rank.percentile >= 70 ? "text-ok" : rank.percentile >= 40 ? "text-accent" : "text-bad"
+                    }`}
+                  >
+                    Better than {rank.percentile}%
+                  </div>
+                )}
               </Link>
             );
           })}

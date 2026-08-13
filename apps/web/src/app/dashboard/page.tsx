@@ -35,6 +35,7 @@ import {
 } from "@/lib/dashboard-data";
 import { getUserEntitlements } from "@/lib/entitlements";
 import { resolveDashboardTracks, pickActiveTrack } from "@/lib/dashboard-tracks";
+import { peerPercentiles } from "@/lib/peer-percentile";
 import { getGateSubject } from "@/data/gate/registry";
 import { TrackSwitcher } from "@/components/track-switcher";
 import { ChooseExam } from "@/components/choose-exam";
@@ -109,13 +110,15 @@ export default async function DashboardPage({
         score: a.score,
         total: a.total,
         takenAt: a.takenAt,
+        durationSec: a.durationSec,
         breakdown: (a.breakdown as Record<string, { scored: number; total: number }>) ?? {},
       }));
+    const peers = await peerPercentiles(cilAttempts.map((a) => a.refId), userId);
     return (
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
         <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
-        <CilDashboard track={activeTrack} attempts={cilAttempts} />
+        <CilDashboard track={activeTrack} attempts={cilAttempts} peers={peers} />
       </div>
     );
   }
@@ -132,13 +135,15 @@ export default async function DashboardPage({
         score: a.score,
         total: a.total,
         takenAt: a.takenAt,
+        durationSec: a.durationSec,
         breakdown: (a.breakdown as Record<string, { scored: number; total: number }>) ?? {},
       }));
+    const peers = await peerPercentiles(gateAttempts.map((a) => a.refId), userId);
     return (
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
         <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
-        <CivilDashboard track={activeTrack} attempts={gateAttempts} />
+        <CivilDashboard track={activeTrack} attempts={gateAttempts} peers={peers} />
       </div>
     );
   }
@@ -155,13 +160,15 @@ export default async function DashboardPage({
         score: a.score,
         total: a.total,
         takenAt: a.takenAt,
+        durationSec: a.durationSec,
         breakdown: (a.breakdown as Record<string, { scored: number; total: number }>) ?? {},
       }));
+    const peers = await peerPercentiles(diplomaAttempts.map((a) => a.refId), userId);
     return (
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
         <CourseHub tracks={tracks} activeKey={activeTrack.key} stats={courseStats} firstName={latest?.name?.split(" ")[0] ?? "Aspirant"} />
         <TrackSwitcher tracks={tracks} activeKey={activeTrack.key} />
-        <DiplomaDashboard track={activeTrack} attempts={diplomaAttempts} />
+        <DiplomaDashboard track={activeTrack} attempts={diplomaAttempts} peers={peers} />
       </div>
     );
   }

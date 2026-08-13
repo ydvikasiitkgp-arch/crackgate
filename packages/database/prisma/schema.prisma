@@ -169,6 +169,7 @@ model UpiPayment {
   upiTxnRef     String?                          // legacy UPI reference (no longer collected)
   upiApp        String?                          // PhonePe | GPay | Paytm | BHIM | Other
   payerNote     String?                          // optional message from user
+  referralSource String?                        // how the user heard about us (optional)
   promoCode    String?                          // promo code applied at checkout
   status        UpiClaimStatus  @default(pending)
   adminNote     String?                          // reason if rejected
