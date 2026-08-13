@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { fmtDate, fmtMin } from "@/lib/utils";
 import type { DashboardTrack } from "@/lib/dashboard-tracks";
-import type { PeerRank } from "@/lib/peer-percentile";
 
 export type DiplomaAttempt = {
   id: string;
@@ -32,11 +31,9 @@ const DIPLOMA_PREFIX_MAP: Record<string, { prefix: string; totalMocks: number; m
 export function DiplomaDashboard({
   track,
   attempts,
-  peers,
 }: {
   track: DashboardTrack;
   attempts: DiplomaAttempt[];
-  peers: ReadonlyMap<string, PeerRank>;
 }) {
   const meta = DIPLOMA_PREFIX_MAP[track.subject];
   const prefix = meta?.prefix ?? `diploma-${track.subject}-mock-`;
@@ -147,7 +144,6 @@ export function DiplomaDashboard({
           {mocks.map((m) => {
             const done = !!m.attempt;
             const pct = m.attempt?.total ? Math.round((m.attempt.score / m.attempt.total) * 100) : 0;
-            const rank = peers.get(m.refId);
             return (
               <Link
                 key={m.refId}
@@ -174,15 +170,6 @@ export function DiplomaDashboard({
                   </div>
                 ) : (
                   <div className="text-xs text-muted mt-2">Not started</div>
-                )}
-                {rank && rank.percentile != null && rank.peerCount > 1 && (
-                  <div
-                    className={`text-xs font-semibold mt-1 ${
-                      rank.percentile >= 70 ? "text-ok" : rank.percentile >= 40 ? "text-accent" : "text-bad"
-                    }`}
-                  >
-                    Better than {rank.percentile}%
-                  </div>
                 )}
               </Link>
             );

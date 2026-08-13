@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import { fmtDate, fmtMin } from "@/lib/utils";
 import { getGateSubject } from "@/data/gate/registry";
 import type { DashboardTrack } from "@/lib/dashboard-tracks";
-import type { PeerRank } from "@/lib/peer-percentile";
 
 const ScoreTrendChart = dynamic(() => import("@/components/score-trend-chart").then((m) => m.ScoreTrendChart));
 
@@ -26,11 +25,9 @@ export type CivilAttempt = {
 export function CivilDashboard({
   track,
   attempts,
-  peers,
 }: {
   track: DashboardTrack;
   attempts: CivilAttempt[];
-  peers: ReadonlyMap<string, PeerRank>;
 }) {
   const meta = getGateSubject(track.subject);
   const mocks = (meta?.mocks ?? []) as ReadonlyArray<{ id: string; title: string; tier: string; questions: unknown[] }>;
@@ -161,7 +158,6 @@ export function CivilDashboard({
             const attempt = attemptByRefId.get(m.id);
             const done = !!attempt;
             const pct = attempt?.total ? Math.round((attempt.score / attempt.total) * 100) : 0;
-            const rank = peers.get(m.id);
             return (
               <Link
                 key={m.id}
@@ -188,15 +184,6 @@ export function CivilDashboard({
                   </div>
                 ) : (
                   <div className="text-xs text-muted mt-1">Not started</div>
-                )}
-                {rank && rank.percentile != null && rank.peerCount > 1 && (
-                  <div
-                    className={`text-xs font-semibold mt-1 ${
-                      rank.percentile >= 70 ? "text-ok" : rank.percentile >= 40 ? "text-accent" : "text-bad"
-                    }`}
-                  >
-                    Better than {rank.percentile}%
-                  </div>
                 )}
               </Link>
             );
