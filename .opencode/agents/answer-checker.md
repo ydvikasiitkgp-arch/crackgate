@@ -150,8 +150,10 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
      verified and you cannot derive it, mark the question `unverifiable`
      rather than guessing.
 
-5. **Write the report** to a temporary path (your choice of `/tmp/...` or
-   `os.tmpdir()`), named `<mock-id>-answer-report.json`. Use a Node one-liner
+5. **Write the report** to the canonical temp reports dir —
+   `$TMPDIR/opencode/` (the opencode temp sandbox dir, i.e.
+   `/var/folders/.../T/opencode/`); if that is unavailable, fall back to
+   `/tmp/`. Name it `<mock-id>-answer-report.json`. Use a Node one-liner
    to write it; never edit files in the repo. **Then self-check it**: run a
    Node one-liner that JSON-parses the written file and asserts the schema —
    `mockId` string, `checked` equals the paper's question count, `correct +
@@ -241,7 +243,7 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    ✗ q42 (NAT, Mine Ventilation): stated 14 → correct 13.5 (derived)
    ✗ q17 (MCQ, ...): ...
    ⚠ q43 difficulty: easy → medium
-   Report: /tmp/diploma-ncl-sirdar-mock-08-answer-report.json
+   Report: $TMPDIR/opencode/diploma-ncl-sirdar-mock-08-answer-report.json
    ```
 
    Include the pattern-scan line, a compact per-batch progress line, one line
