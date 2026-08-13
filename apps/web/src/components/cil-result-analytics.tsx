@@ -19,51 +19,14 @@ function Stat({ label, value, sub }: { label: string; value: string; sub?: strin
 }
 
 /**
- * CIL-specific post-test analytics shown on the result page: peer comparison
- * ("better than X%"), per-section accuracy and time pacing.
+ * CIL-specific post-test analytics shown on the result page: per-section
+ * accuracy and time pacing.
  */
 export function CilResultAnalytics({ data }: { data: CilResultData }) {
-  const { leaderboard, sections, time } = data;
+  const { sections, time } = data;
 
   return (
     <div className="mt-8 space-y-6 text-left">
-      {/* Peer comparison */}
-      <section className="bg-surface rounded-xl border border-line p-5">
-        <h3 className="font-bold text-lg">Where you stand</h3>
-        {leaderboard.peerCount > 1 && leaderboard.percentile != null ? (
-          <div
-            className={`mt-3 rounded-xl border p-5 text-center ${
-              leaderboard.percentile >= 70
-                ? "border-ok/30 bg-ok/5"
-                : leaderboard.percentile >= 40
-                  ? "border-accent/30 bg-accent/5"
-                  : "border-bad/30 bg-bad/5"
-            }`}
-          >
-            <div
-              className={`text-3xl font-extrabold tabular-nums ${
-                leaderboard.percentile >= 70
-                  ? "text-ok"
-                  : leaderboard.percentile >= 40
-                    ? "text-accent"
-                    : "text-bad"
-              }`}
-            >
-              Better than {leaderboard.percentile}%
-            </div>
-            <div className="text-xs text-muted mt-1">
-              of {leaderboard.peerCount - 1} other candidates who attempted this
-              set
-            </div>
-          </div>
-        ) : (
-          <p className="text-sm text-muted mt-2">
-            You’re among the first to attempt this set — a peer comparison
-            unlocks once more candidates finish.
-          </p>
-        )}
-      </section>
-
       {/* Section + time analytics */}
       <section className="bg-surface rounded-xl border border-line p-5">
         <h3 className="font-bold text-lg">Section &amp; time analysis</h3>
