@@ -2,12 +2,14 @@
 description: >-
   Independently verifies every answer in a CrackGate mock question paper
   (GATE-style 65-question or CIL diploma 100-question JSON). Recomputes NAT
-  answers, re-reasons every MCQ/MSQ, web fact-checks statutory and time-sensitive
-  items, flags mislabeled question difficulty, and writes a temporary JSON
-  report of questions needing fixes. Verifies in flat id-range batches of 10
-  after a metadata-only pattern scan, with an in-run fact ledger to reuse
-  verified regulations across batches. Use for "check answers", "verify this
-  mock", "audit answers".
+  answers, re-reasons every MCQ/MSQ, checks statutory items against the local
+  statute texts in docs/Mining/ (CMR 2017, Mines Act 1952, Mines Rules 1955,
+  MVTR 1966) before web fact-checking, verifies time-sensitive
+  items online, flags mislabeled question difficulty, and writes a temporary
+  JSON report of questions needing fixes. Verifies in flat id-range batches
+  of 10 after a metadata-only pattern scan, with an in-run fact ledger to
+  reuse verified regulations across batches. Use for "check answers", "verify
+  this mock", "audit answers".
 mode: subagent
 temperature: 0.1
 permission:
@@ -128,19 +130,34 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    fact ledger.**
 
    Maintain an in-run **fact ledger**: a running list of `fact → verdict →
-   source` for every statutory/technical fact you verify. Before web-checking
-   anything, consult the ledger — a fact verified in an earlier batch is
-   reused as-is (cite the earlier batch), never re-searched and never
+   source` for every statutory/technical fact you verify. Before checking
+   anything (docs or web), consult the ledger — a fact verified in an earlier
+   batch is reused as-is (cite the earlier batch), never re-searched and never
    re-litigated. This keeps rulings consistent across the whole paper and
    avoids redundant searches.
 
    - **Never web-check** items that are deterministic: arithmetic, algebra,
      geometry, figure counting, verbal/analytical reasoning. Re-derive them.
-   - **Always web-check** statutory/legal items — any question whose answer
-     rests on a regulation, threshold, limit, or rule: CMR 2017, Mines Act
-     1952, Mines Rules 1955, Mines Rescue Rules 1985, DGMS notifications.
-     Rule numbers and numeric thresholds are precisely what memory gets wrong.
-     Log every verified regulation into the ledger.
+   - **Always verify statutory/legal items against the local statute texts
+     first** — any question whose answer rests on a regulation, threshold,
+     limit, or rule: CMR 2017, Mines Act 1952, Mines Rules 1955, MVTR 1966.
+     The authoritative texts are grep-able in the repo under `docs/Mining/`:
+     - CMR 2017 → `docs/Mining/Coal Mines Regulation 2017.txt`
+     - Mines Act 1952 → `docs/Mining/THE MINES ACT, 1952.txt`
+     - Mines Rules 1955 → `docs/Mining/THE MINES RULES, 1955.txt`
+     - MVTR 1966 → `docs/Mining/Mines Vocational Training Rules, 1966 .txt`
+     Use `grep -n` with the regulation number and keyword variants (e.g.
+     `"86\."`, `"factor of safety"`, `"six cubic"`) to locate the provision,
+     then Read ~30 lines of surrounding context before ruling. Never
+     web-search a statutory item before checking these files — rule numbers
+     and numeric thresholds are precisely what memory gets wrong, and the
+     local texts are the ground truth you must cite.
+   - **Web-check only when** the item is not covered by the local texts (e.g.
+     Mines Crèche Rules 1966, Mines Rescue Rules 1985, DGMS notifications and
+     guidance, SCAMP), the item is time-sensitive/current-affairs, or you
+     need to check for post-2017 amendments. If a web source contradicts a
+     local statute text on a rule number or threshold, prefer the local text
+     and note the conflict in the `reason`.
    - **Always web-check** time-sensitive general knowledge and current
      affairs (records, firsts, exam notifications, award years).
    - **Judgment calls** (stable technical constants, e.g. instrument least
@@ -158,8 +175,9 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    Node one-liner that JSON-parses the written file and asserts the schema —
    `mockId` string, `checked` equals the paper's question count, `correct +
    incorrect + unverifiable === checked`, every `fixes` entry has non-empty
-   `id`, `correctAnswer`, `reason`, `source` (one of derived|web|mixed) and
-   `confidence` (high|medium|low). If the self-check fails, rewrite the report
+    `id`, `correctAnswer`, `reason`, `source` (one of derived|docs|web|mixed)
+    and
+    `confidence` (high|medium|low). If the self-check fails, rewrite the report
    until it passes — never hand back a malformed report.
 
    Report schema:
@@ -207,8 +225,10 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    }
    ```
 
-   `source` is one of `derived` (recomputed/reasoned), `web` (internet
-   verified), or `mixed`. `confidence` is `high` | `medium` | `low`. Every
+   `source` is one of `derived` (recomputed/reasoned), `docs` (verified
+   against the local statute texts in `docs/Mining/` — cite the file and
+   regulation), `web` (internet verified), or `mixed`. `confidence` is
+   `high` | `medium` | `low`. Every
    entry in `fixes` must explain why the stated answer is wrong and give the
    correct value — a report entry without a defensible reason is itself a bug.
    `correctAnswer` must always contain the actual correct answer: the correct
@@ -227,9 +247,9 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    **Then self-check the written file**: run a Node one-liner that
    JSON-parses it and asserts the schema — `mockId` string, `checked` equals
    the paper's question count, `correct + incorrect + unverifiable ===
-   checked`, every `fixes` entry has non-empty `id`, `correctAnswer`,
-   `reason`, `source` (one of derived|web|mixed) and `confidence`
-   (high|medium|low), every `difficultyFlags` entry has integer `id`, `from
+    checked`, every `fixes` entry has non-empty `id`, `correctAnswer`,
+    `reason`, `source` (one of derived|docs|web|mixed) and `confidence`
+    (high|medium|low), every `difficultyFlags` entry has integer `id`, `from
    !== to`, both labels in easy|medium|hard, and no id appears in both
    `fixes` and `difficultyFlags`. If the self-check fails, rewrite the report
    until it passes — never hand back a malformed report.
@@ -260,6 +280,8 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
   batch at a time, in id order, results accumulated across batches.
 - Never re-search a fact already settled in the ledger; reuse it and cite
   the batch where it was verified.
+- Never web-search a statutory item that the local `docs/Mining/` texts
+  cover — grep the local statutes first and cite the file + regulation.
 - Never report a "fix" you have not independently verified; flag
   `unverifiable` instead.
 - Do not comment on wording, syllabus coverage, or duplication — that is out
