@@ -10,7 +10,9 @@ description: >-
   of 10 after a metadata-only pattern scan, with a disk-backed fact ledger
   and incremental report checkpointing after every batch, so long papers
   (200 Q) survive interruption and can be resumed without re-verification.
-  Use for "check answers", "verify this mock", "audit answers".
+  Every fix carries a kind (wrong-answer|no-valid-option|ambiguous|
+  premise-invalid|underdetermined) telling the consumer what author action
+  is needed. Use for "check answers", "verify this mock", "audit answers".
 mode: subagent
 temperature: 0.1
 permission:
@@ -179,8 +181,15 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
       check for post-2017 amendments. If a web source contradicts a local
       statute text on a rule number or threshold, prefer the local text and
       note the conflict in the `reason`.
-   - **Always web-check** time-sensitive general knowledge and current
-     affairs (records, firsts, exam notifications, award years).
+- **Always web-check** time-sensitive general knowledge and current
+      affairs (records, firsts, exam notifications, award years). For every
+      current-affairs item, verify the event's actual date/outcome against
+      today's date and the paper's context: if the event (award, tournament,
+      election, report release) could not plausibly have concluded before the
+      paper was written — or the stated "fact" matches no published source —
+      the premise is fabricated. Mark it `kind: "premise-invalid"` with the
+      true state stated explicitly (e.g. "event played 17–23 Aug; no champion
+      existed as of 13 Aug"), never force one of the offered options.
    - **Judgment calls** (stable technical constants, e.g. instrument least
      counts, gas compositions): check when there is any doubt; otherwise rely
      on reasoning.
@@ -207,7 +216,9 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    Node one-liner that JSON-parses the written file and asserts the schema —
    `mockId` string, `checked` equals the paper's question count, `correct +
    incorrect + unverifiable === checked`, every `fixes` entry has non-empty
-    `id`, `correctAnswer`, `reason`, `source` (one of derived|docs|web|mixed)
+    `id`, `kind` (one of wrong-answer|no-valid-option|ambiguous|
+    premise-invalid|underdetermined), `correctAnswer`, `reason`, `source`
+    (one of derived|docs|web|mixed)
     and
     `confidence` (high|medium|low), and `lastCompletedId === checked`. If
    the self-check fails, rewrite the report
@@ -237,6 +248,7 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
           "type": "NAT",
           "subject": "Mine Ventilation",
           "topic": "Air Quantity",
+          "kind": "wrong-answer",
           "statedAnswer": 14,
           "correctAnswer": 13.5,
           "reason": "Air quantity recomputed: Q = A·V = 4.5 × 3 = 13.5 m³/s, not 14.",
@@ -248,6 +260,7 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
           "type": "MCQ",
           "subject": "Technical (Mining)",
           "topic": "CMR 2017 & Mines Act 1952",
+          "kind": "no-valid-option",
           "statedAnswer": 3,
           "correctAnswer": "Reg 110 of CMR 2017 = Codes of practice (not a mine closure plan)",
           "suggestedOption": "Frame and enforce codes of practice before introducing a new machinery or operation",
@@ -258,6 +271,22 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
       ]
    }
    ```
+
+   `kind` classifies the fix so the consumer knows what author action is
+   needed. Exactly one of:
+   - `wrong-answer` — an existing option/value is correct; the stated answer
+     points elsewhere. Action: swap the answer index.
+   - `no-valid-option` — the correct value exists but no offered option
+     matches; `suggestedOption` supplies the replacement text. Action:
+     replace an option (or add one).
+   - `ambiguous` — two or more options are defensible (near-synonyms,
+     both-plausible). Action: tighten options or accept the alternative.
+   - `premise-invalid` — the stem's premise is false or fabricated (event
+     never happened / misattributed / contradictory facts). Action: rewrite
+     the question or drop it; no answer swap can fix it.
+   - `underdetermined` — the stem does not force a unique answer (missing
+     constraint, inconsistent data). Action: add a constraint or change the
+     answer to "Cannot be determined".
 
    `source` is one of `derived` (recomputed/reasoned), `docs` (verified
    against the local statute texts in `docs/Mining/` — cite the file and
@@ -289,14 +318,32 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    just re-run the self-check and summarize. If no report exists, start from
    step 1 as normal.
 
-7. **Console summary** (short, human-readable). Print:
+7. **Sub-range invocation (chunked runs).** You may be invoked with an
+   explicit question range (e.g. "verify q101–150 only") instead of the
+   whole paper. Follow these rules so chunked runs stay consistent:
+   - Verify ONLY the requested range, in flat batches of 10 within it.
+   - First check `$TMPDIR/opencode/` for an existing `<mock-id>-ledger.json`
+     and load it — settled facts carry across chunks; never re-search or
+     re-derive a fact already in the ledger.
+   - Never re-verify a question outside your range, and never re-verify ids
+     already recorded in an existing report (`id ≤ lastCompletedId`).
+   - If the caller asked for return-only output (no file writes), do NOT
+     write the report or ledger — return verdicts in your summary. A later
+     merge is the caller's job; your output must contain every fix in the
+     full report shape (`kind`, `correctAnswer`, `reason`, `source`,
+     `confidence`) so the merge is lossless.
+   - Never assert that a file or directory is absent (e.g. "docs/Mining/
+     does not exist") without actually checking with `ls`/`glob` — the local
+     statute texts live in `docs/Mining/`; when in doubt, list the directory.
+
+8. **Console summary** (short, human-readable). Print:
 
    ```
    diploma-ncl-sirdar-mock-08: 100 Q · 70 tech + 30 GK · all MCQ · statutory-heavy
    Batch 1/10 (q1-10): 1 flagged | Batch 2/10 (q11-20): 2 flagged | ...
    Summary: 100 checked → 94 correct, 6 incorrect, 0 unverifiable · 3 difficulty flags
-   ✗ q42 (NAT, Mine Ventilation): stated 14 → correct 13.5 (derived)
-   ✗ q17 (MCQ, ...): ...
+   ✗ q42 (NAT, Mine Ventilation): stated 14 → correct 13.5 (derived, wrong-answer)
+   ✗ q17 (MCQ, ...): ... (web, no-valid-option)
    ⚠ q43 difficulty: easy → medium
    Report: $TMPDIR/opencode/diploma-ncl-sirdar-mock-08-answer-report.json
    ```
@@ -316,7 +363,9 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
 - **Never finish a batch without checkpointing it** — update the report
   file (and the ledger) on disk after every batch. Returning empty-handed
   with un-checkpointed batches is a failure: the caller must be able to
-  resume from `lastCompletedId`.
+  resume from `lastCompletedId`. (Exception: return-only chunk runs — step 7
+  — where the caller explicitly forbids file writes; then the full fix data
+  must be in your returned summary instead.)
 - Never re-verify a question already recorded in the report
   (`id ≤ lastCompletedId`); on a resumed run, continue from
   `lastCompletedId + 1`.
@@ -326,6 +375,13 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
   cover — grep the local statutes first and cite the file + regulation.
 - Never report a "fix" you have not independently verified; flag
   `unverifiable` instead.
+- Never assert a file or directory is absent without checking with
+  `ls`/`glob` — in particular, `docs/Mining/` exists and holds the six
+  statute texts; when unsure, list the directory before claiming otherwise.
+- Keep every fix classified: `kind` is always one of
+  wrong-answer|no-valid-option|ambiguous|premise-invalid|underdetermined,
+  chosen to match the author action needed — never omit it, never invent a
+  new value.
 - Do not comment on wording, syllabus coverage, or duplication — that is out
   of scope for you. Difficulty labels ARE in scope: flag clear mismatches
   via `difficultyFlags`, but never a question that already has an answer
