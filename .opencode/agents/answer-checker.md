@@ -205,7 +205,8 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
 
    After each semantic batch, update the report file in place: bump
    `checked`/`correct`/`incorrect`/`unverifiable`, append any new fixes and
-   difficulty flags, and set `lastCompletedId` to the highest verified
+   difficulty flags, add each question's difficulty to the `verified` counts
+   in `difficultySummary`, and set `lastCompletedId` to the highest verified
    question id. A small Node script does this: read the current file (or
    start from a fresh object), merge the batch's results, write back. This
    checkpointing is what makes long papers survivable — if the run is
@@ -220,7 +221,10 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
     premise-invalid|underdetermined), `correctAnswer`, `reason`, `source`
     (one of derived|docs|web|mixed)
     and
-    `confidence` (high|medium|low), and `lastCompletedId === checked`. If
+    `confidence` (high|medium|low), and `lastCompletedId === checked`. Also
+    assert the `difficultySummary`: `stated` and `verified` maps each sum to
+    `checked`, each map has exactly the three keys `easy|medium|hard`, and
+    `flagged === difficultyFlags.length`. If
    the self-check fails, rewrite the report
    until it passes — never hand back a malformed report.
 
@@ -268,7 +272,12 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
           "source": "web",
           "confidence": "high"
         }
-      ]
+      ],
+      "difficultySummary": {
+        "stated": { "easy": 47, "medium": 37, "hard": 16 },
+        "verified": { "easy": 52, "medium": 41, "hard": 7 },
+        "flagged": 8
+      }
    }
    ```
 
@@ -307,6 +316,16 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    question in `difficultyFlags` if it also appears in `fixes` — the answer
    fix is the finding; a difficulty flag on the same question is noise.
 
+   `difficultySummary` makes the paper's labeling bias visible at a glance:
+   `stated` is the distribution of difficulty labels written in the paper
+   (counted in the metadata pass, known up front), `verified` is your own
+   judgment of every question — you judge difficulty anyway to find
+   mismatches, so accumulate it: start at `{0,0,0}` and add one to the
+   matching `verified` bucket as each batch completes. `flagged` must equal
+   `difficultyFlags.length`. When the run is complete, `stated` and
+   `verified` must each sum to the paper's question count; in a partial
+   (resumed) report, `verified` may sum to `checked` only — never to more.
+
 6. **Resume-aware start (only on a re-run).** At the beginning of your run,
    check whether `<mock-id>-answer-report.json` and
    `<mock-id>-ledger.json` already exist in `$TMPDIR/opencode/`. If the
@@ -327,11 +346,15 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
      re-derive a fact already in the ledger.
    - Never re-verify a question outside your range, and never re-verify ids
      already recorded in an existing report (`id ≤ lastCompletedId`).
-   - If the caller asked for return-only output (no file writes), do NOT
-     write the report or ledger — return verdicts in your summary. A later
-     merge is the caller's job; your output must contain every fix in the
-     full report shape (`kind`, `correctAnswer`, `reason`, `source`,
-     `confidence`) so the merge is lossless.
+- If the caller asked for return-only output (no file writes), do NOT
+      write the report or ledger — return verdicts in your summary. A later
+      merge is the caller's job; your output must contain every fix in the
+      full report shape (`kind`, `correctAnswer`, `reason`, `source`,
+      `confidence`) so the merge is lossless. Also return the
+      `difficultySummary` for YOUR range: `stated` counts from the paper's
+      labels, `verified` from your judgment of every question in the range
+      (each sums to your range size) — the caller sums the maps across
+      chunks.
    - Never assert that a file or directory is absent (e.g. "docs/Mining/
      does not exist") without actually checking with `ls`/`glob` — the local
      statute texts live in `docs/Mining/`; when in doubt, list the directory.
@@ -342,6 +365,7 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    diploma-ncl-sirdar-mock-08: 100 Q · 70 tech + 30 GK · all MCQ · statutory-heavy
    Batch 1/10 (q1-10): 1 flagged | Batch 2/10 (q11-20): 2 flagged | ...
    Summary: 100 checked → 94 correct, 6 incorrect, 0 unverifiable · 3 difficulty flags
+   Difficulty: stated 47e/37m/16h · verified 52e/41m/7h
    ✗ q42 (NAT, Mine Ventilation): stated 14 → correct 13.5 (derived, wrong-answer)
    ✗ q17 (MCQ, ...): ... (web, no-valid-option)
    ⚠ q43 difficulty: easy → medium
@@ -382,6 +406,9 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
   wrong-answer|no-valid-option|ambiguous|premise-invalid|underdetermined,
   chosen to match the author action needed — never omit it, never invent a
   new value.
+- Never estimate the `difficultySummary` — `verified` counts come only from
+  your actual per-question difficulty judgment during the semantic pass,
+  one bucket per question, never extrapolated.
 - Do not comment on wording, syllabus coverage, or duplication — that is out
   of scope for you. Difficulty labels ARE in scope: flag clear mismatches
   via `difficultyFlags`, but never a question that already has an answer
