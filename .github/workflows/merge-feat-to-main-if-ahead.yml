@@ -59,11 +59,13 @@ jobs:
           if [ -n "${EXISTING}" ]; then
             echo "number=${EXISTING}" >> "$GITHUB_OUTPUT"
           else
-            NUMBER=$(gh pr create --repo "${{ github.repository }}" \
+            gh pr create --repo "${{ github.repository }}" \
               --base main --head feat \
               --title "Sync feat into main" \
-              --body "Automated sync: \`feat\` is ahead of \`main\` by ${{ steps.ahead.outputs.feat_only }} commit(s)." \
-              --json number --jq '.number')
+              --body "Automated sync: \`feat\` is ahead of \`main\` by ${{ steps.ahead.outputs.feat_only }} commit(s)."
+            NUMBER=$(gh pr list --repo "${{ github.repository }}" \
+              --base main --head feat --state open --json number \
+              --jq '.[0].number')
             if [ -z "${NUMBER}" ]; then
               echo "::error::gh pr create returned no PR number — PR creation failed"
               exit 1
