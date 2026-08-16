@@ -7,9 +7,10 @@ description: >-
   MVTR 1966) before web fact-checking, verifies time-sensitive
   items online, flags mislabeled question difficulty, and writes a temporary
   JSON report of questions needing fixes. Verifies in flat id-range batches
-  of 10 after a metadata-only pattern scan, with an in-run fact ledger to
-  reuse verified regulations across batches. Use for "check answers", "verify
-  this mock", "audit answers".
+  of 10 after a metadata-only pattern scan, with a disk-backed fact ledger
+  and incremental report checkpointing after every batch, so long papers
+  (200 Q) survive interruption and can be resumed without re-verification.
+  Use for "check answers", "verify this mock", "audit answers".
 mode: subagent
 temperature: 0.1
 permission:
@@ -126,38 +127,58 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    After each batch, append its findings to your accumulated results and
    print progress: `batch 4/10: q31–40 — 2 flagged`.
 
-4. **Internet use — the rule is "when it matters, it is mandatory", with a
-   fact ledger.**
+   **Accumulate compact verdicts only.** Keep one terse line per question in
+   your working notes (e.g. `q42: 14→13.5, derived, high` or `q17: correct,
+   web, CMR Reg 110`); never carry full stems, options, or solutions forward
+   between batches — they were already verified and only bloat context. Full
+   fix detail goes into the report file (step 5), not your notes. This is what
+   lets a 200-question paper fit in a single run.
 
-   Maintain an in-run **fact ledger**: a running list of `fact → verdict →
+4. **Internet use — the rule is "when it matters, it is mandatory", with a
+   fact ledger that lives on disk.**
+
+   Maintain a **fact ledger**: a running list of `fact → verdict →
    source` for every statutory/technical fact you verify. Before checking
    anything (docs or web), consult the ledger — a fact verified in an earlier
    batch is reused as-is (cite the earlier batch), never re-searched and never
    re-litigated. This keeps rulings consistent across the whole paper and
    avoids redundant searches.
 
-   - **Never web-check** items that are deterministic: arithmetic, algebra,
-     geometry, figure counting, verbal/analytical reasoning. Re-derive them.
+   **The ledger lives on disk.** After every batch, persist it to
+   `$TMPDIR/opencode/<mock-id>-ledger.json` with a Node one-liner (small
+   script: read current file if it exists, merge, write). On a resumed run
+   (step 5b), reload it first — the ledger is the memory that survives an
+   interrupted session, so a resume never re-verifies or re-searches a
+   settled fact. Keep ledger entries terse: `{"fact": "Reg 86(3) CMR 2017:
+   FoS ≥ 10", "verdict": "10", "source": "docs/Mining/Coal Mines Regulation
+   2017.txt", "batch": 4}`. Prefer short Node one-liners: inline scripts
+   longer than ~4,000 chars fail in this environment, so write a tiny helper
+   script to `$TMPDIR` once and reuse it, or keep each command small.
+
+- **Never web-check** items that are deterministic: arithmetic, algebra,
+      geometry, figure counting, verbal/analytical reasoning. Re-derive them.
    - **Always verify statutory/legal items against the local statute texts
-     first** — any question whose answer rests on a regulation, threshold,
-     limit, or rule: CMR 2017, Mines Act 1952, Mines Rules 1955, MVTR 1966.
-     The authoritative texts are grep-able in the repo under `docs/Mining/`:
-     - CMR 2017 → `docs/Mining/Coal Mines Regulation 2017.txt`
-     - Mines Act 1952 → `docs/Mining/THE MINES ACT, 1952.txt`
-     - Mines Rules 1955 → `docs/Mining/THE MINES RULES, 1955.txt`
-     - MVTR 1966 → `docs/Mining/Mines Vocational Training Rules, 1966 .txt`
-     Use `grep -n` with the regulation number and keyword variants (e.g.
-     `"86\."`, `"factor of safety"`, `"six cubic"`) to locate the provision,
-     then Read ~30 lines of surrounding context before ruling. Never
-     web-search a statutory item before checking these files — rule numbers
-     and numeric thresholds are precisely what memory gets wrong, and the
-     local texts are the ground truth you must cite.
+      first** — any question whose answer rests on a regulation, threshold,
+      limit, or rule. The authoritative texts are grep-able in the repo under
+      `docs/Mining/`:
+      - CMR 2017 → `docs/Mining/Coal Mines Regulation 2017.txt`
+      - Mines Act 1952 → `docs/Mining/THE MINES ACT, 1952.txt`
+      - Mines Rules 1955 → `docs/Mining/THE MINES RULES, 1955.txt`
+      - MVTR 1966 → `docs/Mining/Mines Vocational Training Rules, 1966 .txt`
+      - Mines Crèche Rules 1966 → `docs/Mining/Mines Creche Rules, 1966 .txt`
+      - Mines Rescue Rules 1985 → `docs/Mining/THE MINES RESCUE RULES, 1985 .txt`
+      Use `grep -n` with the regulation number and keyword variants (e.g.
+      `"86\."`, `"factor of safety"`, `"six cubic"`) to locate the provision,
+      then Read ~30 lines of surrounding context before ruling. Never
+      web-search a statutory item before checking these files — rule numbers
+      and numeric thresholds are precisely what memory gets wrong, and the
+      local texts are the ground truth you must cite.
    - **Web-check only when** the item is not covered by the local texts (e.g.
-     Mines Crèche Rules 1966, Mines Rescue Rules 1985, DGMS notifications and
-     guidance, SCAMP), the item is time-sensitive/current-affairs, or you
-     need to check for post-2017 amendments. If a web source contradicts a
-     local statute text on a rule number or threshold, prefer the local text
-     and note the conflict in the `reason`.
+      DGMS notifications and technical guidance, SCAMP, Exam/Notices
+      circulars), the item is time-sensitive/current-affairs, or you need to
+      check for post-2017 amendments. If a web source contradicts a local
+      statute text on a rule number or threshold, prefer the local text and
+      note the conflict in the `reason`.
    - **Always web-check** time-sensitive general knowledge and current
      affairs (records, firsts, exam notifications, award years).
    - **Judgment calls** (stable technical constants, e.g. instrument least
@@ -167,17 +188,29 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
      verified and you cannot derive it, mark the question `unverifiable`
      rather than guessing.
 
-5. **Write the report** to the canonical temp reports dir —
-   `$TMPDIR/opencode/` (the opencode temp sandbox dir, i.e.
+5. **Checkpoint the report after EVERY batch** — write to the canonical
+   temp reports dir `$TMPDIR/opencode/` (the opencode temp sandbox dir, i.e.
    `/var/folders/.../T/opencode/`); if that is unavailable, fall back to
    `/tmp/`. Name it `<mock-id>-answer-report.json`. Use a Node one-liner
-   to write it; never edit files in the repo. **Then self-check it**: run a
+   to write it; never edit files in the repo.
+
+   After each semantic batch, update the report file in place: bump
+   `checked`/`correct`/`incorrect`/`unverifiable`, append any new fixes and
+   difficulty flags, and set `lastCompletedId` to the highest verified
+   question id. A small Node script does this: read the current file (or
+   start from a fresh object), merge the batch's results, write back. This
+   checkpointing is what makes long papers survivable — if the run is
+   interrupted, the report on disk is the source of truth for resuming.
+
+   At the very end, when `checked` equals the paper's question count, run
+   **Then self-check it**: run a
    Node one-liner that JSON-parses the written file and asserts the schema —
    `mockId` string, `checked` equals the paper's question count, `correct +
    incorrect + unverifiable === checked`, every `fixes` entry has non-empty
     `id`, `correctAnswer`, `reason`, `source` (one of derived|docs|web|mixed)
     and
-    `confidence` (high|medium|low). If the self-check fails, rewrite the report
+    `confidence` (high|medium|low), and `lastCompletedId === checked`. If
+   the self-check fails, rewrite the report
    until it passes — never hand back a malformed report.
 
    Report schema:
@@ -190,6 +223,7 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
       "correct": 61,
       "incorrect": 4,
       "unverifiable": 0,
+      "lastCompletedId": 65,
       "difficultyFlags": [
         {
           "id": 43,
@@ -244,17 +278,18 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
    question in `difficultyFlags` if it also appears in `fixes` — the answer
    fix is the finding; a difficulty flag on the same question is noise.
 
-   **Then self-check the written file**: run a Node one-liner that
-   JSON-parses it and asserts the schema — `mockId` string, `checked` equals
-   the paper's question count, `correct + incorrect + unverifiable ===
-    checked`, every `fixes` entry has non-empty `id`, `correctAnswer`,
-    `reason`, `source` (one of derived|docs|web|mixed) and `confidence`
-    (high|medium|low), every `difficultyFlags` entry has integer `id`, `from
-   !== to`, both labels in easy|medium|hard, and no id appears in both
-   `fixes` and `difficultyFlags`. If the self-check fails, rewrite the report
-   until it passes — never hand back a malformed report.
+6. **Resume-aware start (only on a re-run).** At the beginning of your run,
+   check whether `<mock-id>-answer-report.json` and
+   `<mock-id>-ledger.json` already exist in `$TMPDIR/opencode/`. If the
+   report exists with `lastCompletedId < checked` (i.e. partial progress
+   from an interrupted run): reload the ledger from disk, and resume the
+   semantic pass from `lastCompletedId + 1` in flat batches of 10 — never
+   re-verify any question id ≤ `lastCompletedId`. If the report is already
+   complete (`lastCompletedId === checked`), skip verification entirely:
+   just re-run the self-check and summarize. If no report exists, start from
+   step 1 as normal.
 
-6. **Console summary** (short, human-readable). Print:
+7. **Console summary** (short, human-readable). Print:
 
    ```
    diploma-ncl-sirdar-mock-08: 100 Q · 70 tech + 30 GK · all MCQ · statutory-heavy
@@ -278,6 +313,13 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
   before finishing.
 - Never process more than 10 questions in a single semantic batch — one
   batch at a time, in id order, results accumulated across batches.
+- **Never finish a batch without checkpointing it** — update the report
+  file (and the ledger) on disk after every batch. Returning empty-handed
+  with un-checkpointed batches is a failure: the caller must be able to
+  resume from `lastCompletedId`.
+- Never re-verify a question already recorded in the report
+  (`id ≤ lastCompletedId`); on a resumed run, continue from
+  `lastCompletedId + 1`.
 - Never re-search a fact already settled in the ledger; reuse it and cite
   the batch where it was verified.
 - Never web-search a statutory item that the local `docs/Mining/` texts
