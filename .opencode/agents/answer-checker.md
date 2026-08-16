@@ -190,12 +190,19 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
       the premise is fabricated. Mark it `kind: "premise-invalid"` with the
       true state stated explicitly (e.g. "event played 17–23 Aug; no champion
       existed as of 13 Aug"), never force one of the offered options.
-   - **Judgment calls** (stable technical constants, e.g. instrument least
-     counts, gas compositions): check when there is any doubt; otherwise rely
-     on reasoning.
+- **Judgment calls** (stable technical constants, e.g. instrument least
+      counts, gas compositions): check when there is any doubt; otherwise rely
+      on reasoning.
+   - **Coding/analogy/seating puzzles**: try the canonical exam rule once
+      (digit-sum, letter-position sum, first-vs-last, etc.). If no clean
+      rule fits the given examples — or several conflicting rules fit — that
+      is a verdict, not a puzzle to keep solving: settle it per the
+      anti-spiral constraint (5 tries, then 1 web attempt, then commit as
+      `underdetermined` or `unverifiable`). If the web attempt reveals the
+      intended rule, commit the answer with `source: web`.
    - When unsure after reasoning, verify — never guess. If a fact cannot be
-     verified and you cannot derive it, mark the question `unverifiable`
-     rather than guessing.
+      verified and you cannot derive it, mark the question `unverifiable`
+      rather than guessing.
 
 5. **Checkpoint the report after EVERY batch** — write to the canonical
    temp reports dir `$TMPDIR/opencode/` (the opencode temp sandbox dir, i.e.
@@ -355,9 +362,13 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
       labels, `verified` from your judgment of every question in the range
       (each sums to your range size) — the caller sums the maps across
       chunks.
-   - Never assert that a file or directory is absent (e.g. "docs/Mining/
-     does not exist") without actually checking with `ls`/`glob` — the local
-     statute texts live in `docs/Mining/`; when in doubt, list the directory.
+- Never assert that a file or directory is absent (e.g. "docs/Mining/
+      does not exist") without actually checking with `ls`/`glob` — the local
+      statute texts live in `docs/Mining/`; when in doubt, list the directory.
+   - The anti-spiral and never-empty constraints apply to chunk runs too:
+      never burn more than 5 assumption cycles + 1 web attempt on a single
+      question — record `stalled: q54 — rule ambiguity` and move on; and
+      your final message must always contain findings, even partial ones.
 
 8. **Console summary** (short, human-readable). Print:
 
@@ -399,6 +410,22 @@ Question types in a mock: `MCQ` (0-based `answer` index), `NAT` (numeric
   cover — grep the local statutes first and cite the file + regulation.
 - Never report a "fix" you have not independently verified; flag
   `unverifiable` instead.
+- **Anti-spiral: never grind on one question.** Max **5** assumption
+  cycles per question (assuming a rule/reading, testing it, discarding
+  it — the failure mode of coding-decoding, analogy and seating puzzles).
+  After the 5th failed cycle, make exactly **1** web attempt to settle it
+  (the puzzle may have a canonical exam rule). If that does not settle it
+  either, commit is mandatory: the best-supported verdict with
+  `confidence ≤ medium` — `kind: underdetermined` with
+  `correctAnswer: "Cannot be determined"` and the conflicting rules in
+  `reason` when several rules fit the examples, or `unverifiable` when
+  nothing fits. Never start a 6th assumption cycle; a question that burns
+  more than its budget is a verdict, not a puzzle.
+- **Never return empty.** Your final message must always contain findings
+  — partial output is acceptable (counts verified so far, every fix found,
+  each stalled question listed as `stalled: q54 — rule ambiguity`). An
+  empty final message is a hard failure, whether in a file-writing run or
+  a return-only chunk.
 - Never assert a file or directory is absent without checking with
   `ls`/`glob` — in particular, `docs/Mining/` exists and holds the six
   statute texts; when unsure, list the directory before claiming otherwise.
