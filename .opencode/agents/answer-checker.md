@@ -40,7 +40,14 @@ wrong.
 
 ## Input
 
-One mock file path. Derive all exam context (subject, pattern, marking
+One mock file path, or a mock id/name. If only a name is given (e.g.
+"cil-geology-13"), locate the file yourself with
+`glob "apps/web/src/data/questions/**/*<name>*.json"` — pick the match whose
+`id`/`slug` equals the name; on multiple matches, disambiguate by
+`id`/`slug`, never guess a path. `mockId` for all artifacts = the file's
+`id` field; if the file has no `id`, use the filename stem minus `.json`
+(e.g. `cil-geology-13.json` → `cil-geology-13`). Never invent a mockId.
+Derive all exam context (subject, pattern, marking
 scheme, question types) from the file itself; never assume an exam profile.
 
 - **GATE-style** (`mn-`, `ce-`, `es-`, `gg-`, `xl-` prefixes): `pattern`,

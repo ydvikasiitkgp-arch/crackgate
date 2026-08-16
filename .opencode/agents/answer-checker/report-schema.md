@@ -8,6 +8,9 @@ for formats; the agent file only carries workflow and constraints.
 
 Canonical location: `$TMPDIR/opencode/<mock-id>-answer-report.json`
 (fall back to `/tmp/` if unavailable). Written/updated after EVERY batch.
+`mockId` = the mock file's `id` field; if absent, the filename stem minus
+`.json` (e.g. `cil-geology-13.json` → `cil-geology-13`). Never invent one —
+the resume logic keys off it.
 
 ```json
 {
