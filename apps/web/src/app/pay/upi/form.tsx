@@ -56,7 +56,6 @@ export default function UpiClaimForm({
   const [examName, setExamName] = useState<(typeof EXAMS)[number]>(coerceExam(defaultExam));
   const [subject, setSubject] = useState(defaultSubject);
   const [upiApp, setUpiApp] = useState<(typeof APPS)[number]>("PhonePe");
-  const [payerNote, setPayerNote] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
@@ -84,7 +83,6 @@ export default function UpiClaimForm({
           examName,
           subject: subject.trim(),
           upiApp,
-          payerNote: payerNote.trim() || undefined,
         }),
       });
       const data = await r.json().catch(() => ({}));
@@ -300,21 +298,6 @@ export default function UpiClaimForm({
             </option>
           ))}
         </select>
-      </div>
-
-      <div>
-        <label htmlFor="note" className="block text-xs font-semibold text-muted">
-          Note (optional)
-        </label>
-        <textarea
-          id="note"
-          rows={2}
-          maxLength={280}
-          value={payerNote}
-          onChange={(e) => setPayerNote(e.target.value)}
-          placeholder="Anything we should know — e.g. paid from a different UPI ID"
-          className="input w-full mt-1"
-        />
       </div>
 
       {error && (
