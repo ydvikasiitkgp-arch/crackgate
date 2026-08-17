@@ -61,7 +61,6 @@ export default function CheckoutForm({
   const [payerPhone, setPayerPhone] = useState(defaultPhone);
   const [payerEmail, setPayerEmail] = useState(defaultEmail);
   const [upiApp, setUpiApp] = useState<(typeof APPS)[number]>("PhonePe");
-  const [payerNote, setPayerNote] = useState("");
   const [referralSource, setReferralSource] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -98,7 +97,6 @@ export default function CheckoutForm({
           payerPhone: payerPhone.trim(),
           payerEmail: payerEmail.trim(),
           upiApp,
-          payerNote: payerNote.trim() || undefined,
           referralSource: referralSource.trim() || undefined,
           promoCode: promoResult?.code,
           promoDiscountPaise: promoDiscountPaise || undefined,
@@ -332,24 +330,6 @@ export default function CheckoutForm({
               </option>
             ))}
           </select>
-        </div>
-
-        <div>
-          <label
-            htmlFor="note"
-            className="block text-xs font-semibold text-muted"
-          >
-            Note (optional)
-          </label>
-          <textarea
-            id="note"
-            rows={2}
-            maxLength={280}
-            value={payerNote}
-            onChange={(e) => setPayerNote(e.target.value)}
-            placeholder="Anything we should know — e.g. paid from a different UPI ID"
-            className="input w-full mt-1"
-          />
         </div>
 
         <div>
