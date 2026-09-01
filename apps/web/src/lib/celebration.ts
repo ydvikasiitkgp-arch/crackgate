@@ -5,7 +5,7 @@
  * footer, theme-color) is gated behind this constant. Set to `false` to
  * disable the celebration without touching any component.
  */
-export const INDEPENDENCE_DAY_ACTIVE = true;
+export const INDEPENDENCE_DAY_ACTIVE = false;
 
 /** Promo code advertised by the celebration UI (created in prod admin). */
 export const INDEPENDENCE_DAY_PROMO_CODE = "INDIA30";
