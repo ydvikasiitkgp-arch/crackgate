@@ -160,6 +160,10 @@ Question schema (simplified):
 ## ⚖️ Disclaimer
 
 GATE® is a registered trademark of IIT/IISc. CrackGate.in is an independent prep platform and is not affiliated with IIT/IISc.
+
+## 🎉 Feature flag
+
+Independence Day sale is now disabled via `INDEPENDENCE_DAY_ACTIVE = false` in `apps/web/src/lib/celebration.ts`.
 All practice questions are original and authored by the CrackGate team based on the latest GATE syllabus.
 
 ---
